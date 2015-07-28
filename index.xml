@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Drupal WxT </title>
+    <link>http://drupalwxt.github.io/</link>
+    <language>en-us</language>
+    <author>William Hearn</author>
+    <rights>(C) 2015</rights>
+    <updated>2015-01-13 13:10:52 -0500 -0500</updated>
+
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+        <item>
+          <title>Contributing to Documentation Site</title>
+          <link>http://drupalwxt.github.io/post/2015/01/13/contributing-to-documentation-site/</link>
+          <pubDate>Tue, 13 Jan 2015 13:10:52 -0500</pubDate>
+          <author>William Hearn</author>
+          <guid>http://drupalwxt.github.io/post/2015/01/13/contributing-to-documentation-site/</guid>
+          <description>
+
+&lt;p&gt;Our new documentation site for Drupal WxT is now being powered by Hugo.&lt;/p&gt;
+
+&lt;p&gt;Of course we could be using Drupal itself to power our documentation site but that would be overkill for such simple requirements that this site requires.&lt;/p&gt;
+
+&lt;p&gt;Remember we should always be practicing the methodology of choosing the right tool for the right job!&lt;/p&gt;
+
+&lt;h2 id=&#34;what-is-hugo:c7248249c4f66b373849994f32705339&#34;&gt;What is Hugo&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://gohugo.io/&#34;&gt;Hugo&lt;/a&gt; itself is a general-purpose static site generator framework.&lt;/p&gt;
+
+&lt;p&gt;Sites built with Hugo are extremely fast and very secure. Hugo sites can be hosted anywhere, including Heroku, GoDaddy, DreamHost, GitHub Pages, Amazon S3 and CloudFront, and work well with CDNs. Hugo sites run without dependencies on expensive runtimes like Ruby, Python or PHP and without dependencies on any databases.&lt;/p&gt;
+
+&lt;p&gt;Hugo has nearly instant build times and the ability to rebuild whenever a change is made, Hugo provides a very fast feedback loop. This is essential when you are designing websites, but also very useful when creating content.&lt;/p&gt;
+
+&lt;p&gt;For information on how to contribute to the documentation site please consult the &lt;a href=&#34;https://github.com/drupalwxt/website/blob/master/README.md&#34;&gt;README.md&lt;/a&gt; file.&lt;/p&gt;
+
+&lt;!-- Links Referenced --&gt;
+</description>
+        </item>
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+
+  </channel>
+</rss>

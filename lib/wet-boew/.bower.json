@@ -1,0 +1,14 @@
+{
+  "name": "wet-boew",
+  "homepage": "https://github.com/wet-boew/wet-boew-cdn",
+  "version": "4.0.16",
+  "_release": "4.0.16",
+  "_resolution": {
+    "type": "version",
+    "tag": "v4.0.16",
+    "commit": "8b5ea4d8737cb7faf18d50d43c889be0fa2a9cb1"
+  },
+  "_source": "git://github.com/wet-boew/wet-boew-cdn.git",
+  "_target": "v4.0.16",
+  "_originalSource": "wet-boew/wet-boew-cdn"
+}

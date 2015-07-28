@@ -1,0 +1,19 @@
+/* humanstxt.org */
+
+/* TEAM */
+  Developer: William Hearn
+  Contact: william.hearn [at] statscan.gc.ca
+  Twitter: @william_hearn
+  From: Ottawa, Canada
+
+/* THANKS */
+
+  Portfolio Manager: Andrew Sinkinson
+  Twitter: @sinkinsona
+  From: Ottawa, Canada
+
+/* SITE */
+  Last update: 2013/08/04
+  Language: English
+  Doctype: HTML5
+  IDE: Sublime Text 3

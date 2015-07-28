@@ -1,0 +1,14 @@
+{
+  "name": "theme-wet-boew",
+  "homepage": "https://github.com/wet-boew/themes-cdn",
+  "version": "4.0.16-theme-wet-boew",
+  "_release": "4.0.16-theme-wet-boew",
+  "_resolution": {
+    "type": "version",
+    "tag": "v4.0.16-theme-wet-boew",
+    "commit": "98e3671ec322e0ffdea0887395aed206c0274770"
+  },
+  "_source": "git://github.com/wet-boew/themes-cdn.git",
+  "_target": "v4.0.16-theme-wet-boew",
+  "_originalSource": "wet-boew/themes-cdn"
+}
