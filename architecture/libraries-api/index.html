@@ -11,7 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
     <title>
         
-        Content Moderation
+        Libraries API
         
     </title>
     
@@ -225,7 +225,7 @@
                         
                           
                       
-                      <li>Content Moderation</li>
+                      <li>Libraries API</li>
                     </ol>
                 </div>
             </div>
@@ -238,12 +238,12 @@
         <article class="post">
             <header>
                 <h1 id="wb-cont" property="name">
-                    Content Moderation
+                    Libraries API
                 </h1>
                 <div class="post-date mrgn-bttm-md text-muted text-right small">
                     <span class="glyphicon glyphicon-calendar"></span>
-                    <time datetime="2015-01-13">
-                        2015-01-13
+                    <time datetime="2015-07-27">
+                        2015-07-27
                     </time>
                 </div>
                 <div class="wb-share mrgn-bttm-md text-muted text-right small" data-wb-share='{" pnlId": "pnl1"}'></div>
@@ -251,52 +251,33 @@
             <div class="post-content">
                 
 
-<p>Web editors have diverse knowledge as well as different levels of HTML coding, web publishing guidelines, accessibility requirements, and experience with validation tools. Only more senior editors should be able to validate and modify HTML as well as have the publishing rights to push content updates to the live server.</p>
+<p><a href="https://www.drupal.org/documentation/modules/libraries">Libraries API</a> is the common denominator and the defacto standard for all Drupal modules/profiles/themes that integrate with external libraries.</p>
 
-<h2 id="html-coding:305b718314c14c639b00ab472dafc5bd">HTML Coding</h2>
+<p>The module introduces a common repository for libraries in <code>profiles/distro/libraries</code> or <code>sites/all/libraries</code>.</p>
 
-<p>In the WYSIWYG editor.</p>
-
-<ol>
-<li><p>Click the Source button on, off and on again for the WYSIWYG HTML auto-cleanup.</p></li>
-
-<li><p>Senior editors should view the Source and clean up HTML as needed, running validation tools before publishing.</p>
+<h2 id="key-features:a045c3a7a068786023056e528c34cae1">Key Features</h2>
 
 <ul>
-<li><a href="http://validator.w3.org">http://validator.w3.org</a></li>
-<li><a href="http://wave.webaim.org/">http://wave.webaim.org/</a></li>
-<li><a href="http://www.onlinewebcheck.com/check.php">http://www.onlinewebcheck.com/check.php</a></li>
-</ul></li>
-</ol>
-
-<h2 id="workflow-content-moderation:305b718314c14c639b00ab472dafc5bd">Workflow Content Moderation</h2>
-
-<p>Content moderation streamlines the publication process while ensuring that web content conforms to all mandated requirements for web content on federal government websites. The final publication step that pushes changes to become publically visible should be performed by website editors who are familiar with HTML coding and GoC requirements for publishing web content to federal government websites.</p>
-
-<ol>
-<li><p><strong>Draft</strong>: All website editors can create new content or edit existing content and save to Draft status while making changes.</p></li>
-
-<li><p><strong>Needs Review</strong>: When an junior editor is finished updating and making changes they can save to Needs Review status, where a more senior editor with HTML knowledge and validation tools can ensure that all new and modified content is ready for publishing.</p></li>
-
-<li><p><strong>Published</strong>: A senior editor makes any changes needed to correct HTML and WCAG validation errors and iron out any wrinkles prior to publishing.</p>
-
-<ul>
-<li>Before and after publishing new or updated web content W3C validation is needed.   (<a href="http://validator.w3.org">http://validator.w3.org</a>)</li>
-<li>Before and after publishing new or updated web content Wave validation is needed. (<a href="http://wave.webaim.org/">http://wave.webaim.org/</a>)</li>
-<li>Before and after publishing new or updated web content CSE validation is needed. (<a href="http://www.onlinewebcheck.com/check.php">http://www.onlinewebcheck.com/check.php</a>)</li>
-</ul></li>
-</ol>
-
-<h2 id="workflow-evolution:305b718314c14c639b00ab472dafc5bd">Workflow Evolution</h2>
-
-<p>Moderation steps and workflow are fully customizable; the entire publishing process can be mapped out in advance and then modified over time to adapt to changing conditions. For example, new moderation steps could include:</p>
-
-<ul>
-<li>Needs Translation</li>
-<li>Needs Final Approval from content owner</li>
-<li>Needs Testing</li>
-<li>Needs Developer input</li>
+<li>The same library can be shared by more than one module.</li>
+<li>The same library can be shared by more than one site.</li>
+<li>Ease the process of upgrading a module that requires an external library. Just replace the module folder with the new one. No need to move the contained library out and back in.</li>
+<li>Prevent incompatibilities due to having the same library installed more than once in different versions.</li>
+<li>Central installation instructions (widget) to help users figure out how to install.</li>
+<li>Library classification.</li>
+<li>Dependency handling.</li>
+<li>Library version detection.</li>
+<li>Runtime control of library availability.</li>
 </ul>
+
+<h2 id="wxt:a045c3a7a068786023056e528c34cae1">WxT</h2>
+
+<p>Drupal WxT leverages the libraries module for all of its handling for the <a href="https://github.com/wet-boew/wet-boew">Web Experience Toolkit</a>. This allows for a decoupled / performant approach to loading the libraries while also allowing for quick updates by just replacing the associated theme in the libraries folder without any code changes.</p>
+
+<h2 id="codebase:a045c3a7a068786023056e528c34cae1">Codebase</h2>
+
+<p>The specific Libraries API code can be found in the wetkit_wetboew module which provides both a make file for the dependencies as well as the Libraries code invocation itself. A thorough example of all the properties in hook_libraries_info() can be found at the <a href="https://www.drupal.org/documentation/modules/libraries">Libraries API documentation</a></p>
+
+<!-- Links Referenced -->
 
             </div>
             <aside>
@@ -304,23 +285,9 @@
                 <ul class="list-inline post-tags">
                     
                     <li>
-                        <a href="http://drupalwxt.github.io/tags/moderation">
+                        <a href="http://drupalwxt.github.io/tags/architecture">
                             <i class="fa fa-tags"></i>
-                            moderation
-                        </a>
-                    </li>
-                    
-                    <li>
-                        <a href="http://drupalwxt.github.io/tags/workbench">
-                            <i class="fa fa-tags"></i>
-                            workbench
-                        </a>
-                    </li>
-                    
-                    <li>
-                        <a href="http://drupalwxt.github.io/tags/wxt">
-                            <i class="fa fa-tags"></i>
-                            wxt
+                            architecture
                         </a>
                     </li>
                     
@@ -335,11 +302,11 @@
                     
                     
                     
-                    <li><a href="http://drupalwxt.github.io/wxt/working-examples/">Working Examples</a></li>
                     
                     
                     
                     
+                    <li><a href="http://drupalwxt.github.io/architecture/release-cycle/">Release Cycle / Updates</a></li>
                     
                     
                     
@@ -357,13 +324,11 @@
                     
                     
                     
-                    <li><a href="http://drupalwxt.github.io/wxt/media/">Media Library - Images, Videos and Documents</a></li>
                     
                     
                     
                     
                     
-                    <li><a href="http://drupalwxt.github.io/wxt/releases/">Releases</a></li>
                     
                     
                     
@@ -377,7 +342,6 @@
                     
                     
                     
-                    <li><a href="http://drupalwxt.github.io/wxt/deployment/">Content Staging</a></li>
                     
                     
                     
@@ -387,17 +351,18 @@
                     
                     
                     
-                    <li><a href="http://drupalwxt.github.io/post/2015/01/13/contributing-to-documentation-site/">Contributing to Documentation Site</a></li>
                     
                     
                     
                     
                     
+                    <li><a href="http://drupalwxt.github.io/architecture/drush-make/">Drush Make &#43; Site Install</a></li>
                     
                     
                     
                     
                     
+                    <li><a href="http://drupalwxt.github.io/architecture/getting-started-win/">Getting Started (Windows)</a></li>
                     
                     
                     
@@ -409,7 +374,6 @@
                     
                     
                     
-                    <li><a href="http://drupalwxt.github.io/wxt/modules/">Modules for Drupal WxT</a></li>
                     
                     
                     
@@ -420,14 +384,11 @@
                     
                     
                     
+                    <li><a href="http://drupalwxt.github.io/architecture/system-requirements/">System Requirements</a></li>
                     
                     
                     
                     
-                    
-                    
-                    
-                    <li><a href="http://drupalwxt.github.io/wxt/tabbed-interface/">Tabbed Interface</a></li>
                     
                     
                     
@@ -442,11 +403,11 @@
                 <nav>
                     <ul class="pager">
                         
-                        <li class="previous"><a href="http://drupalwxt.github.io/wxt/deployment/"><span aria-hidden="true">&larr;</span> Older</a></li>
+                        <li class="previous"><a href="http://drupalwxt.github.io/performance/nginx-fpm/"><span aria-hidden="true">&larr;</span> Older</a></li>
                         
 
                         
-                        <li class="next"><a href="http://drupalwxt.github.io/post/2015/01/13/contributing-to-documentation-site/">Newer <span aria-hidden="true">&rarr;</span></a></li>
+                        <li class="next"><a href="http://drupalwxt.github.io/wxt/media/">Newer <span aria-hidden="true">&rarr;</span></a></li>
                         
                     </ul>
                 </nav>
@@ -463,7 +424,7 @@
     <dl id="wb-dtmd">
         <dt>Date modified:&#32;</dt>
         <dd>
-            <time property="dateModified">2015-01-13</time>
+            <time property="dateModified">2015-07-27</time>
         </dd>
     </dl>
     

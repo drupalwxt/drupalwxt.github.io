@@ -113,6 +113,8 @@
                         </a>
                         <ul class="sm list-unstyled" role="menu">
                             
+                            <li><a href="/wxt/deployment/"> Content Staging</a></li>
+                            
                             <li><a href="/wxt/modules/"> Modules for WxT</a></li>
                             
                             <li><a href="/wxt/releases/"> Releases for WxT</a></li>
@@ -132,6 +134,10 @@
                             <span>Architecture</span>
                         </a>
                         <ul class="sm list-unstyled" role="menu">
+                            
+                            <li><a href="/architecture/drush-make/"> Drush Make &#43; Site Install</a></li>
+                            
+                            <li><a href="/architecture/libraries-api/"> Libraries API</a></li>
                             
                             <li><a href="/architecture/release-cycle/"> Release Cycle / Updates</a></li>
                             
@@ -228,7 +234,7 @@
     <main role="main" property="mainContentOfPage" class="container">
 
 <div class="row">
-    <div class="col-md-8">
+    <div class="col-md-12">
         <article class="post">
             <header>
                 <h1 id="wb-cont" property="name">
@@ -245,34 +251,32 @@
             <div class="post-content">
                 
 
-<p>The easiest way to update an existing slideshow is to Edit the Block directly, mouse-over the gears widget in the top right corner of and Edit Block.</p>
+<p>The easiest way to update an existing slideshow is to Edit the Block directly via contextual links. Simply mouse-over the gears widget in the top right corner and then click Edit Block.</p>
 
-<p>To see a list of carousel slideshows use the content blocks admin page (/admin/content/blocks) to filter by type Slideshow and then Edit.</p>
+<p>To see a list of carousel slideshows you can use the content blocks admin page <code>/admin/content/blocks</code> to filter by type Slideshow and then click Edit.</p>
 
 <h2 id="create-edit-slideshow:d71cfaa1e8ac79995e9f3917707dc5aa">Create / Edit slideshow</h2>
 
 <ol>
-<li>Label - This is the visible name of the slideshow when listed in the blocks admin page.</li>
-<li>Title - Not used, leave this empty.</li>
-<li>Expand - Pre-existing slides will need to be expanded to be updated.</li>
-<li>New Slide - Only first 2 pre-existing slides can be expanded immediately, click on New Slide to see other pre-existing slides.</li>
-<li>Add another item - Creates one empty slide at the bottom of the list, and also expands all the existing slides above.</li>
-<li>Plugin settings - Options for the slideshow to auto-play or not, animation and cycle speeds regular/fast/slow, and tabs style for the buttons and layout of the block.</li>
-<li>Image style - open_data options at the bottom of the list are usually the right choice, but changing these options can have unexpected results.</li>
-<li>View Mode - Revision comparison</li>
-<li>Taxonomy - Leave this empty</li>
+<li><strong>Label</strong>: This is the visible name of the slideshow when listed in the blocks admin page.</li>
+<li><strong>Title</strong>: Not used, leave this empty.</li>
+<li><strong>Expand</strong>: Pre-existing slides will need to be expanded to be updated.</li>
+<li><strong>New Slide</strong>: Only first 2 pre-existing slides can be expanded immediately, click on New Slide to see other pre-existing slides.</li>
+<li><strong>Add another item</strong>: Creates one empty slide at the bottom of the list, and also expands all the existing slides above.</li>
+<li><strong>Plugin settings</strong>: Options for the slideshow to auto-play or not, animation and cycle speeds regular/fast/slow, and tabs style for the buttons and layout of the block.</li>
+<li><strong>Image style</strong>: Various styles that will change how the image is rendered.</li>
 </ol>
 
 <h2 id="create-edit-slides:d71cfaa1e8ac79995e9f3917707dc5aa">Create / Edit slides</h2>
 
 <ol>
-<li>Slide image - Browse to the media library to select the image, or click Edit to modify the already selected image. (See Media Library image guidance)</li>
-<li>Headline - When slides are collapsed in Slideshow edit mode this is the visible text beside the image icon</li>
-<li>Title - This is the clickable text the public sees under the slide image</li>
-<li>URL - This is the link that combines with Title under the slide image. Use the OG format [site:url]/slide-target-page-name, do not use Linkit UUID values</li>
-<li>WYSIWYG - Use this to add more text under the slide image, styling options will work as well. (See WYSIWYG guidance)</li>
-<li>Re-order slides - To change the order of the slides, left-click, hold and drag the four arrow icon.</li>
-<li>Saving changes - Click on the Save button (bottom left) to save changes to the slideshow options, the slide(s) image / title / URL, or the order of the slides.</li>
+<li><strong>Slide image</strong>: Browse to the media library to select the image, or click Edit to modify the already selected image. (See Media Library image guidance)</li>
+<li><strong>Headline</strong>: When slides are collapsed in Slideshow edit mode this is the visible text beside the image icon</li>
+<li><strong>Title</strong>: This is the clickable text the public sees under the slide image</li>
+<li><strong>URL</strong>: This is the link that combines with Title under the slide image. Use the OG format [site:url]/slide-target-page-name, do not use Linkit UUID values</li>
+<li><strong>WYSIWYG</strong>: Use this to add more text under the slide image, styling options will work as well. (See WYSIWYG guidance)</li>
+<li><strong>Re-order slides</strong>: To change the order of the slides, left-click, hold and drag the four arrow icon.</li>
+<li><strong>Saving changes</strong>: Click on the Save button (bottom left) to save changes to the slideshow options, the slide(s) image / title / URL, or the order of the slides.</li>
 </ol>
 
             </div>
@@ -281,9 +285,16 @@
                 <ul class="list-inline post-tags">
                     
                     <li>
-                        <a href="http://drupalwxt.github.io/tags/component">
+                        <a href="http://drupalwxt.github.io/tags/bean">
                             <i class="fa fa-tags"></i>
-                            component
+                            bean
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="http://drupalwxt.github.io/tags/tabbed-interface">
+                            <i class="fa fa-tags"></i>
+                            tabbed interface
                         </a>
                     </li>
                     
@@ -315,6 +326,18 @@
                     
                     
                     
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
                     <li><a href="http://drupalwxt.github.io/wxt/media/">Media Library - Images, Videos and Documents</a></li>
                     
                     
@@ -335,7 +358,7 @@
                     
                     
                     
-                    <li><a href="http://drupalwxt.github.io/wxt/deployment/">Deployment</a></li>
+                    <li><a href="http://drupalwxt.github.io/wxt/deployment/">Content Staging</a></li>
                     
                     
                     
@@ -360,12 +383,6 @@
                     
                     
                     
-                    
-                    
-                    
-                    
-                    
-                    <li><a href="http://drupalwxt.github.io/wxt/lightbox/">Lightbox</a></li>
                     
                     
                     
@@ -421,138 +438,6 @@
 
             </footer>
         </article>
-    </div>
-    <div class="col-md-4">
-        <aside>
-    <div class="row">
-        <div class="col-xs-12 col-sm-4 col-md-12">
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <h2 class="panel-title">Recent Posts</h2>
-                </div>
-                <div class="list-group">
-                    
-                    <a href="/wxt/working-examples/" class="list-group-item">Working Examples</a>
-                    
-                    <a href="/architecture/release-cycle/" class="list-group-item">Release Cycle / Updates</a>
-                    
-                    <a href="/wxt/media/" class="list-group-item">Media Library - Images, Videos and Documents</a>
-                    
-                    <a href="/wxt/releases/" class="list-group-item">Releases</a>
-                    
-                    <a href="/performance/code-quality/" class="list-group-item">Code Quality</a>
-                    
-                    <a href="/performance/profiling/" class="list-group-item">Profiling with XHProf &#43; XHGui</a>
-                    
-                    <a href="/wxt/deployment/" class="list-group-item">Deployment</a>
-                    
-                    <a href="/wxt/content-moderation/" class="list-group-item">Content Moderation</a>
-                    
-                    <a href="/post/2015/01/13/contributing-to-documentation-site/" class="list-group-item">Contributing to Documentation Site</a>
-                    
-                    <a href="/performance/databases/" class="list-group-item">Databases</a>
-                    
-                </div>
-            </div>
-        </div>
-        <div class="col-xs-12 col-sm-4 col-md-12">
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <h2 class="panel-title">Tags</h2>
-                </div>
-                <div class="list-group">
-                    
-                    
-                    
-                    <a href="http://drupalwxt.github.io/tags/architecture" class="list-group-item">
-                        <span class="badge">4</span>
-                        architecture
-                    </a>
-                    
-                    
-                    <a href="http://drupalwxt.github.io/tags/component" class="list-group-item">
-                        <span class="badge">2</span>
-                        component
-                    </a>
-                    
-                    
-                    <a href="http://drupalwxt.github.io/tags/content-staging" class="list-group-item">
-                        <span class="badge">1</span>
-                        content-staging
-                    </a>
-                    
-                    
-                    <a href="http://drupalwxt.github.io/tags/deployment" class="list-group-item">
-                        <span class="badge">1</span>
-                        deployment
-                    </a>
-                    
-                    
-                    <a href="http://drupalwxt.github.io/tags/media" class="list-group-item">
-                        <span class="badge">1</span>
-                        media
-                    </a>
-                    
-                    
-                    <a href="http://drupalwxt.github.io/tags/memcache" class="list-group-item">
-                        <span class="badge">1</span>
-                        memcache
-                    </a>
-                    
-                    
-                    <a href="http://drupalwxt.github.io/tags/moderation" class="list-group-item">
-                        <span class="badge">1</span>
-                        moderation
-                    </a>
-                    
-                    
-                    <a href="http://drupalwxt.github.io/tags/office-hours" class="list-group-item">
-                        <span class="badge">1</span>
-                        office-hours
-                    </a>
-                    
-                    
-                    <a href="http://drupalwxt.github.io/tags/performance" class="list-group-item">
-                        <span class="badge">5</span>
-                        performance
-                    </a>
-                    
-                    
-                    <a href="http://drupalwxt.github.io/tags/post" class="list-group-item">
-                        <span class="badge">1</span>
-                        post
-                    </a>
-                    
-                    
-                    <a href="http://drupalwxt.github.io/tags/releases" class="list-group-item">
-                        <span class="badge">1</span>
-                        releases
-                    </a>
-                    
-                    
-                    <a href="http://drupalwxt.github.io/tags/roadmap" class="list-group-item">
-                        <span class="badge">1</span>
-                        roadmap
-                    </a>
-                    
-                    
-                    <a href="http://drupalwxt.github.io/tags/varnish" class="list-group-item">
-                        <span class="badge">1</span>
-                        varnish
-                    </a>
-                    
-                    
-                    <a href="http://drupalwxt.github.io/tags/wxt" class="list-group-item">
-                        <span class="badge">9</span>
-                        wxt
-                    </a>
-                    
-                </div>
-            </div>
-        </div>
-    </div>
-</aside>
-
     </div>
 </div>
     

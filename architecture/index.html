@@ -113,6 +113,8 @@
                         </a>
                         <ul class="sm list-unstyled" role="menu">
                             
+                            <li><a href="/wxt/deployment/"> Content Staging</a></li>
+                            
                             <li><a href="/wxt/modules/"> Modules for WxT</a></li>
                             
                             <li><a href="/wxt/releases/"> Releases for WxT</a></li>
@@ -132,6 +134,10 @@
                             <span>Architecture</span>
                         </a>
                         <ul class="sm list-unstyled" role="menu">
+                            
+                            <li><a href="/architecture/drush-make/"> Drush Make &#43; Site Install</a></li>
+                            
+                            <li><a href="/architecture/libraries-api/"> Libraries API</a></li>
                             
                             <li><a href="/architecture/release-cycle/"> Release Cycle / Updates</a></li>
                             
@@ -235,7 +241,7 @@
         </div>
     </header>
     <div class="post-content">
-        Release Cycle The Drupal WxT 7.x-4.x branch will be updated with a stable release approximately once a month roughly around the 18th. The reason for this is to follow as closely the Drupal security and core release cycle which is usually aroun the 15th of every month. 1.x branch There will be no more new features integrated into the 7.x-1.x branch after the 1.9 release. Only security and minor bug fixes will be introduced as requested in the Pull Requests.
+        Release Cycle The Drupal WxT 7.x-4.x branch will be updated with a stable release approximately once every few months roughly around the 18th. The reason for this is to follow as closely the Drupal security and core release cycle which is usually around the 15th of every month. 1.x branch Starting in September there will be no more new features integrated into the 7.x-1.x branch. Only security and minor bug fixes will be merged into the codebase for a period of 6 months.
     </div>
     
     <footer class="read-more-link">
@@ -248,7 +254,29 @@
     
     <article class="post">
     <header>
-        <h2><a href="http://drupalwxt.github.io/architecture/drush-make/">Drush Make (Developers)</a></h2>
+        <h2><a href="http://drupalwxt.github.io/architecture/libraries-api/">Libraries API</a></h2>
+        <div class="post-date text-muted">
+            <span class="glyphicon glyphicon-calendar"></span>
+            <time datetime="2015-07-27">
+                2015-07-27 - 2M TO READ
+            </time>
+        </div>
+    </header>
+    <div class="post-content">
+        Libraries API is the common denominator and the defacto standard for all Drupal modules/profiles/themes that integrate with external libraries. The module introduces a common repository for libraries in profiles/distro/libraries or sites/all/libraries. Key Features The same library can be shared by more than one module. The same library can be shared by more than one site. Ease the process of upgrading a module that requires an external library. Just replace the module folder with the new one.
+    </div>
+    
+    <footer class="read-more-link">
+        <a href="http://drupalwxt.github.io/architecture/libraries-api/" class="btn btn-default">Read More...</a>
+    </footer>
+    
+</article>
+<hr>
+
+    
+    <article class="post">
+    <header>
+        <h2><a href="http://drupalwxt.github.io/architecture/drush-make/">Drush Make &#43; Site Install</a></h2>
         <div class="post-date text-muted">
             <span class="glyphicon glyphicon-calendar"></span>
             <time datetime="2015-01-13">
@@ -257,7 +285,7 @@
         </div>
     </header>
     <div class="post-content">
-        Important These instructions are mostly for legacy purposes. Up to date instructions can by found via the official package at Drupal WxT. Drupal WxT uses Drush Make for a rapid built-out of the Drupal codebase. A drush make file is similar to an &ldquo;ant script&rdquo; and allows us to host just the code that we are developing (Installation Profile and Custom Modules, Features, and Themes) on GitHub. Any user who has Drush installed can then perform a build-out of both the Drupal Core package and various contributed modules hosted on Drupal.org.
+        Important These instructions could become outdated over time. Up to date instructions can always be found via the official readme. Drupal WxT uses Drush Make for a rapid built-out of the Drupal codebase. A drush make file is similar to an &ldquo;ant script&rdquo; and allows us to host just the code that we are developing (Installation Profile and Custom Modules, Features, and Themes) on GitHub. Any user who has Drush installed can then perform a build-out of both the Drupal Core package and various contributed modules hosted on Drupal.org.
     </div>
     
     <footer class="read-more-link">
@@ -301,7 +329,7 @@
         </div>
     </header>
     <div class="post-content">
-        Drupal WxT can run on a wide range of desktop and server operating systems including Windows, MacOS, Linux and UNIX. However, you will need to configure the environment according to the standard Drupal 7 requirements. This page provides a brief summary of those requirements and recommendations. More information is available from the system requirements page at Drupal.org. Web server Apache 2.x Microsoft IIS NGINX (Fastest) Database server PostgreSQL 8.4 or higher with PDO (Recommended) MySQL 5.0.15 or higher with PDO SQLite 3.3.7 or higher (Development Only) PHP 5.3.4+ 5.4.4+ (Recommended) Tips Installing a PHP accelerator is highly recommended, especially for production use, such as APC for Apache or WinCache for IIS.
+        Drupal WxT can run on a wide range of desktop and server operating systems including Windows, MacOS, Linux and UNIX. However, you will need to configure the environment according to the standard Drupal 7 requirements. This page provides a brief summary of those requirements and recommendations. More information is available from the system requirements page at Drupal.org. Web server Apache 2.x Microsoft IIS NGINX Database server PostgreSQL 8.4+ MySQL 5.0.15+ SQLite 3.3.7+ (Development) PHP 5.3.4+ 5.4.4+ (Recommended) Tips Installing a PHP accelerator is highly recommended, especially for production use, such as APC for Apache or WinCache for IIS.
     </div>
     
     <footer class="read-more-link">

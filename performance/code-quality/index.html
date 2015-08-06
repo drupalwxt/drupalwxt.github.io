@@ -113,6 +113,8 @@
                         </a>
                         <ul class="sm list-unstyled" role="menu">
                             
+                            <li><a href="/wxt/deployment/"> Content Staging</a></li>
+                            
                             <li><a href="/wxt/modules/"> Modules for WxT</a></li>
                             
                             <li><a href="/wxt/releases/"> Releases for WxT</a></li>
@@ -132,6 +134,10 @@
                             <span>Architecture</span>
                         </a>
                         <ul class="sm list-unstyled" role="menu">
+                            
+                            <li><a href="/architecture/drush-make/"> Drush Make &#43; Site Install</a></li>
+                            
+                            <li><a href="/architecture/libraries-api/"> Libraries API</a></li>
                             
                             <li><a href="/architecture/release-cycle/"> Release Cycle / Updates</a></li>
                             
@@ -228,7 +234,7 @@
     <main role="main" property="mainContentOfPage" class="container">
 
 <div class="row">
-    <div class="col-md-8">
+    <div class="col-md-12">
         <article class="post">
             <header>
                 <h1 id="wb-cont" property="name">
@@ -245,12 +251,17 @@
             <div class="post-content">
                 
 
+<div class="alert alert-info">
+  <h4>Important</h4>
+  <p>These instructions might be a little out of date as much of the projects mentioned below have been incorporated into the Coder module</p>
+</div>
+
 <p>The following is a list of best practice tools to use when analyzing the code quality of modules made for Drupal:</p>
 
 <ol>
+<li><a href="https://www.drupal.org/project/coder">Coder</a></li>
 <li><a href="https://github.com/squizlabs/PHP_CodeSniffer">PHP CodeSniffer</a></li>
-<li><a href="https://www.drupal.org/project/coder">DrupalCS</a></li>
-<li><a href="https://www.drupal.org/project/drupalpractice">DrupalPractice</a></li>
+<li><a href="https://www.drupal.org/project/drupalpractice">DrupalPractice</a> (merged into Coder)</li>
 <li><a href="https://www.drupal.org/sandbox/coltrane/1921926">DrupalSecure</a></li>
 </ol>
 
@@ -326,6 +337,22 @@
                     
                     
                     
+                    <li><a href="http://drupalwxt.github.io/performance/apache-fpm/">Apache and PHP-FPM</a></li>
+                    
+                    
+                    
+                    
+                    
+                    <li><a href="http://drupalwxt.github.io/performance/nginx-fpm/">Nginx and PHP-FPM</a></li>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
                     
                     
                     
@@ -357,10 +384,6 @@
                     
                     
                     <li><a href="http://drupalwxt.github.io/performance/databases/">Databases</a></li>
-                    
-                    
-                    
-                    
                     
                     
                     
@@ -426,138 +449,6 @@
 
             </footer>
         </article>
-    </div>
-    <div class="col-md-4">
-        <aside>
-    <div class="row">
-        <div class="col-xs-12 col-sm-4 col-md-12">
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <h2 class="panel-title">Recent Posts</h2>
-                </div>
-                <div class="list-group">
-                    
-                    <a href="/wxt/working-examples/" class="list-group-item">Working Examples</a>
-                    
-                    <a href="/architecture/release-cycle/" class="list-group-item">Release Cycle / Updates</a>
-                    
-                    <a href="/wxt/media/" class="list-group-item">Media Library - Images, Videos and Documents</a>
-                    
-                    <a href="/wxt/releases/" class="list-group-item">Releases</a>
-                    
-                    <a href="/performance/code-quality/" class="list-group-item">Code Quality</a>
-                    
-                    <a href="/performance/profiling/" class="list-group-item">Profiling with XHProf &#43; XHGui</a>
-                    
-                    <a href="/wxt/deployment/" class="list-group-item">Deployment</a>
-                    
-                    <a href="/wxt/content-moderation/" class="list-group-item">Content Moderation</a>
-                    
-                    <a href="/post/2015/01/13/contributing-to-documentation-site/" class="list-group-item">Contributing to Documentation Site</a>
-                    
-                    <a href="/performance/databases/" class="list-group-item">Databases</a>
-                    
-                </div>
-            </div>
-        </div>
-        <div class="col-xs-12 col-sm-4 col-md-12">
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <h2 class="panel-title">Tags</h2>
-                </div>
-                <div class="list-group">
-                    
-                    
-                    
-                    <a href="http://drupalwxt.github.io/tags/architecture" class="list-group-item">
-                        <span class="badge">4</span>
-                        architecture
-                    </a>
-                    
-                    
-                    <a href="http://drupalwxt.github.io/tags/component" class="list-group-item">
-                        <span class="badge">2</span>
-                        component
-                    </a>
-                    
-                    
-                    <a href="http://drupalwxt.github.io/tags/content-staging" class="list-group-item">
-                        <span class="badge">1</span>
-                        content-staging
-                    </a>
-                    
-                    
-                    <a href="http://drupalwxt.github.io/tags/deployment" class="list-group-item">
-                        <span class="badge">1</span>
-                        deployment
-                    </a>
-                    
-                    
-                    <a href="http://drupalwxt.github.io/tags/media" class="list-group-item">
-                        <span class="badge">1</span>
-                        media
-                    </a>
-                    
-                    
-                    <a href="http://drupalwxt.github.io/tags/memcache" class="list-group-item">
-                        <span class="badge">1</span>
-                        memcache
-                    </a>
-                    
-                    
-                    <a href="http://drupalwxt.github.io/tags/moderation" class="list-group-item">
-                        <span class="badge">1</span>
-                        moderation
-                    </a>
-                    
-                    
-                    <a href="http://drupalwxt.github.io/tags/office-hours" class="list-group-item">
-                        <span class="badge">1</span>
-                        office-hours
-                    </a>
-                    
-                    
-                    <a href="http://drupalwxt.github.io/tags/performance" class="list-group-item">
-                        <span class="badge">5</span>
-                        performance
-                    </a>
-                    
-                    
-                    <a href="http://drupalwxt.github.io/tags/post" class="list-group-item">
-                        <span class="badge">1</span>
-                        post
-                    </a>
-                    
-                    
-                    <a href="http://drupalwxt.github.io/tags/releases" class="list-group-item">
-                        <span class="badge">1</span>
-                        releases
-                    </a>
-                    
-                    
-                    <a href="http://drupalwxt.github.io/tags/roadmap" class="list-group-item">
-                        <span class="badge">1</span>
-                        roadmap
-                    </a>
-                    
-                    
-                    <a href="http://drupalwxt.github.io/tags/varnish" class="list-group-item">
-                        <span class="badge">1</span>
-                        varnish
-                    </a>
-                    
-                    
-                    <a href="http://drupalwxt.github.io/tags/wxt" class="list-group-item">
-                        <span class="badge">9</span>
-                        wxt
-                    </a>
-                    
-                </div>
-            </div>
-        </div>
-    </div>
-</aside>
-
     </div>
 </div>
     

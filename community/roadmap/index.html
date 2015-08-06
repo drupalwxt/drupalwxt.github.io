@@ -113,6 +113,8 @@
                         </a>
                         <ul class="sm list-unstyled" role="menu">
                             
+                            <li><a href="/wxt/deployment/"> Content Staging</a></li>
+                            
                             <li><a href="/wxt/modules/"> Modules for WxT</a></li>
                             
                             <li><a href="/wxt/releases/"> Releases for WxT</a></li>
@@ -132,6 +134,10 @@
                             <span>Architecture</span>
                         </a>
                         <ul class="sm list-unstyled" role="menu">
+                            
+                            <li><a href="/architecture/drush-make/"> Drush Make &#43; Site Install</a></li>
+                            
+                            <li><a href="/architecture/libraries-api/"> Libraries API</a></li>
                             
                             <li><a href="/architecture/release-cycle/"> Release Cycle / Updates</a></li>
                             
@@ -228,7 +234,7 @@
     <main role="main" property="mainContentOfPage" class="container">
 
 <div class="row">
-    <div class="col-md-8">
+    <div class="col-md-12">
         <article class="post">
             <header>
                 <h1 id="wb-cont" property="name">
@@ -253,7 +259,7 @@
 
 <p>There are a lot of features inherently provided by Drupal WxT. However there are a few that have been designated as mandatory to support and as such have shaped the architecture of the distribution.</p>
 
-<table id="components-theme" class="wb-tables table table-striped table-hover" data-wb-tables='{"columnDefs": [ { "visible": true, "targets": [ 3 ] } ], "lengthMenu": [[10, 25, -1], [10, 25, "All"]], "pageLength": -1 }'>
+<table id="components-theme" class="wb-tables table table-striped table-hover" data-wb-tables='{"columnDefs": [ { "visible": true, "targets": [ 3 ] } ], "lengthMenu": [[10, 25, -1], [10, 25, "All"]], "pageLength": 10 }'>
     <thead>
         <tr>
             <th>Priority #</th>
@@ -265,66 +271,69 @@
     <tbody>
         <tr class="success">
             <td>1</td>
-            <td>Accessibility
-            </td>
+            <td>Accessibility</td>
             <td>Functional</td>
-            <td>Accessibility and strict markup enforced by WET-BOEW.</td>
+            <td>Accessibility and strict markup enforced by <a href="http://github.com/wet-boew/wet-boew">WxT</a>.</td>
         </tr>
         <tr class="success">
             <td>2</td>
-            <td>Bootstrap
-            </td>
+            <td>Bootstrap</td>
             <td>Functional</td>
             <td>Bootstrap integration throughout the entire Front + Back End.</td>
         </tr>
         <tr class="success">
             <td>3</td>
-            <td><a href="/wxt/content-moderation/">Content Moderation</a>
-            </td>
+            <td><a href="/wxt/content-moderation/">Content Moderation</a></td>
             <td>Functional</td>
             <td>A proper and extendable content workflow must be established.</td>
         </tr>
         <tr class="success">
             <td>4</td>
-            <td><a href="/wxt/deployment">Content Staging / Deployment</a>
-            </td>
+            <td><a href="/wxt/deployment">Content Staging / Deployment</a></td>
             <td>Functional</td>
             <td>Content should be deployable allowing for content to be sent reliably across drupal platforms.</td>
         </tr>
         <tr class="success">
             <td>5</td>
-            <td>WxT jQuery Framework
-            </td>
+            <td>WxT jQuery Framework</td>
             <td>Functional</td>
             <td>Maintain template adherance and tightly couple with the functionality provided by by WxT.</td>
         </tr>
         <tr class="success">
             <td>6</td>
-            <td>Metatags
-            </td>
+            <td>Metatags</td>
             <td>Functional</td>
-            <td>Follow the Standard on Web Operability provided by TBS.</td>
+            <td>Follow the Standard on Web Operability and Usability provided by TBS.</td>
         </tr>
         <tr class="success">
             <td>7</td>
-            <td>Migration
-            </td>
+            <td>Migration</td>
             <td>Functional</td>
-            <td>Provide an API allowing bulk migration of content from a variety of platforms into Drupal.</td>
+            <td>Provide an suite of scripts allowing bulk migration of content from a variety of platforms into Drupal.</td>
         </tr>
         <tr class="success">
             <td>8</td>
-            <td>Multilingual
-            </td>
+            <td>Multilingual</td>
             <td>Functional</td>
             <td>Provide multilingual support throughout the platform.</td>
         </tr>
         <tr class="success">
             <td>9</td>
-            <td>Universal Unique Identifiers
-            </td>
+            <td>Performance</td>
+            <td>Functional</td>
+            <td>All custom code and when possible contributed modules should go through testing with XHProf + XHGui.</td>
+        </tr>
+        <tr class="success">
+            <td>10</td>
+            <td>Universal Unique Identifiers</td>
             <td>Functional</td>
             <td>All entities should be associated with UUID to allow for data to be reliably stored, accessed and deployed.</td>
+        </tr>
+        <tr class="success">
+            <td>11</td>
+            <td>Licensing</td>
+            <td>Functional</td>
+            <td>All aspects of the codebase including third party libraries must conform to GPLv3.</td>
         </tr>
     </tbody>
 </table>
@@ -346,6 +355,14 @@
                 
                 <h3>Related Post</h3>
                 <ul class="post-rels">
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
                     
                     
                     
@@ -452,138 +469,6 @@
 
             </footer>
         </article>
-    </div>
-    <div class="col-md-4">
-        <aside>
-    <div class="row">
-        <div class="col-xs-12 col-sm-4 col-md-12">
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <h2 class="panel-title">Recent Posts</h2>
-                </div>
-                <div class="list-group">
-                    
-                    <a href="/wxt/working-examples/" class="list-group-item">Working Examples</a>
-                    
-                    <a href="/architecture/release-cycle/" class="list-group-item">Release Cycle / Updates</a>
-                    
-                    <a href="/wxt/media/" class="list-group-item">Media Library - Images, Videos and Documents</a>
-                    
-                    <a href="/wxt/releases/" class="list-group-item">Releases</a>
-                    
-                    <a href="/performance/code-quality/" class="list-group-item">Code Quality</a>
-                    
-                    <a href="/performance/profiling/" class="list-group-item">Profiling with XHProf &#43; XHGui</a>
-                    
-                    <a href="/wxt/deployment/" class="list-group-item">Deployment</a>
-                    
-                    <a href="/wxt/content-moderation/" class="list-group-item">Content Moderation</a>
-                    
-                    <a href="/post/2015/01/13/contributing-to-documentation-site/" class="list-group-item">Contributing to Documentation Site</a>
-                    
-                    <a href="/performance/databases/" class="list-group-item">Databases</a>
-                    
-                </div>
-            </div>
-        </div>
-        <div class="col-xs-12 col-sm-4 col-md-12">
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <h2 class="panel-title">Tags</h2>
-                </div>
-                <div class="list-group">
-                    
-                    
-                    
-                    <a href="http://drupalwxt.github.io/tags/architecture" class="list-group-item">
-                        <span class="badge">4</span>
-                        architecture
-                    </a>
-                    
-                    
-                    <a href="http://drupalwxt.github.io/tags/component" class="list-group-item">
-                        <span class="badge">2</span>
-                        component
-                    </a>
-                    
-                    
-                    <a href="http://drupalwxt.github.io/tags/content-staging" class="list-group-item">
-                        <span class="badge">1</span>
-                        content-staging
-                    </a>
-                    
-                    
-                    <a href="http://drupalwxt.github.io/tags/deployment" class="list-group-item">
-                        <span class="badge">1</span>
-                        deployment
-                    </a>
-                    
-                    
-                    <a href="http://drupalwxt.github.io/tags/media" class="list-group-item">
-                        <span class="badge">1</span>
-                        media
-                    </a>
-                    
-                    
-                    <a href="http://drupalwxt.github.io/tags/memcache" class="list-group-item">
-                        <span class="badge">1</span>
-                        memcache
-                    </a>
-                    
-                    
-                    <a href="http://drupalwxt.github.io/tags/moderation" class="list-group-item">
-                        <span class="badge">1</span>
-                        moderation
-                    </a>
-                    
-                    
-                    <a href="http://drupalwxt.github.io/tags/office-hours" class="list-group-item">
-                        <span class="badge">1</span>
-                        office-hours
-                    </a>
-                    
-                    
-                    <a href="http://drupalwxt.github.io/tags/performance" class="list-group-item">
-                        <span class="badge">5</span>
-                        performance
-                    </a>
-                    
-                    
-                    <a href="http://drupalwxt.github.io/tags/post" class="list-group-item">
-                        <span class="badge">1</span>
-                        post
-                    </a>
-                    
-                    
-                    <a href="http://drupalwxt.github.io/tags/releases" class="list-group-item">
-                        <span class="badge">1</span>
-                        releases
-                    </a>
-                    
-                    
-                    <a href="http://drupalwxt.github.io/tags/roadmap" class="list-group-item">
-                        <span class="badge">1</span>
-                        roadmap
-                    </a>
-                    
-                    
-                    <a href="http://drupalwxt.github.io/tags/varnish" class="list-group-item">
-                        <span class="badge">1</span>
-                        varnish
-                    </a>
-                    
-                    
-                    <a href="http://drupalwxt.github.io/tags/wxt" class="list-group-item">
-                        <span class="badge">9</span>
-                        wxt
-                    </a>
-                    
-                </div>
-            </div>
-        </div>
-    </div>
-</aside>
-
     </div>
 </div>
     

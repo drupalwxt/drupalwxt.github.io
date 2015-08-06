@@ -11,7 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
     <title>
         
-        Content Moderation
+        Apache and PHP-FPM
         
     </title>
     
@@ -225,7 +225,7 @@
                         
                           
                       
-                      <li>Content Moderation</li>
+                      <li>Apache and PHP-FPM</li>
                     </ol>
                 </div>
             </div>
@@ -238,12 +238,12 @@
         <article class="post">
             <header>
                 <h1 id="wb-cont" property="name">
-                    Content Moderation
+                    Apache and PHP-FPM
                 </h1>
                 <div class="post-date mrgn-bttm-md text-muted text-right small">
                     <span class="glyphicon glyphicon-calendar"></span>
-                    <time datetime="2015-01-13">
-                        2015-01-13
+                    <time datetime="2015-08-04">
+                        2015-08-04
                     </time>
                 </div>
                 <div class="wb-share mrgn-bttm-md text-muted text-right small" data-wb-share='{" pnlId": "pnl1"}'></div>
@@ -251,52 +251,142 @@
             <div class="post-content">
                 
 
-<p>Web editors have diverse knowledge as well as different levels of HTML coding, web publishing guidelines, accessibility requirements, and experience with validation tools. Only more senior editors should be able to validate and modify HTML as well as have the publishing rights to push content updates to the live server.</p>
+<div class="alert alert-info">
+  <h4>Important</h4>
+  <p>Want even more performance? Head on over to our <a href="/performance/nginx-fpm/">Nginx + PHP-FPM</a> documentation.</p>
+</div>
 
-<h2 id="html-coding:305b718314c14c639b00ab472dafc5bd">HTML Coding</h2>
+<p><a href="http://httpd.apache.org/docs/2.4">Apache</a> can achieve a rough parity in performance to a Nginx + PHP-FPM setup. With the added caveat that Apache should be run in either <code>MPM Event</code> or <code>MPM Worker</code> mode. Please note that the following statement holds true when analyzing performance:</p>
 
-<p>In the WYSIWYG editor.</p>
+<pre><code>page speed &lt; requests served
+</code></pre>
 
-<ol>
-<li><p>Click the Source button on, off and on again for the WYSIWYG HTML auto-cleanup.</p></li>
+<p>This means we are more concerned about how many requests that can be served then how fast we can serve the request. Apache under the pre-fork setting is a process-based server and therefore forks a process for every request. As opposed to Nginx and the MPM modes in Apache which are event based and make use of threads instead of processes.</p>
 
-<li><p>Senior editors should view the Source and clean up HTML as needed, running validation tools before publishing.</p>
+<p>While Apache using pre-fork can perform on par with a thread based server under light loads, under heavier loads you can notice Apache requiring several hundred megabytes (including the web application) for just the web server whereas the thread based server would be much smaller segment of RAM.</p>
 
-<ul>
-<li><a href="http://validator.w3.org">http://validator.w3.org</a></li>
-<li><a href="http://wave.webaim.org/">http://wave.webaim.org/</a></li>
-<li><a href="http://www.onlinewebcheck.com/check.php">http://www.onlinewebcheck.com/check.php</a></li>
-</ul></li>
-</ol>
+<h2 id="scenario:0c0d031eea49ddb517460e7d813f2e78">Scenario</h2>
 
-<h2 id="workflow-content-moderation:305b718314c14c639b00ab472dafc5bd">Workflow Content Moderation</h2>
-
-<p>Content moderation streamlines the publication process while ensuring that web content conforms to all mandated requirements for web content on federal government websites. The final publication step that pushes changes to become publically visible should be performed by website editors who are familiar with HTML coding and GoC requirements for publishing web content to federal government websites.</p>
-
-<ol>
-<li><p><strong>Draft</strong>: All website editors can create new content or edit existing content and save to Draft status while making changes.</p></li>
-
-<li><p><strong>Needs Review</strong>: When an junior editor is finished updating and making changes they can save to Needs Review status, where a more senior editor with HTML knowledge and validation tools can ensure that all new and modified content is ready for publishing.</p></li>
-
-<li><p><strong>Published</strong>: A senior editor makes any changes needed to correct HTML and WCAG validation errors and iron out any wrinkles prior to publishing.</p>
+<p>Server with the following technical specs:</p>
 
 <ul>
-<li>Before and after publishing new or updated web content W3C validation is needed.   (<a href="http://validator.w3.org">http://validator.w3.org</a>)</li>
-<li>Before and after publishing new or updated web content Wave validation is needed. (<a href="http://wave.webaim.org/">http://wave.webaim.org/</a>)</li>
-<li>Before and after publishing new or updated web content CSE validation is needed. (<a href="http://www.onlinewebcheck.com/check.php">http://www.onlinewebcheck.com/check.php</a>)</li>
-</ul></li>
-</ol>
-
-<h2 id="workflow-evolution:305b718314c14c639b00ab472dafc5bd">Workflow Evolution</h2>
-
-<p>Moderation steps and workflow are fully customizable; the entire publishing process can be mapped out in advance and then modified over time to adapt to changing conditions. For example, new moderation steps could include:</p>
-
-<ul>
-<li>Needs Translation</li>
-<li>Needs Final Approval from content owner</li>
-<li>Needs Testing</li>
-<li>Needs Developer input</li>
+<li>CPU: 4 @ 2.7GHZ</li>
+<li>RAM: 8GB</li>
 </ul>
+
+<h3 id="quick-audit-apache:0c0d031eea49ddb517460e7d813f2e78">Quick Audit Apache</h3>
+
+<p>There are three key areas to inspect when looking at Apache for a PHP-FPM environment. These are <code>keepalive</code>, <code>maxclients</code> and <code>allowoverride</code>.</p>
+
+<h4 id="keepalive:0c0d031eea49ddb517460e7d813f2e78">KeepAlive</h4>
+
+<p>KeepAlive can severely limit Apache&rsquo;s ability to handle many concurrent requests. (Unless behind a Reverse Proxy such as Nginx, Varnish or Squid). For many websites including those powered by Drupal a good setting for the KeepAliveTimeout would be a low value like 3 seconds.</p>
+
+<pre><code>keepalivetimeout = 3s
+</code></pre>
+
+<h4 id="maxclients:0c0d031eea49ddb517460e7d813f2e78">MaxClients</h4>
+
+<p>This configuration is important to get right. If set to low this could causes users to wait for Apache to respond to the request while the server resources are idle. However if set to high the server will quickly run out of ram and start swapping to disk. Page responses times can will quickly go from ms to mins.</p>
+
+<pre><code>maxclients = (Total RAM - Memory used for Linux, DB, etc.) / process size
+
+Note: To get an approx average httpd process size:
+
+ps aux | grep 'httpd' | awk '{print $6/1024 &quot; MB&quot;;}'
+</code></pre>
+
+<h4 id="allowoverrides:0c0d031eea49ddb517460e7d813f2e78">AllowOverrides</h4>
+
+<p>While the impact of this setting on performance can vary greatly. For complex applications like Drupal you theoretically could have thousands of files at quite large directories depths. This would result in Apache having to recurse through all of these directories parsing all .htaccess files along the way. Since i/o cals are expensive this can be further exacerbated by the number of contrib modules or libraries present. Note: Special care would have to be emphasized in moving the appropriate Drupal .htaccess files into the httpd.conf file.</p>
+
+<h3 id="php-fpm:0c0d031eea49ddb517460e7d813f2e78">PHP-FPM</h3>
+
+<h4 id="maxchildren:0c0d031eea49ddb517460e7d813f2e78">MaxChildren</h4>
+
+<p>When looking to optimize PHP-FPM it is largely depends on the application itself. However a standard rule that would satisfy a broad subset of use cases would be:</p>
+
+<pre><code>pm.max_children = (Total RAM - Memory used for Linux, DB, etc.) / Average php process size
+</code></pre>
+
+<p>Helper Script:</p>
+
+<pre><code class="language-sh">ps -ylC php5-fpm --sort:rss | awk '!/RSS/ { s+=$8 } END { printf &quot;%s\n&quot;, &quot;Total memory used by PHP-FPM child processes: &quot;; printf &quot;%dM\n&quot;, s/
+</code></pre>
+
+<h3 id="quick-setup:0c0d031eea49ddb517460e7d813f2e78">Quick Setup</h3>
+
+<p>At a most base level this seems to be the ideal setup based on peer review:</p>
+
+<ul>
+<li>apache (&lt;=2.4)</li>
+<li>mpm_event &gt; mpm_worker (descendent)</li>
+<li>zendopcache &gt; apc (deprecated)</li>
+<li>php_fpm (proxyPass)</li>
+</ul>
+
+<p>Note: It is also important to highlight that single core php-fpm instances won&rsquo;t be much faster then mod_php. PHP-FPM benefits proportionately to the number of cpu cores available. While a dual core would yield a performance gain. A recommended number would be at least 4 cores.</p>
+
+<h2 id="detailed-setup:0c0d031eea49ddb517460e7d813f2e78">Detailed Setup</h2>
+
+<p>In the <code>/etc/apache/conf.d/mpm-event.conf</code> or <code>/etc/apache/conf.d/mpm-worker.conf</code> file:</p>
+
+<pre><code class="language-sh">&lt;IfModule mpm_*_module&gt;
+  ServerLimit           (Total RAM - Memory used for Linux, DB, etc.) / process size
+  StartServers          (Number of Cores)
+  MinSpareThreads       25
+  MaxSpareThreads       75
+  ThreadsPerChild       25
+  MaxClients            (Total RAM - Memory used for Linux, DB, etc.) / process size
+  MaxRequestsPerChild   1000
+&lt;/IfModule&gt;
+</code></pre>
+
+<p>In the <code>/etc/apache2/conf.d/php-fpm.conf</code> file:</p>
+
+<pre><code class="language-sh">&lt;IfModule mod_fastcgi.c&gt;
+  Alias /usr/sbin/php-fpm.fcgi /usr/sbin/php-fpm
+  AddHandler php-fastcgi .php
+  Action php-fastcgi /usr/sbin/php-fpm.fcgi
+  FastCGIExternalServer /usr/sbin/php-fpm -host 127.0.0.1:9000
+  &lt;Directory /usr/sbin&gt;
+    Options ExecCGI FollowSymLinks
+    SetHandler fastcgi-script
+    Order allow,deny
+    Allow from all
+  &lt;/Directory&gt;
+&lt;/IfModule&gt;
+</code></pre>
+
+<p>In the <code>/etc/php5/fpm/pool.d/www.conf</code> file:</p>
+
+<pre><code class="language-sh">[www]
+user = www-data
+group = www-data
+chdir = /
+listen = 127.0.0.1:9000
+pm = dynamic            (ondemand might be better for memory usage)
+pm.max_children         (total RAM - (DB etc) / process size)
+pm.start_servers        (1/4 of cpu cores)
+pm.min_spare_servers    (1/2 of cpu cores)
+pm.max_spare_servers    (total of cpur cores)
+pm.max_requests         (high to prevent server respwan)
+                        (tip: set really low to find memory leaks)
+</code></pre>
+
+<p>In the <code>/etc/php5/fpm/conf.d/local.ini</code> file:</p>
+
+<pre><code class="language-sh">memory_limit = 324M (WxT needs at minimum 256MB)
+</code></pre>
+
+<p>Then just execute the following commands:</p>
+
+<pre><code class="language-sh">sudo a2enmod fastcgi actions rewrite deflate expires
+sudo service php5-fpm restart
+sudo service apache2 restart
+</code></pre>
+
+<!-- Links Referenced -->
 
             </div>
             <aside>
@@ -304,23 +394,9 @@
                 <ul class="list-inline post-tags">
                     
                     <li>
-                        <a href="http://drupalwxt.github.io/tags/moderation">
+                        <a href="http://drupalwxt.github.io/tags/performance">
                             <i class="fa fa-tags"></i>
-                            moderation
-                        </a>
-                    </li>
-                    
-                    <li>
-                        <a href="http://drupalwxt.github.io/tags/workbench">
-                            <i class="fa fa-tags"></i>
-                            workbench
-                        </a>
-                    </li>
-                    
-                    <li>
-                        <a href="http://drupalwxt.github.io/tags/wxt">
-                            <i class="fa fa-tags"></i>
-                            wxt
+                            performance
                         </a>
                     </li>
                     
@@ -335,7 +411,6 @@
                     
                     
                     
-                    <li><a href="http://drupalwxt.github.io/wxt/working-examples/">Working Examples</a></li>
                     
                     
                     
@@ -348,6 +423,7 @@
                     
                     
                     
+                    <li><a href="http://drupalwxt.github.io/performance/nginx-fpm/">Nginx and PHP-FPM</a></li>
                     
                     
                     
@@ -357,27 +433,26 @@
                     
                     
                     
-                    <li><a href="http://drupalwxt.github.io/wxt/media/">Media Library - Images, Videos and Documents</a></li>
                     
                     
                     
                     
                     
-                    <li><a href="http://drupalwxt.github.io/wxt/releases/">Releases</a></li>
                     
                     
                     
+                    <li><a href="http://drupalwxt.github.io/performance/code-quality/">Code Quality</a></li>
                     
                     
                     
                     
                     
+                    <li><a href="http://drupalwxt.github.io/performance/profiling/">Profiling with XHProf &#43; XHGui</a></li>
                     
                     
                     
                     
                     
-                    <li><a href="http://drupalwxt.github.io/wxt/deployment/">Content Staging</a></li>
                     
                     
                     
@@ -387,10 +462,10 @@
                     
                     
                     
-                    <li><a href="http://drupalwxt.github.io/post/2015/01/13/contributing-to-documentation-site/">Contributing to Documentation Site</a></li>
                     
                     
                     
+                    <li><a href="http://drupalwxt.github.io/performance/databases/">Databases</a></li>
                     
                     
                     
@@ -404,12 +479,12 @@
                     
                     
                     
+                    <li><a href="http://drupalwxt.github.io/performance/memcached/">Memcached</a></li>
                     
                     
                     
                     
                     
-                    <li><a href="http://drupalwxt.github.io/wxt/modules/">Modules for Drupal WxT</a></li>
                     
                     
                     
@@ -427,11 +502,10 @@
                     
                     
                     
-                    <li><a href="http://drupalwxt.github.io/wxt/tabbed-interface/">Tabbed Interface</a></li>
                     
                     
                     
-                    
+                    <li><a href="http://drupalwxt.github.io/performance/varnish/">Varnish</a></li>
                     
                     
                 </ul>
@@ -442,11 +516,11 @@
                 <nav>
                     <ul class="pager">
                         
-                        <li class="previous"><a href="http://drupalwxt.github.io/wxt/deployment/"><span aria-hidden="true">&larr;</span> Older</a></li>
+                        <li class="previous"><a href="http://drupalwxt.github.io/architecture/release-cycle/"><span aria-hidden="true">&larr;</span> Older</a></li>
                         
 
                         
-                        <li class="next"><a href="http://drupalwxt.github.io/post/2015/01/13/contributing-to-documentation-site/">Newer <span aria-hidden="true">&rarr;</span></a></li>
+                        <li class="next"><a href="http://drupalwxt.github.io/performance/nginx-fpm/">Newer <span aria-hidden="true">&rarr;</span></a></li>
                         
                     </ul>
                 </nav>
@@ -463,7 +537,7 @@
     <dl id="wb-dtmd">
         <dt>Date modified:&#32;</dt>
         <dd>
-            <time property="dateModified">2015-01-13</time>
+            <time property="dateModified">2015-08-04</time>
         </dd>
     </dl>
     

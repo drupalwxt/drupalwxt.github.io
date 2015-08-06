@@ -18,6 +18,21 @@
   </url>
   
   <url>
+    <loc>http://drupalwxt.github.io/performance/apache-fpm/</loc>
+    <lastmod>2015-08-04T19:10:52-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://drupalwxt.github.io/performance/nginx-fpm/</loc>
+    <lastmod>2015-08-04T19:10:52-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://drupalwxt.github.io/architecture/libraries-api/</loc>
+    <lastmod>2015-07-27T13:10:52-05:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://drupalwxt.github.io/wxt/media/</loc>
     <lastmod>2015-02-26T13:10:50-05:00</lastmod>
   </url>
@@ -64,11 +79,6 @@
   
   <url>
     <loc>http://drupalwxt.github.io/architecture/getting-started-win/</loc>
-    <lastmod>2015-01-13T13:10:52-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://drupalwxt.github.io/wxt/lightbox/</loc>
     <lastmod>2015-01-13T13:10:52-05:00</lastmod>
   </url>
   

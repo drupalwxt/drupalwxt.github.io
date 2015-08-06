@@ -113,6 +113,8 @@
                         </a>
                         <ul class="sm list-unstyled" role="menu">
                             
+                            <li><a href="/wxt/deployment/"> Content Staging</a></li>
+                            
                             <li><a href="/wxt/modules/"> Modules for WxT</a></li>
                             
                             <li><a href="/wxt/releases/"> Releases for WxT</a></li>
@@ -132,6 +134,10 @@
                             <span>Architecture</span>
                         </a>
                         <ul class="sm list-unstyled" role="menu">
+                            
+                            <li><a href="/architecture/drush-make/"> Drush Make &#43; Site Install</a></li>
+                            
+                            <li><a href="/architecture/libraries-api/"> Libraries API</a></li>
                             
                             <li><a href="/architecture/release-cycle/"> Release Cycle / Updates</a></li>
                             
@@ -232,6 +238,50 @@
     
     <article class="post">
     <header>
+        <h2><a href="http://drupalwxt.github.io/performance/apache-fpm/">Apache and PHP-FPM</a></h2>
+        <div class="post-date text-muted">
+            <span class="glyphicon glyphicon-calendar"></span>
+            <time datetime="2015-08-04">
+                2015-08-04 - 4M TO READ
+            </time>
+        </div>
+    </header>
+    <div class="post-content">
+        Important Want even more performance? Head on over to our Nginx + PHP-FPM documentation. Apache can achieve a rough parity in performance to a Nginx + PHP-FPM setup. With the added caveat that Apache should be run in either MPM Event or MPM Worker mode. Please note that the following statement holds true when analyzing performance: page speed &lt; requests served This means we are more concerned about how many requests that can be served then how fast we can serve the request.
+    </div>
+    
+    <footer class="read-more-link">
+        <a href="http://drupalwxt.github.io/performance/apache-fpm/" class="btn btn-default">Read More...</a>
+    </footer>
+    
+</article>
+<hr>
+
+    
+    <article class="post">
+    <header>
+        <h2><a href="http://drupalwxt.github.io/performance/nginx-fpm/">Nginx and PHP-FPM</a></h2>
+        <div class="post-date text-muted">
+            <span class="glyphicon glyphicon-calendar"></span>
+            <time datetime="2015-08-04">
+                2015-08-04 - 2M TO READ
+            </time>
+        </div>
+    </header>
+    <div class="post-content">
+        Important Using Apache? Head on over to our Apache + PHP-FPM documentation. Nginx is event-based, so it does not follow Apache&rsquo;s style of spawning new processes or threads for each web page request. The end result is that even as load increases, memory and CPU usage remain manageable. Scenario Server with the following technical specs: CPU: 4 @ 2.7GHZ RAM: 8GB Quick Audit Nginx There are three key areas to inspect when looking at Nginx for a PHP-FPM environment.
+    </div>
+    
+    <footer class="read-more-link">
+        <a href="http://drupalwxt.github.io/performance/nginx-fpm/" class="btn btn-default">Read More...</a>
+    </footer>
+    
+</article>
+<hr>
+
+    
+    <article class="post">
+    <header>
         <h2><a href="http://drupalwxt.github.io/performance/code-quality/">Code Quality</a></h2>
         <div class="post-date text-muted">
             <span class="glyphicon glyphicon-calendar"></span>
@@ -241,7 +291,7 @@
         </div>
     </header>
     <div class="post-content">
-        The following is a list of best practice tools to use when analyzing the code quality of modules made for Drupal: PHP CodeSniffer DrupalCS DrupalPractice DrupalSecure Normally these tools would be run based on a push to a CI server and will affect the build status if failures are detected. Note: This page only discusses &lsquo;static code analysis&rsquo; tools and not tests run during our CI build such as BDD tests with Behat.
+        Important These instructions might be a little out of date as much of the projects mentioned below have been incorporated into the Coder module The following is a list of best practice tools to use when analyzing the code quality of modules made for Drupal: Coder PHP CodeSniffer DrupalPractice (merged into Coder) DrupalSecure Normally these tools would be run based on a push to a CI server and will affect the build status if failures are detected.
     </div>
     
     <footer class="read-more-link">
@@ -307,7 +357,7 @@
         </div>
     </header>
     <div class="post-content">
-        Memcache is an open-source high performance object caching system that is specifically intended for reducing calls to the DBMS. Memcache is a back-end service (i.e. a daemon on UNIX) that provides a simple but fast in-memory key/value store. This is designed to be scalable and distributed so that requests should not slow down as the load increases, and multiple memcached servers can be employed at once. For the Drupal WxT, Memcache can be used to cache database queries.
+        Memcache is an open-source high performance object caching system that is specifically intended for reducing calls to the DBMS. Memcache is a back-end service (i.e. a daemon on UNIX) that provides a simple but fast in-memory key/value store. This is designed to be scalable and distributed so that requests should not slow down as the load increases, and multiple memcached servers can be employed at once. For Drupal, memcache can be used to cache database queries.
     </div>
     
     <footer class="read-more-link">
@@ -345,7 +395,7 @@
     <dl id="wb-dtmd">
         <dt>Date modified:&#32;</dt>
         <dd>
-            <time property="dateModified">2015-01-20</time>
+            <time property="dateModified">2015-08-04</time>
         </dd>
     </dl>
     

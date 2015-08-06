@@ -113,6 +113,8 @@
                         </a>
                         <ul class="sm list-unstyled" role="menu">
                             
+                            <li><a href="/wxt/deployment/"> Content Staging</a></li>
+                            
                             <li><a href="/wxt/modules/"> Modules for WxT</a></li>
                             
                             <li><a href="/wxt/releases/"> Releases for WxT</a></li>
@@ -132,6 +134,10 @@
                             <span>Architecture</span>
                         </a>
                         <ul class="sm list-unstyled" role="menu">
+                            
+                            <li><a href="/architecture/drush-make/"> Drush Make &#43; Site Install</a></li>
+                            
+                            <li><a href="/architecture/libraries-api/"> Libraries API</a></li>
                             
                             <li><a href="/architecture/release-cycle/"> Release Cycle / Updates</a></li>
                             
@@ -261,23 +267,13 @@
                 <div class="wb-share mrgn-bttm-md text-muted text-right small" data-wb-share='{" pnlId": "pnl1"}'></div>
             </header>
             <div class="post-content">
-                
+                <p>Our new documentation site for Drupal WxT has been updated and with it a improved workflow for collaboration. This documentation site is powered by <a href="http://gohugo.io/">Hugo</a> (a static site generator) that converts markdown files to html and allows for a quick and easy deployment to GitHub pages.</p>
 
-<p>Our new documentation site for Drupal WxT is now being powered by Hugo.</p>
+<p>This allows for contributors who feel the documentation is lacking in certain areas to simply perform a pull request and submit a markdown file  alongside with the appropriate front matter (metadata about the content).</p>
 
-<p>Of course we could be using Drupal itself to power our documentation site but that would be overkill for such simple requirements that this site requires.</p>
+<p>Should the pull request be accepted the code will automatically be pushed to the live website via <a href="http://travis-ci.org">Travis CI</a> and published to <a href="http://drupalwxt.github.io">drupalwxt.github.io</a>.</p>
 
-<p>Remember we should always be practicing the methodology of choosing the right tool for the right job!</p>
-
-<h2 id="what-is-hugo:c7248249c4f66b373849994f32705339">What is Hugo</h2>
-
-<p><a href="http://gohugo.io/">Hugo</a> itself is a general-purpose static site generator framework.</p>
-
-<p>Sites built with Hugo are extremely fast and very secure. Hugo sites can be hosted anywhere, including Heroku, GoDaddy, DreamHost, GitHub Pages, Amazon S3 and CloudFront, and work well with CDNs. Hugo sites run without dependencies on expensive runtimes like Ruby, Python or PHP and without dependencies on any databases.</p>
-
-<p>Hugo has nearly instant build times and the ability to rebuild whenever a change is made, Hugo provides a very fast feedback loop. This is essential when you are designing websites, but also very useful when creating content.</p>
-
-<p>For information on how to contribute to the documentation site please consult the <a href="https://github.com/drupalwxt/website/blob/master/README.md">README.md</a> file.</p>
+<p>For more information on how to contribute to the documentation site please consult the <a href="https://raw.githubusercontent.com/drupalwxt/wet-boew-hugo/master/README.md">README.md</a> file.</p>
 
 <!-- Links Referenced -->
 
@@ -321,6 +317,18 @@
                     
                     
                     
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
                     <li><a href="http://drupalwxt.github.io/wxt/media/">Media Library - Images, Videos and Documents</a></li>
                     
                     
@@ -341,7 +349,7 @@
                     
                     
                     
-                    <li><a href="http://drupalwxt.github.io/wxt/deployment/">Deployment</a></li>
+                    <li><a href="http://drupalwxt.github.io/wxt/deployment/">Content Staging</a></li>
                     
                     
                     
@@ -364,12 +372,6 @@
                     
                     
                     
-                    
-                    
-                    
-                    
-                    
-                    <li><a href="http://drupalwxt.github.io/wxt/lightbox/">Lightbox</a></li>
                     
                     
                     
@@ -442,6 +444,12 @@
                     
                     <a href="/architecture/release-cycle/" class="list-group-item">Release Cycle / Updates</a>
                     
+                    <a href="/performance/apache-fpm/" class="list-group-item">Apache and PHP-FPM</a>
+                    
+                    <a href="/performance/nginx-fpm/" class="list-group-item">Nginx and PHP-FPM</a>
+                    
+                    <a href="/architecture/libraries-api/" class="list-group-item">Libraries API</a>
+                    
                     <a href="/wxt/media/" class="list-group-item">Media Library - Images, Videos and Documents</a>
                     
                     <a href="/wxt/releases/" class="list-group-item">Releases</a>
@@ -450,13 +458,7 @@
                     
                     <a href="/performance/profiling/" class="list-group-item">Profiling with XHProf &#43; XHGui</a>
                     
-                    <a href="/wxt/deployment/" class="list-group-item">Deployment</a>
-                    
-                    <a href="/wxt/content-moderation/" class="list-group-item">Content Moderation</a>
-                    
-                    <a href="/post/2015/01/13/contributing-to-documentation-site/" class="list-group-item">Contributing to Documentation Site</a>
-                    
-                    <a href="/performance/databases/" class="list-group-item">Databases</a>
+                    <a href="/wxt/deployment/" class="list-group-item">Content Staging</a>
                     
                 </div>
             </div>
@@ -471,14 +473,14 @@
                     
                     
                     <a href="http://drupalwxt.github.io/tags/architecture" class="list-group-item">
-                        <span class="badge">4</span>
+                        <span class="badge">5</span>
                         architecture
                     </a>
                     
                     
-                    <a href="http://drupalwxt.github.io/tags/component" class="list-group-item">
-                        <span class="badge">2</span>
-                        component
+                    <a href="http://drupalwxt.github.io/tags/bean" class="list-group-item">
+                        <span class="badge">1</span>
+                        bean
                     </a>
                     
                     
@@ -519,7 +521,7 @@
                     
                     
                     <a href="http://drupalwxt.github.io/tags/performance" class="list-group-item">
-                        <span class="badge">5</span>
+                        <span class="badge">7</span>
                         performance
                     </a>
                     
@@ -542,14 +544,26 @@
                     </a>
                     
                     
+                    <a href="http://drupalwxt.github.io/tags/tabbed-interface" class="list-group-item">
+                        <span class="badge">1</span>
+                        tabbed-interface
+                    </a>
+                    
+                    
                     <a href="http://drupalwxt.github.io/tags/varnish" class="list-group-item">
                         <span class="badge">1</span>
                         varnish
                     </a>
                     
                     
+                    <a href="http://drupalwxt.github.io/tags/workbench" class="list-group-item">
+                        <span class="badge">1</span>
+                        workbench
+                    </a>
+                    
+                    
                     <a href="http://drupalwxt.github.io/tags/wxt" class="list-group-item">
-                        <span class="badge">9</span>
+                        <span class="badge">8</span>
                         wxt
                     </a>
                     

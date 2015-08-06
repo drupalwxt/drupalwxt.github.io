@@ -113,6 +113,8 @@
                         </a>
                         <ul class="sm list-unstyled" role="menu">
                             
+                            <li><a href="/wxt/deployment/"> Content Staging</a></li>
+                            
                             <li><a href="/wxt/modules/"> Modules for WxT</a></li>
                             
                             <li><a href="/wxt/releases/"> Releases for WxT</a></li>
@@ -132,6 +134,10 @@
                             <span>Architecture</span>
                         </a>
                         <ul class="sm list-unstyled" role="menu">
+                            
+                            <li><a href="/architecture/drush-make/"> Drush Make &#43; Site Install</a></li>
+                            
+                            <li><a href="/architecture/libraries-api/"> Libraries API</a></li>
                             
                             <li><a href="/architecture/release-cycle/"> Release Cycle / Updates</a></li>
                             
@@ -228,7 +234,7 @@
     <main role="main" property="mainContentOfPage" class="container">
 
 <div class="row">
-    <div class="col-md-8">
+    <div class="col-md-12">
         <article class="post">
             <header>
                 <h1 id="wb-cont" property="name">
@@ -257,18 +263,18 @@
 
 <p>b) Using the WYSIWYG you can search by Name, Type of multimedia, Sort by Date or Use Count, and Sort by Order descending or ascending.</p>
 
-<h2 id="managing-files-en-admin-content-file:ca6d2bfce4e7a3ae1e9dcbc2ba76d8b3">Managing Files <code>/en/admin/content/file</code></h2>
+<h2 id="managing-files:ca6d2bfce4e7a3ae1e9dcbc2ba76d8b3">Managing Files</h2>
 
 <h3 id="add-file-upload:ca6d2bfce4e7a3ae1e9dcbc2ba76d8b3">Add File / Upload</h3>
 
-<p>a) File name:</p>
+<p>a) <strong>File name</strong>:</p>
 
 <ul>
-<li>Should be auto-populated with the uploaded image name. Ex.  <code>globe.jpg</code>.</li>
+<li>Should be auto-populated with the uploaded image name. Ex. <code>globe.jpg</code>.</li>
 <li>If the image is language specific the File name should also indicate it&rsquo;s language. Ex. <code>example1_en.jpg</code>.</li>
 </ul>
 
-<p>b) Alt Text:</p>
+<p>b) <strong>Alt Text</strong>:</p>
 
 <ul>
 <li>If the image is not decorative and is intended to convey any information the Alt text must convey that information using text.</li>
@@ -276,16 +282,18 @@
 <li>If the image contains any text the alt text must repeat that text.</li>
 </ul>
 
-<p>c)  Title Text:</p>
+<p>c) <strong>Title Text</strong>:</p>
 
 <ul>
 <li>The Title text must not duplicate the Alt text.</li>
 <li>This should be left empty, or used to provide additional information. Ex. If the Alt text was &ldquo;Presentation of awards to the winning team.&rdquo; the Title text might offer more details, Ex. &ldquo;The chairman presents first place medals to each member of the winning team during the October 12 closing ceremonies.&rdquo;</li>
 </ul>
 
-<h3 id="update-modify-file-far-right-column-of-the-file-admin-page-is-operations-where-you-can-edit-properties:ca6d2bfce4e7a3ae1e9dcbc2ba76d8b3">Update / Modify File - Far right column of the file admin page is Operations where you can edit properties</h3>
+<h3 id="update-modify-file:ca6d2bfce4e7a3ae1e9dcbc2ba76d8b3">Update / Modify File</h3>
 
-<p>a) Language (available during Edit only, not during Upload):</p>
+<p>Far right column of the file admin page is Operations where you can edit properties.</p>
+
+<p>a) <strong>Language</strong>:</p>
 
 <ul>
 <li>If there is Alt text that applies to only one language the image should be set for that language. The image File name should also indicate its language.</li>
@@ -294,24 +302,37 @@
 <li>Generic images that are decorative should be Language Neutral with no alt text.</li>
 </ul>
 
-<p>b) Replace File - Upload a new file to replace the original:</p>
+<p>b) <strong>Replace File</strong>:</p>
 
 <ul>
 <li>Choose a new file to replace all instances of the previous file</li>
 <li>Change the filename to avoid overwriting the original file</li>
 </ul>
 
-<p>c) Translate - Click on Translate to add the opposite language version of the file and translations of the details such as alt and titles.</p>
-
-<p>d) Usage / Used In - See where the file is currently being used on the website:</p>
+<p>c) <strong>Translate</strong>:</p>
 
 <ul>
+<li>Click on Translate to add the opposite language version of the file and translations of the details such as alt and titles.</li>
+</ul>
+
+<p>d) <strong>Usage / Used In</strong>:</p>
+
+<ul>
+<li>See where the file is currently being used on the website</li>
 <li>USE COUNT totals all revisions where the file is found, on node might have one image but USE COUNT 12 because the image is found in all 12 previous revisions of that page.</li>
 </ul>
 
-<p>e) Delete - Only delete a file after making certain that it is safe to do so by checking the Usage / Used In links. Only a file that is Used In 0 places is safe to delete without checking further.</p>
+<p>e) <strong>Delete</strong>:</p>
 
-<p>f) Operations - By putting checkmarks in the boxes multiple files can be Archived or Deleted at the same time using the Operations options. Change value is not very useful since media files should have unique values.</p>
+<ul>
+<li>Only delete a file after making certain that it is safe to do so by checking the Usage / Used In links.</li>
+</ul>
+
+<p>f) <strong>Operations</strong>:</p>
+
+<ul>
+<li>By putting checkmarks in the boxes multiple files can be Archived or Deleted at the same time using the View Bulk Operations options.</li>
+</ul>
 
             </div>
             <aside>
@@ -357,6 +378,18 @@
                     
                     
                     
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
                     <li><a href="http://drupalwxt.github.io/wxt/releases/">Releases</a></li>
                     
                     
@@ -371,7 +404,7 @@
                     
                     
                     
-                    <li><a href="http://drupalwxt.github.io/wxt/deployment/">Deployment</a></li>
+                    <li><a href="http://drupalwxt.github.io/wxt/deployment/">Content Staging</a></li>
                     
                     
                     
@@ -396,12 +429,6 @@
                     
                     
                     
-                    
-                    
-                    
-                    
-                    
-                    <li><a href="http://drupalwxt.github.io/wxt/lightbox/">Lightbox</a></li>
                     
                     
                     
@@ -444,7 +471,7 @@
                 <nav>
                     <ul class="pager">
                         
-                        <li class="previous"><a href="http://drupalwxt.github.io/architecture/release-cycle/"><span aria-hidden="true">&larr;</span> Older</a></li>
+                        <li class="previous"><a href="http://drupalwxt.github.io/architecture/libraries-api/"><span aria-hidden="true">&larr;</span> Older</a></li>
                         
 
                         
@@ -459,138 +486,6 @@
 
             </footer>
         </article>
-    </div>
-    <div class="col-md-4">
-        <aside>
-    <div class="row">
-        <div class="col-xs-12 col-sm-4 col-md-12">
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <h2 class="panel-title">Recent Posts</h2>
-                </div>
-                <div class="list-group">
-                    
-                    <a href="/wxt/working-examples/" class="list-group-item">Working Examples</a>
-                    
-                    <a href="/architecture/release-cycle/" class="list-group-item">Release Cycle / Updates</a>
-                    
-                    <a href="/wxt/media/" class="list-group-item">Media Library - Images, Videos and Documents</a>
-                    
-                    <a href="/wxt/releases/" class="list-group-item">Releases</a>
-                    
-                    <a href="/performance/code-quality/" class="list-group-item">Code Quality</a>
-                    
-                    <a href="/performance/profiling/" class="list-group-item">Profiling with XHProf &#43; XHGui</a>
-                    
-                    <a href="/wxt/deployment/" class="list-group-item">Deployment</a>
-                    
-                    <a href="/wxt/content-moderation/" class="list-group-item">Content Moderation</a>
-                    
-                    <a href="/post/2015/01/13/contributing-to-documentation-site/" class="list-group-item">Contributing to Documentation Site</a>
-                    
-                    <a href="/performance/databases/" class="list-group-item">Databases</a>
-                    
-                </div>
-            </div>
-        </div>
-        <div class="col-xs-12 col-sm-4 col-md-12">
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <h2 class="panel-title">Tags</h2>
-                </div>
-                <div class="list-group">
-                    
-                    
-                    
-                    <a href="http://drupalwxt.github.io/tags/architecture" class="list-group-item">
-                        <span class="badge">4</span>
-                        architecture
-                    </a>
-                    
-                    
-                    <a href="http://drupalwxt.github.io/tags/component" class="list-group-item">
-                        <span class="badge">2</span>
-                        component
-                    </a>
-                    
-                    
-                    <a href="http://drupalwxt.github.io/tags/content-staging" class="list-group-item">
-                        <span class="badge">1</span>
-                        content-staging
-                    </a>
-                    
-                    
-                    <a href="http://drupalwxt.github.io/tags/deployment" class="list-group-item">
-                        <span class="badge">1</span>
-                        deployment
-                    </a>
-                    
-                    
-                    <a href="http://drupalwxt.github.io/tags/media" class="list-group-item">
-                        <span class="badge">1</span>
-                        media
-                    </a>
-                    
-                    
-                    <a href="http://drupalwxt.github.io/tags/memcache" class="list-group-item">
-                        <span class="badge">1</span>
-                        memcache
-                    </a>
-                    
-                    
-                    <a href="http://drupalwxt.github.io/tags/moderation" class="list-group-item">
-                        <span class="badge">1</span>
-                        moderation
-                    </a>
-                    
-                    
-                    <a href="http://drupalwxt.github.io/tags/office-hours" class="list-group-item">
-                        <span class="badge">1</span>
-                        office-hours
-                    </a>
-                    
-                    
-                    <a href="http://drupalwxt.github.io/tags/performance" class="list-group-item">
-                        <span class="badge">5</span>
-                        performance
-                    </a>
-                    
-                    
-                    <a href="http://drupalwxt.github.io/tags/post" class="list-group-item">
-                        <span class="badge">1</span>
-                        post
-                    </a>
-                    
-                    
-                    <a href="http://drupalwxt.github.io/tags/releases" class="list-group-item">
-                        <span class="badge">1</span>
-                        releases
-                    </a>
-                    
-                    
-                    <a href="http://drupalwxt.github.io/tags/roadmap" class="list-group-item">
-                        <span class="badge">1</span>
-                        roadmap
-                    </a>
-                    
-                    
-                    <a href="http://drupalwxt.github.io/tags/varnish" class="list-group-item">
-                        <span class="badge">1</span>
-                        varnish
-                    </a>
-                    
-                    
-                    <a href="http://drupalwxt.github.io/tags/wxt" class="list-group-item">
-                        <span class="badge">9</span>
-                        wxt
-                    </a>
-                    
-                </div>
-            </div>
-        </div>
-    </div>
-</aside>
-
     </div>
 </div>
     
