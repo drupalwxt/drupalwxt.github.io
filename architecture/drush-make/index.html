@@ -278,10 +278,15 @@
 <pre><code class="language-bash">git clone https://github.com/wet-boew/wet-boew-drupal.git wet-boew-drupal
 </code></pre></li>
 
-<li><p>Build the Drupal installation profile</p>
+<li><p>Build  and install the WxT installation profile using Drush (Password must not be simple)</p>
 
-<pre><code class="language-bash">drush make --yes --working-copy --no-gitinfofile profiles/wetkit/drupal-org-core.make --prepare-install
-drush make --yes --working-copy --no-gitinfofile profiles/wetkit/drupal-org.make --no-core --contrib-destination=profiles/wetkit
+<pre><code class="language-bash">mv wet-boew-drupal wetkit
+mkdir profiles
+mv wetkit profiles/
+mkdir drupal
+mv profiles drupal/
+drush make --yes profiles/wetkit/drupal-org-core.make --prepare-install
+drush make --yes profiles/wetkit/drupal-org.make --no-core --contrib-destination=profiles/wetkit
 </code></pre></li>
 
 <li><p>Quickly install using the Drush CLI (Password must not be simple or won&rsquo;t install)</p>
