@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*
  * Web Experience Toolkit (WET) / Boîte à outils de l'expérience Web (BOEW)
  * wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licence-fr.html
@@ -36,6 +37,7 @@
 .cal-days a {
   color: #111;
   text-decoration: underline; }
+
 .cal-days td.datepicker-selected a {
   background-color: #333; }
 
