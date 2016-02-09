@@ -273,7 +273,7 @@
     api = 2
     core = 7.x
 
-    projects[drupal][version] = 7.41
+    projects[drupal][version] = 7.42
     projects[drupal][type] = core
 
     ; Patches for Drupal Core
@@ -284,7 +284,6 @@
     projects[drupal][patch][889772] = http://drupal.org/files/issues/drupal7-backport-889772-186.patch
     projects[drupal][patch][911354] = http://drupal.org/files/911354-drupal-profile-85.patch
     projects[drupal][patch][1081266] = http://drupal.org/files/drupal-1081266-102-drupal_get_filename-D7.patch
-    projects[drupal][patch][1443308] = http://drupal.org/files/issues/drupal-1443308-49-module_load_include-static-cache.patch
     projects[drupal][patch][1443342] = http://drupal.org/files/drupal-1443342-1-inline-file_uri_scheme-in-file_stream_wrapper_uri_normalize.patch
     projects[drupal][patch][1470656] = http://drupal.org/files/drupal-1470656-14.patch
     projects[drupal][patch][1710656] = http://drupal.org/files/drupal-1710656-3-skip-hidden-menu-items-D7.patch
@@ -305,7 +304,7 @@
 
     ; WxT Foundation (Custom)
 
-    projects[wetkit_admin][version] = 4.2
+    projects[wetkit_admin][version] = 4.3
     projects[wetkit_admin][subdir] = custom
 
     projects[wetkit_bean][version] = 4.2
@@ -314,19 +313,19 @@
     projects[wetkit_breadcrumbs][version] = 4.4
     projects[wetkit_breadcrumbs][subdir] = custom
 
-    projects[wetkit_core][version] = 4.2
+    projects[wetkit_core][version] = 4.4
     projects[wetkit_core][subdir] = custom
 
     projects[wetkit_demo][version] = 4.1
     projects[wetkit_demo][subdir] = custom
 
-    projects[wetkit_deployment][version] = 4.5
+    projects[wetkit_deployment][version] = 4.7
     projects[wetkit_deployment][subdir] = custom
 
     projects[wetkit_images][version] = 4.4
     projects[wetkit_images][subdir] = custom
 
-    projects[wetkit_language][version] = 4.2
+    projects[wetkit_language][version] = 4.4
     projects[wetkit_language][subdir] = custom
 
     projects[wetkit_layouts][version] = 4.2
@@ -335,10 +334,10 @@
     projects[wetkit_menu][version] = 4.2
     projects[wetkit_menu][subdir] = custom
 
-    projects[wetkit_metatag][version] = 4.4
+    projects[wetkit_metatag][version] = 4.6
     projects[wetkit_metatag][subdir] = custom
 
-    projects[wetkit_migrate][version] = 4.1
+    projects[wetkit_migrate][version] = 4.2
     projects[wetkit_migrate][subdir] = custom
 
     projects[wetkit_og][version] = 4.0
@@ -353,7 +352,7 @@
     projects[wetkit_test][version] = 4.5
     projects[wetkit_test][subdir] = custom
 
-    projects[wetkit_theme][version] = 4.2
+    projects[wetkit_theme][version] = 4.3
     projects[wetkit_theme][subdir] = custom
 
     projects[wetkit_users][version] = 4.1
@@ -368,7 +367,7 @@
     projects[wetkit_widgets][version] = 4.4
     projects[wetkit_widgets][subdir] = custom
 
-    projects[wetkit_wysiwyg][version] = 4.4
+    projects[wetkit_wysiwyg][version] = 4.6
     projects[wetkit_wysiwyg][subdir] = custom
 
     ; WxT Foundation (Themes)
@@ -376,7 +375,7 @@
     projects[wetkit_ember][version] = 4.3
     projects[wetkit_ember][type] = theme
 
-    projects[wetkit_bootstrap][version] = 4.4
+    projects[wetkit_bootstrap][version] = 4.5
     projects[wetkit_bootstrap][type] = theme
 
     projects[wetkit_shiny][version] = 4.0
@@ -428,6 +427,7 @@
     projects[navbar][version] = 1.7
     projects[navbar][subdir] = contrib
     projects[navbar][patch][2377149] = http://drupal.org/files/issues/navbar_modernizr-2377149-1.patch
+    projects[navbar][patch][2644930] = http://drupal.org/files/issues/navbar_link_language-2644930-3.patch
 
     projects[responsive_preview][version] = 1.1
     projects[responsive_preview][subdir] = contrib
@@ -505,7 +505,7 @@
     projects[ctools][patch][2265451] = http://drupal.org/files/issues/hide_empty_page_title-2265451-13.patch
     projects[ctools][patch][2416689] = http://drupal.org/files/issues/ctools-jquery-attr-removed-2416689-5.patch
     projects[ctools][patch][2437773] = http://drupal.org/files/issues/attached_css_and_js-2437773-18.patch
-    projects[ctools][patch][2528736] = http://drupal.org/files/issues/Deprecating-PHP4-Style-Constructors-2528736-8.patch
+    projects[ctools][patch][2528736] = http://drupal.org/files/issues/deprecating_php4_style-2528736-23.patch
     projects[ctools][patch][2635876] = http://drupal.org/files/issues/ctools-uniform-variable-syntax-2635876-6.patch
 
     projects[date][version] = 2.9
@@ -541,16 +541,16 @@
 
     projects[features][version] = 2.7
     projects[features][subdir] = contrib
+    projects[features][patch][2288395] = http://drupal.org/files/issues/features-manage_features_page-2288395-1.patch
 
     projects[fences][version] = 1.2
     projects[fences][subdir] = contrib
 
-    projects[field_collection][version] = 1.0-beta10
+    projects[field_collection][version] = 1.0-beta11
     projects[field_collection][subdir] = contrib
     projects[field_collection][patch][1344672] = http://drupal.org/files/issues/field_collection_field-1344672-504.patch
     projects[field_collection][patch][2075325] = http://drupal.org/files/issues/field_collection_uuid-2075325-18.patch
     projects[field_collection][patch][2075326] = http://drupal.org/files/issues/field_collection_uuid_services-2075325-18.patch
-    projects[field_collection][patch][2599248] = http://drupal.org/files/issues/field-collection-2599248-2.patch
 
     projects[field_group][version] = 1.5
     projects[field_group][subdir] = contrib
@@ -687,6 +687,7 @@
     projects[workbench_moderation][patch][2308097] = http://drupal.org/files/issues/workbench_moderation-optimize_node_revision_history-1408838-67.patch
     projects[workbench_moderation][patch][2428371] = http://drupal.org/files/issues/upgrade_from_1_3_to_1_4-2428371-42.patch
     projects[workbench_moderation][patch][2633456] = http://drupal.org/files/issues/workbench_moderation-2633456-26.patch
+    projects[workbench_moderation][patch][2662600] = http://drupal.org/files/issues/workbench_moderation-2662600-3.patch
 
     ; Libraries
 
@@ -721,10 +722,9 @@
     projects[deploy][patch][2604656] = http://drupal.org/files/issues/catch_exceptions-2604656-3.patch
     projects[deploy][patch][2638954] = http://drupal.org/files/issues/deleted_node_revisions-2638954-2.patch
 
-    projects[deploy_plus][version] = 2.1
+    projects[deploy_plus][version] = 2.2
     projects[deploy_plus][subdir] = contrib
     projects[deploy_plus][patch][2638866] = http://drupal.org/files/issues/ctools_content_type-2638866-3.patch
-    projects[deploy_plus][patch][2655888] = http://drupal.org/files/issues/fix_version_contraint-2655888-2.patch
 
     projects[deploy_services_client][version] = 1.0-beta2
     projects[deploy_services_client][subdir] = contrib
@@ -743,15 +743,14 @@
 
     projects[environment_indicator][version] = 2.8
     projects[environment_indicator][subdir] = contrib
+    projects[environment_indicator][patch][2207897] = http://drupal.org/files/issues/environment_indicator-2207897-9.patch
 
     projects[quicktabs][version] = 3.6
     projects[quicktabs][subdir] = contrib
     projects[quicktabs][patch][1454486] = http://drupal.org/files/issues/quicktabs-tab-history-1454486-35.patch
 
-    projects[services][version] = 3.12
+    projects[services][version] = 3.13
     projects[services][subdir] = contrib
-    projects[services][patch][2475119] = http://drupal.org/files/issues/services_wrong_function_call_in_node_resource-2475119-99.patch
-    projects[services][patch][2480763] = http://drupal.org/files/issues/services_resource_admin_ui_styles_inheriting_from_theme-2480763-99.patch
 
     projects[shared_content][version] = 1.0-beta2
     projects[shared_content][subdir] = contrib
@@ -810,13 +809,10 @@
 
     projects[i18n][version] = 1.13
     projects[i18n][subdir] = contrib
+    projects[i18n][patch][2338735] = http://drupal.org/files/issues/i18n_2338735_menu_rebuild.patch
 
-    projects[i18nviews][version] = 3.x-dev
-    projects[i18nviews][type] = module
+    projects[i18nviews][version] = 3.0-alpha1
     projects[i18nviews][subdir] = contrib
-    projects[i18nviews][download][type] = git
-    projects[i18nviews][download][revision] = fdc8c33
-    projects[i18nviews][download][branch] = 7.x-3.x
     projects[i18nviews][patch][1788832] = http://drupal.org/files/issues/transformed-contextual-filter-fix-178832-10.patch
 
     projects[language_switch][version] = 1.0-alpha2
@@ -864,10 +860,9 @@
 
     ; Module(s) for WetKit Metatag
 
-    projects[metatag][version] = 1.10
+    projects[metatag][version] = 1.13
     projects[metatag][subdir] = contrib
     projects[metatag][patch][2648494] = http://drupal.org/files/issues/metatag_html_entities-2648494-2.patch
-    projects[metatag][patch][2655582] = http://drupal.org/files/issues/metatag-n2655582-5.patch
             </pre></p>
         </details>
     </li>
@@ -886,6 +881,7 @@
     projects[migrate][type] = module
     projects[migrate][subdir] = contrib
     projects[migrate][patch][2290027] = http://drupal.org/files/issues/migrate_uuid_keep-2290027-02.patch
+    projects[migrate][patch][2654222] = http://drupal.org/files/issues/migrate-php7-uniform-variable-syntax.patch
 
     projects[migrate_extras][version] = 2.5
     projects[migrate_extras][type] = module
