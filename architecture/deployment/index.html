@@ -11,7 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
     <title>
         
-        Working Examples
+        Content Staging with Deploy &#43; UUID
         
     </title>
     
@@ -227,7 +227,7 @@
                         
                           
                       
-                      <li>Working Examples</li>
+                      <li>Content Staging with Deploy &#43; UUID</li>
                     </ol>
                 </div>
             </div>
@@ -240,12 +240,12 @@
         <article class="post">
             <header>
                 <h1 id="wb-cont" property="name">
-                    Working Examples
+                    Content Staging with Deploy &#43; UUID
                 </h1>
                 <div class="post-date mrgn-bttm-md text-muted text-right small">
                     <span class="glyphicon glyphicon-calendar"></span>
-                    <time datetime="2015-01-13">
-                        2015-01-13
+                    <time datetime="2015-01-18">
+                        2015-01-18
                     </time>
                 </div>
                 <div class="wb-share mrgn-bttm-md text-muted text-right small" data-wb-share='{" pnlId": "pnl1"}'></div>
@@ -253,237 +253,86 @@
             <div class="post-content">
                 
 
-<p>Below we highlight the work done on getting the various WxT components / plugins and themes / styles leveraged properly in Drupal.</p>
+<h2 id="deployment-with-drupal-wxt:98159bafc57a07057ca8a36ea636fe50">Deployment with Drupal WxT</h2>
 
-<p>Levels of integration with Drupal will vary as some of the plugins can simply be leveraged by calling a class in markup. Where possible we will try to make a distinction on how each functionality can be used.</p>
+<p>There are 4 essential modules that facilitate deployment in Drupal WxT:</p>
 
-<p>Note: This list does not represent the full capabilities of the Drupal WxT platform merely the WxT components it integrates with.</p>
+<ol>
+<li><p><strong>WetKit Deployment</strong>: Provides the base configuration for both source and destination servers as well as default content types</p></li>
 
-<h2 id="supported-wxt-themes:37a66d1ed03f4716851d68eeb7f84a38">Supported WxT Themes</h2>
+<li><p><strong>WetKit Deployment Environment Indicator</strong>: Provides contextual environment information  (<code>.dev</code>, <code>.qa</code>, <code>.prod</code>) on the toolbar</p></li>
 
-<table id="components-theme" class="wb-tables table table-striped table-hover" data-wb-tables='{"columnDefs": [ { "visible": false, "targets": [ 3 ] } ], "lengthMenu": [[10, 25, -1], [10, 25, "All"]], "pageLength": -1 }'>
-    <thead>
-        <tr>
-            <th>Name</th>
-            <th>Category</th>
-            <th>Drupal Integration</th>
-            <th>Keywords</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td><a href="http://wet-boew.github.io/themes-dist/theme-base/index-en.html">Base theme</a></td>
-            <td><a href="http://wet-boew.github.io/v4.0-ci/docs/ref/themesstyle-en.html">Themes and style</a></td>
-            <td>Full support via <a href="/architecture/libraries-api/">Libraries API</a> and WetKit Bootstrap theme.</td>
-            <td>theme-base</td>
-        </tr>
-        <tr>
-            <td><a href="http://wet-boew.github.io/themes-dist/GCWeb/index-en.html">Canada.ca theme</a></td>
-            <td><a href="http://wet-boew.github.io/v4.0-ci/docs/ref/themesstyle-en.html">Themes and style</a></td>
-            <td>Full support via <a href="/architecture/libraries-api/">Libraries API</a> and WetKit Bootstrap theme.</td>
-            <td>GCWeb</td>
-        </tr>
-        <tr>
-            <td><a href="http://wet-boew.github.io/themes-dist/theme-gc-intranet/index-en.html">Government of Canada Intranet theme</a></td>
-            <td><a href="http://wet-boew.github.io/v4.0-ci/docs/ref/themesstyle-en.html">Themes and style</a></td>
-            <td>Full support via <a href="/architecture/libraries-api/">Libraries API</a> and WetKit Bootstrap theme.</td>
-            <td>theme-gc-intranet</td>
-        </tr>
-        <tr>
-            <td><a href="http://wet-boew.github.io/themes-dist/theme-gcwu-fegc/index-en.html">Government of Canada Web Usability theme</a></td>
-            <td><a href="http://wet-boew.github.io/v4.0-ci/docs/ref/themesstyle-en.html">Themes and style</a></td>
-            <td>Full support via <a href="/architecture/libraries-api/">Libraries API</a> and WetKit Bootstrap theme.</td>
-            <td>theme-gcwu-fegc</td>
-        </tr>
-        <tr>
-            <td><a href="http://wet-boew.github.io/themes-dist/theme-ogpl/index-en.html">Open Government Platform (OGPL) theme</a></td>
-            <td><a href="http://wet-boew.github.io/v4.0-ci/docs/ref/themesstyle-en.html">Themes and style</a></td>
-            <td>Full support via <a href="/architecture/libraries-api/">Libraries API</a> and WetKit Bootstrap theme.</td>
-            <td>theme-ogpl</td>
-        </tr>
-        <tr>
-            <td><a href="http://wet-boew.github.io/v4.0-ci/theme/index-en.html">Web Experience Toolkit (WET) theme</a></td>
-            <td><a href="http://wet-boew.github.io/v4.0-ci/docs/ref/themesstyle-en.html">Themes and style</a></td>
-            <td>Full support via <a href="/architecture/libraries-api/">Libraries API</a> and WetKit Bootstrap theme.</td>
-            <td>theme-wet-boew</td>
-        </tr>
-    </tbody>
-</table>
+<li><p><strong>WetKit Deployment Source</strong>: Provides the functionality to deploy content in JSON to the destination servers</p></li>
 
-<h2 id="supported-wxt-themes-additions:37a66d1ed03f4716851d68eeb7f84a38">Supported WxT Themes (Additions)</h2>
+<li><p><strong>WetKit Deployment Destination</strong>: Provides the CRUD interface to consume the JSON data that was sent from the client server</p></li>
+</ol>
 
-<table id="components-theme-additons" class="wb-tables table table-striped table-hover" data-wb-tables='{"columnDefs": [ { "visible": false, "targets": [ 3 ] } ], "lengthMenu": [[10, 25, -1], [10, 25, "All"]], "pageLength": -1 }'>
-    <thead>
-        <tr>
-            <th>Name</th>
-            <th>Category</th>
-            <th>Drupal Integration</th>
-            <th>Keywords</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td><a href="http://wet-boew.github.io/v4.0-ci/theme/servermessage-en-fr.html">Maintenance Pages</a></td>
-            <td><a href="http://wet-boew.github.io/v4.0-ci/docs/ref/themesstyle-en.html">Themes and style</a></td>
-            <td>Full support via <a href="/architecture/libraries-api/">Libraries API</a> and WetKit Bootstrap theme.</td>
-            <td>maintenance</td>
-        </tr>
-        <tr>
-            <td><a href="http://wet-boew.github.io/v4.0-ci/theme/splashpage-en.html">Splash Pages</a></td>
-            <td><a href="http://wet-boew.github.io/v4.0-ci/docs/ref/themesstyle-en.html">Themes and style</a></td>
-            <td>Full support via <a href="/architecture/libraries-api/">Libraries API</a>, Splashify and WetKit Bootstrap theme.</td>
-            <td>splash</td>
-        </tr>
-    </tbody>
-</table>
+<h2 id="wetkit-deployment:98159bafc57a07057ca8a36ea636fe50">WetKit Deployment:</h2>
 
-<h2 id="supported-wxt-plugins:37a66d1ed03f4716851d68eeb7f84a38">Supported WxT Plugins</h2>
+<ul>
+<li>Provides the make file for all deployment module dependencies</li>
+<li>Adds configured custom content types (Simple + Moderated) to show a fully functional deployment</li>
+<li>Adds a node/edit and node/view panel page for the custom content types</li>
+<li>Adds the field bases (deploy_to_destination_site and shared_content) that each entity / bundle will need to inherit to facilitate deployment</li>
+<li>Module is required for deployment functionality</li>
+</ul>
 
-<table id="components-plugins" class="wb-tables table table-striped table-hover" data-wb-tables='{"columnDefs": [ { "visible": false, "targets": [ 3 ] } ], "lengthMenu": [[10, 25, -1], [10, 25, "All"]], "pageLength": -1 }'>
-    <thead>
-        <tr>
-            <th>Name</th>
-            <th>Category</th>
-            <th>Drupal Integration</th>
-            <th>Keywords</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td><a href="http://wet-boew.github.io/v4.0-ci/demos/archived/archived-en.html">Archived information</a></td>
-            <td><a href="http://wet-boew.github.io/v4.0-ci/docs/ref/other-en.html">Plugins</a></td>
-            <td>
-                <p>Supported via the following:</p>
-                <ul>
-                    <li>Natively with any html input (panes, views, wysiwyg)</li>
-                    <li>CTools Widget: Archived Content</li>
-                </ul>
-            </td>
-            <td>archived</td>
-        </tr>
-        <tr>
-            <td><a href="http://wet-boew.github.io/wet-boew/demos/details/details-en.html">Collapsible content</a></td>
-            <td><a href="http://wet-boew.github.io/v4.0-ci/docs/ref/other-en.html">Plugins</a></td>
-            <td>
-                <p>Supported via the following:</p>
-                <ul>
-                    <li>Natively with any html input (panes, views, wysiwyg)</li>
-                    <li>CTools Region Style: Collapsible Content</li>
-                </ul>
-            </td>
-            <td>collapsible</td>
-        </tr>
-        <tr>
-            <td><a href="http://wet-boew.github.io/wet-boew/demos/equalheight/equalheight-en.html">Equal Height</a></td>
-            <td><a href="http://wet-boew.github.io/v4.0-ci/docs/ref/other-en.html">Plugins</a></td>
-            <td>
-                <p>Supported via the following:</p>
-                <ul>
-                    <li>Natively with any html input (panes, views, wysiwyg)</li>
-                    <li>CTools CSS Style</li>
-                </ul>
-            </td>
-            <td>equalheight</td>
-        </tr>
-        <tr>
-            <td><a href="http://wet-boew.github.io/v4.0-ci/docs/ref/twitter/twitter-en.html">Twitter embedded timeline</a></td>
-            <td><a href="http://wet-boew.github.io/v4.0-ci/docs/ref/plugins-en.html">Plugins</a></td>
-            <td>
-                <p>Supported via the following:</p>
-                <ul>
-                    <li>Natively with any html input (panes, views, wysiwyg)</li>
-                    <li>Bean Plugin: Twitter</li>
-                </ul>
-            </td>
-            <td>twitter</td>
-        </tr>
-        <tr>
-            <td><a href="http://wet-boew.github.io/wet-boew/demos/lightbox/lightbox-en.html">Lightbox</a></td>
-            <td><a href="http://wet-boew.github.io/v4.0-ci/docs/ref/plugins-en.html">Plugins</a></td>
-            <td>
-                <p>Supported via the following:</p>
-                <ul>
-                    <li>Natively with any html input (panes, views, wysiwyg)</li>
-                    <li>Field Formatter: image (field type)</li>
-                </ul>
-            </td>
-            <td>lightbox</td>
-        </tr>
-        <tr>
-            <td><a href="http://wet-boew.github.io/v4.0-ci/docs/ref/menu/menu-en.html">Menu</a></td>
-            <td><a href="http://wet-boew.github.io/v4.0-ci/docs/ref/plugins-en.html">Plugins</a></td>
-            <td>
-                <p>Supported via the following:</p>
-                <ul>
-                    <li>Natively with any html input (panes, views, wysiwyg)</li>
-                    <li>CTools Widget: Menu Block</li>
-                    <li>Drupal theme functions</li>
-                </ul>
-            </td>
-            <td>lightbox</td>
-        </tr>
-        <tr>
-            <td><a href="http://wet-boew.github.io/v4.0-ci/docs/ref/multimedia/multimedia-en.html">Multimedia Player (Audio, Video)</a></td>
-            <td><a href="http://wet-boew.github.io/v4.0-ci/docs/ref/plugins-en.html">Plugins</a></td>
-            <td>
-                <p>Supported via the following:</p>
-                <ul>
-                    <li>Natively with any html input (panes, views, wysiwyg)</li>
-                    <li>File Entity: Video</li>
-                </ul>
-            </td>
-            <td>lightbox</td>
-        </tr>
-        <tr>
-            <td><a href="http://wet-boew.github.io/v4.0-ci/docs/ref/share/share-en.html">Share Widget</a></td>
-            <td><a href="http://wet-boew.github.io/v4.0-ci/docs/ref/plugins-en.html">Plugins</a></td>
-            <td>
-                <p>Supported via the following:</p>
-                <ul>
-                    <li>Natively with any html input (panes, views, wysiwyg)</li>
-                    <li>CTools Widget: Share</li>
-                </ul>
-            </td>
-            <td>lightbox</td>
-        </tr>
-        <tr>
-            <td><a href="http://wet-boew.github.io/v4.0-ci/docs/ref/tabs/tabs-en.html">Tabbed Interface</a></td>
-            <td><a href="http://wet-boew.github.io/v4.0-ci/docs/ref/plugins-en.html">Plugins</a></td>
-            <td>
-                <p>Supported via the following:</p>
-                <ul>
-                    <li>Natively with any html input (panes, views, wysiwyg)</li>
-                    <li>CTools Region Style: Tabbed Interface</li>
-                </ul>
-            </td>
-            <td>tabbedinterface</td>
-        </tr>
-        <tr>
-            <td><a href="http://wet-boew.github.io/wet-boew/demos/tabs/tabs-carousel-en.html">Tabbed Interface (Carousel)</a></td>
-            <td><a href="http://wet-boew.github.io/v4.0-ci/docs/ref/plugins-en.html">Plugins</a></td>
-            <td>
-                <p>Supported via the following:</p>
-                <ul>
-                    <li>Natively with any html input (panes, views, wysiwyg)</li>
-                    <li>Bean Plugin: Slideshow</li>
-                </ul>
-            </td>
-            <td>tabbedinterface</td>
-        </tr>
-        <tr>
-            <td><a href="http://wet-boew.github.io/v4.0-ci/demos/zebra/zebra-en.html">Zebra striping</a></td>
-            <td><a href="http://wet-boew.github.io/v4.0-ci/docs/ref/plugins-en.html">Plugins</a></td>
-            <td>
-                <p>Supported via the following:</p>
-                <ul>
-                    <li>Natively with any html input (panes, views, wysiwyg)</li>
-                    <li>Bootstrap: Base Theme</li>
-                </ul>
-            </td>
-            <td>zebra</td>
-        </tr>
-    </tbody>
-</table>
+<h2 id="wetkit-deployment-environment-indicator:98159bafc57a07057ca8a36ea636fe50">WetKit Deployment Environment Indicator:</h2>
+
+<ul>
+<li>Drupal modules: environment_indicator</li>
+<li>Environment settings are triggered by regex in url (<code>.dev</code>, <code>.qa</code>, <code>.prod</code>)</li>
+<li>Module is optional for deployment and only provides UX functionality</li>
+</ul>
+
+<h2 id="wetkit-deployment-source:98159bafc57a07057ca8a36ea636fe50">WetKit Deployment Source:</h2>
+
+<ul>
+<li>Drupal modules: <code>deploy</code>, <code>deploy_services_client</code>, <code>entity_dependency</code>, <code>entity_menu_links</code>, <code>shared_content_source</code>, and <code>uuid</code></li>
+<li>Batch Entity Deployments:
+
+<ul>
+<li>Single or Bulk deploy entities to n specified Destination Server(s)</li>
+<li>Administrative interface at: /admin/structure/deploy</li>
+<li>Interface is completely customizable and made up of <code>Deploy Plus</code>, <code>Panels</code> and <code>Views</code></li>
+</ul></li>
+<li>Inline Entity Deployments based on a checkbox on an individual entity save leveraging <code>Shared Content</code></li>
+<li>Single or Bulk Plan Managed aggregator using Memory/Queue Processor</li>
+<li>Creates default source field instances for beans, files, nodes (deploy + moderated), taxonomy terms (tags), and users</li>
+<li>Adds VBO (views bulk operations) for node, bean, file, term, and user</li>
+<li>Provides extensive customizations to ensure menu links are faux converted to entities and deployed with data integrity intact</li>
+<li>Customized CTools content types for deployment management plan</li>
+<li>Provides custom handlers to allow for Taxonomy Terms + Menu Link reordering to be sent to Destination Server</li>
+</ul>
+
+<h2 id="wetkit-deployment-destination:98159bafc57a07057ca8a36ea636fe50">WetKit Deployment Destination:</h2>
+
+<ul>
+<li>Drupal modules: <code>entity_menu_links</code>, <code>services</code>, <code>shared_content_destination</code>, and <code>uuid</code></li>
+
+<li><p>Configures the CRUD endpoints and available settings:</p>
+
+<pre><code>endpoint: services/rest
+formatters: json
+parsers: json, x-www-form-urlencoded, form-data
+resources:
+  bean (retrieve, update, delete)
+  file (retrieve, update, delete)
+  node + comments (retrieve, update, delete)
+  user (retrieve, update, delete)
+  taxonomy_term (retrieve, update, delete, actions: reorder)
+  field_collection_item: (retrieve, update, delete, actions: reorder)
+  menu_link: (retrieve, update, delete, actions: reorder)
+</code></pre></li>
+
+<li><p>Creates default destination field instances for beans, files, nodes (deploy + moderated), taxonomy terms (tags), and users</p></li>
+
+<li><p>Configures redirect on edit page for all deployable entities on destination site so always redirects to source site</p></li>
+</ul>
+
+<h2 id="caveats:98159bafc57a07057ca8a36ea636fe50">Caveats</h2>
+
+<p>Drupal WxT provides automatic support for deployment on a variety of entities and associated bundles. However it can only provide deployment support for entities that it currently knows about.</p>
 
             </div>
             <aside>
@@ -491,9 +340,23 @@
                 <ul class="list-inline post-tags">
                     
                     <li>
-                        <a href="http://drupalwxt.github.io/tags/wxt">
+                        <a href="http://drupalwxt.github.io/tags/architecture">
                             <i class="fa fa-tags"></i>
-                            wxt
+                            architecture
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="http://drupalwxt.github.io/tags/deployment">
+                            <i class="fa fa-tags"></i>
+                            deployment
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="http://drupalwxt.github.io/tags/content-staging">
+                            <i class="fa fa-tags"></i>
+                            content staging
                         </a>
                     </li>
                     
@@ -512,6 +375,7 @@
                     
                     
                     
+                    <li><a href="http://drupalwxt.github.io/architecture/release-cycle/">Release Cycle / Updates</a></li>
                     
                     
                     
@@ -525,16 +389,15 @@
                     
                     
                     
+                    <li><a href="http://drupalwxt.github.io/architecture/libraries-api/">Libraries API</a></li>
                     
                     
                     
-                    <li><a href="http://drupalwxt.github.io/wxt/media/">Media Library - Images, Videos and Documents</a></li>
                     
                     
                     
                     
                     
-                    <li><a href="http://drupalwxt.github.io/wxt/releases/">Releases</a></li>
                     
                     
                     
@@ -552,13 +415,11 @@
                     
                     
                     
-                    <li><a href="http://drupalwxt.github.io/wxt/content-moderation/">Content Moderation</a></li>
                     
                     
                     
                     
                     
-                    <li><a href="http://drupalwxt.github.io/post/2015/01/13/contributing-to-documentation-site/">Contributing to Documentation Site</a></li>
                     
                     
                     
@@ -566,17 +427,18 @@
                     
                     
                     
+                    <li><a href="http://drupalwxt.github.io/architecture/drush-make/">Drush Make &#43; Site Install</a></li>
                     
                     
                     
                     
                     
+                    <li><a href="http://drupalwxt.github.io/architecture/getting-started-win/">Getting Started (Windows)</a></li>
                     
                     
                     
                     
                     
-                    <li><a href="http://drupalwxt.github.io/wxt/make/">Makefiles for Drupal WxT</a></li>
                     
                     
                     
@@ -586,7 +448,6 @@
                     
                     
                     
-                    <li><a href="http://drupalwxt.github.io/wxt/modules/">Modules for Drupal WxT</a></li>
                     
                     
                     
@@ -598,13 +459,11 @@
                     
                     
                     
+                    <li><a href="http://drupalwxt.github.io/architecture/system-requirements/">System Requirements</a></li>
                     
                     
                     
                     
-                    
-                    
-                    <li><a href="http://drupalwxt.github.io/wxt/tabbed-interface/">Tabbed Interface</a></li>
                     
                     
                     
@@ -619,11 +478,11 @@
                 <nav>
                     <ul class="pager">
                         
-                        <li class="previous disabled"><a href="#"><span aria-hidden="true">&larr;</span> Older</a></li>
+                        <li class="previous"><a href="http://drupalwxt.github.io/performance/profiling/"><span aria-hidden="true">&larr;</span> Older</a></li>
                         
 
                         
-                        <li class="next"><a href="http://drupalwxt.github.io/architecture/release-cycle/">Newer <span aria-hidden="true">&rarr;</span></a></li>
+                        <li class="next"><a href="http://drupalwxt.github.io/wxt/content-moderation/">Newer <span aria-hidden="true">&rarr;</span></a></li>
                         
                     </ul>
                 </nav>
@@ -640,7 +499,7 @@
     <dl id="wb-dtmd">
         <dt>Date modified:&#32;</dt>
         <dd>
-            <time property="dateModified">2015-01-13</time>
+            <time property="dateModified">2015-01-18</time>
         </dd>
     </dl>
     
