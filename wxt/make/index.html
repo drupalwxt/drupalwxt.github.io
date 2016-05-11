@@ -263,7 +263,7 @@
 <li><a href="http://drushcommands.com/drush-6x/make/make">Drush Make</a></li>
 </ul>
 
-<h2 id="distro-makefiles:367dde8d955632dfaf82713681e64404">Distro Makefiles</h2>
+<h2 id="distro-makefiles">Distro Makefiles</h2>
 
 <ul class="linenums list-unstyled wb-prettify all-pre">
     <li>
@@ -273,7 +273,7 @@
     api = 2
     core = 7.x
 
-    projects[drupal][version] = 7.42
+    projects[drupal][version] = 7.43
     projects[drupal][type] = core
 
     ; Patches for Drupal Core
@@ -281,7 +281,7 @@
     projects[drupal][patch][460408] = http://drupal.org/files/issues/menu-access_unpublished-nodes_460408-157.patch
     projects[drupal][patch][728702] = http://drupal.org/files/issues/install-redirect-on-empty-database-728702-36.patch
     projects[drupal][patch][865536] = http://drupal.org/files/drupal-865536-204.patch
-    projects[drupal][patch][889772] = http://drupal.org/files/issues/drupal7-backport-889772-186.patch
+    projects[drupal][patch][889772] = http://drupal.org/files/issues/drupal7-backport-889772-207.patch
     projects[drupal][patch][911354] = http://drupal.org/files/911354-drupal-profile-85.patch
     projects[drupal][patch][1081266] = http://drupal.org/files/drupal-1081266-102-drupal_get_filename-D7.patch
     projects[drupal][patch][1443342] = http://drupal.org/files/drupal-1443342-1-inline-file_uri_scheme-in-file_stream_wrapper_uri_normalize.patch
@@ -291,7 +291,7 @@
     projects[drupal][patch][2289867] = http://drupal.org/files/issues/D7_port_fix_w3c_url_validation_html5_changes-2289867-1.patch
     projects[drupal][patch][2383823] = http://drupal.org/files/issues/2383823-check_name_empty-1.patch
     projects[drupal][patch][2339447] = http://drupal.org/files/issues/2339447-73-optimize_drupal_find_theme_functions.patch
-    projects[drupal][patch][2460833] = http://drupal.org/files/issues/drupal-session_destroy_return_bool-2460833-2-D7.patch
+    projects[drupal][patch][2460833] = http://drupal.org/files/issues/drupal-session_destroy_return_bool-2460833-30.patch
             </pre></p>
         </details>
     </li>
@@ -313,19 +313,19 @@
     projects[wetkit_breadcrumbs][version] = 4.4
     projects[wetkit_breadcrumbs][subdir] = custom
 
-    projects[wetkit_core][version] = 4.4
+    projects[wetkit_core][version] = 4.5
     projects[wetkit_core][subdir] = custom
 
     projects[wetkit_demo][version] = 4.1
     projects[wetkit_demo][subdir] = custom
 
-    projects[wetkit_deployment][version] = 4.7
+    projects[wetkit_deployment][version] = 4.8
     projects[wetkit_deployment][subdir] = custom
 
     projects[wetkit_images][version] = 4.4
     projects[wetkit_images][subdir] = custom
 
-    projects[wetkit_language][version] = 4.4
+    projects[wetkit_language][version] = 4.5
     projects[wetkit_language][subdir] = custom
 
     projects[wetkit_layouts][version] = 4.2
@@ -340,7 +340,7 @@
     projects[wetkit_migrate][version] = 4.2
     projects[wetkit_migrate][subdir] = custom
 
-    projects[wetkit_og][version] = 4.0
+    projects[wetkit_og][version] = 4.1
     projects[wetkit_og][subdir] = custom
 
     projects[wetkit_pages][version] = 4.2
@@ -349,7 +349,7 @@
     projects[wetkit_search][version] = 4.1
     projects[wetkit_search][subdir] = custom
 
-    projects[wetkit_test][version] = 4.5
+    projects[wetkit_test][version] = 4.6
     projects[wetkit_test][subdir] = custom
 
     projects[wetkit_theme][version] = 4.3
@@ -375,7 +375,7 @@
     projects[wetkit_ember][version] = 4.3
     projects[wetkit_ember][type] = theme
 
-    projects[wetkit_bootstrap][version] = 4.5
+    projects[wetkit_bootstrap][version] = 4.6
     projects[wetkit_bootstrap][type] = theme
 
     projects[wetkit_shiny][version] = 4.0
@@ -385,7 +385,7 @@
     </li>
 </ul>
 
-<h2 id="module-makefiles:367dde8d955632dfaf82713681e64404">Module Makefiles</h2>
+<h2 id="module-makefiles">Module Makefiles</h2>
 
 <ul class="linenums list-unstyled wb-prettify all-pre">
     <li>
@@ -517,11 +517,12 @@
 
     projects[diff][version] = 3.2
     projects[diff][subdir] = contrib
+    projects[diff][patch][2640478] = http://drupal.org/files/issues/diff-deprecating_php4_style-2640478-2.patch
 
     projects[elements][version] = 1.4
     projects[elements][subdir] = contrib
 
-    projects[entity][version] = 1.6
+    projects[entity][version] = 1.7
     projects[entity][subdir] = contrib
     projects[entity][patch][2020325] = http://drupal.org/files/issues/entity-ctools-content-type-from-context-2020325-24.patch
 
@@ -537,16 +538,15 @@
     projects[fape][version] = 1.2
     projects[fape][subdir] = contrib
 
-    projects[features][version] = 2.7
+    projects[features][version] = 2.10
     projects[features][subdir] = contrib
-    projects[features][patch][2288395] = http://drupal.org/files/issues/features-manage_features_page-2288395-1.patch
 
     projects[fences][version] = 1.2
     projects[fences][subdir] = contrib
 
     projects[field_collection][version] = 1.0-beta11
     projects[field_collection][subdir] = contrib
-    projects[field_collection][patch][1344672] = http://drupal.org/files/issues/field_collection_field-1344672-504.patch
+    projects[field_collection][patch][1344672] = http://drupal.org/files/issues/field_collection_field-1344672-510.patch
     projects[field_collection][patch][2075325] = http://drupal.org/files/issues/field_collection_uuid-2075325-18.patch
     projects[field_collection][patch][2075326] = http://drupal.org/files/issues/field_collection_uuid_services-2075325-18.patch
 
@@ -558,7 +558,7 @@
     projects[fontawesome][subdir] = contrib
     projects[fontawesome][patch][2590491] = http://drupal.org/files/issues/wetkit_core-2590491-6.patch
 
-    projects[hierarchical_select][version] = 3.0-beta3
+    projects[hierarchical_select][version] = 3.0-beta5
     projects[hierarchical_select][subdir] = contrib
 
     projects[icon][version] = 1.0-beta6
@@ -570,7 +570,7 @@
 
     projects[link][version] = 1.4
     projects[link][subdir] = contrib
-    projects[link][patch][2428185] = http://drupal.org/files/issues/link-broken-relative-urls-with-language-prefix-2428185-5.patch
+    projects[link][patch][2428185] = http://drupal.org/files/issues/link-broken-relative-urls-with-language-prefix-2428185-14.patch
 
     projects[linkchecker][version] = 1.2
     projects[linkchecker][subdir] = contrib
@@ -582,12 +582,14 @@
     projects[menu_block][version] = 2.7
     projects[menu_block][subdir] = contrib
     projects[menu_block][patch][2567871] = http://drupal.org/files/issues/support_menu_block_mode_5-2567871-2.patch
-    projects[menu_block][patch][2567875] = http://drupal.org/files/issues/support_menu_block_theme_overrides-2567875-2.patch
+    projects[menu_block][patch][2567875] = http://drupal.org/files/issues/argument_3_passed_to-2687299-3.patch
     projects[menu_block][patch][2282933] = http://drupal.org/files/issues/menu_block-uuid-2282933-23.patch
     projects[menu_block][patch][2644630] = http://drupal.org/files/issues/menu_block_block-2644630-2.patch
 
     projects[password_policy][version] = 1.12
     projects[password_policy][subdir] = contrib
+    projects[password_policy][patch][2571139] = http://drupal.org/files/issues/password_policy-7.x-1.x-fix_postgres_fatal_error_unblocking_user-2571139-4.patch
+    projects[password_policy][patch][2688123] = http://drupal.org/files/issues/password_policy-undefined-property-original-2688123.patch
 
     projects[panelizer][version] = 3.2-beta1
     projects[panelizer][subdir] = contrib
@@ -598,10 +600,11 @@
     projects[panels][patch][1588212] = http://drupal.org/files/issues/panels-1588212-10.patch
     projects[panels][patch][2192355] = http://drupal.org/files/issues/i18n_panels_uuid_undefined-2192355-01.patch
     projects[panels][patch][2253919] = http://drupal.org/files/issues/panels-re-generated-uuids-on-clone.patch
+    projects[panels][patch][2391073] = http://drupal.org/files/issues/2391073-11-cache_mini_panels_load.patch
     projects[panels][patch][2508433] = http://drupal.org/files/issues/blocks_dont_support_optional_context-2508433-1.patch
     projects[panels][patch][2557061] = http://drupal.org/files/issues/deprecated-constructor-in-php-7-2557061-3.patch
 
-    projects[panopoly_magic][version] = 1.30
+    projects[panopoly_magic][version] = 1.35
     projects[panopoly_magic][subdir] = contrib
     projects[panopoly_magic][patch][2179413] = http://drupal.org/files/issues/panels_undefined_styles-2179413-13.patch
 
@@ -712,13 +715,12 @@
 
     ; Modules for WetKit Deployment
 
-    projects[deploy][version] = 2.0-beta1
+    projects[deploy][version] = 2.0-beta2
     projects[deploy][subdir] = contrib
     projects[deploy][patch][1604938] = http://drupal.org/files/deploy-1604938_1.patch
     projects[deploy][patch][2092335] = http://drupal.org/files/deploy_new_alter_hook-2092335-4.patch
     projects[deploy][patch][2136595] = http://drupal.org/files/issues/helpful_helper_text-2136595-1.patch
     projects[deploy][patch][2604656] = http://drupal.org/files/issues/catch_exceptions-2604656-3.patch
-    projects[deploy][patch][2638954] = http://drupal.org/files/issues/deleted_node_revisions-2638954-2.patch
 
     projects[deploy_plus][version] = 2.2
     projects[deploy_plus][subdir] = contrib
@@ -747,19 +749,16 @@
     projects[quicktabs][subdir] = contrib
     projects[quicktabs][patch][1454486] = http://drupal.org/files/issues/quicktabs-tab-history-1454486-35.patch
 
-    projects[services][version] = 3.13
+    projects[services][version] = 3.14
     projects[services][subdir] = contrib
 
     projects[shared_content][version] = 1.0-beta2
     projects[shared_content][subdir] = contrib
-    projects[shared_content][patch][2628240] = http://drupal.org/files/issues/syndicated_to_site-2628240-2.patch
+    projects[shared_content][patch][2628240] = http://drupal.org/files/issues/syndicated_to_site-2628240-5.patch
 
-    projects[uuid_redirect][version] = 1.x-dev
+    projects[uuid_redirect][version] = 1.0-alpha1
     projects[uuid_redirect][subdir] = contrib
-    projects[uuid_redirect][type] = module
-    projects[uuid_redirect][download][type] = git
-    projects[uuid_redirect][download][revision] = ce1ab849
-    projects[uuid_redirect][download][branch] = 7.x-1.x
+    projects[uuid_redirect][patch][1344672] = http://drupal.org/files/issues/patch_uuid_redirect_so-2704071-2.patch
             </pre></p>
         </details>
     </li>
@@ -793,14 +792,9 @@
 
     ; Contrib
 
-    projects[entity_translation][version] = 1.0-beta4
+    projects[entity_translation][version] = 1.0-beta5
     projects[entity_translation][subdir] = contrib
-    projects[entity_translation][patch][1989084] = http://drupal.org/files/issues/entity_translation-fix-i18n-menu-item-validate-1989084-8.patch
-    projects[entity_translation][patch][2166157] = http://drupal.org/files/issues/edit_draft-2557443-18.patch
-    projects[entity_translation][patch][2203801] = http://drupal.org/files/issues/i18n_taxonomy_integration-2203801-5.patch
-    projects[entity_translation][patch][2305547] = http://drupal.org/files/issues/entity_translation-more-defensive-code.patch
-    projects[entity_translation][patch][2415189] = http://drupal.org/files/issues/entity_translation_2415189_0.patch
-    projects[entity_translation][patch][2452279] = http://drupal.org/files/issues/entity_translation-duplicated-langcode-variable-edit-access.patch
+    projects[entity_translation][patch][2557429] = http://drupal.org/files/issues/static_cache_for-2557429-17.patch
 
     projects[features_translations][version] = 2.0
     projects[features_translations][subdir] = contrib
@@ -829,20 +823,14 @@
     projects[stringoverrides][version] = 1.8
     projects[stringoverrides][subdir] = contrib
 
-    projects[title][version] = 1.x-dev
-    projects[title][type] = module
+    projects[title][version] = 1.0-alpha8
     projects[title][subdir] = contrib
-    projects[title][download][type] = git
-    projects[title][download][revision] = 32e8016
-    projects[title][download][branch] = 7.x-1.x
-    projects[title][patch][2605040] = http://drupal.org/files/issues/title-removed-recursive-call-to-entity-get-info-2605040-5-d7.patch
 
     projects[variable][version] = 2.5
     projects[variable][subdir] = contrib
 
-    projects[webform_localization][version] = 4.2
+    projects[webform_localization][version] = 4.5
     projects[webform_localization][subdir] = contrib
-    projects[webform_localization][patch][2627813] = http://drupal.org/files/issues/undefined_index_nid-2627812-5_1.patch
             </pre></p>
         </details>
     </li>
@@ -857,7 +845,7 @@
 
     ; Module(s) for WetKit Metatag
 
-    projects[metatag][version] = 1.13
+    projects[metatag][version] = 1.14
     projects[metatag][subdir] = contrib
     projects[metatag][patch][2648494] = http://drupal.org/files/issues/metatag_html_entities-2648494-2.patch
             </pre></p>
@@ -908,7 +896,7 @@
 
     ; Modules for WetKit Organic Groups
 
-    projects[og][version] = 2.8
+    projects[og][version] = 2.9
     projects[og][subdir] = contrib
             </pre></p>
         </details>
@@ -924,26 +912,15 @@
 
     ; Facet API
 
-    projects[date_facets][version] = 1.x-dev
-    projects[date_facets][type] = module
+    projects[date_facets][version] = 1.0
     projects[date_facets][subdir] = contrib
-    projects[date_facets][download][type] = git
-    projects[date_facets][download][revision] = f2951ca
-    projects[date_facets][download][branch] = 7.x-1.x
-    projects[date_facets][patch][2016601] = http://drupal.org/files/issues/date_facets-date-facets-displayed-as-keys-2016601-6.patch
-    projects[date_facets][patch][2280631] = http://drupal.org/files/issues/date_facets_beta2_dev_Missing_argument_2_Undifined_Index_index_id_field-2280631-5.patch
 
     projects[facetapi][version] = 1.5
     projects[facetapi][subdir] = contrib
     projects[facetapi][patch][2378693] = http://drupal.org/files/issues/notice_undefined-2378693-3.patch
 
-    projects[facetapi_bonus][version] = 1.x-dev
-    projects[facetapi_bonus][type] = module
+    projects[facetapi_bonus][version] = 1.3-rc2
     projects[facetapi_bonus][subdir] = contrib
-    projects[facetapi_bonus][download][type] = git
-    projects[facetapi_bonus][download][revision] = 1f2e720
-    projects[facetapi_bonus][download][branch] = 7.x-1.x
-    projects[facetapi_bonus][patch][1844680] = http://drupal.org/files/facetapi-warning.patch
 
     projects[facetapi_i18n][version] = 1.0-beta2
     projects[facetapi_i18n][subdir] = contrib
@@ -955,7 +932,7 @@
     projects[custom_search][version] = 1.20
     projects[custom_search][subdir] = contrib
 
-    projects[search404][version] = 1.3
+    projects[search404][version] = 1.4
     projects[search404][subdir] = contrib
             </pre></p>
         </details>
@@ -989,25 +966,25 @@
     ; Library for the Web Experience Toolkit jQuery Framework
 
     libraries[wet-boew][download][type] = get
-    libraries[wet-boew][download][url] = https://github.com/wet-boew/wet-boew-cdn/archive/v4.0.20.tar.gz
+    libraries[wet-boew][download][url] = https://github.com/wet-boew/wet-boew-cdn/archive/v4.0.21.tar.gz
 
     libraries[theme-wet-boew][download][type] = get
-    libraries[theme-wet-boew][download][url] = https://github.com/wet-boew/themes-cdn/archive/v4.0.20-theme-wet-boew.tar.gz
+    libraries[theme-wet-boew][download][url] = https://github.com/wet-boew/themes-cdn/archive/v4.0.21-theme-wet-boew.tar.gz
 
     libraries[theme-base][download][type] = get
-    libraries[theme-base][download][url] = https://github.com/wet-boew/themes-cdn/archive/v4.0.20-theme-base.tar.gz
+    libraries[theme-base][download][url] = https://github.com/wet-boew/themes-cdn/archive/v4.0.21-theme-base.tar.gz
 
     libraries[theme-gc-intranet][download][type] = get
-    libraries[theme-gc-intranet][download][url] = https://github.com/wet-boew/themes-cdn/archive/v4.0.20-theme-gc-intranet.tar.gz
+    libraries[theme-gc-intranet][download][url] = https://github.com/wet-boew/themes-cdn/archive/v4.0.21-theme-gc-intranet.tar.gz
 
     libraries[theme-gcwu-fegc][download][type] = get
-    libraries[theme-gcwu-fegc][download][url] = https://github.com/wet-boew/themes-cdn/archive/v4.0.20-theme-gcwu-fegc.tar.gz
+    libraries[theme-gcwu-fegc][download][url] = https://github.com/wet-boew/themes-cdn/archive/v4.0.21-theme-gcwu-fegc.tar.gz
 
     libraries[theme-gcweb][download][type] = get
-    libraries[theme-gcweb][download][url] = https://github.com/wet-boew/themes-cdn/archive/v4.0.20-gcweb.tar.gz
+    libraries[theme-gcweb][download][url] = https://github.com/wet-boew/themes-cdn/archive/v4.0.21-gcweb.tar.gz
 
     libraries[theme-ogpl][download][type] = get
-    libraries[theme-ogpl][download][url] = https://github.com/wet-boew/themes-cdn/archive/v4.0.20-theme-ogpl.tar.gz
+    libraries[theme-ogpl][download][url] = https://github.com/wet-boew/themes-cdn/archive/v4.0.21-theme-ogpl.tar.gz
             </pre></p>
         </details>
     </li>
@@ -1037,6 +1014,7 @@
     projects[media][patch][2272567] = http://drupal.org/files/issues/media_dialog_appears-2272567-8.patch
     projects[media][patch][2308487] = http://drupal.org/files/issues/media-alt-title-double-encoded-2308487-2.patch
     projects[media][patch][2317519] = http://drupal.org/files/issues/media-multiple-blank-wysiwyg-2317519-22.patch
+    projects[media][patch][2568123] = http://drupal.org/files/issues/unable_to_create-2568123-2.patch
             </pre></p>
         </details>
     </li>
@@ -1075,7 +1053,7 @@
     </li>
 </ul>
 
-<h2 id="theme-makefiles:367dde8d955632dfaf82713681e64404">Theme Makefiles</h2>
+<h2 id="theme-makefiles">Theme Makefiles</h2>
 
 <ul class="linenums list-unstyled wb-prettify all-pre">
     <li>

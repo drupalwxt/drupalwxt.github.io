@@ -258,7 +258,7 @@
   <p>The most up to date instructions are available in the <a href="https://raw.githubusercontent.com/wet-boew/wet-boew-drupal/7.x-4.x/README.md">README.md</a> file. This page while outdated does contain additional procedures for custom environments.</p>
 </div>
 
-<h2 id="install-acquia-dev-desktop:0c49c78af7fa0080093a535bc4039822">Install Acquia Dev Desktop</h2>
+<h2 id="install-acquia-dev-desktop">Install Acquia Dev Desktop</h2>
 
 <p>If this is your first Drupal 7 install, you may want to install the
 Acquia Dev Destop on your machine since it will provide you with a
@@ -276,7 +276,7 @@ Site location: C:\&lt;LocalFolder&gt;\Desktop\Sites\acquia-drupal
 </code></pre></li>
 </ol>
 
-<h2 id="configure-environment-variables-host-file-and-apache:0c49c78af7fa0080093a535bc4039822">Configure Environment variables, host file and Apache</h2>
+<h2 id="configure-environment-variables-host-file-and-apache">Configure Environment variables, host file and Apache</h2>
 
 <ol>
 <li><p>Update your $PATH Environment Variable to add the following location:</p>
@@ -304,7 +304,7 @@ Site location: C:\&lt;LocalFolder&gt;\Desktop\Sites\acquia-drupal
 </code></pre></li>
 </ol>
 
-<h2 id="download-and-install-drush:0c49c78af7fa0080093a535bc4039822">Download and install Drush</h2>
+<h2 id="download-and-install-drush">Download and install Drush</h2>
 
 <p>Note: Drush makes calls to executables without specifying the full path to their locations. In order to resolve the correct location, their full path should be included in %PATH% environment variable. The easiest way to do this is by selecting the feature Register Environment Variables when running the installation package. The location can also be added manually to your %PATH% user environment variable.</p>
 
@@ -316,14 +316,14 @@ Site location: C:\&lt;LocalFolder&gt;\Desktop\Sites\acquia-drupal
 <li>You should be able to run Drush from within the Git Bash Window!</li>
 </ul>
 
-<h2 id="download-and-install-git:0c49c78af7fa0080093a535bc4039822">Download and install Git</h2>
+<h2 id="download-and-install-git">Download and install Git</h2>
 
 <ul>
 <li>Download Git 1.7.10 or higher from <a href="http://msysgit.github.com">MsysGit</a>.</li>
 <li>Install Git 1.7.10 or higher (Some lower versions of git do not apply patches from the make file with Drush Make).</li>
 </ul>
 
-<h2 id="configure-your-proxy-if-applicable:0c49c78af7fa0080093a535bc4039822">Configure your proxy (if applicable)</h2>
+<h2 id="configure-your-proxy-if-applicable">Configure your proxy (if applicable)</h2>
 
 <ul>
 <li><p>For Drush: Create and/or Edit the file _curlrc with the following content and paste the following into your home directory of your local environment:</p>
@@ -348,7 +348,7 @@ $conf['proxy_exceptions'] = array('127.0.0.1', 'localhost');
 </code></pre></li>
 </ul>
 
-<h2 id="configure-your-php-ini-file:0c49c78af7fa0080093a535bc4039822">Configure your php.ini file</h2>
+<h2 id="configure-your-php-ini-file">Configure your php.ini file</h2>
 
 <ul>
 <li><p>Locate your php.ini file. The acquia install included a phpinfo.php file. <a href="http://localhost:8082/phpinfo.php">http://localhost:8082/phpinfo.php</a></p>

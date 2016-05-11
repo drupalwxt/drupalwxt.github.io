@@ -253,7 +253,7 @@
             <div class="post-content">
                 
 
-<h2 id="deployment-with-drupal-wxt:98159bafc57a07057ca8a36ea636fe50">Deployment with Drupal WxT</h2>
+<h2 id="deployment-with-drupal-wxt">Deployment with Drupal WxT</h2>
 
 <p>There are 4 essential modules that facilitate deployment in Drupal WxT:</p>
 
@@ -267,7 +267,7 @@
 <li><p><strong>WetKit Deployment Destination</strong>: Provides the CRUD interface to consume the JSON data that was sent from the client server</p></li>
 </ol>
 
-<h2 id="wetkit-deployment:98159bafc57a07057ca8a36ea636fe50">WetKit Deployment:</h2>
+<h2 id="wetkit-deployment">WetKit Deployment:</h2>
 
 <ul>
 <li>Provides the make file for all deployment module dependencies</li>
@@ -277,7 +277,7 @@
 <li>Module is required for deployment functionality</li>
 </ul>
 
-<h2 id="wetkit-deployment-environment-indicator:98159bafc57a07057ca8a36ea636fe50">WetKit Deployment Environment Indicator:</h2>
+<h2 id="wetkit-deployment-environment-indicator">WetKit Deployment Environment Indicator:</h2>
 
 <ul>
 <li>Drupal modules: environment_indicator</li>
@@ -285,7 +285,7 @@
 <li>Module is optional for deployment and only provides UX functionality</li>
 </ul>
 
-<h2 id="wetkit-deployment-source:98159bafc57a07057ca8a36ea636fe50">WetKit Deployment Source:</h2>
+<h2 id="wetkit-deployment-source">WetKit Deployment Source:</h2>
 
 <ul>
 <li>Drupal modules: <code>deploy</code>, <code>deploy_services_client</code>, <code>entity_dependency</code>, <code>entity_menu_links</code>, <code>shared_content_source</code>, and <code>uuid</code></li>
@@ -305,7 +305,7 @@
 <li>Provides custom handlers to allow for Taxonomy Terms + Menu Link reordering to be sent to Destination Server</li>
 </ul>
 
-<h2 id="wetkit-deployment-destination:98159bafc57a07057ca8a36ea636fe50">WetKit Deployment Destination:</h2>
+<h2 id="wetkit-deployment-destination">WetKit Deployment Destination:</h2>
 
 <ul>
 <li>Drupal modules: <code>entity_menu_links</code>, <code>services</code>, <code>shared_content_destination</code>, and <code>uuid</code></li>
@@ -330,7 +330,7 @@ resources:
 <li><p>Configures redirect on edit page for all deployable entities on destination site so always redirects to source site</p></li>
 </ul>
 
-<h2 id="deployment-plans:98159bafc57a07057ca8a36ea636fe50">Deployment Plans</h2>
+<h2 id="deployment-plans">Deployment Plans</h2>
 
 <p>Deployment plans have largely two options for processing. Though please note that Drupal WxT has duplicated these handlers in case custom logic was needed to get deployment to work with entity translation based deployments. Currently only the DeployServiceRest class has actually needed to be overridden from deploy itself.</p>
 
@@ -340,7 +340,7 @@ resources:
 <li>Batch API: All entities are processed with the Batch API. Works best when deployments are done through the UI.</li>
 </ul>
 
-<h2 id="deployment-plans-large-files:98159bafc57a07057ca8a36ea636fe50">Deployment Plans (Large Files)</h2>
+<h2 id="deployment-plans-large-files">Deployment Plans (Large Files)</h2>
 
 <p>Please note that all types of deployments above are still subject to a variety of php settings. The following ones in particular should be noted:</p>
 
@@ -363,7 +363,7 @@ resources:
 
 <p>What this does is disable the actual file being deployed but not the actual generated JSON or metadata about the file itself. We instead leverage inotify + rsync which is watching and then syncing to this specific directory between the source and production site. Therefore the php process doesn&rsquo;t have to handle the file aspect of the deployment and issues about the php memory_limit are resolved.</p>
 
-<h2 id="caveats:98159bafc57a07057ca8a36ea636fe50">Caveats</h2>
+<h2 id="caveats">Caveats</h2>
 
 <p>Drupal WxT provides automatic support for deployment on a variety of entities and associated bundles. However it can only provide deployment support for entities that it currently knows about.</p>
 

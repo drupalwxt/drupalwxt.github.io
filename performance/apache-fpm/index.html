@@ -267,7 +267,7 @@
 
 <p>While Apache using pre-fork can perform on par with a thread based server under light loads, under heavier loads you can notice Apache requiring several hundred megabytes (including the web application) for just the web server whereas the thread based server would be much smaller segment of RAM.</p>
 
-<h2 id="scenario:0c0d031eea49ddb517460e7d813f2e78">Scenario</h2>
+<h2 id="scenario">Scenario</h2>
 
 <p>Server with the following technical specs:</p>
 
@@ -276,18 +276,18 @@
 <li>RAM: 8GB</li>
 </ul>
 
-<h3 id="quick-audit-apache:0c0d031eea49ddb517460e7d813f2e78">Quick Audit Apache</h3>
+<h3 id="quick-audit-apache">Quick Audit Apache</h3>
 
 <p>There are three key areas to inspect when looking at Apache for a PHP-FPM environment. These are <code>keepalive</code>, <code>maxclients</code> and <code>allowoverride</code>.</p>
 
-<h4 id="keepalive:0c0d031eea49ddb517460e7d813f2e78">KeepAlive</h4>
+<h4 id="keepalive">KeepAlive</h4>
 
 <p>KeepAlive can severely limit Apache&rsquo;s ability to handle many concurrent requests. (Unless behind a Reverse Proxy such as Nginx, Varnish or Squid). For many websites including those powered by Drupal a good setting for the KeepAliveTimeout would be a low value like 3 seconds.</p>
 
 <pre><code>keepalivetimeout = 3s
 </code></pre>
 
-<h4 id="maxclients:0c0d031eea49ddb517460e7d813f2e78">MaxClients</h4>
+<h4 id="maxclients">MaxClients</h4>
 
 <p>This configuration is important to get right. If set to low this could causes users to wait for Apache to respond to the request while the server resources are idle. However if set to high the server will quickly run out of ram and start swapping to disk. Page responses times can will quickly go from ms to mins.</p>
 
@@ -298,13 +298,13 @@ Note: To get an approx average httpd process size:
 ps aux | grep 'httpd' | awk '{print $6/1024 &quot; MB&quot;;}'
 </code></pre>
 
-<h4 id="allowoverrides:0c0d031eea49ddb517460e7d813f2e78">AllowOverrides</h4>
+<h4 id="allowoverrides">AllowOverrides</h4>
 
 <p>While the impact of this setting on performance can vary greatly. For complex applications like Drupal you theoretically could have thousands of files at quite large directories depths. This would result in Apache having to recurse through all of these directories parsing all .htaccess files along the way. Since i/o cals are expensive this can be further exacerbated by the number of contrib modules or libraries present. Note: Special care would have to be emphasized in moving the appropriate Drupal .htaccess files into the httpd.conf file.</p>
 
-<h3 id="php-fpm:0c0d031eea49ddb517460e7d813f2e78">PHP-FPM</h3>
+<h3 id="php-fpm">PHP-FPM</h3>
 
-<h4 id="maxchildren:0c0d031eea49ddb517460e7d813f2e78">MaxChildren</h4>
+<h4 id="maxchildren">MaxChildren</h4>
 
 <p>When looking to optimize PHP-FPM it is largely depends on the application itself. However a standard rule that would satisfy a broad subset of use cases would be:</p>
 
@@ -316,7 +316,7 @@ ps aux | grep 'httpd' | awk '{print $6/1024 &quot; MB&quot;;}'
 <pre><code class="language-sh">ps -ylC php5-fpm --sort:rss | awk '!/RSS/ { s+=$8 } END { printf &quot;%s\n&quot;, &quot;Total memory used by PHP-FPM child processes: &quot;; printf &quot;%dM\n&quot;, s/
 </code></pre>
 
-<h3 id="quick-setup:0c0d031eea49ddb517460e7d813f2e78">Quick Setup</h3>
+<h3 id="quick-setup">Quick Setup</h3>
 
 <p>At a most base level this seems to be the ideal setup based on peer review:</p>
 
@@ -329,7 +329,7 @@ ps aux | grep 'httpd' | awk '{print $6/1024 &quot; MB&quot;;}'
 
 <p>Note: It is also important to highlight that single core php-fpm instances won&rsquo;t be much faster then mod_php. PHP-FPM benefits proportionately to the number of cpu cores available. While a dual core would yield a performance gain. A recommended number would be at least 4 cores.</p>
 
-<h2 id="detailed-setup:0c0d031eea49ddb517460e7d813f2e78">Detailed Setup</h2>
+<h2 id="detailed-setup">Detailed Setup</h2>
 
 <p>In the <code>/etc/apache/conf.d/mpm-event.conf</code> or <code>/etc/apache/conf.d/mpm-worker.conf</code> file:</p>
 

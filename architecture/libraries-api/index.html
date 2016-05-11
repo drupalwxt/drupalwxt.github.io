@@ -257,7 +257,7 @@
 
 <p>The module introduces a common repository for libraries in <code>profiles/distro/libraries</code> or <code>sites/all/libraries</code>.</p>
 
-<h2 id="key-features:a045c3a7a068786023056e528c34cae1">Key Features</h2>
+<h2 id="key-features">Key Features</h2>
 
 <ul>
 <li>The same library can be shared by more than one module.</li>
@@ -271,11 +271,11 @@
 <li>Runtime control of library availability.</li>
 </ul>
 
-<h2 id="wxt:a045c3a7a068786023056e528c34cae1">WxT</h2>
+<h2 id="wxt">WxT</h2>
 
 <p>Drupal WxT leverages the libraries module for all of its handling for the <a href="https://github.com/wet-boew/wet-boew">Web Experience Toolkit</a>. This allows for a decoupled / performant approach to loading the libraries while also allowing for quick updates by just replacing the associated theme in the libraries folder without any code changes.</p>
 
-<h2 id="codebase:a045c3a7a068786023056e528c34cae1">Codebase</h2>
+<h2 id="codebase">Codebase</h2>
 
 <p>The specific Libraries API code can be found in the wetkit_wetboew module which provides both a make file for the dependencies as well as the Libraries code invocation itself. A thorough example of all the properties in hook_libraries_info() can be found at the <a href="https://www.drupal.org/documentation/modules/libraries">Libraries API documentation</a></p>
 

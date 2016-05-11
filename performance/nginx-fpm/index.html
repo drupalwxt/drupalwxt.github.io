@@ -260,7 +260,7 @@
 
 <p><a href="https://github.com/squizlabs/PHP_CodeSniffer">Nginx</a> is event-based, so it does not follow Apache&rsquo;s style of spawning new processes or threads for each web page request. The end result is that even as load increases, memory and CPU usage remain manageable.</p>
 
-<h2 id="scenario:f7e156293a8b119e29836449b319e277">Scenario</h2>
+<h2 id="scenario">Scenario</h2>
 
 <p>Server with the following technical specs:</p>
 
@@ -269,21 +269,21 @@
 <li>RAM: 8GB</li>
 </ul>
 
-<h3 id="quick-audit-nginx:f7e156293a8b119e29836449b319e277">Quick Audit Nginx</h3>
+<h3 id="quick-audit-nginx">Quick Audit Nginx</h3>
 
 <p>There are three key areas to inspect when looking at Nginx for a PHP-FPM environment. These are <code>worker_connections</code> and <code>worker_processes</code>.</p>
 
-<h4 id="worker-connections:f7e156293a8b119e29836449b319e277">Worker Connections</h4>
+<h4 id="worker-connections">Worker Connections</h4>
 
 <p>Sets the maximum number of simultaneous connections that can be opened by a worker process. This is often set to the number of CPU cores.</p>
 
-<h4 id="worker-processes:f7e156293a8b119e29836449b319e277">Worker Processes</h4>
+<h4 id="worker-processes">Worker Processes</h4>
 
 <p>Sets the maximum number of simultaneous connections that can be opened by a worker process.</p>
 
-<h3 id="php-fpm:f7e156293a8b119e29836449b319e277">PHP-FPM</h3>
+<h3 id="php-fpm">PHP-FPM</h3>
 
-<h4 id="maxchildren:f7e156293a8b119e29836449b319e277">MaxChildren</h4>
+<h4 id="maxchildren">MaxChildren</h4>
 
 <p>When looking to optimize PHP-FPM it is largely depends on the application itself. However a standard rule that would satisfy a broad subset of use cases would be:</p>
 
@@ -295,7 +295,7 @@
 <pre><code class="language-sh">ps -ylC php5-fpm --sort:rss | awk '!/RSS/ { s+=$8 } END { printf &quot;%s\n&quot;, &quot;Total memory used by PHP-FPM child processes: &quot;; printf &quot;%dM\n&quot;, s/
 </code></pre>
 
-<h3 id="quick-setup:f7e156293a8b119e29836449b319e277">Quick Setup</h3>
+<h3 id="quick-setup">Quick Setup</h3>
 
 <p>At a most base level this seems to be the ideal setup based on peer review:</p>
 
@@ -307,7 +307,7 @@
 
 <p>Note: It is also important to highlight that single core php-fpm instances will not gain much of a performance improvement. PHP-FPM benefits proportionately to the number of cpu cores available. While a dual core would yield a performance gain. A recommended number would be at least 4 cores.</p>
 
-<h2 id="detailed-setup:f7e156293a8b119e29836449b319e277">Detailed Setup</h2>
+<h2 id="detailed-setup">Detailed Setup</h2>
 
 <p>In the <code>/etc/php5/fpm/pool.d/www.conf</code> file:</p>
 

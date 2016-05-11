@@ -261,11 +261,11 @@
 
 <p>Naturally, Varnish does not need to reside on the same server as Apache and can be placed in front as a separate access point for enhanced performance.</p>
 
-<h2 id="load-balancing-optional:0e2e261df42fd2c988b1b18e9010bb37">Load Balancing (Optional)</h2>
+<h2 id="load-balancing-optional">Load Balancing (Optional)</h2>
 
 <p>Varnish is also a software load balancer. Varnish uses round-robin balancing to an arbitrary number of back-ends. Different guidelines can be provided to each backend in case they do not have identical capabilities. Other balancing policies are available too, including random assignment and assignment based on server health. Varnish can use backend health polling so that in the case where one server is becoming overwhelmed; traffic will not be directed to that server.</p>
 
-<h2 id="default-vcl:0e2e261df42fd2c988b1b18e9010bb37">Default VCL</h2>
+<h2 id="default-vcl">Default VCL</h2>
 
 <p>An example of a best practice default.vcl for varnish can be found in the following github repository:</p>
 
