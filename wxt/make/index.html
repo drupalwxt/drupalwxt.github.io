@@ -273,7 +273,7 @@
     api = 2
     core = 7.x
 
-    projects[drupal][version] = 7.43
+    projects[drupal][version] = 7.50
     projects[drupal][type] = core
 
     ; Patches for Drupal Core
@@ -281,17 +281,14 @@
     projects[drupal][patch][460408] = http://drupal.org/files/issues/menu-access_unpublished-nodes_460408-157.patch
     projects[drupal][patch][728702] = http://drupal.org/files/issues/install-redirect-on-empty-database-728702-36.patch
     projects[drupal][patch][865536] = http://drupal.org/files/drupal-865536-204.patch
-    projects[drupal][patch][889772] = http://drupal.org/files/issues/drupal7-backport-889772-207.patch
     projects[drupal][patch][911354] = http://drupal.org/files/911354-drupal-profile-85.patch
-    projects[drupal][patch][1081266] = http://drupal.org/files/drupal-1081266-102-drupal_get_filename-D7.patch
     projects[drupal][patch][1443342] = http://drupal.org/files/drupal-1443342-1-inline-file_uri_scheme-in-file_stream_wrapper_uri_normalize.patch
     projects[drupal][patch][1470656] = http://drupal.org/files/drupal-1470656-14.patch
     projects[drupal][patch][1710656] = http://drupal.org/files/drupal-1710656-3-skip-hidden-menu-items-D7.patch
     projects[drupal][patch][1772316] = http://drupal.org/files/drupal7-allow_change_system-requirements-1772316-18.patch
     projects[drupal][patch][2289867] = http://drupal.org/files/issues/D7_port_fix_w3c_url_validation_html5_changes-2289867-1.patch
-    projects[drupal][patch][2383823] = http://drupal.org/files/issues/2383823-check_name_empty-1.patch
     projects[drupal][patch][2339447] = http://drupal.org/files/issues/2339447-73-optimize_drupal_find_theme_functions.patch
-    projects[drupal][patch][2460833] = http://drupal.org/files/issues/drupal-session_destroy_return_bool-2460833-30.patch
+    projects[drupal][patch][2383823] = https://www.drupal.org/files/issues/2383823-check_name_empty-26.patch
             </pre></p>
         </details>
     </li>
@@ -313,28 +310,28 @@
     projects[wetkit_breadcrumbs][version] = 4.5
     projects[wetkit_breadcrumbs][subdir] = custom
 
-    projects[wetkit_core][version] = 4.6
+    projects[wetkit_core][version] = 4.8
     projects[wetkit_core][subdir] = custom
 
     projects[wetkit_demo][version] = 4.1
     projects[wetkit_demo][subdir] = custom
 
-    projects[wetkit_deployment][version] = 4.9
+    projects[wetkit_deployment][version] = 4.10
     projects[wetkit_deployment][subdir] = custom
 
-    projects[wetkit_images][version] = 4.4
+    projects[wetkit_images][version] = 4.5
     projects[wetkit_images][subdir] = custom
 
-    projects[wetkit_language][version] = 4.6
+    projects[wetkit_language][version] = 4.8
     projects[wetkit_language][subdir] = custom
 
     projects[wetkit_layouts][version] = 4.3
     projects[wetkit_layouts][subdir] = custom
 
-    projects[wetkit_menu][version] = 4.3
+    projects[wetkit_menu][version] = 4.5
     projects[wetkit_menu][subdir] = custom
 
-    projects[wetkit_metatag][version] = 4.7
+    projects[wetkit_metatag][version] = 4.9
     projects[wetkit_metatag][subdir] = custom
 
     projects[wetkit_migrate][version] = 4.2
@@ -346,7 +343,7 @@
     projects[wetkit_pages][version] = 4.2
     projects[wetkit_pages][subdir] = custom
 
-    projects[wetkit_search][version] = 4.2
+    projects[wetkit_search][version] = 4.3
     projects[wetkit_search][subdir] = custom
 
     projects[wetkit_test][version] = 4.7
@@ -364,7 +361,7 @@
     projects[wetkit_wetboew][version] = 4.2
     projects[wetkit_wetboew][subdir] = custom
 
-    projects[wetkit_widgets][version] = 4.5
+    projects[wetkit_widgets][version] = 4.6
     projects[wetkit_widgets][subdir] = custom
 
     projects[wetkit_wysiwyg][version] = 4.6
@@ -375,7 +372,7 @@
     projects[wetkit_ember][version] = 4.4
     projects[wetkit_ember][type] = theme
 
-    projects[wetkit_bootstrap][version] = 4.7
+    projects[wetkit_bootstrap][version] = 4.8
     projects[wetkit_bootstrap][type] = theme
 
     projects[wetkit_shiny][version] = 4.0
@@ -498,6 +495,7 @@
 
     projects[ctools][version] = 1.9
     projects[ctools][subdir] = contrib
+    projects[ctools][patch][1249684] = http://drupal.org/files/issues/ctools-fix-disappearing-exposed-in-not-in-operator-filter-1249684-64.patch
     projects[ctools][patch][2399313] = http://drupal.org/files/issues/ctools-2399313-1-Relationship-optional-context.patch
     projects[ctools][patch][2401635] = http://drupal.org/files/issues/ctools-views-content-custom-url-1417630-06.patch
     projects[ctools][patch][2265451] = http://drupal.org/files/issues/hide_empty_page_title-2265451-13.patch
@@ -558,8 +556,10 @@
     projects[fontawesome][subdir] = contrib
     projects[fontawesome][patch][2590491] = http://drupal.org/files/issues/wetkit_core-2590491-6.patch
 
-    projects[hierarchical_select][version] = 3.0-beta6
+    projects[hierarchical_select][version] = 3.0-beta7
     projects[hierarchical_select][subdir] = contrib
+    projects[hierarchical_select][patch][2748479] = http://drupal.org/files/issues/uncaught_syntax_error-2748479-2.patch
+    projects[hierarchical_select][patch][2719141] = http://drupal.org/files/issues/undefined_index_tid_in-2719141-19.patch
 
     projects[icon][version] = 1.0-beta6
     projects[icon][subdir] = contrib
@@ -590,7 +590,7 @@
     projects[password_policy][patch][2571139] = http://drupal.org/files/issues/password_policy-7.x-1.x-fix_postgres_fatal_error_unblocking_user-2571139-4.patch
     projects[password_policy][patch][2688123] = http://drupal.org/files/issues/password_policy-undefined-property-original-2688123.patch
 
-    projects[panelizer][version] = 3.2-beta1
+    projects[panelizer][version] = 3.2
     projects[panelizer][subdir] = contrib
 
     projects[panels][version] = 3.5
@@ -603,7 +603,7 @@
     projects[panels][patch][2508433] = http://drupal.org/files/issues/blocks_dont_support_optional_context-2508433-1.patch
     projects[panels][patch][2557061] = http://drupal.org/files/issues/deprecated-constructor-in-php-7-2557061-3.patch
 
-    projects[panopoly_magic][version] = 1.35
+    projects[panopoly_magic][version] = 1.37
     projects[panopoly_magic][subdir] = contrib
     projects[panopoly_magic][patch][2179413] = http://drupal.org/files/issues/panels_undefined_styles-2179413-13.patch
 
@@ -653,13 +653,13 @@
     projects[uuid_link][patch][2101455] = http://drupal.org/files/uuid_link_entity_translation-2101455-9.patch
     projects[uuid_link][patch][2484927] = http://drupal.org/files/issues/linkit_uuid-2484927-8.patch
 
-    projects[views][version] = 3.13
+    projects[views][version] = 3.14
     projects[views][subdir] = contrib
+    projects[views][patch][1189550] = http://drupal.org/files/issues/views_1189550_escape_rss_feed_title.patch
     projects[views][patch][1331056] = http://drupal.org/files/issues/views-3.x-dev-issue_1331056-52.patch
-    projects[views][patch][1615438] = http://drupal.org/files/issues/search_multiple_terms-1615438-79%2830%29.patch
     projects[views][patch][1863358] = http://drupal.org/files/1863358-grid-format-striping-8.patch
     projects[views][patch][2037469] = http://drupal.org/files/views-exposed-sorts-2037469-1.patch
-    projects[views][patch][2071607] = http://drupal.org/files/2071607-only_clear_related_cache_on_view_save.patch
+    projects[views][patch][2071607] = http://drupal.org/files/issues/saving_a_view_causes-2071607-17.patch
 
     projects[views_autocomplete_filters][version] = 1.2
     projects[views_autocomplete_filters][subdir] = contrib
@@ -752,7 +752,7 @@
     projects[quicktabs][subdir] = contrib
     projects[quicktabs][patch][1454486] = http://drupal.org/files/issues/quicktabs-tab-history-1454486-35.patch
 
-    projects[services][version] = 3.14
+    projects[services][version] = 3.15
     projects[services][subdir] = contrib
 
     projects[shared_content][version] = 1.0-beta2
@@ -798,6 +798,7 @@
     projects[entity_translation][version] = 1.0-beta5
     projects[entity_translation][subdir] = contrib
     projects[entity_translation][patch][2557429] = http://drupal.org/files/issues/static_cache_for-2557429-17.patch
+    projects[entity_translation][patch][2734295] = http://drupal.org/files/issues/entity_translation-2734295-4.patch
 
     projects[features_translations][version] = 2.0
     projects[features_translations][subdir] = contrib
@@ -832,7 +833,7 @@
     projects[variable][version] = 2.5
     projects[variable][subdir] = contrib
 
-    projects[webform_localization][version] = 4.5
+    projects[webform_localization][version] = 4.6
     projects[webform_localization][subdir] = contrib
             </pre></p>
         </details>
@@ -848,9 +849,10 @@
 
     ; Module(s) for WetKit Metatag
 
-    projects[metatag][version] = 1.14
+    projects[metatag][version] = 1.17
     projects[metatag][subdir] = contrib
     projects[metatag][patch][2648494] = http://drupal.org/files/issues/metatag_html_entities-2648494-2.patch
+    projects[metatag][patch][2761477] = http://drupal.org/files/issues/metatag_module_missing-2761477-2.patch
             </pre></p>
         </details>
     </li>
@@ -922,7 +924,7 @@
     projects[facetapi][subdir] = contrib
     projects[facetapi][patch][2378693] = http://drupal.org/files/issues/notice_undefined-2378693-3.patch
 
-    projects[facetapi_bonus][version] = 1.3-rc2
+    projects[facetapi_bonus][version] = 1.3-rc3
     projects[facetapi_bonus][subdir] = contrib
 
     projects[facetapi_i18n][version] = 1.0-beta2
@@ -1000,21 +1002,19 @@
     api = 2
     core = 7.x
 
-    projects[file_entity][version] = 2.0-beta2
+    projects[file_entity][version] = 2.0-beta3
     projects[file_entity][subdir] = contrib
     projects[file_entity][patch][2000934] = http://drupal.org/files/issues/allow_selection_of-2000934-30.patch
     projects[file_entity][patch][2198973] = http://drupal.org/files/issues/file_entity_override_widgets-2198973-01.patch
-    projects[file_entity][patch][2533816] = http://drupal.org/files/issues/file_entity-notice_undefined_offset_menu_translate-2533816-4.patch
 
     projects[file_lock][version] = 2.0
     projects[file_lock][subdir] = contrib
 
-    projects[media][version] = 2.0-beta1
+    projects[media][version] = 2.0-beta2
     projects[media][subdir] = contrib
     projects[media][patch][2084287] = http://drupal.org/files/issues/media-file-name-focus-2084287-2.patch
     projects[media][patch][2187771] = http://drupal.org/files/issues/media_alt_attributes-2129273-24.patch
     projects[media][patch][2126697] = http://drupal.org/files/issues/media_wysiwyg_2126697-53.patch
-    projects[media][patch][2272567] = http://drupal.org/files/issues/media_dialog_appears-2272567-8.patch
     projects[media][patch][2308487] = http://drupal.org/files/issues/media-alt-title-double-encoded-2308487-2.patch
     projects[media][patch][2317519] = http://drupal.org/files/issues/media-multiple-blank-wysiwyg-2317519-22.patch
     projects[media][patch][2568123] = http://drupal.org/files/issues/unable_to_create-2568123-2.patch
