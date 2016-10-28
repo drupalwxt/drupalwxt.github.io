@@ -243,7 +243,9 @@
         </div>
     </header>
     <div class="post-content">
-        Below we highlight the work done on getting the various WxT components / plugins and themes / styles leveraged properly in Drupal. Levels of integration with Drupal will vary as some of the plugins can simply be leveraged by calling a class in markup. Where possible we will try to make a distinction on how each functionality can be used. Note: This list does not represent the full capabilities of the Drupal WxT platform merely the WxT components it integrates with.
+        Below we highlight the work done on getting the various WxT components / plugins and themes / styles leveraged properly in Drupal.
+Levels of integration with Drupal will vary as some of the plugins can simply be leveraged by calling a class in markup. Where possible we will try to make a distinction on how each functionality can be used.
+Note: This list does not represent the full capabilities of the Drupal WxT platform merely the WxT components it integrates with.
     </div>
     
     <footer class="read-more-link">
@@ -265,7 +267,9 @@
         </div>
     </header>
     <div class="post-content">
-        Library Basics a) To access the library from the admin menu click on Content and then Files /en/admin/content/file, or you can also click the Add Media button in the WYSIWYG to access the library b) Avoid creating unnecessary duplicates. Whenever possible re-use the images, videos and documents that have already been uploaded to the library. Browsing the Library a) Using the file admin page /en/admin/content/file you can search by Name, Type of multimedia, and User who uploaded the file.
+        Library Basics a) To access the library from the admin menu click on Content and then Files /en/admin/content/file, or you can also click the Add Media button in the WYSIWYG to access the library
+b) Avoid creating unnecessary duplicates. Whenever possible re-use the images, videos and documents that have already been uploaded to the library.
+Browsing the Library a) Using the file admin page /en/admin/content/file you can search by Name, Type of multimedia, and User who uploaded the file.
     </div>
     
     <footer class="read-more-link">
@@ -282,12 +286,14 @@
         <div class="post-date text-muted">
             <span class="glyphicon glyphicon-calendar"></span>
             <time datetime="2015-02-26">
-                2015-02-26 - 28M TO READ
+                2015-02-26 - 27M TO READ
             </time>
         </div>
     </header>
     <div class="post-content">
-        Release Created Date Description 7.x-4.12 2016-08-22T03:14:29Z Security Update(s): Panels (3.4) Panelizer (3.7) Feature(s): WxT jQuery library updated from v4.0.21 -&gt; v4.0.22 Bean module update to fix issue with Views introduced in previous release Panopoly Magic preview pane CSS adjustments Panels has added a new quick-filter js for panels pane selections Numerous other Panels, CTools, and Panelizer bug fixes Deploy Plus updates related to entity dependency UUID module has refined the UUID validation pattern Fixes: (Commit: 218a6e3) Fixed WetKit WET-BOEW for #2787733 - Update wet-boew jQuery library from v4.0.21 to v4.0.22 (Commit: e729513) Update changelog.md file.
+        Release Created Date Description     7.x-4.13 2016-10-28T00:11:36Z Feature(s):
+ Drupal Core updated to 7.51 Fixes for regressions introduced in latest Panelizer Fix for hierarchical hook_update_n wrong invocation Updates for CTools + Panels Updates for i18n + webform localization Updated gcweb footer + migrate scripts (drush mi WetKitMigrateSiteMenuLinks)  Fixes:
+ (Commit: 585c583) Update changelog.md file. (Commit: f1ed944) Fixed WetKit Core for #2789415 - Menu Block: unable to choose &ldquo;Advanced Options&rdquo; (Commit: 69476a4) Update changelog.
     </div>
     
     <footer class="read-more-link">
@@ -309,7 +315,9 @@
         </div>
     </header>
     <div class="post-content">
-        Web editors have diverse knowledge as well as different levels of HTML coding, web publishing guidelines, accessibility requirements, and experience with validation tools. Only more senior editors should be able to validate and modify HTML as well as have the publishing rights to push content updates to the live server. HTML Coding In the WYSIWYG editor. Click the Source button on, off and on again for the WYSIWYG HTML auto-cleanup. Senior editors should view the Source and clean up HTML as needed, running validation tools before publishing.
+        Web editors have diverse knowledge as well as different levels of HTML coding, web publishing guidelines, accessibility requirements, and experience with validation tools. Only more senior editors should be able to validate and modify HTML as well as have the publishing rights to push content updates to the live server.
+HTML Coding In the WYSIWYG editor.
+ Click the Source button on, off and on again for the WYSIWYG HTML auto-cleanup.
     </div>
     
     <footer class="read-more-link">
@@ -331,7 +339,10 @@
         </div>
     </header>
     <div class="post-content">
-        Drush make turns a makefile into a working Drupal codebase. Below you can see all of the associated makefiles Drupal WxT leverages to built out its codebase and adhere to continuous deployment principles. For more information please consult: Drush Make Distro Makefiles drupal.org-core.make api = 2 core = 7.x projects[drupal][version] = 7.50 projects[drupal][type] = core ; Patches for Drupal Core projects[drupal][patch][405360] = http://drupal.org/files/issues/aria-describedby_2.patch projects[drupal][patch][460408] = http://drupal.org/files/issues/menu-access_unpublished-nodes_460408-157.patch projects[drupal][patch][728702] = http://drupal.org/files/issues/install-redirect-on-empty-database-728702-36.patch projects[drupal][patch][865536]
+        Drush make turns a makefile into a working Drupal codebase.
+Below you can see all of the associated makefiles Drupal WxT leverages to built out its codebase and adhere to continuous deployment principles.
+For more information please consult:
+ Drush Make  Distro Makefiles   drupal.org-core.make api = 2 core = 7.x projects[drupal][version] = 7.50 projects[drupal][type] = core ; Patches for Drupal Core projects[drupal][patch][405360] = http://drupal.org/files/issues/aria-describedby_2.patch projects[drupal][patch][460408] = http://drupal.
     </div>
     
     <footer class="read-more-link">
@@ -353,7 +364,7 @@
         </div>
     </header>
     <div class="post-content">
-        Name Website Description Size wetkit-admin wet-boew-wem/wetkit-admin Admin configuration for Drupal WEM. Size: 114 Bytes wetkit-bean wet-boew-wem/wetkit-bean Bean Configuration for Drupal WEM. Size: 136 Bytes wetkit-bootstrap wet-boew-wem/wetkit-bootstrap Bootstrap Subtheme for Drupal WEM. Size: 454 Bytes wetkit-breadcrumbs wet-boew-wem/wetkit-breadcrumbs Path Breadcrumb Configuration for Drupal WEM. Size: 24 Bytes wetkit-core wet-boew-wem/wetkit-core Core Configuration for Drupal WEM. Size: 394 Bytes wetkit-demo wet-boew-wem/wetkit-demo Demo Configuration for Drupal WEM. Size: 247 Bytes wetkit-deployment wet-boew-wem/wetkit-deployment Deployment Configuration for Drupal WEM.
+        Name Website Description Size     wetkit-admin wet-boew-wem/wetkit-admin Admin configuration for Drupal WEM.  Size: 114 Bytes   wetkit-bean wet-boew-wem/wetkit-bean Bean Configuration for Drupal WEM. Size: 137 Bytes   wetkit-bootstrap wet-boew-wem/wetkit-bootstrap Bootstrap Subtheme for Drupal WEM. Size: 455 Bytes   wetkit-breadcrumbs wet-boew-wem/wetkit-breadcrumbs Path Breadcrumb Configuration for Drupal WEM. Size: 27 Bytes   wetkit-core wet-boew-wem/wetkit-core Core Configuration for Drupal WEM. Size: 378 Bytes   wetkit-demo wet-boew-wem/wetkit-demo Demo Configuration for Drupal WEM.
     </div>
     
     <footer class="read-more-link">
@@ -375,7 +386,9 @@
         </div>
     </header>
     <div class="post-content">
-        The easiest way to update an existing slideshow is to Edit the Block directly via contextual links. Simply mouse-over the gears widget in the top right corner and then click Edit Block. To see a list of carousel slideshows you can use the content blocks admin page /admin/content/blocks to filter by type Slideshow and then click Edit. Create / Edit slideshow Label: This is the visible name of the slideshow when listed in the blocks admin page.
+        The easiest way to update an existing slideshow is to Edit the Block directly via contextual links. Simply mouse-over the gears widget in the top right corner and then click Edit Block.
+To see a list of carousel slideshows you can use the content blocks admin page /admin/content/blocks to filter by type Slideshow and then click Edit.
+Create / Edit slideshow  Label: This is the visible name of the slideshow when listed in the blocks admin page.
     </div>
     
     <footer class="read-more-link">

@@ -243,7 +243,8 @@
         </div>
     </header>
     <div class="post-content">
-        Release Cycle The Drupal WxT 7.x-4.x branch will be updated with a stable release approximately once every few months roughly around the 18th. The reason for this is to follow as closely the Drupal security and core release cycle which is usually around the 15th of every month. 1.x branch Starting in January 2016 there will be no more new features integrated into the 7.x-1.x branch. Only security and minor bug fixes will be merged into the codebase for a period of 6 months.
+        Release Cycle The Drupal WxT 7.x-4.x branch will be updated with a stable release approximately once every few months roughly around the 18th. The reason for this is to follow as closely the Drupal security and core release cycle which is usually around the 15th of every month.
+1.x branch Starting in January 2016 there will be no more new features integrated into the 7.x-1.x branch. Only security and minor bug fixes will be merged into the codebase for a period of 6 months.
     </div>
     
     <footer class="read-more-link">
@@ -265,7 +266,9 @@
         </div>
     </header>
     <div class="post-content">
-        Libraries API is the common denominator and the defacto standard for all Drupal modules/profiles/themes that integrate with external libraries. The module introduces a common repository for libraries in profiles/distro/libraries or sites/all/libraries. Key Features The same library can be shared by more than one module. The same library can be shared by more than one site. Ease the process of upgrading a module that requires an external library. Just replace the module folder with the new one.
+        Libraries API is the common denominator and the defacto standard for all Drupal modules/profiles/themes that integrate with external libraries.
+The module introduces a common repository for libraries in profiles/distro/libraries or sites/all/libraries.
+Key Features  The same library can be shared by more than one module. The same library can be shared by more than one site. Ease the process of upgrading a module that requires an external library. Just replace the module folder with the new one.
     </div>
     
     <footer class="read-more-link">
@@ -287,7 +290,11 @@
         </div>
     </header>
     <div class="post-content">
-        Deployment with Drupal WxT There are 4 essential modules that facilitate deployment in Drupal WxT: WetKit Deployment: Provides the base configuration for both source and destination servers as well as default content types WetKit Deployment Environment Indicator: Provides contextual environment information (.dev, .qa, .prod) on the toolbar WetKit Deployment Source: Provides the functionality to deploy content in JSON to the destination servers WetKit Deployment Destination: Provides the CRUD interface to consume the JSON data that was sent from the client server WetKit Deployment: Provides the make file for all deployment module dependencies Adds configured custom content types (Simple + Moderated) to show a fully functional deployment Adds a node/edit and node/view panel page for the custom content types Adds the field bases (deploy_to_destination_site and shared_content) that each entity / bundle will need to inherit to facilitate deployment Module is required for deployment functionality WetKit Deployment Environment Indicator: Drupal modules: environment_indicator Environment settings are triggered by regex in url (.dev, .qa, .prod) Module is optional for deployment and only provides UX functionality WetKit Deployment Source: Drupal modules: deploy, deploy_services_client, entity_dependency, entity_menu_links, shared_content_source, and uuid Batch Entity Deployments: Single or Bulk deploy entities to n specified Destination Server(s) Administrative interface at: /admin/structure/deploy Interface is completely customizable and made up of Deploy Plus, Panels and Views Inline Entity Deployments based on a checkbox on an individual entity save leveraging Shared Content Single or Bulk Plan Managed aggregator using Memory/Queue Processor Creates default source field instances for beans, files, nodes (deploy + moderated), taxonomy terms (tags), and users Adds VBO (views bulk operations) for node, bean, file, term, and user Provides extensive customizations to ensure menu links are faux converted to entities and deployed with data integrity intact Customized CTools content types for deployment management plan Provides custom handlers to allow for Taxonomy Terms + Menu Link reordering to be sent to Destination Server WetKit Deployment Destination: Drupal modules: entity_menu_links, services, shared_content_destination, and uuid Configures the CRUD endpoints and available settings: endpoint: services/rest formatters: json parsers: json, x-www-form-urlencoded, form-data resources: bean (retrieve, update, delete) file (retrieve, update, delete) node + comments (retrieve, update, delete) user (retrieve, update, delete) taxonomy_term (retrieve, update, delete, actions: reorder) field_collection_item: (retrieve, update, delete, actions: reorder) menu_link: (retrieve, update, delete, actions: reorder) Creates default destination field instances for beans, files, nodes (deploy + moderated), taxonomy terms (tags), and users Configures redirect on edit page for all deployable entities on destination site so always redirects to source site Deployment Plans Deployment plans have largely two options for processing.
+        Deployment with Drupal WxT There are 4 essential modules that facilitate deployment in Drupal WxT:
+ WetKit Deployment: Provides the base configuration for both source and destination servers as well as default content types
+ WetKit Deployment Environment Indicator: Provides contextual environment information (.dev, .qa, .prod) on the toolbar
+ WetKit Deployment Source: Provides the functionality to deploy content in JSON to the destination servers
+ WetKit Deployment Destination: Provides the CRUD interface to consume the JSON data that was sent from the client server
     </div>
     
     <footer class="read-more-link">
@@ -309,7 +316,8 @@
         </div>
     </header>
     <div class="post-content">
-        Important These instructions could become outdated over time. Up to date instructions can always be found via the official readme. Drupal WxT uses Drush Make for a rapid built-out of the Drupal codebase. A drush make file is similar to an &ldquo;ant script&rdquo; and allows us to host just the code that we are developing (Installation Profile and Custom Modules, Features, and Themes) on GitHub. Any user who has Drush installed can then perform a build-out of both the Drupal Core package and various contributed modules hosted on Drupal.org.
+        Important These instructions could become outdated over time. Up to date instructions can always be found via the official readme.
+ Drupal WxT uses Drush Make for a rapid built-out of the Drupal codebase. A drush make file is similar to an &ldquo;ant script&rdquo; and allows us to host just the code that we are developing (Installation Profile and Custom Modules, Features, and Themes) on GitHub. Any user who has Drush installed can then perform a build-out of both the Drupal Core package and various contributed modules hosted on Drupal.
     </div>
     
     <footer class="read-more-link">
@@ -331,7 +339,8 @@
         </div>
     </header>
     <div class="post-content">
-        Important The most up to date instructions are available in the README.md file. This page while outdated does contain additional procedures for custom environments. Install Acquia Dev Desktop If this is your first Drupal 7 install, you may want to install the Acquia Dev Destop on your machine since it will provide you with a complete environment at the click of a button. It will set up Apache, MySQL, PHP and install an instance of Drupal.
+        Important The most up to date instructions are available in the README.md file. This page while outdated does contain additional procedures for custom environments.
+ Install Acquia Dev Desktop If this is your first Drupal 7 install, you may want to install the Acquia Dev Destop on your machine since it will provide you with a complete environment at the click of a button. It will set up Apache, MySQL, PHP and install an instance of Drupal.
     </div>
     
     <footer class="read-more-link">
@@ -353,7 +362,8 @@
         </div>
     </header>
     <div class="post-content">
-        Drupal WxT can run on a wide range of desktop and server operating systems including Windows, MacOS, Linux and UNIX. However, you will need to configure the environment according to the standard Drupal 7 requirements. This page provides a brief summary of those requirements and recommendations. More information is available from the system requirements page at Drupal.org. Web server Apache 2.x Microsoft IIS NGINX Database server PostgreSQL 8.4+ MySQL 5.0.15+ SQLite 3.3.7+ (Development) PHP 5.3.4+ 5.4.4+ (Recommended) Tips Installing a PHP accelerator is highly recommended, especially for production use, such as APC for Apache or WinCache for IIS.
+        Drupal WxT can run on a wide range of desktop and server operating systems including Windows, MacOS, Linux and UNIX. However, you will need to configure the environment according to the standard Drupal 7 requirements. This page provides a brief summary of those requirements and recommendations. More information is available from the system requirements page at Drupal.org.
+Web server  Apache 2.x Microsoft IIS NGINX  Database server  PostgreSQL 8.
     </div>
     
     <footer class="read-more-link">

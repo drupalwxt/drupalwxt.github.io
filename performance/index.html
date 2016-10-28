@@ -243,7 +243,9 @@
         </div>
     </header>
     <div class="post-content">
-        Important Want even more performance? Head on over to our Nginx + PHP-FPM documentation. Apache can achieve a rough parity in performance to a Nginx + PHP-FPM setup. With the added caveat that Apache should be run in either MPM Event or MPM Worker mode. Please note that the following statement holds true when analyzing performance: page speed &lt; requests served This means we are more concerned about how many requests that can be served then how fast we can serve the request.
+        Important Want even more performance? Head on over to our Nginx + PHP-FPM documentation.
+ Apache can achieve a rough parity in performance to a Nginx + PHP-FPM setup. With the added caveat that Apache should be run in either MPM Event or MPM Worker mode. Please note that the following statement holds true when analyzing performance:
+page speed &lt; requests served  This means we are more concerned about how many requests that can be served then how fast we can serve the request.
     </div>
     
     <footer class="read-more-link">
@@ -265,7 +267,10 @@
         </div>
     </header>
     <div class="post-content">
-        Important Using Apache? Head on over to our Apache + PHP-FPM documentation. Nginx is event-based, so it does not follow Apache&rsquo;s style of spawning new processes or threads for each web page request. The end result is that even as load increases, memory and CPU usage remain manageable. Scenario Server with the following technical specs: CPU: 4 @ 2.7GHZ RAM: 8GB Quick Audit Nginx There are three key areas to inspect when looking at Nginx for a PHP-FPM environment.
+        Important Using Apache? Head on over to our Apache + PHP-FPM documentation.
+ Nginx is event-based, so it does not follow Apache&rsquo;s style of spawning new processes or threads for each web page request. The end result is that even as load increases, memory and CPU usage remain manageable.
+Scenario Server with the following technical specs:
+ CPU: 4 @ 2.7GHZ RAM: 8GB  Quick Audit Nginx There are three key areas to inspect when looking at Nginx for a PHP-FPM environment.
     </div>
     
     <footer class="read-more-link">
@@ -287,7 +292,9 @@
         </div>
     </header>
     <div class="post-content">
-        Important These instructions might be a little out of date as much of the projects mentioned below have been incorporated into the Coder module The following is a list of best practice tools to use when analyzing the code quality of modules made for Drupal: Coder PHP CodeSniffer DrupalPractice (merged into Coder) DrupalSecure Normally these tools would be run based on a push to a CI server and will affect the build status if failures are detected.
+        Important These instructions might be a little out of date as much of the projects mentioned below have been incorporated into the Coder module
+ The following is a list of best practice tools to use when analyzing the code quality of modules made for Drupal:
+ Coder PHP CodeSniffer DrupalPractice (merged into Coder) DrupalSecure  Normally these tools would be run based on a push to a CI server and will affect the build status if failures are detected.
     </div>
     
     <footer class="read-more-link">
@@ -309,7 +316,8 @@
         </div>
     </header>
     <div class="post-content">
-        XHProf is a function-level hierarchical profiler for PHP. The raw data collection component is implemented in C (as a PHP extension). It is capable of reporting function-level inclusive and exclusive wall times, memory usage, CPU times and number of calls for each function. Additionally, it supports ability to compare two runs (hierarchical DIFF reports), or aggregate results from multiple runs. XHGui is a tool built upon XHProf to facilitate both an improved user experience and a more efficient storage of metrics via optional support for MongoDB.
+        XHProf is a function-level hierarchical profiler for PHP. The raw data collection component is implemented in C (as a PHP extension). It is capable of reporting function-level inclusive and exclusive wall times, memory usage, CPU times and number of calls for each function. Additionally, it supports ability to compare two runs (hierarchical DIFF reports), or aggregate results from multiple runs.
+XHGui is a tool built upon XHProf to facilitate both an improved user experience and a more efficient storage of metrics via optional support for MongoDB.
     </div>
     
     <footer class="read-more-link">
@@ -331,7 +339,9 @@
         </div>
     </header>
     <div class="post-content">
-        There are a variety of Databases you can use with Drupal as listed in the Drupal requirements section. However only MySQL + PostgreSQL are tested extensively with Drupal WxT and the various contrib modules it leverages. Additionally it has been our experience that Microsoft SQL Server is possible but with many caveats. While Oracle support itself should not be attempted due to a outdated PDO Driver. PostgreSQL PostgreSQL, often simply Postgres, is an open source object-relational database management system (ORDBMS) with an emphasis on extensibility and standards compliance.
+        There are a variety of Databases you can use with Drupal as listed in the Drupal requirements section. However only MySQL + PostgreSQL are tested extensively with Drupal WxT and the various contrib modules it leverages.
+Additionally it has been our experience that Microsoft SQL Server is possible but with many caveats. While Oracle support itself should not be attempted due to a outdated PDO Driver.
+PostgreSQL PostgreSQL, often simply Postgres, is an open source object-relational database management system (ORDBMS) with an emphasis on extensibility and standards compliance.
     </div>
     
     <footer class="read-more-link">
@@ -353,7 +363,8 @@
         </div>
     </header>
     <div class="post-content">
-        Memcache is an open-source high performance object caching system that is specifically intended for reducing calls to the DBMS. Memcache is a back-end service (i.e. a daemon on UNIX) that provides a simple but fast in-memory key/value store. This is designed to be scalable and distributed so that requests should not slow down as the load increases, and multiple memcached servers can be employed at once. For Drupal, memcache can be used to cache database queries.
+        Memcache is an open-source high performance object caching system that is specifically intended for reducing calls to the DBMS. Memcache is a back-end service (i.e. a daemon on UNIX) that provides a simple but fast in-memory key/value store. This is designed to be scalable and distributed so that requests should not slow down as the load increases, and multiple memcached servers can be employed at once.
+For Drupal, memcache can be used to cache database queries.
     </div>
     
     <footer class="read-more-link">
@@ -375,7 +386,7 @@
         </div>
     </header>
     <div class="post-content">
-        Varnish is an open source software-only reverse HTTP caching proxy (often referred to as a Web Accelerator). Varnish is developed on Linux but can be compiled on other UNIX operating systems. It is heavily multi-threaded and is capable of taking advantage of the memory available on 64-bit systems as well as 32-bit systems, and should scale as CPU’s are added. Reputedly, Varnish can respond to hundreds of requests per second. A caching reverse proxy is a layer of software that sits between the external world and the web server.
+        Varnish is an open source software-only reverse HTTP caching proxy (often referred to as a Web Accelerator). Varnish is developed on Linux but can be compiled on other UNIX operating systems. It is heavily multi-threaded and is capable of taking advantage of the memory available on 64-bit systems as well as 32-bit systems, and should scale as CPU’s are added. Reputedly, Varnish can respond to hundreds of requests per second.
     </div>
     
     <footer class="read-more-link">

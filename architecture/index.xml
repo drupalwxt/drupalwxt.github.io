@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Drupal WxT </title>
-    <link>http://drupalwxt.github.io/architecture/</link>
+    <link>http://drupalwxt.github.io/architecture/index.xml</link>
     <language>en-us</language>
     <author>William Hearn</author>
     <rights>(C) 2015</rights>
