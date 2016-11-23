@@ -273,7 +273,7 @@
     api = 2
     core = 7.x
 
-    projects[drupal][version] = 7.51
+    projects[drupal][version] = 7.52
     projects[drupal][type] = core
 
     ; Patches for Drupal Core
@@ -282,6 +282,7 @@
     projects[drupal][patch][728702] = http://drupal.org/files/issues/install-redirect-on-empty-database-728702-36.patch
     projects[drupal][patch][865536] = http://drupal.org/files/drupal-865536-204.patch
     projects[drupal][patch][911354] = http://drupal.org/files/911354-drupal-profile-85.patch
+    projects[drupal][patch][998898] = http://drupal.org/files/issues/998898-63chars-identifier-limit-nomd5-D7-75.patch
     projects[drupal][patch][1470656] = http://drupal.org/files/drupal-1470656-14.patch
     projects[drupal][patch][1710656] = http://drupal.org/files/drupal-1710656-3-skip-hidden-menu-items-D7.patch
     projects[drupal][patch][1772316] = http://drupal.org/files/drupal7-allow_change_system-requirements-1772316-18.patch
@@ -302,13 +303,13 @@
     projects[wetkit_admin][version] = 4.6
     projects[wetkit_admin][subdir] = custom
 
-    projects[wetkit_bean][version] = 4.6
+    projects[wetkit_bean][version] = 4.7
     projects[wetkit_bean][subdir] = custom
 
     projects[wetkit_breadcrumbs][version] = 4.6
     projects[wetkit_breadcrumbs][subdir] = custom
 
-    projects[wetkit_core][version] = 4.11
+    projects[wetkit_core][version] = 4.12
     projects[wetkit_core][subdir] = custom
 
     projects[wetkit_demo][version] = 4.3
@@ -320,7 +321,7 @@
     projects[wetkit_images][version] = 4.5
     projects[wetkit_images][subdir] = custom
 
-    projects[wetkit_language][version] = 4.9
+    projects[wetkit_language][version] = 4.10
     projects[wetkit_language][subdir] = custom
 
     projects[wetkit_layouts][version] = 4.5
@@ -332,7 +333,7 @@
     projects[wetkit_metatag][version] = 4.11
     projects[wetkit_metatag][subdir] = custom
 
-    projects[wetkit_migrate][version] = 4.4
+    projects[wetkit_migrate][version] = 4.5
     projects[wetkit_migrate][subdir] = custom
 
     projects[wetkit_og][version] = 4.2
@@ -344,7 +345,7 @@
     projects[wetkit_search][version] = 4.3
     projects[wetkit_search][subdir] = custom
 
-    projects[wetkit_test][version] = 4.9
+    projects[wetkit_test][version] = 4.10
     projects[wetkit_test][subdir] = custom
 
     projects[wetkit_theme][version] = 4.5
@@ -356,10 +357,10 @@
     projects[wetkit_webform][version] = 4.13
     projects[wetkit_webform][subdir] = custom
 
-    projects[wetkit_wetboew][version] = 4.3
+    projects[wetkit_wetboew][version] = 4.4
     projects[wetkit_wetboew][subdir] = custom
 
-    projects[wetkit_widgets][version] = 4.6
+    projects[wetkit_widgets][version] = 4.7
     projects[wetkit_widgets][subdir] = custom
 
     projects[wetkit_wysiwyg][version] = 4.6
@@ -370,7 +371,7 @@
     projects[wetkit_ember][version] = 4.4
     projects[wetkit_ember][type] = theme
 
-    projects[wetkit_bootstrap][version] = 4.10
+    projects[wetkit_bootstrap][version] = 4.11
     projects[wetkit_bootstrap][type] = theme
 
     projects[wetkit_shiny][version] = 4.0
@@ -489,7 +490,7 @@
     projects[better_formats][version] = 1.0-beta2
     projects[better_formats][subdir] = contrib
 
-    projects[ctools][version] = 1.11
+    projects[ctools][version] = 1.12
     projects[ctools][subdir] = contrib
     projects[ctools][patch][2399313] = http://drupal.org/files/issues/ctools-2399313-1-Relationship-optional-context.patch
     projects[ctools][patch][2401635] = http://drupal.org/files/issues/ctools-views-content-custom-url-1417630-06.patch
@@ -534,9 +535,8 @@
     projects[fences][version] = 1.2
     projects[fences][subdir] = contrib
 
-    projects[field_collection][version] = 1.0-beta11
+    projects[field_collection][version] = 1.0-beta12
     projects[field_collection][subdir] = contrib
-    projects[field_collection][patch][1344672] = http://drupal.org/files/issues/field_collection_field-1344672-510.patch
     projects[field_collection][patch][2075325] = http://drupal.org/files/issues/field_collection_uuid-2075325-18.patch
     projects[field_collection][patch][2075326] = http://drupal.org/files/issues/field_collection_uuid_services-2075325-18.patch
 
@@ -594,7 +594,7 @@
     projects[panels][patch][2253919] = http://drupal.org/files/issues/panels-re-generated-uuids-on-clone.patch
     projects[panels][patch][2508433] = http://drupal.org/files/issues/blocks_dont_support_optional_context-2508433-1.patch
 
-    projects[panopoly_magic][version] = 1.40
+    projects[panopoly_magic][version] = 1.41
     projects[panopoly_magic][subdir] = contrib
     projects[panopoly_magic][patch][2179413] = http://drupal.org/files/issues/panels_undefined_styles-2179413-13.patch
 
@@ -820,7 +820,7 @@
     projects[variable][version] = 2.5
     projects[variable][subdir] = contrib
 
-    projects[webform_localization][version] = 4.9
+    projects[webform_localization][version] = 4.10
     projects[webform_localization][subdir] = contrib
             </pre></p>
         </details>
@@ -960,25 +960,25 @@
     ; Library for the Web Experience Toolkit jQuery Framework
 
     libraries[wet-boew][download][type] = get
-    libraries[wet-boew][download][url] = https://github.com/wet-boew/wet-boew-cdn/archive/v4.0.22.tar.gz
+    libraries[wet-boew][download][url] = https://github.com/wet-boew/wet-boew-cdn/archive/v4.0.23.tar.gz
 
     libraries[theme-wet-boew][download][type] = get
-    libraries[theme-wet-boew][download][url] = https://github.com/wet-boew/themes-cdn/archive/v4.0.22-theme-wet-boew.tar.gz
+    libraries[theme-wet-boew][download][url] = https://github.com/wet-boew/themes-cdn/archive/v4.0.23-theme-wet-boew.tar.gz
 
     libraries[theme-base][download][type] = get
-    libraries[theme-base][download][url] = https://github.com/wet-boew/themes-cdn/archive/v4.0.22-theme-base.tar.gz
+    libraries[theme-base][download][url] = https://github.com/wet-boew/themes-cdn/archive/v4.0.23-theme-base.tar.gz
 
     libraries[theme-gc-intranet][download][type] = get
-    libraries[theme-gc-intranet][download][url] = https://github.com/wet-boew/themes-cdn/archive/v4.0.22-theme-gc-intranet.tar.gz
+    libraries[theme-gc-intranet][download][url] = https://github.com/wet-boew/themes-cdn/archive/v4.0.23-theme-gc-intranet.tar.gz
 
     libraries[theme-gcwu-fegc][download][type] = get
-    libraries[theme-gcwu-fegc][download][url] = https://github.com/wet-boew/themes-cdn/archive/v4.0.22-theme-gcwu-fegc.tar.gz
+    libraries[theme-gcwu-fegc][download][url] = https://github.com/wet-boew/themes-cdn/archive/v4.0.23-theme-gcwu-fegc.tar.gz
 
     libraries[theme-gcweb][download][type] = get
-    libraries[theme-gcweb][download][url] = https://github.com/wet-boew/themes-cdn/archive/v4.0.22-gcweb.tar.gz
+    libraries[theme-gcweb][download][url] = https://github.com/wet-boew/themes-cdn/archive/v4.0.23-gcweb.tar.gz
 
     libraries[theme-ogpl][download][type] = get
-    libraries[theme-ogpl][download][url] = https://github.com/wet-boew/themes-cdn/archive/v4.0.22-theme-ogpl.tar.gz
+    libraries[theme-ogpl][download][url] = https://github.com/wet-boew/themes-cdn/archive/v4.0.23-theme-ogpl.tar.gz
             </pre></p>
         </details>
     </li>
@@ -999,14 +999,10 @@
     projects[file_lock][version] = 2.0
     projects[file_lock][subdir] = contrib
 
-    projects[media][version] = 2.0-beta2
+    projects[media][version] = 2.0-beta7
     projects[media][subdir] = contrib
-    projects[media][patch][2084287] = http://drupal.org/files/issues/media-file-name-focus-2084287-2.patch
-    projects[media][patch][2187771] = http://drupal.org/files/issues/media_alt_attributes-2129273-24.patch
-    projects[media][patch][2126697] = http://drupal.org/files/issues/media_wysiwyg_2126697-53.patch
-    projects[media][patch][2308487] = http://drupal.org/files/issues/media-alt-title-double-encoded-2308487-2.patch
-    projects[media][patch][2317519] = http://drupal.org/files/issues/media-multiple-blank-wysiwyg-2317519-22.patch
-    projects[media][patch][2568123] = http://drupal.org/files/issues/unable_to_create-2568123-2.patch
+    projects[media][patch][2828665] = http://drupal.org/files/issues/regression_introduced-2828665-7.patch
+    projects[media][patch][2828856] = https://www.drupal.org/files/issues/regression_with_entity-2828856-7.patch
             </pre></p>
         </details>
     </li>
@@ -1076,7 +1072,7 @@
 
     ; Theme(s)
 
-    projects[bootstrap][version] = 3.6
+    projects[bootstrap][version] = 3.8
     projects[bootstrap][type] = theme
     projects[bootstrap][patch][2311463] = http://drupal.org/files/issues/patch_bootstrap_wetkit-2311463-05.patch
     projects[bootstrap][patch][2469635] = http://drupal.org/files/issues/bootstrap-no_responsive_on_multi_val_form_elements-2469635-1.patch
