@@ -266,52 +266,99 @@
       
       
       <tr>
-          <td><strong>7.x-4.14</strong></td>
-          <td><strong>2016-11-23T18:52:05Z</strong></td>
+          <td><strong>7.x-4.15</strong></td>
+          <td><strong>2017-02-08T23:07:32Z</strong></td>
           <td>Security Update(s):</p>
 
 <ul>
-<li>Drupal Core (7.52)</li>
-<li>Bootstrap (3.8)</li>
+<li>Title (token value not sanitized)</li>
+<li>i18n (Inconsistent name for term access query)</li>
 </ul>
 
 <p>Feature(s):</p>
 
 <ul>
-<li>Postgres issue with identifiers longer then 63 characters</li>
-<li>Numerous bug fixes related to Media module</li>
-<li>Field Collection officially supports Entity Translation (patch no longer needed)</li>
+<li>Drupal Core updated to 7.54</li>
+<li>Diff numerous bug improvements along with improved CSS and i18n support</li>
+<li>Services 204 + 304 error responses not conforming to IETF specification</li>
+<li>Services comment handling with invalid CID</li>
+<li>Wysiwyg release with numerous improvements</li>
+<li>Media is now in release candidate phase for greater stability</li>
 </ul>
 
 <p>Fixes:</p>
 
 <ul>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/c870683">c870683</a>) Fixed WetKit Core for Update CTools from v1.11 to v1.12</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/db85cfd">db85cfd</a>) Fixed WetKit WET-BOEW for #<a href="http://drupal.org/node/2829184">2829184</a> - Update wet-boew from v4.0.22 to v4.0.23</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/bc402b8">bc402b8</a>) Update changelog.md file.</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/6586bb6">6586bb6</a>) Fixed WetKit Test for Remove debug and increase timeout.</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/7928195">7928195</a>) Fixed WetKit Widgets for Restore #<a href="http://drupal.org/node/2828668">2828668</a> - Update Media from v2.0-beta2 to v2.0-beta7</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/e14bf10">e14bf10</a>) Fixed WetKit Test for Debug TravisCI failed error.</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/d68b199">d68b199</a>) Fixed WetKit Test for Debug TravisCI failed error.</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/6914bfa">6914bfa</a>) Fixed WetKit Test for Debug TravisCI failed error.</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/96a0899">96a0899</a>) Fixed WetKit Test for Debug TravisCI failed error.</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/09ef54d">09ef54d</a>) Fixed WetKit Widgets for Restore #<a href="http://drupal.org/node/2828668">2828668</a> - Update Media from v2.0-beta2 to v2.0-beta7</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/89b5fbb">89b5fbb</a>) Fixed WetKit Widgets for Restore #<a href="http://drupal.org/node/2828668">2828668</a> - Update Media from v2.0-beta2 to v2.0-beta7</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/4d9ad94">4d9ad94</a>) Update changelog.md file.</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/303c69d">303c69d</a>) Fixed WetKit Widgets for Restore #<a href="http://drupal.org/node/2828668">2828668</a> - Update Media from v2.0-beta2 to v2.0-beta7</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/42fe6de">42fe6de</a>) Update changelog.md file.</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/9b6688f">9b6688f</a>) Fixed WetKit Widgets for #<a href="http://drupal.org/node/2828668">2828668</a> - Update Media from v2.0-beta2 to v2.0-beta7</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/59aee00">59aee00</a>) Fixed WetKit Migration for #<a href="http://drupal.org/node/2825808">2825808</a> - Canada.ca menu migrations not translated properly</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/8b08572">8b08572</a>) #<a href="http://drupal.org/node/2828688">2828688</a> - Postgres issue with Index identifiers (noticed on field collection addition of value index)</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/5c5b3d3">5c5b3d3</a>) Fixed WetKit Bean for #<a href="http://drupal.org/node/2828678">2828678</a> - Update Field Collection from 1.0-beta11 to 1.0-beta12</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/58416c2">58416c2</a>) Fixed WetKit Core for Restore #<a href="http://drupal.org/node/2828678">2828678</a> - Update Field Collection from 1.0-beta11 to 1.0-beta12</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/4e133be">4e133be</a>) Fixed WetKit Core for Update Panopoly Magic to v1.41</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/768979e">768979e</a>) Fixed WetKit Core for #<a href="http://drupal.org/node/2828678">2828678</a> - Update Field Collection from 1.0-beta11 to 1.0-beta12</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/df0e08a">df0e08a</a>) Fixed WetKit Core for #<a href="http://drupal.org/node/2828635">2828635</a> - Security + Bug Fixes for Workbench Moderation (3.0)</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/1f78ac0">1f78ac0</a>) Fixed WetKit Bootstrap for #<a href="http://drupal.org/node/2828628">2828628</a> - Security + Bug Fixes for Bootstrap (3.8)</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/43180eb">43180eb</a>) #<a href="http://drupal.org/node/2828594">2828594</a> - Update Drupal Core to 7.52 (SA-CORE-2016-005)</li>
+<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/1077d95">1077d95</a>) Fixed WetKit Core for Update panels from version 3.8 to 3.9 version</li>
+<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/d1f16c3">d1f16c3</a>) Fixed WetKit Language for #<a href="http://drupal.org/node/2849947">2849947</a> - Update modules suite from WxT Language</li>
+<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/16f85b6">16f85b6</a>) Fixed WetKit Widgets for #<a href="http://drupal.org/node/2834397">2834397</a> - Update to media module</li>
+<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/9516084">9516084</a>) Fixed WetKit Core for Update uuid_features from version 1.0-alpha1 to 1.0-rc1.</li>
+<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/e270494">e270494</a>) Update changelog.md file.</li>
+<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/a618698">a618698</a>) Fixed WetKit Metatag for Update metatag from version 1.17 to 1.20.</li>
+<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/739af88">739af88</a>) Fixed WetKit WYSIWYG for #<a href="http://drupal.org/node/2849960">2849960</a> - Update modules suite from WxT Wysiwyg</li>
+<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/ce3395e">ce3395e</a>) Fixed WetKit WYSIWYG for #<a href="http://drupal.org/node/2849960">2849960</a> - Update modules suite from WxT Wysiwyg</li>
+<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/cde09d7">cde09d7</a>) Fixed WetKit WYSIWYG for #<a href="http://drupal.org/node/2849960">2849960</a> - Update modules suite from WxT Wysiwyg</li>
+<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/a701530">a701530</a>) Update changelog.md file.</li>
+<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/91a0fc2">91a0fc2</a>) Fixed WetKit WYSIWYG for #<a href="http://drupal.org/node/2849960">2849960</a> - Update modules suite from WxT Wysiwyg</li>
+<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/913400b">913400b</a>) Fixed WetKit Bootstrap for #<a href="http://drupal.org/node/2835893">2835893</a> - Canada (gcweb) theme footer has a div in a ul</li>
+<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/da5d1ff">da5d1ff</a>) Fixed WetKit Bootstrap for #<a href="http://drupal.org/node/2836112">2836112</a> - Canada (gcweb) theme menu-wet-terms footer has a ul with empty class and id</li>
+<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/7e4ebfc">7e4ebfc</a>) Fixed WetKit Bootstrap for #<a href="http://drupal.org/node/2849956">2849956</a> - Update WxT Bootstrap upstream</li>
+<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/99d25ca">99d25ca</a>) Fixed WetKit Core for #<a href="http://drupal.org/node/2849945">2849945</a> - Update modules suite from WxT Core</li>
+<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/b1170a6">b1170a6</a>) Fixed WetKit Language for #<a href="http://drupal.org/node/2849947">2849947</a> - Update modules suite from WxT Language</li>
+<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/daa5ff6">daa5ff6</a>) Update changelog.md file.</li>
+<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/e73bf07">e73bf07</a>) Update changelog.md file.</li>
+<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/b6cc8b8">b6cc8b8</a>) Fixed WetKit Deployment for #<a href="http://drupal.org/node/2849946">2849946</a> - Update modules suite from WxT Deployment</li>
+<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/a6582fc">a6582fc</a>) #<a href="http://drupal.org/node/2849943">2849943</a> - Update Drupal Core to v7.54</li>
 </ul>
+
+<!-- Links Referenced -->
+
+<!-- Commits R4.15 -->
+
+<!-- Issues R4.15 -->
 </td>
+      </tr>
+      
+      
+      
+      
+      <tr>
+          <td><strong>7.x-4.14</strong></td>
+          <td><strong>2016-11-23T18:52:05Z</strong></td>
+          <td>Security Update(s):
+- Drupal Core (7.52)
+- Bootstrap (3.8)</p>
+
+<p>Feature(s):
+- Postgres issue with identifiers longer then 63 characters
+- Numerous bug fixes related to Media module
+- Field Collection officially supports Entity Translation (patch no longer needed)</p>
+
+<p>Fixes:
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/c870683">c870683</a>) Fixed WetKit Core for Update CTools from v1.11 to v1.12
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/db85cfd">db85cfd</a>) Fixed WetKit WET-BOEW for #<a href="http://drupal.org/node/2829184">2829184</a> - Update wet-boew from v4.0.22 to v4.0.23
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/bc402b8">bc402b8</a>) Update changelog.md file.
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/6586bb6">6586bb6</a>) Fixed WetKit Test for Remove debug and increase timeout.
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/7928195">7928195</a>) Fixed WetKit Widgets for Restore #<a href="http://drupal.org/node/2828668">2828668</a> - Update Media from v2.0-beta2 to v2.0-beta7
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/e14bf10">e14bf10</a>) Fixed WetKit Test for Debug TravisCI failed error.
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/d68b199">d68b199</a>) Fixed WetKit Test for Debug TravisCI failed error.
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/6914bfa">6914bfa</a>) Fixed WetKit Test for Debug TravisCI failed error.
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/96a0899">96a0899</a>) Fixed WetKit Test for Debug TravisCI failed error.
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/09ef54d">09ef54d</a>) Fixed WetKit Widgets for Restore #<a href="http://drupal.org/node/2828668">2828668</a> - Update Media from v2.0-beta2 to v2.0-beta7
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/89b5fbb">89b5fbb</a>) Fixed WetKit Widgets for Restore #<a href="http://drupal.org/node/2828668">2828668</a> - Update Media from v2.0-beta2 to v2.0-beta7
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/4d9ad94">4d9ad94</a>) Update changelog.md file.
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/303c69d">303c69d</a>) Fixed WetKit Widgets for Restore #<a href="http://drupal.org/node/2828668">2828668</a> - Update Media from v2.0-beta2 to v2.0-beta7
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/42fe6de">42fe6de</a>) Update changelog.md file.
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/9b6688f">9b6688f</a>) Fixed WetKit Widgets for #<a href="http://drupal.org/node/2828668">2828668</a> - Update Media from v2.0-beta2 to v2.0-beta7
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/59aee00">59aee00</a>) Fixed WetKit Migration for #<a href="http://drupal.org/node/2825808">2825808</a> - Canada.ca menu migrations not translated properly
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/8b08572">8b08572</a>) #<a href="http://drupal.org/node/2828688">2828688</a> - Postgres issue with Index identifiers (noticed on field collection addition of value index)
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/5c5b3d3">5c5b3d3</a>) Fixed WetKit Bean for #<a href="http://drupal.org/node/2828678">2828678</a> - Update Field Collection from 1.0-beta11 to 1.0-beta12
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/58416c2">58416c2</a>) Fixed WetKit Core for Restore #<a href="http://drupal.org/node/2828678">2828678</a> - Update Field Collection from 1.0-beta11 to 1.0-beta12
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/4e133be">4e133be</a>) Fixed WetKit Core for Update Panopoly Magic to v1.41
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/768979e">768979e</a>) Fixed WetKit Core for #<a href="http://drupal.org/node/2828678">2828678</a> - Update Field Collection from 1.0-beta11 to 1.0-beta12
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/df0e08a">df0e08a</a>) Fixed WetKit Core for #<a href="http://drupal.org/node/2828635">2828635</a> - Security + Bug Fixes for Workbench Moderation (3.0)
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/1f78ac0">1f78ac0</a>) Fixed WetKit Bootstrap for #<a href="http://drupal.org/node/2828628">2828628</a> - Security + Bug Fixes for Bootstrap (3.8)
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/43180eb">43180eb</a>) #<a href="http://drupal.org/node/2828594">2828594</a> - Update Drupal Core to 7.52 (SA-CORE-2016-005)</td>
       </tr>
       
       
@@ -320,54 +367,48 @@
       <tr>
           <td><strong>7.x-4.13</strong></td>
           <td><strong>2016-10-28T00:11:36Z</strong></td>
-          <td>Feature(s):</p>
+          <td>Feature(s):
+- Drupal Core updated to 7.51
+- Fixes for regressions introduced in latest Panelizer
+- Fix for hierarchical hook_update_n wrong invocation
+- Updates for CTools + Panels
+- Updates for i18n + webform localization
+- Updated gcweb footer + migrate scripts (drush mi WetKitMigrateSiteMenuLinks)</p>
 
-<ul>
-<li>Drupal Core updated to 7.51</li>
-<li>Fixes for regressions introduced in latest Panelizer</li>
-<li>Fix for hierarchical hook_update_n wrong invocation</li>
-<li>Updates for CTools + Panels</li>
-<li>Updates for i18n + webform localization</li>
-<li>Updated gcweb footer + migrate scripts (drush mi WetKitMigrateSiteMenuLinks)</li>
-</ul>
-
-<p>Fixes:</p>
-
-<ul>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/585c583">585c583</a>) Update changelog.md file.</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/f1ed944">f1ed944</a>) Fixed WetKit Core for #<a href="http://drupal.org/node/2789415">2789415</a> - Menu Block: unable to choose &ldquo;Advanced Options&rdquo;</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/69476a4">69476a4</a>) Update changelog.md file.</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/443dd39">443dd39</a>) Fixed WetKit Migration for #<a href="http://drupal.org/node/2799287">2799287</a> - Update to gcweb footer (migrate support)</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/ca85197">ca85197</a>) Fixed WetKit Bean for #<a href="http://drupal.org/node/2812665">2812665</a> - share button needs to be inline-block (latest GCWeb look)</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/c174834">c174834</a>) Fixed WetKit Demo for Features Override + Storage id update.</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/f7c3ee8">f7c3ee8</a>) Fixed WetKit Core for Features Override + Storage id update.</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/42ef884">42ef884</a>) Update changelog.md file.</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/63114c4">63114c4</a>) Fixed WetKit Language for Update i18n + webform localizaton to latest stable</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/86de534">86de534</a>) Fixed WetKit Core for Update CTools, FontAwesome, and Panels to latest stable</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/ff38548">ff38548</a>) Fixed WetKit Language for Update webform_localization to v4.8</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/64a3d6e">64a3d6e</a>) Fixed WetKit Breadcrumbs for #<a href="http://drupal.org/node/2810523">2810523</a> - Titles missing in breadcrumbs when using menu trail</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/53c5fa2">53c5fa2</a>) Fixed WetKit Core for Update entity + entityreference to latest stable releases.</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/7b1cb9c">7b1cb9c</a>) Fixed WetKit Bootstrap for #<a href="http://drupal.org/node/2799287">2799287</a> - Update to gcweb footer</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/46a5061">46a5061</a>) Fixed WetKit Test for Correct composer.json syntax.</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/0c92cf9">0c92cf9</a>) Fixed WetKit Test for Pin version of Behat testing against.</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/42072ba">42072ba</a>) Fixed WetKit Test for Minor fix to afterUserCreate().</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/810cfc1">810cfc1</a>) Fixed WetKit Breadcrumbs for #<a href="http://drupal.org/node/2768899">2768899</a> - Provide an option to force page title on unmanaged breadcrumbs</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/a5b98b5">a5b98b5</a>) Fixed WetKit Breadcrumbs for #<a href="http://drupal.org/node/2801613">2801613</a> - Support for HTML em + abbr tags in title for breadcrumbs</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/9ef936d">9ef936d</a>) Minor correction to make file.</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/a7a597e">a7a597e</a>) Fixed WetKit Panel Layouts for #<a href="http://drupal.org/node/2799393">2799393</a> - Secondary menus</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/9e46965">9e46965</a>) Fixed WetKit Breadcrumbs for #<a href="http://drupal.org/node/2801613">2801613</a> - Support for HTML em + abbr tags in title for breadcrumbs</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/8e27fc2">8e27fc2</a>) Fixed WetKit Theme for Temporary language patch for Search string.</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/6709bb6">6709bb6</a>) Fixed WetKit Webform for Update webform to v4.14 release.</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/1bea663">1bea663</a>) Fixed WetKit Language for Update webform localization to v4.7 release.</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/f0a7e14">f0a7e14</a>) Fixed WetKit Deployment for Update services to v3.18 release.</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/fb620a4">fb620a4</a>) Update changelog.md file.</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/0c9ca39">0c9ca39</a>) Fixed WetKit Deployment for Update services module to v3.17.</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/3bb1db4">3bb1db4</a>) Fixed WetKit Core for Update Panopoly Magic to v1.40.</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/ea0f217">ea0f217</a>) Fixed WetKit Core for #<a href="http://drupal.org/node/2789331">2789331</a> - panelizer_update_7120: Not null violation: 7 ERROR: null value in column &ldquo;pid&rdquo; violates not-null</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/d1aa086">d1aa086</a>) Fixed WetKit Core for #<a href="http://drupal.org/node/2789333">2789333</a> -  ParseError: syntax error, unexpected &lsquo;,&rsquo; in features_get_normal() + Hierarchical Select Update Patch bug</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/7c528a0">7c528a0</a>) Fixed WetKit Core for #<a href="http://drupal.org/node/2789333">2789333</a> -  ParseError: syntax error, unexpected &lsquo;,&rsquo; in features_get_normal() + Hierarchical Select Update Patch bug</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/74ed660">74ed660</a>) Start work on next release.</li>
-</ul>
+<p>Fixes:
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/585c583">585c583</a>) Update changelog.md file.
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/f1ed944">f1ed944</a>) Fixed WetKit Core for #<a href="http://drupal.org/node/2789415">2789415</a> - Menu Block: unable to choose &ldquo;Advanced Options&rdquo;
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/69476a4">69476a4</a>) Update changelog.md file.
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/443dd39">443dd39</a>) Fixed WetKit Migration for #<a href="http://drupal.org/node/2799287">2799287</a> - Update to gcweb footer (migrate support)
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/ca85197">ca85197</a>) Fixed WetKit Bean for #<a href="http://drupal.org/node/2812665">2812665</a> - share button needs to be inline-block (latest GCWeb look)
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/c174834">c174834</a>) Fixed WetKit Demo for Features Override + Storage id update.
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/f7c3ee8">f7c3ee8</a>) Fixed WetKit Core for Features Override + Storage id update.
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/42ef884">42ef884</a>) Update changelog.md file.
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/63114c4">63114c4</a>) Fixed WetKit Language for Update i18n + webform localizaton to latest stable
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/86de534">86de534</a>) Fixed WetKit Core for Update CTools, FontAwesome, and Panels to latest stable
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/ff38548">ff38548</a>) Fixed WetKit Language for Update webform_localization to v4.8
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/64a3d6e">64a3d6e</a>) Fixed WetKit Breadcrumbs for #<a href="http://drupal.org/node/2810523">2810523</a> - Titles missing in breadcrumbs when using menu trail
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/53c5fa2">53c5fa2</a>) Fixed WetKit Core for Update entity + entityreference to latest stable releases.
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/7b1cb9c">7b1cb9c</a>) Fixed WetKit Bootstrap for #<a href="http://drupal.org/node/2799287">2799287</a> - Update to gcweb footer
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/46a5061">46a5061</a>) Fixed WetKit Test for Correct composer.json syntax.
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/0c92cf9">0c92cf9</a>) Fixed WetKit Test for Pin version of Behat testing against.
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/42072ba">42072ba</a>) Fixed WetKit Test for Minor fix to afterUserCreate().
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/810cfc1">810cfc1</a>) Fixed WetKit Breadcrumbs for #<a href="http://drupal.org/node/2768899">2768899</a> - Provide an option to force page title on unmanaged breadcrumbs
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/a5b98b5">a5b98b5</a>) Fixed WetKit Breadcrumbs for #<a href="http://drupal.org/node/2801613">2801613</a> - Support for HTML em + abbr tags in title for breadcrumbs
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/9ef936d">9ef936d</a>) Minor correction to make file.
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/a7a597e">a7a597e</a>) Fixed WetKit Panel Layouts for #<a href="http://drupal.org/node/2799393">2799393</a> - Secondary menus
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/9e46965">9e46965</a>) Fixed WetKit Breadcrumbs for #<a href="http://drupal.org/node/2801613">2801613</a> - Support for HTML em + abbr tags in title for breadcrumbs
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/8e27fc2">8e27fc2</a>) Fixed WetKit Theme for Temporary language patch for Search string.
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/6709bb6">6709bb6</a>) Fixed WetKit Webform for Update webform to v4.14 release.
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/1bea663">1bea663</a>) Fixed WetKit Language for Update webform localization to v4.7 release.
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/f0a7e14">f0a7e14</a>) Fixed WetKit Deployment for Update services to v3.18 release.
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/fb620a4">fb620a4</a>) Update changelog.md file.
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/0c9ca39">0c9ca39</a>) Fixed WetKit Deployment for Update services module to v3.17.
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/3bb1db4">3bb1db4</a>) Fixed WetKit Core for Update Panopoly Magic to v1.40.
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/ea0f217">ea0f217</a>) Fixed WetKit Core for #<a href="http://drupal.org/node/2789331">2789331</a> - panelizer_update_7120: Not null violation: 7 ERROR: null value in column &ldquo;pid&rdquo; violates not-null
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/d1aa086">d1aa086</a>) Fixed WetKit Core for #<a href="http://drupal.org/node/2789333">2789333</a> -  ParseError: syntax error, unexpected &lsquo;,&rsquo; in features_get_normal() + Hierarchical Select Update Patch bug
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/7c528a0">7c528a0</a>) Fixed WetKit Core for #<a href="http://drupal.org/node/2789333">2789333</a> -  ParseError: syntax error, unexpected &lsquo;,&rsquo; in features_get_normal() + Hierarchical Select Update Patch bug
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/74ed660">74ed660</a>) Start work on next release.</p>
 
 <!-- Issues R4.13 -->
 </td>
@@ -379,79 +420,70 @@
       <tr>
           <td><strong>7.x-4.12</strong></td>
           <td><strong>2016-08-22T03:14:29Z</strong></td>
-          <td>Security Update(s):</p>
+          <td>Security Update(s):
+- Panels (3.4)
+- Panelizer (3.7)</p>
 
-<ul>
-<li>Panels (3.4)</li>
-<li>Panelizer (3.7)</li>
-</ul>
+<p>Feature(s):
+- WxT jQuery library updated from v4.0.21 -&gt; v4.0.22
+- Bean module update to fix issue with Views introduced in previous release
+- Panopoly Magic preview pane CSS adjustments
+- Panels has added a new quick-filter js for panels pane selections
+- Numerous other Panels, CTools, and Panelizer bug fixes
+- Deploy Plus updates related to entity dependency
+- UUID module has refined the UUID validation pattern</p>
 
-<p>Feature(s):</p>
-
-<ul>
-<li>WxT jQuery library updated from v4.0.21 -&gt; v4.0.22</li>
-<li>Bean module update to fix issue with Views introduced in previous release</li>
-<li>Panopoly Magic preview pane CSS adjustments</li>
-<li>Panels has added a new quick-filter js for panels pane selections</li>
-<li>Numerous other Panels, CTools, and Panelizer bug fixes</li>
-<li>Deploy Plus updates related to entity dependency</li>
-<li>UUID module has refined the UUID validation pattern</li>
-</ul>
-
-<p>Fixes:</p>
-
-<ul>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/218a6e3">218a6e3</a>) Fixed WetKit WET-BOEW for #<a href="http://drupal.org/node/2787733">2787733</a> - Update wet-boew jQuery library from v4.0.21 to v4.0.22</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/e729513">e729513</a>) Update changelog.md file.</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/4663834">4663834</a>) Fixed WetKit Core for #<a href="http://drupal.org/node/2785845">2785845</a> - Security releases for Panels + Panelizer</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/ca22e8d">ca22e8d</a>) Fixed WetKit Core for Update patches for panelizer (3.3) + panels (3.6) to fix issues after release</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/43489c3">43489c3</a>) Update changelog.md file.</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/f59ba38">f59ba38</a>) Fixed WetKit Deployment for #<a href="http://drupal.org/node/2786521">2786521</a> - Updates for UUID to 1.0-beta2</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/88f6f05">88f6f05</a>) Fixed WetKit Menu for #<a href="http://drupal.org/node/2786521">2786521</a> - Updates for UUID to 1.0-beta2</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/e15b6c2">e15b6c2</a>) Fixed WetKit Users for #<a href="http://drupal.org/node/2786521">2786521</a> - Updates for UUID to 1.0-beta2</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/3b6ab79">3b6ab79</a>) Fixed WetKit Pages for #<a href="http://drupal.org/node/2786521">2786521</a> - Updates for UUID to 1.0-beta2</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/0576297">0576297</a>) Fixed WetKit Migration for #<a href="http://drupal.org/node/2786521">2786521</a> - Updates for UUID to 1.0-beta2</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/3601295">3601295</a>) Fixed WetKit Demo for #<a href="http://drupal.org/node/2786521">2786521</a> - Updates for UUID to 1.0-beta2</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/0ec09dd">0ec09dd</a>) Fixed WetKit Core for #<a href="http://drupal.org/node/2786521">2786521</a> - Updates for UUID to 1.0-beta2</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/3babc7a">3babc7a</a>) Fixed WetKit Admin for #<a href="http://drupal.org/node/2365281">2365281</a> - UUID validation pattern needs refinement</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/e63725e">e63725e</a>) Update changelog.md file.</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/4129974">4129974</a>) Fixed WetKit Deployment for #<a href="http://drupal.org/node/2448825">2448825</a> - Wrong indentation in Panels exports</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/e929a06">e929a06</a>) Fixed WetKit Test for #<a href="http://drupal.org/node/2448825">2448825</a> - Wrong indentation in Panels exports</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/4cff97d">4cff97d</a>) Fixed WetKit WET-BOEW for Minor features export extra padding correction.</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/2cd63e7">2cd63e7</a>) Fixed WetKit Users for #<a href="http://drupal.org/node/2448825">2448825</a> - Wrong indentation in Panels exports</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/b91548e">b91548e</a>) Fixed WetKit Pages for #<a href="http://drupal.org/node/2448825">2448825</a> - Wrong indentation in Panels exports</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/f4d1a9d">f4d1a9d</a>) Fixed WetKit Migration for #<a href="http://drupal.org/node/2448825">2448825</a> - Wrong indentation in Panels exports</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/e6fe03c">e6fe03c</a>) Fixed WetKit Menu for #<a href="http://drupal.org/node/2448825">2448825</a> - Wrong indentation in Panels exports</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/49acf71">49acf71</a>) Fixed WetKit Menu for #<a href="http://drupal.org/node/2448825">2448825</a> - Wrong indentation in Panels exports</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/08f910d">08f910d</a>) Fixed WetKit Demo for #<a href="http://drupal.org/node/2448825">2448825</a> - Wrong indentation in Panels exports</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/dda280e">dda280e</a>) Fixed WetKit Core for #<a href="http://drupal.org/node/2448825">2448825</a> - Wrong indentation in Panels exports</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/d89dd99">d89dd99</a>) Fixed WetKit Admin for #<a href="http://drupal.org/node/2448825">2448825</a> - Wrong indentation in Panels exports</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/5faa067">5faa067</a>) Update changelog.md file.</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/cedce7c">cedce7c</a>) Fixed WetKit Deployment for Update deploy plus from v2.3 to v2.5.</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/6d96449">6d96449</a>) Update changelog.md file.</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/8aa0c7c">8aa0c7c</a>) Fixed WetKit Core for #<a href="http://drupal.org/node/2785917">2785917</a> - Underscores in CSS IDs for panes are converted to hyphens after 3.6 update</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/1be2bb2">1be2bb2</a>) Fixed WetKit Theme for Updates Panels styling to match panopoly_magic changes.</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/318c7ef">318c7ef</a>) Fixed WetKit Core for #<a href="http://drupal.org/node/2785845">2785845</a> - Security releases for Panels + Panelizer</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/9b3a0a8">9b3a0a8</a>) Fixed WetKit Core for #<a href="http://drupal.org/node/2785845">2785845</a> - Security releases for Panels + Panelizer</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/0e0156c">0e0156c</a>) Fixed WetKit Core for #<a href="http://drupal.org/node/2785845">2785845</a> - Security releases for Panels + Panelizer</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/b735975">b735975</a>) Fixed WetKit Core for Update CTools from to v1.10 version to align with Panels update.</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/9d21fd4">9d21fd4</a>) Fixed WetKit Core for #<a href="http://drupal.org/node/2785845">2785845</a> - Security releases for Panels + Panelizer</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/dff46c3">dff46c3</a>) Fixed WetKit Menu for #<a href="http://drupal.org/node/2785955">2785955</a> - Add missing storage ids to work with new Panels ACL</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/ae042bd">ae042bd</a>) Fixed WetKit Webform for #<a href="http://drupal.org/node/2785955">2785955</a> - Add missing storage ids to work with new Panels ACL</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/441b206">441b206</a>) Fixed WetKit Users for #<a href="http://drupal.org/node/2785955">2785955</a> - Add missing storage ids to work with new Panels ACL</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/0050f8d">0050f8d</a>) Fixed WetKit Test for #<a href="http://drupal.org/node/2785955">2785955</a> - Add missing storage ids to work with new Panels ACL</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/d32f266">d32f266</a>) Fixed WetKit Pages for #<a href="http://drupal.org/node/2785955">2785955</a> - Add missing storage ids to work with new Panels ACL</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/718b42c">718b42c</a>) Fixed WetKit Migration for #<a href="http://drupal.org/node/2785955">2785955</a> - Add missing storage ids to work with new Panels ACL</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/d518778">d518778</a>) Fixed WetKit Metatag for Features update to metatag module.</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/e5fae5b">e5fae5b</a>) Fixed WetKit Demo for #<a href="http://drupal.org/node/2785955">2785955</a> - Add missing storage ids to work with new Panels ACL</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/639b2f5">639b2f5</a>) Fixed WetKit Core for #<a href="http://drupal.org/node/2785955">2785955</a> - Add missing storage ids to work with new Panels ACL</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/666210b">666210b</a>) Fixed WetKit Admin for #<a href="http://drupal.org/node/2785955">2785955</a> - Add missing storage ids to work with new Panels ACL</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/c0fb502">c0fb502</a>) Fixed WetKit Core for #<a href="http://drupal.org/node/2785915">2785915</a> - Panels permissions update causes access denied on page manager pages</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/1277cdd">1277cdd</a>) Update changelog.md file.</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/c4633d0">c4633d0</a>) Fixed WetKit Bean for Update bean module to v1.11 to fix issue with views.</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/62e46e4">62e46e4</a>) Fixed WetKit Core for #<a href="http://drupal.org/node/2785845">2785845</a> - Security releases for Panels + Panelizer</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/eda45a9">eda45a9</a>) Start work on next release.</li>
-</ul>
+<p>Fixes:
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/218a6e3">218a6e3</a>) Fixed WetKit WET-BOEW for #<a href="http://drupal.org/node/2787733">2787733</a> - Update wet-boew jQuery library from v4.0.21 to v4.0.22
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/e729513">e729513</a>) Update changelog.md file.
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/4663834">4663834</a>) Fixed WetKit Core for #<a href="http://drupal.org/node/2785845">2785845</a> - Security releases for Panels + Panelizer
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/ca22e8d">ca22e8d</a>) Fixed WetKit Core for Update patches for panelizer (3.3) + panels (3.6) to fix issues after release
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/43489c3">43489c3</a>) Update changelog.md file.
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/f59ba38">f59ba38</a>) Fixed WetKit Deployment for #<a href="http://drupal.org/node/2786521">2786521</a> - Updates for UUID to 1.0-beta2
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/88f6f05">88f6f05</a>) Fixed WetKit Menu for #<a href="http://drupal.org/node/2786521">2786521</a> - Updates for UUID to 1.0-beta2
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/e15b6c2">e15b6c2</a>) Fixed WetKit Users for #<a href="http://drupal.org/node/2786521">2786521</a> - Updates for UUID to 1.0-beta2
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/3b6ab79">3b6ab79</a>) Fixed WetKit Pages for #<a href="http://drupal.org/node/2786521">2786521</a> - Updates for UUID to 1.0-beta2
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/0576297">0576297</a>) Fixed WetKit Migration for #<a href="http://drupal.org/node/2786521">2786521</a> - Updates for UUID to 1.0-beta2
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/3601295">3601295</a>) Fixed WetKit Demo for #<a href="http://drupal.org/node/2786521">2786521</a> - Updates for UUID to 1.0-beta2
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/0ec09dd">0ec09dd</a>) Fixed WetKit Core for #<a href="http://drupal.org/node/2786521">2786521</a> - Updates for UUID to 1.0-beta2
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/3babc7a">3babc7a</a>) Fixed WetKit Admin for #<a href="http://drupal.org/node/2365281">2365281</a> - UUID validation pattern needs refinement
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/e63725e">e63725e</a>) Update changelog.md file.
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/4129974">4129974</a>) Fixed WetKit Deployment for #<a href="http://drupal.org/node/2448825">2448825</a> - Wrong indentation in Panels exports
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/e929a06">e929a06</a>) Fixed WetKit Test for #<a href="http://drupal.org/node/2448825">2448825</a> - Wrong indentation in Panels exports
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/4cff97d">4cff97d</a>) Fixed WetKit WET-BOEW for Minor features export extra padding correction.
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/2cd63e7">2cd63e7</a>) Fixed WetKit Users for #<a href="http://drupal.org/node/2448825">2448825</a> - Wrong indentation in Panels exports
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/b91548e">b91548e</a>) Fixed WetKit Pages for #<a href="http://drupal.org/node/2448825">2448825</a> - Wrong indentation in Panels exports
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/f4d1a9d">f4d1a9d</a>) Fixed WetKit Migration for #<a href="http://drupal.org/node/2448825">2448825</a> - Wrong indentation in Panels exports
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/e6fe03c">e6fe03c</a>) Fixed WetKit Menu for #<a href="http://drupal.org/node/2448825">2448825</a> - Wrong indentation in Panels exports
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/49acf71">49acf71</a>) Fixed WetKit Menu for #<a href="http://drupal.org/node/2448825">2448825</a> - Wrong indentation in Panels exports
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/08f910d">08f910d</a>) Fixed WetKit Demo for #<a href="http://drupal.org/node/2448825">2448825</a> - Wrong indentation in Panels exports
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/dda280e">dda280e</a>) Fixed WetKit Core for #<a href="http://drupal.org/node/2448825">2448825</a> - Wrong indentation in Panels exports
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/d89dd99">d89dd99</a>) Fixed WetKit Admin for #<a href="http://drupal.org/node/2448825">2448825</a> - Wrong indentation in Panels exports
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/5faa067">5faa067</a>) Update changelog.md file.
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/cedce7c">cedce7c</a>) Fixed WetKit Deployment for Update deploy plus from v2.3 to v2.5.
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/6d96449">6d96449</a>) Update changelog.md file.
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/8aa0c7c">8aa0c7c</a>) Fixed WetKit Core for #<a href="http://drupal.org/node/2785917">2785917</a> - Underscores in CSS IDs for panes are converted to hyphens after 3.6 update
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/1be2bb2">1be2bb2</a>) Fixed WetKit Theme for Updates Panels styling to match panopoly_magic changes.
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/318c7ef">318c7ef</a>) Fixed WetKit Core for #<a href="http://drupal.org/node/2785845">2785845</a> - Security releases for Panels + Panelizer
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/9b3a0a8">9b3a0a8</a>) Fixed WetKit Core for #<a href="http://drupal.org/node/2785845">2785845</a> - Security releases for Panels + Panelizer
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/0e0156c">0e0156c</a>) Fixed WetKit Core for #<a href="http://drupal.org/node/2785845">2785845</a> - Security releases for Panels + Panelizer
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/b735975">b735975</a>) Fixed WetKit Core for Update CTools from to v1.10 version to align with Panels update.
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/9d21fd4">9d21fd4</a>) Fixed WetKit Core for #<a href="http://drupal.org/node/2785845">2785845</a> - Security releases for Panels + Panelizer
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/dff46c3">dff46c3</a>) Fixed WetKit Menu for #<a href="http://drupal.org/node/2785955">2785955</a> - Add missing storage ids to work with new Panels ACL
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/ae042bd">ae042bd</a>) Fixed WetKit Webform for #<a href="http://drupal.org/node/2785955">2785955</a> - Add missing storage ids to work with new Panels ACL
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/441b206">441b206</a>) Fixed WetKit Users for #<a href="http://drupal.org/node/2785955">2785955</a> - Add missing storage ids to work with new Panels ACL
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/0050f8d">0050f8d</a>) Fixed WetKit Test for #<a href="http://drupal.org/node/2785955">2785955</a> - Add missing storage ids to work with new Panels ACL
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/d32f266">d32f266</a>) Fixed WetKit Pages for #<a href="http://drupal.org/node/2785955">2785955</a> - Add missing storage ids to work with new Panels ACL
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/718b42c">718b42c</a>) Fixed WetKit Migration for #<a href="http://drupal.org/node/2785955">2785955</a> - Add missing storage ids to work with new Panels ACL
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/d518778">d518778</a>) Fixed WetKit Metatag for Features update to metatag module.
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/e5fae5b">e5fae5b</a>) Fixed WetKit Demo for #<a href="http://drupal.org/node/2785955">2785955</a> - Add missing storage ids to work with new Panels ACL
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/639b2f5">639b2f5</a>) Fixed WetKit Core for #<a href="http://drupal.org/node/2785955">2785955</a> - Add missing storage ids to work with new Panels ACL
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/666210b">666210b</a>) Fixed WetKit Admin for #<a href="http://drupal.org/node/2785955">2785955</a> - Add missing storage ids to work with new Panels ACL
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/c0fb502">c0fb502</a>) Fixed WetKit Core for #<a href="http://drupal.org/node/2785915">2785915</a> - Panels permissions update causes access denied on page manager pages
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/1277cdd">1277cdd</a>) Update changelog.md file.
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/c4633d0">c4633d0</a>) Fixed WetKit Bean for Update bean module to v1.11 to fix issue with views.
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/62e46e4">62e46e4</a>) Fixed WetKit Core for #<a href="http://drupal.org/node/2785845">2785845</a> - Security releases for Panels + Panelizer
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/eda45a9">eda45a9</a>) Start work on next release.</p>
 
 <!-- Links Referenced -->
 
@@ -470,35 +502,26 @@
       <tr>
           <td><strong>7.x-4.11</strong></td>
           <td><strong>2016-08-05T18:19:12Z</strong></td>
-          <td>Security Update(s):</p>
+          <td>Security Update(s):
+- Admin Views (1.6)</p>
 
-<ul>
-<li>Admin Views (1.6)</li>
-</ul>
+<p>Features(s):
+- Theme updates to Bootstrap theme
+- Separated out webform_uuid from patch into module
+- Several bean related bug fixes</p>
 
-<p>Features(s):</p>
-
-<ul>
-<li>Theme updates to Bootstrap theme</li>
-<li>Separated out webform_uuid from patch into module</li>
-<li>Several bean related bug fixes</li>
-</ul>
-
-<p>Fixes:</p>
-
-<ul>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/538dd93">538dd93</a>) Update CHANGELOG.md file.</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/fdfe820">fdfe820</a>) Fixed WetKit Core for Update UUID to 1.0-beta2.</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/135c9c1">135c9c1</a>) Fixed WetKit Bean for Update bean module to 1.10 version.</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/b7f4749">b7f4749</a>) Fixed WetKit Admin for #<a href="http://drupal.org/node/2779053">2779053</a> - Administration Views - Critical - Access bypass</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/94aec3d">94aec3d</a>) PHP hardcode PHP7 to 7.0.8</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/a814b41">a814b41</a>) Fixed WetKit Webform for #<a href="http://drupal.org/node/2330581">2330581</a> - newer versions of webform might require a new patch in order to be deployable</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/ad27a75">ad27a75</a>) Fixed WetKit Metatag for #<a href="http://drupal.org/node/2778009">2778009</a> - Incorrect Metatag Translation</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/248b2f9">248b2f9</a>) Fixed WetKit Bootstrap for Update to Bootstrap 3.6 version.</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/b012f4a">b012f4a</a>) Fixed WetKit Webform for Update webform module to 4.13 version.</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/e5136d5">e5136d5</a>) Fixed WetKit Deployment for Update services to version 3.16.</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/9fa09d7">9fa09d7</a>) Start work on next release.</li>
-</ul>
+<p>Fixes:
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/538dd93">538dd93</a>) Update CHANGELOG.md file.
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/fdfe820">fdfe820</a>) Fixed WetKit Core for Update UUID to 1.0-beta2.
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/135c9c1">135c9c1</a>) Fixed WetKit Bean for Update bean module to 1.10 version.
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/b7f4749">b7f4749</a>) Fixed WetKit Admin for #<a href="http://drupal.org/node/2779053">2779053</a> - Administration Views - Critical - Access bypass
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/94aec3d">94aec3d</a>) PHP hardcode PHP7 to 7.0.8
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/a814b41">a814b41</a>) Fixed WetKit Webform for #<a href="http://drupal.org/node/2330581">2330581</a> - newer versions of webform might require a new patch in order to be deployable
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/ad27a75">ad27a75</a>) Fixed WetKit Metatag for #<a href="http://drupal.org/node/2778009">2778009</a> - Incorrect Metatag Translation
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/248b2f9">248b2f9</a>) Fixed WetKit Bootstrap for Update to Bootstrap 3.6 version.
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/b012f4a">b012f4a</a>) Fixed WetKit Webform for Update webform module to 4.13 version.
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/e5136d5">e5136d5</a>) Fixed WetKit Deployment for Update services to version 3.16.
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/9fa09d7">9fa09d7</a>) Start work on next release.</p>
 
 <!-- Links Referenced -->
 
@@ -514,33 +537,27 @@
       <tr>
           <td><strong>7.x-4.10</strong></td>
           <td><strong>2016-07-08T01:48:42Z</strong></td>
-          <td>Features(s):</p>
+          <td>Features(s):
+- Drupal Core (7.50)
+- Panelizer (3.2)
+- Services (3.15)
+- Metatag (1.17) - hook_update_n is expensive
+- Embedded images + Hierarchical Select undefined index
+- Metatag missing argument for media_wysiwyg_filter</p>
 
-<ul>
-<li>Drupal Core (7.50)</li>
-<li>Panelizer (3.2)</li>
-<li>Services (3.15)</li>
-<li>Metatag (1.17) - hook_update_n is expensive</li>
-<li>Embedded images + Hierarchical Select undefined index</li>
-<li>Metatag missing argument for media_wysiwyg_filter</li>
-</ul>
-
-<p>Fixes:</p>
-
-<ul>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/4e20aef">4e20aef</a>) #<a href="http://drupal.org/node/2761529">2761529</a> - Drupal 7.50 core release</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/c59908c">c59908c</a>) Update changelog.md file.</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/66ff275">66ff275</a>) Fixed WetKit Language for #<a href="http://drupal.org/node/2761601">2761601</a> - Update Webform Localization to 4.6</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/f275dc5">f275dc5</a>) Update changelog.md file.</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/371c7a2">371c7a2</a>) Fixed WetKit Images for #<a href="http://drupal.org/node/2761543">2761543</a> - Illegal string offset adding Embedded Images</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/4b7ca76">4b7ca76</a>) Fixed WetKit Metatag for #<a href="http://drupal.org/node/2761477">2761477</a> - Media Module - Missing Argument for media_wysiwyg_filter</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/2d7001c">2d7001c</a>) Fixed WetKit Bootstrap for #<a href="http://drupal.org/node/2761031">2761031</a> - Follow canada.ca capitalization of second words</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/a5c7e32">a5c7e32</a>) Fixed WetKit Core for Minor patch to hierarchical select undefined index.</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/7ef7f9d">7ef7f9d</a>) Minor correction to changelog.md file to reflect actual update.</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/a674eea">a674eea</a>) Stable release of Drupal TI.</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/dc4c62b">dc4c62b</a>) Start work on next release.</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/2b93e27">2b93e27</a>) Remove newlines from changelog.md file.</li>
-</ul>
+<p>Fixes:
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/4e20aef">4e20aef</a>) #<a href="http://drupal.org/node/2761529">2761529</a> - Drupal 7.50 core release
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/c59908c">c59908c</a>) Update changelog.md file.
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/66ff275">66ff275</a>) Fixed WetKit Language for #<a href="http://drupal.org/node/2761601">2761601</a> - Update Webform Localization to 4.6
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/f275dc5">f275dc5</a>) Update changelog.md file.
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/371c7a2">371c7a2</a>) Fixed WetKit Images for #<a href="http://drupal.org/node/2761543">2761543</a> - Illegal string offset adding Embedded Images
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/4b7ca76">4b7ca76</a>) Fixed WetKit Metatag for #<a href="http://drupal.org/node/2761477">2761477</a> - Media Module - Missing Argument for media_wysiwyg_filter
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/2d7001c">2d7001c</a>) Fixed WetKit Bootstrap for #<a href="http://drupal.org/node/2761031">2761031</a> - Follow canada.ca capitalization of second words
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/a5c7e32">a5c7e32</a>) Fixed WetKit Core for Minor patch to hierarchical select undefined index.
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/7ef7f9d">7ef7f9d</a>) Minor correction to changelog.md file to reflect actual update.
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/a674eea">a674eea</a>) Stable release of Drupal TI.
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/dc4c62b">dc4c62b</a>) Start work on next release.
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/2b93e27">2b93e27</a>) Remove newlines from changelog.md file.</p>
 
 <!-- Links Referenced -->
 
@@ -559,33 +576,24 @@
       <tr>
           <td><strong>7.x-4.9</strong></td>
           <td><strong>2016-06-16T15:12:52Z</strong></td>
-          <td>Security Update(s):</p>
+          <td>Security Update(s):
+- Drupal Core (7.43)
+- Views (3.14)</p>
 
-<ul>
-<li>Drupal Core (7.43)</li>
-<li>Views (3.14)</li>
-</ul>
+<p>Features:
+- Updates to media + file_entity</p>
 
-<p>Features:</p>
-
-<ul>
-<li>Updates to media + file_entity</li>
-</ul>
-
-<p>Fixes:</p>
-
-<ul>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/8ce2fe3">8ce2fe3</a>) Fixed WetKit Core for #<a href="http://drupal.org/node/2750029">2750029</a> - Views - Less Critical - Access Bypass - SA-CONTRIB-2016-036</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/4357122">4357122</a>) Fixed WetKit Core for #<a href="http://drupal.org/node/2748483">2748483</a> - Hierarchical Select + Uncaught Syntax error, unrecognized expression</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/0b07876">0b07876</a>) Fixed WetKit Search for Update facetapi_bonus to 1.3-rc3 version.</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/5f7a6f7">5f7a6f7</a>) Fixed WetKit Metatag for Update metatag to 1.16 version.</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/89b9c85">89b9c85</a>) Fixed WetKit Core for Update hierarchical select to 3.0-beta7.</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/3ff0191">3ff0191</a>) Fixed WetKit Language for #<a href="http://drupal.org/node/2635758">2635758</a> - workbench revision deletes and views content display</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/5894f4c">5894f4c</a>) Fix WetKit Core for #<a href="http://drupal.org/node/2738855">2738855</a> - RSS Feed Title Double Encoding</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/7251bd4">7251bd4</a>) Update changelog.md file.</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/a143777">a143777</a>) Start work on next release. (#1854)</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/9d082bc">9d082bc</a>) Start work on next release.</li>
-</ul>
+<p>Fixes:
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/8ce2fe3">8ce2fe3</a>) Fixed WetKit Core for #<a href="http://drupal.org/node/2750029">2750029</a> - Views - Less Critical - Access Bypass - SA-CONTRIB-2016-036
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/4357122">4357122</a>) Fixed WetKit Core for #<a href="http://drupal.org/node/2748483">2748483</a> - Hierarchical Select + Uncaught Syntax error, unrecognized expression
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/0b07876">0b07876</a>) Fixed WetKit Search for Update facetapi_bonus to 1.3-rc3 version.
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/5f7a6f7">5f7a6f7</a>) Fixed WetKit Metatag for Update metatag to 1.16 version.
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/89b9c85">89b9c85</a>) Fixed WetKit Core for Update hierarchical select to 3.0-beta7.
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/3ff0191">3ff0191</a>) Fixed WetKit Language for #<a href="http://drupal.org/node/2635758">2635758</a> - workbench revision deletes and views content display
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/5894f4c">5894f4c</a>) Fix WetKit Core for #<a href="http://drupal.org/node/2738855">2738855</a> - RSS Feed Title Double Encoding
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/7251bd4">7251bd4</a>) Update changelog.md file.
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/a143777">a143777</a>) Start work on next release. (#1854)
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/9d082bc">9d082bc</a>) Start work on next release.</p>
 
 <!-- Links Referenced -->
 
@@ -601,17 +609,11 @@
       <tr>
           <td><strong>7.x-4.8</strong></td>
           <td><strong>2016-05-31T19:26:46Z</strong></td>
-          <td>Features:</p>
+          <td>Features:
+- Fix PHP 5.3 Fatal Error Issue</p>
 
-<ul>
-<li>Fix PHP 5.3 Fatal Error Issue</li>
-</ul>
-
-<p>Fixes:</p>
-
-<ul>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/892b540">892b540</a>) Fixed WetKit Menu for #<a href="http://drupal.org/node/2737701">2737701</a> - PHP 5.3 Fatal Error</li>
-</ul>
+<p>Fixes:
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/892b540">892b540</a>) Fixed WetKit Menu for #<a href="http://drupal.org/node/2737701">2737701</a> - PHP 5.3 Fatal Error</p>
 
 <!-- Links Referenced -->
 
@@ -627,116 +629,104 @@
       <tr>
           <td><strong>7.x-4.7</strong></td>
           <td><strong>2016-05-31T14:19:45Z</strong></td>
-          <td>Security Update(s):</p>
+          <td>Security Update(s):
+- Deploy
+- Organic Groups
+- Features</p>
 
-<ul>
-<li>Deploy</li>
-<li>Organic Groups</li>
-<li>Features</li>
-</ul>
+<p>Performance Update(s)
+- Panels Mini caching</p>
 
-<p>Performance Update(s)</p>
+<p>Features:
+- Duplicate &lsquo;main&rsquo; role fix for WxT Bootstrap
+- Improved Field Collection + Entity Translation integration
+- Sidebar Right theming support
+- Language Toggle for Internet theme
+- Deploy Plus Bootstrap Improvements</p>
 
-<ul>
-<li>Panels Mini caching</li>
-</ul>
-
-<p>Features:</p>
-
-<ul>
-<li>Duplicate &lsquo;main&rsquo; role fix for WxT Bootstrap</li>
-<li>Improved Field Collection + Entity Translation integration</li>
-<li>Sidebar Right theming support</li>
-<li>Language Toggle for Internet theme</li>
-<li>Deploy Plus Bootstrap Improvements</li>
-</ul>
-
-<p>Fixes:</p>
-
-<ul>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/7614f5e">7614f5e</a>) Fixed WetKit Deployment for #<a href="http://drupal.org/node/2723471">2723471</a> - Megamenu system path</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/69f5d2c">69f5d2c</a>) Fixed WetKit Deployment for Add pager to deployment dashboard for taxonomy.</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/35b76d6">35b76d6</a>) Update changelog.md file.</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/79310e9">79310e9</a>) Fixed WetKit Deployment for Add additional multiple user context to deploy.</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/8b84061">8b84061</a>) Fixed WetKit Deployment for Add additional multiple user context to deploy.</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/df7ff29">df7ff29</a>) Fixed WetKit Deployment for Fix for undefined entity wrapper.</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/7c014dd">7c014dd</a>) Fixed WetKit Deployment for Update deploy plus to 2.3 version.</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/24223ae">24223ae</a>) Fixed WetKit Deployment for Adjust deployment interface to support wb-tabs.</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/6e3277b">6e3277b</a>) Fixed WetKit Core for Update hierarchical select to 3.0-beta5.</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/4f61b4e">4f61b4e</a>) Fixed WetKit Core for Update libraries module to 2.3 version.</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/03084cf">03084cf</a>) Update changelog.md file.</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/2c13b6b">2c13b6b</a>) Fixed WetKit Language for #<a href="http://drupal.org/node/2723281">2723281</a> - Update Entity Translation to 1.0-beta5</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/ce2b535">ce2b535</a>) Fixed WetKit Core for Update hierarchical select to 3.0-beta5.</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/6ab33b9">6ab33b9</a>) Fixed WetKit Core for Password Policy and undefined property (account-&gt;original).</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/3240111">3240111</a>) Fixed WetKit Core for Password Policy issue with Postgresql.</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/c81fb6a">c81fb6a</a>) Fixed WetKit Language for Update webform localization to 4.5 version.</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/ff22451">ff22451</a>) Fixed WetKit Core for Update hierarchical select to 3.0-beta4 version.</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/729d8c7">729d8c7</a>) Fixed WetKit Language for Update webform_localization to 4.4 version.</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/fc1db53">fc1db53</a>) Fixed WetKit Core for Update panopoly_magic to 1.34 version.</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/5701b66">5701b66</a>) Fixed WetKit Core for Update features to 2.10 verison.</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/2bb72a7">2bb72a7</a>) Fixed WetKit Core for #<a href="http://drupal.org/node/2428185">2428185</a> - Language prefix and relative links broken</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/d9f6e81">d9f6e81</a>) Update changelog.md file.</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/b9a3fc0">b9a3fc0</a>) Fixed WetKit Organic Groups for #<a href="http://drupal.org/node/2710981">2710981</a> - Organic groups - DRUPAL-SA-CONTRIB-2016-023</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/460e71a">460e71a</a>) Fixed WetKit Test for Add new file needed for drone builds.</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/6d3a10c">6d3a10c</a>) Fixed WetKit Core for #<a href="http://drupal.org/node/2707153">2707153</a> - Features - Less Critical - SA-CONTRIB-2016-020</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/a1f24a6">a1f24a6</a>) Update changelog.md file.</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/11f3834">11f3834</a>) Fixed WetKit Admin for Extra handling for whether field_featured_categories exists.</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/558294a">558294a</a>) Fixed WetKit Core for Better check for empty $form options on field edit.</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/4e2f0ae">4e2f0ae</a>) Fixed WetKit Bootstrap for #<a href="http://drupal.org/node/2705737">2705737</a> - Accessibility improvements to status message</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/d6947a8">d6947a8</a>) Update changelog.md file.</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/165a013">165a013</a>) Fixed WetKit Core for Fix for diff + PHP7 style constructors.</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/d853776">d853776</a>) Fixed WetKit Panel Layouts for Conditionally set wb-eqht if regions aren&rsquo;t empty, preventing JS error.</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/db507a9">db507a9</a>) Update changelog.md file.</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/68997ad">68997ad</a>) Fixed WetKit WET-BOEW for #<a href="http://drupal.org/node/2705527">2705527</a> - Web Experience Toolkit jQuery v4.0.21 release</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/1bdfe45">1bdfe45</a>) Fixed WetKit Deployment for #<a href="http://drupal.org/node/2704741">2704741</a> - Content Deployment Performance issues with complex content relationships</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/1009c8a">1009c8a</a>) Fixed WetKit Deployment for #<a href="http://drupal.org/node/2697989">2697989</a> - Possiible issue with entities deployment screen</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/f069f70">f069f70</a>) Update changelog.md file.</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/ec8d70b">ec8d70b</a>) Fixed WetKit Search for Update facetapi_bonus from 1.3-rc1 to 1.3-rc2 version.</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/ff86d6b">ff86d6b</a>) Fixed WetKit Metatag for Update metatag from 1.13 to 1.14 version.</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/fac6b90">fac6b90</a>) Fixed WetKit Deployment for Update UUID Redirect to use stable release + patches from dev.</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/60daebd">60daebd</a>) Update changelog.md file.</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/d8c11b8">d8c11b8</a>) Fixed WetKit Menu for #<a href="http://drupal.org/node/2700677">2700677</a> - Wetkit menu Right sidebar</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/bb01523">bb01523</a>) Issue #889772 Following a password reset link while logged in leaves users unable to change their password</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/d379f8f">d379f8f</a>) Fixed WetKit Bootstrap for #<a href="http://drupal.org/node/2702145">2702145</a> - Overly aggressive css change hiding top level main megamenu links in mobile view</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/d1b8606">d1b8606</a>) Fixed WetKit Search for Update facetapi_bonus to latest v1.3-rc1 release.</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/206e93e">206e93e</a>) Fixed WetKit Core for #<a href="http://drupal.org/node/2633456">2633456</a> - Workbench Moderation bring back to stable</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/398364b">398364b</a>) Update changelog.md file.</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/5cc1ba3">5cc1ba3</a>) Fixed WetKit Bootstrap for #<a href="http://drupal.org/node/2696167">2696167</a> - Language Toggle not visible on mobile when using the &ldquo;Internet&rdquo; as base theme</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/41e62c6">41e62c6</a>) Fixed WetKit Language for #<a href="http://drupal.org/node/2509060">2509060</a> - Plan for Title 7.x-1.0 release</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/c5c2bd7">c5c2bd7</a>) Update changelog.md file.</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/bab3cc1">bab3cc1</a>) Fixed WetKit Core for Update features from v2.7 to v2.8 release.</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/68e5bff">68e5bff</a>) Fixed WetKit Deployment for #<a href="http://drupal.org/node/2692531">2692531</a> - Security update for Deploy 7.x-2.0-beta2</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/6215ccd">6215ccd</a>) Fixed WetKit Language for Update webform_localization from v4.2 to v4.3 release.</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/18fb1ac">18fb1ac</a>) Fixed WetKit Deployment for Update services from v3.13 to v3.14 release.</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/2843f87">2843f87</a>) Fixed WetKit Core for Update entity api from v1.6 to v1.7 release.</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/f114d8a">f114d8a</a>) Fixed WetKit Bootstrap for #<a href="http://drupal.org/node/2690309">2690309</a> - Composite form elements, &lsquo;for&rsquo; attributes and labelable elements fix [bootstrap theme]</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/0c1b511">0c1b511</a>) Fixed WetKit Core for #<a href="http://drupal.org/node/2687299">2687299</a> - Argument 3 passed to menu_tree_prune_tree() must be of the type array, boolean given</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/d4f86aa">d4f86aa</a>) Update changelog.md file.</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/00f35bc">00f35bc</a>) Fixed WetKit Bean for #<a href="http://drupal.org/node/2685101">2685101</a> - Issue with wetkit Twitter Bean and Twitter embed rules.</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/bf03a76">bf03a76</a>) Fixed WetKit Core for #<a href="http://drupal.org/node/2685173">2685173</a> - panels_mini_load &amp; friends need caching</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/ce3d6d0">ce3d6d0</a>) Fixed WetKit Core for Only recommend but not enforce panels preview (panopoly_magic).</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/8939fc6">8939fc6</a>) #<a href="http://drupal.org/node/2460833">2460833</a> - drupal_session_destroy() should return boolean</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/bfd48a9">bfd48a9</a>) Update changelog.md file.</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/6063c45">6063c45</a>) Fixed WetKit Core for Update panopoly_magic to v1.32.</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/2567570">2567570</a>) Fixed WetKit Search for Update date_facets + facetapi_bonus to stable releases.</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/08adfb1">08adfb1</a>) Fixed WetKit Ember for Update ember to 2.0-alpha4 version.</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/4ea5f0d">4ea5f0d</a>) Update changelog.md file.</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/d0e7d2b">d0e7d2b</a>) Fixed WetKit Panel Layouts for #<a href="http://drupal.org/node/2681213">2681213</a> - The &ldquo;main&rdquo; role has been used more then once</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/0d14f43">0d14f43</a>) Fixed WetKit Bootstrap for #<a href="http://drupal.org/node/2681213">2681213</a> - The &ldquo;main&rdquo; role has been used more then once</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/eb0969b">eb0969b</a>) Fixed WetKit Widgets for #<a href="http://drupal.org/node/2682941">2682941</a> - File icon too close to filename</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/ab2aa26">ab2aa26</a>) Update changelog.md file.</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/383a583">383a583</a>) Fixed WetKit Widgets for #<a href="http://drupal.org/node/2568123">2568123</a> - &ldquo;Unable to create directory&rdquo; when used in installation profile</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/11710b8">11710b8</a>) Fixed WetKit Admin for #<a href="http://drupal.org/node/2682263">2682263</a> - wetkit_navbar doesn&rsquo;t take into account og node access</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/9982eb5">9982eb5</a>) Fixed WetKit Search for Update search404 to v1.4</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/353cc56">353cc56</a>) Fixed WetKit Bootstrap for #<a href="http://drupal.org/node/2680783">2680783</a> - Update bootstrap to v3.5</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/fc626fb">fc626fb</a>) Fixed WetKit Menu for #<a href="http://drupal.org/node/2680619">2680619</a> - Sidebar Menu extra / missing tags</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/7a85323">7a85323</a>) Fixed WetKit Theme for #<a href="http://drupal.org/node/2678744">2678744</a> - Bootstrap Horiz Tabs Style (Sort by Title)</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/a038154">a038154</a>) Update changelog.md file.</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/e834001">e834001</a>) Update changelog.md file.</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/af912da">af912da</a>) Fixed WetKit Core for #<a href="http://drupal.org/node/1344672">1344672</a> - Field translation (entity_translation) support</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/d243754">d243754</a>) Fixed WetKit Language for #<a href="http://drupal.org/node/2339315">2339315</a> - Source language prepopulated values should be also included in $form_state[&lsquo;field&rsquo;]</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/d5065ea">d5065ea</a>) Start work on next release.</li>
-</ul>
+<p>Fixes:
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/7614f5e">7614f5e</a>) Fixed WetKit Deployment for #<a href="http://drupal.org/node/2723471">2723471</a> - Megamenu system path
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/69f5d2c">69f5d2c</a>) Fixed WetKit Deployment for Add pager to deployment dashboard for taxonomy.
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/35b76d6">35b76d6</a>) Update changelog.md file.
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/79310e9">79310e9</a>) Fixed WetKit Deployment for Add additional multiple user context to deploy.
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/8b84061">8b84061</a>) Fixed WetKit Deployment for Add additional multiple user context to deploy.
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/df7ff29">df7ff29</a>) Fixed WetKit Deployment for Fix for undefined entity wrapper.
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/7c014dd">7c014dd</a>) Fixed WetKit Deployment for Update deploy plus to 2.3 version.
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/24223ae">24223ae</a>) Fixed WetKit Deployment for Adjust deployment interface to support wb-tabs.
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/6e3277b">6e3277b</a>) Fixed WetKit Core for Update hierarchical select to 3.0-beta5.
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/4f61b4e">4f61b4e</a>) Fixed WetKit Core for Update libraries module to 2.3 version.
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/03084cf">03084cf</a>) Update changelog.md file.
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/2c13b6b">2c13b6b</a>) Fixed WetKit Language for #<a href="http://drupal.org/node/2723281">2723281</a> - Update Entity Translation to 1.0-beta5
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/ce2b535">ce2b535</a>) Fixed WetKit Core for Update hierarchical select to 3.0-beta5.
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/6ab33b9">6ab33b9</a>) Fixed WetKit Core for Password Policy and undefined property (account-&gt;original).
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/3240111">3240111</a>) Fixed WetKit Core for Password Policy issue with Postgresql.
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/c81fb6a">c81fb6a</a>) Fixed WetKit Language for Update webform localization to 4.5 version.
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/ff22451">ff22451</a>) Fixed WetKit Core for Update hierarchical select to 3.0-beta4 version.
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/729d8c7">729d8c7</a>) Fixed WetKit Language for Update webform_localization to 4.4 version.
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/fc1db53">fc1db53</a>) Fixed WetKit Core for Update panopoly_magic to 1.34 version.
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/5701b66">5701b66</a>) Fixed WetKit Core for Update features to 2.10 verison.
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/2bb72a7">2bb72a7</a>) Fixed WetKit Core for #<a href="http://drupal.org/node/2428185">2428185</a> - Language prefix and relative links broken
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/d9f6e81">d9f6e81</a>) Update changelog.md file.
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/b9a3fc0">b9a3fc0</a>) Fixed WetKit Organic Groups for #<a href="http://drupal.org/node/2710981">2710981</a> - Organic groups - DRUPAL-SA-CONTRIB-2016-023
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/460e71a">460e71a</a>) Fixed WetKit Test for Add new file needed for drone builds.
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/6d3a10c">6d3a10c</a>) Fixed WetKit Core for #<a href="http://drupal.org/node/2707153">2707153</a> - Features - Less Critical - SA-CONTRIB-2016-020
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/a1f24a6">a1f24a6</a>) Update changelog.md file.
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/11f3834">11f3834</a>) Fixed WetKit Admin for Extra handling for whether field_featured_categories exists.
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/558294a">558294a</a>) Fixed WetKit Core for Better check for empty $form options on field edit.
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/4e2f0ae">4e2f0ae</a>) Fixed WetKit Bootstrap for #<a href="http://drupal.org/node/2705737">2705737</a> - Accessibility improvements to status message
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/d6947a8">d6947a8</a>) Update changelog.md file.
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/165a013">165a013</a>) Fixed WetKit Core for Fix for diff + PHP7 style constructors.
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/d853776">d853776</a>) Fixed WetKit Panel Layouts for Conditionally set wb-eqht if regions aren&rsquo;t empty, preventing JS error.
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/db507a9">db507a9</a>) Update changelog.md file.
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/68997ad">68997ad</a>) Fixed WetKit WET-BOEW for #<a href="http://drupal.org/node/2705527">2705527</a> - Web Experience Toolkit jQuery v4.0.21 release
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/1bdfe45">1bdfe45</a>) Fixed WetKit Deployment for #<a href="http://drupal.org/node/2704741">2704741</a> - Content Deployment Performance issues with complex content relationships
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/1009c8a">1009c8a</a>) Fixed WetKit Deployment for #<a href="http://drupal.org/node/2697989">2697989</a> - Possiible issue with entities deployment screen
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/f069f70">f069f70</a>) Update changelog.md file.
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/ec8d70b">ec8d70b</a>) Fixed WetKit Search for Update facetapi_bonus from 1.3-rc1 to 1.3-rc2 version.
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/ff86d6b">ff86d6b</a>) Fixed WetKit Metatag for Update metatag from 1.13 to 1.14 version.
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/fac6b90">fac6b90</a>) Fixed WetKit Deployment for Update UUID Redirect to use stable release + patches from dev.
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/60daebd">60daebd</a>) Update changelog.md file.
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/d8c11b8">d8c11b8</a>) Fixed WetKit Menu for #<a href="http://drupal.org/node/2700677">2700677</a> - Wetkit menu Right sidebar
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/bb01523">bb01523</a>) Issue #889772 Following a password reset link while logged in leaves users unable to change their password
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/d379f8f">d379f8f</a>) Fixed WetKit Bootstrap for #<a href="http://drupal.org/node/2702145">2702145</a> - Overly aggressive css change hiding top level main megamenu links in mobile view
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/d1b8606">d1b8606</a>) Fixed WetKit Search for Update facetapi_bonus to latest v1.3-rc1 release.
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/206e93e">206e93e</a>) Fixed WetKit Core for #<a href="http://drupal.org/node/2633456">2633456</a> - Workbench Moderation bring back to stable
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/398364b">398364b</a>) Update changelog.md file.
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/5cc1ba3">5cc1ba3</a>) Fixed WetKit Bootstrap for #<a href="http://drupal.org/node/2696167">2696167</a> - Language Toggle not visible on mobile when using the &ldquo;Internet&rdquo; as base theme
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/41e62c6">41e62c6</a>) Fixed WetKit Language for #<a href="http://drupal.org/node/2509060">2509060</a> - Plan for Title 7.x-1.0 release
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/c5c2bd7">c5c2bd7</a>) Update changelog.md file.
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/bab3cc1">bab3cc1</a>) Fixed WetKit Core for Update features from v2.7 to v2.8 release.
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/68e5bff">68e5bff</a>) Fixed WetKit Deployment for #<a href="http://drupal.org/node/2692531">2692531</a> - Security update for Deploy 7.x-2.0-beta2
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/6215ccd">6215ccd</a>) Fixed WetKit Language for Update webform_localization from v4.2 to v4.3 release.
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/18fb1ac">18fb1ac</a>) Fixed WetKit Deployment for Update services from v3.13 to v3.14 release.
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/2843f87">2843f87</a>) Fixed WetKit Core for Update entity api from v1.6 to v1.7 release.
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/f114d8a">f114d8a</a>) Fixed WetKit Bootstrap for #<a href="http://drupal.org/node/2690309">2690309</a> - Composite form elements, &lsquo;for&rsquo; attributes and labelable elements fix [bootstrap theme]
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/0c1b511">0c1b511</a>) Fixed WetKit Core for #<a href="http://drupal.org/node/2687299">2687299</a> - Argument 3 passed to menu_tree_prune_tree() must be of the type array, boolean given
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/d4f86aa">d4f86aa</a>) Update changelog.md file.
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/00f35bc">00f35bc</a>) Fixed WetKit Bean for #<a href="http://drupal.org/node/2685101">2685101</a> - Issue with wetkit Twitter Bean and Twitter embed rules.
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/bf03a76">bf03a76</a>) Fixed WetKit Core for #<a href="http://drupal.org/node/2685173">2685173</a> - panels_mini_load &amp; friends need caching
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/ce3d6d0">ce3d6d0</a>) Fixed WetKit Core for Only recommend but not enforce panels preview (panopoly_magic).
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/8939fc6">8939fc6</a>) #<a href="http://drupal.org/node/2460833">2460833</a> - drupal_session_destroy() should return boolean
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/bfd48a9">bfd48a9</a>) Update changelog.md file.
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/6063c45">6063c45</a>) Fixed WetKit Core for Update panopoly_magic to v1.32.
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/2567570">2567570</a>) Fixed WetKit Search for Update date_facets + facetapi_bonus to stable releases.
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/08adfb1">08adfb1</a>) Fixed WetKit Ember for Update ember to 2.0-alpha4 version.
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/4ea5f0d">4ea5f0d</a>) Update changelog.md file.
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/d0e7d2b">d0e7d2b</a>) Fixed WetKit Panel Layouts for #<a href="http://drupal.org/node/2681213">2681213</a> - The &ldquo;main&rdquo; role has been used more then once
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/0d14f43">0d14f43</a>) Fixed WetKit Bootstrap for #<a href="http://drupal.org/node/2681213">2681213</a> - The &ldquo;main&rdquo; role has been used more then once
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/eb0969b">eb0969b</a>) Fixed WetKit Widgets for #<a href="http://drupal.org/node/2682941">2682941</a> - File icon too close to filename
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/ab2aa26">ab2aa26</a>) Update changelog.md file.
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/383a583">383a583</a>) Fixed WetKit Widgets for #<a href="http://drupal.org/node/2568123">2568123</a> - &ldquo;Unable to create directory&rdquo; when used in installation profile
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/11710b8">11710b8</a>) Fixed WetKit Admin for #<a href="http://drupal.org/node/2682263">2682263</a> - wetkit_navbar doesn&rsquo;t take into account og node access
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/9982eb5">9982eb5</a>) Fixed WetKit Search for Update search404 to v1.4
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/353cc56">353cc56</a>) Fixed WetKit Bootstrap for #<a href="http://drupal.org/node/2680783">2680783</a> - Update bootstrap to v3.5
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/fc626fb">fc626fb</a>) Fixed WetKit Menu for #<a href="http://drupal.org/node/2680619">2680619</a> - Sidebar Menu extra / missing tags
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/7a85323">7a85323</a>) Fixed WetKit Theme for #<a href="http://drupal.org/node/2678744">2678744</a> - Bootstrap Horiz Tabs Style (Sort by Title)
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/a038154">a038154</a>) Update changelog.md file.
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/e834001">e834001</a>) Update changelog.md file.
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/af912da">af912da</a>) Fixed WetKit Core for #<a href="http://drupal.org/node/1344672">1344672</a> - Field translation (entity_translation) support
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/d243754">d243754</a>) Fixed WetKit Language for #<a href="http://drupal.org/node/2339315">2339315</a> - Source language prepopulated values should be also included in $form_state[&lsquo;field&rsquo;]
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/d5065ea">d5065ea</a>) Start work on next release.</p>
 
 <!-- Links Referenced -->
 
@@ -755,36 +745,27 @@
       <tr>
           <td><strong>7.x-4.6</strong></td>
           <td><strong>2016-02-29T15:58:33Z</strong></td>
-          <td>Security Update(s):</p>
+          <td>Security Update(s):
+- Drupal Core (7.43)</p>
 
-<ul>
-<li>Drupal Core (7.43)</li>
-</ul>
+<p>Features:
+- Improved UX for deployment screen</p>
 
-<p>Features:</p>
-
-<ul>
-<li>Improved UX for deployment screen</li>
-</ul>
-
-<p>Fixes:</p>
-
-<ul>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/215eaa0">215eaa0</a>) Fixed WetKit Core for Update panopoly_magic to v1.31</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/d99553a">d99553a</a>) Update changelog.md file.</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/5a25771">5a25771</a>) #<a href="http://drupal.org/node/2675184">2675184</a> - Drupal Core - SA-CORE-2016-001</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/ac946e6">ac946e6</a>) Fixed WetKit Deployment for #<a href="http://drupal.org/node/2628240">2628240</a> - Syndicated to: site doesn&rsquo;t take into account current language</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/827b5fc">827b5fc</a>) Fixed WetKit Test for Fixed WetKit Test for Fix for menu link attributes now in fieldset.</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/c04e9c6">c04e9c6</a>) Fixed WetKit Test for Fix for menu link attributes now in fieldset.</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/677d87a">677d87a</a>) Fixed WetKit Language for Update webform localization to v4.2</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/b74b53b">b74b53b</a>) Fixed WetKit Core for Updates to apps, better formats, and menu_attributes.</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/562f121">562f121</a>) Fixed WetKit Organic Groups for Update Organic Groups to v2.8</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/b7ba712">b7ba712</a>) Update changelog.md file.</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/ea96838">ea96838</a>) Fixed WetKit Bootstrap for #<a href="http://drupal.org/node/2666318">2666318</a> - entity field over calendar popup</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/7d340f4">7d340f4</a>) Fixed WetKit Deployment for #<a href="http://drupal.org/node/2665558">2665558</a> - wetkit_deployment views tweaks</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/552e8bc">552e8bc</a>) Fixed WetKit Bootstrap for #<a href="http://drupal.org/node/2666192">2666192</a> - double set of table classes</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/ff327d5">ff327d5</a>) Start work on next release.</li>
-</ul>
+<p>Fixes:
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/215eaa0">215eaa0</a>) Fixed WetKit Core for Update panopoly_magic to v1.31
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/d99553a">d99553a</a>) Update changelog.md file.
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/5a25771">5a25771</a>) #<a href="http://drupal.org/node/2675184">2675184</a> - Drupal Core - SA-CORE-2016-001
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/ac946e6">ac946e6</a>) Fixed WetKit Deployment for #<a href="http://drupal.org/node/2628240">2628240</a> - Syndicated to: site doesn&rsquo;t take into account current language
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/827b5fc">827b5fc</a>) Fixed WetKit Test for Fixed WetKit Test for Fix for menu link attributes now in fieldset.
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/c04e9c6">c04e9c6</a>) Fixed WetKit Test for Fix for menu link attributes now in fieldset.
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/677d87a">677d87a</a>) Fixed WetKit Language for Update webform localization to v4.2
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/b74b53b">b74b53b</a>) Fixed WetKit Core for Updates to apps, better formats, and menu_attributes.
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/562f121">562f121</a>) Fixed WetKit Organic Groups for Update Organic Groups to v2.8
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/b7ba712">b7ba712</a>) Update changelog.md file.
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/ea96838">ea96838</a>) Fixed WetKit Bootstrap for #<a href="http://drupal.org/node/2666318">2666318</a> - entity field over calendar popup
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/7d340f4">7d340f4</a>) Fixed WetKit Deployment for #<a href="http://drupal.org/node/2665558">2665558</a> - wetkit_deployment views tweaks
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/552e8bc">552e8bc</a>) Fixed WetKit Bootstrap for #<a href="http://drupal.org/node/2666192">2666192</a> - double set of table classes
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/ff327d5">ff327d5</a>) Start work on next release.</p>
 
 <!-- Links Referenced -->
 
@@ -800,49 +781,40 @@
       <tr>
           <td><strong>7.x-4.5</strong></td>
           <td><strong>2016-02-09T15:30:29Z</strong></td>
-          <td>Performance Update(s)</p>
+          <td>Performance Update(s)
+- 2 performance patches to Drupal Core are now in 7.42
+- Menu Links query update performance when $item[&lsquo;i18n_tsid&rsquo;] missing</p>
 
-<ul>
-<li>2 performance patches to Drupal Core are now in 7.42</li>
-<li>Menu Links query update performance when $item[&lsquo;i18n_tsid&rsquo;] missing</li>
-</ul>
+<p>Features:
+- Resolved CTools optional contexts regression introduced in PHP 7 patch
+- Drupal Core maintenance release (7.42)
+- Minor regressions in Deploy UI
+- New Workbench Moderation CTools Argument for Revision ID plugin</p>
 
-<p>Features:</p>
-
-<ul>
-<li>Resolved CTools optional contexts regression introduced in PHP 7 patch</li>
-<li>Drupal Core maintenance release (7.42)</li>
-<li>Minor regressions in Deploy UI</li>
-<li>New Workbench Moderation CTools Argument for Revision ID plugin</li>
-</ul>
-
-<p>Fixes:</p>
-
-<ul>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/0d7a884">0d7a884</a>) Update drupal-org.make.</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/39ada8a">39ada8a</a>) Fixed WetKit Core for #<a href="http://drupal.org/node/2662600">2662600</a> - Workbench Moderation Revision ID argument context</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/cf4b1b6">cf4b1b6</a>) Update changelog.md file.</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/a7a1373">a7a1373</a>) Update changelog.md file.</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/f9c55f6">f9c55f6</a>) Update changelog.md file.</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/4bb5995">4bb5995</a>) Fixed WetKit Language for #<a href="http://drupal.org/node/2338735">2338735</a> - hook_menu_link_alter() should set $item[&lsquo;i18n_tsid&rsquo;]</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/2cfcf63">2cfcf63</a>) Fixed WetKit Deployment for #<a href="http://drupal.org/node/2207897">2207897</a> - Environment indicator cache is written on every request and uses altered version</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/f56bea1">f56bea1</a>) Fixed WetKit Deployment for #<a href="http://drupal.org/node/2207897">2207897</a> - Environment indicator cache is written on every request and uses altered version</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/f5e21b1">f5e21b1</a>) Fixed WetKit Core for #<a href="http://drupal.org/node/2662600">2662600</a> - Workbench Moderation Revision ID argument context</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/23ce349">23ce349</a>) Update changelog.md file.</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/b2edcf3">b2edcf3</a>) Fixed WetKit Deployment for Update services module to v3.13 release.</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/2c3e745">2c3e745</a>) Fixed WetKit Deployment for #<a href="http://drupal.org/node/2655888">2655888</a> - Fix version contraint for deploy</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/b7ee6eb">b7ee6eb</a>) Correct recent release of WetKit Core.</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/81e4bb6">81e4bb6</a>) Fixed WetKit Core for Remove patch committed in Field Collection 7.x-1.0-beta11</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/8c862ae">8c862ae</a>) Fixed WetKit Metatag for Update metatag to v1.13 release.</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/35caee3">35caee3</a>) Fixed WetKit Core for #<a href="http://drupal.org/node/2599248">2599248</a> - array_filter() issue after upgrading to 7.x-1.0-beta10</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/904a1f2">904a1f2</a>) Fixed WetKit Metatag for #<a href="http://drupal.org/node/2662962">2662962</a> - Metatag v1.12 release + i18n integration</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/2a2a071">2a2a071</a>) Update changelog.md file.</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/fc99fe0">fc99fe0</a>) #<a href="http://drupal.org/node/2662652">2662652</a> - Drupal Core 7.42 release</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/c887928">c887928</a>) Fixed WetKit WYSIWYG for #<a href="http://drupal.org/node/2662148">2662148</a> - CSS issue with Alerts inside of WYSIWYG</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/ae089a1">ae089a1</a>) Fixed WetKit Deployment for #<a href="http://drupal.org/node/2661268">2661268</a> - Deployment Screen UI Bugs</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/f3f7780">f3f7780</a>) Update changelog.md file.</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/2ab872c">2ab872c</a>) Start work on next release.</li>
-</ul>
+<p>Fixes:
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/0d7a884">0d7a884</a>) Update drupal-org.make.
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/39ada8a">39ada8a</a>) Fixed WetKit Core for #<a href="http://drupal.org/node/2662600">2662600</a> - Workbench Moderation Revision ID argument context
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/cf4b1b6">cf4b1b6</a>) Update changelog.md file.
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/a7a1373">a7a1373</a>) Update changelog.md file.
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/f9c55f6">f9c55f6</a>) Update changelog.md file.
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/4bb5995">4bb5995</a>) Fixed WetKit Language for #<a href="http://drupal.org/node/2338735">2338735</a> - hook_menu_link_alter() should set $item[&lsquo;i18n_tsid&rsquo;]
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/2cfcf63">2cfcf63</a>) Fixed WetKit Deployment for #<a href="http://drupal.org/node/2207897">2207897</a> - Environment indicator cache is written on every request and uses altered version
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/f56bea1">f56bea1</a>) Fixed WetKit Deployment for #<a href="http://drupal.org/node/2207897">2207897</a> - Environment indicator cache is written on every request and uses altered version
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/f5e21b1">f5e21b1</a>) Fixed WetKit Core for #<a href="http://drupal.org/node/2662600">2662600</a> - Workbench Moderation Revision ID argument context
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/23ce349">23ce349</a>) Update changelog.md file.
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/b2edcf3">b2edcf3</a>) Fixed WetKit Deployment for Update services module to v3.13 release.
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/2c3e745">2c3e745</a>) Fixed WetKit Deployment for #<a href="http://drupal.org/node/2655888">2655888</a> - Fix version contraint for deploy
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/b7ee6eb">b7ee6eb</a>) Correct recent release of WetKit Core.
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/81e4bb6">81e4bb6</a>) Fixed WetKit Core for Remove patch committed in Field Collection 7.x-1.0-beta11
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/8c862ae">8c862ae</a>) Fixed WetKit Metatag for Update metatag to v1.13 release.
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/35caee3">35caee3</a>) Fixed WetKit Core for #<a href="http://drupal.org/node/2599248">2599248</a> - array_filter() issue after upgrading to 7.x-1.0-beta10
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/904a1f2">904a1f2</a>) Fixed WetKit Metatag for #<a href="http://drupal.org/node/2662962">2662962</a> - Metatag v1.12 release + i18n integration
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/2a2a071">2a2a071</a>) Update changelog.md file.
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/fc99fe0">fc99fe0</a>) #<a href="http://drupal.org/node/2662652">2662652</a> - Drupal Core 7.42 release
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/c887928">c887928</a>) Fixed WetKit WYSIWYG for #<a href="http://drupal.org/node/2662148">2662148</a> - CSS issue with Alerts inside of WYSIWYG
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/ae089a1">ae089a1</a>) Fixed WetKit Deployment for #<a href="http://drupal.org/node/2661268">2661268</a> - Deployment Screen UI Bugs
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/f3f7780">f3f7780</a>) Update changelog.md file.
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/2ab872c">2ab872c</a>) Start work on next release.</p>
 
 <!-- Commits R4.5 -->
 
@@ -856,93 +828,39 @@
       <tr>
           <td><strong>7.x-4.4</strong></td>
           <td><strong>2016-02-01T17:33:06Z</strong></td>
-          <td>Performance:</p>
+          <td>Performance:
+- Block reshash() performance issues (speeds up Beans)</p>
 
-<ul>
-<li>Block reshash() performance issues (speeds up Beans)</li>
-</ul>
+<p>Features:
+- PHP7 fix for migrate module
+- Resolved issue with Bootstrap + Splash pages
+- Further metatag improvements</p>
 
-<p>Features:</p>
-
-<ul>
-<li>PHP7 fix for migrate module</li>
-<li>Resolved issue with Bootstrap + Splash pages</li>
-<li>Further metatag improvements</li>
-</ul>
-
-<p>Fixes:</p>
-
-<ul>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/1be519f">1be519f</a>) Fixed WetKit Metatag for Patch metatag for metatag panels regression.</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/21ed5e8">21ed5e8</a>) Update changelog.md file.</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/1aaeec9">1aaeec9</a>) #<a href="http://drupal.org/node/2411917">2411917</a> - _ block_rehash() performance issue</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/53fad2f">53fad2f</a>) Fixed WetKit Deployment for Workaround for large file entity deployments.</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/1b9999c">1b9999c</a>) Fixed WetKit Admin for #<a href="http://drupal.org/node/2644930">2644930</a> - Navbar link language render to user preference</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/9a9b2cc">9a9b2cc</a>) Update changelog.md file.</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/ba72306">ba72306</a>) Fixed WetKit Language for #<a href="http://drupal.org/node/1967692">1967692</a> - Make a release (i18nviews).</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/961aec9">961aec9</a>) Fixed WetKit Core for Wrong patch for features module for PHP 7 features manage page.</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/a055bff">a055bff</a>) Fixed WetKit Core for #<a href="http://drupal.org/node/2288395">2288395</a> - Manage Features page empty in PHP 7.</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/c86f093">c86f093</a>) Fixed WetKit Migration for #<a href="http://drupal.org/node/2654222">2654222</a> - PHP7 Uniform Variable Syntax.</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/ce68535">ce68535</a>) Fixed WetKit Metatag for Update metatag to 1.11 release for minor bug fixes.</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/255c645">255c645</a>) Fixed WetKit Theme for #<a href="http://drupal.org/node/2658276">2658276</a> - Disable rendering of the mb main link inside the mega menu option gone in 4.0</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/8c0725c">8c0725c</a>) Fixed WetKit Bootstrap for #<a href="http://drupal.org/node/2658276">2658276</a> - Disable rendering of the mb main link inside the mega menu option gone in 4.0</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/622dcf1">622dcf1</a>) Fixed WetKit Admin for #<a href="http://drupal.org/node/2658366">2658366</a> - Content-type names not translated in Navbar</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/45bbc8f">45bbc8f</a>) Fixed WetKit WYSIWYG for #<a href="http://drupal.org/node/2658336">2658336</a> - Body background image being added to wetkit wysiwyg</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/bf345dc">bf345dc</a>) Fixed WetKit Core for #<a href="http://drupal.org/node/2657866">2657866</a> - ctools_context_optional() not usable since &ldquo;Deprecating PHP4 style constructors&rdquo; was commited</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/0c0a2e3">0c0a2e3</a>) Fixed WetKit Bootstrap for #<a href="http://drupal.org/node/2658376">2658376</a> - Splash Pages broken with Bootstrap Update</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/a790cb8">a790cb8</a>) Start work on next release.</li>
-</ul>
+<p>Fixes:
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/1be519f">1be519f</a>) Fixed WetKit Metatag for Patch metatag for metatag panels regression.
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/21ed5e8">21ed5e8</a>) Update changelog.md file.
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/1aaeec9">1aaeec9</a>) #<a href="http://drupal.org/node/2411917">2411917</a> - _ block_rehash() performance issue
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/53fad2f">53fad2f</a>) Fixed WetKit Deployment for Workaround for large file entity deployments.
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/1b9999c">1b9999c</a>) Fixed WetKit Admin for #<a href="http://drupal.org/node/2644930">2644930</a> - Navbar link language render to user preference
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/9a9b2cc">9a9b2cc</a>) Update changelog.md file.
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/ba72306">ba72306</a>) Fixed WetKit Language for #<a href="http://drupal.org/node/1967692">1967692</a> - Make a release (i18nviews).
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/961aec9">961aec9</a>) Fixed WetKit Core for Wrong patch for features module for PHP 7 features manage page.
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/a055bff">a055bff</a>) Fixed WetKit Core for #<a href="http://drupal.org/node/2288395">2288395</a> - Manage Features page empty in PHP 7.
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/c86f093">c86f093</a>) Fixed WetKit Migration for #<a href="http://drupal.org/node/2654222">2654222</a> - PHP7 Uniform Variable Syntax.
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/ce68535">ce68535</a>) Fixed WetKit Metatag for Update metatag to 1.11 release for minor bug fixes.
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/255c645">255c645</a>) Fixed WetKit Theme for #<a href="http://drupal.org/node/2658276">2658276</a> - Disable rendering of the mb main link inside the mega menu option gone in 4.0
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/8c0725c">8c0725c</a>) Fixed WetKit Bootstrap for #<a href="http://drupal.org/node/2658276">2658276</a> - Disable rendering of the mb main link inside the mega menu option gone in 4.0
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/622dcf1">622dcf1</a>) Fixed WetKit Admin for #<a href="http://drupal.org/node/2658366">2658366</a> - Content-type names not translated in Navbar
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/45bbc8f">45bbc8f</a>) Fixed WetKit WYSIWYG for #<a href="http://drupal.org/node/2658336">2658336</a> - Body background image being added to wetkit wysiwyg
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/bf345dc">bf345dc</a>) Fixed WetKit Core for #<a href="http://drupal.org/node/2657866">2657866</a> - ctools_context_optional() not usable since &ldquo;Deprecating PHP4 style constructors&rdquo; was commited
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/0c0a2e3">0c0a2e3</a>) Fixed WetKit Bootstrap for #<a href="http://drupal.org/node/2658376">2658376</a> - Splash Pages broken with Bootstrap Update
+- (Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/a790cb8">a790cb8</a>) Start work on next release.</p>
 
 <!-- Links Referenced -->
 
 <!-- Commits R4.4 -->
 
 <!-- Issues R4.4 -->
-</td>
-      </tr>
-      
-      
-      
-      
-      <tr>
-          <td><strong>7.x-4.3</strong></td>
-          <td><strong>2016-01-25T16:10:17Z</strong></td>
-          <td>Performance Update(s)</p>
-
-<ul>
-<li>Improved caching with Metatag (issue in 1.9)</li>
-</ul>
-
-<p>Features:</p>
-
-<ul>
-<li>Metatag + i18n translate regressions have been addressed as of update to 1.10</li>
-<li>Regression in Code Mirror + CKEditor 4.3+</li>
-<li>PHP7 fix for logging out and _ drupal_session_destroy().</li>
-</ul>
-
-<p>Fixes:</p>
-
-<ul>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/145e6bd">145e6bd</a>) Fixed WetKit WYSIWYG for #<a href="http://drupal.org/node/2654658">2654658</a> - Codemirror incompatible with more recent versions of CKEditor</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/c84a8e1">c84a8e1</a>) Fixed WetKit Test for Switch test from chrome to firefox.</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/f65a038">f65a038</a>) Fixed WetKit Test for Remove debug logic from tests.</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/887bea7">887bea7</a>) Update changelog.md file.</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/99cce5f">99cce5f</a>) #<a href="http://drupal.org/node/2460833">2460833</a> - _ drupal_session_destroy() should return boolean</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/d784bb2">d784bb2</a>) Fixed WetKit Bootstrap for Missing container_class in maintenance pages.</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/e867374">e867374</a>) Update changelog.md file.</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/4e03add">4e03add</a>) Fixed WetKit Deployment for #<a href="http://drupal.org/node/2655888">2655888</a> - Fix version contraint for deploy</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/21cc956">21cc956</a>) Fixed WetKit Metatag for #<a href="http://drupal.org/node/2615858">2615858</a> - Patch metatag for 1.7 release caused metatag translation deletions.</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/95e303d">95e303d</a>) Fixed WetKit Metatag for Minor correction to text.</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/4d25f0b">4d25f0b</a>) Remove Schema correction resolved directly in Workbench Moderation.</li>
-<li>(Commit: <a href="http://drupalcode.org/project/wetkit.git/commit/067bf46">067bf46</a>) Start work for next release.</li>
-</ul>
-
-<!-- Links Referenced -->
-
-<!-- Commits R4.3 -->
-
-<!-- Issues R4.3 -->
 </td>
       </tr>
       
