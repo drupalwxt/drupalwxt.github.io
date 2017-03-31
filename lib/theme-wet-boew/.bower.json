@@ -1,13 +1,12 @@
 {
   "name": "theme-wet-boew",
   "_cacheHeaders": {
-    "ETag": "\"8876bb444816d1e657c2e1584b23bc7cf9d900b6\"",
-    "Content-Length": "163190",
+    "ETag": "\"f82af6636aa93283c462edd52d04cd0d021ff26c\"",
     "Content-Type": "application/x-gzip",
-    "Content-Disposition": "attachment; filename=themes-cdn-4.0.22-theme-wet-boew.tar.gz"
+    "Content-Disposition": "attachment; filename=themes-cdn-4.0.24-theme-wet-boew.tar.gz"
   },
-  "_release": "e-tag:8876bb444",
-  "_source": "https://github.com/wet-boew/themes-cdn/archive/v4.0.22-theme-wet-boew.tar.gz",
+  "_release": "e-tag:f82af6636",
+  "_source": "https://github.com/wet-boew/themes-cdn/archive/v4.0.24-theme-wet-boew.tar.gz",
   "_target": "*",
-  "_originalSource": "https://github.com/wet-boew/themes-cdn/archive/v4.0.22-theme-wet-boew.tar.gz"
+  "_originalSource": "https://github.com/wet-boew/themes-cdn/archive/v4.0.24-theme-wet-boew.tar.gz"
 }

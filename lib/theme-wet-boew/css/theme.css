@@ -2,7 +2,7 @@
 /*!
  * Web Experience Toolkit (WET) / Boîte à outils de l'expérience Web (BOEW)
  * wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licence-fr.html
- * v4.0.22 - 2016-08-11
+ * v4.0.24 - 2017-02-22
  *
  */
 @charset "UTF-8";
@@ -919,7 +919,7 @@ body {
   font-size: 16px;
   line-height: 1.4375;
   color: #333333;
-  background-color: #fff; }
+  background-color: #f9f9f9; }
 
 input,
 button,
@@ -957,7 +957,7 @@ img {
 .img-thumbnail {
   padding: 4px;
   line-height: 1.4375;
-  background-color: #fff;
+  background-color: #f9f9f9;
   border: 1px solid #ddd;
   border-radius: 4px;
   -webkit-transition: all 0.2s ease-in-out;
@@ -1907,7 +1907,7 @@ th {
   .table > tbody + tbody {
     border-top: 2px solid #ddd; }
   .table .table {
-    background-color: #fff; }
+    background-color: #f9f9f9; }
 
 .table-condensed > thead > tr > th,
 .table-condensed > thead > tr > td,
@@ -3283,7 +3283,7 @@ tbody.collapse.in {
         border-color: #eeeeee #eeeeee #ddd; }
     .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
       color: #555555;
-      background-color: #fff;
+      background-color: #f9f9f9;
       border: 1px solid #ddd;
       border-bottom-color: transparent;
       cursor: default; }
@@ -3337,7 +3337,7 @@ tbody.collapse.in {
     .nav-tabs-justified > .active > a, .nav-tabs.nav-justified > .active > a,
     .nav-tabs-justified > .active > a:hover, .nav-tabs.nav-justified > .active > a:hover,
     .nav-tabs-justified > .active > a:focus, .nav-tabs.nav-justified > .active > a:focus {
-      border-bottom-color: #fff; } }
+      border-bottom-color: #f9f9f9; } }
 
 .tab-content > .tab-pane {
   display: none;
@@ -4015,7 +4015,7 @@ a.badge:hover, a.badge:focus {
   padding: 4px;
   margin-bottom: 23px;
   line-height: 1.4375;
-  background-color: #fff;
+  background-color: #f9f9f9;
   border: 1px solid #ddd;
   border-radius: 4px;
   -webkit-transition: border 0.2s ease-in-out;
@@ -5415,6 +5415,13 @@ a {
   text-decoration: underline; }
   a:visited {
     color: #7834bc; }
+  a:not([href]) {
+    color: inherit;
+    text-decoration: none; }
+    a:not([href]):hover, a:not([href]):focus {
+      color: inherit;
+      outline: none;
+      text-decoration: none; }
 
 .btn-default:visited {
   color: #335075; }
@@ -5676,11 +5683,21 @@ fieldset {
   border-top: 1px solid #e5e5e5;
   padding-top: 10px;
   /*
+	 *  Allows fieldSet/legend to have a bottom border under legend title
+	 *	https://github.com/wet-boew/wet-boew/issues/7766
+	 */
+  /*
 	 *	Fieldset/legend as a label for a group of checkboxes or radio buttons
 	 *	https://github.com/wet-boew/wet-boew/issues/5797
 	 */ }
   fieldset:first-child {
     border-top: 0; }
+  fieldset.legend-brdr-bttm {
+    border-top: 0; }
+    fieldset.legend-brdr-bttm legend {
+      border-bottom: 1px solid #e5e5e5;
+      float: none;
+      margin-bottom: 10px; }
   fieldset.chkbxrdio-grp {
     border-top: 0;
     padding-top: 0; }
@@ -5693,6 +5710,7 @@ fieldset {
  *	Pagination
  *	  * Add left/right arrows to previous/next buttons
  *	  * Increase size of the pagination buttons
+ *	  * Prevent contrast ratio issues on active placeholder links
  */
 .pagination > li:first-child [rel="prev"]:before,
 .pager > li:first-child [rel="prev"]:before, [dir=rtl] .pagination [rel="next"]:before,
@@ -5742,6 +5760,9 @@ fieldset {
 .pager > li > span:focus {
   border-color: #bbbfc5;
   color: #335075; }
+
+.pagination > .active {
+  color: #fff; }
 
 /*
  *	Use button border style 'outset' to give buttons depth, except when disabled
@@ -5851,7 +5872,7 @@ caption {
 .wb-menu .sm.open li, .wb-disable .wb-tabs > details, .wb-disable .wb-tabs > .tabpanels > details {
   display: block; }
 
-.wb-disable .mfp-hide, .wb-disable #wb-srch, .wb-disable #wb-sm, .wb-disable #wb-sec, .wb-disable #wb-info, .wb-disable .wb-overlay, .wb-disable .wb-tabs > details[open] > summary, .wb-disable .wb-tabs > .tabpanels > details[open] > summary {
+.wb-disable .mfp-hide, .wb-disable #wb-srch, .wb-disable #wb-sm, .wb-disable #wb-sec, .wb-disable #wb-info, .wb-disable .wb-overlay {
   display: block !important; }
 
 .wb-menu .menu > li a, .wb-menu .menu > li a:hover, .wb-menu .menu > li a:focus, .wb-menu .active > a {
@@ -6001,7 +6022,7 @@ q:before, q:after {
   WET-BOEW
   @title: Ellipsis
  */
-.gc-elps {
+.wb-elps {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap; }
@@ -6474,6 +6495,12 @@ q:before, q:after {
 
 .opct-10 {
   opacity: .1; }
+
+/*
+ *	Removes bold from elements
+ */
+.fnt-nrml {
+  font-weight: normal; }
 
 /*
  *	Fix for missing bullets in Chrome and Safari
@@ -7437,11 +7464,20 @@ img.mfp-img {
   outline: 1px dotted #fff;
   outline-offset: -2px; }
 
+body.wb-modal > #wb-tphp,
+body.wb-modal > header,
+body.wb-modal > main,
+body.wb-modal > footer, body.wb-modal summary {
+  visibility: hidden !important; }
+
 .lbx-hide-gal li {
   display: none;
   list-style-type: none; }
   .lbx-hide-gal li:first-child {
     display: block; }
+
+body.wb-modal .modal-dialog summary {
+  visibility: visible !important; }
 
 .modal-dialog {
   left: auto;
@@ -7639,7 +7675,7 @@ img.mfp-img {
 
 .wb-mltmd video, .wb-mltmd object,
 .wb-mltmd iframe {
-  margin-bottom: -7px;
+  display: block;
   width: 100%; }
 
 .wb-mm-cc {
@@ -7670,8 +7706,10 @@ img.mfp-img {
     text-align: center; }
   .wb-mltmd.video.playing .errmsg {
     display: none; }
-  .wb-mltmd.video.waiting .display:before, .wb-mltmd.video.waiting .display:after {
-    display: block; }
+  .wb-mltmd.video.waiting .display {
+    position: relative; }
+    .wb-mltmd.video.waiting .display:before, .wb-mltmd.video.waiting .display:after {
+      display: block; }
   .wb-mltmd.audio object {
     position: absolute; }
   .wb-mltmd video {
@@ -7877,7 +7915,8 @@ img.mfp-img {
   left: 0;
   margin: auto;
   right: 0;
-  top: 0; }
+  top: 0;
+  width: 90%; }
 
 .wb-popup-full {
   height: 100%;
@@ -7894,7 +7933,7 @@ img.mfp-img {
 .overlay-def {
   overflow-y: auto; }
   .overlay-def header {
-    background-color: #000;
+    background-color: #2e5274;
     color: #fff;
     display: block;
     padding: 0 44px 0 1em; }
@@ -7903,6 +7942,8 @@ img.mfp-img {
     padding: 10px 0; }
   .overlay-def.wb-bar-t, .overlay-def.wb-bar-b {
     background-color: #000; }
+    .overlay-def.wb-bar-t header, .overlay-def.wb-bar-b header {
+      background-color: #000; }
   .overlay-def .mfp-close {
     color: #fff; }
 
@@ -8401,8 +8442,35 @@ table.dataTable {
   right: 0;
   z-index: 101; }
 
-.wb-tabs.carousel-s1 [role="tabpanel"] a, .wb-tabs.carousel-s1 figcaption a, .wb-tabs.carousel-s2 [role="tabpanel"] a, .wb-tabs.carousel-s2 figcaption a {
+.wb-tabs.carousel-s1 [role="tabpanel"] a figure::before, .wb-tabs.carousel-s2 [role="tabpanel"] a figure::before, .wb-tabs.carousel-s1 [role="tabpanel"] a figure::after, .wb-tabs.carousel-s2 [role="tabpanel"] a figure::after {
+  content: "";
+  outline: inherit;
+  position: absolute; }
+
+.wb-tabs.carousel-s1 [role="tabpanel"] a, .wb-tabs.carousel-s2 [role="tabpanel"] a {
+  color: #000;
+  outline-offset: 0; }
+  .wb-tabs.carousel-s1 [role="tabpanel"] a figure, .wb-tabs.carousel-s2 [role="tabpanel"] a figure {
+    outline: inherit; }
+    .wb-tabs.carousel-s1 [role="tabpanel"] a figure::before, .wb-tabs.carousel-s2 [role="tabpanel"] a figure::before {
+      height: calc(100% - 4px);
+      margin: 2px;
+      outline-color: #FFF;
+      width: calc(100% - 4px); }
+    .wb-tabs.carousel-s1 [role="tabpanel"] a figure::after, .wb-tabs.carousel-s2 [role="tabpanel"] a figure::after {
+      height: calc(100% - 2px);
+      margin: 1px;
+      top: 0;
+      width: calc(100% - 2px); }
+  .wb-tabs.carousel-s1 [role="tabpanel"] a figcaption, .wb-tabs.carousel-s2 [role="tabpanel"] a figcaption {
+    color: #fff;
+    text-decoration: underline; }
+
+.wb-tabs.carousel-s1 [role="tabpanel"] figure a, .wb-tabs.carousel-s2 [role="tabpanel"] figure a {
   color: #fff; }
+
+.wb-tabs.carousel-s1 video:focus, .wb-tabs.carousel-s2 video:focus {
+  outline-offset: -1px; }
 
 .wb-tabs.carousel-s2 [role="tablist"] > li.prv, .wb-tabs.carousel-s2 [role="tablist"] > li.nxt {
   background: none;
@@ -8517,7 +8585,7 @@ table.dataTable {
         line-height: normal; }
         .wb-tabs [role="tablist"] > li.tab-count > div {
           position: relative;
-          top: .4em; }
+          top: 0; }
         .wb-tabs [role="tablist"] > li.tab-count .curr-count {
           font-size: 1.5em; }
         .wb-tabs [role="tablist"] > li.tab-count:focus, .wb-tabs [role="tablist"] > li.tab-count:hover {
@@ -8547,14 +8615,11 @@ table.dataTable {
       .wb-tabs.carousel-s1 [role="tablist"] > li.tab-count {
         background: none;
         border: 0;
-        font-size: .9em; }
-        .wb-tabs.carousel-s1 [role="tablist"] > li.tab-count > div {
-          top: .7em; }
+        font-size: .9em;
+        padding: 0 .1em;
+        top: .55em; }
         .wb-tabs.carousel-s1 [role="tablist"] > li.tab-count.active, .wb-tabs.carousel-s1 [role="tablist"] > li.tab-count:focus, .wb-tabs.carousel-s1 [role="tablist"] > li.tab-count:hover {
-          cursor: default;
-          top: 0; }
-      .wb-tabs.carousel-s1 [role="tablist"] > li.active, .wb-tabs.carousel-s1 [role="tablist"] > li:focus, .wb-tabs.carousel-s1 [role="tablist"] > li:hover {
-        top: 1px; }
+          cursor: default; }
   .wb-tabs.carousel-s2 {
     background: #eee; }
     .wb-tabs.carousel-s2.wb-init {
@@ -8581,10 +8646,18 @@ table.dataTable {
             margin-right: .65em;
             margin-top: .4em;
             padding: 8px 10px 4px; }
+      .wb-tabs.carousel-s2 [role="tablist"] a:focus {
+        outline-offset: 0; }
 
 .wb-disable .csstransitions .wb-tabs [role="tabpanel"].out {
   position: static;
   width: auto; }
+
+.wb-disable .wb-tabs > details[open] > summary {
+  display: list-item !important; }
+
+.wb-disable .wb-tabs > .tabpanels > details[open] > summary {
+  display: list-item !important; }
 
 .wb-disable .wb-tabs [role="tablist"] {
   display: none; }
@@ -8926,6 +8999,8 @@ datalist {
  */
 summary {
   display: list-item !important;
+  list-style-type: none;
+  list-style-type: disclosure-closed;
   visibility: visible !important; }
 
 details:not([open]) details summary, details .out details summary {
@@ -8950,6 +9025,7 @@ details {
       border-bottom: 1px solid #ddd;
       border-bottom-left-radius: 0;
       border-bottom-right-radius: 0;
+      list-style-type: disclosure-open;
       margin-bottom: .25em; }
   details:not([open]) {
     visibility: hidden; }
@@ -8964,7 +9040,7 @@ details {
 
 .wb-disable details {
   visibility: visible !important; }
-  .wb-disable details > * {
+  .wb-disable details > *:not(summary) {
     display: block !important; }
 
 /*
@@ -8989,6 +9065,8 @@ details {
   .mathml body > div > math,
   .no-mathml body > div > math, .nojs-show, .wb-disable .nojs-hide {
     display: none !important; }
+  main {
+    background-color: #fff; }
   /* Hide MathML check */
   #wb-dtmd {
     margin: 2em 0 0; }
@@ -9068,6 +9146,8 @@ details {
   /**
  * Mobile-friendly styles
  */
+  .wb-tabs.carousel-s1, .wb-tabs.carousel-s2 {
+    border: 0; }
   .wb-tabs > details, .wb-tabs > .tabpanels > details {
     border: 0;
     border-bottom: #ccc solid 1px;
@@ -9257,6 +9337,16 @@ details {
       border-width: 10px;
       margin-bottom: 1px;
       padding: 0; }
+      .wb-tabs.carousel-s2.show-thumbs [role="tablist"] li.active a:focus::before {
+        content: "";
+        height: calc(100% - 6px);
+        left: 0;
+        margin: 2px;
+        outline: inherit;
+          outline-color: #FFF;
+        position: absolute;
+        top: 0;
+        width: calc(100% - 4px); }
     .wb-tabs.carousel-s2.show-thumbs [role="tablist"] li[role="presentation"] {
       display: inline-block; }
       .wb-tabs.carousel-s2.show-thumbs [role="tablist"] li[role="presentation"] img {
@@ -9419,6 +9509,8 @@ details {
     page-break-after: always; }
   a[href]:after {
     content: none; }
+  #wb-tphp {
+    display: none; }
   /*
   WET-BOEW
   @title: Breadcrumb print CSS overrides
@@ -9506,7 +9598,7 @@ details {
     .wb-tabs [role="tabpanel"] figcaption {
       position: static; }
     .wb-tabs [role="tabpanel"] summary {
-      display: block !important; } }
+      display: list-item !important; } }
 
 /*
  Banner
@@ -9619,7 +9711,6 @@ details {
  Main Element
  */
 main {
-  background: #fff;
   padding-bottom: 2em; }
 
 #wb-cont {
@@ -9643,7 +9734,8 @@ main {
   color: #000; }
 
 #wb-sm {
-  background: #0e4164; }
+  background: #0e4164;
+  color: #fff; }
   #wb-sm .menu {
     margin-bottom: 0;
     text-shadow: 1px 1px 1px #666; }
@@ -9676,16 +9768,19 @@ main {
     display: none; }
 
 #mb-pnl .lng-ofr, #mb-pnl .srch-pnl, #mb-pnl .sm-pnl {
-  background: #0e4164; }
+  background: #0e4164;
+  color: #fff; }
 
 #mb-pnl.modal-content {
   background: #193451; }
 
 #mb-pnl .modal-header {
+  background: #2e5274;
   border: 0;
   border-bottom: 1px solid #072337;
   -webkit-box-shadow: 0 3px 3px -2px rgba(0, 0, 0, 0.3), 3px 3px 3px -2px rgba(0, 0, 0, 0.3), -3px 3px 3px -2px rgba(0, 0, 0, 0.3);
-          box-shadow: 0 3px 3px -2px rgba(0, 0, 0, 0.3), 3px 3px 3px -2px rgba(0, 0, 0, 0.3), -3px 3px 3px -2px rgba(0, 0, 0, 0.3); }
+          box-shadow: 0 3px 3px -2px rgba(0, 0, 0, 0.3), 3px 3px 3px -2px rgba(0, 0, 0, 0.3), -3px 3px 3px -2px rgba(0, 0, 0, 0.3);
+  color: #fff; }
 
 #mb-pnl .modal-body {
   background: #193451;
@@ -9795,11 +9890,7 @@ main {
   /*
   WET-BOEW
   @title: All screen views
- */
-  body {
-    background: #f9f9f9; }
-  .overlay-def .modal-header {
-    background: #2e5274; } }
+ */ }
 
 /* Extra-small view and under */
 @media screen and (max-width: 767px) {
