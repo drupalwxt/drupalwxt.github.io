@@ -1,0 +1,13 @@
+{
+  "name": "theme-gcweb",
+  "_cacheHeaders": {
+    "ETag": "\"dc835e813cb8b7b7a393ae8ca0fa864b81ef34a8\"",
+    "Content-Length": "533862",
+    "Content-Type": "application/x-gzip",
+    "Content-Disposition": "attachment; filename=themes-cdn-4.0.24-gcweb.tar.gz"
+  },
+  "_release": "e-tag:dc835e813",
+  "_source": "https://github.com/wet-boew/themes-cdn/archive/v4.0.24-gcweb.tar.gz",
+  "_target": "*",
+  "_originalSource": "https://github.com/wet-boew/themes-cdn/archive/v4.0.24-gcweb.tar.gz"
+}

@@ -7,14 +7,12 @@
 <!--<![endif]-->
 <head>
     <meta charset="utf-8">
-    
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
     <title>
         
         Nginx and PHP-FPM
         
     </title>
-    
     <!--[if gte IE 9 | !IE ]><!-->
     <link href="http://drupalwxt.github.io/lib/wet-boew/assets/images/favicon.ico" rel="icon" type="image/x-icon" />
     <link rel="stylesheet" href="http://drupalwxt.github.io/lib/theme-wet-boew/css/theme.min.css" />
@@ -35,216 +33,230 @@
 <link rel="shortcut icon" href="http://drupalwxt.github.io/assets/images/favicon.ico">
 
     
-    <link rel="stylesheet" href="//yandex.st/highlightjs/8.0/styles/monokai.min.css">
-    <link rel="stylesheet" href="http://drupalwxt.github.io/css/styles.css">
-    <link rel="stylesheet" href="http://drupalwxt.github.io/css/custom.css">
-    
-    <link rel="shortcut icon" href="http://drupalwxt.github.io/assets/images/favicon.ico">
-    
-    <link rel="alternate" type="application/rss+xml" title="RSS" href="http://drupalwxt.github.io/index.xml">
+<link rel="stylesheet" href="//yandex.st/highlightjs/8.0/styles/monokai.min.css">
+<link rel="stylesheet" href="http://drupalwxt.github.io/css/styles.css">
+<link rel="stylesheet" href="http://drupalwxt.github.io/css/custom.css">
+
+<link rel="shortcut icon" href="http://drupalwxt.github.io/assets/images/favicon.ico">
+
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://drupalwxt.github.io/index.xml">
+
 </head>
 <body vocab="http://schema.org/" typeof="WebPage">
     <ul id="wb-tphp">
-        <li class="wb-slc">
-            <a class="wb-sl" href="#wb-cont">Skip to main content</a>
-        </li>
-        <li class="wb-slc visible-sm visible-md visible-lg">
-            <a class="wb-sl" href="#wb-info">Skip to "About this site"</a>
-        </li>
-    </ul>
+    <li class="wb-slc">
+        <a class="wb-sl" href="#wb-cont">Skip to main content</a>
+    </li>
+    <li class="wb-slc visible-sm visible-md visible-lg">
+        <a class="wb-sl" href="#wb-info">Skip to "About this site"</a>
+    </li>
+</ul>
+
     <header role="banner">
+    
         <div id="wb-bnr">
-            <div id="wb-bar">
-                <div class="container">
-                    <div class="row">
-                        <section id="wb-lng" class="visible-md visible-lg">
-                            <h2>Language selection</h2>
-                            <ul class="text-right">
-                                <li class="curr">English&#32;<span>(current)</span>
-                                </li>
-                            </ul>
-                        </section>
-                        <section class="wb-mb-links col-xs-12 visible-sm visible-xs" id="wb-glb-mn">
-                            <h2>Search and menus</h2>
-                            <ul class="pnl-btn list-inline text-right">
-                                <li><a href="#mb-pnl" title="Search and menus" aria-controls="mb-pnl" class="overlay-lnk btn btn-sm btn-default" role="button"><span class="glyphicon glyphicon-search"><span class="glyphicon glyphicon-th-list"><span class="wb-inv">Search and menus</span></span></span></a>
-                                </li>
-                            </ul>
-                            <div id="mb-pnl"></div>
-                        </section>
-                    </div>
-                </div>
-            </div>
+        <div id="wb-bar">
             <div class="container">
                 <div class="row">
-                    <div id="wb-sttl" class="col-md-8">
-                        <a href="http://drupalwxt.github.io">
-                            <object type="image/svg+xml" tabindex="-1" data="http://drupalwxt.github.io/assets/images/logo.svg"></object>
-                            <span>Drupal WxT<span class="wb-inv">, </span><small>Documentation Site for Drupal WxT</small>
-                            </span>
-                        </a>
-                    </div>
-                    <section id="wb-srch" class="col-md-4 visible-md visible-lg">
-                        <h2>Search</h2>
-                        <form action="https://google.ca/search" method="get" role="search" class="form-inline">
-                            <div class="form-group">
-                                <label for="wb-srch-q">Search website</label>
-                                <input id="wb-srch-q" class="form-control" name="q" type="search" value="" size="27" maxlength="150">
-                                <input type="hidden" name="q" value="site:drupalwxt.github.io OR site:github.com/wet-boew/wet-boew-drupal">
-                            </div>
-                            <button type="submit" id="wb-srch-sub" class="btn btn-default">Search</button>
-                        </form>
+                   <section id="wb-lng" class="visible-md visible-lg text-right">
+    
+    <h2 class="wb-inv">Language selection</h2>
+    <ul class="text-right">
+        <li class="curr">English</li>
+    </ul>
+    
+</section>
+
+                    <section class="wb-mb-links col-xs-12 visible-sm visible-xs" id="wb-glb-mn">
+                        <h2>Search and menus</h2>
+                        <ul class="pnl-btn list-inline text-right">
+                            <li>
+                                <a href="#mb-pnl" title="Search and menus" aria-controls="mb-pnl" class="overlay-lnk btn btn-sm btn-default" role="button">
+                                    <span class="glyphicon glyphicon-search">
+                                        <span class="glyphicon glyphicon-th-list">
+                                        <span class="wb-inv">Search and menus</span>
+                                    </span>
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
+                        <div id="mb-pnl"></div>
                     </section>
                 </div>
             </div>
         </div>
-        <nav role="navigation" id="wb-sm" data-trgt="mb-pnl" class="wb-menu visible-md visible-lg" typeof="SiteNavigationElement">
-            <div class="container nvbar">
-                <h2>Topics menu</h2>
-                <div class="row">
-                    <ul class="list-inline menu">
-                        
-                        
-                        
-                        <li class="">
-                        <a href="#" class="item">
-                            
-                            <span>WxT</span>
-                        </a>
-                        <ul class="sm list-unstyled" role="menu">
-                            
-                            <li><a href="/wxt/releases/"> Releases for WxT</a></li>
-                            
-                            <li><a href="/wxt/make/"> Makefiles for WxT</a></li>
-                            
-                            <li><a href="/wxt/modules/"> Modules for WxT</a></li>
-                            
-                            <li><a href="/wxt/working-examples/"> Working Examples</a></li>
-                            
-                            <li><a href="/wxt/"> All WxT Entries</a></li>
-                            
-                        </ul>
-                        
-                        </li>
-                        
-                        
-                        <li class="">
-                        <a href="#" class="item">
-                            
-                            <span>Architecture</span>
-                        </a>
-                        <ul class="sm list-unstyled" role="menu">
-                            
-                            <li><a href="/architecture/deployment/"> Content Staging</a></li>
-                            
-                            <li><a href="/architecture/drush-make/"> Drush Make &#43; Site Install</a></li>
-                            
-                            <li><a href="/architecture/libraries-api/"> Libraries API</a></li>
-                            
-                            <li><a href="/architecture/release-cycle/"> Release Cycle / Updates</a></li>
-                            
-                            <li><a href="/architecture/"> All Architecture Entries</a></li>
-                            
-                        </ul>
-                        
-                        </li>
-                        
-                        
-                        <li class="">
-                        <a href="#" class="item">
-                            
-                            <span>Community</span>
-                        </a>
-                        <ul class="sm list-unstyled" role="menu">
-                            
-                            <li><a href="/community/office-hours/"> Office Hours</a></li>
-                            
-                            <li><a href="/community/roadmap/"> Roadmap</a></li>
-                            
-                            <li><a href="/community/"> All Community Entries</a></li>
-                            
-                        </ul>
-                        
-                        </li>
-                        
-                        
-                        <li>
-                        <a class="" href="/post/">
-                            
-                            <span>Blog</span>
-                        </a>
-                        
-                        </li>
-                        
-                        
-                        <li>
-                        <a class="" href="/performance/">
-                            
-                            <span>Performance</span>
-                        </a>
-                        
-                        </li>
-                        
-
-                        
-                        
-                        
-                    </ul>
+        <div class="container">
+            <div class="row">
+                <div id="wb-sttl" class="col-md-8">
+                    <a href="http://drupalwxt.github.io">
+                        <object type="image/svg+xml" tabindex="-1" data="http://drupalwxt.github.io/assets/images/logo.svg"></object>
+                        <span>Drupal WxT<span class="wb-inv">, </span><small>Documentation Site for Drupal WxT</small>
+                        </span>
+                    </a>
                 </div>
+                <section id="wb-srch" class="col-md-4 visible-md visible-lg">
+                    <h2>Search</h2>
+                    <form action="https://google.ca/search" method="get" role="search" class="form-inline">
+                        <div class="form-group">
+                            <label for="wb-srch-q">Search website</label>
+                            <input id="wb-srch-q" class="form-control" name="q" type="search" value="" size="27" maxlength="150">
+                            <input type="hidden" name="q" value="site:drupalwxt.github.io OR site:github.com/wet-boew/wet-boew-drupal">
+                        </div>
+                        <button type="submit" id="wb-srch-sub" class="btn btn-default">Search</button>
+                    </form>
+                </section>
             </div>
-        </nav>
-        <nav role="navigation" id="wb-bc" property="breadcrumb">
-            <h2>You are here:</h2>
-            <div class="container">
-                <div class="row">
-                    
-                    
-                    <ol class="breadcrumb">
-                      <li><a href="http://drupalwxt.github.io">Home</a></li>
-                      
-                        
-                          
-                      
-                        
-                          
-                            
-                          
-                          
-                      
-                        
-                          
-                            
-                          
-                          
-                      
-                        
-                          
-                      
-                      <li>Nginx and PHP-FPM</li>
-                    </ol>
-                </div>
-            </div>
-        </nav>
-    </header>
-    <main role="main" property="mainContentOfPage" class="container">
+        </div>
+</div>
 
-<div class="row">
-    <div class="col-md-12">
-        <article class="post">
-            <header>
-                <h1 id="wb-cont" property="name">
-                    Nginx and PHP-FPM
-                </h1>
-                <div class="post-date mrgn-bttm-md text-muted text-right small">
-                    <span class="glyphicon glyphicon-calendar"></span>
-                    <time datetime="2015-08-04">
-                        2015-08-04
-                    </time>
-                </div>
-                <div class="wb-share mrgn-bttm-md text-muted text-right small" data-wb-share='{" pnlId": "pnl1"}'></div>
-            </header>
-            <div class="post-content">
+    
+    <nav role="navigation" id="wb-sm" data-trgt="mb-pnl" class="wb-menu visible-md visible-lg" typeof="SiteNavigationElement">
+    <div class="container nvbar">
+        <h2>Topics menu</h2>
+        <div class="row">
+            <ul class="list-inline menu">
                 
+                
+                
+                <li class="">
+                <a href="#" class="item">
+                    
+                    <span>WxT</span>
+                </a>
+                <ul class="sm list-unstyled" role="menu">
+                    
+                    <li><a href="/wxt/releases/"> Releases for WxT</a></li>
+                    
+                    <li><a href="/wxt/make/"> Makefiles for WxT</a></li>
+                    
+                    <li><a href="/wxt/modules/"> Modules for WxT</a></li>
+                    
+                    <li><a href="/wxt/working-examples/"> Working Examples</a></li>
+                    
+                    <li><a href="/wxt/"> All WxT Entries</a></li>
+                    
+                </ul>
+                
+                </li>
+                
+                
+                <li class="">
+                <a href="#" class="item">
+                    
+                    <span>Architecture</span>
+                </a>
+                <ul class="sm list-unstyled" role="menu">
+                    
+                    <li><a href="/architecture/deployment/"> Content Staging</a></li>
+                    
+                    <li><a href="/architecture/drush-make/"> Drush Make &#43; Site Install</a></li>
+                    
+                    <li><a href="/architecture/libraries-api/"> Libraries API</a></li>
+                    
+                    <li><a href="/architecture/release-cycle/"> Release Cycle / Updates</a></li>
+                    
+                    <li><a href="/architecture/"> All Architecture Entries</a></li>
+                    
+                </ul>
+                
+                </li>
+                
+                
+                <li class="">
+                <a href="#" class="item">
+                    
+                    <span>Community</span>
+                </a>
+                <ul class="sm list-unstyled" role="menu">
+                    
+                    <li><a href="/community/office-hours/"> Office Hours</a></li>
+                    
+                    <li><a href="/community/roadmap/"> Roadmap</a></li>
+                    
+                    <li><a href="/community/"> All Community Entries</a></li>
+                    
+                </ul>
+                
+                </li>
+                
+                
+                <li>
+                <a class="" href="/post/">
+                    
+                    <span>Blog</span>
+                </a>
+                
+                </li>
+                
+                
+                <li>
+                <a class="" href="/performance/">
+                    
+                    <span>Performance</span>
+                </a>
+                
+                </li>
+                
+                
+                
+                
+            </ul>
+        </div>
+    </div>
+</nav>
+
+    <nav role="navigation" id="wb-bc" property="breadcrumb">
+    <h2>You are here:</h2>
+    <div class="container">
+        <div class="row">
+            
+            
+            <ol class="breadcrumb">
+                <li><a href="http://drupalwxt.github.io">Home</a></li>
+                  
+                    
+                      
+                  
+                    
+                      
+                        
+                      
+                      
+                  
+                    
+                      
+                        
+                      
+                      
+                  
+                    
+                      
+                  
+                <li>Nginx and PHP-FPM</li>
+            </ol>
+        </div>
+    </div>
+</nav>
+
+</header>
+
+    <main role="main" property="mainContentOfPage" class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <article class="post">
+                <header>
+                    <h1 id="wb-cont" property="name">
+                        Nginx and PHP-FPM
+                    </h1>
+                    <div class="post-date mrgn-bttm-md text-muted text-right small">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                        <time datetime="2015-08-04">
+                            2015-08-04
+                        </time>
+                    </div>
+                </header>
+                <div class="post-content">
+                    
 
 <div class="alert alert-info">
   <h4>Important</h4>
@@ -330,255 +342,256 @@ pm.max_requests         (high to prevent server respwan)
 
 <!-- Links Referenced -->
 
-            </div>
-            <aside>
-                
-                <ul class="list-inline post-tags">
+                </div>
+                <aside>
                     
-                    <li>
-                        <a href="http://drupalwxt.github.io/tags/performance">
-                            <i class="fa fa-tags"></i>
-                            performance
-                        </a>
-                    </li>
-                    
-                </ul>
-                
-                
-                <h3>Related Post</h3>
-                <ul class="post-rels">
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    <li><a href="http://drupalwxt.github.io/performance/apache-fpm/">Apache and PHP-FPM</a></li>
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    <li><a href="http://drupalwxt.github.io/performance/code-quality/">Code Quality</a></li>
-                    
-                    
-                    
-                    
-                    
-                    <li><a href="http://drupalwxt.github.io/performance/profiling/">Profiling with XHProf &#43; XHGui</a></li>
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    <li><a href="http://drupalwxt.github.io/performance/databases/">Databases</a></li>
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    <li><a href="http://drupalwxt.github.io/performance/memcached/">Memcached</a></li>
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    <li><a href="http://drupalwxt.github.io/performance/varnish/">Varnish</a></li>
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                </ul>
-            </aside>
-            
-            
-            <footer>
-                <nav>
-                    <ul class="pager">
+                    <ul class="list-inline post-tags">
                         
-                        <li class="previous"><a href="http://drupalwxt.github.io/performance/apache-fpm/"><span aria-hidden="true">&larr;</span> Older</a></li>
-                        
-
-                        
-                        <li class="next"><a href="http://drupalwxt.github.io/architecture/libraries-api/">Newer <span aria-hidden="true">&rarr;</span></a></li>
+                        <li>
+                            <a href="http://drupalwxt.github.io/tags/performance">
+                                <i class="fa fa-tags"></i>
+                                performance
+                            </a>
+                        </li>
                         
                     </ul>
-                </nav>
-                
-                
+                    
+                    <h3>Related Post</h3>
+                    <ul class="post-rels">
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        <li><a href="http://drupalwxt.github.io/performance/apache-fpm/">Apache and PHP-FPM</a></li>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        <li><a href="http://drupalwxt.github.io/performance/code-quality/">Code Quality</a></li>
+                        
+                        
+                        
+                        
+                        
+                        <li><a href="http://drupalwxt.github.io/performance/profiling/">Profiling with XHProf &#43; XHGui</a></li>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        <li><a href="http://drupalwxt.github.io/performance/databases/">Databases</a></li>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        <li><a href="http://drupalwxt.github.io/performance/memcached/">Memcached</a></li>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        <li><a href="http://drupalwxt.github.io/performance/varnish/">Varnish</a></li>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                    </ul>
+                    
+                </aside>
+                <footer>
+                    <div class="wb-share text-right" data-wb-share='{"pnlId": "pnl6", "lnkClass": "btn btn-default"}'></div>
 
-            </footer>
-        </article>
+                    <nav>
+    <ul class="pager">
+        
+        <li class="previous"><a href="http://drupalwxt.github.io/performance/apache-fpm/"><span aria-hidden="true">&larr;</span> Older</a></li>
+        
+        
+        <li class="next"><a href="http://drupalwxt.github.io/architecture/libraries-api/">Newer <span aria-hidden="true">&rarr;</span></a></li>
+        
+    </ul>
+</nav>
+
+                    
+
+                </footer>
+            </article>
+        </div>
     </div>
-</div>
     
-    <dl id="wb-dtmd">
-        <dt>Date modified:&#32;</dt>
-        <dd>
-            <time property="dateModified">2015-08-04</time>
-        </dd>
-    </dl>
+<dl id="wb-dtmd">
+    <dt>Date modified:&#32;</dt>
+    <dd>
+        <time property="dateModified">2015-08-04</time>
+    </dd>
+</dl>
+
+
+    </main>
     
-</main>
-<footer role="contentinfo" id="wb-info" class="visible-sm visible-md visible-lg wb-navcurr">
+  <footer role="contentinfo" id="wb-info" class="visible-sm visible-md visible-lg wb-navcurr">
     <div class="container">
         <nav role="navigation" class="row">
             <h2>About this site</h2>
@@ -606,12 +619,14 @@ pm.max_requests         (high to prevent server respwan)
             <section class="col-sm-3">
                 <h3>Stay connected</h3>
                 <ul class="list-unstyled">
-                    <li><a href="https://twitter.com/WebExpToolkit">Twitter</a></li>
+                    <li><a href="https://twitter.com/">Twitter</a></li>
                 </ul>
             </section>
         </nav>
     </div>
 </footer>
+
+
 <!--[if gte IE 9 | !IE ]><!-->
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
 	<script src="http://wet-boew.github.io/wet-boew/js/wet-boew.min.js"></script>
@@ -630,6 +645,6 @@ ga('create', 'XXXX-XXXX-XXXX', 'auto');
 ga('send', 'pageview');
 </script>
 
+
 </body>
 </html>
-
