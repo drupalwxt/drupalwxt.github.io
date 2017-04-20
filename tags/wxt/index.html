@@ -127,13 +127,35 @@
                     
                     <li><a href="/wxt/releases/"> Releases for WxT</a></li>
                     
-                    <li><a href="/wxt/make/"> Makefiles for WxT</a></li>
+                    <li><a href="/wxt/make/"> Makefiles for WxT (D7)</a></li>
                     
-                    <li><a href="/wxt/modules/"> Modules for WxT</a></li>
+                    <li><a href="/wxt/modules/"> Modules for WxT (D7)</a></li>
                     
-                    <li><a href="/wxt/working-examples/"> Working Examples</a></li>
+                    <li><a href="/wxt/working-examples/"> Working Examples (D7)</a></li>
                     
                     <li><a href="/wxt/"> All WxT Entries</a></li>
+                    
+                </ul>
+                
+                </li>
+                
+                
+                <li class="">
+                <a href="#" class="item">
+                    
+                    <span>Workflow (D8)</span>
+                </a>
+                <ul class="sm list-unstyled" role="menu">
+                    
+                    <li><a href="/workflow/composer/"> Composer for Drupal 8</a></li>
+                    
+                    <li><a href="/workflow/faq/"> Frequently Asked Questions</a></li>
+                    
+                    <li><a href="/workflow/tips/"> Tips and Tricks</a></li>
+                    
+                    <li><a href="/workflow/wxt/"> WxT Workflow</a></li>
+                    
+                    <li><a href="/workflow/"> All Workflow Entries</a></li>
                     
                 </ul>
                 
@@ -155,25 +177,9 @@
                     
                     <li><a href="/architecture/release-cycle/"> Release Cycle / Updates</a></li>
                     
+                    <li><a href="/architecture/roadmap/"> Roadmap</a></li>
+                    
                     <li><a href="/architecture/"> All Architecture Entries</a></li>
-                    
-                </ul>
-                
-                </li>
-                
-                
-                <li class="">
-                <a href="#" class="item">
-                    
-                    <span>Community</span>
-                </a>
-                <ul class="sm list-unstyled" role="menu">
-                    
-                    <li><a href="/community/office-hours/"> Office Hours</a></li>
-                    
-                    <li><a href="/community/roadmap/"> Roadmap</a></li>
-                    
-                    <li><a href="/community/"> All Community Entries</a></li>
                     
                 </ul>
                 
@@ -184,15 +190,6 @@
                 <a class="" href="/post/">
                     
                     <span>Blog</span>
-                </a>
-                
-                </li>
-                
-                
-                <li>
-                <a class="" href="/performance/">
-                    
-                    <span>Performance</span>
                 </a>
                 
                 </li>
@@ -246,7 +243,7 @@
             
             <article class="post">
     <header>
-        <h2><a href="http://drupalwxt.github.io/wxt/working-examples/">Working Examples</a></h2>
+        <h2><a href="http://drupalwxt.github.io/wxt/working-examples/">Working Examples (D7)</a></h2>
         <div class="post-date text-muted">
             <span class="glyphicon glyphicon-calendar"></span>
             <time datetime="2015-01-13">
@@ -270,7 +267,50 @@ Note: This list does not represent the full capabilities of the Drupal WxT platf
             
             <article class="post">
     <header>
-        <h2><a href="http://drupalwxt.github.io/wxt/media/">Media Library - Images, Videos and Documents</a></h2>
+        <h2><a href="http://drupalwxt.github.io/workflow/composer/">Composer workflow for Drupal 8</a></h2>
+        <div class="post-date text-muted">
+            <span class="glyphicon glyphicon-calendar"></span>
+            <time datetime="2017-04-18">
+                2017-04-18 - 5M TO READ
+            </time>
+        </div>
+    </header>
+    <div class="post-content">
+        Note: The following guide is largely meant for Drupal 8 WxT installations.
+ Overview WxT strictly adheres to a Composer-based workflow and tries to follow the best practices laid out by the broader Drupal community. For more information on the benefits of this workflow please consult the official documentation provided in the link below:
+ Using composer to manage Drupal  Composer also helps facilitate a more security oriented approach whether packaging or deploying a site.
+    </div>
+    
+    <footer class="read-more-link">
+        <a href="http://drupalwxt.github.io/workflow/composer/" class="btn btn-default">Read More...</a>
+    </footer>
+    
+</article>
+<hr>
+
+            
+            <article class="post">
+    <header>
+        <h2><a href="http://drupalwxt.github.io/workflow/resources/">Resources for WxT</a></h2>
+        <div class="post-date text-muted">
+            <span class="glyphicon glyphicon-calendar"></span>
+            <time datetime="2017-04-18">
+                2017-04-18 - 1M TO READ
+            </time>
+        </div>
+    </header>
+    <div class="post-content">
+         This page simply provides all the relevant WxT related links in a logical fashion.
+Composer Project Generator  Composer template for WxT projects   Instantiated Composer Projects (WxT)  WxT Open Data  Installation Profiles  WxT Open Data subprofile Skel skeleton  Contributed WxT Projects (no profile dependency)  WxT Bootstrap WxT Library  
+    </div>
+    
+</article>
+<hr>
+
+            
+            <article class="post">
+    <header>
+        <h2><a href="http://drupalwxt.github.io/wxt/media/">Media Library - Images, Videos and Documents (D7)</a></h2>
         <div class="post-date text-muted">
             <span class="glyphicon glyphicon-calendar"></span>
             <time datetime="2015-02-26">
@@ -303,10 +343,10 @@ Browsing the Library a) Using the file admin page /en/admin/content/file you can
         </div>
     </header>
     <div class="post-content">
-        Release Created Date Description     7.x-4.16 2017-03-29T15:14:36Z Security Update(s):
+        Important Releases will soon start to appear for Drupal 8 once stable releases are made.
+   Release Created Date Description     7.x-4.16 2017-03-29T15:14:36Z Security Update(s):
  Metag (v1.21) (Information non-disclosure) Services (v3.19) (application/vnd.php.serialized)  Feature(s):
  Custom gcweb CDN location in Bootstrap Settings Resolution to media wysiwyg image dimensions Fix Regression with Panels Page Titles Bootstrap bug fixes (Menu HTML / Devel breaks) Icon support to link theme hook (bootstrap) Replace _bootstrap_filter_xss() with filter_xss_admin()  Fixes:
- (Commit: e53ac02) Fixed WetKit Core for #2844320 - Panelizer - PDOException: SQLSTATE[42000] Group By Clause (Commit: e0390df) Fixed WetKit Widgets for #2232247 - Show language field on file creation (Commit: 3f54648) Update CHANGELOG.
     </div>
     
     <footer class="read-more-link">
@@ -366,7 +406,7 @@ This allows for contributors who feel the documentation is lacking in certain ar
             
             <article class="post">
     <header>
-        <h2><a href="http://drupalwxt.github.io/wxt/make/">Makefiles for Drupal WxT</a></h2>
+        <h2><a href="http://drupalwxt.github.io/wxt/make/">Makefiles for Drupal WxT (D7)</a></h2>
         <div class="post-date text-muted">
             <span class="glyphicon glyphicon-calendar"></span>
             <time datetime="2015-01-13">
@@ -375,10 +415,11 @@ This allows for contributors who feel the documentation is lacking in certain ar
         </div>
     </header>
     <div class="post-content">
-        Drush make turns a makefile into a working Drupal codebase.
+        Important These instructions are only valid for Drupal 7. For Drupal 8 workflow please consult the Workflow for Drupal 8 
+ Drush make turns a makefile into a working Drupal codebase.
 Below you can see all of the associated makefiles Drupal WxT leverages to built out its codebase and adhere to continuous deployment principles.
 For more information please consult:
- Drush Make  Distro Makefiles   drupal.org-core.make api = 2 core = 7.x projects[drupal][version] = 7.54 projects[drupal][type] = core ; Patches for Drupal Core projects[drupal][patch][405360] = http://drupal.org/files/issues/aria-describedby_2.patch projects[drupal][patch][460408] = http://drupal.
+ Drush Make  Distro Makefiles   drupal.org-core.make api = 2 core = 7.
     </div>
     
     <footer class="read-more-link">
@@ -391,7 +432,7 @@ For more information please consult:
             
             <article class="post">
     <header>
-        <h2><a href="http://drupalwxt.github.io/wxt/modules/">Modules for Drupal WxT</a></h2>
+        <h2><a href="http://drupalwxt.github.io/wxt/modules/">Modules for Drupal WxT (D7)</a></h2>
         <div class="post-date text-muted">
             <span class="glyphicon glyphicon-calendar"></span>
             <time datetime="2015-01-13">
@@ -400,7 +441,7 @@ For more information please consult:
         </div>
     </header>
     <div class="post-content">
-        Name Website Description Size     wetkit-admin wet-boew-wem/wetkit-admin Admin configuration for Drupal WEM.  Size: 114 Bytes   wetkit-bean wet-boew-wem/wetkit-bean Bean Configuration for Drupal WEM. Size: 138 Bytes   wetkit-bootstrap wet-boew-wem/wetkit-bootstrap Bootstrap Subtheme for Drupal WEM. Size: 474 Bytes   wetkit-breadcrumbs wet-boew-wem/wetkit-breadcrumbs Path Breadcrumb Configuration for Drupal WEM. Size: 27 Bytes   wetkit-core wet-boew-wem/wetkit-core Core Configuration for Drupal WEM. Size: 395 Bytes   wetkit-demo wet-boew-wem/wetkit-demo Demo Configuration for Drupal WEM.
+        Name Website Description Size     wetkit-admin wet-boew-wem/wetkit-admin Admin configuration for Drupal WEM.  Size: 114 Bytes   wetkit-bean wet-boew-wem/wetkit-bean Bean Configuration for Drupal WEM. Size: 138 Bytes   wetkit-bootstrap wet-boew-wem/wetkit-bootstrap Bootstrap Subtheme for Drupal WEM. Size: 474 Bytes   wetkit-breadcrumbs wet-boew-wem/wetkit-breadcrumbs Path Breadcrumb Configuration for Drupal WEM. Size: 27 Bytes   wetkit-core wet-boew-wem/wetkit-core Core Configuration for Drupal WEM. Size: 398 Bytes   wetkit-demo wet-boew-wem/wetkit-demo Demo Configuration for Drupal WEM.
     </div>
     
     <footer class="read-more-link">
@@ -413,7 +454,7 @@ For more information please consult:
             
             <article class="post">
     <header>
-        <h2><a href="http://drupalwxt.github.io/wxt/tabbed-interface/">Tabbed Interface</a></h2>
+        <h2><a href="http://drupalwxt.github.io/wxt/tabbed-interface/">Tabbed Interface (D7)</a></h2>
         <div class="post-date text-muted">
             <span class="glyphicon glyphicon-calendar"></span>
             <time datetime="2015-01-13">
@@ -475,11 +516,11 @@ Create / Edit slideshow  Label: This is the visible name of the slideshow when l
 
 
 <!--[if gte IE 9 | !IE ]><!-->
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
-	<script src="http://wet-boew.github.io/wet-boew/js/wet-boew.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+	<script src="https://wet-boew.github.io/wet-boew/js/wet-boew.min.js"></script>
 <!--<![endif]-->
 <!--[if lt IE 9]>
-	<script src="http://wet-boew.github.io/wet-boew/js/ie8-wet-boew2.min.js"></script>
+	<script src="https://wet-boew.github.io/wet-boew/js/ie8-wet-boew2.min.js"></script>
 <![endif]-->
 <script src="//yandex.st/highlightjs/8.0/highlight.min.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>

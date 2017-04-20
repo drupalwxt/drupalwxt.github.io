@@ -127,13 +127,35 @@
                     
                     <li><a href="/wxt/releases/"> Releases for WxT</a></li>
                     
-                    <li><a href="/wxt/make/"> Makefiles for WxT</a></li>
+                    <li><a href="/wxt/make/"> Makefiles for WxT (D7)</a></li>
                     
-                    <li><a href="/wxt/modules/"> Modules for WxT</a></li>
+                    <li><a href="/wxt/modules/"> Modules for WxT (D7)</a></li>
                     
-                    <li><a href="/wxt/working-examples/"> Working Examples</a></li>
+                    <li><a href="/wxt/working-examples/"> Working Examples (D7)</a></li>
                     
                     <li><a href="/wxt/"> All WxT Entries</a></li>
+                    
+                </ul>
+                
+                </li>
+                
+                
+                <li class="">
+                <a href="#" class="item">
+                    
+                    <span>Workflow (D8)</span>
+                </a>
+                <ul class="sm list-unstyled" role="menu">
+                    
+                    <li><a href="/workflow/composer/"> Composer for Drupal 8</a></li>
+                    
+                    <li><a href="/workflow/faq/"> Frequently Asked Questions</a></li>
+                    
+                    <li><a href="/workflow/tips/"> Tips and Tricks</a></li>
+                    
+                    <li><a href="/workflow/wxt/"> WxT Workflow</a></li>
+                    
+                    <li><a href="/workflow/"> All Workflow Entries</a></li>
                     
                 </ul>
                 
@@ -155,25 +177,9 @@
                     
                     <li><a href="/architecture/release-cycle/"> Release Cycle / Updates</a></li>
                     
+                    <li><a href="/architecture/roadmap/"> Roadmap</a></li>
+                    
                     <li class="active"><a href="/architecture/"> All Architecture Entries</a></li>
-                    
-                </ul>
-                
-                </li>
-                
-                
-                <li class="">
-                <a href="#" class="item">
-                    
-                    <span>Community</span>
-                </a>
-                <ul class="sm list-unstyled" role="menu">
-                    
-                    <li><a href="/community/office-hours/"> Office Hours</a></li>
-                    
-                    <li><a href="/community/roadmap/"> Roadmap</a></li>
-                    
-                    <li><a href="/community/"> All Community Entries</a></li>
                     
                 </ul>
                 
@@ -184,15 +190,6 @@
                 <a class="" href="/post/">
                     
                     <span>Blog</span>
-                </a>
-                
-                </li>
-                
-                
-                <li>
-                <a class="" href="/performance/">
-                    
-                    <span>Performance</span>
                 </a>
                 
                 </li>
@@ -235,7 +232,7 @@
 </header>
 
     <main role="main" property="mainContentOfPage" class="container">
-        <h1 id="wb-cont" property="name">Drupal WxT</h1>
+        <h1 id="wb-cont" property="name">Architecture</h1>
         <div class="architecture">
             
             <article class="post">
@@ -263,6 +260,55 @@
             
             <article class="post">
     <header>
+        <h2><a href="http://drupalwxt.github.io/architecture/apache-fpm/">Apache and PHP-FPM</a></h2>
+        <div class="post-date text-muted">
+            <span class="glyphicon glyphicon-calendar"></span>
+            <time datetime="2015-08-04">
+                2015-08-04 - 4M TO READ
+            </time>
+        </div>
+    </header>
+    <div class="post-content">
+        Important Want even more performance? Head on over to our Nginx + PHP-FPM documentation.
+ Apache can achieve a rough parity in performance to a Nginx + PHP-FPM setup. With the added caveat that Apache should be run in either MPM Event or MPM Worker mode. Please note that the following statement holds true when analyzing performance:
+page speed &lt; requests served  This means we are more concerned about how many requests that can be served then how fast we can serve the request.
+    </div>
+    
+    <footer class="read-more-link">
+        <a href="http://drupalwxt.github.io/architecture/apache-fpm/" class="btn btn-default">Read More...</a>
+    </footer>
+    
+</article>
+<hr>
+
+            
+            <article class="post">
+    <header>
+        <h2><a href="http://drupalwxt.github.io/architecture/nginx-fpm/">Nginx and PHP-FPM</a></h2>
+        <div class="post-date text-muted">
+            <span class="glyphicon glyphicon-calendar"></span>
+            <time datetime="2015-08-04">
+                2015-08-04 - 2M TO READ
+            </time>
+        </div>
+    </header>
+    <div class="post-content">
+        Important Using Apache? Head on over to our Apache + PHP-FPM documentation.
+ Nginx is event-based, so it does not follow Apache&rsquo;s style of spawning new processes or threads for each web page request. The end result is that even as load increases, memory and CPU usage remain manageable.
+Scenario Server with the following technical specs:
+ CPU: 4 @ 2.7GHZ RAM: 8GB  Quick Audit Nginx There are three key areas to inspect when looking at Nginx for a PHP-FPM environment.
+    </div>
+    
+    <footer class="read-more-link">
+        <a href="http://drupalwxt.github.io/architecture/nginx-fpm/" class="btn btn-default">Read More...</a>
+    </footer>
+    
+</article>
+<hr>
+
+            
+            <article class="post">
+    <header>
         <h2><a href="http://drupalwxt.github.io/architecture/libraries-api/">Libraries API</a></h2>
         <div class="post-date text-muted">
             <span class="glyphicon glyphicon-calendar"></span>
@@ -279,6 +325,29 @@ Key Features  The same library can be shared by more than one module. The same l
     
     <footer class="read-more-link">
         <a href="http://drupalwxt.github.io/architecture/libraries-api/" class="btn btn-default">Read More...</a>
+    </footer>
+    
+</article>
+<hr>
+
+            
+            <article class="post">
+    <header>
+        <h2><a href="http://drupalwxt.github.io/architecture/profiling/">Profiling with XHProf &#43; XHGui</a></h2>
+        <div class="post-date text-muted">
+            <span class="glyphicon glyphicon-calendar"></span>
+            <time datetime="2015-01-20">
+                2015-01-20 - 1M TO READ
+            </time>
+        </div>
+    </header>
+    <div class="post-content">
+        XHProf is a function-level hierarchical profiler for PHP. The raw data collection component is implemented in C (as a PHP extension). It is capable of reporting function-level inclusive and exclusive wall times, memory usage, CPU times and number of calls for each function. Additionally, it supports ability to compare two runs (hierarchical DIFF reports), or aggregate results from multiple runs.
+XHGui is a tool built upon XHProf to facilitate both an improved user experience and a more efficient storage of metrics via optional support for MongoDB.
+    </div>
+    
+    <footer class="read-more-link">
+        <a href="http://drupalwxt.github.io/architecture/profiling/" class="btn btn-default">Read More...</a>
     </footer>
     
 </article>
@@ -359,6 +428,29 @@ Key Features  The same library can be shared by more than one module. The same l
             
             <article class="post">
     <header>
+        <h2><a href="http://drupalwxt.github.io/architecture/roadmap/">Roadmap</a></h2>
+        <div class="post-date text-muted">
+            <span class="glyphicon glyphicon-calendar"></span>
+            <time datetime="2015-01-13">
+                2015-01-13 - 2M TO READ
+            </time>
+        </div>
+    </header>
+    <div class="post-content">
+        Vision Statement The Drupal WxT distribution is a web content management system which assists in building and maintaining innovative Web sites that are accessible, usable, and interoperable. The primary goal of Drupal WxT is to provide an enterprise level platform that can assist governments and larger organizations in disseminating data.
+Mandatory Features There are a lot of features inherently provided by Drupal WxT. However there are a few that have been designated as mandatory to support and as such have shaped the architecture of the distribution.
+    </div>
+    
+    <footer class="read-more-link">
+        <a href="http://drupalwxt.github.io/architecture/roadmap/" class="btn btn-default">Read More...</a>
+    </footer>
+    
+</article>
+<hr>
+
+            
+            <article class="post">
+    <header>
         <h2><a href="http://drupalwxt.github.io/architecture/system-requirements/">System Requirements</a></h2>
         <div class="post-date text-muted">
             <span class="glyphicon glyphicon-calendar"></span>
@@ -420,11 +512,11 @@ Web server  Apache 2.x Microsoft IIS NGINX  Database server  PostgreSQL 8.
 
 
 <!--[if gte IE 9 | !IE ]><!-->
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
-	<script src="http://wet-boew.github.io/wet-boew/js/wet-boew.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+	<script src="https://wet-boew.github.io/wet-boew/js/wet-boew.min.js"></script>
 <!--<![endif]-->
 <!--[if lt IE 9]>
-	<script src="http://wet-boew.github.io/wet-boew/js/ie8-wet-boew2.min.js"></script>
+	<script src="https://wet-boew.github.io/wet-boew/js/ie8-wet-boew2.min.js"></script>
 <![endif]-->
 <script src="//yandex.st/highlightjs/8.0/highlight.min.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>

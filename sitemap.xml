@@ -12,12 +12,42 @@
   </url>
   
   <url>
-    <loc>http://drupalwxt.github.io/performance/apache-fpm/</loc>
+    <loc>http://drupalwxt.github.io/workflow/faq/</loc>
+    <lastmod>2017-04-18T08:30:00-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://drupalwxt.github.io/workflow/tips/</loc>
+    <lastmod>2017-04-18T08:30:00-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://drupalwxt.github.io/workflow/composer/</loc>
+    <lastmod>2017-04-18T08:30:00-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://drupalwxt.github.io/workflow/resources/</loc>
+    <lastmod>2017-04-18T08:30:00-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://drupalwxt.github.io/workflow/subprofile/</loc>
+    <lastmod>2017-04-18T08:30:00-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://drupalwxt.github.io/workflow/wxt/</loc>
+    <lastmod>2017-04-18T08:30:00-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://drupalwxt.github.io/architecture/apache-fpm/</loc>
     <lastmod>2015-08-04T19:10:52-05:00</lastmod>
   </url>
   
   <url>
-    <loc>http://drupalwxt.github.io/performance/nginx-fpm/</loc>
+    <loc>http://drupalwxt.github.io/architecture/nginx-fpm/</loc>
     <lastmod>2015-08-04T19:10:52-05:00</lastmod>
   </url>
   
@@ -37,12 +67,12 @@
   </url>
   
   <url>
-    <loc>http://drupalwxt.github.io/performance/code-quality/</loc>
+    <loc>http://drupalwxt.github.io/post/2015/01/20/code-quality/</loc>
     <lastmod>2015-01-20T13:10:52-05:00</lastmod>
   </url>
   
   <url>
-    <loc>http://drupalwxt.github.io/performance/profiling/</loc>
+    <loc>http://drupalwxt.github.io/architecture/profiling/</loc>
     <lastmod>2015-01-20T13:10:52-05:00</lastmod>
   </url>
   
@@ -62,7 +92,7 @@
   </url>
   
   <url>
-    <loc>http://drupalwxt.github.io/performance/databases/</loc>
+    <loc>http://drupalwxt.github.io/post/2015/01/13/databases/</loc>
     <lastmod>2015-01-13T13:10:52-05:00</lastmod>
   </url>
   
@@ -82,7 +112,7 @@
   </url>
   
   <url>
-    <loc>http://drupalwxt.github.io/performance/memcached/</loc>
+    <loc>http://drupalwxt.github.io/post/2015/01/13/memcached/</loc>
     <lastmod>2015-01-13T13:10:52-05:00</lastmod>
   </url>
   
@@ -92,12 +122,7 @@
   </url>
   
   <url>
-    <loc>http://drupalwxt.github.io/community/office-hours/</loc>
-    <lastmod>2015-01-13T13:10:52-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://drupalwxt.github.io/community/roadmap/</loc>
+    <loc>http://drupalwxt.github.io/architecture/roadmap/</loc>
     <lastmod>2015-01-13T13:10:52-05:00</lastmod>
   </url>
   
@@ -112,7 +137,7 @@
   </url>
   
   <url>
-    <loc>http://drupalwxt.github.io/performance/varnish/</loc>
+    <loc>http://drupalwxt.github.io/post/2015/01/13/varnish/</loc>
     <lastmod>2015-01-13T13:10:52-05:00</lastmod>
   </url>
   
@@ -130,12 +155,6 @@
   
   <url>
     <loc>http://drupalwxt.github.io/tags/bean/</loc>
-    <lastmod>2015-01-13T13:10:52-05:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://drupalwxt.github.io/community/</loc>
     <lastmod>2015-01-13T13:10:52-05:00</lastmod>
     <priority>0</priority>
   </url>
@@ -159,6 +178,12 @@
   </url>
   
   <url>
+    <loc>http://drupalwxt.github.io/tags/faq/</loc>
+    <lastmod>2017-04-18T08:30:00-05:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://drupalwxt.github.io/tags/media/</loc>
     <lastmod>2015-02-26T13:10:50-05:00</lastmod>
     <priority>0</priority>
@@ -177,19 +202,7 @@
   </url>
   
   <url>
-    <loc>http://drupalwxt.github.io/tags/office-hours/</loc>
-    <lastmod>2015-01-13T13:10:52-05:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>http://drupalwxt.github.io/tags/performance/</loc>
-    <lastmod>2015-08-04T19:10:52-05:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://drupalwxt.github.io/performance/</loc>
     <lastmod>2015-08-04T19:10:52-05:00</lastmod>
     <priority>0</priority>
   </url>
@@ -202,13 +215,25 @@
   
   <url>
     <loc>http://drupalwxt.github.io/post/</loc>
-    <lastmod>2015-01-13T13:10:52-05:00</lastmod>
+    <lastmod>2015-01-20T13:10:52-05:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://drupalwxt.github.io/tags/profile/</loc>
+    <lastmod>2017-04-18T08:30:00-05:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://drupalwxt.github.io/tags/releases/</loc>
     <lastmod>2015-02-26T13:10:50-05:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://drupalwxt.github.io/tags/resources/</loc>
+    <lastmod>2017-04-18T08:30:00-05:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -230,6 +255,12 @@
   </url>
   
   <url>
+    <loc>http://drupalwxt.github.io/tags/tips/</loc>
+    <lastmod>2017-04-18T08:30:00-05:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://drupalwxt.github.io/tags/varnish/</loc>
     <lastmod>2015-01-13T13:10:52-05:00</lastmod>
     <priority>0</priority>
@@ -238,6 +269,12 @@
   <url>
     <loc>http://drupalwxt.github.io/tags/workbench/</loc>
     <lastmod>2015-01-13T13:10:52-05:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://drupalwxt.github.io/workflow/</loc>
+    <lastmod>2017-04-18T08:30:00-05:00</lastmod>
     <priority>0</priority>
   </url>
   

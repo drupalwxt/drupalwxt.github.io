@@ -39,3 +39,8 @@ header.nav {
 footer.copy {
     padding: 20px 0;
 }
+
+#TableOfContents > ul {
+    padding-left: 0;
+    list-style: none;
+}
