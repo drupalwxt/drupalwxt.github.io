@@ -36,6 +36,9 @@ header.nav {
     margin-bottom: 50px;
 }
 
+.service h2 {
+    margin-top: 0px;
+}
 footer.copy {
     padding: 20px 0;
 }
@@ -43,4 +46,9 @@ footer.copy {
 #TableOfContents > ul {
     padding-left: 0;
     list-style: none;
+}
+
+.theme-ogpl footer {
+  background: inherit;
+  border-top: none;
 }
