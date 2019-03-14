@@ -2,7 +2,7 @@
 /*!
  * Web Experience Toolkit (WET) / Boîte à outils de l'expérience Web (BOEW)
  * wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licence-fr.html
- * v4.0.24 - 2017-02-22
+ * v4.0.28.1 - 2018-04-27
  *
  */
 @charset "UTF-8";
@@ -19,11 +19,15 @@ Left menu variables
 /*
  * HOW TO USE THIS FILE
  * Use this file to override Bootstrap variables and WET custom variables.
- * If there is a Bootstrap variable not shown here that you want to override, go to "../lib/bootstrap-sass-official/assets/stylesheets/bootstrap/variables" to view the variables that you can override. Simply copy and paste the variable and its applicable section (if applicable) from the Bootstrap file into this override file and override the variables as applicable.
+ * If there is a Bootstrap variable not shown here that you want to override, go to "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/variables" to view the variables that you can override. Simply copy and paste the variable and its applicable section (if applicable) from the Bootstrap file into this override file and override the variables as applicable.
  */
-.splash object {
+.splash object,
+.splash img {
   height: auto;
   max-width: 100%; }
+
+.splash img {
+  margin-bottom: .375em; }
 
 .splash #bg {
   height: 200%;
@@ -124,8 +128,8 @@ Left menu variables
 .error .h1 {
   border: medium none;
   font-size: 27px;
-  margin-bottom: 0.2em;
-  padding-bottom: 0.2em; }
+  margin-bottom: .2em;
+  padding-bottom: .2em; }
   .error .h1 img {
     margin-right: 10px; }
 

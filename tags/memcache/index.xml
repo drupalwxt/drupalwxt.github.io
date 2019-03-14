@@ -1,16 +1,25 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Drupal WxT </title>
-    <link>http://drupalwxt.github.io/tags/memcache/index.xml</link>
+    <title>Memcache on Drupal WxT</title>
+    <link>https://drupalwxt.github.io/tags/memcache/</link>
+    <description>Recent content in Memcache on Drupal WxT</description>
+    <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <author>William Hearn</author>
-    <rights>(C) 2017</rights>
-    <updated>0001-01-01 00:00:00 &#43;0000 UTC</updated>
-
+    <lastBuildDate>Tue, 13 Jan 2015 13:10:52 -0500</lastBuildDate>
     
+	<atom:link href="https://drupalwxt.github.io/tags/memcache/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Memcached</title>
+      <link>https://drupalwxt.github.io/post/2015/01/13/memcached/</link>
+      <pubDate>Tue, 13 Jan 2015 13:10:52 -0500</pubDate>
       
+      <guid>https://drupalwxt.github.io/post/2015/01/13/memcached/</guid>
+      <description>Memcache is an open-source high performance object caching system that is specifically intended for reducing calls to the DBMS. Memcache is a back-end service (i.e. a daemon on UNIX) that provides a simple but fast in-memory key/value store. This is designed to be scalable and distributed so that requests should not slow down as the load increases, and multiple memcached servers can be employed at once.
+For Drupal, memcache can be used to cache database queries.</description>
+    </item>
     
-
   </channel>
 </rss>

@@ -1,16 +1,26 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Drupal WxT </title>
-    <link>http://drupalwxt.github.io/tags/moderation/index.xml</link>
+    <title>Moderation on Drupal WxT</title>
+    <link>https://drupalwxt.github.io/tags/moderation/</link>
+    <description>Recent content in Moderation on Drupal WxT</description>
+    <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <author>William Hearn</author>
-    <rights>(C) 2017</rights>
-    <updated>0001-01-01 00:00:00 &#43;0000 UTC</updated>
-
+    <lastBuildDate>Tue, 13 Jan 2015 13:10:52 -0500</lastBuildDate>
     
+	<atom:link href="https://drupalwxt.github.io/tags/moderation/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Content Moderation</title>
+      <link>https://drupalwxt.github.io/wxt/content-moderation/</link>
+      <pubDate>Tue, 13 Jan 2015 13:10:52 -0500</pubDate>
       
+      <guid>https://drupalwxt.github.io/wxt/content-moderation/</guid>
+      <description>Web editors have diverse knowledge as well as different levels of HTML coding, web publishing guidelines, accessibility requirements, and experience with validation tools. Only more senior editors should be able to validate and modify HTML as well as have the publishing rights to push content updates to the live server.
+HTML Coding In the WYSIWYG editor.
+ Click the Source button on, off and on again for the WYSIWYG HTML auto-cleanup.</description>
+    </item>
     
-
   </channel>
 </rss>

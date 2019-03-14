@@ -1,26 +1,79 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Drupal WxT </title>
-    <link>http://drupalwxt.github.io/workflow/index.xml</link>
+    <title>Workflow on Drupal WxT</title>
+    <link>https://drupalwxt.github.io/workflow/</link>
+    <description>Recent content in Workflow on Drupal WxT</description>
+    <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <author>William Hearn</author>
-    <rights>(C) 2017</rights>
-    <updated>2017-04-18 08:30:00 -0500 -0500</updated>
-
+    <lastBuildDate>Tue, 18 Apr 2017 08:30:00 -0500</lastBuildDate>
     
+	<atom:link href="https://drupalwxt.github.io/workflow/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Composer FAQ</title>
+      <link>https://drupalwxt.github.io/workflow/faq/</link>
+      <pubDate>Tue, 18 Apr 2017 08:30:00 -0500</pubDate>
       
+      <guid>https://drupalwxt.github.io/workflow/faq/</guid>
+      <description>Should I commit the contributed modules downloaded? Composer strongly recommends against. However, while they provide argumentation against there are also known workarounds if a project decides to do it anyway.
+Should I commit the scaffolding files? The drupal-scaffold plugin can download the scaffold files (like index.php, update.php, etc) to the html directory of your project. If you have not customized those files you could choose to not check them into your version control system.</description>
+    </item>
     
+    <item>
+      <title>Composer tips for Drupal</title>
+      <link>https://drupalwxt.github.io/workflow/tips/</link>
+      <pubDate>Tue, 18 Apr 2017 08:30:00 -0500</pubDate>
       
+      <guid>https://drupalwxt.github.io/workflow/tips/</guid>
+      <description>Version constraints Note on version constraints:
+ ~ (tilde) ^ (caret)  While these constraints are both fairly similar in that they tell composer to update to a newer version. The ~ constraints is more strict in that it keeps to the same minor release. The ^ on the other hand allows for any new version up to and including the next major release.
+See this following articles for more details:</description>
+    </item>
     
+    <item>
+      <title>Composer workflow for Drupal 8</title>
+      <link>https://drupalwxt.github.io/workflow/composer/</link>
+      <pubDate>Tue, 18 Apr 2017 08:30:00 -0500</pubDate>
       
+      <guid>https://drupalwxt.github.io/workflow/composer/</guid>
+      <description>Note: The following guide is largely meant for Drupal 8 WxT installations.
+ Overview WxT strictly adheres to a Composer-based workflow and tries to follow the best practices laid out by the broader Drupal community. For more information on the benefits of this workflow please consult the official documentation provided in the link below:
+ Using composer to manage Drupal  Composer also helps facilitate a more security oriented approach whether packaging or deploying a site.</description>
+    </item>
     
+    <item>
+      <title>Resources for WxT</title>
+      <link>https://drupalwxt.github.io/workflow/resources/</link>
+      <pubDate>Tue, 18 Apr 2017 08:30:00 -0500</pubDate>
       
+      <guid>https://drupalwxt.github.io/workflow/resources/</guid>
+      <description> This page simply provides all the relevant WxT related links in a logical fashion.
+Composer Project Generator  Composer template for WxT projects   Instantiated Composer Projects (WxT)  WxT Open Data  Installation Profiles  WxT Open Data subprofile Skel skeleton  Contributed WxT Projects (no profile dependency)  WxT Bootstrap WxT Library  </description>
+    </item>
     
+    <item>
+      <title>Sub Installation Profile</title>
+      <link>https://drupalwxt.github.io/workflow/subprofile/</link>
+      <pubDate>Tue, 18 Apr 2017 08:30:00 -0500</pubDate>
       
+      <guid>https://drupalwxt.github.io/workflow/subprofile/</guid>
+      <description>WxT sub installation profiles WxT like its base framework Lightning includes the ability to create sub-profiles that are based on the default WxT distribution profile. Making a sub-profile allows you to customize the installation process to meet one or more of your specific needs while retaining / customizing the WxT defaults.
+If any of the following statements are true, then you should consider creating a sub-profile of WxT:
+ Ability to prevent / override some (sub)component of WxT from being installed Ability to enable additional modules, themes, or configuration during install Ability customize the look and feel of the installation process Ability to build a distribution that offloads the Web Experience Toolkit theme(s) / plugins and related libraries to WxT   Note: If all you require is to just work with WxT and add additional modules post installation.</description>
+    </item>
     
+    <item>
+      <title>WxT Workflow</title>
+      <link>https://drupalwxt.github.io/workflow/wxt/</link>
+      <pubDate>Tue, 18 Apr 2017 08:30:00 -0500</pubDate>
       
+      <guid>https://drupalwxt.github.io/workflow/wxt/</guid>
+      <description> Background Information Given WxT makes use of the Lightning base framework providing extensive integration with the Panels ecosystem of tools:
+ CTools [Page Manager][page_manager] Panels Panelizer  The following DrupalCon video serves as a great immediate introduction to the relevant concepts:
+ </description>
+    </item>
     
-
   </channel>
 </rss>

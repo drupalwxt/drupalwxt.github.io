@@ -1,16 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Drupal WxT </title>
-    <link>http://drupalwxt.github.io/tags/varnish/index.xml</link>
+    <title>Varnish on Drupal WxT</title>
+    <link>https://drupalwxt.github.io/tags/varnish/</link>
+    <description>Recent content in Varnish on Drupal WxT</description>
+    <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <author>William Hearn</author>
-    <rights>(C) 2017</rights>
-    <updated>0001-01-01 00:00:00 &#43;0000 UTC</updated>
-
+    <lastBuildDate>Tue, 13 Jan 2015 13:10:52 -0500</lastBuildDate>
     
+	<atom:link href="https://drupalwxt.github.io/tags/varnish/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Varnish</title>
+      <link>https://drupalwxt.github.io/post/2015/01/13/varnish/</link>
+      <pubDate>Tue, 13 Jan 2015 13:10:52 -0500</pubDate>
       
+      <guid>https://drupalwxt.github.io/post/2015/01/13/varnish/</guid>
+      <description>Varnish is an open source software-only reverse HTTP caching proxy (often referred to as a Web Accelerator). Varnish is developed on Linux but can be compiled on other UNIX operating systems. It is heavily multi-threaded and is capable of taking advantage of the memory available on 64-bit systems as well as 32-bit systems, and should scale as CPU’s are added. Reputedly, Varnish can respond to hundreds of requests per second.</description>
+    </item>
     
-
   </channel>
 </rss>

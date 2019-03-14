@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Drupal WxT</title>
+    <link>https://drupalwxt.github.io/tags/</link>
+    <description>Recent content in Tags on Drupal WxT</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 13 Jan 2015 13:10:52 -0500</lastBuildDate>
+    
+	<atom:link href="https://drupalwxt.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Architecture</title>
+      <link>https://drupalwxt.github.io/tags/architecture/</link>
+      <pubDate>Tue, 13 Jan 2015 13:10:52 -0500</pubDate>
+      
+      <guid>https://drupalwxt.github.io/tags/architecture/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Bean</title>
+      <link>https://drupalwxt.github.io/tags/bean/</link>
+      <pubDate>Tue, 13 Jan 2015 13:10:52 -0500</pubDate>
+      
+      <guid>https://drupalwxt.github.io/tags/bean/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Content Staging</title>
+      <link>https://drupalwxt.github.io/tags/content-staging/</link>
+      <pubDate>Sun, 18 Jan 2015 13:10:52 -0500</pubDate>
+      
+      <guid>https://drupalwxt.github.io/tags/content-staging/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Deployment</title>
+      <link>https://drupalwxt.github.io/tags/deployment/</link>
+      <pubDate>Sun, 18 Jan 2015 13:10:52 -0500</pubDate>
+      
+      <guid>https://drupalwxt.github.io/tags/deployment/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Faq</title>
+      <link>https://drupalwxt.github.io/tags/faq/</link>
+      <pubDate>Tue, 18 Apr 2017 08:30:00 -0500</pubDate>
+      
+      <guid>https://drupalwxt.github.io/tags/faq/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Media</title>
+      <link>https://drupalwxt.github.io/tags/media/</link>
+      <pubDate>Thu, 26 Feb 2015 13:10:50 -0500</pubDate>
+      
+      <guid>https://drupalwxt.github.io/tags/media/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Memcache</title>
+      <link>https://drupalwxt.github.io/tags/memcache/</link>
+      <pubDate>Tue, 13 Jan 2015 13:10:52 -0500</pubDate>
+      
+      <guid>https://drupalwxt.github.io/tags/memcache/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Moderation</title>
+      <link>https://drupalwxt.github.io/tags/moderation/</link>
+      <pubDate>Tue, 13 Jan 2015 13:10:52 -0500</pubDate>
+      
+      <guid>https://drupalwxt.github.io/tags/moderation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Performance</title>
+      <link>https://drupalwxt.github.io/tags/performance/</link>
+      <pubDate>Tue, 04 Aug 2015 19:10:52 -0500</pubDate>
+      
+      <guid>https://drupalwxt.github.io/tags/performance/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Post</title>
+      <link>https://drupalwxt.github.io/tags/post/</link>
+      <pubDate>Tue, 13 Jan 2015 13:10:52 -0500</pubDate>
+      
+      <guid>https://drupalwxt.github.io/tags/post/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Profile</title>
+      <link>https://drupalwxt.github.io/tags/profile/</link>
+      <pubDate>Tue, 18 Apr 2017 08:30:00 -0500</pubDate>
+      
+      <guid>https://drupalwxt.github.io/tags/profile/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Releases</title>
+      <link>https://drupalwxt.github.io/tags/releases/</link>
+      <pubDate>Thu, 26 Feb 2015 13:10:50 -0500</pubDate>
+      
+      <guid>https://drupalwxt.github.io/tags/releases/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Resources</title>
+      <link>https://drupalwxt.github.io/tags/resources/</link>
+      <pubDate>Tue, 18 Apr 2017 08:30:00 -0500</pubDate>
+      
+      <guid>https://drupalwxt.github.io/tags/resources/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Roadmap</title>
+      <link>https://drupalwxt.github.io/tags/roadmap/</link>
+      <pubDate>Tue, 13 Jan 2015 13:10:52 -0500</pubDate>
+      
+      <guid>https://drupalwxt.github.io/tags/roadmap/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Tabbed Interface</title>
+      <link>https://drupalwxt.github.io/tags/tabbed-interface/</link>
+      <pubDate>Tue, 13 Jan 2015 13:10:52 -0500</pubDate>
+      
+      <guid>https://drupalwxt.github.io/tags/tabbed-interface/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Tips</title>
+      <link>https://drupalwxt.github.io/tags/tips/</link>
+      <pubDate>Tue, 18 Apr 2017 08:30:00 -0500</pubDate>
+      
+      <guid>https://drupalwxt.github.io/tags/tips/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Varnish</title>
+      <link>https://drupalwxt.github.io/tags/varnish/</link>
+      <pubDate>Tue, 13 Jan 2015 13:10:52 -0500</pubDate>
+      
+      <guid>https://drupalwxt.github.io/tags/varnish/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Workbench</title>
+      <link>https://drupalwxt.github.io/tags/workbench/</link>
+      <pubDate>Tue, 13 Jan 2015 13:10:52 -0500</pubDate>
+      
+      <guid>https://drupalwxt.github.io/tags/workbench/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Wxt</title>
+      <link>https://drupalwxt.github.io/tags/wxt/</link>
+      <pubDate>Tue, 13 Jan 2015 13:10:52 -0500</pubDate>
+      
+      <guid>https://drupalwxt.github.io/tags/wxt/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

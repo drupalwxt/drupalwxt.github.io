@@ -1,14 +1,13 @@
 {
   "name": "wet-boew",
   "homepage": "https://github.com/wet-boew/wet-boew-cdn",
-  "version": "4.0.24",
-  "_release": "4.0.24",
+  "_release": "v4.0.28.1",
   "_resolution": {
-    "type": "version",
-    "tag": "v4.0.24",
-    "commit": "5809902362b7912699add4d5f0391f24e7792221"
+    "type": "tag",
+    "tag": "v4.0.28.1",
+    "commit": "abe7f5580e8f810d55b8f7473760228be7754a60"
   },
   "_source": "https://github.com/wet-boew/wet-boew-cdn.git",
-  "_target": "v4.0.24",
+  "_target": "v4.0.28.1",
   "_originalSource": "wet-boew/wet-boew-cdn"
 }

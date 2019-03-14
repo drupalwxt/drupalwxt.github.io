@@ -1,291 +1,297 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://drupalwxt.github.io/wxt/working-examples/</loc>
+    <loc>https://drupalwxt.github.io/wxt/working-examples/</loc>
     <lastmod>2015-01-13T13:10:52-05:00</lastmod>
   </url>
   
   <url>
-    <loc>http://drupalwxt.github.io/architecture/release-cycle/</loc>
+    <loc>https://drupalwxt.github.io/architecture/release-cycle/</loc>
     <lastmod>2015-01-13T13:10:52-05:00</lastmod>
   </url>
   
   <url>
-    <loc>http://drupalwxt.github.io/workflow/faq/</loc>
+    <loc>https://drupalwxt.github.io/workflow/faq/</loc>
     <lastmod>2017-04-18T08:30:00-05:00</lastmod>
   </url>
   
   <url>
-    <loc>http://drupalwxt.github.io/workflow/tips/</loc>
+    <loc>https://drupalwxt.github.io/workflow/tips/</loc>
     <lastmod>2017-04-18T08:30:00-05:00</lastmod>
   </url>
   
   <url>
-    <loc>http://drupalwxt.github.io/workflow/composer/</loc>
+    <loc>https://drupalwxt.github.io/workflow/composer/</loc>
     <lastmod>2017-04-18T08:30:00-05:00</lastmod>
   </url>
   
   <url>
-    <loc>http://drupalwxt.github.io/workflow/resources/</loc>
+    <loc>https://drupalwxt.github.io/workflow/resources/</loc>
     <lastmod>2017-04-18T08:30:00-05:00</lastmod>
   </url>
   
   <url>
-    <loc>http://drupalwxt.github.io/workflow/subprofile/</loc>
+    <loc>https://drupalwxt.github.io/workflow/subprofile/</loc>
     <lastmod>2017-04-18T08:30:00-05:00</lastmod>
   </url>
   
   <url>
-    <loc>http://drupalwxt.github.io/workflow/wxt/</loc>
+    <loc>https://drupalwxt.github.io/workflow/wxt/</loc>
     <lastmod>2017-04-18T08:30:00-05:00</lastmod>
   </url>
   
   <url>
-    <loc>http://drupalwxt.github.io/architecture/apache-fpm/</loc>
+    <loc>https://drupalwxt.github.io/architecture/apache-fpm/</loc>
     <lastmod>2015-08-04T19:10:52-05:00</lastmod>
   </url>
   
   <url>
-    <loc>http://drupalwxt.github.io/architecture/nginx-fpm/</loc>
+    <loc>https://drupalwxt.github.io/architecture/nginx-fpm/</loc>
     <lastmod>2015-08-04T19:10:52-05:00</lastmod>
   </url>
   
   <url>
-    <loc>http://drupalwxt.github.io/architecture/libraries-api/</loc>
+    <loc>https://drupalwxt.github.io/architecture/libraries-api/</loc>
     <lastmod>2015-07-27T13:10:52-05:00</lastmod>
   </url>
   
   <url>
-    <loc>http://drupalwxt.github.io/wxt/media/</loc>
+    <loc>https://drupalwxt.github.io/wxt/media/</loc>
     <lastmod>2015-02-26T13:10:50-05:00</lastmod>
   </url>
   
   <url>
-    <loc>http://drupalwxt.github.io/wxt/releases/</loc>
+    <loc>https://drupalwxt.github.io/wxt/releases/</loc>
     <lastmod>2015-02-26T13:10:50-05:00</lastmod>
   </url>
   
   <url>
-    <loc>http://drupalwxt.github.io/post/2015/01/20/code-quality/</loc>
+    <loc>https://drupalwxt.github.io/post/2015/01/20/code-quality/</loc>
     <lastmod>2015-01-20T13:10:52-05:00</lastmod>
   </url>
   
   <url>
-    <loc>http://drupalwxt.github.io/architecture/profiling/</loc>
+    <loc>https://drupalwxt.github.io/architecture/profiling/</loc>
     <lastmod>2015-01-20T13:10:52-05:00</lastmod>
   </url>
   
   <url>
-    <loc>http://drupalwxt.github.io/architecture/deployment/</loc>
+    <loc>https://drupalwxt.github.io/architecture/deployment/</loc>
     <lastmod>2015-01-18T13:10:52-05:00</lastmod>
   </url>
   
   <url>
-    <loc>http://drupalwxt.github.io/wxt/content-moderation/</loc>
+    <loc>https://drupalwxt.github.io/wxt/content-moderation/</loc>
     <lastmod>2015-01-13T13:10:52-05:00</lastmod>
   </url>
   
   <url>
-    <loc>http://drupalwxt.github.io/post/2015/01/13/contributing-to-documentation-site/</loc>
+    <loc>https://drupalwxt.github.io/post/2015/01/13/contributing-to-documentation-site/</loc>
     <lastmod>2015-01-13T13:10:52-05:00</lastmod>
   </url>
   
   <url>
-    <loc>http://drupalwxt.github.io/post/2015/01/13/databases/</loc>
+    <loc>https://drupalwxt.github.io/post/2015/01/13/databases/</loc>
     <lastmod>2015-01-13T13:10:52-05:00</lastmod>
   </url>
   
   <url>
-    <loc>http://drupalwxt.github.io/architecture/drush-make/</loc>
+    <loc>https://drupalwxt.github.io/architecture/drush-make/</loc>
     <lastmod>2015-01-13T13:10:52-05:00</lastmod>
   </url>
   
   <url>
-    <loc>http://drupalwxt.github.io/architecture/getting-started-win/</loc>
+    <loc>https://drupalwxt.github.io/architecture/getting-started-win/</loc>
     <lastmod>2015-01-13T13:10:52-05:00</lastmod>
   </url>
   
   <url>
-    <loc>http://drupalwxt.github.io/wxt/make/</loc>
+    <loc>https://drupalwxt.github.io/wxt/make/</loc>
     <lastmod>2015-01-13T13:10:52-05:00</lastmod>
   </url>
   
   <url>
-    <loc>http://drupalwxt.github.io/post/2015/01/13/memcached/</loc>
+    <loc>https://drupalwxt.github.io/post/2015/01/13/memcached/</loc>
     <lastmod>2015-01-13T13:10:52-05:00</lastmod>
   </url>
   
   <url>
-    <loc>http://drupalwxt.github.io/wxt/modules/</loc>
+    <loc>https://drupalwxt.github.io/wxt/modules/</loc>
     <lastmod>2015-01-13T13:10:52-05:00</lastmod>
   </url>
   
   <url>
-    <loc>http://drupalwxt.github.io/architecture/roadmap/</loc>
+    <loc>https://drupalwxt.github.io/architecture/roadmap/</loc>
     <lastmod>2015-01-13T13:10:52-05:00</lastmod>
   </url>
   
   <url>
-    <loc>http://drupalwxt.github.io/architecture/system-requirements/</loc>
+    <loc>https://drupalwxt.github.io/architecture/system-requirements/</loc>
     <lastmod>2015-01-13T13:10:52-05:00</lastmod>
   </url>
   
   <url>
-    <loc>http://drupalwxt.github.io/wxt/tabbed-interface/</loc>
+    <loc>https://drupalwxt.github.io/wxt/tabbed-interface/</loc>
     <lastmod>2015-01-13T13:10:52-05:00</lastmod>
   </url>
   
   <url>
-    <loc>http://drupalwxt.github.io/post/2015/01/13/varnish/</loc>
+    <loc>https://drupalwxt.github.io/post/2015/01/13/varnish/</loc>
     <lastmod>2015-01-13T13:10:52-05:00</lastmod>
   </url>
   
   <url>
-    <loc>http://drupalwxt.github.io/tags/architecture/</loc>
-    <lastmod>2015-01-13T13:10:52-05:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://drupalwxt.github.io/architecture/</loc>
+    <loc>https://drupalwxt.github.io/architecture/</loc>
     <lastmod>2015-01-13T13:10:52-05:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://drupalwxt.github.io/tags/bean/</loc>
+    <loc>https://drupalwxt.github.io/tags/architecture/</loc>
     <lastmod>2015-01-13T13:10:52-05:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://drupalwxt.github.io/tags/content-staging/</loc>
-    <lastmod>2015-01-18T13:10:52-05:00</lastmod>
+    <loc>https://drupalwxt.github.io/authors/</loc>
+  </url>
+  
+  <url>
+    <loc>https://drupalwxt.github.io/tags/bean/</loc>
+    <lastmod>2015-01-13T13:10:52-05:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://drupalwxt.github.io/tags/deployment/</loc>
+    <loc>https://drupalwxt.github.io/tags/content-staging/</loc>
     <lastmod>2015-01-18T13:10:52-05:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://drupalwxt.github.io/</loc>
+    <loc>https://drupalwxt.github.io/tags/deployment/</loc>
+    <lastmod>2015-01-18T13:10:52-05:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://drupalwxt.github.io/</loc>
     <lastmod>2015-01-13T13:10:52-05:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://drupalwxt.github.io/tags/faq/</loc>
+    <loc>https://drupalwxt.github.io/tags/faq/</loc>
     <lastmod>2017-04-18T08:30:00-05:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://drupalwxt.github.io/tags/media/</loc>
+    <loc>https://drupalwxt.github.io/tags/media/</loc>
     <lastmod>2015-02-26T13:10:50-05:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://drupalwxt.github.io/tags/memcache/</loc>
+    <loc>https://drupalwxt.github.io/tags/memcache/</loc>
     <lastmod>2015-01-13T13:10:52-05:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://drupalwxt.github.io/tags/moderation/</loc>
+    <loc>https://drupalwxt.github.io/tags/moderation/</loc>
     <lastmod>2015-01-13T13:10:52-05:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://drupalwxt.github.io/tags/performance/</loc>
+    <loc>https://drupalwxt.github.io/tags/performance/</loc>
     <lastmod>2015-08-04T19:10:52-05:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://drupalwxt.github.io/tags/post/</loc>
-    <lastmod>2015-01-13T13:10:52-05:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://drupalwxt.github.io/post/</loc>
+    <loc>https://drupalwxt.github.io/post/</loc>
     <lastmod>2015-01-20T13:10:52-05:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://drupalwxt.github.io/tags/profile/</loc>
+    <loc>https://drupalwxt.github.io/tags/post/</loc>
+    <lastmod>2015-01-13T13:10:52-05:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://drupalwxt.github.io/tags/profile/</loc>
     <lastmod>2017-04-18T08:30:00-05:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://drupalwxt.github.io/tags/releases/</loc>
+    <loc>https://drupalwxt.github.io/tags/releases/</loc>
     <lastmod>2015-02-26T13:10:50-05:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://drupalwxt.github.io/tags/resources/</loc>
+    <loc>https://drupalwxt.github.io/tags/resources/</loc>
     <lastmod>2017-04-18T08:30:00-05:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://drupalwxt.github.io/tags/roadmap/</loc>
+    <loc>https://drupalwxt.github.io/tags/roadmap/</loc>
     <lastmod>2015-01-13T13:10:52-05:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://drupalwxt.github.io/tags/tabbed-interface/</loc>
+    <loc>https://drupalwxt.github.io/tags/tabbed-interface/</loc>
     <lastmod>2015-01-13T13:10:52-05:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://drupalwxt.github.io/tags/</loc>
+    <loc>https://drupalwxt.github.io/tags/</loc>
+    <lastmod>2015-01-13T13:10:52-05:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://drupalwxt.github.io/tags/tips/</loc>
+    <loc>https://drupalwxt.github.io/tags/tips/</loc>
     <lastmod>2017-04-18T08:30:00-05:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://drupalwxt.github.io/tags/varnish/</loc>
+    <loc>https://drupalwxt.github.io/tags/varnish/</loc>
     <lastmod>2015-01-13T13:10:52-05:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://drupalwxt.github.io/tags/workbench/</loc>
+    <loc>https://drupalwxt.github.io/tags/workbench/</loc>
     <lastmod>2015-01-13T13:10:52-05:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://drupalwxt.github.io/workflow/</loc>
+    <loc>https://drupalwxt.github.io/workflow/</loc>
     <lastmod>2017-04-18T08:30:00-05:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://drupalwxt.github.io/tags/wxt/</loc>
+    <loc>https://drupalwxt.github.io/wxt/</loc>
     <lastmod>2015-01-13T13:10:52-05:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://drupalwxt.github.io/wxt/</loc>
+    <loc>https://drupalwxt.github.io/tags/wxt/</loc>
     <lastmod>2015-01-13T13:10:52-05:00</lastmod>
     <priority>0</priority>
   </url>
