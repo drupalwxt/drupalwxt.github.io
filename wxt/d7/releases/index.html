@@ -244,7 +244,468 @@
 made.</p>
 </div>
 
-<p>HAHAHUGOSHORTCODE-0xc000794a00-1-HBHB</p>
+<table id="components-theme" class="wb-tables table table-striped table-hover" data-wb-tables='{"columnDefs": [ { "visible": true, "targets": [ 2 ] } ], "lengthMenu": [[10, 25, -1], [10, 25, "All"]], "pageLength": -1, "ordering": false }'>
+    <thead>
+        <tr>
+            <th>Release</th>
+            <th>Created Date</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+      
+      
+      
+      
+      <tr>
+          <td><strong>2.2.15</strong></td>
+          <td><strong>2019-03-15T00:35:22Z</strong></td>
+          <td><p>Features:
+- Update Drupal Core 8.6.11
+- Support for gcweb (canada.ca) theme v5.0.1 spec
+- Updated WxT related packages
+  - drupal/wxt_library including:
+    - wet-boew/theme-gcweb (v4.0.29 =&gt; v5.0.1)
+    - wet-boew/theme-gcweb-legacy (v4.0.29)
+    - wet-boew/wet-boew (v4.0.29 =&gt; v4.0.30)
+  - drupal/wxt_bootstrap
+- Added modules
+  - entityqueue
+  - s3fs</p>
+
+<p>Upgrade path:
+- Update your codebase:
+  - <code>composer update</code></p>
+
+<ul>
+<li>Run database updates:
+
+<ul>
+<li><code>drush cache:rebuild</code></li>
+<li><code>drush updatedb</code> (switches to gcweb-legacy opt in for newer gcweb v5.0.1)</li>
+</ul></li>
+</ul>
+</td>
+      </tr>
+      
+      
+      <tr>
+          <td><strong>2.2.14</strong></td>
+          <td><strong>2019-02-20T23:37:54Z</strong></td>
+          <td><p>Security update:</p>
+
+<ul>
+<li>Update core to <a href="https://www.drupal.org/project/drupal/releases/8.6.10">8.6.10</a> as per <a href="https://www.drupal.org/sa-core-2019-003">SA-CONTRIB-2019-014</a></li>
+<li>Update contribs also affected
+
+<ul>
+<li>Font Awesome Icons - Critical - Remote Code Execution - SA-CONTRIB-2019-025</li>
+<li>Paragraphs - Critical - Remote Code Execution - SA-CONTRIB-2019-023</li>
+<li>Metatag - Critical - Remote code execution - SA-CONTRIB-2019-021</li>
+<li>JSON:API - Highly critical - Remote code execution - SA-CONTRIB-2019-019</li>
+</ul></li>
+</ul>
+
+<p>Features:
+- Update Lightning <a href="https://github.com/acquia/lightning/releases/tag/3.2.6">3.2.6</a></p>
+
+<p>Upgrade path:
+- Update your codebase:
+  - <code>composer update</code></p>
+
+<ul>
+<li><p>Run database updates:</p>
+
+<ul>
+<li><code>drush cache:rebuild</code></li>
+<li><code>drush updatedb</code></li>
+</ul></li>
+
+<li><p>Run Lightning configuration updates:</p>
+
+<ul>
+<li><code>drush cache:rebuild</code></li>
+<li><code>drush update:lightning</code></li>
+</ul></li>
+</ul>
+</td>
+      </tr>
+      
+      
+      <tr>
+          <td><strong>2.2.13</strong></td>
+          <td><strong>2019-02-12T11:09:07Z</strong></td>
+          <td><p>Security update:</p>
+
+<ul>
+<li>Update Lightning to <a href="https://github.com/acquia/lightning/releases/tag/3.2.5">3.2.5</a>; includes:
+
+<ul>
+<li>Security updated Acquia Connector to 1.16 (SA-CONTRIB-2019-014)</li>
+</ul></li>
+</ul>
+
+<p>Features/Updates:
+- Update Drupal Core 8.6.9
+- Update Lightning <a href="https://github.com/acquia/lightning/releases/tag/3.2.5">3.2.5</a>; includes:
+  - Updated Consumers to 1.8.
+  - Updated JSON:API to 2.1.
+  - Updated Moderation Dashboard to 1.0-beta1 (from previous lightning release)
+- Update ckeditor-codemirror 2.2
+- Update webform_migrate 1.1
+- Update font_awesome to 2.10
+- Add s3fs 3.0-alpha13</p>
+
+<p>Fixes
+- Apply patch (<a href="https://www.drupal.org/project/migrate_tools/issues/3024399">migrate_tools/3024399</a>) to fix various drush migrate-import issues
+- Lock ctools to 3.0</p>
+
+<p>Upgrade path:</p>
+
+<ul>
+<li><p>Update your codebase:</p>
+
+<ul>
+<li><code>composer update</code></li>
+</ul></li>
+
+<li><p>Run database updates:</p>
+
+<ul>
+<li><code>drush cache:rebuild</code></li>
+<li><code>drush updatedb</code></li>
+</ul></li>
+
+<li><p>Run Lightning configuration updates:</p>
+
+<ul>
+<li><code>drush cache:rebuild</code></li>
+<li><code>drush update:lightning</code></li>
+</ul></li>
+</ul>
+</td>
+      </tr>
+      
+      
+      <tr>
+          <td><strong>2.2.12</strong></td>
+          <td><strong>2019-01-17T02:08:06Z</strong></td>
+          <td>Security update(s):</p>
+
+<ul>
+<li>Update Drupal Core to 8.6.6 <a href="https://www.drupal.org/sa-core-2019-001">SA-CORE-2019-001</a>, <a href="https://www.drupal.org/sa-core-2019-002">SA-CORE-2019-002</a></li>
+</ul>
+</td>
+      </tr>
+      
+      
+      <tr>
+          <td><strong></strong></td>
+          <td><strong>2019-01-10T21:38:14Z</strong></td>
+          <td><p>Security Updates:
+- bootstrap Security Update:
+  - <a href="https://www.drupal.org/project/bootstrap/releases/8.x-3.16">bootstrap 8.x-3.16</a> via <a href="https://www.drupal.org/project/wxt_bootstrap/releases/8.x-1.6">wxt_bootstrap 8.x-1.6</a>
+  - includes <a href="https://www.drupal.org/sa-contrib-2018-073">SA-CONTRIB-2018-073</a> from <a href="https://www.drupal.org/project/bootstrap/releases/8.x-3.14">bootstrap 8.x-3.14</a>
+- jsonapi Security Update:
+  - <a href="https://www.drupal.org/project/jsonapi/releases/8.x-2.0-rc4">jsonapi 8.x-2.0-rc4</a> via <a href="https://www.drupal.org/project/lightning/releases/8.x-3.203">lightning 8.x-3.2.3</a>
+  - includes <a href="https://www.drupal.org/sa-contrib-2018-081">SA-CONTRIB-2018-081</a></p>
+
+<p>Features:
+- <a href="https://www.drupal.org/project/lightning/releases/8.x-3.203">Lightning 3.2.3</a>
+- <a href="https://www.drupal.org/project/drupal/releases/8.6.5">Drupal Core 8.6.5</a>
+- Added module
+  - fontawesome 2.9 (closes <a href="https://www.drupal.org/project/wxt/issues/3021451">3021451</a>)</p>
+
+<ul>
+<li><p>Updated wxt related packages</p>
+
+<ul>
+<li>drupal/wxt_library (1.3.0 =&gt; 1.4.0) including:</li>
+<li>wet-boew/theme-gcweb (v4.0.28.1 =&gt; v4.0.29)</li>
+<li>wet-boew/theme-wet-boew (v4.0.28.1 =&gt; v4.0.29)</li>
+<li>wet-boew/wet-boew (v4.0.28.1 =&gt; v4.0.29)</li>
+<li>wxt_bootstrap (1.5.0 =&gt; 1.6.0) including:</li>
+<li>bootstrap (3.12.0 =&gt; 3.16.0)</li>
+</ul></li>
+
+<li><p>Updated contrib modules</p>
+
+<ul>
+<li>admin_toolbar (1.24.0 =&gt; 1.25.0)</li>
+<li>config_update (1.5.0 =&gt; 1.6.0)</li>
+<li>entity_reference_revisions (1.5.0 =&gt; 1.6.0)</li>
+<li>inline_entity_form (1.0.0-beta1 =&gt; 1.0.0-rc1)</li>
+<li>migrate_plus (4.0.0 =&gt; 4.1.0)</li>
+<li>migrate_tools (4.0.0 =&gt; 4.1.0)</li>
+<li>webform (5.0.0 =&gt; 5.1.0)</li>
+</ul></li>
+
+<li><p>Removed patches that no longer apply</p></li>
+
+<li><p>now loading wet-boew dependencies with composer repo <a href="https://github.com/drupalwxt/composer-extdeps">drupalwxt/composer-extdeps</a></p></li>
+</ul>
+
+<p>Upgrade path:</p>
+
+<ul>
+<li><p>Update your codebase:</p>
+
+<ul>
+<li><code>composer update</code></li>
+</ul></li>
+
+<li><p>Run database updates:</p>
+
+<ul>
+<li><code>drush cache:rebuild</code></li>
+<li><code>drush updatedb</code></li>
+</ul></li>
+</ul>
+</td>
+      </tr>
+      
+      
+      <tr>
+          <td><strong>2.2.1</strong></td>
+          <td><strong>2018-11-13T17:02:13Z</strong></td>
+          <td>Fixed an issue with a patch to comments redirect within drupal-core.</td>
+      </tr>
+      
+      
+      <tr>
+          <td><strong>2.2.0</strong></td>
+          <td><strong>2018-11-07T21:05:48Z</strong></td>
+          <td><p>Security Update(s):</p>
+
+<ul>
+<li>paragraphs 8.x-1.5 <a href="https://www.drupal.org/sa-contrib-2018-073">SA-CONTRIB-2018-073</a></li>
+</ul>
+
+<p>Feature(s):</p>
+
+<ul>
+<li>Lightning 3.2.2</li>
+<li>Drupal Core 8.6.2</li>
+<li>Updated contrib modules
+
+<ul>
+<li>paragraphs to 1.5</li>
+<li>views_bootstrap to 3.1</li>
+<li>bootstrap to 3.13</li>
+<li>media_entity_instagram to alpha2</li>
+</ul></li>
+<li>Removed patches that no longer apply</li>
+<li>Updated and refactored some patches to work with drupal core 8.6.x</li>
+</ul>
+
+<p>Upgrade path:</p>
+
+<ul>
+<li><p>Update your codebase:</p>
+
+<ul>
+<li><code>composer update</code></li>
+</ul></li>
+
+<li><p>Update sub-profile info.yml file to look similar to <a href="https://github.com/drupalwxt/wxt/blob/8.x-2.x/wxt.info.yml">wxt.info.yml</a></p></li>
+</ul>
+
+<pre><code>name: My Profile
+core: 8.x
+type: profile
+base profile: lightning
+install:
+  - paragraphs
+  - slick_entityreference
+exclude:
+  - lightning_search
+  - pathauto
+  - bartik
+</code></pre>
+
+<ul>
+<li><p>Run database updates:</p>
+
+<ul>
+<li><code>drush cache:rebuild</code></li>
+<li><code>drush updatedb</code></li>
+</ul></li>
+
+<li><p>Run Lightning configuration updates:</p>
+
+<ul>
+<li><code>drush cache:rebuild</code></li>
+<li><code>drush update:lightning</code></li>
+</ul></li>
+</ul>
+</td>
+      </tr>
+      
+      
+      <tr>
+          <td><strong>2.1.9</strong></td>
+          <td><strong>2018-10-28T17:33:40Z</strong></td>
+          <td><h2 id="v2-1-9">v2.1.9</h2>
+
+<p>Security Update(s):</p>
+
+<ul>
+<li>Drupal Core 8.5.8 <a href="https://www.drupal.org/sa-core-2018-006">SA-CORE-2018-006</a></li>
+</ul>
+</td>
+      </tr>
+      
+      
+      <tr>
+          <td><strong>2.1.8</strong></td>
+          <td><strong>2018-08-29T20:44:43Z</strong></td>
+          <td><h2 id="v2-1-8">v2.1.8</h2>
+
+<p>Feature(s) / Bug fixe(s):</p>
+
+<ul>
+<li>Removes patches that are no longer necessary</li>
+<li>Updated wxt_bootstrap to 1.5
+
+<ul>
+<li>Update bootstrap to 3.12</li>
+</ul></li>
+<li>Updated wxt_library to 1.3
+
+<ul>
+<li>Update wet-boew packages to 0.28.1 (where available)</li>
+</ul></li>
+</ul>
+</td>
+      </tr>
+      
+      
+      <tr>
+          <td><strong>2.1.7</strong></td>
+          <td><strong>2018-08-02T01:52:35Z</strong></td>
+          <td><p>Security update(s):</p>
+
+<ul>
+<li>Drupal Core 8.5.6 <a href="https://www.drupal.org/sa-core-2018-005">SA-CORE-2018-005</a></li>
+</ul>
+
+<p>Feature(s) / Bug fixe(s):</p>
+
+<ul>
+<li>Updated wxt_bootstrap to 1.4
+
+<ul>
+<li>Form required marker &ldquo;\204E&rdquo; is broken in Chrome on Windows (#2988183)</li>
+<li>Use img elements for SVG images instead of object elements (#2990023)</li>
+</ul></li>
+<li>Landing page behat test fail with moderation_state (#2989354)</li>
+</ul>
+</td>
+      </tr>
+      
+      
+      <tr>
+          <td><strong>2.1.6</strong></td>
+          <td><strong>2018-07-15T16:03:58Z</strong></td>
+          <td><p>Features / Bug Fixes:</p>
+
+<ul>
+<li>Updated Drupal Core to 8.5.5</li>
+<li>Updated wxt_library to 1.2
+
+<ul>
+<li>Fix Cache issues in user account block (#2980764)</li>
+<li>Fix Update search Canada.ca form for HTTPS (#2977233)</li>
+</ul></li>
+<li>Updated wxt_bootstrap to 1.3
+
+<ul>
+<li>Add CDN option for the footer to the theme settings (#2927929)</li>
+</ul></li>
+<li>Updated contrib modules, including:
+
+<ul>
+<li>admin_toolbar to 1.24</li>
+<li>block_class to 1.0</li>
+<li>bootstrap_layouts to 5.1</li>
+<li>diff to 1.0-rc2</li>
+<li>media_entity_image to 1.3</li>
+<li>media_entity_slideshow to 2.0-alpha1</li>
+<li>menu_block to 1.5.0</li>
+<li>field_formatter to 1.2</li>
+<li>metatag to 1.5</li>
+<li>migrate_tools to 4.0-rc1</li>
+<li>token_filter to 1.0</li>
+<li>webform to 5.0-rc16</li>
+</ul></li>
+</ul>
+
+<p><strong>Note:</strong> After updating, Drupal will emit a warning about the metatag_page_variants module missing. This will be corrected by an update hook in wxt_ext_metatag when <code>drush updb</code> is run.</p>
+</td>
+      </tr>
+      
+      
+      <tr>
+          <td><strong>2.1.5</strong></td>
+          <td><strong>2018-06-07T14:05:00Z</strong></td>
+          <td><h2 id="v2-1-5">v2.1.5</h2>
+
+<p>Feature(s):</p>
+
+<ul>
+<li>Lightning 3.1.4</li>
+<li>Update contrib modules</li>
+</ul>
+</td>
+      </tr>
+      
+      
+      <tr>
+          <td><strong>2.1.4</strong></td>
+          <td><strong>2018-05-05T21:17:22Z</strong></td>
+          <td>Bug fixe(s):</p>
+
+<ul>
+<li><a href="https://www.drupal.org/project/wxt/issues/2969558">2969558: Panels patch for issue #2869412 is failing for Panels 4.3</a></li>
+</ul>
+</td>
+      </tr>
+      
+      
+      <tr>
+          <td><strong>2.1.3</strong></td>
+          <td><strong>2018-04-26T18:17:19Z</strong></td>
+          <td><p>Security Update(s):</p>
+
+<ul>
+<li>Drupal Core 8.5.3 <a href="https://www.drupal.org/sa-core-2018-004">SA-CORE-2018-004</a></li>
+</ul>
+
+<p>Feature(s):</p>
+
+<ul>
+<li>Lightning 3.1.3</li>
+</ul>
+</td>
+      </tr>
+      
+      
+      <tr>
+          <td><strong>2.1.2</strong></td>
+          <td><strong>2018-04-04T15:14:49Z</strong></td>
+          <td><p>Feature(s):</p>
+
+<ul>
+<li>Lightning 3.1.1</li>
+</ul>
+
+<p>Note that you must update drupal/drupal-extension to at least 3.4.0 for behat tests to pass.</p>
+</td>
+      </tr>
+      
+    </tbody>
+</table>
+
 
                 </div>
                 <aside>
