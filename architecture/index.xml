@@ -22,6 +22,16 @@
     </item>
     
     <item>
+      <title>Roadmap</title>
+      <link>https://drupalwxt.github.io/architecture/roadmap/</link>
+      <pubDate>Sat, 13 Jan 2018 13:10:52 -0500</pubDate>
+      
+      <guid>https://drupalwxt.github.io/architecture/roadmap/</guid>
+      <description>Vision Statement The Drupal WxT distribution is a web content management system which assists in building and maintaining innovative Web sites that are accessible, usable, and interoperable. The primary goal of Drupal WxT is to provide an enterprise level platform that can assist governments and larger organizations in disseminating data.
+Mandatory Features There are a lot of features inherently provided by Drupal WxT. However there are a few that have been designated as mandatory to support and as such have shaped the architecture of the distribution.</description>
+    </item>
+    
+    <item>
       <title>Apache and PHP-FPM</title>
       <link>https://drupalwxt.github.io/architecture/apache-fpm/</link>
       <pubDate>Tue, 04 Aug 2015 19:10:52 -0500</pubDate>
@@ -96,16 +106,6 @@ XHGui is a tool built upon XHProf to facilitate both an improved user experience
       <guid>https://drupalwxt.github.io/architecture/getting-started-win/</guid>
       <description>Important The most up to date instructions are available in the README.md file. This page while outdated does contain additional procedures for custom environments.
  Install Acquia Dev Desktop If this is your first Drupal 7 install, you may want to install the Acquia Dev Destop on your machine since it will provide you with a complete environment at the click of a button. It will set up Apache, MySQL, PHP and install an instance of Drupal.</description>
-    </item>
-    
-    <item>
-      <title>Roadmap</title>
-      <link>https://drupalwxt.github.io/architecture/roadmap/</link>
-      <pubDate>Tue, 13 Jan 2015 13:10:52 -0500</pubDate>
-      
-      <guid>https://drupalwxt.github.io/architecture/roadmap/</guid>
-      <description>Vision Statement The Drupal WxT distribution is a web content management system which assists in building and maintaining innovative Web sites that are accessible, usable, and interoperable. The primary goal of Drupal WxT is to provide an enterprise level platform that can assist governments and larger organizations in disseminating data.
-Mandatory Features There are a lot of features inherently provided by Drupal WxT. However there are a few that have been designated as mandatory to support and as such have shaped the architecture of the distribution.</description>
     </item>
     
     <item>

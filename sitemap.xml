@@ -3,13 +3,23 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://drupalwxt.github.io/wxt/working-examples/</loc>
+    <loc>https://drupalwxt.github.io/wxt/d7/working-examples/</loc>
     <lastmod>2015-01-13T13:10:52-05:00</lastmod>
   </url>
   
   <url>
     <loc>https://drupalwxt.github.io/architecture/release-cycle/</loc>
     <lastmod>2015-01-13T13:10:52-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://drupalwxt.github.io/wxt/d8/releases/</loc>
+    <lastmod>2019-02-26T13:10:50-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://drupalwxt.github.io/architecture/roadmap/</loc>
+    <lastmod>2018-01-13T13:10:52-05:00</lastmod>
   </url>
   
   <url>
@@ -58,12 +68,12 @@
   </url>
   
   <url>
-    <loc>https://drupalwxt.github.io/wxt/media/</loc>
+    <loc>https://drupalwxt.github.io/wxt/d7/media/</loc>
     <lastmod>2015-02-26T13:10:50-05:00</lastmod>
   </url>
   
   <url>
-    <loc>https://drupalwxt.github.io/wxt/releases/</loc>
+    <loc>https://drupalwxt.github.io/wxt/d7/releases/</loc>
     <lastmod>2015-02-26T13:10:50-05:00</lastmod>
   </url>
   
@@ -83,7 +93,7 @@
   </url>
   
   <url>
-    <loc>https://drupalwxt.github.io/wxt/content-moderation/</loc>
+    <loc>https://drupalwxt.github.io/wxt/d7/content-moderation/</loc>
     <lastmod>2015-01-13T13:10:52-05:00</lastmod>
   </url>
   
@@ -108,7 +118,7 @@
   </url>
   
   <url>
-    <loc>https://drupalwxt.github.io/wxt/make/</loc>
+    <loc>https://drupalwxt.github.io/wxt/d7/make/</loc>
     <lastmod>2015-01-13T13:10:52-05:00</lastmod>
   </url>
   
@@ -118,12 +128,7 @@
   </url>
   
   <url>
-    <loc>https://drupalwxt.github.io/wxt/modules/</loc>
-    <lastmod>2015-01-13T13:10:52-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://drupalwxt.github.io/architecture/roadmap/</loc>
+    <loc>https://drupalwxt.github.io/wxt/d7/modules/</loc>
     <lastmod>2015-01-13T13:10:52-05:00</lastmod>
   </url>
   
@@ -133,7 +138,7 @@
   </url>
   
   <url>
-    <loc>https://drupalwxt.github.io/wxt/tabbed-interface/</loc>
+    <loc>https://drupalwxt.github.io/wxt/d7/tabbed-interface/</loc>
     <lastmod>2015-01-13T13:10:52-05:00</lastmod>
   </url>
   
@@ -207,6 +212,10 @@
   </url>
   
   <url>
+    <loc>https://drupalwxt.github.io/wxt/d8/modules/</loc>
+  </url>
+  
+  <url>
     <loc>https://drupalwxt.github.io/tags/performance/</loc>
     <lastmod>2015-08-04T19:10:52-05:00</lastmod>
     <priority>0</priority>
@@ -232,7 +241,7 @@
   
   <url>
     <loc>https://drupalwxt.github.io/tags/releases/</loc>
-    <lastmod>2015-02-26T13:10:50-05:00</lastmod>
+    <lastmod>2019-02-26T13:10:50-05:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -244,7 +253,7 @@
   
   <url>
     <loc>https://drupalwxt.github.io/tags/roadmap/</loc>
-    <lastmod>2015-01-13T13:10:52-05:00</lastmod>
+    <lastmod>2018-01-13T13:10:52-05:00</lastmod>
     <priority>0</priority>
   </url>
   

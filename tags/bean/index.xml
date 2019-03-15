@@ -13,10 +13,10 @@
     
     <item>
       <title>Tabbed Interface (D7)</title>
-      <link>https://drupalwxt.github.io/wxt/tabbed-interface/</link>
+      <link>https://drupalwxt.github.io/wxt/d7/tabbed-interface/</link>
       <pubDate>Tue, 13 Jan 2015 13:10:52 -0500</pubDate>
       
-      <guid>https://drupalwxt.github.io/wxt/tabbed-interface/</guid>
+      <guid>https://drupalwxt.github.io/wxt/d7/tabbed-interface/</guid>
       <description>The easiest way to update an existing slideshow is to Edit the Block directly via contextual links. Simply mouse-over the gears widget in the top right corner and then click Edit Block.
 To see a list of carousel slideshows you can use the content blocks admin page /admin/content/blocks to filter by type Slideshow and then click Edit.
 Create / Edit slideshow  Label: This is the visible name of the slideshow when listed in the blocks admin page.</description>

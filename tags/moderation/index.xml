@@ -13,10 +13,10 @@
     
     <item>
       <title>Content Moderation</title>
-      <link>https://drupalwxt.github.io/wxt/content-moderation/</link>
+      <link>https://drupalwxt.github.io/wxt/d7/content-moderation/</link>
       <pubDate>Tue, 13 Jan 2015 13:10:52 -0500</pubDate>
       
-      <guid>https://drupalwxt.github.io/wxt/content-moderation/</guid>
+      <guid>https://drupalwxt.github.io/wxt/d7/content-moderation/</guid>
       <description>Web editors have diverse knowledge as well as different levels of HTML coding, web publishing guidelines, accessibility requirements, and experience with validation tools. Only more senior editors should be able to validate and modify HTML as well as have the publishing rights to push content updates to the live server.
 HTML Coding In the WYSIWYG editor.
  Click the Source button on, off and on again for the WYSIWYG HTML auto-cleanup.</description>

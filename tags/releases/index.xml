@@ -6,21 +6,29 @@
     <description>Recent content in Releases on Drupal WxT</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 26 Feb 2015 13:10:50 -0500</lastBuildDate>
+    <lastBuildDate>Tue, 26 Feb 2019 13:10:50 -0500</lastBuildDate>
     
 	<atom:link href="https://drupalwxt.github.io/tags/releases/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Releases</title>
-      <link>https://drupalwxt.github.io/wxt/releases/</link>
+      <link>https://drupalwxt.github.io/wxt/d8/releases/</link>
+      <pubDate>Tue, 26 Feb 2019 13:10:50 -0500</pubDate>
+      
+      <guid>https://drupalwxt.github.io/wxt/d8/releases/</guid>
+      <description>Important Expect security releases to appear here within 24 hours of being reported upstream.
+   Release Created Date Description     2.2.15 2019-03-15T00:35:22Z Features: - Update Drupal Core 8.6.11 - Support for gcweb (canada.ca) theme v5.0.1 spec - Updated WxT related packages - drupal/wxt_library including: - wet-boew/theme-gcweb (v4.0.29 =&amp;gt; v5.0.1) - wet-boew/theme-gcweb-legacy (v4.0.29) - wet-boew/wet-boew (v4.0.29 =&amp;gt; v4.0.30) - drupal/wxt_bootstrap - Added modules - entityqueue - s3fs</description>
+    </item>
+    
+    <item>
+      <title>Releases</title>
+      <link>https://drupalwxt.github.io/wxt/d7/releases/</link>
       <pubDate>Thu, 26 Feb 2015 13:10:50 -0500</pubDate>
       
-      <guid>https://drupalwxt.github.io/wxt/releases/</guid>
+      <guid>https://drupalwxt.github.io/wxt/d7/releases/</guid>
       <description>Important Releases will soon start to appear for Drupal 8 once stable releases are made.
-   Release Created Date Description     7.x-4.34 2019-03-13T23:20:32Z Security Update(s): - wetkit_core 7.x-4.33 - Update Views (views) 7.x-3.21 SA-CONTRIB-2019-034 SA-CONTRIB-2019-035 SA-CONTRIB-2019-036
-Feature(s)/Fixe(s): - wetkit_core 7.x-4.33 - Update Devel (devel) 7.x-1.7
-   7.x-4.33 2019-02-28T02:07:16Z Security Update(s): - wetkit_breadcrumbs 7.x-4.7 - Update Path Breadcrumbs (path_breadcrumbs) 7.x-3.4 SA-CONTRIB-2019-027 - wetkit_deployment 7.x-4.21 - Update service (services) 7.</description>
+   Release Created Date Description     2.2.15 2019-03-15T00:35:22Z Features: - Update Drupal Core 8.6.11 - Support for gcweb (canada.ca) theme v5.0.1 spec - Updated WxT related packages - drupal/wxt_library including: - wet-boew/theme-gcweb (v4.0.29 =&amp;gt; v5.0.1) - wet-boew/theme-gcweb-legacy (v4.0.29) - wet-boew/wet-boew (v4.0.29 =&amp;gt; v4.0.30) - drupal/wxt_bootstrap - Added modules - entityqueue - s3fs</description>
     </item>
     
   </channel>

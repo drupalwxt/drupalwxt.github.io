@@ -13,13 +13,23 @@
     
     <item>
       <title>Working Examples (D7)</title>
-      <link>https://drupalwxt.github.io/wxt/working-examples/</link>
+      <link>https://drupalwxt.github.io/wxt/d7/working-examples/</link>
       <pubDate>Tue, 13 Jan 2015 13:10:52 -0500</pubDate>
       
-      <guid>https://drupalwxt.github.io/wxt/working-examples/</guid>
+      <guid>https://drupalwxt.github.io/wxt/d7/working-examples/</guid>
       <description>Below we highlight the work done on getting the various WxT components / plugins and themes / styles leveraged properly in Drupal.
 Levels of integration with Drupal will vary as some of the plugins can simply be leveraged by calling a class in markup. Where possible we will try to make a distinction on how each functionality can be used.
 Note: This list does not represent the full capabilities of the Drupal WxT platform merely the WxT components it integrates with.</description>
+    </item>
+    
+    <item>
+      <title>Releases</title>
+      <link>https://drupalwxt.github.io/wxt/d8/releases/</link>
+      <pubDate>Tue, 26 Feb 2019 13:10:50 -0500</pubDate>
+      
+      <guid>https://drupalwxt.github.io/wxt/d8/releases/</guid>
+      <description>Important Expect security releases to appear here within 24 hours of being reported upstream.
+   Release Created Date Description     2.2.15 2019-03-15T00:35:22Z Features: - Update Drupal Core 8.6.11 - Support for gcweb (canada.ca) theme v5.0.1 spec - Updated WxT related packages - drupal/wxt_library including: - wet-boew/theme-gcweb (v4.0.29 =&amp;gt; v5.0.1) - wet-boew/theme-gcweb-legacy (v4.0.29) - wet-boew/wet-boew (v4.0.29 =&amp;gt; v4.0.30) - drupal/wxt_bootstrap - Added modules - entityqueue - s3fs</description>
     </item>
     
     <item>
@@ -45,10 +55,10 @@ Composer Project Generator  Composer template for WxT projects   Instantiated Co
     
     <item>
       <title>Media Library - Images, Videos and Documents (D7)</title>
-      <link>https://drupalwxt.github.io/wxt/media/</link>
+      <link>https://drupalwxt.github.io/wxt/d7/media/</link>
       <pubDate>Thu, 26 Feb 2015 13:10:50 -0500</pubDate>
       
-      <guid>https://drupalwxt.github.io/wxt/media/</guid>
+      <guid>https://drupalwxt.github.io/wxt/d7/media/</guid>
       <description>Library Basics a) To access the library from the admin menu click on Content and then Files /en/admin/content/file, or you can also click the Add Media button in the WYSIWYG to access the library
 b) Avoid creating unnecessary duplicates. Whenever possible re-use the images, videos and documents that have already been uploaded to the library.
 Browsing the Library a) Using the file admin page /en/admin/content/file you can search by Name, Type of multimedia, and User who uploaded the file.</description>
@@ -56,22 +66,20 @@ Browsing the Library a) Using the file admin page /en/admin/content/file you can
     
     <item>
       <title>Releases</title>
-      <link>https://drupalwxt.github.io/wxt/releases/</link>
+      <link>https://drupalwxt.github.io/wxt/d7/releases/</link>
       <pubDate>Thu, 26 Feb 2015 13:10:50 -0500</pubDate>
       
-      <guid>https://drupalwxt.github.io/wxt/releases/</guid>
+      <guid>https://drupalwxt.github.io/wxt/d7/releases/</guid>
       <description>Important Releases will soon start to appear for Drupal 8 once stable releases are made.
-   Release Created Date Description     7.x-4.34 2019-03-13T23:20:32Z Security Update(s): - wetkit_core 7.x-4.33 - Update Views (views) 7.x-3.21 SA-CONTRIB-2019-034 SA-CONTRIB-2019-035 SA-CONTRIB-2019-036
-Feature(s)/Fixe(s): - wetkit_core 7.x-4.33 - Update Devel (devel) 7.x-1.7
-   7.x-4.33 2019-02-28T02:07:16Z Security Update(s): - wetkit_breadcrumbs 7.x-4.7 - Update Path Breadcrumbs (path_breadcrumbs) 7.x-3.4 SA-CONTRIB-2019-027 - wetkit_deployment 7.x-4.21 - Update service (services) 7.</description>
+   Release Created Date Description     2.2.15 2019-03-15T00:35:22Z Features: - Update Drupal Core 8.6.11 - Support for gcweb (canada.ca) theme v5.0.1 spec - Updated WxT related packages - drupal/wxt_library including: - wet-boew/theme-gcweb (v4.0.29 =&amp;gt; v5.0.1) - wet-boew/theme-gcweb-legacy (v4.0.29) - wet-boew/wet-boew (v4.0.29 =&amp;gt; v4.0.30) - drupal/wxt_bootstrap - Added modules - entityqueue - s3fs</description>
     </item>
     
     <item>
       <title>Content Moderation</title>
-      <link>https://drupalwxt.github.io/wxt/content-moderation/</link>
+      <link>https://drupalwxt.github.io/wxt/d7/content-moderation/</link>
       <pubDate>Tue, 13 Jan 2015 13:10:52 -0500</pubDate>
       
-      <guid>https://drupalwxt.github.io/wxt/content-moderation/</guid>
+      <guid>https://drupalwxt.github.io/wxt/d7/content-moderation/</guid>
       <description>Web editors have diverse knowledge as well as different levels of HTML coding, web publishing guidelines, accessibility requirements, and experience with validation tools. Only more senior editors should be able to validate and modify HTML as well as have the publishing rights to push content updates to the live server.
 HTML Coding In the WYSIWYG editor.
  Click the Source button on, off and on again for the WYSIWYG HTML auto-cleanup.</description>
@@ -89,10 +97,10 @@ This allows for contributors who feel the documentation is lacking in certain ar
     
     <item>
       <title>Makefiles for Drupal WxT (D7)</title>
-      <link>https://drupalwxt.github.io/wxt/make/</link>
+      <link>https://drupalwxt.github.io/wxt/d7/make/</link>
       <pubDate>Tue, 13 Jan 2015 13:10:52 -0500</pubDate>
       
-      <guid>https://drupalwxt.github.io/wxt/make/</guid>
+      <guid>https://drupalwxt.github.io/wxt/d7/make/</guid>
       <description>Important These instructions are only valid for Drupal 7. For Drupal 8 workflow please consult the Workflow for Drupal 8 
  Drush make turns a makefile into a working Drupal codebase.
 Below you can see all of the associated makefiles Drupal WxT leverages to built out its codebase and adhere to continuous deployment principles.
@@ -102,22 +110,31 @@ For more information please consult:
     
     <item>
       <title>Modules for Drupal WxT (D7)</title>
-      <link>https://drupalwxt.github.io/wxt/modules/</link>
+      <link>https://drupalwxt.github.io/wxt/d7/modules/</link>
       <pubDate>Tue, 13 Jan 2015 13:10:52 -0500</pubDate>
       
-      <guid>https://drupalwxt.github.io/wxt/modules/</guid>
-      <description>Name Website Description Size     wetkit-admin wet-boew-wem/wetkit-admin Admin configuration for Drupal WEM.  Size: 113 Bytes   wetkit-bean wet-boew-wem/wetkit-bean Bean Configuration for Drupal WEM. Size: 138 Bytes   wetkit-bootstrap wet-boew-wem/wetkit-bootstrap Bootstrap Subtheme for Drupal WxT. Size: 490 Bytes   wetkit-breadcrumbs wet-boew-wem/wetkit-breadcrumbs Path Breadcrumb Configuration for Drupal WEM. Size: 27 Bytes   wetkit-core wet-boew-wem/wetkit-core Core Configuration for Drupal WEM. Size: 396 Bytes   wetkit-demo wet-boew-wem/wetkit-demo Demo Configuration for Drupal WEM.</description>
+      <guid>https://drupalwxt.github.io/wxt/d7/modules/</guid>
+      <description>HAHAHUGOSHORTCODE-0xc0008d6f00-1-HBHB</description>
     </item>
     
     <item>
       <title>Tabbed Interface (D7)</title>
-      <link>https://drupalwxt.github.io/wxt/tabbed-interface/</link>
+      <link>https://drupalwxt.github.io/wxt/d7/tabbed-interface/</link>
       <pubDate>Tue, 13 Jan 2015 13:10:52 -0500</pubDate>
       
-      <guid>https://drupalwxt.github.io/wxt/tabbed-interface/</guid>
+      <guid>https://drupalwxt.github.io/wxt/d7/tabbed-interface/</guid>
       <description>The easiest way to update an existing slideshow is to Edit the Block directly via contextual links. Simply mouse-over the gears widget in the top right corner and then click Edit Block.
 To see a list of carousel slideshows you can use the content blocks admin page /admin/content/blocks to filter by type Slideshow and then click Edit.
 Create / Edit slideshow  Label: This is the visible name of the slideshow when listed in the blocks admin page.</description>
+    </item>
+    
+    <item>
+      <title>Modules for Drupal WxT</title>
+      <link>https://drupalwxt.github.io/wxt/d8/modules/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://drupalwxt.github.io/wxt/d8/modules/</guid>
+      <description>Name Website Description Size     canada drupalwxt/canada Drupal 8 install profile for the Canada Portal. (In Development) Size: 174 Bytes   canada-project drupalwxt/canada-project Project template for Drupal 8 sites built with the Canada distribution. Size: 5 Bytes   composer-extdeps drupalwxt/composer-extdeps Composer repository for external dependencies on Drupal WxT Size: 15 Bytes   drupalwxt.github.io drupalwxt/drupalwxt.github.io GH pages for Drupal WxT. Size: 10619 Bytes   fgp drupalwxt/fgp Drupal 8 install profile for the FGP Portal.</description>
     </item>
     
   </channel>
