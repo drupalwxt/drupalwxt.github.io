@@ -28,7 +28,7 @@ Note: This list does not represent the full capabilities of the Drupal WxT platf
       <pubDate>Tue, 26 Feb 2019 13:10:50 -0500</pubDate>
       
       <guid>https://drupalwxt.github.io/wxt/d8/modules/</guid>
-      <description>HAHAHUGOSHORTCODE-0xc00096d400-1-HBHB</description>
+      <description>Name Website Description Size     canada drupalwxt/canada Drupal 8 install profile for the Canada Portal. (In Development) Size: 174 Bytes   canada-project drupalwxt/canada-project Project template for Drupal 8 sites built with the Canada distribution. Size: 5 Bytes   composer-extdeps drupalwxt/composer-extdeps Composer repository for external dependencies on Drupal WxT Size: 15 Bytes   drupalwxt.github.io drupalwxt/drupalwxt.github.io GH pages for Drupal WxT. Size: 10619 Bytes   fgp drupalwxt/fgp Drupal 8 install profile for the FGP Portal.</description>
     </item>
     
     <item>
@@ -38,7 +38,7 @@ Note: This list does not represent the full capabilities of the Drupal WxT platf
       
       <guid>https://drupalwxt.github.io/wxt/d8/releases/</guid>
       <description>Important Expect security releases to appear here within 24 hours of being reported upstream.
- HAHAHUGOSHORTCODE-0xc00096d900-1-HBHB</description>
+   Release Created Date Description     2.2.15 2019-03-15T00:35:22Z Features: - Update Drupal Core 8.6.11 - Support for gcweb (canada.ca) theme v5.0.1 spec - Updated WxT related packages - drupal/wxt_library including: - wet-boew/theme-gcweb (v4.0.29 =&amp;gt; v5.0.1) - wet-boew/theme-gcweb-legacy (v4.0.29) - wet-boew/wet-boew (v4.0.29 =&amp;gt; v4.0.30) - drupal/wxt_bootstrap - Added modules - entityqueue - s3fs</description>
     </item>
     
     <item>
