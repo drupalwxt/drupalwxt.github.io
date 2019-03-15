@@ -23,13 +23,22 @@ Note: This list does not represent the full capabilities of the Drupal WxT platf
     </item>
     
     <item>
+      <title>Modules for Drupal WxT</title>
+      <link>https://drupalwxt.github.io/wxt/d8/modules/</link>
+      <pubDate>Tue, 26 Feb 2019 13:10:50 -0500</pubDate>
+      
+      <guid>https://drupalwxt.github.io/wxt/d8/modules/</guid>
+      <description>HAHAHUGOSHORTCODE-0xc00096d400-1-HBHB</description>
+    </item>
+    
+    <item>
       <title>Releases</title>
       <link>https://drupalwxt.github.io/wxt/d8/releases/</link>
       <pubDate>Tue, 26 Feb 2019 13:10:50 -0500</pubDate>
       
       <guid>https://drupalwxt.github.io/wxt/d8/releases/</guid>
       <description>Important Expect security releases to appear here within 24 hours of being reported upstream.
-   Release Created Date Description     2.2.15 2019-03-15T00:35:22Z Features: - Update Drupal Core 8.6.11 - Support for gcweb (canada.ca) theme v5.0.1 spec - Updated WxT related packages - drupal/wxt_library including: - wet-boew/theme-gcweb (v4.0.29 =&amp;gt; v5.0.1) - wet-boew/theme-gcweb-legacy (v4.0.29) - wet-boew/wet-boew (v4.0.29 =&amp;gt; v4.0.30) - drupal/wxt_bootstrap - Added modules - entityqueue - s3fs</description>
+ HAHAHUGOSHORTCODE-0xc00096d900-1-HBHB</description>
     </item>
     
     <item>
@@ -114,7 +123,7 @@ For more information please consult:
       <pubDate>Tue, 13 Jan 2015 13:10:52 -0500</pubDate>
       
       <guid>https://drupalwxt.github.io/wxt/d7/modules/</guid>
-      <description>HAHAHUGOSHORTCODE-0xc0008d6f00-1-HBHB</description>
+      <description>Name Website Description Size     canada drupalwxt/canada Drupal 8 install profile for the Canada Portal. (In Development) Size: 174 Bytes   canada-project drupalwxt/canada-project Project template for Drupal 8 sites built with the Canada distribution. Size: 5 Bytes   composer-extdeps drupalwxt/composer-extdeps Composer repository for external dependencies on Drupal WxT Size: 15 Bytes   drupalwxt.github.io drupalwxt/drupalwxt.github.io GH pages for Drupal WxT. Size: 10619 Bytes   fgp drupalwxt/fgp Drupal 8 install profile for the FGP Portal.</description>
     </item>
     
     <item>
@@ -126,15 +135,6 @@ For more information please consult:
       <description>The easiest way to update an existing slideshow is to Edit the Block directly via contextual links. Simply mouse-over the gears widget in the top right corner and then click Edit Block.
 To see a list of carousel slideshows you can use the content blocks admin page /admin/content/blocks to filter by type Slideshow and then click Edit.
 Create / Edit slideshow  Label: This is the visible name of the slideshow when listed in the blocks admin page.</description>
-    </item>
-    
-    <item>
-      <title>Modules for Drupal WxT</title>
-      <link>https://drupalwxt.github.io/wxt/d8/modules/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://drupalwxt.github.io/wxt/d8/modules/</guid>
-      <description>Name Website Description Size     canada drupalwxt/canada Drupal 8 install profile for the Canada Portal. (In Development) Size: 174 Bytes   canada-project drupalwxt/canada-project Project template for Drupal 8 sites built with the Canada distribution. Size: 5 Bytes   composer-extdeps drupalwxt/composer-extdeps Composer repository for external dependencies on Drupal WxT Size: 15 Bytes   drupalwxt.github.io drupalwxt/drupalwxt.github.io GH pages for Drupal WxT. Size: 10619 Bytes   fgp drupalwxt/fgp Drupal 8 install profile for the FGP Portal.</description>
     </item>
     
   </channel>

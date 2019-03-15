@@ -13,6 +13,11 @@
   </url>
   
   <url>
+    <loc>https://drupalwxt.github.io/wxt/d8/modules/</loc>
+    <lastmod>2019-02-26T13:10:50-05:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://drupalwxt.github.io/wxt/d8/releases/</loc>
     <lastmod>2019-02-26T13:10:50-05:00</lastmod>
   </url>
@@ -209,10 +214,6 @@
     <loc>https://drupalwxt.github.io/tags/moderation/</loc>
     <lastmod>2015-01-13T13:10:52-05:00</lastmod>
     <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://drupalwxt.github.io/wxt/d8/modules/</loc>
   </url>
   
   <url>
