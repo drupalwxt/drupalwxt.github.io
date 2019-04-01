@@ -29,9 +29,8 @@ Note: This list does not represent the full capabilities of the Drupal WxT platf
       
       <guid>https://drupalwxt.github.io/wxt/d8/releases/</guid>
       <description>Important Expect security releases to appear here within 24 hours of being reported upstream.
-   Release Created Date Description     2.2.16 2019-03-22T01:21:09Z Security update:
- Update core to 8.6.13 SA-CORE-2019-004  Features/Updates:
- Update Lightning to 3.2.7 Update entityqueue to 1.0-alpha8 Update menu_breadcrumb to 1.8 Update paragraphs to 1.7 Update wxt_bootstrap to 1.8  Resolve issues with container class logic in regions      2.</description>
+   Release Created Date Description     2.2.17 2019-03-30T19:41:26Z Features/Updates:
+ Minor README.md improvements Patch for Paragraphs endless loop Revert menu_breadcrumb to 1.7 + lock Update wxt_bootstrap to 1.9  Resolve additional issues with gcweb legacy port  Update wxt_bootstrap to 1.6  Add guard for language detection in search block      2.</description>
     </item>
     
     <item>
@@ -40,7 +39,7 @@ Note: This list does not represent the full capabilities of the Drupal WxT platf
       <pubDate>Tue, 26 Feb 2019 13:10:50 -0500</pubDate>
       
       <guid>https://drupalwxt.github.io/wxt/d8/repositories/</guid>
-      <description>Name Website Description Size     canada drupalwxt/canada Drupal 8 install profile for the Canada Portal. (In Development) Size: 174 Bytes   canada-project drupalwxt/canada-project Project template for Drupal 8 sites built with the Canada distribution. Size: 5 Bytes   composer-extdeps drupalwxt/composer-extdeps Composer repository for external dependencies on Drupal WxT Size: 17 Bytes   drupalwxt.github.io drupalwxt/drupalwxt.github.io GH pages for Drupal WxT. Size: 10859 Bytes   helm-drupalwxt drupalwxt/helm-drupalwxt Drupal WxT helm chart for Kubernetes.</description>
+      <description>Name Website Description Size     canada drupalwxt/canada Drupal 8 install profile for the Canada Portal. (In Development) Size: 174 Bytes   canada-project drupalwxt/canada-project Project template for Drupal 8 sites built with the Canada distribution. Size: 5 Bytes   composer-extdeps drupalwxt/composer-extdeps Composer repository for external dependencies on Drupal WxT Size: 17 Bytes   drupalwxt.github.io drupalwxt/drupalwxt.github.io GH pages for Drupal WxT. Size: 10868 Bytes   helm-drupalwxt drupalwxt/helm-drupalwxt Drupal WxT helm chart for Kubernetes.</description>
     </item>
     
     <item>
@@ -82,9 +81,8 @@ Browsing the Library a) Using the file admin page /en/admin/content/file you can
       
       <guid>https://drupalwxt.github.io/wxt/d7/releases/</guid>
       <description>Important Releases will soon start to appear for Drupal 8 once stable releases are made.
-   Release Created Date Description     2.2.16 2019-03-22T01:21:09Z Security update:
- Update core to 8.6.13 SA-CORE-2019-004  Features/Updates:
- Update Lightning to 3.2.7 Update entityqueue to 1.0-alpha8 Update menu_breadcrumb to 1.8 Update paragraphs to 1.7 Update wxt_bootstrap to 1.8  Resolve issues with container class logic in regions      2.</description>
+   Release Created Date Description     2.2.17 2019-03-30T19:41:26Z Features/Updates:
+ Minor README.md improvements Patch for Paragraphs endless loop Revert menu_breadcrumb to 1.7 + lock Update wxt_bootstrap to 1.9  Resolve additional issues with gcweb legacy port  Update wxt_bootstrap to 1.6  Add guard for language detection in search block      2.</description>
     </item>
     
     <item>
@@ -127,7 +125,7 @@ For more information please consult:
       <pubDate>Tue, 13 Jan 2015 13:10:52 -0500</pubDate>
       
       <guid>https://drupalwxt.github.io/wxt/d7/modules/</guid>
-      <description>Name Website Description Size     canada drupalwxt/canada Drupal 8 install profile for the Canada Portal. (In Development) Size: 174 Bytes   canada-project drupalwxt/canada-project Project template for Drupal 8 sites built with the Canada distribution. Size: 5 Bytes   composer-extdeps drupalwxt/composer-extdeps Composer repository for external dependencies on Drupal WxT Size: 17 Bytes   drupalwxt.github.io drupalwxt/drupalwxt.github.io GH pages for Drupal WxT. Size: 10859 Bytes   helm-drupalwxt drupalwxt/helm-drupalwxt Drupal WxT helm chart for Kubernetes.</description>
+      <description>Name Website Description Size     canada drupalwxt/canada Drupal 8 install profile for the Canada Portal. (In Development) Size: 174 Bytes   canada-project drupalwxt/canada-project Project template for Drupal 8 sites built with the Canada distribution. Size: 5 Bytes   composer-extdeps drupalwxt/composer-extdeps Composer repository for external dependencies on Drupal WxT Size: 17 Bytes   drupalwxt.github.io drupalwxt/drupalwxt.github.io GH pages for Drupal WxT. Size: 10868 Bytes   helm-drupalwxt drupalwxt/helm-drupalwxt Drupal WxT helm chart for Kubernetes.</description>
     </item>
     
     <item>
