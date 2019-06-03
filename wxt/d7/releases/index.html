@@ -139,6 +139,20 @@
                 <li class="">
                 <a href="#" class="item">
                     
+                    <span>Documentation</span>
+                </a>
+                <ul class="sm list-unstyled" role="menu">
+                    
+                    <li><a href="/docs/theme/"> Theme Workflow</a></li>
+                    
+                </ul>
+                
+                </li>
+                
+                
+                <li class="">
+                <a href="#" class="item">
+                    
                     <span>Install</span>
                 </a>
                 <ul class="sm list-unstyled" role="menu">
@@ -255,6 +269,47 @@ made.</p>
     <tbody>
       
       
+      
+      
+      <tr>
+          <td><strong>2.2.18</strong></td>
+          <td><strong>2019-04-24T20:38:23Z</strong></td>
+          <td><p>Security update:
+* Update Drupal Core to <a href="https://www.drupal.org/project/drupal/releases/8.6.15">8.6.15</a>
+  * <a href="https://www.drupal.org/sa-core-2019-005">SA-CORE-2019-005</a>
+  * <a href="https://www.drupal.org/sa-core-2019-006">SA-CORE-2019-006</a></p>
+
+<p>Features/Updates:
+- Update Drupal Core to 8.6.15
+- Update Lightning to 3.2.8
+- Update entityqueue to 1.0-beta2
+- Update migrate_plus to 4.2</p>
+
+<p>Upgrade path:</p>
+
+<ul>
+<li><p>Update your codebase:</p>
+
+<ul>
+<li><code>composer update</code></li>
+</ul></li>
+
+<li><p>Run database updates:</p>
+
+<ul>
+<li><code>drush cache:rebuild</code></li>
+<li><code>drush updatedb</code></li>
+</ul></li>
+
+<li><p>Run Lightning configuration updates:</p>
+
+<ul>
+<li><code>drush cache:rebuild</code></li>
+<li><code>drush update:lightning</code></li>
+</ul></li>
+</ul>
+</td>
+      </tr>
       
       
       <tr>
@@ -719,18 +774,6 @@ exclude:
 </td>
       </tr>
       
-      
-      <tr>
-          <td><strong>2.1.4</strong></td>
-          <td><strong>2018-05-05T21:17:22Z</strong></td>
-          <td>Bug fixe(s):</p>
-
-<ul>
-<li><a href="https://www.drupal.org/project/wxt/issues/2969558">2969558: Panels patch for issue #2869412 is failing for Panels 4.3</a></li>
-</ul>
-</td>
-      </tr>
-      
     </tbody>
 </table>
 
@@ -781,6 +824,12 @@ exclude:
                         
                         
                         <li><a href="https://drupalwxt.github.io/wxt/d8/repositories/">Repositories for Drupal WxT</a></li>
+                        
+                        
+                        
+                        
+                        
+                        <li><a href="https://drupalwxt.github.io/docs/theme/">Theme Workflow</a></li>
                         
                         
                         
@@ -897,6 +946,10 @@ exclude:
                         
                         
                         <li><a href="https://drupalwxt.github.io/wxt/d7/tabbed-interface/">Tabbed Interface (D7)</a></li>
+                        
+                        
+                        
+                        
                         
                         
                         
