@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
     <title>
         
-        Architecture
+        Drupal WxT
         
     </title>
     <!--[if gte IE 9 | !IE ]><!-->
@@ -217,8 +217,14 @@
                   
                     
                       
+                        
+                      
+                      
                   
-                <li>Architecture</li>
+                    
+                      
+                  
+                <li>Docs</li>
             </ol>
         </div>
     </div>
@@ -232,12 +238,12 @@
             <article class="post">
                 <header>
                     <h1 id="wb-cont" property="name">
-                        Architecture
+                        Docs
                     </h1>
                     <div class="post-date mrgn-bttm-md text-muted text-right small">
                         <span class="glyphicon glyphicon-calendar"></span>
-                        <time datetime="2015-01-13">
-                            2015-01-13
+                        <time datetime="2019-06-03">
+                            2019-06-03
                         </time>
                     </div>
                 </header>
@@ -246,21 +252,23 @@
                         
                         <article class="post">
     <header>
-        <h2><a href="https://drupalwxt.github.io/architecture/release-cycle/">Release Cycle / Updates</a></h2>
+        <h2><a href="https://drupalwxt.github.io/docs/code/">Coding Standards</a></h2>
         <div class="post-date text-muted">
             <span class="glyphicon glyphicon-calendar"></span>
-            <time datetime="2015-01-13">
-                2015-01-13 - 2M TO READ
+            <time datetime="2019-06-03">
+                2019-06-03 - 1M TO READ
             </time>
         </div>
     </header>
     <div class="post-content">
-        Release Cycle The Drupal WxT 7.x-4.x branch will be updated with a stable release approximately once every few months roughly around the 18th. The reason for this is to follow as closely the Drupal security and core release cycle which is usually around the 15th of every month.
-1.x branch Starting in January 2016 there will be no more new features integrated into the 7.x-1.x branch. Only security and minor bug fixes will be merged into the codebase for a period of 6 months.
+        Background Drupal WxT complies with the Drupal Coding Standards and runs automated tests on ever commit that gets merged into the working directory.
+PHP CodeSniffer is executed on our phpcs.xml file which is only slightly different then the one which resides in Drupal core.
+PHPCS The following is the literal commands being executed in our continuous integration builds under Travis CI.
+./docker/bin/phpcs --standard=/var/www/html/core/phpcs.xml \ --extensions=php,module,inc,install,test,profile,theme \ --report=full \ --colors \ --ignore=/var/www/html/profiles/wxt/modules/custom/wxt_test \ --ignore=/var/www/html/modules/custom/wxt_library \ --ignore=*.
     </div>
     
     <footer class="read-more-link">
-        <a href="https://drupalwxt.github.io/architecture/release-cycle/" class="btn btn-default">Read More...</a>
+        <a href="https://drupalwxt.github.io/docs/code/" class="btn btn-default">Read More...</a>
     </footer>
     
 </article>
@@ -269,212 +277,21 @@
                         
                         <article class="post">
     <header>
-        <h2><a href="https://drupalwxt.github.io/architecture/roadmap/">Roadmap</a></h2>
+        <h2><a href="https://drupalwxt.github.io/docs/theme/">Theme Workflow</a></h2>
         <div class="post-date text-muted">
             <span class="glyphicon glyphicon-calendar"></span>
-            <time datetime="2018-01-13">
-                2018-01-13 - 2M TO READ
+            <time datetime="2019-06-03">
+                2019-06-03 - 1M TO READ
             </time>
         </div>
     </header>
     <div class="post-content">
-        Vision Statement The Drupal WxT distribution is a web content management system which assists in building and maintaining innovative Web sites that are accessible, usable, and interoperable. The primary goal of Drupal WxT is to provide an enterprise level platform that can assist governments and larger organizations in disseminating data.
-Mandatory Features There are a lot of features inherently provided by Drupal WxT. However there are a few that have been designated as mandatory to support and as such have shaped the architecture of the distribution.
+        Sub-themes are just like any other theme, with one difference: They inherit the parent theme&rsquo;s resources. There are no limits on the chaining capabilities connecting sub-themes for their parents. A sub-theme can be a child of another sub-theme, and it can be branched and organized however you see fit.
+ Background Drupal WxT includes WxT Bootstrap which is a a modern, component based and accessible sub-theme powered by the Bootstrap base theme.
     </div>
     
     <footer class="read-more-link">
-        <a href="https://drupalwxt.github.io/architecture/roadmap/" class="btn btn-default">Read More...</a>
-    </footer>
-    
-</article>
-<hr>
-
-                        
-                        <article class="post">
-    <header>
-        <h2><a href="https://drupalwxt.github.io/architecture/apache-fpm/">Apache and PHP-FPM</a></h2>
-        <div class="post-date text-muted">
-            <span class="glyphicon glyphicon-calendar"></span>
-            <time datetime="2015-08-04">
-                2015-08-04 - 4M TO READ
-            </time>
-        </div>
-    </header>
-    <div class="post-content">
-        Important Want even more performance? Head on over to our Nginx + PHP-FPM documentation.
- Apache can achieve a rough parity in performance to a Nginx + PHP-FPM setup. With the added caveat that Apache should be run in either MPM Event or MPM Worker mode. Please note that the following statement holds true when analyzing performance:
-page speed &lt; requests served  This means we are more concerned about how many requests that can be served then how fast we can serve the request.
-    </div>
-    
-    <footer class="read-more-link">
-        <a href="https://drupalwxt.github.io/architecture/apache-fpm/" class="btn btn-default">Read More...</a>
-    </footer>
-    
-</article>
-<hr>
-
-                        
-                        <article class="post">
-    <header>
-        <h2><a href="https://drupalwxt.github.io/architecture/nginx-fpm/">Nginx and PHP-FPM</a></h2>
-        <div class="post-date text-muted">
-            <span class="glyphicon glyphicon-calendar"></span>
-            <time datetime="2015-08-04">
-                2015-08-04 - 2M TO READ
-            </time>
-        </div>
-    </header>
-    <div class="post-content">
-        Important Using Apache? Head on over to our Apache + PHP-FPM documentation.
- Nginx is event-based, so it does not follow Apache&rsquo;s style of spawning new processes or threads for each web page request. The end result is that even as load increases, memory and CPU usage remain manageable.
-Scenario Server with the following technical specs:
- CPU: 4 @ 2.7GHZ RAM: 8GB  Quick Audit Nginx There are three key areas to inspect when looking at Nginx for a PHP-FPM environment.
-    </div>
-    
-    <footer class="read-more-link">
-        <a href="https://drupalwxt.github.io/architecture/nginx-fpm/" class="btn btn-default">Read More...</a>
-    </footer>
-    
-</article>
-<hr>
-
-                        
-                        <article class="post">
-    <header>
-        <h2><a href="https://drupalwxt.github.io/architecture/libraries-api/">Libraries API</a></h2>
-        <div class="post-date text-muted">
-            <span class="glyphicon glyphicon-calendar"></span>
-            <time datetime="2015-07-27">
-                2015-07-27 - 2M TO READ
-            </time>
-        </div>
-    </header>
-    <div class="post-content">
-        Libraries API is the common denominator and the defacto standard for all Drupal modules/profiles/themes that integrate with external libraries.
-The module introduces a common repository for libraries in profiles/distro/libraries or sites/all/libraries.
-Key Features  The same library can be shared by more than one module. The same library can be shared by more than one site. Ease the process of upgrading a module that requires an external library. Just replace the module folder with the new one.
-    </div>
-    
-    <footer class="read-more-link">
-        <a href="https://drupalwxt.github.io/architecture/libraries-api/" class="btn btn-default">Read More...</a>
-    </footer>
-    
-</article>
-<hr>
-
-                        
-                        <article class="post">
-    <header>
-        <h2><a href="https://drupalwxt.github.io/architecture/profiling/">Profiling with XHProf &#43; XHGui</a></h2>
-        <div class="post-date text-muted">
-            <span class="glyphicon glyphicon-calendar"></span>
-            <time datetime="2015-01-20">
-                2015-01-20 - 1M TO READ
-            </time>
-        </div>
-    </header>
-    <div class="post-content">
-        XHProf is a function-level hierarchical profiler for PHP. The raw data collection component is implemented in C (as a PHP extension). It is capable of reporting function-level inclusive and exclusive wall times, memory usage, CPU times and number of calls for each function. Additionally, it supports ability to compare two runs (hierarchical DIFF reports), or aggregate results from multiple runs.
-XHGui is a tool built upon XHProf to facilitate both an improved user experience and a more efficient storage of metrics via optional support for MongoDB.
-    </div>
-    
-    <footer class="read-more-link">
-        <a href="https://drupalwxt.github.io/architecture/profiling/" class="btn btn-default">Read More...</a>
-    </footer>
-    
-</article>
-<hr>
-
-                        
-                        <article class="post">
-    <header>
-        <h2><a href="https://drupalwxt.github.io/architecture/deployment/">Content Staging with Deploy &#43; UUID</a></h2>
-        <div class="post-date text-muted">
-            <span class="glyphicon glyphicon-calendar"></span>
-            <time datetime="2015-01-18">
-                2015-01-18 - 4M TO READ
-            </time>
-        </div>
-    </header>
-    <div class="post-content">
-        Deployment with Drupal WxT There are 4 essential modules that facilitate deployment in Drupal WxT:
- WetKit Deployment: Provides the base configuration for both source and destination servers as well as default content types
- WetKit Deployment Environment Indicator: Provides contextual environment information (.dev, .qa, .prod) on the toolbar
- WetKit Deployment Source: Provides the functionality to deploy content in JSON to the destination servers
- WetKit Deployment Destination: Provides the CRUD interface to consume the JSON data that was sent from the client server
-    </div>
-    
-    <footer class="read-more-link">
-        <a href="https://drupalwxt.github.io/architecture/deployment/" class="btn btn-default">Read More...</a>
-    </footer>
-    
-</article>
-<hr>
-
-                        
-                        <article class="post">
-    <header>
-        <h2><a href="https://drupalwxt.github.io/architecture/drush-make/">Drush Make &#43; Site Install</a></h2>
-        <div class="post-date text-muted">
-            <span class="glyphicon glyphicon-calendar"></span>
-            <time datetime="2015-01-13">
-                2015-01-13 - 2M TO READ
-            </time>
-        </div>
-    </header>
-    <div class="post-content">
-        Important These instructions could become outdated over time. Up to date instructions can always be found via the official readme.
- Drupal WxT uses Drush Make for a rapid built-out of the Drupal codebase. A drush make file is similar to an &ldquo;ant script&rdquo; and allows us to host just the code that we are developing (Installation Profile and Custom Modules, Features, and Themes) on GitHub. Any user who has Drush installed can then perform a build-out of both the Drupal Core package and various contributed modules hosted on Drupal.
-    </div>
-    
-    <footer class="read-more-link">
-        <a href="https://drupalwxt.github.io/architecture/drush-make/" class="btn btn-default">Read More...</a>
-    </footer>
-    
-</article>
-<hr>
-
-                        
-                        <article class="post">
-    <header>
-        <h2><a href="https://drupalwxt.github.io/architecture/getting-started-win/">Getting Started (Windows)</a></h2>
-        <div class="post-date text-muted">
-            <span class="glyphicon glyphicon-calendar"></span>
-            <time datetime="2015-01-13">
-                2015-01-13 - 3M TO READ
-            </time>
-        </div>
-    </header>
-    <div class="post-content">
-        Important The most up to date instructions are available in the README.md file. This page while outdated does contain additional procedures for custom environments.
- Install Acquia Dev Desktop If this is your first Drupal 7 install, you may want to install the Acquia Dev Destop on your machine since it will provide you with a complete environment at the click of a button. It will set up Apache, MySQL, PHP and install an instance of Drupal.
-    </div>
-    
-    <footer class="read-more-link">
-        <a href="https://drupalwxt.github.io/architecture/getting-started-win/" class="btn btn-default">Read More...</a>
-    </footer>
-    
-</article>
-<hr>
-
-                        
-                        <article class="post">
-    <header>
-        <h2><a href="https://drupalwxt.github.io/architecture/system-requirements/">System Requirements</a></h2>
-        <div class="post-date text-muted">
-            <span class="glyphicon glyphicon-calendar"></span>
-            <time datetime="2015-01-13">
-                2015-01-13 - 1M TO READ
-            </time>
-        </div>
-    </header>
-    <div class="post-content">
-        Drupal WxT can run on a wide range of desktop and server operating systems including Windows, MacOS, Linux and UNIX. However, you will need to configure the environment according to the standard Drupal 7 requirements. This page provides a brief summary of those requirements and recommendations. More information is available from the system requirements page at Drupal.org.
-Web server  Apache 2.x Microsoft IIS NGINX  Database server  PostgreSQL 8.
-    </div>
-    
-    <footer class="read-more-link">
-        <a href="https://drupalwxt.github.io/architecture/system-requirements/" class="btn btn-default">Read More...</a>
+        <a href="https://drupalwxt.github.io/docs/theme/" class="btn btn-default">Read More...</a>
     </footer>
     
 </article>

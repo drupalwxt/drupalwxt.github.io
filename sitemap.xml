@@ -13,17 +13,22 @@
   </url>
   
   <url>
+    <loc>https://drupalwxt.github.io/docs/code/</loc>
+    <lastmod>2019-06-03T15:10:50-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://drupalwxt.github.io/docs/theme/</loc>
+    <lastmod>2019-06-03T15:10:50-05:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://drupalwxt.github.io/wxt/d8/releases/</loc>
     <lastmod>2019-02-26T13:10:50-05:00</lastmod>
   </url>
   
   <url>
     <loc>https://drupalwxt.github.io/wxt/d8/repositories/</loc>
-    <lastmod>2019-02-26T13:10:50-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://drupalwxt.github.io/docs/theme/</loc>
     <lastmod>2019-02-26T13:10:50-05:00</lastmod>
   </url>
   
@@ -193,7 +198,13 @@
   
   <url>
     <loc>https://drupalwxt.github.io/docs/</loc>
-    <lastmod>2019-02-26T13:10:50-05:00</lastmod>
+    <lastmod>2019-06-03T15:10:50-05:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://drupalwxt.github.io/tags/docs/</loc>
+    <lastmod>2019-06-03T15:10:50-05:00</lastmod>
     <priority>0</priority>
   </url>
   
