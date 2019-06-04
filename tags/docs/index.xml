@@ -24,6 +24,16 @@ PHPCS The following is the literal commands being executed in our continuous int
     </item>
     
     <item>
+      <title>Module Selection for Drupal WxT</title>
+      <link>https://drupalwxt.github.io/docs/modules/</link>
+      <pubDate>Mon, 03 Jun 2019 15:10:50 -0500</pubDate>
+      
+      <guid>https://drupalwxt.github.io/docs/modules/</guid>
+      <description>Background This WxT installation profile directly extends from the Lightning Framework created by Acquia to provide developers with a powerful base toolchain upon which to extend. Due to this strict dependency we also align much of our workflow with the best practice established patterns Acquia has provided.
+Lightning We chose Lightning because of it being the best standard for enterprise authoring in Drupal tightly focused on the user experience in four key functional areas.</description>
+    </item>
+    
+    <item>
       <title>Theme Workflow</title>
       <link>https://drupalwxt.github.io/docs/theme/</link>
       <pubDate>Mon, 03 Jun 2019 15:10:50 -0500</pubDate>

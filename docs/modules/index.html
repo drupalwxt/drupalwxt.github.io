@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
     <title>
         
-        Drupal WxT
+        Module Selection for Drupal WxT
         
     </title>
     <!--[if gte IE 9 | !IE ]><!-->
@@ -226,7 +226,7 @@
                     
                       
                   
-                <li>Performance</li>
+                <li>Module Selection for Drupal WxT</li>
             </ol>
         </div>
     </div>
@@ -236,192 +236,75 @@
 
     <main role="main" property="mainContentOfPage" class="container">
     <div class="row">
-        <div class="col-md-8">
+        <div class="col-md-12">
             <article class="post">
                 <header>
                     <h1 id="wb-cont" property="name">
-                        Performance
+                        Module Selection for Drupal WxT
                     </h1>
                     <div class="post-date mrgn-bttm-md text-muted text-right small">
                         <span class="glyphicon glyphicon-calendar"></span>
-                        <time datetime="2015-08-04">
-                            2015-08-04
+                        <time datetime="2019-06-03">
+                            2019-06-03
                         </time>
                     </div>
                 </header>
                 <div class="post-content">
-                    <ul class='list-unstyled'>
-                        
-                        <article class="post">
-    <header>
-        <h2><a href="https://drupalwxt.github.io/architecture/apache-fpm/">Apache and PHP-FPM</a></h2>
-        <div class="post-date text-muted">
-            <span class="glyphicon glyphicon-calendar"></span>
-            <time datetime="2015-08-04">
-                2015-08-04 - 4M TO READ
-            </time>
-        </div>
-    </header>
-    <div class="post-content">
-        Important Want even more performance? Head on over to our Nginx + PHP-FPM documentation.
- Apache can achieve a rough parity in performance to a Nginx + PHP-FPM setup. With the added caveat that Apache should be run in either MPM Event or MPM Worker mode. Please note that the following statement holds true when analyzing performance:
-page speed &lt; requests served  This means we are more concerned about how many requests that can be served then how fast we can serve the request.
-    </div>
-    
-    <footer class="read-more-link">
-        <a href="https://drupalwxt.github.io/architecture/apache-fpm/" class="btn btn-default">Read More...</a>
-    </footer>
-    
-</article>
-<hr>
+                    
 
-                        
-                        <article class="post">
-    <header>
-        <h2><a href="https://drupalwxt.github.io/architecture/nginx-fpm/">Nginx and PHP-FPM</a></h2>
-        <div class="post-date text-muted">
-            <span class="glyphicon glyphicon-calendar"></span>
-            <time datetime="2015-08-04">
-                2015-08-04 - 2M TO READ
-            </time>
-        </div>
-    </header>
-    <div class="post-content">
-        Important Using Apache? Head on over to our Apache + PHP-FPM documentation.
- Nginx is event-based, so it does not follow Apache&rsquo;s style of spawning new processes or threads for each web page request. The end result is that even as load increases, memory and CPU usage remain manageable.
-Scenario Server with the following technical specs:
- CPU: 4 @ 2.7GHZ RAM: 8GB  Quick Audit Nginx There are three key areas to inspect when looking at Nginx for a PHP-FPM environment.
-    </div>
-    
-    <footer class="read-more-link">
-        <a href="https://drupalwxt.github.io/architecture/nginx-fpm/" class="btn btn-default">Read More...</a>
-    </footer>
-    
-</article>
-<hr>
+<h2 id="background">Background</h2>
 
-                        
-                        <article class="post">
-    <header>
-        <h2><a href="https://drupalwxt.github.io/post/2015/01/20/code-quality/">Code Quality</a></h2>
-        <div class="post-date text-muted">
-            <span class="glyphicon glyphicon-calendar"></span>
-            <time datetime="2015-01-20">
-                2015-01-20 - 2M TO READ
-            </time>
-        </div>
-    </header>
-    <div class="post-content">
-        Important These instructions might be a little out of date as much of the projects mentioned below have been incorporated into the Coder module
- The following is a list of best practice tools to use when analyzing the code quality of modules made for Drupal:
- Coder PHP CodeSniffer DrupalPractice (merged into Coder) DrupalSecure  Normally these tools would be run based on a push to a CI server and will affect the build status if failures are detected.
-    </div>
-    
-    <footer class="read-more-link">
-        <a href="https://drupalwxt.github.io/post/2015/01/20/code-quality/" class="btn btn-default">Read More...</a>
-    </footer>
-    
-</article>
-<hr>
+<p>This <a href="https://github.com/drupalwxt/wxt">WxT</a> installation profile directly extends from the Lightning Framework created by Acquia to provide developers with a powerful base toolchain upon which to extend. Due to this strict dependency we also align much of our workflow with the best practice established patterns Acquia has provided.</p>
 
-                        
-                        <article class="post">
-    <header>
-        <h2><a href="https://drupalwxt.github.io/architecture/profiling/">Profiling with XHProf &#43; XHGui</a></h2>
-        <div class="post-date text-muted">
-            <span class="glyphicon glyphicon-calendar"></span>
-            <time datetime="2015-01-20">
-                2015-01-20 - 1M TO READ
-            </time>
-        </div>
-    </header>
-    <div class="post-content">
-        XHProf is a function-level hierarchical profiler for PHP. The raw data collection component is implemented in C (as a PHP extension). It is capable of reporting function-level inclusive and exclusive wall times, memory usage, CPU times and number of calls for each function. Additionally, it supports ability to compare two runs (hierarchical DIFF reports), or aggregate results from multiple runs.
-XHGui is a tool built upon XHProf to facilitate both an improved user experience and a more efficient storage of metrics via optional support for MongoDB.
-    </div>
-    
-    <footer class="read-more-link">
-        <a href="https://drupalwxt.github.io/architecture/profiling/" class="btn btn-default">Read More...</a>
-    </footer>
-    
-</article>
-<hr>
+<h2 id="lightning">Lightning</h2>
 
-                        
-                        <article class="post">
-    <header>
-        <h2><a href="https://drupalwxt.github.io/post/2015/01/13/databases/">Databases</a></h2>
-        <div class="post-date text-muted">
-            <span class="glyphicon glyphicon-calendar"></span>
-            <time datetime="2015-01-13">
-                2015-01-13 - 2M TO READ
-            </time>
-        </div>
-    </header>
-    <div class="post-content">
-        There are a variety of Databases you can use with Drupal as listed in the Drupal requirements section. However only MySQL + PostgreSQL are tested extensively with Drupal WxT and the various contrib modules it leverages.
-Additionally it has been our experience that Microsoft SQL Server is possible but with many caveats. While Oracle support itself should not be attempted due to a outdated PDO Driver.
-PostgreSQL PostgreSQL, often simply Postgres, is an open source object-relational database management system (ORDBMS) with an emphasis on extensibility and standards compliance.
-    </div>
-    
-    <footer class="read-more-link">
-        <a href="https://drupalwxt.github.io/post/2015/01/13/databases/" class="btn btn-default">Read More...</a>
-    </footer>
-    
-</article>
-<hr>
+<p>We chose <a href="https://github.com/acquia/lightning">Lightning</a> because of it being the best standard for enterprise authoring in Drupal tightly focused on the user experience in four key functional areas. This includes the following:</p>
 
-                        
-                        <article class="post">
-    <header>
-        <h2><a href="https://drupalwxt.github.io/post/2015/01/13/memcached/">Memcached</a></h2>
-        <div class="post-date text-muted">
-            <span class="glyphicon glyphicon-calendar"></span>
-            <time datetime="2015-01-13">
-                2015-01-13 - 1M TO READ
-            </time>
-        </div>
-    </header>
-    <div class="post-content">
-        Memcache is an open-source high performance object caching system that is specifically intended for reducing calls to the DBMS. Memcache is a back-end service (i.e. a daemon on UNIX) that provides a simple but fast in-memory key/value store. This is designed to be scalable and distributed so that requests should not slow down as the load increases, and multiple memcached servers can be employed at once.
-For Drupal, memcache can be used to cache database queries.
-    </div>
-    
-    <footer class="read-more-link">
-        <a href="https://drupalwxt.github.io/post/2015/01/13/memcached/" class="btn btn-default">Read More...</a>
-    </footer>
-    
-</article>
-<hr>
+<ul>
+<li>Layout</li>
+<li>Workflow and Content Moderation</li>
+<li>Media</li>
+<li>API First</li>
+</ul>
 
-                        
-                        <article class="post">
-    <header>
-        <h2><a href="https://drupalwxt.github.io/post/2015/01/13/varnish/">Varnish</a></h2>
-        <div class="post-date text-muted">
-            <span class="glyphicon glyphicon-calendar"></span>
-            <time datetime="2015-01-13">
-                2015-01-13 - 2M TO READ
-            </time>
-        </div>
-    </header>
-    <div class="post-content">
-        Varnish is an open source software-only reverse HTTP caching proxy (often referred to as a Web Accelerator). Varnish is developed on Linux but can be compiled on other UNIX operating systems. It is heavily multi-threaded and is capable of taking advantage of the memory available on 64-bit systems as well as 32-bit systems, and should scale as CPU’s are added. Reputedly, Varnish can respond to hundreds of requests per second.
-    </div>
-    
-    <footer class="read-more-link">
-        <a href="https://drupalwxt.github.io/post/2015/01/13/varnish/" class="btn btn-default">Read More...</a>
-    </footer>
-    
-</article>
-<hr>
+<h2 id="wxt">WxT</h2>
 
-                        
-                    </ul>
+<p>Most of the custom modules that the WxT installation profile can be found inside the profile directory. A link to the various core suite of modules can be found here. It should be noted that there is a variety of custom modules in the wxt_ext (WxT Extend) folder which are there for enabling more specific functionality.</p>
+
+<p><a href="https://github.com/drupalwxt/wxt_bootstrap">WxT Bootstrap</a> and <a href="https://github.com/drupalwxt/wxt_library">WxT Library</a> are distributed separately from the installation profile to allow for any developers to use them directly and not accrue the full weight of a distributon and its required depdendencies.</p>
+
+<h2 id="contrib-modules">Contrib Modules</h2>
+
+<blockquote>
+<p><strong>Note</strong>: Even though there might be modules in the contributed directory many of them are not used unless all of the advanced features of Lightning and WxT are enabled.</p>
+</blockquote>
+
+<p>Above and beyond the modules we directly get as a consequence of our dependence on Lightning we have chosen the following suite of modules to improve and extend functionality.</p>
+
+<p><strong>Webform</strong>: An excellent module to build administrative webforms through a point-and-click interface. Amazing support (responds to queries often in less than an hour.</p>
+
+<p><strong>Paragraphs</strong>: Fantastic module which helps greatly with architecture and supporting atomic structured content interspersed in creative ways by the content editor.</p>
+
+<p>We will document more of the modules chosen shortly. In the interim, you can also see our <a href="https://git.drupalcode.org/project/wxt/blob/8.x-2.x/composer.json#L224">composer.json</a> file.</p>
+
                 </div>
                 <aside>
                     
                     <ul class="list-inline post-tags">
+                        
+                        <li>
+                            <a href="https://drupalwxt.github.io/tags/docs">
+                                <i class="fa fa-tags"></i>
+                                docs
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a href="https://drupalwxt.github.io/tags/wxt">
+                                <i class="fa fa-tags"></i>
+                                wxt
+                            </a>
+                        </li>
                         
                     </ul>
                     
@@ -433,6 +316,7 @@ For Drupal, memcache can be used to cache database queries.
                         
                         
                         
+                        <li><a href="https://drupalwxt.github.io/wxt/d7/working-examples/">Working Examples (D7)</a></li>
                         
                         
                         
@@ -442,6 +326,7 @@ For Drupal, memcache can be used to cache database queries.
                         
                         
                         
+                        <li><a href="https://drupalwxt.github.io/docs/code/">Coding Standards</a></li>
                         
                         
                         
@@ -451,16 +336,19 @@ For Drupal, memcache can be used to cache database queries.
                         
                         
                         
+                        <li><a href="https://drupalwxt.github.io/docs/theme/">Theme Workflow</a></li>
                         
                         
                         
                         
                         
+                        <li><a href="https://drupalwxt.github.io/wxt/d8/releases/">Releases</a></li>
                         
                         
                         
                         
                         
+                        <li><a href="https://drupalwxt.github.io/wxt/d8/repositories/">Repositories for Drupal WxT</a></li>
                         
                         
                         
@@ -478,11 +366,13 @@ For Drupal, memcache can be used to cache database queries.
                         
                         
                         
+                        <li><a href="https://drupalwxt.github.io/workflow/composer/">Composer workflow for Drupal 8</a></li>
                         
                         
                         
                         
                         
+                        <li><a href="https://drupalwxt.github.io/workflow/resources/">Resources for WxT</a></li>
                         
                         
                         
@@ -508,11 +398,13 @@ For Drupal, memcache can be used to cache database queries.
                         
                         
                         
+                        <li><a href="https://drupalwxt.github.io/wxt/d7/media/">Media Library - Images, Videos and Documents (D7)</a></li>
                         
                         
                         
                         
                         
+                        <li><a href="https://drupalwxt.github.io/wxt/d7/releases/">Releases</a></li>
                         
                         
                         
@@ -530,11 +422,13 @@ For Drupal, memcache can be used to cache database queries.
                         
                         
                         
+                        <li><a href="https://drupalwxt.github.io/wxt/d7/content-moderation/">Content Moderation</a></li>
                         
                         
                         
                         
                         
+                        <li><a href="https://drupalwxt.github.io/post/2015/01/13/contributing-to-documentation-site/">Contributing to Documentation Site</a></li>
                         
                         
                         
@@ -552,10 +446,27 @@ For Drupal, memcache can be used to cache database queries.
                         
                         
                         
+                        <li><a href="https://drupalwxt.github.io/wxt/d7/make/">Makefiles for Drupal WxT (D7)</a></li>
                         
                         
                         
                         
+                        
+                        
+                        
+                        
+                        
+                        <li><a href="https://drupalwxt.github.io/wxt/d7/modules/">Modules for Drupal WxT (D7)</a></li>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        <li><a href="https://drupalwxt.github.io/wxt/d7/tabbed-interface/">Tabbed Interface (D7)</a></li>
                         
                         
                         
@@ -683,10 +594,10 @@ For Drupal, memcache can be used to cache database queries.
                     <nav>
     <ul class="pager">
         
-        <li class="previous disabled"><a href="#"><span aria-hidden="true">&larr;</span> Older</a></li>
+        <li class="previous"><a href="https://drupalwxt.github.io/docs/code/"><span aria-hidden="true">&larr;</span> Older</a></li>
         
         
-        <li class="next disabled"><a href="#">Newer <span aria-hidden="true">&rarr;</span></a></li>
+        <li class="next"><a href="https://drupalwxt.github.io/docs/theme/">Newer <span aria-hidden="true">&rarr;</span></a></li>
         
     </ul>
 </nav>
@@ -696,155 +607,16 @@ For Drupal, memcache can be used to cache database queries.
                 </footer>
             </article>
         </div>
-        <div class="col-md-4">
-            <aside>
-    <div class="row">
-        <div class="col-xs-12 col-sm-4 col-md-12">
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <h2 class="panel-title">Recent Posts</h2>
-                </div>
-                <div class="list-group">
-                    
-                    <a href="/wxt/d7/working-examples/" class="list-group-item">Working Examples (D7)</a>
-                    
-                    <a href="/architecture/release-cycle/" class="list-group-item">Release Cycle / Updates</a>
-                    
-                    <a href="/docs/code/" class="list-group-item">Coding Standards</a>
-                    
-                    <a href="/docs/modules/" class="list-group-item">Module Selection for Drupal WxT</a>
-                    
-                    <a href="/docs/theme/" class="list-group-item">Theme Workflow</a>
-                    
-                    <a href="/wxt/d8/releases/" class="list-group-item">Releases</a>
-                    
-                    <a href="/wxt/d8/repositories/" class="list-group-item">Repositories for Drupal WxT</a>
-                    
-                    <a href="/architecture/roadmap/" class="list-group-item">Roadmap</a>
-                    
-                    <a href="/workflow/faq/" class="list-group-item">Composer FAQ</a>
-                    
-                    <a href="/workflow/tips/" class="list-group-item">Composer tips for Drupal</a>
-                    
-                </div>
-            </div>
-        </div>
-        <div class="col-xs-12 col-sm-4 col-md-12">
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <h2 class="panel-title">Tags</h2>
-                </div>
-                <div class="list-group">
-                    
-                    
-                    <a href="https://drupalwxt.github.io/tags/architecture" class="list-group-item">
-                        <span class="badge">6</span>
-                        architecture
-                    </a>
-                    
-                    <a href="https://drupalwxt.github.io/tags/bean" class="list-group-item">
-                        <span class="badge">1</span>
-                        bean
-                    </a>
-                    
-                    <a href="https://drupalwxt.github.io/tags/content-staging" class="list-group-item">
-                        <span class="badge">1</span>
-                        content-staging
-                    </a>
-                    
-                    <a href="https://drupalwxt.github.io/tags/deployment" class="list-group-item">
-                        <span class="badge">1</span>
-                        deployment
-                    </a>
-                    
-                    <a href="https://drupalwxt.github.io/tags/docs" class="list-group-item">
-                        <span class="badge">3</span>
-                        docs
-                    </a>
-                    
-                    <a href="https://drupalwxt.github.io/tags/faq" class="list-group-item">
-                        <span class="badge">2</span>
-                        faq
-                    </a>
-                    
-                    <a href="https://drupalwxt.github.io/tags/media" class="list-group-item">
-                        <span class="badge">1</span>
-                        media
-                    </a>
-                    
-                    <a href="https://drupalwxt.github.io/tags/memcache" class="list-group-item">
-                        <span class="badge">1</span>
-                        memcache
-                    </a>
-                    
-                    <a href="https://drupalwxt.github.io/tags/moderation" class="list-group-item">
-                        <span class="badge">1</span>
-                        moderation
-                    </a>
-                    
-                    <a href="https://drupalwxt.github.io/tags/performance" class="list-group-item">
-                        <span class="badge">7</span>
-                        performance
-                    </a>
-                    
-                    <a href="https://drupalwxt.github.io/tags/post" class="list-group-item">
-                        <span class="badge">1</span>
-                        post
-                    </a>
-                    
-                    <a href="https://drupalwxt.github.io/tags/profile" class="list-group-item">
-                        <span class="badge">1</span>
-                        profile
-                    </a>
-                    
-                    <a href="https://drupalwxt.github.io/tags/releases" class="list-group-item">
-                        <span class="badge">2</span>
-                        releases
-                    </a>
-                    
-                    <a href="https://drupalwxt.github.io/tags/resources" class="list-group-item">
-                        <span class="badge">1</span>
-                        resources
-                    </a>
-                    
-                    <a href="https://drupalwxt.github.io/tags/roadmap" class="list-group-item">
-                        <span class="badge">1</span>
-                        roadmap
-                    </a>
-                    
-                    <a href="https://drupalwxt.github.io/tags/tabbed-interface" class="list-group-item">
-                        <span class="badge">1</span>
-                        tabbed-interface
-                    </a>
-                    
-                    <a href="https://drupalwxt.github.io/tags/tips" class="list-group-item">
-                        <span class="badge">1</span>
-                        tips
-                    </a>
-                    
-                    <a href="https://drupalwxt.github.io/tags/varnish" class="list-group-item">
-                        <span class="badge">1</span>
-                        varnish
-                    </a>
-                    
-                    <a href="https://drupalwxt.github.io/tags/workbench" class="list-group-item">
-                        <span class="badge">1</span>
-                        workbench
-                    </a>
-                    
-                    <a href="https://drupalwxt.github.io/tags/wxt" class="list-group-item">
-                        <span class="badge">15</span>
-                        wxt
-                    </a>
-                    
-                </div>
-            </div>
-        </div>
     </div>
-</aside>
+    
+<dl id="wb-dtmd">
+    <dt>Date modified:&#32;</dt>
+    <dd>
+        <time property="dateModified">2019-06-03</time>
+    </dd>
+</dl>
 
-        </div>
-    </div>
+
     </main>
     
   <footer role="contentinfo" id="wb-info" class="visible-sm visible-md visible-lg wb-navcurr">
