@@ -18,7 +18,7 @@
       
       <guid>https://drupalwxt.github.io/wxt/d8/releases/</guid>
       <description>Important Expect security releases to appear here within 24 hours of being reported upstream.
- HAHAHUGOSHORTCODE-0xc00084ef00-1-HBHB</description>
+ HAHAHUGOSHORTCODE-0xc000877400-1-HBHB</description>
     </item>
     
     <item>
@@ -28,7 +28,11 @@
       
       <guid>https://drupalwxt.github.io/wxt/d7/releases/</guid>
       <description>Important Releases will soon start to appear for Drupal 8 once stable releases are made.
- HAHAHUGOSHORTCODE-0xc000959900-1-HBHB</description>
+   Release Created Date Description     2.2.18 2019-04-24T20:38:23Z Security update: * Update Drupal Core to 8.6.15 * SA-CORE-2019-005 * SA-CORE-2019-006
+Features/Updates: - Update Drupal Core to 8.6.15 - Update Lightning to 3.2.8 - Update entityqueue to 1.0-beta2 - Update migrate_plus to 4.2
+Upgrade path:
+ Update your codebase:
+ composer update  Run database updates:</description>
     </item>
     
   </channel>
