@@ -276,6 +276,70 @@ made.</p>
       
       
       <tr>
+          <td><strong>2.2.19</strong></td>
+          <td><strong>2019-09-08T16:02:10Z</strong></td>
+          <td><p>Security update:</p>
+
+<ul>
+<li>Update Drupal Core to <a href="https://www.drupal.org/project/drupal/releases/8.7.4">8.7.4</a>
+
+<ul>
+<li><a href="https://www.drupal.org/sa-core-2019-008">SA-CORE-2019-008</a></li>
+</ul></li>
+</ul>
+
+<p>Features/Updates:</p>
+
+<ul>
+<li>Update Drupal Core to 8.7.5</li>
+<li>Update Ctools to 3.0.0</li>
+<li>Update admin_toolbar to 1.27</li>
+<li>Update contact_storage to 1.0-beta10</li>
+<li>Update entity to 1.0-rc3</li>
+<li>Update entity_embed to 1.0</li>
+<li>Update entity_queue to 1.0-beta5</li>
+<li>Update lightning_api to 4.2</li>
+<li>Update lightning_core to 4.5</li>
+<li>Update lightning_media to 3.12</li>
+<li>Update lightning_workflow to 3.8</li>
+<li>Update media_entity_twitter to 2.0-alpha3</li>
+<li>Update metatag to 1.10</li>
+<li>Update schemata to 1.0-beta1</li>
+<li>Update search_api to 1.14</li>
+<li>Update simple_oauth to 3.16</li>
+<li>Update video_embed_field to 2.2</li>
+<li>Update views_infinite_scroll to 1.6</li>
+<li>Update webform to 5.4</li>
+</ul>
+
+<p>Upgrade path:</p>
+
+<ul>
+<li><p>Update your codebase:</p>
+
+<ul>
+<li><code>composer update</code></li>
+</ul></li>
+
+<li><p>Run database updates:</p>
+
+<ul>
+<li><code>drush cache:rebuild</code></li>
+<li><code>drush updatedb</code></li>
+</ul></li>
+
+<li><p>Run Lightning configuration updates:</p>
+
+<ul>
+<li><code>drush cache:rebuild</code></li>
+<li><code>drush update:lightning</code></li>
+</ul></li>
+</ul>
+</td>
+      </tr>
+      
+      
+      <tr>
           <td><strong>2.2.18</strong></td>
           <td><strong>2019-04-24T20:38:23Z</strong></td>
           <td><p>Security update:
@@ -760,21 +824,6 @@ exclude:
 </ul>
 
 <p><strong>Note:</strong> After updating, Drupal will emit a warning about the metatag_page_variants module missing. This will be corrected by an update hook in wxt_ext_metatag when <code>drush updb</code> is run.</p>
-</td>
-      </tr>
-      
-      
-      <tr>
-          <td><strong>2.1.5</strong></td>
-          <td><strong>2018-06-07T14:05:00Z</strong></td>
-          <td><h2 id="v2-1-5">v2.1.5</h2>
-
-<p>Feature(s):</p>
-
-<ul>
-<li>Lightning 3.1.4</li>
-<li>Update contrib modules</li>
-</ul>
 </td>
       </tr>
       
