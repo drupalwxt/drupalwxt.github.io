@@ -276,6 +276,46 @@ made.</p>
       
       
       <tr>
+          <td><strong>3.0.0-alpha1</strong></td>
+          <td><strong>2019-09-08T17:46:16Z</strong></td>
+          <td><p>Features/Updates:</p>
+
+<ul>
+<li>Update Drupal Core to 8.7.5</li>
+<li>Update Lightning to 4.0.4</li>
+<li>Move to Layout Builder</li>
+<li>Migrations updated with Layout Builder support</li>
+<li>Page Title / Tabs support for Layout Builder</li>
+</ul>
+
+<p>Upgrade path:</p>
+
+<ul>
+<li><p>Update your codebase:</p>
+
+<ul>
+<li><code>composer update</code></li>
+</ul></li>
+
+<li><p>Run database updates:</p>
+
+<ul>
+<li><code>drush cache:rebuild</code></li>
+<li><code>drush updatedb</code></li>
+</ul></li>
+
+<li><p>Run Lightning configuration updates:</p>
+
+<ul>
+<li><code>drush cache:rebuild</code></li>
+<li><code>drush update:lightning</code></li>
+</ul></li>
+</ul>
+</td>
+      </tr>
+      
+      
+      <tr>
           <td><strong>2.2.19</strong></td>
           <td><strong>2019-09-08T16:02:10Z</strong></td>
           <td><p>Security update:</p>
@@ -783,47 +823,6 @@ exclude:
 </ul></li>
 <li>Landing page behat test fail with moderation_state (#2989354)</li>
 </ul>
-</td>
-      </tr>
-      
-      
-      <tr>
-          <td><strong>2.1.6</strong></td>
-          <td><strong>2018-07-15T16:03:58Z</strong></td>
-          <td><p>Features / Bug Fixes:</p>
-
-<ul>
-<li>Updated Drupal Core to 8.5.5</li>
-<li>Updated wxt_library to 1.2
-
-<ul>
-<li>Fix Cache issues in user account block (#2980764)</li>
-<li>Fix Update search Canada.ca form for HTTPS (#2977233)</li>
-</ul></li>
-<li>Updated wxt_bootstrap to 1.3
-
-<ul>
-<li>Add CDN option for the footer to the theme settings (#2927929)</li>
-</ul></li>
-<li>Updated contrib modules, including:
-
-<ul>
-<li>admin_toolbar to 1.24</li>
-<li>block_class to 1.0</li>
-<li>bootstrap_layouts to 5.1</li>
-<li>diff to 1.0-rc2</li>
-<li>media_entity_image to 1.3</li>
-<li>media_entity_slideshow to 2.0-alpha1</li>
-<li>menu_block to 1.5.0</li>
-<li>field_formatter to 1.2</li>
-<li>metatag to 1.5</li>
-<li>migrate_tools to 4.0-rc1</li>
-<li>token_filter to 1.0</li>
-<li>webform to 5.0-rc16</li>
-</ul></li>
-</ul>
-
-<p><strong>Note:</strong> After updating, Drupal will emit a warning about the metatag_page_variants module missing. This will be corrected by an update hook in wxt_ext_metatag when <code>drush updb</code> is run.</p>
 </td>
       </tr>
       
