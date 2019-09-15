@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
     <title>
         
-        Drupal WxT
+        Roadmap
         
     </title>
     <!--[if gte IE 9 | !IE ]><!-->
@@ -224,8 +224,14 @@
                   
                     
                       
+                        
+                      
+                      
                   
-                <li>Releases</li>
+                    
+                      
+                  
+                <li>Roadmap</li>
             </ol>
         </div>
     </div>
@@ -235,53 +241,120 @@
 
     <main role="main" property="mainContentOfPage" class="container">
     <div class="row">
-        <div class="col-md-8">
+        <div class="col-md-12">
             <article class="post">
                 <header>
                     <h1 id="wb-cont" property="name">
-                        Releases
+                        Roadmap
                     </h1>
                     <div class="post-date mrgn-bttm-md text-muted text-right small">
                         <span class="glyphicon glyphicon-calendar"></span>
-                        <time datetime="2019-02-26">
-                            2019-02-26
+                        <time datetime="2019-01-13">
+                            2019-01-13
                         </time>
                     </div>
                 </header>
                 <div class="post-content">
-                    <ul class='list-unstyled'>
-                        
-                        <article class="post">
-    <header>
-        <h2><a href="https://drupalwxt.github.io/wxt/d8/releases/">Releases</a></h2>
-        <div class="post-date text-muted">
-            <span class="glyphicon glyphicon-calendar"></span>
-            <time datetime="2019-02-26">
-                2019-02-26 - 5M TO READ
-            </time>
-        </div>
-    </header>
-    <div class="post-content">
-        Important Expect security releases to appear here within 24 hours of being reported upstream.
-   Release Created Date Description     3.0.0-alpha1 2019-09-08T17:46:16Z Features/Updates:
- Update Drupal Core to 8.7.5 Update Lightning to 4.0.4 Move to Layout Builder Migrations updated with Layout Builder support Page Title / Tabs support for Layout Builder  Upgrade path:
- Update your codebase:
- composer update  Run database updates:
-    </div>
-    
-    <footer class="read-more-link">
-        <a href="https://drupalwxt.github.io/wxt/d8/releases/" class="btn btn-default">Read More...</a>
-    </footer>
-    
-</article>
-<hr>
+                    
 
-                        
-                    </ul>
+<h2 id="vision-statement">Vision Statement</h2>
+
+<p>The Drupal WxT distribution is a web content management system which assists in building and maintaining innovative Web sites that are accessible, usable, and interoperable. The primary goal of Drupal WxT is to provide an enterprise level platform that can assist governments and larger organizations in disseminating data.</p>
+
+<h2 id="mandatory-features">Mandatory Features</h2>
+
+<p>There are a lot of features inherently provided by Drupal WxT. However there are a few that have been designated as mandatory to support and as such have shaped the architecture of the distribution.</p>
+
+<table id="components-theme" class="wb-tables table table-striped table-hover" data-wb-tables='{"columnDefs": [ { "visible": true, "targets": [ 3 ] } ], "lengthMenu": [[10, 25, -1], [10, 25, "All"]], "pageLength": 10 }'>
+    <thead>
+        <tr>
+            <th>Priority #</th>
+            <th>Feature</th>
+            <th>Status</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr class="success">
+            <td>1</td>
+            <td>Accessibility</td>
+            <td>Functional</td>
+            <td>Accessibility and strict markup enforced by <a href="http://github.com/wet-boew/wet-boew">WxT</a>.</td>
+        </tr>
+        <tr class="success">
+            <td>2</td>
+            <td>Bootstrap</td>
+            <td>Functional</td>
+            <td>Bootstrap integration throughout the entire Front + Back End.</td>
+        </tr>
+        <tr class="success">
+            <td>3</td>
+            <td><a href="/wxt/content-moderation/">Content Moderation</a></td>
+            <td>Functional</td>
+            <td>A proper and extendable content workflow must be established.</td>
+        </tr>
+        <tr class="success">
+            <td>4</td>
+            <td><a href="/wxt/deployment">Content Staging / Deployment</a></td>
+            <td>Functional</td>
+            <td>Content should be deployable allowing for content to be sent reliably across drupal platforms.</td>
+        </tr>
+        <tr class="success">
+            <td>5</td>
+            <td>WxT jQuery Framework</td>
+            <td>Functional</td>
+            <td>Maintain template adherance and tightly couple with the functionality provided by by WxT.</td>
+        </tr>
+        <tr class="success">
+            <td>6</td>
+            <td>Metatags</td>
+            <td>Functional</td>
+            <td>Follow the Standard on Web Operability and Usability provided by TBS.</td>
+        </tr>
+        <tr class="success">
+            <td>7</td>
+            <td>Migration</td>
+            <td>Functional</td>
+            <td>Provide an suite of scripts allowing bulk migration of content from a variety of platforms into Drupal.</td>
+        </tr>
+        <tr class="success">
+            <td>8</td>
+            <td>Multilingual</td>
+            <td>Functional</td>
+            <td>Provide multilingual support throughout the platform.</td>
+        </tr>
+        <tr class="success">
+            <td>9</td>
+            <td>Performance</td>
+            <td>Functional</td>
+            <td>All custom code and when possible contributed modules should go through testing with XHProf + XHGui.</td>
+        </tr>
+        <tr class="success">
+            <td>10</td>
+            <td>Universal Unique Identifiers</td>
+            <td>Functional</td>
+            <td>All entities should be associated with UUID to allow for data to be reliably stored, accessed and deployed.</td>
+        </tr>
+        <tr class="success">
+            <td>11</td>
+            <td>Licensing</td>
+            <td>Functional</td>
+            <td>All aspects of the codebase including third party libraries must conform to GPLv3.</td>
+        </tr>
+    </tbody>
+</table>
+
                 </div>
                 <aside>
                     
                     <ul class="list-inline post-tags">
+                        
+                        <li>
+                            <a href="https://drupalwxt.github.io/tags/wxt">
+                                <i class="fa fa-tags"></i>
+                                wxt
+                            </a>
+                        </li>
                         
                     </ul>
                     
@@ -293,6 +366,49 @@
                         
                         
                         
+                        <li><a href="https://drupalwxt.github.io/docs/code/">Coding Standards</a></li>
+                        
+                        
+                        
+                        
+                        
+                        <li><a href="https://drupalwxt.github.io/docs/faq/">Composer FAQ</a></li>
+                        
+                        
+                        
+                        
+                        
+                        <li><a href="https://drupalwxt.github.io/docs/composer/">Composer workflow for Drupal 8</a></li>
+                        
+                        
+                        
+                        
+                        
+                        <li><a href="https://drupalwxt.github.io/docs/modules/">Module Selection for Drupal WxT</a></li>
+                        
+                        
+                        
+                        
+                        
+                        <li><a href="https://drupalwxt.github.io/docs/subprofile/">Sub Installation Profile</a></li>
+                        
+                        
+                        
+                        
+                        
+                        <li><a href="https://drupalwxt.github.io/docs/theme/">Theme Workflow</a></li>
+                        
+                        
+                        
+                        
+                        
+                        <li><a href="https://drupalwxt.github.io/wxt/d8/releases/">Releases</a></li>
+                        
+                        
+                        
+                        
+                        
+                        <li><a href="https://drupalwxt.github.io/wxt/d8/repositories/">Repositories for Drupal WxT</a></li>
                         
                         
                         
@@ -306,32 +422,7 @@
                         
                         
                         
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
+                        <li><a href="https://drupalwxt.github.io/post/2015/01/13/contributing-to-documentation-site/">Contributing to Documentation Site</a></li>
                         
                         
                         
@@ -411,10 +502,10 @@
                     <nav>
     <ul class="pager">
         
-        <li class="previous disabled"><a href="#"><span aria-hidden="true">&larr;</span> Older</a></li>
+        <li class="previous"><a href="https://drupalwxt.github.io/wxt/d8/repositories/"><span aria-hidden="true">&larr;</span> Older</a></li>
         
         
-        <li class="next disabled"><a href="#">Newer <span aria-hidden="true">&rarr;</span></a></li>
+        <li class="next"><a href="https://drupalwxt.github.io/post/2015/01/20/code-quality/">Newer <span aria-hidden="true">&rarr;</span></a></li>
         
     </ul>
 </nav>
@@ -424,95 +515,16 @@
                 </footer>
             </article>
         </div>
-        <div class="col-md-4">
-            <aside>
-    <div class="row">
-        <div class="col-xs-12 col-sm-4 col-md-12">
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <h2 class="panel-title">Recent Posts</h2>
-                </div>
-                <div class="list-group">
-                    
-                    <a href="/docs/code/" class="list-group-item">Coding Standards</a>
-                    
-                    <a href="/docs/faq/" class="list-group-item">Composer FAQ</a>
-                    
-                    <a href="/docs/composer/" class="list-group-item">Composer workflow for Drupal 8</a>
-                    
-                    <a href="/docs/modules/" class="list-group-item">Module Selection for Drupal WxT</a>
-                    
-                    <a href="/docs/subprofile/" class="list-group-item">Sub Installation Profile</a>
-                    
-                    <a href="/docs/theme/" class="list-group-item">Theme Workflow</a>
-                    
-                    <a href="/wxt/d8/releases/" class="list-group-item">Releases</a>
-                    
-                    <a href="/wxt/d8/repositories/" class="list-group-item">Repositories for Drupal WxT</a>
-                    
-                    <a href="/wxt/d8/roadmap/" class="list-group-item">Roadmap</a>
-                    
-                    <a href="/post/2015/01/20/code-quality/" class="list-group-item">Code Quality</a>
-                    
-                </div>
-            </div>
-        </div>
-        <div class="col-xs-12 col-sm-4 col-md-12">
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <h2 class="panel-title">Tags</h2>
-                </div>
-                <div class="list-group">
-                    
-                    
-                    <a href="https://drupalwxt.github.io/tags/docs" class="list-group-item">
-                        <span class="badge">6</span>
-                        docs
-                    </a>
-                    
-                    <a href="https://drupalwxt.github.io/tags/faq" class="list-group-item">
-                        <span class="badge">2</span>
-                        faq
-                    </a>
-                    
-                    <a href="https://drupalwxt.github.io/tags/memcache" class="list-group-item">
-                        <span class="badge">1</span>
-                        memcache
-                    </a>
-                    
-                    <a href="https://drupalwxt.github.io/tags/performance" class="list-group-item">
-                        <span class="badge">4</span>
-                        performance
-                    </a>
-                    
-                    <a href="https://drupalwxt.github.io/tags/post" class="list-group-item">
-                        <span class="badge">1</span>
-                        post
-                    </a>
-                    
-                    <a href="https://drupalwxt.github.io/tags/releases" class="list-group-item">
-                        <span class="badge">1</span>
-                        releases
-                    </a>
-                    
-                    <a href="https://drupalwxt.github.io/tags/varnish" class="list-group-item">
-                        <span class="badge">1</span>
-                        varnish
-                    </a>
-                    
-                    <a href="https://drupalwxt.github.io/tags/wxt" class="list-group-item">
-                        <span class="badge">10</span>
-                        wxt
-                    </a>
-                    
-                </div>
-            </div>
-        </div>
     </div>
-</aside>
+    
+<dl id="wb-dtmd">
+    <dt>Date modified:&#32;</dt>
+    <dd>
+        <time property="dateModified">2019-01-13</time>
+    </dd>
+</dl>
 
-        </div>
-    </div>
+
     </main>
     
   <footer role="contentinfo" id="wb-info" class="visible-sm visible-md visible-lg wb-navcurr">

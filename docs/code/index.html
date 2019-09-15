@@ -129,25 +129,9 @@
                     
                     <li><a href="/wxt/d8/repositories/"> Repositories for WxT</a></li>
                     
+                    <li><a href="/wxt/d8/roadmap/"> Roadmap</a></li>
+                    
                     <li><a href="/wxt/"> All WxT Entries</a></li>
-                    
-                </ul>
-                
-                </li>
-                
-                
-                <li class="">
-                <a href="#" class="item">
-                    
-                    <span>Documentation</span>
-                </a>
-                <ul class="sm list-unstyled" role="menu">
-                    
-                    <li><a href="/docs/code/"> Coding Standards</a></li>
-                    
-                    <li><a href="/docs/modules/"> Modules Selection</a></li>
-                    
-                    <li><a href="/docs/theme/"> Theme Workflow</a></li>
                     
                 </ul>
                 
@@ -174,11 +158,26 @@
                 </li>
                 
                 
-                <li>
-                <a class="" href="/architecture/roadmap/">
+                <li class="">
+                <a href="#" class="item">
                     
-                    <span>Roadmap</span>
+                    <span>Documentation</span>
                 </a>
+                <ul class="sm list-unstyled" role="menu">
+                    
+                    <li><a href="/docs/code/"> Coding Standards</a></li>
+                    
+                    <li><a href="/docs/composer/"> Composer Workflow</a></li>
+                    
+                    <li><a href="/docs/faq/"> Frequently Asked Questions</a></li>
+                    
+                    <li><a href="/docs/modules/"> Modules Selection</a></li>
+                    
+                    <li><a href="/docs/subprofile/"> Sub Installation Profile</a></li>
+                    
+                    <li><a href="/docs/theme/"> Theme Workflow</a></li>
+                    
+                </ul>
                 
                 </li>
                 
@@ -254,13 +253,13 @@
 
 <h2 id="background">Background</h2>
 
-<p>Drupal WxT complies with the Drupal Coding Standards and runs automated tests on ever commit that gets merged into the working directory.</p>
+<p>Drupal WxT complies with the Drupal Coding Standards and runs automated tests on every commit that gets merged into the working repository.</p>
 
-<p>PHP CodeSniffer is executed on our <a href="https://github.com/drupalwxt/site-wxt/blob/8.x/docker/conf/phpcs.xml">phpcs.xml</a> file which is only slightly different then the one which resides in Drupal core.</p>
+<p>PHP CodeSniffer is executed on our customized <a href="https://github.com/drupalwxt/site-wxt/blob/8.x/docker/conf/phpcs.xml">phpcs.xml</a> file which is only slightly different from the one which resides in Drupal core.</p>
 
 <h2 id="phpcs">PHPCS</h2>
 
-<p>The following is the literal commands being executed in our continuous integration builds under Travis CI.</p>
+<p>The following is the literal command(s) being executed in our continuous integration builds running under Travis CI.</p>
 
 <pre><code class="language-php">./docker/bin/phpcs --standard=/var/www/html/core/phpcs.xml \
             --extensions=php,module,inc,install,test,profile,theme \
@@ -285,7 +284,7 @@
 </code></pre>
 
 <blockquote>
-<p>Note: that the whole WxT installation profile is scanned as well as related contribs (WxT Bootstrap, WxT Library) which existed outside the profile repository.</p>
+<p>Note: The whole WxT installation profile is scanned as well as all custom WxT modules (WxT Bootstrap and WxT Library) which exist outside the profile repository.</p>
 </blockquote>
 
                 </div>
@@ -317,21 +316,29 @@
                         
                         
                         
-                        <li><a href="https://drupalwxt.github.io/wxt/d7/working-examples/">Working Examples (D7)</a></li>
+                        
+                        
+                        
+                        
+                        <li><a href="https://drupalwxt.github.io/docs/faq/">Composer FAQ</a></li>
                         
                         
                         
                         
                         
-                        
-                        
-                        
+                        <li><a href="https://drupalwxt.github.io/docs/composer/">Composer workflow for Drupal 8</a></li>
                         
                         
                         
                         
                         
                         <li><a href="https://drupalwxt.github.io/docs/modules/">Module Selection for Drupal WxT</a></li>
+                        
+                        
+                        
+                        
+                        
+                        <li><a href="https://drupalwxt.github.io/docs/subprofile/">Sub Installation Profile</a></li>
                         
                         
                         
@@ -355,167 +362,17 @@
                         
                         
                         
+                        <li><a href="https://drupalwxt.github.io/wxt/d8/roadmap/">Roadmap</a></li>
                         
                         
                         
                         
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        <li><a href="https://drupalwxt.github.io/workflow/composer/">Composer workflow for Drupal 8</a></li>
-                        
-                        
-                        
-                        
-                        
-                        <li><a href="https://drupalwxt.github.io/workflow/resources/">Resources for WxT</a></li>
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        <li><a href="https://drupalwxt.github.io/wxt/d7/media/">Media Library - Images, Videos and Documents (D7)</a></li>
-                        
-                        
-                        
-                        
-                        
-                        <li><a href="https://drupalwxt.github.io/wxt/d7/releases/">Releases</a></li>
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        <li><a href="https://drupalwxt.github.io/wxt/d7/content-moderation/">Content Moderation</a></li>
                         
                         
                         
                         
                         
                         <li><a href="https://drupalwxt.github.io/post/2015/01/13/contributing-to-documentation-site/">Contributing to Documentation Site</a></li>
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        <li><a href="https://drupalwxt.github.io/wxt/d7/make/">Makefiles for Drupal WxT (D7)</a></li>
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        <li><a href="https://drupalwxt.github.io/wxt/d7/modules/">Modules for Drupal WxT (D7)</a></li>
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        <li><a href="https://drupalwxt.github.io/wxt/d7/tabbed-interface/">Tabbed Interface (D7)</a></li>
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
                         
                         
                         
@@ -595,10 +452,10 @@
                     <nav>
     <ul class="pager">
         
-        <li class="previous"><a href="https://drupalwxt.github.io/architecture/release-cycle/"><span aria-hidden="true">&larr;</span> Older</a></li>
+        <li class="previous disabled"><a href="#"><span aria-hidden="true">&larr;</span> Older</a></li>
         
         
-        <li class="next"><a href="https://drupalwxt.github.io/docs/modules/">Newer <span aria-hidden="true">&rarr;</span></a></li>
+        <li class="next"><a href="https://drupalwxt.github.io/docs/faq/">Newer <span aria-hidden="true">&rarr;</span></a></li>
         
     </ul>
 </nav>

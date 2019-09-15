@@ -129,25 +129,9 @@
                     
                     <li><a href="/wxt/d8/repositories/"> Repositories for WxT</a></li>
                     
+                    <li><a href="/wxt/d8/roadmap/"> Roadmap</a></li>
+                    
                     <li><a href="/wxt/"> All WxT Entries</a></li>
-                    
-                </ul>
-                
-                </li>
-                
-                
-                <li class="">
-                <a href="#" class="item">
-                    
-                    <span>Documentation</span>
-                </a>
-                <ul class="sm list-unstyled" role="menu">
-                    
-                    <li><a href="/docs/code/"> Coding Standards</a></li>
-                    
-                    <li><a href="/docs/modules/"> Modules Selection</a></li>
-                    
-                    <li><a href="/docs/theme/"> Theme Workflow</a></li>
                     
                 </ul>
                 
@@ -174,11 +158,26 @@
                 </li>
                 
                 
-                <li>
-                <a class="" href="/architecture/roadmap/">
+                <li class="">
+                <a href="#" class="item">
                     
-                    <span>Roadmap</span>
+                    <span>Documentation</span>
                 </a>
+                <ul class="sm list-unstyled" role="menu">
+                    
+                    <li><a href="/docs/code/"> Coding Standards</a></li>
+                    
+                    <li><a href="/docs/composer/"> Composer Workflow</a></li>
+                    
+                    <li><a href="/docs/faq/"> Frequently Asked Questions</a></li>
+                    
+                    <li><a href="/docs/modules/"> Modules Selection</a></li>
+                    
+                    <li><a href="/docs/subprofile/"> Sub Installation Profile</a></li>
+                    
+                    <li><a href="/docs/theme/"> Theme Workflow</a></li>
+                    
+                </ul>
                 
                 </li>
                 
@@ -244,37 +243,13 @@
                     </h1>
                     <div class="post-date mrgn-bttm-md text-muted text-right small">
                         <span class="glyphicon glyphicon-calendar"></span>
-                        <time datetime="2015-01-13">
-                            2015-01-13
+                        <time datetime="2019-06-03">
+                            2019-06-03
                         </time>
                     </div>
                 </header>
                 <div class="post-content">
                     <ul class='list-unstyled'>
-                        
-                        <article class="post">
-    <header>
-        <h2><a href="https://drupalwxt.github.io/wxt/d7/working-examples/">Working Examples (D7)</a></h2>
-        <div class="post-date text-muted">
-            <span class="glyphicon glyphicon-calendar"></span>
-            <time datetime="2015-01-13">
-                2015-01-13 - 3M TO READ
-            </time>
-        </div>
-    </header>
-    <div class="post-content">
-        Below we highlight the work done on getting the various WxT components / plugins and themes / styles leveraged properly in Drupal.
-Levels of integration with Drupal will vary as some of the plugins can simply be leveraged by calling a class in markup. Where possible we will try to make a distinction on how each functionality can be used.
-Note: This list does not represent the full capabilities of the Drupal WxT platform merely the WxT components it integrates with.
-    </div>
-    
-    <footer class="read-more-link">
-        <a href="https://drupalwxt.github.io/wxt/d7/working-examples/" class="btn btn-default">Read More...</a>
-    </footer>
-    
-</article>
-<hr>
-
                         
                         <article class="post">
     <header>
@@ -287,14 +262,61 @@ Note: This list does not represent the full capabilities of the Drupal WxT platf
         </div>
     </header>
     <div class="post-content">
-        Background Drupal WxT complies with the Drupal Coding Standards and runs automated tests on ever commit that gets merged into the working directory.
-PHP CodeSniffer is executed on our phpcs.xml file which is only slightly different then the one which resides in Drupal core.
-PHPCS The following is the literal commands being executed in our continuous integration builds under Travis CI.
+        Background Drupal WxT complies with the Drupal Coding Standards and runs automated tests on every commit that gets merged into the working repository.
+PHP CodeSniffer is executed on our customized phpcs.xml file which is only slightly different from the one which resides in Drupal core.
+PHPCS The following is the literal command(s) being executed in our continuous integration builds running under Travis CI.
 ./docker/bin/phpcs --standard=/var/www/html/core/phpcs.xml \ --extensions=php,module,inc,install,test,profile,theme \ --report=full \ --colors \ --ignore=/var/www/html/profiles/wxt/modules/custom/wxt_test \ --ignore=/var/www/html/modules/custom/wxt_library \ --ignore=*.
     </div>
     
     <footer class="read-more-link">
         <a href="https://drupalwxt.github.io/docs/code/" class="btn btn-default">Read More...</a>
+    </footer>
+    
+</article>
+<hr>
+
+                        
+                        <article class="post">
+    <header>
+        <h2><a href="https://drupalwxt.github.io/docs/faq/">Composer FAQ</a></h2>
+        <div class="post-date text-muted">
+            <span class="glyphicon glyphicon-calendar"></span>
+            <time datetime="2019-06-03">
+                2019-06-03 - 1M TO READ
+            </time>
+        </div>
+    </header>
+    <div class="post-content">
+        Should I commit the contributed modules downloaded? Composer strongly recommends against. However, while they provide argumentation against there are also known workarounds if a project decides to do it anyway.
+Should I commit the scaffolding files? The drupal-scaffold plugin can download the scaffold files (like index.php, update.php, etc) to the html directory of your project. If you have not customized those files you could choose to not check them into your version control system.
+    </div>
+    
+    <footer class="read-more-link">
+        <a href="https://drupalwxt.github.io/docs/faq/" class="btn btn-default">Read More...</a>
+    </footer>
+    
+</article>
+<hr>
+
+                        
+                        <article class="post">
+    <header>
+        <h2><a href="https://drupalwxt.github.io/docs/composer/">Composer workflow for Drupal 8</a></h2>
+        <div class="post-date text-muted">
+            <span class="glyphicon glyphicon-calendar"></span>
+            <time datetime="2019-06-03">
+                2019-06-03 - 4M TO READ
+            </time>
+        </div>
+    </header>
+    <div class="post-content">
+        Note: The following guide is largely just a high level overview for Drupal 8 WxT installations.
+ Overview WxT strictly adheres to a Composer-based workflow and tries to follow the best practices laid out by the broader Drupal community. For more information on the benefits of this workflow please consult the official documentation provided in the link below:
+ Using composer to manage Drupal  Composer also helps facilitate a more security oriented approach whether packaging or deploying a site.
+    </div>
+    
+    <footer class="read-more-link">
+        <a href="https://drupalwxt.github.io/docs/composer/" class="btn btn-default">Read More...</a>
     </footer>
     
 </article>
@@ -312,13 +334,33 @@ PHPCS The following is the literal commands being executed in our continuous int
         </div>
     </header>
     <div class="post-content">
-        Background This WxT installation profile directly extends from the Lightning Framework created by Acquia to provide developers with a powerful base toolchain upon which to extend. Due to this strict dependency we also align much of our workflow with the best practice established patterns Acquia has provided.
+        Background This WxT installation profile directly extends from the Lightning Framework created by Acquia to provide developers with a powerful base toolchain upon which to extend. Due to this strict dependency we also align much of our workflow with the best practices established patterns Acquia has provided.
 Lightning We chose Lightning because of it being the best standard for enterprise authoring in Drupal tightly focused on the user experience in four key functional areas.
     </div>
     
     <footer class="read-more-link">
         <a href="https://drupalwxt.github.io/docs/modules/" class="btn btn-default">Read More...</a>
     </footer>
+    
+</article>
+<hr>
+
+                        
+                        <article class="post">
+    <header>
+        <h2><a href="https://drupalwxt.github.io/docs/subprofile/">Sub Installation Profile</a></h2>
+        <div class="post-date text-muted">
+            <span class="glyphicon glyphicon-calendar"></span>
+            <time datetime="2019-06-03">
+                2019-06-03 - 1M TO READ
+            </time>
+        </div>
+    </header>
+    <div class="post-content">
+         WxT sub installation profiles WxT like its base framework Lightning includes the ability to create sub-profiles that are based on the default WxT distribution profile. Making a sub-profile allows you to customize the installation process to meet one or more of your specific needs while retaining / customizing the WxT defaults.
+If any of the following statements are true, then you should consider creating a sub-profile of WxT:
+ Ability to prevent / override some (sub)component of WxT from being installed Ability to enable additional modules, themes, or configuration during install Ability customize the look and feel of the installation process Ability to build a distribution that offloads the Web Experience Toolkit theme(s) / plugins and related libraries to WxT  
+    </div>
     
 </article>
 <hr>
@@ -335,7 +377,7 @@ Lightning We chose Lightning because of it being the best standard for enterpris
         </div>
     </header>
     <div class="post-content">
-        Sub-themes are just like any other theme, with one difference: They inherit the parent theme&rsquo;s resources. There are no limits on the chaining capabilities connecting sub-themes for their parents. A sub-theme can be a child of another sub-theme, and it can be branched and organized however you see fit.
+        Sub-themes are just like any other theme, with one difference: They inherit all of the parent theme&rsquo;s resources. In addition, there are no limits on the chaining capabilities connecting sub-themes for their parents. A sub-theme can be a child of another sub-theme, and it can be branched and organized however you see fit.
  Background Drupal WxT includes WxT Bootstrap which is a a modern, component based and accessible sub-theme powered by the Bootstrap base theme.
     </div>
     
@@ -384,7 +426,7 @@ Lightning We chose Lightning because of it being the best standard for enterpris
         </div>
     </header>
     <div class="post-content">
-        Name Website Description Size     composer-extdeps drupalwxt/composer-extdeps Composer repository for external dependencies on Drupal WxT Size: 17 Bytes   drupalwxt.github.io drupalwxt/drupalwxt.github.io GH pages for Drupal WxT. Size: 11068 Bytes   helm-drupal drupalwxt/helm-drupal Drupal helm chart for Kubernetes. Size: 1164 Bytes   site-wxt drupalwxt/site-wxt The composer project for the Drupal WxT distribution. Size: 1036 Bytes   terraform-kubernetes-drupalwxt drupalwxt/terraform-kubernetes-drupalwxt Terraform module for Drupal WxT Size: 1 Bytes   website drupalwxt/website GH pages for Drupal WxT.
+        Name Website Description Size     composer-extdeps drupalwxt/composer-extdeps Composer repository for external dependencies on Drupal WxT Size: 17 Bytes   drupalwxt.github.io drupalwxt/drupalwxt.github.io GH pages for Drupal WxT. Size: 11077 Bytes   helm-drupal drupalwxt/helm-drupal Drupal helm chart for Kubernetes. Size: 1245 Bytes   site-wxt drupalwxt/site-wxt The composer project for the Drupal WxT distribution. Size: 1042 Bytes   terraform-kubernetes-drupalwxt drupalwxt/terraform-kubernetes-drupalwxt Terraform module for Drupal WxT Size: 1 Bytes   website drupalwxt/website GH pages for Drupal WxT.
     </div>
     
     <footer class="read-more-link">
@@ -397,22 +439,21 @@ Lightning We chose Lightning because of it being the best standard for enterpris
                         
                         <article class="post">
     <header>
-        <h2><a href="https://drupalwxt.github.io/workflow/composer/">Composer workflow for Drupal 8</a></h2>
+        <h2><a href="https://drupalwxt.github.io/wxt/d8/roadmap/">Roadmap</a></h2>
         <div class="post-date text-muted">
             <span class="glyphicon glyphicon-calendar"></span>
-            <time datetime="2017-04-18">
-                2017-04-18 - 5M TO READ
+            <time datetime="2019-01-13">
+                2019-01-13 - 2M TO READ
             </time>
         </div>
     </header>
     <div class="post-content">
-        Note: The following guide is largely meant for Drupal 8 WxT installations.
- Overview WxT strictly adheres to a Composer-based workflow and tries to follow the best practices laid out by the broader Drupal community. For more information on the benefits of this workflow please consult the official documentation provided in the link below:
- Using composer to manage Drupal  Composer also helps facilitate a more security oriented approach whether packaging or deploying a site.
+        Vision Statement The Drupal WxT distribution is a web content management system which assists in building and maintaining innovative Web sites that are accessible, usable, and interoperable. The primary goal of Drupal WxT is to provide an enterprise level platform that can assist governments and larger organizations in disseminating data.
+Mandatory Features There are a lot of features inherently provided by Drupal WxT. However there are a few that have been designated as mandatory to support and as such have shaped the architecture of the distribution.
     </div>
     
     <footer class="read-more-link">
-        <a href="https://drupalwxt.github.io/workflow/composer/" class="btn btn-default">Read More...</a>
+        <a href="https://drupalwxt.github.io/wxt/d8/roadmap/" class="btn btn-default">Read More...</a>
     </footer>
     
 </article>
@@ -421,67 +462,21 @@ Lightning We chose Lightning because of it being the best standard for enterpris
                         
                         <article class="post">
     <header>
-        <h2><a href="https://drupalwxt.github.io/workflow/resources/">Resources for WxT</a></h2>
+        <h2><a href="https://drupalwxt.github.io/post/2015/01/13/contributing-to-documentation-site/">Contributing to Documentation Site</a></h2>
         <div class="post-date text-muted">
             <span class="glyphicon glyphicon-calendar"></span>
-            <time datetime="2017-04-18">
-                2017-04-18 - 1M TO READ
+            <time datetime="2015-01-13">
+                2015-01-13 - 1M TO READ
             </time>
         </div>
     </header>
     <div class="post-content">
-         This page simply provides all the relevant WxT related links in a logical fashion.
-Composer Project Generator  Composer template for WxT projects   Instantiated Composer Projects (WxT)  WxT Open Data  Installation Profiles  WxT Open Data subprofile Skel skeleton  Contributed WxT Projects (no profile dependency)  WxT Bootstrap WxT Library  
-    </div>
-    
-</article>
-<hr>
-
-                        
-                        <article class="post">
-    <header>
-        <h2><a href="https://drupalwxt.github.io/wxt/d7/media/">Media Library - Images, Videos and Documents (D7)</a></h2>
-        <div class="post-date text-muted">
-            <span class="glyphicon glyphicon-calendar"></span>
-            <time datetime="2015-02-26">
-                2015-02-26 - 3M TO READ
-            </time>
-        </div>
-    </header>
-    <div class="post-content">
-        Library Basics a) To access the library from the admin menu click on Content and then Files /en/admin/content/file, or you can also click the Add Media button in the WYSIWYG to access the library
-b) Avoid creating unnecessary duplicates. Whenever possible re-use the images, videos and documents that have already been uploaded to the library.
-Browsing the Library a) Using the file admin page /en/admin/content/file you can search by Name, Type of multimedia, and User who uploaded the file.
+        Our new documentation site for Drupal WxT has been updated and with it a improved workflow for collaboration. This documentation site is powered by Hugo (a static site generator) that converts markdown files to html and allows for a quick and easy deployment to GitHub pages.
+This allows for contributors who feel the documentation is lacking in certain areas to simply perform a pull request and submit a markdown file alongside with the appropriate front matter (metadata about the content).
     </div>
     
     <footer class="read-more-link">
-        <a href="https://drupalwxt.github.io/wxt/d7/media/" class="btn btn-default">Read More...</a>
-    </footer>
-    
-</article>
-<hr>
-
-                        
-                        <article class="post">
-    <header>
-        <h2><a href="https://drupalwxt.github.io/wxt/d7/releases/">Releases</a></h2>
-        <div class="post-date text-muted">
-            <span class="glyphicon glyphicon-calendar"></span>
-            <time datetime="2015-02-26">
-                2015-02-26 - 5M TO READ
-            </time>
-        </div>
-    </header>
-    <div class="post-content">
-        Important Releases will soon start to appear for Drupal 8 once stable releases are made.
-   Release Created Date Description     3.0.0-alpha1 2019-09-08T17:46:16Z Features/Updates:
- Update Drupal Core to 8.7.5 Update Lightning to 4.0.4 Move to Layout Builder Migrations updated with Layout Builder support Page Title / Tabs support for Layout Builder  Upgrade path:
- Update your codebase:
- composer update  Run database updates:
-    </div>
-    
-    <footer class="read-more-link">
-        <a href="https://drupalwxt.github.io/wxt/d7/releases/" class="btn btn-default">Read More...</a>
+        <a href="https://drupalwxt.github.io/post/2015/01/13/contributing-to-documentation-site/" class="btn btn-default">Read More...</a>
     </footer>
     
 </article>
@@ -498,138 +493,6 @@ Browsing the Library a) Using the file admin page /en/admin/content/file you can
                     
                     <h3>Related Post</h3>
                     <ul class="post-rels">
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
                         
                         
                         
@@ -777,13 +640,15 @@ Browsing the Library a) Using the file admin page /en/admin/content/file you can
                 </div>
                 <div class="list-group">
                     
-                    <a href="/wxt/d7/working-examples/" class="list-group-item">Working Examples (D7)</a>
-                    
-                    <a href="/architecture/release-cycle/" class="list-group-item">Release Cycle / Updates</a>
-                    
                     <a href="/docs/code/" class="list-group-item">Coding Standards</a>
                     
+                    <a href="/docs/faq/" class="list-group-item">Composer FAQ</a>
+                    
+                    <a href="/docs/composer/" class="list-group-item">Composer workflow for Drupal 8</a>
+                    
                     <a href="/docs/modules/" class="list-group-item">Module Selection for Drupal WxT</a>
+                    
+                    <a href="/docs/subprofile/" class="list-group-item">Sub Installation Profile</a>
                     
                     <a href="/docs/theme/" class="list-group-item">Theme Workflow</a>
                     
@@ -791,11 +656,9 @@ Browsing the Library a) Using the file admin page /en/admin/content/file you can
                     
                     <a href="/wxt/d8/repositories/" class="list-group-item">Repositories for Drupal WxT</a>
                     
-                    <a href="/architecture/roadmap/" class="list-group-item">Roadmap</a>
+                    <a href="/wxt/d8/roadmap/" class="list-group-item">Roadmap</a>
                     
-                    <a href="/workflow/faq/" class="list-group-item">Composer FAQ</a>
-                    
-                    <a href="/workflow/tips/" class="list-group-item">Composer tips for Drupal</a>
+                    <a href="/post/2015/01/20/code-quality/" class="list-group-item">Code Quality</a>
                     
                 </div>
             </div>
@@ -808,28 +671,8 @@ Browsing the Library a) Using the file admin page /en/admin/content/file you can
                 <div class="list-group">
                     
                     
-                    <a href="https://drupalwxt.github.io/tags/architecture" class="list-group-item">
-                        <span class="badge">6</span>
-                        architecture
-                    </a>
-                    
-                    <a href="https://drupalwxt.github.io/tags/bean" class="list-group-item">
-                        <span class="badge">1</span>
-                        bean
-                    </a>
-                    
-                    <a href="https://drupalwxt.github.io/tags/content-staging" class="list-group-item">
-                        <span class="badge">1</span>
-                        content-staging
-                    </a>
-                    
-                    <a href="https://drupalwxt.github.io/tags/deployment" class="list-group-item">
-                        <span class="badge">1</span>
-                        deployment
-                    </a>
-                    
                     <a href="https://drupalwxt.github.io/tags/docs" class="list-group-item">
-                        <span class="badge">3</span>
+                        <span class="badge">6</span>
                         docs
                     </a>
                     
@@ -838,23 +681,13 @@ Browsing the Library a) Using the file admin page /en/admin/content/file you can
                         faq
                     </a>
                     
-                    <a href="https://drupalwxt.github.io/tags/media" class="list-group-item">
-                        <span class="badge">1</span>
-                        media
-                    </a>
-                    
                     <a href="https://drupalwxt.github.io/tags/memcache" class="list-group-item">
                         <span class="badge">1</span>
                         memcache
                     </a>
                     
-                    <a href="https://drupalwxt.github.io/tags/moderation" class="list-group-item">
-                        <span class="badge">1</span>
-                        moderation
-                    </a>
-                    
                     <a href="https://drupalwxt.github.io/tags/performance" class="list-group-item">
-                        <span class="badge">7</span>
+                        <span class="badge">4</span>
                         performance
                     </a>
                     
@@ -863,34 +696,9 @@ Browsing the Library a) Using the file admin page /en/admin/content/file you can
                         post
                     </a>
                     
-                    <a href="https://drupalwxt.github.io/tags/profile" class="list-group-item">
-                        <span class="badge">1</span>
-                        profile
-                    </a>
-                    
                     <a href="https://drupalwxt.github.io/tags/releases" class="list-group-item">
-                        <span class="badge">2</span>
+                        <span class="badge">1</span>
                         releases
-                    </a>
-                    
-                    <a href="https://drupalwxt.github.io/tags/resources" class="list-group-item">
-                        <span class="badge">1</span>
-                        resources
-                    </a>
-                    
-                    <a href="https://drupalwxt.github.io/tags/roadmap" class="list-group-item">
-                        <span class="badge">1</span>
-                        roadmap
-                    </a>
-                    
-                    <a href="https://drupalwxt.github.io/tags/tabbed-interface" class="list-group-item">
-                        <span class="badge">1</span>
-                        tabbed-interface
-                    </a>
-                    
-                    <a href="https://drupalwxt.github.io/tags/tips" class="list-group-item">
-                        <span class="badge">1</span>
-                        tips
                     </a>
                     
                     <a href="https://drupalwxt.github.io/tags/varnish" class="list-group-item">
@@ -898,13 +706,8 @@ Browsing the Library a) Using the file admin page /en/admin/content/file you can
                         varnish
                     </a>
                     
-                    <a href="https://drupalwxt.github.io/tags/workbench" class="list-group-item">
-                        <span class="badge">1</span>
-                        workbench
-                    </a>
-                    
                     <a href="https://drupalwxt.github.io/tags/wxt" class="list-group-item">
-                        <span class="badge">15</span>
+                        <span class="badge">10</span>
                         wxt
                     </a>
                     

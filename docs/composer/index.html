@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
     <title>
         
-        Drupal WxT
+        Composer workflow for Drupal 8
         
     </title>
     <!--[if gte IE 9 | !IE ]><!-->
@@ -225,7 +225,7 @@
                     
                       
                   
-                <li>Releases</li>
+                <li>Composer workflow for Drupal 8</li>
             </ol>
         </div>
     </div>
@@ -235,53 +235,243 @@
 
     <main role="main" property="mainContentOfPage" class="container">
     <div class="row">
-        <div class="col-md-8">
+        <div class="col-md-12">
             <article class="post">
                 <header>
                     <h1 id="wb-cont" property="name">
-                        Releases
+                        Composer workflow for Drupal 8
                     </h1>
                     <div class="post-date mrgn-bttm-md text-muted text-right small">
                         <span class="glyphicon glyphicon-calendar"></span>
-                        <time datetime="2019-02-26">
-                            2019-02-26
+                        <time datetime="2019-06-03">
+                            2019-06-03
                         </time>
                     </div>
                 </header>
                 <div class="post-content">
-                    <ul class='list-unstyled'>
-                        
-                        <article class="post">
-    <header>
-        <h2><a href="https://drupalwxt.github.io/wxt/d8/releases/">Releases</a></h2>
-        <div class="post-date text-muted">
-            <span class="glyphicon glyphicon-calendar"></span>
-            <time datetime="2019-02-26">
-                2019-02-26 - 5M TO READ
-            </time>
-        </div>
-    </header>
-    <div class="post-content">
-        Important Expect security releases to appear here within 24 hours of being reported upstream.
-   Release Created Date Description     3.0.0-alpha1 2019-09-08T17:46:16Z Features/Updates:
- Update Drupal Core to 8.7.5 Update Lightning to 4.0.4 Move to Layout Builder Migrations updated with Layout Builder support Page Title / Tabs support for Layout Builder  Upgrade path:
- Update your codebase:
- composer update  Run database updates:
-    </div>
-    
-    <footer class="read-more-link">
-        <a href="https://drupalwxt.github.io/wxt/d8/releases/" class="btn btn-default">Read More...</a>
-    </footer>
-    
-</article>
-<hr>
+                    
 
-                        
-                    </ul>
+<blockquote>
+<p><strong>Note</strong>: The following guide is largely just a high level overview for Drupal 8 WxT installations.</p>
+</blockquote>
+
+<h2 id="overview">Overview</h2>
+
+<p><code>WxT</code> strictly adheres to a Composer-based workflow and tries to follow the best
+practices laid out by the broader Drupal community. For more information on the
+benefits of this workflow please consult the official documentation provided in
+the link below:</p>
+
+<ul>
+<li><a href="https://www.drupal.org/docs/develop/using-composer/using-composer-to-manage-drupal-site-dependencies">Using composer to manage Drupal</a></li>
+</ul>
+
+<p>Composer also helps facilitate a more security oriented approach whether
+packaging or deploying a site. In a <code>WxT</code> site the only code in the repository
+will be custom code and everything else is defined as a dependency. This makes
+clear what audit-able surface is.</p>
+
+<p>For more information on this please see a recent talk given at <code>DrupalGov</code>:</p>
+
+<ul>
+<li><a href="https://www.youtube.com/watch?v=g_EO-3dEbio">A blueprint for a secure Drupal 8 platform and build process with composer</a></li>
+</ul>
+
+<h2 id="composer-project-templates">Composer Project Templates</h2>
+
+<p>Reading the provided documentation we are quickly introduced to the methodology
+of leveraging <strong>composer templates as blueprints</strong> for managing various Drupal
+projects. These templates help to provide quick installation of Drupal and / or
+Drupal distributions through issuing just a few composer commands.</p>
+
+<p>First you need to <a href="https://getcomposer.org/doc/00-intro.md#installation-linux-unix-osx">install composer</a>.</p>
+
+<blockquote>
+<p>Note: The instructions below refer to the <a href="https://getcomposer.org/doc/00-intro.md#globally">global composer installation</a>.
+You might need to replace <code>composer</code> with <code>php composer.phar</code> (or similar) for your setup.</p>
+</blockquote>
+
+<p>After that you can create the appropriate project:</p>
+
+<h3 id="drupal-standalone">Drupal (standalone)</h3>
+
+<pre><code class="language-sh">composer create-project drupal-composer/drupal-project site-name
+</code></pre>
+
+<h3 id="lightning-distribution">Lightning (distribution)</h3>
+
+<pre><code class="language-sh">composer create-project acquia/lightning-project site-name
+</code></pre>
+
+<h3 id="wxt-distribution-span-class-fa-fa-star-span">WxT (distribution) <span class="fa fa-star"></span></h3>
+
+<pre><code class="language-sh">composer create-project drupalwxt/wxt-project:8.x-dev site-name
+</code></pre>
+
+<p>You will notice that <code>WxT</code> has its own composer project template listed above
+to help you quickly onboard to our distribution. An example was also given of
+the popular Lightning framework to which <code>WxT</code> extends from. Relevant links are
+provided below for each of the composer projects.</p>
+
+<ul>
+<li><a href="https://github.com/drupal-composer/drupal-project">Composer template for Drupal projects</a></li>
+<li><a href="https://github.com/acquia/lightning-project">Composer template for Lightning projects</a></li>
+<li><a href="https://github.com/drupalwxt/wxt-project">Composer template for WxT projects</a> <span class="fa fa-star"></span></li>
+</ul>
+
+<blockquote>
+<p>Note: The <code>composer create-project</code> command passes ownership of all files to the
+project that is created. You should create a new git repository, and commit
+all files not excluded by the .gitignore file.</p>
+</blockquote>
+
+<h2 id="maintenance">Maintenance</h2>
+
+<p>Composer will create a new directory called <code>site-name</code> containing a <code>html</code>
+directory with a full <code>WxT</code> codebase inside. You can now simply install like
+you would any other Drupal site.</p>
+
+<p>List of common commands are as follows:</p>
+
+<table>
+<thead>
+<tr>
+<th>Task</th>
+<th>Composer</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>Latest version of a contributed project</td>
+<td><code>composer require drupal/PROJECT_NAME:8.*</code></td>
+</tr>
+
+<tr>
+<td>Specific version of a contributed project</td>
+<td><code>composer require drupal/PROJECT_NAME:8.1.0-beta5</code></td>
+</tr>
+
+<tr>
+<td>Updating all projects including Drupal Core</td>
+<td><code>composer update</code></td>
+</tr>
+
+<tr>
+<td>Updating a single contributed project</td>
+<td><code>composer update drupal/PROJECT_NAME</code></td>
+</tr>
+
+<tr>
+<td>Updating Drupal Core exclusively</td>
+<td><code>composer update drupal/core</code></td>
+</tr>
+</tbody>
+</table>
+
+<blockquote>
+<p><strong>Note</strong>: Remember Composer, unlike Drush, is a <strong>dependency manager</strong>. If
+module <code>foo version: 1.0.0</code> depends on <code>bar version: 3.2.0</code>, Composer will not
+let you update bar to <code>3.3.0</code> (or downgrade it to <code>3.1.0</code> respectively).</p>
+</blockquote>
+
+<h2 id="source-control">Source Control</h2>
+
+<p>If you peek at the <code>.gitignore</code> we and other drupal projects provide, you&rsquo;ll
+immediately notice that certain directories, including all contributed projects,
+are excluded from source control. In fact in most <code>Composer</code> project&rsquo;s (like
+this one), you should never commit your installed dependencies to source
+control.</p>
+
+<p>When you set up the project, <code>Composer</code> will create a file called
+<code>composer.lock</code>, which is a list of which dependencies were installed, and in
+which versions. Commit <code>composer.lock</code> to source control! Then, when your
+colleagues want to spin up their own copies of the project, all they&rsquo;ll have to
+do is run composer install, which will install the correct versions of
+everything in <code>composer.lock</code>.</p>
+
+<h2 id="what-does-the-template-do">What does the template do?</h2>
+
+<p>When installing the given <code>composer.json</code> some tasks are taken care of:</p>
+
+<ul>
+<li>Drupal will be installed in the <code>html</code> directory</li>
+<li>Autoloader is implemented to use the generated composer autoloader in
+<code>vendor/autoload.php</code>, instead of the one provided by Drupal
+(<code>html/vendor/autoload.php</code>)</li>
+<li>Modules (packages type <code>drupal-module</code>) will be placed in
+<code>html/modules/contrib/</code></li>
+<li>Theme (packages type <code>drupal-theme</code>) will be placed in
+<code>html/themes/contrib/</code></li>
+<li>Profiles (packages type <code>drupal-profile</code>) will be placed in
+<code>html/profiles/contrib/</code></li>
+<li>Creates default writable versions of <code>settings.php</code> and <code>services.yml</code>.</li>
+<li>Creates <code>html/sites/default/files</code> directory</li>
+<li>Latest version of <code>Drush</code> is installed locally for use at <code>vendor/bin/drush</code></li>
+<li>Latest version of <code>DrupalConsole</code> is installed locally for use at
+<code>vendor/bin/drupal</code></li>
+</ul>
+
+<h2 id="updating-drupal-core">Updating Drupal Core</h2>
+
+<p>This project will attempt to keep all of your Drupal Core files up-to-date; the
+project <a href="https://github.com/drupal-composer/drupal-scaffold">drupal-composer/drupal-scaffold</a>
+is used to ensure that your scaffold files are updated every time drupal/core is
+updated. If you customize any of the &ldquo;scaffolding&rdquo; files (commonly .htaccess),
+you may need to merge conflicts if any of your modfied files are updated in a
+new release of Drupal core.</p>
+
+<h2 id="structure">Structure</h2>
+
+<pre><code class="language-sh">    ├── scripts/
+    │   └── ScriptHandler.php           --&gt; Additional scripts for composer
+    ├── html/                           --&gt; web server root directory
+    ├── files_private/                  --&gt; files ignored by git
+    ├── drush/
+    ├── composer.lock                   --&gt; dependency manager
+    ├── composer.json                   --&gt; pinned dependencies
+    ├── README.md
+    ├── Makefile
+    ├── .travis.yml
+    ├── .gitlab-ci.yml
+    └── vendor/                         --&gt; composer packages
+</code></pre>
+
+<h2 id="additional-resources">Additional Resources</h2>
+
+<ul>
+<li><a href="https://getcomposer.org/doc/">Official Docs</a></li>
+<li><a href="https://www.drupal.org/docs/develop/using-composer/troubleshooting-composer">Troubleshooting composer</a></li>
+<li><a href="https://www.drupal.org/docs/develop/using-composer">Using Composer</a></li>
+<li><a href="https://lightning.acquia.com/installation-instructions">Lightning + Composer</a></li>
+<li><a href="https://github.com/hirak/prestissimo">Composer Parallel Install</a></li>
+</ul>
+
                 </div>
                 <aside>
                     
                     <ul class="list-inline post-tags">
+                        
+                        <li>
+                            <a href="https://drupalwxt.github.io/tags/docs">
+                                <i class="fa fa-tags"></i>
+                                docs
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a href="https://drupalwxt.github.io/tags/faq">
+                                <i class="fa fa-tags"></i>
+                                faq
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a href="https://drupalwxt.github.io/tags/wxt">
+                                <i class="fa fa-tags"></i>
+                                wxt
+                            </a>
+                        </li>
                         
                     </ul>
                     
@@ -293,6 +483,13 @@
                         
                         
                         
+                        <li><a href="https://drupalwxt.github.io/docs/code/">Coding Standards</a></li>
+                        
+                        
+                        
+                        
+                        
+                        <li><a href="https://drupalwxt.github.io/docs/faq/">Composer FAQ</a></li>
                         
                         
                         
@@ -302,6 +499,37 @@
                         
                         
                         
+                        <li><a href="https://drupalwxt.github.io/docs/modules/">Module Selection for Drupal WxT</a></li>
+                        
+                        
+                        
+                        
+                        
+                        <li><a href="https://drupalwxt.github.io/docs/subprofile/">Sub Installation Profile</a></li>
+                        
+                        
+                        
+                        
+                        
+                        <li><a href="https://drupalwxt.github.io/docs/theme/">Theme Workflow</a></li>
+                        
+                        
+                        
+                        
+                        
+                        <li><a href="https://drupalwxt.github.io/wxt/d8/releases/">Releases</a></li>
+                        
+                        
+                        
+                        
+                        
+                        <li><a href="https://drupalwxt.github.io/wxt/d8/repositories/">Repositories for Drupal WxT</a></li>
+                        
+                        
+                        
+                        
+                        
+                        <li><a href="https://drupalwxt.github.io/wxt/d8/roadmap/">Roadmap</a></li>
                         
                         
                         
@@ -311,27 +539,7 @@
                         
                         
                         
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
+                        <li><a href="https://drupalwxt.github.io/post/2015/01/13/contributing-to-documentation-site/">Contributing to Documentation Site</a></li>
                         
                         
                         
@@ -411,10 +619,10 @@
                     <nav>
     <ul class="pager">
         
-        <li class="previous disabled"><a href="#"><span aria-hidden="true">&larr;</span> Older</a></li>
+        <li class="previous"><a href="https://drupalwxt.github.io/docs/faq/"><span aria-hidden="true">&larr;</span> Older</a></li>
         
         
-        <li class="next disabled"><a href="#">Newer <span aria-hidden="true">&rarr;</span></a></li>
+        <li class="next"><a href="https://drupalwxt.github.io/docs/modules/">Newer <span aria-hidden="true">&rarr;</span></a></li>
         
     </ul>
 </nav>
@@ -424,95 +632,16 @@
                 </footer>
             </article>
         </div>
-        <div class="col-md-4">
-            <aside>
-    <div class="row">
-        <div class="col-xs-12 col-sm-4 col-md-12">
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <h2 class="panel-title">Recent Posts</h2>
-                </div>
-                <div class="list-group">
-                    
-                    <a href="/docs/code/" class="list-group-item">Coding Standards</a>
-                    
-                    <a href="/docs/faq/" class="list-group-item">Composer FAQ</a>
-                    
-                    <a href="/docs/composer/" class="list-group-item">Composer workflow for Drupal 8</a>
-                    
-                    <a href="/docs/modules/" class="list-group-item">Module Selection for Drupal WxT</a>
-                    
-                    <a href="/docs/subprofile/" class="list-group-item">Sub Installation Profile</a>
-                    
-                    <a href="/docs/theme/" class="list-group-item">Theme Workflow</a>
-                    
-                    <a href="/wxt/d8/releases/" class="list-group-item">Releases</a>
-                    
-                    <a href="/wxt/d8/repositories/" class="list-group-item">Repositories for Drupal WxT</a>
-                    
-                    <a href="/wxt/d8/roadmap/" class="list-group-item">Roadmap</a>
-                    
-                    <a href="/post/2015/01/20/code-quality/" class="list-group-item">Code Quality</a>
-                    
-                </div>
-            </div>
-        </div>
-        <div class="col-xs-12 col-sm-4 col-md-12">
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <h2 class="panel-title">Tags</h2>
-                </div>
-                <div class="list-group">
-                    
-                    
-                    <a href="https://drupalwxt.github.io/tags/docs" class="list-group-item">
-                        <span class="badge">6</span>
-                        docs
-                    </a>
-                    
-                    <a href="https://drupalwxt.github.io/tags/faq" class="list-group-item">
-                        <span class="badge">2</span>
-                        faq
-                    </a>
-                    
-                    <a href="https://drupalwxt.github.io/tags/memcache" class="list-group-item">
-                        <span class="badge">1</span>
-                        memcache
-                    </a>
-                    
-                    <a href="https://drupalwxt.github.io/tags/performance" class="list-group-item">
-                        <span class="badge">4</span>
-                        performance
-                    </a>
-                    
-                    <a href="https://drupalwxt.github.io/tags/post" class="list-group-item">
-                        <span class="badge">1</span>
-                        post
-                    </a>
-                    
-                    <a href="https://drupalwxt.github.io/tags/releases" class="list-group-item">
-                        <span class="badge">1</span>
-                        releases
-                    </a>
-                    
-                    <a href="https://drupalwxt.github.io/tags/varnish" class="list-group-item">
-                        <span class="badge">1</span>
-                        varnish
-                    </a>
-                    
-                    <a href="https://drupalwxt.github.io/tags/wxt" class="list-group-item">
-                        <span class="badge">10</span>
-                        wxt
-                    </a>
-                    
-                </div>
-            </div>
-        </div>
     </div>
-</aside>
+    
+<dl id="wb-dtmd">
+    <dt>Date modified:&#32;</dt>
+    <dd>
+        <time property="dateModified">2019-06-03</time>
+    </dd>
+</dl>
 
-        </div>
-    </div>
+
     </main>
     
   <footer role="contentinfo" id="wb-info" class="visible-sm visible-md visible-lg wb-navcurr">

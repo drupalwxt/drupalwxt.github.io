@@ -6,30 +6,30 @@
     <description>Recent content in Faq on Drupal WxT</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 18 Apr 2017 08:30:00 -0500</lastBuildDate>
+    <lastBuildDate>Mon, 03 Jun 2019 15:10:50 -0500</lastBuildDate>
     
 	<atom:link href="https://drupalwxt.github.io/tags/faq/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Composer FAQ</title>
-      <link>https://drupalwxt.github.io/workflow/faq/</link>
-      <pubDate>Tue, 18 Apr 2017 08:30:00 -0500</pubDate>
+      <link>https://drupalwxt.github.io/docs/faq/</link>
+      <pubDate>Mon, 03 Jun 2019 15:10:50 -0500</pubDate>
       
-      <guid>https://drupalwxt.github.io/workflow/faq/</guid>
+      <guid>https://drupalwxt.github.io/docs/faq/</guid>
       <description>Should I commit the contributed modules downloaded? Composer strongly recommends against. However, while they provide argumentation against there are also known workarounds if a project decides to do it anyway.
 Should I commit the scaffolding files? The drupal-scaffold plugin can download the scaffold files (like index.php, update.php, etc) to the html directory of your project. If you have not customized those files you could choose to not check them into your version control system.</description>
     </item>
     
     <item>
-      <title>WxT Workflow</title>
-      <link>https://drupalwxt.github.io/workflow/wxt/</link>
-      <pubDate>Tue, 18 Apr 2017 08:30:00 -0500</pubDate>
+      <title>Composer workflow for Drupal 8</title>
+      <link>https://drupalwxt.github.io/docs/composer/</link>
+      <pubDate>Mon, 03 Jun 2019 15:10:50 -0500</pubDate>
       
-      <guid>https://drupalwxt.github.io/workflow/wxt/</guid>
-      <description> Background Information Given WxT makes use of the Lightning base framework providing extensive integration with the Panels ecosystem of tools:
- CTools [Page Manager][page_manager] Panels Panelizer  The following DrupalCon video serves as a great immediate introduction to the relevant concepts:
- </description>
+      <guid>https://drupalwxt.github.io/docs/composer/</guid>
+      <description>Note: The following guide is largely just a high level overview for Drupal 8 WxT installations.
+ Overview WxT strictly adheres to a Composer-based workflow and tries to follow the best practices laid out by the broader Drupal community. For more information on the benefits of this workflow please consult the official documentation provided in the link below:
+ Using composer to manage Drupal  Composer also helps facilitate a more security oriented approach whether packaging or deploying a site.</description>
     </item>
     
   </channel>

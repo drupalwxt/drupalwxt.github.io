@@ -3,22 +3,27 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://drupalwxt.github.io/wxt/d7/working-examples/</loc>
-    <lastmod>2015-01-13T13:10:52-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://drupalwxt.github.io/architecture/release-cycle/</loc>
-    <lastmod>2015-01-13T13:10:52-05:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://drupalwxt.github.io/docs/code/</loc>
     <lastmod>2019-06-03T15:10:50-05:00</lastmod>
   </url>
   
   <url>
+    <loc>https://drupalwxt.github.io/docs/faq/</loc>
+    <lastmod>2019-06-03T15:10:50-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://drupalwxt.github.io/docs/composer/</loc>
+    <lastmod>2019-06-03T15:10:50-05:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://drupalwxt.github.io/docs/modules/</loc>
+    <lastmod>2019-06-03T15:10:50-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://drupalwxt.github.io/docs/subprofile/</loc>
     <lastmod>2019-06-03T15:10:50-05:00</lastmod>
   </url>
   
@@ -38,83 +43,13 @@
   </url>
   
   <url>
-    <loc>https://drupalwxt.github.io/architecture/roadmap/</loc>
-    <lastmod>2018-01-13T13:10:52-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://drupalwxt.github.io/workflow/faq/</loc>
-    <lastmod>2017-04-18T08:30:00-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://drupalwxt.github.io/workflow/tips/</loc>
-    <lastmod>2017-04-18T08:30:00-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://drupalwxt.github.io/workflow/composer/</loc>
-    <lastmod>2017-04-18T08:30:00-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://drupalwxt.github.io/workflow/resources/</loc>
-    <lastmod>2017-04-18T08:30:00-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://drupalwxt.github.io/workflow/subprofile/</loc>
-    <lastmod>2017-04-18T08:30:00-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://drupalwxt.github.io/workflow/wxt/</loc>
-    <lastmod>2017-04-18T08:30:00-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://drupalwxt.github.io/architecture/apache-fpm/</loc>
-    <lastmod>2015-08-04T19:10:52-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://drupalwxt.github.io/architecture/nginx-fpm/</loc>
-    <lastmod>2015-08-04T19:10:52-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://drupalwxt.github.io/architecture/libraries-api/</loc>
-    <lastmod>2015-07-27T13:10:52-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://drupalwxt.github.io/wxt/d7/media/</loc>
-    <lastmod>2015-02-26T13:10:50-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://drupalwxt.github.io/wxt/d7/releases/</loc>
-    <lastmod>2015-02-26T13:10:50-05:00</lastmod>
+    <loc>https://drupalwxt.github.io/wxt/d8/roadmap/</loc>
+    <lastmod>2019-01-13T13:10:52-05:00</lastmod>
   </url>
   
   <url>
     <loc>https://drupalwxt.github.io/post/2015/01/20/code-quality/</loc>
     <lastmod>2015-01-20T13:10:52-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://drupalwxt.github.io/architecture/profiling/</loc>
-    <lastmod>2015-01-20T13:10:52-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://drupalwxt.github.io/architecture/deployment/</loc>
-    <lastmod>2015-01-18T13:10:52-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://drupalwxt.github.io/wxt/d7/content-moderation/</loc>
-    <lastmod>2015-01-13T13:10:52-05:00</lastmod>
   </url>
   
   <url>
@@ -128,37 +63,7 @@
   </url>
   
   <url>
-    <loc>https://drupalwxt.github.io/architecture/drush-make/</loc>
-    <lastmod>2015-01-13T13:10:52-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://drupalwxt.github.io/architecture/getting-started-win/</loc>
-    <lastmod>2015-01-13T13:10:52-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://drupalwxt.github.io/wxt/d7/make/</loc>
-    <lastmod>2015-01-13T13:10:52-05:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://drupalwxt.github.io/post/2015/01/13/memcached/</loc>
-    <lastmod>2015-01-13T13:10:52-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://drupalwxt.github.io/wxt/d7/modules/</loc>
-    <lastmod>2015-01-13T13:10:52-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://drupalwxt.github.io/architecture/system-requirements/</loc>
-    <lastmod>2015-01-13T13:10:52-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://drupalwxt.github.io/wxt/d7/tabbed-interface/</loc>
     <lastmod>2015-01-13T13:10:52-05:00</lastmod>
   </url>
   
@@ -168,37 +73,7 @@
   </url>
   
   <url>
-    <loc>https://drupalwxt.github.io/architecture/</loc>
-    <lastmod>2015-01-13T13:10:52-05:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://drupalwxt.github.io/tags/architecture/</loc>
-    <lastmod>2015-01-13T13:10:52-05:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://drupalwxt.github.io/authors/</loc>
-  </url>
-  
-  <url>
-    <loc>https://drupalwxt.github.io/tags/bean/</loc>
-    <lastmod>2015-01-13T13:10:52-05:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://drupalwxt.github.io/tags/content-staging/</loc>
-    <lastmod>2015-01-18T13:10:52-05:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://drupalwxt.github.io/tags/deployment/</loc>
-    <lastmod>2015-01-18T13:10:52-05:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -215,19 +90,13 @@
   
   <url>
     <loc>https://drupalwxt.github.io/</loc>
-    <lastmod>2015-01-13T13:10:52-05:00</lastmod>
+    <lastmod>2019-06-03T15:10:50-05:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://drupalwxt.github.io/tags/faq/</loc>
-    <lastmod>2017-04-18T08:30:00-05:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://drupalwxt.github.io/tags/media/</loc>
-    <lastmod>2015-02-26T13:10:50-05:00</lastmod>
+    <lastmod>2019-06-03T15:10:50-05:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -238,14 +107,8 @@
   </url>
   
   <url>
-    <loc>https://drupalwxt.github.io/tags/moderation/</loc>
-    <lastmod>2015-01-13T13:10:52-05:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://drupalwxt.github.io/tags/performance/</loc>
-    <lastmod>2015-08-04T19:10:52-05:00</lastmod>
+    <lastmod>2015-01-20T13:10:52-05:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -262,44 +125,14 @@
   </url>
   
   <url>
-    <loc>https://drupalwxt.github.io/tags/profile/</loc>
-    <lastmod>2017-04-18T08:30:00-05:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://drupalwxt.github.io/tags/releases/</loc>
     <lastmod>2019-02-26T13:10:50-05:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://drupalwxt.github.io/tags/resources/</loc>
-    <lastmod>2017-04-18T08:30:00-05:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://drupalwxt.github.io/tags/roadmap/</loc>
-    <lastmod>2018-01-13T13:10:52-05:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://drupalwxt.github.io/tags/tabbed-interface/</loc>
-    <lastmod>2015-01-13T13:10:52-05:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://drupalwxt.github.io/tags/</loc>
-    <lastmod>2015-01-13T13:10:52-05:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://drupalwxt.github.io/tags/tips/</loc>
-    <lastmod>2017-04-18T08:30:00-05:00</lastmod>
+    <lastmod>2019-06-03T15:10:50-05:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -310,26 +143,14 @@
   </url>
   
   <url>
-    <loc>https://drupalwxt.github.io/tags/workbench/</loc>
-    <lastmod>2015-01-13T13:10:52-05:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://drupalwxt.github.io/workflow/</loc>
-    <lastmod>2017-04-18T08:30:00-05:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://drupalwxt.github.io/wxt/</loc>
-    <lastmod>2015-01-13T13:10:52-05:00</lastmod>
+    <lastmod>2019-02-26T13:10:50-05:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://drupalwxt.github.io/tags/wxt/</loc>
-    <lastmod>2015-01-13T13:10:52-05:00</lastmod>
+    <lastmod>2019-06-03T15:10:50-05:00</lastmod>
     <priority>0</priority>
   </url>
   

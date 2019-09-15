@@ -129,25 +129,9 @@
                     
                     <li><a href="/wxt/d8/repositories/"> Repositories for WxT</a></li>
                     
+                    <li><a href="/wxt/d8/roadmap/"> Roadmap</a></li>
+                    
                     <li><a href="/wxt/"> All WxT Entries</a></li>
-                    
-                </ul>
-                
-                </li>
-                
-                
-                <li class="">
-                <a href="#" class="item">
-                    
-                    <span>Documentation</span>
-                </a>
-                <ul class="sm list-unstyled" role="menu">
-                    
-                    <li><a href="/docs/code/"> Coding Standards</a></li>
-                    
-                    <li><a href="/docs/modules/"> Modules Selection</a></li>
-                    
-                    <li><a href="/docs/theme/"> Theme Workflow</a></li>
                     
                 </ul>
                 
@@ -174,11 +158,26 @@
                 </li>
                 
                 
-                <li>
-                <a class="" href="/architecture/roadmap/">
+                <li class="">
+                <a href="#" class="item">
                     
-                    <span>Roadmap</span>
+                    <span>Documentation</span>
                 </a>
+                <ul class="sm list-unstyled" role="menu">
+                    
+                    <li><a href="/docs/code/"> Coding Standards</a></li>
+                    
+                    <li><a href="/docs/composer/"> Composer Workflow</a></li>
+                    
+                    <li><a href="/docs/faq/"> Frequently Asked Questions</a></li>
+                    
+                    <li><a href="/docs/modules/"> Modules Selection</a></li>
+                    
+                    <li><a href="/docs/subprofile/"> Sub Installation Profile</a></li>
+                    
+                    <li><a href="/docs/theme/"> Theme Workflow</a></li>
+                    
+                </ul>
                 
                 </li>
                 
@@ -263,14 +262,61 @@
         </div>
     </header>
     <div class="post-content">
-        Background Drupal WxT complies with the Drupal Coding Standards and runs automated tests on ever commit that gets merged into the working directory.
-PHP CodeSniffer is executed on our phpcs.xml file which is only slightly different then the one which resides in Drupal core.
-PHPCS The following is the literal commands being executed in our continuous integration builds under Travis CI.
+        Background Drupal WxT complies with the Drupal Coding Standards and runs automated tests on every commit that gets merged into the working repository.
+PHP CodeSniffer is executed on our customized phpcs.xml file which is only slightly different from the one which resides in Drupal core.
+PHPCS The following is the literal command(s) being executed in our continuous integration builds running under Travis CI.
 ./docker/bin/phpcs --standard=/var/www/html/core/phpcs.xml \ --extensions=php,module,inc,install,test,profile,theme \ --report=full \ --colors \ --ignore=/var/www/html/profiles/wxt/modules/custom/wxt_test \ --ignore=/var/www/html/modules/custom/wxt_library \ --ignore=*.
     </div>
     
     <footer class="read-more-link">
         <a href="https://drupalwxt.github.io/docs/code/" class="btn btn-default">Read More...</a>
+    </footer>
+    
+</article>
+<hr>
+
+                        
+                        <article class="post">
+    <header>
+        <h2><a href="https://drupalwxt.github.io/docs/faq/">Composer FAQ</a></h2>
+        <div class="post-date text-muted">
+            <span class="glyphicon glyphicon-calendar"></span>
+            <time datetime="2019-06-03">
+                2019-06-03 - 1M TO READ
+            </time>
+        </div>
+    </header>
+    <div class="post-content">
+        Should I commit the contributed modules downloaded? Composer strongly recommends against. However, while they provide argumentation against there are also known workarounds if a project decides to do it anyway.
+Should I commit the scaffolding files? The drupal-scaffold plugin can download the scaffold files (like index.php, update.php, etc) to the html directory of your project. If you have not customized those files you could choose to not check them into your version control system.
+    </div>
+    
+    <footer class="read-more-link">
+        <a href="https://drupalwxt.github.io/docs/faq/" class="btn btn-default">Read More...</a>
+    </footer>
+    
+</article>
+<hr>
+
+                        
+                        <article class="post">
+    <header>
+        <h2><a href="https://drupalwxt.github.io/docs/composer/">Composer workflow for Drupal 8</a></h2>
+        <div class="post-date text-muted">
+            <span class="glyphicon glyphicon-calendar"></span>
+            <time datetime="2019-06-03">
+                2019-06-03 - 4M TO READ
+            </time>
+        </div>
+    </header>
+    <div class="post-content">
+        Note: The following guide is largely just a high level overview for Drupal 8 WxT installations.
+ Overview WxT strictly adheres to a Composer-based workflow and tries to follow the best practices laid out by the broader Drupal community. For more information on the benefits of this workflow please consult the official documentation provided in the link below:
+ Using composer to manage Drupal  Composer also helps facilitate a more security oriented approach whether packaging or deploying a site.
+    </div>
+    
+    <footer class="read-more-link">
+        <a href="https://drupalwxt.github.io/docs/composer/" class="btn btn-default">Read More...</a>
     </footer>
     
 </article>
@@ -288,13 +334,33 @@ PHPCS The following is the literal commands being executed in our continuous int
         </div>
     </header>
     <div class="post-content">
-        Background This WxT installation profile directly extends from the Lightning Framework created by Acquia to provide developers with a powerful base toolchain upon which to extend. Due to this strict dependency we also align much of our workflow with the best practice established patterns Acquia has provided.
+        Background This WxT installation profile directly extends from the Lightning Framework created by Acquia to provide developers with a powerful base toolchain upon which to extend. Due to this strict dependency we also align much of our workflow with the best practices established patterns Acquia has provided.
 Lightning We chose Lightning because of it being the best standard for enterprise authoring in Drupal tightly focused on the user experience in four key functional areas.
     </div>
     
     <footer class="read-more-link">
         <a href="https://drupalwxt.github.io/docs/modules/" class="btn btn-default">Read More...</a>
     </footer>
+    
+</article>
+<hr>
+
+                        
+                        <article class="post">
+    <header>
+        <h2><a href="https://drupalwxt.github.io/docs/subprofile/">Sub Installation Profile</a></h2>
+        <div class="post-date text-muted">
+            <span class="glyphicon glyphicon-calendar"></span>
+            <time datetime="2019-06-03">
+                2019-06-03 - 1M TO READ
+            </time>
+        </div>
+    </header>
+    <div class="post-content">
+         WxT sub installation profiles WxT like its base framework Lightning includes the ability to create sub-profiles that are based on the default WxT distribution profile. Making a sub-profile allows you to customize the installation process to meet one or more of your specific needs while retaining / customizing the WxT defaults.
+If any of the following statements are true, then you should consider creating a sub-profile of WxT:
+ Ability to prevent / override some (sub)component of WxT from being installed Ability to enable additional modules, themes, or configuration during install Ability customize the look and feel of the installation process Ability to build a distribution that offloads the Web Experience Toolkit theme(s) / plugins and related libraries to WxT  
+    </div>
     
 </article>
 <hr>
@@ -311,7 +377,7 @@ Lightning We chose Lightning because of it being the best standard for enterpris
         </div>
     </header>
     <div class="post-content">
-        Sub-themes are just like any other theme, with one difference: They inherit the parent theme&rsquo;s resources. There are no limits on the chaining capabilities connecting sub-themes for their parents. A sub-theme can be a child of another sub-theme, and it can be branched and organized however you see fit.
+        Sub-themes are just like any other theme, with one difference: They inherit all of the parent theme&rsquo;s resources. In addition, there are no limits on the chaining capabilities connecting sub-themes for their parents. A sub-theme can be a child of another sub-theme, and it can be branched and organized however you see fit.
  Background Drupal WxT includes WxT Bootstrap which is a a modern, component based and accessible sub-theme powered by the Bootstrap base theme.
     </div>
     
@@ -333,138 +399,6 @@ Lightning We chose Lightning because of it being the best standard for enterpris
                     
                     <h3>Related Post</h3>
                     <ul class="post-rels">
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
                         
                         
                         
@@ -612,13 +546,15 @@ Lightning We chose Lightning because of it being the best standard for enterpris
                 </div>
                 <div class="list-group">
                     
-                    <a href="/wxt/d7/working-examples/" class="list-group-item">Working Examples (D7)</a>
-                    
-                    <a href="/architecture/release-cycle/" class="list-group-item">Release Cycle / Updates</a>
-                    
                     <a href="/docs/code/" class="list-group-item">Coding Standards</a>
                     
+                    <a href="/docs/faq/" class="list-group-item">Composer FAQ</a>
+                    
+                    <a href="/docs/composer/" class="list-group-item">Composer workflow for Drupal 8</a>
+                    
                     <a href="/docs/modules/" class="list-group-item">Module Selection for Drupal WxT</a>
+                    
+                    <a href="/docs/subprofile/" class="list-group-item">Sub Installation Profile</a>
                     
                     <a href="/docs/theme/" class="list-group-item">Theme Workflow</a>
                     
@@ -626,11 +562,9 @@ Lightning We chose Lightning because of it being the best standard for enterpris
                     
                     <a href="/wxt/d8/repositories/" class="list-group-item">Repositories for Drupal WxT</a>
                     
-                    <a href="/architecture/roadmap/" class="list-group-item">Roadmap</a>
+                    <a href="/wxt/d8/roadmap/" class="list-group-item">Roadmap</a>
                     
-                    <a href="/workflow/faq/" class="list-group-item">Composer FAQ</a>
-                    
-                    <a href="/workflow/tips/" class="list-group-item">Composer tips for Drupal</a>
+                    <a href="/post/2015/01/20/code-quality/" class="list-group-item">Code Quality</a>
                     
                 </div>
             </div>
@@ -643,28 +577,8 @@ Lightning We chose Lightning because of it being the best standard for enterpris
                 <div class="list-group">
                     
                     
-                    <a href="https://drupalwxt.github.io/tags/architecture" class="list-group-item">
-                        <span class="badge">6</span>
-                        architecture
-                    </a>
-                    
-                    <a href="https://drupalwxt.github.io/tags/bean" class="list-group-item">
-                        <span class="badge">1</span>
-                        bean
-                    </a>
-                    
-                    <a href="https://drupalwxt.github.io/tags/content-staging" class="list-group-item">
-                        <span class="badge">1</span>
-                        content-staging
-                    </a>
-                    
-                    <a href="https://drupalwxt.github.io/tags/deployment" class="list-group-item">
-                        <span class="badge">1</span>
-                        deployment
-                    </a>
-                    
                     <a href="https://drupalwxt.github.io/tags/docs" class="list-group-item">
-                        <span class="badge">3</span>
+                        <span class="badge">6</span>
                         docs
                     </a>
                     
@@ -673,23 +587,13 @@ Lightning We chose Lightning because of it being the best standard for enterpris
                         faq
                     </a>
                     
-                    <a href="https://drupalwxt.github.io/tags/media" class="list-group-item">
-                        <span class="badge">1</span>
-                        media
-                    </a>
-                    
                     <a href="https://drupalwxt.github.io/tags/memcache" class="list-group-item">
                         <span class="badge">1</span>
                         memcache
                     </a>
                     
-                    <a href="https://drupalwxt.github.io/tags/moderation" class="list-group-item">
-                        <span class="badge">1</span>
-                        moderation
-                    </a>
-                    
                     <a href="https://drupalwxt.github.io/tags/performance" class="list-group-item">
-                        <span class="badge">7</span>
+                        <span class="badge">4</span>
                         performance
                     </a>
                     
@@ -698,34 +602,9 @@ Lightning We chose Lightning because of it being the best standard for enterpris
                         post
                     </a>
                     
-                    <a href="https://drupalwxt.github.io/tags/profile" class="list-group-item">
-                        <span class="badge">1</span>
-                        profile
-                    </a>
-                    
                     <a href="https://drupalwxt.github.io/tags/releases" class="list-group-item">
-                        <span class="badge">2</span>
+                        <span class="badge">1</span>
                         releases
-                    </a>
-                    
-                    <a href="https://drupalwxt.github.io/tags/resources" class="list-group-item">
-                        <span class="badge">1</span>
-                        resources
-                    </a>
-                    
-                    <a href="https://drupalwxt.github.io/tags/roadmap" class="list-group-item">
-                        <span class="badge">1</span>
-                        roadmap
-                    </a>
-                    
-                    <a href="https://drupalwxt.github.io/tags/tabbed-interface" class="list-group-item">
-                        <span class="badge">1</span>
-                        tabbed-interface
-                    </a>
-                    
-                    <a href="https://drupalwxt.github.io/tags/tips" class="list-group-item">
-                        <span class="badge">1</span>
-                        tips
                     </a>
                     
                     <a href="https://drupalwxt.github.io/tags/varnish" class="list-group-item">
@@ -733,13 +612,8 @@ Lightning We chose Lightning because of it being the best standard for enterpris
                         varnish
                     </a>
                     
-                    <a href="https://drupalwxt.github.io/tags/workbench" class="list-group-item">
-                        <span class="badge">1</span>
-                        workbench
-                    </a>
-                    
                     <a href="https://drupalwxt.github.io/tags/wxt" class="list-group-item">
-                        <span class="badge">15</span>
+                        <span class="badge">10</span>
                         wxt
                     </a>
                     

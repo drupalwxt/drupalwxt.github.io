@@ -24,18 +24,5 @@
  composer update  Run database updates:</description>
     </item>
     
-    <item>
-      <title>Releases</title>
-      <link>https://drupalwxt.github.io/wxt/d7/releases/</link>
-      <pubDate>Thu, 26 Feb 2015 13:10:50 -0500</pubDate>
-      
-      <guid>https://drupalwxt.github.io/wxt/d7/releases/</guid>
-      <description>Important Releases will soon start to appear for Drupal 8 once stable releases are made.
-   Release Created Date Description     3.0.0-alpha1 2019-09-08T17:46:16Z Features/Updates:
- Update Drupal Core to 8.7.5 Update Lightning to 4.0.4 Move to Layout Builder Migrations updated with Layout Builder support Page Title / Tabs support for Layout Builder  Upgrade path:
- Update your codebase:
- composer update  Run database updates:</description>
-    </item>
-    
   </channel>
 </rss>

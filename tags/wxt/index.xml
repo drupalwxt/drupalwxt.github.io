@@ -6,21 +6,10 @@
     <description>Recent content in Wxt on Drupal WxT</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 13 Jan 2015 13:10:52 -0500</lastBuildDate>
+    <lastBuildDate>Mon, 03 Jun 2019 15:10:50 -0500</lastBuildDate>
     
 	<atom:link href="https://drupalwxt.github.io/tags/wxt/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>Working Examples (D7)</title>
-      <link>https://drupalwxt.github.io/wxt/d7/working-examples/</link>
-      <pubDate>Tue, 13 Jan 2015 13:10:52 -0500</pubDate>
-      
-      <guid>https://drupalwxt.github.io/wxt/d7/working-examples/</guid>
-      <description>Below we highlight the work done on getting the various WxT components / plugins and themes / styles leveraged properly in Drupal.
-Levels of integration with Drupal will vary as some of the plugins can simply be leveraged by calling a class in markup. Where possible we will try to make a distinction on how each functionality can be used.
-Note: This list does not represent the full capabilities of the Drupal WxT platform merely the WxT components it integrates with.</description>
-    </item>
     
     <item>
       <title>Coding Standards</title>
@@ -28,10 +17,31 @@ Note: This list does not represent the full capabilities of the Drupal WxT platf
       <pubDate>Mon, 03 Jun 2019 15:10:50 -0500</pubDate>
       
       <guid>https://drupalwxt.github.io/docs/code/</guid>
-      <description>Background Drupal WxT complies with the Drupal Coding Standards and runs automated tests on ever commit that gets merged into the working directory.
-PHP CodeSniffer is executed on our phpcs.xml file which is only slightly different then the one which resides in Drupal core.
-PHPCS The following is the literal commands being executed in our continuous integration builds under Travis CI.
+      <description>Background Drupal WxT complies with the Drupal Coding Standards and runs automated tests on every commit that gets merged into the working repository.
+PHP CodeSniffer is executed on our customized phpcs.xml file which is only slightly different from the one which resides in Drupal core.
+PHPCS The following is the literal command(s) being executed in our continuous integration builds running under Travis CI.
 ./docker/bin/phpcs --standard=/var/www/html/core/phpcs.xml \ --extensions=php,module,inc,install,test,profile,theme \ --report=full \ --colors \ --ignore=/var/www/html/profiles/wxt/modules/custom/wxt_test \ --ignore=/var/www/html/modules/custom/wxt_library \ --ignore=*.</description>
+    </item>
+    
+    <item>
+      <title>Composer FAQ</title>
+      <link>https://drupalwxt.github.io/docs/faq/</link>
+      <pubDate>Mon, 03 Jun 2019 15:10:50 -0500</pubDate>
+      
+      <guid>https://drupalwxt.github.io/docs/faq/</guid>
+      <description>Should I commit the contributed modules downloaded? Composer strongly recommends against. However, while they provide argumentation against there are also known workarounds if a project decides to do it anyway.
+Should I commit the scaffolding files? The drupal-scaffold plugin can download the scaffold files (like index.php, update.php, etc) to the html directory of your project. If you have not customized those files you could choose to not check them into your version control system.</description>
+    </item>
+    
+    <item>
+      <title>Composer workflow for Drupal 8</title>
+      <link>https://drupalwxt.github.io/docs/composer/</link>
+      <pubDate>Mon, 03 Jun 2019 15:10:50 -0500</pubDate>
+      
+      <guid>https://drupalwxt.github.io/docs/composer/</guid>
+      <description>Note: The following guide is largely just a high level overview for Drupal 8 WxT installations.
+ Overview WxT strictly adheres to a Composer-based workflow and tries to follow the best practices laid out by the broader Drupal community. For more information on the benefits of this workflow please consult the official documentation provided in the link below:
+ Using composer to manage Drupal  Composer also helps facilitate a more security oriented approach whether packaging or deploying a site.</description>
     </item>
     
     <item>
@@ -40,8 +50,19 @@ PHPCS The following is the literal commands being executed in our continuous int
       <pubDate>Mon, 03 Jun 2019 15:10:50 -0500</pubDate>
       
       <guid>https://drupalwxt.github.io/docs/modules/</guid>
-      <description>Background This WxT installation profile directly extends from the Lightning Framework created by Acquia to provide developers with a powerful base toolchain upon which to extend. Due to this strict dependency we also align much of our workflow with the best practice established patterns Acquia has provided.
+      <description>Background This WxT installation profile directly extends from the Lightning Framework created by Acquia to provide developers with a powerful base toolchain upon which to extend. Due to this strict dependency we also align much of our workflow with the best practices established patterns Acquia has provided.
 Lightning We chose Lightning because of it being the best standard for enterprise authoring in Drupal tightly focused on the user experience in four key functional areas.</description>
+    </item>
+    
+    <item>
+      <title>Sub Installation Profile</title>
+      <link>https://drupalwxt.github.io/docs/subprofile/</link>
+      <pubDate>Mon, 03 Jun 2019 15:10:50 -0500</pubDate>
+      
+      <guid>https://drupalwxt.github.io/docs/subprofile/</guid>
+      <description> WxT sub installation profiles WxT like its base framework Lightning includes the ability to create sub-profiles that are based on the default WxT distribution profile. Making a sub-profile allows you to customize the installation process to meet one or more of your specific needs while retaining / customizing the WxT defaults.
+If any of the following statements are true, then you should consider creating a sub-profile of WxT:
+ Ability to prevent / override some (sub)component of WxT from being installed Ability to enable additional modules, themes, or configuration during install Ability customize the look and feel of the installation process Ability to build a distribution that offloads the Web Experience Toolkit theme(s) / plugins and related libraries to WxT  </description>
     </item>
     
     <item>
@@ -50,7 +71,7 @@ Lightning We chose Lightning because of it being the best standard for enterpris
       <pubDate>Mon, 03 Jun 2019 15:10:50 -0500</pubDate>
       
       <guid>https://drupalwxt.github.io/docs/theme/</guid>
-      <description>Sub-themes are just like any other theme, with one difference: They inherit the parent theme&amp;rsquo;s resources. There are no limits on the chaining capabilities connecting sub-themes for their parents. A sub-theme can be a child of another sub-theme, and it can be branched and organized however you see fit.
+      <description>Sub-themes are just like any other theme, with one difference: They inherit all of the parent theme&amp;rsquo;s resources. In addition, there are no limits on the chaining capabilities connecting sub-themes for their parents. A sub-theme can be a child of another sub-theme, and it can be branched and organized however you see fit.
  Background Drupal WxT includes WxT Bootstrap which is a a modern, component based and accessible sub-theme powered by the Bootstrap base theme.</description>
     </item>
     
@@ -73,63 +94,17 @@ Lightning We chose Lightning because of it being the best standard for enterpris
       <pubDate>Tue, 26 Feb 2019 13:10:50 -0500</pubDate>
       
       <guid>https://drupalwxt.github.io/wxt/d8/repositories/</guid>
-      <description>Name Website Description Size     composer-extdeps drupalwxt/composer-extdeps Composer repository for external dependencies on Drupal WxT Size: 17 Bytes   drupalwxt.github.io drupalwxt/drupalwxt.github.io GH pages for Drupal WxT. Size: 11068 Bytes   helm-drupal drupalwxt/helm-drupal Drupal helm chart for Kubernetes. Size: 1164 Bytes   site-wxt drupalwxt/site-wxt The composer project for the Drupal WxT distribution. Size: 1036 Bytes   terraform-kubernetes-drupalwxt drupalwxt/terraform-kubernetes-drupalwxt Terraform module for Drupal WxT Size: 1 Bytes   website drupalwxt/website GH pages for Drupal WxT.</description>
+      <description>Name Website Description Size     composer-extdeps drupalwxt/composer-extdeps Composer repository for external dependencies on Drupal WxT Size: 17 Bytes   drupalwxt.github.io drupalwxt/drupalwxt.github.io GH pages for Drupal WxT. Size: 11077 Bytes   helm-drupal drupalwxt/helm-drupal Drupal helm chart for Kubernetes. Size: 1245 Bytes   site-wxt drupalwxt/site-wxt The composer project for the Drupal WxT distribution. Size: 1042 Bytes   terraform-kubernetes-drupalwxt drupalwxt/terraform-kubernetes-drupalwxt Terraform module for Drupal WxT Size: 1 Bytes   website drupalwxt/website GH pages for Drupal WxT.</description>
     </item>
     
     <item>
-      <title>Composer workflow for Drupal 8</title>
-      <link>https://drupalwxt.github.io/workflow/composer/</link>
-      <pubDate>Tue, 18 Apr 2017 08:30:00 -0500</pubDate>
+      <title>Roadmap</title>
+      <link>https://drupalwxt.github.io/wxt/d8/roadmap/</link>
+      <pubDate>Sun, 13 Jan 2019 13:10:52 -0500</pubDate>
       
-      <guid>https://drupalwxt.github.io/workflow/composer/</guid>
-      <description>Note: The following guide is largely meant for Drupal 8 WxT installations.
- Overview WxT strictly adheres to a Composer-based workflow and tries to follow the best practices laid out by the broader Drupal community. For more information on the benefits of this workflow please consult the official documentation provided in the link below:
- Using composer to manage Drupal  Composer also helps facilitate a more security oriented approach whether packaging or deploying a site.</description>
-    </item>
-    
-    <item>
-      <title>Resources for WxT</title>
-      <link>https://drupalwxt.github.io/workflow/resources/</link>
-      <pubDate>Tue, 18 Apr 2017 08:30:00 -0500</pubDate>
-      
-      <guid>https://drupalwxt.github.io/workflow/resources/</guid>
-      <description> This page simply provides all the relevant WxT related links in a logical fashion.
-Composer Project Generator  Composer template for WxT projects   Instantiated Composer Projects (WxT)  WxT Open Data  Installation Profiles  WxT Open Data subprofile Skel skeleton  Contributed WxT Projects (no profile dependency)  WxT Bootstrap WxT Library  </description>
-    </item>
-    
-    <item>
-      <title>Media Library - Images, Videos and Documents (D7)</title>
-      <link>https://drupalwxt.github.io/wxt/d7/media/</link>
-      <pubDate>Thu, 26 Feb 2015 13:10:50 -0500</pubDate>
-      
-      <guid>https://drupalwxt.github.io/wxt/d7/media/</guid>
-      <description>Library Basics a) To access the library from the admin menu click on Content and then Files /en/admin/content/file, or you can also click the Add Media button in the WYSIWYG to access the library
-b) Avoid creating unnecessary duplicates. Whenever possible re-use the images, videos and documents that have already been uploaded to the library.
-Browsing the Library a) Using the file admin page /en/admin/content/file you can search by Name, Type of multimedia, and User who uploaded the file.</description>
-    </item>
-    
-    <item>
-      <title>Releases</title>
-      <link>https://drupalwxt.github.io/wxt/d7/releases/</link>
-      <pubDate>Thu, 26 Feb 2015 13:10:50 -0500</pubDate>
-      
-      <guid>https://drupalwxt.github.io/wxt/d7/releases/</guid>
-      <description>Important Releases will soon start to appear for Drupal 8 once stable releases are made.
-   Release Created Date Description     3.0.0-alpha1 2019-09-08T17:46:16Z Features/Updates:
- Update Drupal Core to 8.7.5 Update Lightning to 4.0.4 Move to Layout Builder Migrations updated with Layout Builder support Page Title / Tabs support for Layout Builder  Upgrade path:
- Update your codebase:
- composer update  Run database updates:</description>
-    </item>
-    
-    <item>
-      <title>Content Moderation</title>
-      <link>https://drupalwxt.github.io/wxt/d7/content-moderation/</link>
-      <pubDate>Tue, 13 Jan 2015 13:10:52 -0500</pubDate>
-      
-      <guid>https://drupalwxt.github.io/wxt/d7/content-moderation/</guid>
-      <description>Web editors have diverse knowledge as well as different levels of HTML coding, web publishing guidelines, accessibility requirements, and experience with validation tools. Only more senior editors should be able to validate and modify HTML as well as have the publishing rights to push content updates to the live server.
-HTML Coding In the WYSIWYG editor.
- Click the Source button on, off and on again for the WYSIWYG HTML auto-cleanup.</description>
+      <guid>https://drupalwxt.github.io/wxt/d8/roadmap/</guid>
+      <description>Vision Statement The Drupal WxT distribution is a web content management system which assists in building and maintaining innovative Web sites that are accessible, usable, and interoperable. The primary goal of Drupal WxT is to provide an enterprise level platform that can assist governments and larger organizations in disseminating data.
+Mandatory Features There are a lot of features inherently provided by Drupal WxT. However there are a few that have been designated as mandatory to support and as such have shaped the architecture of the distribution.</description>
     </item>
     
     <item>
@@ -140,39 +115,6 @@ HTML Coding In the WYSIWYG editor.
       <guid>https://drupalwxt.github.io/post/2015/01/13/contributing-to-documentation-site/</guid>
       <description>Our new documentation site for Drupal WxT has been updated and with it a improved workflow for collaboration. This documentation site is powered by Hugo (a static site generator) that converts markdown files to html and allows for a quick and easy deployment to GitHub pages.
 This allows for contributors who feel the documentation is lacking in certain areas to simply perform a pull request and submit a markdown file alongside with the appropriate front matter (metadata about the content).</description>
-    </item>
-    
-    <item>
-      <title>Makefiles for Drupal WxT (D7)</title>
-      <link>https://drupalwxt.github.io/wxt/d7/make/</link>
-      <pubDate>Tue, 13 Jan 2015 13:10:52 -0500</pubDate>
-      
-      <guid>https://drupalwxt.github.io/wxt/d7/make/</guid>
-      <description>Important These instructions are only valid for Drupal 7. For Drupal 8 workflow please consult the Workflow for Drupal 8 
- Drush make turns a makefile into a working Drupal codebase.
-Below you can see all of the associated makefiles Drupal WxT leverages to built out its codebase and adhere to continuous deployment principles.
-For more information please consult:
- Drush Make  Distro Makefiles   drupal.org-core.make api = 2 core = 7.</description>
-    </item>
-    
-    <item>
-      <title>Modules for Drupal WxT (D7)</title>
-      <link>https://drupalwxt.github.io/wxt/d7/modules/</link>
-      <pubDate>Tue, 13 Jan 2015 13:10:52 -0500</pubDate>
-      
-      <guid>https://drupalwxt.github.io/wxt/d7/modules/</guid>
-      <description>Name Website Description Size     composer-extdeps drupalwxt/composer-extdeps Composer repository for external dependencies on Drupal WxT Size: 17 Bytes   drupalwxt.github.io drupalwxt/drupalwxt.github.io GH pages for Drupal WxT. Size: 11068 Bytes   helm-drupal drupalwxt/helm-drupal Drupal helm chart for Kubernetes. Size: 1164 Bytes   site-wxt drupalwxt/site-wxt The composer project for the Drupal WxT distribution. Size: 1036 Bytes   terraform-kubernetes-drupalwxt drupalwxt/terraform-kubernetes-drupalwxt Terraform module for Drupal WxT Size: 1 Bytes   website drupalwxt/website GH pages for Drupal WxT.</description>
-    </item>
-    
-    <item>
-      <title>Tabbed Interface (D7)</title>
-      <link>https://drupalwxt.github.io/wxt/d7/tabbed-interface/</link>
-      <pubDate>Tue, 13 Jan 2015 13:10:52 -0500</pubDate>
-      
-      <guid>https://drupalwxt.github.io/wxt/d7/tabbed-interface/</guid>
-      <description>The easiest way to update an existing slideshow is to Edit the Block directly via contextual links. Simply mouse-over the gears widget in the top right corner and then click Edit Block.
-To see a list of carousel slideshows you can use the content blocks admin page /admin/content/blocks to filter by type Slideshow and then click Edit.
-Create / Edit slideshow  Label: This is the visible name of the slideshow when listed in the blocks admin page.</description>
     </item>
     
   </channel>
