@@ -54,6 +54,15 @@ For Drupal, memcache can be used to cache database queries.</description>
     </item>
     
     <item>
+      <title>Post title</title>
+      <link>https://drupalwxt.github.io/post/2015/01/13/post-title/</link>
+      <pubDate>Tue, 13 Jan 2015 13:10:52 -0500</pubDate>
+      
+      <guid>https://drupalwxt.github.io/post/2015/01/13/post-title/</guid>
+      <description>This is a sample post.</description>
+    </item>
+    
+    <item>
       <title>Varnish</title>
       <link>https://drupalwxt.github.io/post/2015/01/13/varnish/</link>
       <pubDate>Tue, 13 Jan 2015 13:10:52 -0500</pubDate>

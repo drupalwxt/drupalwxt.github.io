@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
     <title>
         
-        Varnish
+        Post title
         
     </title>
     <!--[if gte IE 9 | !IE ]><!-->
@@ -247,7 +247,7 @@
                     
                       
                   
-                <li>Varnish</li>
+                <li>Post title</li>
             </ol>
         </div>
     </div>
@@ -257,11 +257,11 @@
 
     <main role="main" property="mainContentOfPage" class="container">
     <div class="row">
-        <div class="col-md-12">
+        <div class="col-md-8">
             <article class="post">
                 <header>
                     <h1 id="wb-cont" property="name">
-                        Varnish
+                        Post title
                     </h1>
                     <div class="post-date mrgn-bttm-md text-muted text-right small">
                         <span class="glyphicon glyphicon-calendar"></span>
@@ -271,30 +271,7 @@
                     </div>
                 </header>
                 <div class="post-content">
-                    
-
-<p><a href="https://www.varnish-cache.org">Varnish</a> is an open source software-only reverse HTTP caching proxy (often referred to as a Web Accelerator). Varnish is developed on Linux but can be compiled on other UNIX operating systems. It is heavily multi-threaded and is capable of taking advantage of the memory available on 64-bit systems as well as 32-bit systems, and should scale as CPU’s are added. Reputedly, Varnish can respond to hundreds of requests per second.</p>
-
-<p>A caching reverse proxy is a layer of software that sits between the external world and the web server. Very often with websites, the same static page is served over and over. Varnish caches these web pages and when an HTTP request comes in for a static page, Varnish will retrieve the cached page from virtual memory itself and quickly return it to the web client from memory. In this way, the overhead of the Apache web server and WCMS application are avoided altogether.</p>
-
-<p>Varnish is very configurable, so the caching strategy can be individually tailored for every installation. Furthermore, Varnish provides a mechanism that allows it to be integrated with Drupal. By allowing Drupal itself to indicate when a cache entry should be invalidated and refreshed, pages can be safely cached for longer periods of time and therefore increase the number of times that Varnish can respond with a cached web page without passing the request back to Apache and Drupal.</p>
-
-<p>Naturally, Varnish does not need to reside on the same server as Apache and can be placed in front as a separate access point for enhanced performance.</p>
-
-<h2 id="load-balancing-optional">Load Balancing (Optional)</h2>
-
-<p>Varnish is also a software load balancer. Varnish uses round-robin balancing to an arbitrary number of back-ends. Different guidelines can be provided to each backend in case they do not have identical capabilities. Other balancing policies are available too, including random assignment and assignment based on server health. Varnish can use backend health polling so that in the case where one server is becoming overwhelmed; traffic will not be directed to that server.</p>
-
-<h2 id="default-vcl">Default VCL</h2>
-
-<p>An example of a best practice default.vcl for varnish can be found in the following github repository:</p>
-
-<ul>
-<li><a href="https://github.com/mattiasgeniar/varnish-3.0-configuration-templates/blob/master/production.vcl">Default VCL (3.x)</a></li>
-<li><a href="https://github.com/mattiasgeniar/varnish-4.0-configuration-templates/blob/master/default.vcl">Default VCL (4.x)</a></li>
-</ul>
-
-<!-- Links Referenced -->
+                    <p>This is a sample post.</p>
 
                 </div>
                 <aside>
@@ -302,16 +279,16 @@
                     <ul class="list-inline post-tags">
                         
                         <li>
-                            <a href="https://drupalwxt.github.io/tags/varnish">
+                            <a href="https://drupalwxt.github.io/tags/post">
                                 <i class="fa fa-tags"></i>
-                                varnish
+                                post
                             </a>
                         </li>
                         
                         <li>
-                            <a href="https://drupalwxt.github.io/tags/performance">
+                            <a href="https://drupalwxt.github.io/tags/wxt">
                                 <i class="fa fa-tags"></i>
-                                performance
+                                wxt
                             </a>
                         </li>
                         
@@ -325,16 +302,19 @@
                         
                         
                         
+                        <li><a href="https://drupalwxt.github.io/docs/code/">Coding Standards</a></li>
                         
                         
                         
                         
                         
+                        <li><a href="https://drupalwxt.github.io/docs/faq/">Composer FAQ</a></li>
                         
                         
                         
                         
                         
+                        <li><a href="https://drupalwxt.github.io/docs/composer/">Composer workflow for Drupal 8</a></li>
                         
                         
                         
@@ -352,11 +332,13 @@
                         
                         
                         
+                        <li><a href="https://drupalwxt.github.io/docs/modules/">Module Selection for Drupal WxT</a></li>
                         
                         
                         
                         
                         
+                        <li><a href="https://drupalwxt.github.io/docs/subprofile/">Sub Installation Profile</a></li>
                         
                         
                         
@@ -366,6 +348,7 @@
                         
                         
                         
+                        <li><a href="https://drupalwxt.github.io/docs/theme/">Theme Workflow</a></li>
                         
                         
                         
@@ -375,6 +358,7 @@
                         
                         
                         
+                        <li><a href="https://drupalwxt.github.io/wxt/d8/releases/">Releases</a></li>
                         
                         
                         
@@ -384,6 +368,7 @@
                         
                         
                         
+                        <li><a href="https://drupalwxt.github.io/wxt/d8/repositories/">Repositories for Drupal WxT</a></li>
                         
                         
                         
@@ -393,7 +378,7 @@
                         
                         
                         
-                        <li><a href="https://drupalwxt.github.io/post/2015/01/20/code-quality/">Code Quality</a></li>
+                        <li><a href="https://drupalwxt.github.io/wxt/d8/roadmap/">Roadmap</a></li>
                         
                         
                         
@@ -411,17 +396,23 @@
                         
                         
                         
-                        <li><a href="https://drupalwxt.github.io/post/2015/01/13/databases/">Databases</a></li>
                         
                         
                         
                         
+                        <li><a href="https://drupalwxt.github.io/post/2015/01/13/contributing-to-documentation-site/">Contributing to Documentation Site</a></li>
                         
                         
                         
                         
                         
-                        <li><a href="https://drupalwxt.github.io/post/2015/01/13/memcached/">Memcached</a></li>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
                         
                         
                         
@@ -453,10 +444,10 @@
                     <nav>
     <ul class="pager">
         
-        <li class="previous"><a href="https://drupalwxt.github.io/post/2015/01/13/post-title/"><span aria-hidden="true">&larr;</span> Older</a></li>
+        <li class="previous"><a href="https://drupalwxt.github.io/post/2015/01/13/memcached/"><span aria-hidden="true">&larr;</span> Older</a></li>
         
         
-        <li class="next disabled"><a href="#">Newer <span aria-hidden="true">&rarr;</span></a></li>
+        <li class="next"><a href="https://drupalwxt.github.io/post/2015/01/13/varnish/">Newer <span aria-hidden="true">&rarr;</span></a></li>
         
     </ul>
 </nav>
@@ -466,16 +457,95 @@
                 </footer>
             </article>
         </div>
+        <div class="col-md-4">
+            <aside>
+    <div class="row">
+        <div class="col-xs-12 col-sm-4 col-md-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h2 class="panel-title">Recent Posts</h2>
+                </div>
+                <div class="list-group">
+                    
+                    <a href="/docs/code/" class="list-group-item">Coding Standards</a>
+                    
+                    <a href="/docs/faq/" class="list-group-item">Composer FAQ</a>
+                    
+                    <a href="/docs/composer/" class="list-group-item">Composer workflow for Drupal 8</a>
+                    
+                    <a href="/docs/" class="list-group-item">Docs</a>
+                    
+                    <a href="/tags/docs/" class="list-group-item">docs</a>
+                    
+                    <a href="/tags/faq/" class="list-group-item">faq</a>
+                    
+                    <a href="/docs/modules/" class="list-group-item">Module Selection for Drupal WxT</a>
+                    
+                    <a href="/docs/subprofile/" class="list-group-item">Sub Installation Profile</a>
+                    
+                    <a href="/tags/" class="list-group-item">Tags</a>
+                    
+                    <a href="/docs/theme/" class="list-group-item">Theme Workflow</a>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-4 col-md-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h2 class="panel-title">Tags</h2>
+                </div>
+                <div class="list-group">
+                    
+                    
+                    <a href="https://drupalwxt.github.io/tags/docs" class="list-group-item">
+                        <span class="badge">6</span>
+                        docs
+                    </a>
+                    
+                    <a href="https://drupalwxt.github.io/tags/faq" class="list-group-item">
+                        <span class="badge">2</span>
+                        faq
+                    </a>
+                    
+                    <a href="https://drupalwxt.github.io/tags/memcache" class="list-group-item">
+                        <span class="badge">1</span>
+                        memcache
+                    </a>
+                    
+                    <a href="https://drupalwxt.github.io/tags/performance" class="list-group-item">
+                        <span class="badge">4</span>
+                        performance
+                    </a>
+                    
+                    <a href="https://drupalwxt.github.io/tags/post" class="list-group-item">
+                        <span class="badge">2</span>
+                        post
+                    </a>
+                    
+                    <a href="https://drupalwxt.github.io/tags/releases" class="list-group-item">
+                        <span class="badge">1</span>
+                        releases
+                    </a>
+                    
+                    <a href="https://drupalwxt.github.io/tags/varnish" class="list-group-item">
+                        <span class="badge">1</span>
+                        varnish
+                    </a>
+                    
+                    <a href="https://drupalwxt.github.io/tags/wxt" class="list-group-item">
+                        <span class="badge">11</span>
+                        wxt
+                    </a>
+                    
+                </div>
+            </div>
+        </div>
     </div>
-    
-<dl id="wb-dtmd">
-    <dt>Date modified:&#32;</dt>
-    <dd>
-        <time property="dateModified">2015-01-13</time>
-    </dd>
-</dl>
+</aside>
 
-
+        </div>
+    </div>
     </main>
     
   <footer role="contentinfo" id="wb-info" class="visible-sm visible-md visible-lg wb-navcurr">

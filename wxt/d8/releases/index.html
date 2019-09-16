@@ -145,13 +145,15 @@
                 </a>
                 <ul class="sm list-unstyled" role="menu">
                     
+                    <li><a href="https://github.com/drupalwxt/wxt-project"> Composer Template</a></li>
+                    
                     <li><a href="https://github.com/drupalwxt/site-wxt"> Composer Project</a></li>
                     
+                    <li><a href="https://drupal.org/project/wxt"> Drupal Tarball</a></li>
+                    
+                    <li><a href="https://github.com/drupalwxt/wxt/releases"> GitHub Tarball</a></li>
+                    
                     <li><a href="https://hub.docker.com/r/drupalwxt/site-wxt"> Docker</a></li>
-                    
-                    <li><a href="https://drupal.org/project/wxt"> Drupal</a></li>
-                    
-                    <li><a href="https://github.com/drupalwxt/wxt/releases"> GitHub</a></li>
                     
                     <li><a href="https://github.com/drupalwxt/helm-drupalwxt"> Kubernetes</a></li>
                     
@@ -439,8 +441,7 @@
 <ul>
 <li>Add guard for language detection in search block</li>
 </ul></li>
-</ul>
-</td>
+</ul></td>
       </tr>
       
       
@@ -617,8 +618,7 @@ to Canada.ca (gcweb).</p>
 
 <ul>
 <li>Update Drupal Core to 8.6.6 <a href="https://www.drupal.org/sa-core-2019-001">SA-CORE-2019-001</a>, <a href="https://www.drupal.org/sa-core-2019-002">SA-CORE-2019-002</a></li>
-</ul>
-</td>
+</ul></td>
       </tr>
       
       
@@ -730,23 +730,21 @@ to Canada.ca (gcweb).</p>
 <li><code>composer update</code></li>
 </ul></li>
 
-<li><p>Update sub-profile info.yml file to look similar to <a href="https://github.com/drupalwxt/wxt/blob/8.x-2.x/wxt.info.yml">wxt.info.yml</a></p></li>
-</ul>
+<li><p>Update sub-profile info.yml file to look similar to <a href="https://github.com/drupalwxt/wxt/blob/8.x-2.x/wxt.info.yml">wxt.info.yml</a></p>
 
 <pre><code>name: My Profile
 core: 8.x
 type: profile
 base profile: lightning
 install:
-  - paragraphs
-  - slick_entityreference
+- paragraphs
+- slick_entityreference
 exclude:
-  - lightning_search
-  - pathauto
-  - bartik
-</code></pre>
+- lightning_search
+- pathauto
+- bartik
+</code></pre></li>
 
-<ul>
 <li><p>Run database updates:</p>
 
 <ul>
@@ -774,8 +772,7 @@ exclude:
 
 <ul>
 <li>Drupal Core 8.5.8 <a href="https://www.drupal.org/sa-core-2018-006">SA-CORE-2018-006</a></li>
-</ul>
-</td>
+</ul></td>
       </tr>
       
       
@@ -798,8 +795,7 @@ exclude:
 <ul>
 <li>Update wet-boew packages to 0.28.1 (where available)</li>
 </ul></li>
-</ul>
-</td>
+</ul></td>
       </tr>
       
       
@@ -877,6 +873,18 @@ exclude:
                         
                         
                         
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
                         <li><a href="https://drupalwxt.github.io/docs/modules/">Module Selection for Drupal WxT</a></li>
                         
                         
@@ -884,6 +892,10 @@ exclude:
                         
                         
                         <li><a href="https://drupalwxt.github.io/docs/subprofile/">Sub Installation Profile</a></li>
+                        
+                        
+                        
+                        
                         
                         
                         
@@ -899,13 +911,37 @@ exclude:
                         
                         
                         
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
                         <li><a href="https://drupalwxt.github.io/wxt/d8/repositories/">Repositories for Drupal WxT</a></li>
                         
                         
                         
                         
                         
+                        
+                        
+                        
+                        
                         <li><a href="https://drupalwxt.github.io/wxt/d8/roadmap/">Roadmap</a></li>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
                         
                         
                         
@@ -937,41 +973,7 @@ exclude:
                         
                         
                         
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
+                        <li><a href="https://drupalwxt.github.io/post/2015/01/13/post-title/">Post title</a></li>
                         
                         
                         
@@ -1048,7 +1050,7 @@ exclude:
             <section class="col-sm-3">
                 <h3>Stay connected</h3>
                 <ul class="list-unstyled">
-                    <li><a href="https://twitter.com/">Twitter</a></li>
+                    <li><a href="https://twitter.com/WebExpToolkit">Twitter</a></li>
                 </ul>
             </section>
         </nav>
