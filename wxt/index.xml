@@ -18,8 +18,8 @@
       
       <guid>https://drupalwxt.github.io/wxt/d8/releases/</guid>
       <description>Important Expect security releases to appear here within 24 hours of being reported upstream.
-   Release Created Date Description     3.0.0-rc1 2019-09-28T18:45:59Z Features/Updates:
- Layout Builder off canvas fixes Duplicate title logic for Layout Builder Fixes to Entity View Display calling wrong title Claro backend theme enabled by default Homepage CSS fixes for padding issue Addition of Core Context for Layout Builder  Upgrade path:</description>
+   Release Created Date Description     3.0.0-rc2 2019-10-13T14:51:39Z Features/Updates:
+ Fix padding issue for #wb-srch-sub Fix padding issue for Date Modified block PHPCS corrections for WxT Library Proper dependencies for Webform resolving missing revision Addition of WxT Sub Profile Generator for Drupal Console Addition of WxT Lightning Update Manager for Drupal Console Minor improvements to migration Properly namespace modules with expanded syntax Updates entity_reference_revisions, paragraphs, and simple_sitemap  Upgrade path:</description>
     </item>
     
     <item>
@@ -28,7 +28,7 @@
       <pubDate>Tue, 26 Feb 2019 13:10:50 -0500</pubDate>
       
       <guid>https://drupalwxt.github.io/wxt/d8/repositories/</guid>
-      <description>Name Website Description Size     composer-extdeps drupalwxt/composer-extdeps Composer repository for external dependencies on Drupal WxT Size: 17 Bytes   drupalwxt.github.io drupalwxt/drupalwxt.github.io GH pages for Drupal WxT. Size: 11173 Bytes   helm-drupal drupalwxt/helm-drupal Drupal helm chart for Kubernetes. Size: 1383 Bytes   site-wxt drupalwxt/site-wxt The composer project for the Drupal WxT distribution. Size: 1468 Bytes   terraform-kubernetes-drupalwxt drupalwxt/terraform-kubernetes-drupalwxt Terraform module for Drupal WxT Size: 5 Bytes   website drupalwxt/website GH pages for Drupal WxT.</description>
+      <description>Name Website Description Size     composer-extdeps drupalwxt/composer-extdeps Composer repository for external dependencies on Drupal WxT Size: 17 Bytes   drupalwxt.github.io drupalwxt/drupalwxt.github.io GH pages for Drupal WxT. Size: 11180 Bytes   helm-drupal drupalwxt/helm-drupal Drupal helm chart for Kubernetes. Size: 1430 Bytes   site-wxt drupalwxt/site-wxt The composer project for the Drupal WxT distribution. Size: 1477 Bytes   terraform-kubernetes-drupalwxt drupalwxt/terraform-kubernetes-drupalwxt Terraform module for Drupal WxT Size: 8 Bytes   website drupalwxt/website GH pages for Drupal WxT.</description>
     </item>
     
     <item>

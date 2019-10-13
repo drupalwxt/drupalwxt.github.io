@@ -278,6 +278,57 @@
       
       
       <tr>
+          <td><strong>3.0.0-rc2</strong></td>
+          <td><strong>2019-10-13T14:51:39Z</strong></td>
+          <td><p>Features/Updates:</p>
+
+<ul>
+<li>Fix padding issue for #wb-srch-sub</li>
+<li>Fix padding issue for Date Modified block</li>
+<li>PHPCS corrections for WxT Library</li>
+<li>Proper dependencies for Webform resolving missing revision</li>
+<li>Addition of WxT Sub Profile Generator for Drupal Console</li>
+<li>Addition of WxT Lightning Update Manager for Drupal Console</li>
+<li>Minor improvements to migration</li>
+<li>Properly namespace modules with expanded syntax</li>
+<li>Updates entity_reference_revisions, paragraphs, and simple_sitemap</li>
+</ul>
+
+<p>Upgrade path:</p>
+
+<ul>
+<li><p>Update your codebase:</p>
+
+<ul>
+<li><code>composer update</code></li>
+</ul></li>
+
+<li><p>Run database updates:</p>
+
+<ul>
+<li><code>drush cache:rebuild</code></li>
+<li><code>drush updatedb</code></li>
+</ul></li>
+
+<li><p>Run Lightning configuration updates:</p>
+
+<ul>
+<li><code>drush cache:rebuild</code></li>
+<li><code>drush update:lightning</code></li>
+</ul></li>
+
+<li><p>Run WxT configuration updates:</p>
+
+<ul>
+<li><code>drush cache:rebuild</code></li>
+<li><code>drush update:wxt</code></li>
+</ul></li>
+</ul>
+</td>
+      </tr>
+      
+      
+      <tr>
           <td><strong>3.0.0-rc1</strong></td>
           <td><strong>2019-09-28T18:45:59Z</strong></td>
           <td><p>Features/Updates:</p>
@@ -820,74 +871,6 @@ to Canada.ca (gcweb).</p>
           <td><strong>2.2.1</strong></td>
           <td><strong>2018-11-13T17:02:13Z</strong></td>
           <td>Fixed an issue with a patch to comments redirect within drupal-core.</td>
-      </tr>
-      
-      
-      <tr>
-          <td><strong>2.2.0</strong></td>
-          <td><strong>2018-11-07T21:05:48Z</strong></td>
-          <td><p>Security Update(s):</p>
-
-<ul>
-<li>paragraphs 8.x-1.5 <a href="https://www.drupal.org/sa-contrib-2018-073">SA-CONTRIB-2018-073</a></li>
-</ul>
-
-<p>Feature(s):</p>
-
-<ul>
-<li>Lightning 3.2.2</li>
-<li>Drupal Core 8.6.2</li>
-<li>Updated contrib modules
-
-<ul>
-<li>paragraphs to 1.5</li>
-<li>views_bootstrap to 3.1</li>
-<li>bootstrap to 3.13</li>
-<li>media_entity_instagram to alpha2</li>
-</ul></li>
-<li>Removed patches that no longer apply</li>
-<li>Updated and refactored some patches to work with drupal core 8.6.x</li>
-</ul>
-
-<p>Upgrade path:</p>
-
-<ul>
-<li><p>Update your codebase:</p>
-
-<ul>
-<li><code>composer update</code></li>
-</ul></li>
-
-<li><p>Update sub-profile info.yml file to look similar to <a href="https://github.com/drupalwxt/wxt/blob/8.x-2.x/wxt.info.yml">wxt.info.yml</a></p>
-
-<pre><code>name: My Profile
-core: 8.x
-type: profile
-base profile: lightning
-install:
-- paragraphs
-- slick_entityreference
-exclude:
-- lightning_search
-- pathauto
-- bartik
-</code></pre></li>
-
-<li><p>Run database updates:</p>
-
-<ul>
-<li><code>drush cache:rebuild</code></li>
-<li><code>drush updatedb</code></li>
-</ul></li>
-
-<li><p>Run Lightning configuration updates:</p>
-
-<ul>
-<li><code>drush cache:rebuild</code></li>
-<li><code>drush update:lightning</code></li>
-</ul></li>
-</ul>
-</td>
       </tr>
       
     </tbody>
