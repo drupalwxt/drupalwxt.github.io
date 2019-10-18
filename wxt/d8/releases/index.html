@@ -278,6 +278,40 @@
       
       
       <tr>
+          <td><strong>3.0.0-rc3</strong></td>
+          <td><strong>2019-10-18T03:08:15Z</strong></td>
+          <td><p>Features/Updates:</p>
+
+<ul>
+<li>Update Drupal Core to 8.7.7</li>
+<li>Fix for Core Context patch somehow missing</li>
+<li>Add StringTranslationTrait to Drush Hooks</li>
+<li>Claro updated to 1.0-beta1</li>
+<li>Add support for proper versioning of Profile tarball for *.info.yml files</li>
+<li>Add site slogan support to theme-gcwu-fegc</li>
+</ul>
+
+<p>Upgrade path:</p>
+
+<ul>
+<li><p>Update your codebase:</p>
+
+<ul>
+<li><code>composer update</code></li>
+</ul></li>
+
+<li><p>Run database updates:</p>
+
+<ul>
+<li><code>drush cache:rebuild</code></li>
+<li><code>drush updatedb</code></li>
+</ul></li>
+</ul>
+</td>
+      </tr>
+      
+      
+      <tr>
           <td><strong>3.0.0-rc2</strong></td>
           <td><strong>2019-10-13T14:51:39Z</strong></td>
           <td><p>Features/Updates:</p>
@@ -864,13 +898,6 @@ to Canada.ca (gcweb).</p>
 </ul></li>
 </ul>
 </td>
-      </tr>
-      
-      
-      <tr>
-          <td><strong>2.2.1</strong></td>
-          <td><strong>2018-11-13T17:02:13Z</strong></td>
-          <td>Fixed an issue with a patch to comments redirect within drupal-core.</td>
       </tr>
       
     </tbody>
