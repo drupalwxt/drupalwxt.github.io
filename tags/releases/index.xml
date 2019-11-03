@@ -18,8 +18,12 @@
       
       <guid>https://drupalwxt.github.io/wxt/d8/releases/</guid>
       <description>Important Expect security releases to appear here within 24 hours of being reported upstream.
-   Release Created Date Description     3.0.0-rc3 2019-10-18T03:08:15Z Features/Updates:
- Update Drupal Core to 8.7.7 Fix for Core Context patch somehow missing Add StringTranslationTrait to Drush Hooks Claro updated to 1.0-beta1 Add support for proper versioning of Profile tarball for *.info.yml files Add site slogan support to theme-gcwu-fegc  Upgrade path:</description>
+   Release Created Date Description     3.0.1 2019-11-03T18:41:40Z Features/Updates:
+ Same as 3.0.0 release Fix for invalid make file patch  Upgrade path:
+ Update your codebase:
+ composer update  Run database updates:
+ drush cache:rebuild drush updatedb      3.0.0 2019-11-03T18:03:09Z Features/Updates:
+ Update Drupal Core to 8.</description>
     </item>
     
   </channel>
