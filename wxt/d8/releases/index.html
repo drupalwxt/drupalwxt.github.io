@@ -278,6 +278,68 @@
       
       
       <tr>
+          <td><strong>3.0.2</strong></td>
+          <td><strong>2019-11-24T16:25:18Z</strong></td>
+          <td><p>Features/Updates:</p>
+
+<ul>
+<li>Update Drupal Core to 8.7.10</li>
+<li>Update Lightning <a href="https://github.com/acquia/lightning/releases/tag/4.0.5">4.0.5</a>; includes:
+
+<ul>
+<li>Updated Lightning API to 4.2</li>
+<li>Updated Lightning Core to 4.7</li>
+<li>Updated Lightning Layout to 2.1</li>
+<li>Updated Lightning Media to 3.12</li>
+<li>Updated Search API to to 1.15</li>
+<li>Updated Entity Browser to 2.2</li>
+<li>Addition of Conflict, AutoSave Form, and Redirect</li>
+</ul></li>
+<li>Update WxT Bootstrap and Bootstrap base theme</li>
+<li>Update CTools, Linkit, Field Group, Migrate Tools and Page Manager</li>
+<li>Fix for issue with conflict and page manager</li>
+<li>Issue with Site Installation via browser install</li>
+<li>Add link field to entity form display</li>
+<li>Check for missing schema layout builder</li>
+<li>Update admin toolbar to latest release</li>
+<li>Update paragraphs to latest release</li>
+</ul>
+
+<p>Upgrade path:</p>
+
+<ul>
+<li><p>Update your codebase:</p>
+
+<ul>
+<li><code>composer update</code></li>
+</ul></li>
+
+<li><p>Run database updates:</p>
+
+<ul>
+<li><code>drush cache:rebuild</code></li>
+<li><code>drush updatedb</code></li>
+</ul></li>
+
+<li><p>Run Lightning configuration updates:</p>
+
+<ul>
+<li><code>drush cache:rebuild</code></li>
+<li><code>drush update:lightning</code></li>
+</ul></li>
+
+<li><p>Run WxT configuration updates:</p>
+
+<ul>
+<li><code>drush cache:rebuild</code></li>
+<li><code>drush update:wxt</code></li>
+</ul></li>
+</ul>
+</td>
+      </tr>
+      
+      
+      <tr>
           <td><strong>3.0.1</strong></td>
           <td><strong>2019-11-03T18:41:40Z</strong></td>
           <td><p>Features/Updates:</p>
@@ -815,61 +877,6 @@ to Canada.ca (gcweb).</p>
   - <code>composer update</code></p>
 
 <ul>
-<li><p>Run database updates:</p>
-
-<ul>
-<li><code>drush cache:rebuild</code></li>
-<li><code>drush updatedb</code></li>
-</ul></li>
-
-<li><p>Run Lightning configuration updates:</p>
-
-<ul>
-<li><code>drush cache:rebuild</code></li>
-<li><code>drush update:lightning</code></li>
-</ul></li>
-</ul>
-</td>
-      </tr>
-      
-      
-      <tr>
-          <td><strong>2.2.13</strong></td>
-          <td><strong>2019-02-12T11:09:07Z</strong></td>
-          <td><p>Security update:</p>
-
-<ul>
-<li>Update Lightning to <a href="https://github.com/acquia/lightning/releases/tag/3.2.5">3.2.5</a>; includes:
-
-<ul>
-<li>Security updated Acquia Connector to 1.16 (SA-CONTRIB-2019-014)</li>
-</ul></li>
-</ul>
-
-<p>Features/Updates:
-- Update Drupal Core 8.6.9
-- Update Lightning <a href="https://github.com/acquia/lightning/releases/tag/3.2.5">3.2.5</a>; includes:
-  - Updated Consumers to 1.8.
-  - Updated JSON:API to 2.1.
-  - Updated Moderation Dashboard to 1.0-beta1 (from previous lightning release)
-- Update ckeditor-codemirror 2.2
-- Update webform_migrate 1.1
-- Update font_awesome to 2.10
-- Add s3fs 3.0-alpha13</p>
-
-<p>Fixes
-- Apply patch (<a href="https://www.drupal.org/project/migrate_tools/issues/3024399">migrate_tools/3024399</a>) to fix various drush migrate-import issues
-- Lock ctools to 3.0</p>
-
-<p>Upgrade path:</p>
-
-<ul>
-<li><p>Update your codebase:</p>
-
-<ul>
-<li><code>composer update</code></li>
-</ul></li>
-
 <li><p>Run database updates:</p>
 
 <ul>
