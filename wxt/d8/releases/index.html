@@ -259,7 +259,660 @@
                     </div>
                 </header>
                 <div class="post-content">
-                    
+                    <div class="alert alert-info">
+<h4>Important</h4>
+<p>Expect security releases to appear here within 24 hours of being reported upstream.</p>
+</div>
+
+<table id="components-theme" class="wb-tables table table-striped table-hover" data-wb-tables='{"columnDefs": [ { "visible": true, "targets": [ 2 ] } ], "lengthMenu": [[10, 25, -1], [10, 25, "All"]], "pageLength": -1, "ordering": false }'>
+    <thead>
+        <tr>
+            <th>Release</th>
+            <th>Created Date</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+      
+      
+      
+      
+      <tr>
+          <td><strong>3.0.4</strong></td>
+          <td><strong>2019-12-01T20:25:59Z</strong></td>
+          <td><p>Features/Updates:</p>
+
+<ul>
+<li>Essentially the same as v3.0.3</li>
+<li>Fix missing update to WxT dependencies for legacy packaging (drush make)</li>
+</ul>
+
+<p>Upgrade path:</p>
+
+<ul>
+<li><p>Update your codebase:</p>
+
+<ul>
+<li><code>composer update</code></li>
+</ul></li>
+
+<li><p>Run database updates:</p>
+
+<ul>
+<li><code>drush cache:rebuild</code></li>
+<li><code>drush updatedb</code></li>
+</ul></li>
+
+<li><p>Run Lightning configuration updates:</p>
+
+<ul>
+<li><code>drush cache:rebuild</code></li>
+<li><code>drush update:lightning</code></li>
+</ul></li>
+
+<li><p>Run WxT configuration updates:</p>
+
+<ul>
+<li><code>drush cache:rebuild</code></li>
+<li><code>drush update:wxt</code></li>
+</ul></li>
+</ul>
+</td>
+      </tr>
+      
+      
+      <tr>
+          <td><strong>3.0.3</strong></td>
+          <td><strong>2019-12-01T17:46:52Z</strong></td>
+          <td><p>Features/Updates:</p>
+
+<ul>
+<li>Update block_class to 1.1</li>
+<li>Fix page manager variant of type Http Status Code</li>
+<li>Fix for config export / import</li>
+<li>Update WxT Library
+
+<ul>
+<li>Update wet-boew to v4.0.32</li>
+<li>Update gcweb theme to v6.0.0</li>
+</ul></li>
+<li>Update WxT Bootstrap
+
+<ul>
+<li>Improved Footer CDN logic</li>
+</ul></li>
+</ul>
+
+<p>Upgrade path:</p>
+
+<ul>
+<li><p>Update your codebase:</p>
+
+<ul>
+<li><code>composer update</code></li>
+</ul></li>
+
+<li><p>Run database updates:</p>
+
+<ul>
+<li><code>drush cache:rebuild</code></li>
+<li><code>drush updatedb</code></li>
+</ul></li>
+
+<li><p>Run Lightning configuration updates:</p>
+
+<ul>
+<li><code>drush cache:rebuild</code></li>
+<li><code>drush update:lightning</code></li>
+</ul></li>
+
+<li><p>Run WxT configuration updates:</p>
+
+<ul>
+<li><code>drush cache:rebuild</code></li>
+<li><code>drush update:wxt</code></li>
+</ul></li>
+</ul>
+</td>
+      </tr>
+      
+      
+      <tr>
+          <td><strong>3.0.2</strong></td>
+          <td><strong>2019-11-24T16:25:18Z</strong></td>
+          <td><p>Features/Updates:</p>
+
+<ul>
+<li>Update Drupal Core to 8.7.10</li>
+<li>Update Lightning <a href="https://github.com/acquia/lightning/releases/tag/4.0.5">4.0.5</a>; includes:
+
+<ul>
+<li>Updated Lightning API to 4.2</li>
+<li>Updated Lightning Core to 4.7</li>
+<li>Updated Lightning Layout to 2.1</li>
+<li>Updated Lightning Media to 3.12</li>
+<li>Updated Search API to to 1.15</li>
+<li>Updated Entity Browser to 2.2</li>
+<li>Addition of Conflict, AutoSave Form, and Redirect</li>
+</ul></li>
+<li>Update WxT Bootstrap and Bootstrap base theme</li>
+<li>Update CTools, Linkit, Field Group, Migrate Tools and Page Manager</li>
+<li>Fix for issue with conflict and page manager</li>
+<li>Issue with Site Installation via browser install</li>
+<li>Add link field to entity form display</li>
+<li>Check for missing schema layout builder</li>
+<li>Update admin toolbar to latest release</li>
+<li>Update paragraphs to latest release</li>
+</ul>
+
+<p>Upgrade path:</p>
+
+<ul>
+<li><p>Update your codebase:</p>
+
+<ul>
+<li><code>composer update</code></li>
+</ul></li>
+
+<li><p>Run database updates:</p>
+
+<ul>
+<li><code>drush cache:rebuild</code></li>
+<li><code>drush updatedb</code></li>
+</ul></li>
+
+<li><p>Run Lightning configuration updates:</p>
+
+<ul>
+<li><code>drush cache:rebuild</code></li>
+<li><code>drush update:lightning</code></li>
+</ul></li>
+
+<li><p>Run WxT configuration updates:</p>
+
+<ul>
+<li><code>drush cache:rebuild</code></li>
+<li><code>drush update:wxt</code></li>
+</ul></li>
+</ul>
+</td>
+      </tr>
+      
+      
+      <tr>
+          <td><strong>3.0.1</strong></td>
+          <td><strong>2019-11-03T18:41:40Z</strong></td>
+          <td><p>Features/Updates:</p>
+
+<ul>
+<li>Same as 3.0.0 release</li>
+<li>Fix for invalid make file patch</li>
+</ul>
+
+<p>Upgrade path:</p>
+
+<ul>
+<li><p>Update your codebase:</p>
+
+<ul>
+<li><code>composer update</code></li>
+</ul></li>
+
+<li><p>Run database updates:</p>
+
+<ul>
+<li><code>drush cache:rebuild</code></li>
+<li><code>drush updatedb</code></li>
+</ul></li>
+</ul>
+</td>
+      </tr>
+      
+      
+      <tr>
+          <td><strong>3.0.0</strong></td>
+          <td><strong>2019-11-03T18:03:09Z</strong></td>
+          <td><p>Features/Updates:</p>
+
+<ul>
+<li>Update Drupal Core to 8.7.8</li>
+<li>WxT padding improvements to front page</li>
+<li>Docker images now extend directly off drupal:8.7-fpm-alpine</li>
+<li>Page Manager variant does not open when selected</li>
+<li>Bootstrap Layouts fix for drag n drop in layout builder</li>
+<li>Stable version of Panelizer with Layout Builder</li>
+</ul>
+
+<p>Upgrade path:</p>
+
+<ul>
+<li><p>Update your codebase:</p>
+
+<ul>
+<li><code>composer update</code></li>
+</ul></li>
+
+<li><p>Run database updates:</p>
+
+<ul>
+<li><code>drush cache:rebuild</code></li>
+<li><code>drush updatedb</code></li>
+</ul></li>
+</ul>
+</td>
+      </tr>
+      
+      
+      <tr>
+          <td><strong>3.0.0-rc3</strong></td>
+          <td><strong>2019-10-18T03:08:15Z</strong></td>
+          <td><p>Features/Updates:</p>
+
+<ul>
+<li>Update Drupal Core to 8.7.7</li>
+<li>Fix for Core Context patch somehow missing</li>
+<li>Add StringTranslationTrait to Drush Hooks</li>
+<li>Claro updated to 1.0-beta1</li>
+<li>Add support for proper versioning of Profile tarball for *.info.yml files</li>
+<li>Add site slogan support to theme-gcwu-fegc</li>
+</ul>
+
+<p>Upgrade path:</p>
+
+<ul>
+<li><p>Update your codebase:</p>
+
+<ul>
+<li><code>composer update</code></li>
+</ul></li>
+
+<li><p>Run database updates:</p>
+
+<ul>
+<li><code>drush cache:rebuild</code></li>
+<li><code>drush updatedb</code></li>
+</ul></li>
+</ul>
+</td>
+      </tr>
+      
+      
+      <tr>
+          <td><strong>3.0.0-rc2</strong></td>
+          <td><strong>2019-10-13T14:51:39Z</strong></td>
+          <td><p>Features/Updates:</p>
+
+<ul>
+<li>Fix padding issue for #wb-srch-sub</li>
+<li>Fix padding issue for Date Modified block</li>
+<li>PHPCS corrections for WxT Library</li>
+<li>Proper dependencies for Webform resolving missing revision</li>
+<li>Addition of WxT Sub Profile Generator for Drupal Console</li>
+<li>Addition of WxT Lightning Update Manager for Drupal Console</li>
+<li>Minor improvements to migration</li>
+<li>Properly namespace modules with expanded syntax</li>
+<li>Updates entity_reference_revisions, paragraphs, and simple_sitemap</li>
+</ul>
+
+<p>Upgrade path:</p>
+
+<ul>
+<li><p>Update your codebase:</p>
+
+<ul>
+<li><code>composer update</code></li>
+</ul></li>
+
+<li><p>Run database updates:</p>
+
+<ul>
+<li><code>drush cache:rebuild</code></li>
+<li><code>drush updatedb</code></li>
+</ul></li>
+
+<li><p>Run Lightning configuration updates:</p>
+
+<ul>
+<li><code>drush cache:rebuild</code></li>
+<li><code>drush update:lightning</code></li>
+</ul></li>
+
+<li><p>Run WxT configuration updates:</p>
+
+<ul>
+<li><code>drush cache:rebuild</code></li>
+<li><code>drush update:wxt</code></li>
+</ul></li>
+</ul>
+</td>
+      </tr>
+      
+      
+      <tr>
+          <td><strong>3.0.0-rc1</strong></td>
+          <td><strong>2019-09-28T18:45:59Z</strong></td>
+          <td><p>Features/Updates:</p>
+
+<ul>
+<li>Layout Builder off canvas fixes</li>
+<li>Duplicate title logic for Layout Builder</li>
+<li>Fixes to Entity View Display calling wrong title</li>
+<li>Claro backend theme enabled by default</li>
+<li>Homepage CSS fixes for padding issue</li>
+<li>Addition of Core Context for Layout Builder</li>
+</ul>
+
+<p>Upgrade path:</p>
+
+<ul>
+<li><p>Update your codebase:</p>
+
+<ul>
+<li><code>composer update</code></li>
+</ul></li>
+
+<li><p>Run database updates:</p>
+
+<ul>
+<li><code>drush cache:rebuild</code></li>
+<li><code>drush updatedb</code></li>
+</ul></li>
+
+<li><p>Run Lightning configuration updates:</p>
+
+<ul>
+<li><code>drush cache:rebuild</code></li>
+<li><code>drush update:lightning</code></li>
+</ul></li>
+</ul>
+</td>
+      </tr>
+      
+      
+      <tr>
+          <td><strong>3.0.0-beta2</strong></td>
+          <td><strong>2019-09-18T16:51:23Z</strong></td>
+          <td><p>This release is identical, feature wise, to 3.0.0-beta1.</p>
+
+<p>Bug fixes:</p>
+
+<ul>
+<li>Remove space from patch in composer.json (13263095)</li>
+</ul>
+
+<p>Upgrade path:</p>
+
+<ul>
+<li><p>Update your codebase:</p>
+
+<ul>
+<li><code>composer update</code></li>
+</ul></li>
+
+<li><p>Run database updates:</p>
+
+<ul>
+<li><code>drush cache:rebuild</code></li>
+<li><code>drush updatedb</code></li>
+</ul></li>
+
+<li><p>Run Lightning configuration updates:</p>
+
+<ul>
+<li><code>drush cache:rebuild</code></li>
+<li><code>drush update:lightning</code></li>
+</ul></li>
+</ul>
+</td>
+      </tr>
+      
+      
+      <tr>
+          <td><strong>3.0.0-beta1</strong></td>
+          <td><strong>2019-09-18T01:42:21Z</strong></td>
+          <td><p>Features/Updates:</p>
+
+<ul>
+<li>Update Field Group to 3.0-rc1</li>
+<li>Update Bootstrap to v3.18 and switch to yarn</li>
+<li>Update Simple Sitemap to 3.3</li>
+<li>Minor README.md improvements</li>
+<li>Deprecated Entity Updates installer logic in Profile</li>
+<li>Update Bootstrap to 3.20</li>
+</ul>
+
+<p>Performance:</p>
+
+<ul>
+<li>Performance degradation in Layout Builder</li>
+<li>Performance degradation in multi value fields</li>
+<li>Switch to a memory cache backend during installation</li>
+</ul>
+
+<p>Upgrade path:</p>
+
+<ul>
+<li><p>Update your codebase:</p>
+
+<ul>
+<li><code>composer update</code></li>
+</ul></li>
+
+<li><p>Run database updates:</p>
+
+<ul>
+<li><code>drush cache:rebuild</code></li>
+<li><code>drush updatedb</code></li>
+</ul></li>
+
+<li><p>Run Lightning configuration updates:</p>
+
+<ul>
+<li><code>drush cache:rebuild</code></li>
+<li><code>drush update:lightning</code></li>
+</ul></li>
+</ul>
+</td>
+      </tr>
+      
+      
+      <tr>
+          <td><strong>3.0.0-alpha1</strong></td>
+          <td><strong>2019-09-08T17:46:16Z</strong></td>
+          <td><p>Features/Updates:</p>
+
+<ul>
+<li>Update Drupal Core to 8.7.5</li>
+<li>Update Lightning to 4.0.4</li>
+<li>Move to Layout Builder</li>
+<li>Migrations updated with Layout Builder support</li>
+<li>Page Title / Tabs support for Layout Builder</li>
+</ul>
+
+<p>Upgrade path:</p>
+
+<ul>
+<li><p>Update your codebase:</p>
+
+<ul>
+<li><code>composer update</code></li>
+</ul></li>
+
+<li><p>Run database updates:</p>
+
+<ul>
+<li><code>drush cache:rebuild</code></li>
+<li><code>drush updatedb</code></li>
+</ul></li>
+
+<li><p>Run Lightning configuration updates:</p>
+
+<ul>
+<li><code>drush cache:rebuild</code></li>
+<li><code>drush update:lightning</code></li>
+</ul></li>
+</ul>
+</td>
+      </tr>
+      
+      
+      <tr>
+          <td><strong>2.2.19</strong></td>
+          <td><strong>2019-09-08T16:02:10Z</strong></td>
+          <td><p>Security update:</p>
+
+<ul>
+<li>Update Drupal Core to <a href="https://www.drupal.org/project/drupal/releases/8.7.4">8.7.4</a>
+
+<ul>
+<li><a href="https://www.drupal.org/sa-core-2019-008">SA-CORE-2019-008</a></li>
+</ul></li>
+</ul>
+
+<p>Features/Updates:</p>
+
+<ul>
+<li>Update Drupal Core to 8.7.5</li>
+<li>Update Ctools to 3.0.0</li>
+<li>Update admin_toolbar to 1.27</li>
+<li>Update contact_storage to 1.0-beta10</li>
+<li>Update entity to 1.0-rc3</li>
+<li>Update entity_embed to 1.0</li>
+<li>Update entity_queue to 1.0-beta5</li>
+<li>Update lightning_api to 4.2</li>
+<li>Update lightning_core to 4.5</li>
+<li>Update lightning_media to 3.12</li>
+<li>Update lightning_workflow to 3.8</li>
+<li>Update media_entity_twitter to 2.0-alpha3</li>
+<li>Update metatag to 1.10</li>
+<li>Update schemata to 1.0-beta1</li>
+<li>Update search_api to 1.14</li>
+<li>Update simple_oauth to 3.16</li>
+<li>Update video_embed_field to 2.2</li>
+<li>Update views_infinite_scroll to 1.6</li>
+<li>Update webform to 5.4</li>
+</ul>
+
+<p>Upgrade path:</p>
+
+<ul>
+<li><p>Update your codebase:</p>
+
+<ul>
+<li><code>composer update</code></li>
+</ul></li>
+
+<li><p>Run database updates:</p>
+
+<ul>
+<li><code>drush cache:rebuild</code></li>
+<li><code>drush updatedb</code></li>
+</ul></li>
+
+<li><p>Run Lightning configuration updates:</p>
+
+<ul>
+<li><code>drush cache:rebuild</code></li>
+<li><code>drush update:lightning</code></li>
+</ul></li>
+</ul>
+</td>
+      </tr>
+      
+      
+      <tr>
+          <td><strong>2.2.18</strong></td>
+          <td><strong>2019-04-24T20:38:23Z</strong></td>
+          <td><p>Security update:
+* Update Drupal Core to <a href="https://www.drupal.org/project/drupal/releases/8.6.15">8.6.15</a>
+  * <a href="https://www.drupal.org/sa-core-2019-005">SA-CORE-2019-005</a>
+  * <a href="https://www.drupal.org/sa-core-2019-006">SA-CORE-2019-006</a></p>
+
+<p>Features/Updates:
+- Update Drupal Core to 8.6.15
+- Update Lightning to 3.2.8
+- Update entityqueue to 1.0-beta2
+- Update migrate_plus to 4.2</p>
+
+<p>Upgrade path:</p>
+
+<ul>
+<li><p>Update your codebase:</p>
+
+<ul>
+<li><code>composer update</code></li>
+</ul></li>
+
+<li><p>Run database updates:</p>
+
+<ul>
+<li><code>drush cache:rebuild</code></li>
+<li><code>drush updatedb</code></li>
+</ul></li>
+
+<li><p>Run Lightning configuration updates:</p>
+
+<ul>
+<li><code>drush cache:rebuild</code></li>
+<li><code>drush update:lightning</code></li>
+</ul></li>
+</ul>
+</td>
+      </tr>
+      
+      
+      <tr>
+          <td><strong>2.2.17</strong></td>
+          <td><strong>2019-03-30T19:41:26Z</strong></td>
+          <td>Features/Updates:</p>
+
+<ul>
+<li>Minor README.md improvements</li>
+<li>Patch for Paragraphs endless loop</li>
+<li>Revert menu_breadcrumb to 1.7 + lock</li>
+<li>Update wxt_bootstrap to 1.9
+
+<ul>
+<li>Resolve additional issues with gcweb legacy port</li>
+</ul></li>
+<li>Update wxt_bootstrap to 1.6
+
+<ul>
+<li>Add guard for language detection in search block</li>
+</ul></li>
+</ul></td>
+      </tr>
+      
+      
+      <tr>
+          <td><strong>2.2.16</strong></td>
+          <td><strong>2019-03-22T01:21:09Z</strong></td>
+          <td><p>Security update:</p>
+
+<ul>
+<li>Update core to <a href="https://www.drupal.org/project/drupal/releases/8.6.13">8.6.13</a> <a href="https://www.drupal.org/sa-core-2019-004">SA-CORE-2019-004</a></li>
+</ul>
+
+<p>Features/Updates:</p>
+
+<ul>
+<li>Update Lightning to 3.2.7</li>
+<li>Update entityqueue to 1.0-alpha8</li>
+<li>Update menu_breadcrumb to 1.8</li>
+<li>Update paragraphs to 1.7</li>
+<li>Update wxt_bootstrap to 1.8
+
+<ul>
+<li>Resolve issues with container class logic in regions</li>
+</ul></li>
+</ul>
+</td>
+      </tr>
+      
+    </tbody>
+</table>
+
+
                 </div>
                 <aside>
                     
