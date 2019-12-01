@@ -18,8 +18,8 @@
       
       <guid>https://drupalwxt.github.io/wxt/d8/releases/</guid>
       <description>Important Expect security releases to appear here within 24 hours of being reported upstream.
-   Release Created Date Description     3.0.2 2019-11-24T16:25:18Z Features/Updates:
- Update Drupal Core to 8.7.10 Update Lightning 4.0.5; includes:  Updated Lightning API to 4.2 Updated Lightning Core to 4.7 Updated Lightning Layout to 2.1 Updated Lightning Media to 3.12 Updated Search API to to 1.15 Updated Entity Browser to 2.2 Addition of Conflict, AutoSave Form, and Redirect  Update WxT Bootstrap and Bootstrap base theme Update CTools, Linkit, Field Group, Migrate Tools and Page Manager Fix for issue with conflict and page manager Issue with Site Installation via browser install Add link field to entity form display Check for missing schema layout builder Update admin toolbar to latest release Update paragraphs to latest release  Upgrade path:</description>
+   Release Created Date Description     3.0.3 2019-12-01T17:46:52Z Features/Updates:
+ Update block_class to 1.1 Fix page manager variant of type Http Status Code Fix for config export / import Update WxT Library  Update wet-boew to v4.0.32 Update gcweb theme to v6.0.0  Update WxT Bootstrap  Improved Footer CDN logic   Upgrade path:</description>
     </item>
     
   </channel>
