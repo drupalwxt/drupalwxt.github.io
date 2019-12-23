@@ -2,8 +2,13 @@
 
 /* TEAM */
   Developer: William Hearn
-  Contact: william.hearn [at] statscan.gc.ca
+  Contact: william.hearn [at] canada.ca
   Twitter: @william_hearn
+  From: Ottawa, Canada
+
+  Developer: Zachary Seguin
+  Contact: zachary.seguin [at] canada.ca
+  Twitter: @zachomedia
   From: Ottawa, Canada
 
 /* THANKS */
@@ -16,4 +21,4 @@
   Last update: 2013/08/04
   Language: English
   Doctype: HTML5
-  IDE: Sublime Text 3
+  IDE: VSCode

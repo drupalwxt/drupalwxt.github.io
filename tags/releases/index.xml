@@ -17,7 +17,7 @@
       <pubDate>Tue, 26 Feb 2019 13:10:50 -0500</pubDate>
       
       <guid>https://drupalwxt.github.io/wxt/d8/releases/</guid>
-      <description>Important Expect security releases to appear here within 24 hours of being reported upstream.
+      <description>Important Expect security releases to appear here within 24-72 hours of being reported upstream.
    Release Created Date Description     3.0.5 2019-12-21T20:43:45Z Features/Updates:
  Update Drupal Core to 8.7.11 Update Lightning 4.0.6; includes:  Updated Lightning Layout to 2.5  Update contributed modules:  Update acquia_connector to 1.18 Update embed to 1.3 Update layout builder restrictions Update metatag to 1.11 Update pathauto to 1.6 Update redirect to 1.</description>
     </item>
