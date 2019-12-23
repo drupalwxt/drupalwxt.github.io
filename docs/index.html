@@ -241,8 +241,8 @@
                     </h1>
                     <div class="post-date mrgn-bttm-md text-muted text-right small">
                         <span class="glyphicon glyphicon-calendar"></span>
-                        <time datetime="2019-06-03">
-                            2019-06-03
+                        <time datetime="2019-12-23">
+                            2019-12-23
                         </time>
                     </div>
                 </header>
@@ -254,16 +254,16 @@
         <h2><a href="https://drupalwxt.github.io/docs/code/">Coding Standards</a></h2>
         <div class="post-date text-muted">
             <span class="glyphicon glyphicon-calendar"></span>
-            <time datetime="2019-06-03">
-                2019-06-03 - 1M TO READ
+            <time datetime="2019-12-23">
+                2019-12-23 - 1M TO READ
             </time>
         </div>
     </header>
     <div class="post-content">
         Background Drupal WxT complies with the Drupal Coding Standards and runs automated tests on every commit that gets merged into the working repository.
 PHP CodeSniffer is executed on our customized phpcs.xml file which is only slightly different from the one which resides in Drupal core.
-PHPCS The following is the literal command(s) being executed in our continuous integration builds running under Travis CI.
-./docker/bin/phpcs --standard=/var/www/html/core/phpcs.xml \ --extensions=php,module,inc,install,test,profile,theme \ --report=full \ --colors \ --ignore=/var/www/html/profiles/wxt/modules/custom/wxt_test \ --ignore=/var/www/html/modules/custom/wxt_library \ --ignore=*.
+PHPCS Examples given below are the exact commands being executed in our continuous integration builds running under Travis CI.
+The following script is used to scan all of WxT&rsquo;s custom modules:
     </div>
     
     <footer class="read-more-link">
@@ -276,16 +276,16 @@ PHPCS The following is the literal command(s) being executed in our continuous i
                         
                         <article class="post">
     <header>
-        <h2><a href="https://drupalwxt.github.io/docs/faq/">Composer FAQ</a></h2>
+        <h2><a href="https://drupalwxt.github.io/docs/faq/">Frequently Asked Questions</a></h2>
         <div class="post-date text-muted">
             <span class="glyphicon glyphicon-calendar"></span>
-            <time datetime="2019-06-03">
-                2019-06-03 - 1M TO READ
+            <time datetime="2019-12-20">
+                2019-12-20 - 1M TO READ
             </time>
         </div>
     </header>
     <div class="post-content">
-        Should I commit the contributed modules downloaded? Composer strongly recommends against. However, while they provide argumentation against there are also known workarounds if a project decides to do it anyway.
+        Should I commit the contributed modules downloaded? Composer strongly recommends against this practice. However, while they provide argumentation against there are also known workarounds if a project decides to do it anyway.
 Should I commit the scaffolding files? The drupal-scaffold plugin can download the scaffold files (like index.php, update.php, etc) to the html directory of your project. If you have not customized those files you could choose to not check them into your version control system.
     </div>
     
@@ -302,13 +302,13 @@ Should I commit the scaffolding files? The drupal-scaffold plugin can download t
         <h2><a href="https://drupalwxt.github.io/docs/composer/">Composer workflow for Drupal 8</a></h2>
         <div class="post-date text-muted">
             <span class="glyphicon glyphicon-calendar"></span>
-            <time datetime="2019-06-03">
-                2019-06-03 - 4M TO READ
+            <time datetime="2019-12-15">
+                2019-12-15 - 4M TO READ
             </time>
         </div>
     </header>
     <div class="post-content">
-        Note: The following guide is largely just a high level overview for Drupal 8 WxT installations.
+        Note: The following guide is largely just a high level overview for Drupal 8 WxT installation(s).
  Overview WxT strictly adheres to a Composer-based workflow and tries to follow the best practices laid out by the broader Drupal community. For more information on the benefits of this workflow please consult the official documentation provided in the link below:
  Using composer to manage Drupal  Composer also helps facilitate a more security oriented approach whether packaging or deploying a site.
     </div>
@@ -323,21 +323,22 @@ Should I commit the scaffolding files? The drupal-scaffold plugin can download t
                         
                         <article class="post">
     <header>
-        <h2><a href="https://drupalwxt.github.io/docs/modules/">Module Selection for Drupal WxT</a></h2>
+        <h2><a href="https://drupalwxt.github.io/docs/subprofile/">Sub Installation Profile</a></h2>
         <div class="post-date text-muted">
             <span class="glyphicon glyphicon-calendar"></span>
-            <time datetime="2019-06-03">
-                2019-06-03 - 2M TO READ
+            <time datetime="2019-06-05">
+                2019-06-05 - 1M TO READ
             </time>
         </div>
     </header>
     <div class="post-content">
-        Background This WxT installation profile directly extends from the Lightning Framework created by Acquia to provide developers with a powerful base toolchain upon which to extend. Due to this strict dependency we also align much of our workflow with the best practices established patterns Acquia has provided.
-Lightning We chose Lightning because of it being the best standard for enterprise authoring in Drupal tightly focused on the user experience in four key functional areas.
+        WxT sub installation profiles WxT like its base framework Lightning includes the ability to create sub-profiles that are based on the default WxT distribution profile. Making a sub-profile allows you to customize the installation process to meet one or more of your specific needs while retaining / customizing the WxT defaults.
+Circumstances where creating a sub-profile of WxT would be of benefit include the following situations:
+ Ability to prevent / override some (sub)component of WxT from being installed Ability to enable additional modules, themes, or configuration during install Ability customize the look and feel of the installation process Ability to build a distribution that offloads the Web Experience Toolkit theme(s) / plugins and related libraries to WxT You previously used wxt.
     </div>
     
     <footer class="read-more-link">
-        <a href="https://drupalwxt.github.io/docs/modules/" class="btn btn-default">Read More...</a>
+        <a href="https://drupalwxt.github.io/docs/subprofile/" class="btn btn-default">Read More...</a>
     </footer>
     
 </article>
@@ -346,19 +347,22 @@ Lightning We chose Lightning because of it being the best standard for enterpris
                         
                         <article class="post">
     <header>
-        <h2><a href="https://drupalwxt.github.io/docs/subprofile/">Sub Installation Profile</a></h2>
+        <h2><a href="https://drupalwxt.github.io/docs/modules/">Module Selection for Drupal WxT</a></h2>
         <div class="post-date text-muted">
             <span class="glyphicon glyphicon-calendar"></span>
             <time datetime="2019-06-03">
-                2019-06-03 - 1M TO READ
+                2019-06-03 - 3M TO READ
             </time>
         </div>
     </header>
     <div class="post-content">
-         WxT sub installation profiles WxT like its base framework Lightning includes the ability to create sub-profiles that are based on the default WxT distribution profile. Making a sub-profile allows you to customize the installation process to meet one or more of your specific needs while retaining / customizing the WxT defaults.
-If any of the following statements are true, then you should consider creating a sub-profile of WxT:
- Ability to prevent / override some (sub)component of WxT from being installed Ability to enable additional modules, themes, or configuration during install Ability customize the look and feel of the installation process Ability to build a distribution that offloads the Web Experience Toolkit theme(s) / plugins and related libraries to WxT  
+        Background This WxT installation profile directly extends from the Lightning Framework created by Acquia to provide developers with a powerful base toolchain upon which to extend. Due to this strict dependency we also align much of our workflow with the best practices established patterns Acquia has provided.
+ Note: There have been recent changes to Lightning where we now only need to rely on their contributed modules rather then the profile directory.
     </div>
+    
+    <footer class="read-more-link">
+        <a href="https://drupalwxt.github.io/docs/modules/" class="btn btn-default">Read More...</a>
+    </footer>
     
 </article>
 <hr>
@@ -496,26 +500,6 @@ If any of the following statements are true, then you should consider creating a
                         
                         
                         
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
                     </ul>
                     
                 </aside>
@@ -548,25 +532,25 @@ If any of the following statements are true, then you should consider creating a
                 </div>
                 <div class="list-group">
                     
+                    <a href="/wxt/d8/roadmap/" class="list-group-item">Roadmap</a>
+                    
+                    <a href="/tags/" class="list-group-item">Tags</a>
+                    
+                    <a href="/wxt/" class="list-group-item">Wxt</a>
+                    
+                    <a href="/tags/wxt/" class="list-group-item">wxt</a>
+                    
+                    <a href="/wxt/d8/repositories/" class="list-group-item">Repositories for Drupal WxT</a>
+                    
+                    <a href="/wxt/d8/releases/" class="list-group-item">Releases</a>
+                    
+                    <a href="/tags/releases/" class="list-group-item">releases</a>
+                    
                     <a href="/docs/code/" class="list-group-item">Coding Standards</a>
-                    
-                    <a href="/docs/faq/" class="list-group-item">Composer FAQ</a>
-                    
-                    <a href="/docs/composer/" class="list-group-item">Composer workflow for Drupal 8</a>
                     
                     <a href="/docs/" class="list-group-item">Docs</a>
                     
                     <a href="/tags/docs/" class="list-group-item">docs</a>
-                    
-                    <a href="/tags/faq/" class="list-group-item">faq</a>
-                    
-                    <a href="/docs/modules/" class="list-group-item">Module Selection for Drupal WxT</a>
-                    
-                    <a href="/docs/subprofile/" class="list-group-item">Sub Installation Profile</a>
-                    
-                    <a href="/tags/" class="list-group-item">Tags</a>
-                    
-                    <a href="/docs/theme/" class="list-group-item">Theme Workflow</a>
                     
                 </div>
             </div>
@@ -589,18 +573,13 @@ If any of the following statements are true, then you should consider creating a
                         faq
                     </a>
                     
-                    <a href="https://drupalwxt.github.io/tags/memcache" class="list-group-item">
-                        <span class="badge">1</span>
-                        memcache
-                    </a>
-                    
                     <a href="https://drupalwxt.github.io/tags/performance" class="list-group-item">
-                        <span class="badge">4</span>
+                        <span class="badge">2</span>
                         performance
                     </a>
                     
                     <a href="https://drupalwxt.github.io/tags/post" class="list-group-item">
-                        <span class="badge">2</span>
+                        <span class="badge">1</span>
                         post
                     </a>
                     
@@ -609,13 +588,8 @@ If any of the following statements are true, then you should consider creating a
                         releases
                     </a>
                     
-                    <a href="https://drupalwxt.github.io/tags/varnish" class="list-group-item">
-                        <span class="badge">1</span>
-                        varnish
-                    </a>
-                    
                     <a href="https://drupalwxt.github.io/tags/wxt" class="list-group-item">
-                        <span class="badge">11</span>
+                        <span class="badge">10</span>
                         wxt
                     </a>
                     

@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
     <title>
         
-        Drupal WxT
+        Code Quality
         
     </title>
     <!--[if gte IE 9 | !IE ]><!-->
@@ -228,8 +228,26 @@
                   
                     
                       
+                        
+                      
+                      
                   
-                <li>performance</li>
+                    
+                      
+                        
+                      
+                      
+                  
+                    
+                      
+                        
+                      
+                      
+                  
+                    
+                      
+                  
+                <li>Code Quality</li>
             </ol>
         </div>
     </div>
@@ -239,11 +257,11 @@
 
     <main role="main" property="mainContentOfPage" class="container">
     <div class="row">
-        <div class="col-md-8">
+        <div class="col-md-12">
             <article class="post">
                 <header>
                     <h1 id="wb-cont" property="name">
-                        performance
+                        Code Quality
                     </h1>
                     <div class="post-date mrgn-bttm-md text-muted text-right small">
                         <span class="glyphicon glyphicon-calendar"></span>
@@ -253,61 +271,74 @@
                     </div>
                 </header>
                 <div class="post-content">
-                    <ul class='list-unstyled'>
-                        
-                        <article class="post">
-    <header>
-        <h2><a href="https://drupalwxt.github.io/post/2019/01/25/code-quality/">Code Quality</a></h2>
-        <div class="post-date text-muted">
-            <span class="glyphicon glyphicon-calendar"></span>
-            <time datetime="2019-01-25">
-                2019-01-25 - 2M TO READ
-            </time>
-        </div>
-    </header>
-    <div class="post-content">
-        Important These instructions might be a little out of date as much of the projects mentioned below have been incorporated into the Coder module
- The following is a list of best practice tools to use when analyzing the code quality of modules made for Drupal:
- Coder PHP CodeSniffer DrupalPractice (merged into Coder) DrupalSecure  Normally these tools would be run based on a push to a CI server and will affect the build status if failures are detected.
-    </div>
-    
-    <footer class="read-more-link">
-        <a href="https://drupalwxt.github.io/post/2019/01/25/code-quality/" class="btn btn-default">Read More...</a>
-    </footer>
-    
-</article>
-<hr>
+                    
 
-                        
-                        <article class="post">
-    <header>
-        <h2><a href="https://drupalwxt.github.io/post/2019/01/15/databases/">Databases</a></h2>
-        <div class="post-date text-muted">
-            <span class="glyphicon glyphicon-calendar"></span>
-            <time datetime="2019-01-15">
-                2019-01-15 - 2M TO READ
-            </time>
-        </div>
-    </header>
-    <div class="post-content">
-        There are a variety of Databases you can use with Drupal as listed in the Drupal requirements section. However only MySQL + PostgreSQL are tested extensively with Drupal WxT and the various contrib modules it provides.
- Note: It has been our experience that Microsoft SQL Server is possible but with many caveats. While Oracle support itself should not be attempted due to a outdated PDO Driver.
- PostgreSQL PostgreSQL, often simply Postgres, is an open source object-relational database management system (ORDBMS) with an emphasis on extensibility and standards compliance.
-    </div>
-    
-    <footer class="read-more-link">
-        <a href="https://drupalwxt.github.io/post/2019/01/15/databases/" class="btn btn-default">Read More...</a>
-    </footer>
-    
-</article>
-<hr>
+<div class="alert alert-info">
+  <h4>Important</h4>
+  <p>These instructions might be a little out of date as much of the projects mentioned below have been incorporated into the Coder module</p>
+</div>
 
-                        
-                    </ul>
+<p>The following is a list of best practice tools to use when analyzing the code quality of modules made for Drupal:</p>
+
+<ol>
+<li><a href="https://www.drupal.org/project/coder">Coder</a></li>
+<li><a href="https://github.com/squizlabs/PHP_CodeSniffer">PHP CodeSniffer</a></li>
+<li><a href="https://www.drupal.org/project/drupalpractice">DrupalPractice</a> (merged into Coder)</li>
+<li><a href="https://www.drupal.org/sandbox/coltrane/1921926">DrupalSecure</a></li>
+</ol>
+
+<p>Normally these tools would be run based on a push to a CI server and will affect the build status if failures are detected.</p>
+
+<p>Note: This page only discusses &lsquo;static code analysis&rsquo; tools and not tests run during our CI build such as BDD tests with Behat.</p>
+
+<h1 id="php-codesniffer">PHP CodeSniffer</h1>
+
+<p>PHP_CodeSniffer is a set of two PHP scripts; the main phpcs script that tokenises PHP, JavaScript and CSS files to detect violations of a defined coding standard, and a second phpcbf script to automatically correct coding standard violations. PHP_CodeSniffer is an essential development tool that ensures your code remains clean and consistent.</p>
+
+<h1 id="drupal-codesniffer">Drupal CodeSniffer</h1>
+
+<p>Provides a coding standard for PHP_CodeSniffer, based on the Drupal Coding Standards. This module utilizes rules (mostly regular expressions) to review source code files for code that:</p>
+
+<ol>
+<li>Needs to change due to Drupal API changes</li>
+<li>Does not satisfy Drupal coding standards</li>
+</ol>
+
+<h1 id="drupal-practice">Drupal Practice</h1>
+
+<p>Uses PHP_CodeSniffer to find common errors that new Drupal developers make in their modules. Note that this will likely throw false positives and you should never change your code without verifying the reported problem. Everything that does not really fit into Coder Sniffer and pure coding standards will be included in this project.</p>
+
+<p>Detects the following bad practices:</p>
+
+<ul>
+<li>Unused and undefined PHP variables</li>
+<li>@author tags in doc blocks</li>
+<li>form_set_error() being used without t()</li>
+<li>&lsquo;access administration pages&rsquo; permission is used in hook_menu()</li>
+<li>Un-namespaced classes and interfaces are not prefixed with the module name</li>
+<li>$form_state[&lsquo;input&rsquo;] is used instead of $form_state[&lsquo;values&rsquo;]</li>
+<li>$field[&lsquo;und&rsquo;] is used instead of $field[LANGUAGE_NONE]</li>
+<li>Form API #options values are not translated with t()</li>
+<li>variable_get() calls where variables are not prefixed with the module name</li>
+</ul>
+
+<h1 id="drupal-secure">Drupal Secure</h1>
+
+<p>DrupalSecure Code Sniffer (secure_cs) is a secure coding validation tool for Drupal built on PHP_CodeSniffer and modeled after work on DrupalCS in the Coder module.</p>
+
+<!-- Links Referenced -->
+
                 </div>
                 <aside>
                     
                     <ul class="list-inline post-tags">
+                        
+                        <li>
+                            <a href="https://drupalwxt.github.io/tags/performance">
+                                <i class="fa fa-tags"></i>
+                                performance
+                            </a>
+                        </li>
                         
                     </ul>
                     
@@ -395,6 +426,8 @@
                         
                         
                         
+                        <li><a href="https://drupalwxt.github.io/post/2019/01/15/databases/">Databases</a></li>
+                        
                         
                         
                         
@@ -421,10 +454,10 @@
                     <nav>
     <ul class="pager">
         
-        <li class="previous disabled"><a href="#"><span aria-hidden="true">&larr;</span> Older</a></li>
+        <li class="previous"><a href="https://drupalwxt.github.io/docs/theme/"><span aria-hidden="true">&larr;</span> Older</a></li>
         
         
-        <li class="next disabled"><a href="#">Newer <span aria-hidden="true">&rarr;</span></a></li>
+        <li class="next"><a href="https://drupalwxt.github.io/post/2019/01/15/databases/">Newer <span aria-hidden="true">&rarr;</span></a></li>
         
     </ul>
 </nav>
@@ -434,85 +467,16 @@
                 </footer>
             </article>
         </div>
-        <div class="col-md-4">
-            <aside>
-    <div class="row">
-        <div class="col-xs-12 col-sm-4 col-md-12">
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <h2 class="panel-title">Recent Posts</h2>
-                </div>
-                <div class="list-group">
-                    
-                    <a href="/wxt/d8/roadmap/" class="list-group-item">Roadmap</a>
-                    
-                    <a href="/tags/" class="list-group-item">Tags</a>
-                    
-                    <a href="/wxt/" class="list-group-item">Wxt</a>
-                    
-                    <a href="/tags/wxt/" class="list-group-item">wxt</a>
-                    
-                    <a href="/wxt/d8/repositories/" class="list-group-item">Repositories for Drupal WxT</a>
-                    
-                    <a href="/wxt/d8/releases/" class="list-group-item">Releases</a>
-                    
-                    <a href="/tags/releases/" class="list-group-item">releases</a>
-                    
-                    <a href="/docs/code/" class="list-group-item">Coding Standards</a>
-                    
-                    <a href="/docs/" class="list-group-item">Docs</a>
-                    
-                    <a href="/tags/docs/" class="list-group-item">docs</a>
-                    
-                </div>
-            </div>
-        </div>
-        <div class="col-xs-12 col-sm-4 col-md-12">
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <h2 class="panel-title">Tags</h2>
-                </div>
-                <div class="list-group">
-                    
-                    
-                    <a href="https://drupalwxt.github.io/tags/docs" class="list-group-item">
-                        <span class="badge">6</span>
-                        docs
-                    </a>
-                    
-                    <a href="https://drupalwxt.github.io/tags/faq" class="list-group-item">
-                        <span class="badge">2</span>
-                        faq
-                    </a>
-                    
-                    <a href="https://drupalwxt.github.io/tags/performance" class="list-group-item">
-                        <span class="badge">2</span>
-                        performance
-                    </a>
-                    
-                    <a href="https://drupalwxt.github.io/tags/post" class="list-group-item">
-                        <span class="badge">1</span>
-                        post
-                    </a>
-                    
-                    <a href="https://drupalwxt.github.io/tags/releases" class="list-group-item">
-                        <span class="badge">1</span>
-                        releases
-                    </a>
-                    
-                    <a href="https://drupalwxt.github.io/tags/wxt" class="list-group-item">
-                        <span class="badge">10</span>
-                        wxt
-                    </a>
-                    
-                </div>
-            </div>
-        </div>
     </div>
-</aside>
+    
+<dl id="wb-dtmd">
+    <dt>Date modified:&#32;</dt>
+    <dd>
+        <time property="dateModified">2019-01-25</time>
+    </dd>
+</dl>
 
-        </div>
-    </div>
+
     </main>
     
   <footer role="contentinfo" id="wb-info" class="visible-sm visible-md visible-lg wb-navcurr">

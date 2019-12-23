@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
     <title>
         
-        Drupal WxT
+        Contributing to Documentation Site
         
     </title>
     <!--[if gte IE 9 | !IE ]><!-->
@@ -228,8 +228,26 @@
                   
                     
                       
+                        
+                      
+                      
                   
-                <li>performance</li>
+                    
+                      
+                        
+                      
+                      
+                  
+                    
+                      
+                        
+                      
+                      
+                  
+                    
+                      
+                  
+                <li>Contributing to Documentation Site</li>
             </ol>
         </div>
     </div>
@@ -243,71 +261,44 @@
             <article class="post">
                 <header>
                     <h1 id="wb-cont" property="name">
-                        performance
+                        Contributing to Documentation Site
                     </h1>
                     <div class="post-date mrgn-bttm-md text-muted text-right small">
                         <span class="glyphicon glyphicon-calendar"></span>
-                        <time datetime="2019-01-25">
-                            2019-01-25
+                        <time datetime="2019-01-01">
+                            2019-01-01
                         </time>
                     </div>
                 </header>
                 <div class="post-content">
-                    <ul class='list-unstyled'>
-                        
-                        <article class="post">
-    <header>
-        <h2><a href="https://drupalwxt.github.io/post/2019/01/25/code-quality/">Code Quality</a></h2>
-        <div class="post-date text-muted">
-            <span class="glyphicon glyphicon-calendar"></span>
-            <time datetime="2019-01-25">
-                2019-01-25 - 2M TO READ
-            </time>
-        </div>
-    </header>
-    <div class="post-content">
-        Important These instructions might be a little out of date as much of the projects mentioned below have been incorporated into the Coder module
- The following is a list of best practice tools to use when analyzing the code quality of modules made for Drupal:
- Coder PHP CodeSniffer DrupalPractice (merged into Coder) DrupalSecure  Normally these tools would be run based on a push to a CI server and will affect the build status if failures are detected.
-    </div>
-    
-    <footer class="read-more-link">
-        <a href="https://drupalwxt.github.io/post/2019/01/25/code-quality/" class="btn btn-default">Read More...</a>
-    </footer>
-    
-</article>
-<hr>
+                    <p>Our documentation site for Drupal WxT is powered by <a href="https://gohugo.io/">Hugo</a> (a static site generator) that converts markdown files to html and allows for a quick and easy deployment to GitHub pages.</p>
 
-                        
-                        <article class="post">
-    <header>
-        <h2><a href="https://drupalwxt.github.io/post/2019/01/15/databases/">Databases</a></h2>
-        <div class="post-date text-muted">
-            <span class="glyphicon glyphicon-calendar"></span>
-            <time datetime="2019-01-15">
-                2019-01-15 - 2M TO READ
-            </time>
-        </div>
-    </header>
-    <div class="post-content">
-        There are a variety of Databases you can use with Drupal as listed in the Drupal requirements section. However only MySQL + PostgreSQL are tested extensively with Drupal WxT and the various contrib modules it provides.
- Note: It has been our experience that Microsoft SQL Server is possible but with many caveats. While Oracle support itself should not be attempted due to a outdated PDO Driver.
- PostgreSQL PostgreSQL, often simply Postgres, is an open source object-relational database management system (ORDBMS) with an emphasis on extensibility and standards compliance.
-    </div>
-    
-    <footer class="read-more-link">
-        <a href="https://drupalwxt.github.io/post/2019/01/15/databases/" class="btn btn-default">Read More...</a>
-    </footer>
-    
-</article>
-<hr>
+<p>This allows for contributors who feel the documentation is lacking in certain areas to simply perform a pull request and submit a markdown file  alongside with the appropriate front matter (metadata about the content).</p>
 
-                        
-                    </ul>
+<p>Should the pull request be accepted the code will automatically be pushed to the live website via <a href="https://travis-ci.org">Travis CI</a> and published to <a href="https://drupalwxt.github.io">drupalwxt.github.io</a>.</p>
+
+<p>For more information on how to contribute to the documentation site please consult the <a href="https://github.com/drupalwxt/website/blob/master/README.md">README.md</a> file.</p>
+
+<!-- Links Referenced -->
+
                 </div>
                 <aside>
                     
                     <ul class="list-inline post-tags">
+                        
+                        <li>
+                            <a href="https://drupalwxt.github.io/tags/post">
+                                <i class="fa fa-tags"></i>
+                                post
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a href="https://drupalwxt.github.io/tags/wxt">
+                                <i class="fa fa-tags"></i>
+                                wxt
+                            </a>
+                        </li>
                         
                     </ul>
                     
@@ -319,6 +310,7 @@
                         
                         
                         
+                        <li><a href="https://drupalwxt.github.io/wxt/d8/roadmap/">Roadmap</a></li>
                         
                         
                         
@@ -336,6 +328,23 @@
                         
                         
                         
+                        <li><a href="https://drupalwxt.github.io/wxt/d8/repositories/">Repositories for Drupal WxT</a></li>
+                        
+                        
+                        
+                        
+                        
+                        <li><a href="https://drupalwxt.github.io/wxt/d8/releases/">Releases</a></li>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        <li><a href="https://drupalwxt.github.io/docs/code/">Coding Standards</a></li>
                         
                         
                         
@@ -353,31 +362,31 @@
                         
                         
                         
+                        <li><a href="https://drupalwxt.github.io/docs/faq/">Frequently Asked Questions</a></li>
                         
                         
                         
                         
                         
+                        <li><a href="https://drupalwxt.github.io/docs/composer/">Composer workflow for Drupal 8</a></li>
                         
                         
                         
                         
                         
+                        <li><a href="https://drupalwxt.github.io/docs/subprofile/">Sub Installation Profile</a></li>
                         
                         
                         
                         
                         
+                        <li><a href="https://drupalwxt.github.io/docs/modules/">Module Selection for Drupal WxT</a></li>
                         
                         
                         
                         
                         
-                        
-                        
-                        
-                        
-                        
+                        <li><a href="https://drupalwxt.github.io/docs/theme/">Theme Workflow</a></li>
                         
                         
                         
@@ -421,7 +430,7 @@
                     <nav>
     <ul class="pager">
         
-        <li class="previous disabled"><a href="#"><span aria-hidden="true">&larr;</span> Older</a></li>
+        <li class="previous"><a href="https://drupalwxt.github.io/post/2019/01/15/databases/"><span aria-hidden="true">&larr;</span> Older</a></li>
         
         
         <li class="next disabled"><a href="#">Newer <span aria-hidden="true">&rarr;</span></a></li>

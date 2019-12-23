@@ -6,33 +6,15 @@
     <description>Recent content in Tags on Drupal WxT</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 03 Jun 2019 15:10:50 -0500</lastBuildDate>
+    <lastBuildDate>Mon, 23 Dec 2019 10:25:15 -0500</lastBuildDate>
     
 	<atom:link href="https://drupalwxt.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>docs</title>
-      <link>https://drupalwxt.github.io/tags/docs/</link>
-      <pubDate>Mon, 03 Jun 2019 15:10:50 -0500</pubDate>
-      
-      <guid>https://drupalwxt.github.io/tags/docs/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>faq</title>
-      <link>https://drupalwxt.github.io/tags/faq/</link>
-      <pubDate>Mon, 03 Jun 2019 15:10:50 -0500</pubDate>
-      
-      <guid>https://drupalwxt.github.io/tags/faq/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>wxt</title>
       <link>https://drupalwxt.github.io/tags/wxt/</link>
-      <pubDate>Mon, 03 Jun 2019 15:10:50 -0500</pubDate>
+      <pubDate>Mon, 23 Dec 2019 10:25:15 -0500</pubDate>
       
       <guid>https://drupalwxt.github.io/tags/wxt/</guid>
       <description></description>
@@ -41,45 +23,45 @@
     <item>
       <title>releases</title>
       <link>https://drupalwxt.github.io/tags/releases/</link>
-      <pubDate>Tue, 26 Feb 2019 13:10:50 -0500</pubDate>
+      <pubDate>Mon, 23 Dec 2019 10:15:15 -0500</pubDate>
       
       <guid>https://drupalwxt.github.io/tags/releases/</guid>
       <description></description>
     </item>
     
     <item>
+      <title>docs</title>
+      <link>https://drupalwxt.github.io/tags/docs/</link>
+      <pubDate>Mon, 23 Dec 2019 09:15:15 -0500</pubDate>
+      
+      <guid>https://drupalwxt.github.io/tags/docs/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>faq</title>
+      <link>https://drupalwxt.github.io/tags/faq/</link>
+      <pubDate>Fri, 20 Dec 2019 15:15:15 -0500</pubDate>
+      
+      <guid>https://drupalwxt.github.io/tags/faq/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>performance</title>
       <link>https://drupalwxt.github.io/tags/performance/</link>
-      <pubDate>Tue, 20 Jan 2015 13:10:52 -0500</pubDate>
+      <pubDate>Fri, 25 Jan 2019 15:15:15 -0500</pubDate>
       
       <guid>https://drupalwxt.github.io/tags/performance/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>memcache</title>
-      <link>https://drupalwxt.github.io/tags/memcache/</link>
-      <pubDate>Tue, 13 Jan 2015 13:10:52 -0500</pubDate>
-      
-      <guid>https://drupalwxt.github.io/tags/memcache/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>post</title>
       <link>https://drupalwxt.github.io/tags/post/</link>
-      <pubDate>Tue, 13 Jan 2015 13:10:52 -0500</pubDate>
+      <pubDate>Tue, 01 Jan 2019 10:10:30 -0500</pubDate>
       
       <guid>https://drupalwxt.github.io/tags/post/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>varnish</title>
-      <link>https://drupalwxt.github.io/tags/varnish/</link>
-      <pubDate>Tue, 13 Jan 2015 13:10:52 -0500</pubDate>
-      
-      <guid>https://drupalwxt.github.io/tags/varnish/</guid>
       <description></description>
     </item>
     

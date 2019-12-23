@@ -6,7 +6,7 @@
     <description>Recent content in Docs on Drupal WxT</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 03 Jun 2019 15:10:50 -0500</lastBuildDate>
+    <lastBuildDate>Mon, 23 Dec 2019 09:15:15 -0500</lastBuildDate>
     
 	<atom:link href="https://drupalwxt.github.io/docs/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,34 +14,45 @@
     <item>
       <title>Coding Standards</title>
       <link>https://drupalwxt.github.io/docs/code/</link>
-      <pubDate>Mon, 03 Jun 2019 15:10:50 -0500</pubDate>
+      <pubDate>Mon, 23 Dec 2019 09:15:15 -0500</pubDate>
       
       <guid>https://drupalwxt.github.io/docs/code/</guid>
       <description>Background Drupal WxT complies with the Drupal Coding Standards and runs automated tests on every commit that gets merged into the working repository.
 PHP CodeSniffer is executed on our customized phpcs.xml file which is only slightly different from the one which resides in Drupal core.
-PHPCS The following is the literal command(s) being executed in our continuous integration builds running under Travis CI.
-./docker/bin/phpcs --standard=/var/www/html/core/phpcs.xml \ --extensions=php,module,inc,install,test,profile,theme \ --report=full \ --colors \ --ignore=/var/www/html/profiles/wxt/modules/custom/wxt_test \ --ignore=/var/www/html/modules/custom/wxt_library \ --ignore=*.</description>
+PHPCS Examples given below are the exact commands being executed in our continuous integration builds running under Travis CI.
+The following script is used to scan all of WxT&amp;rsquo;s custom modules:</description>
     </item>
     
     <item>
-      <title>Composer FAQ</title>
+      <title>Frequently Asked Questions</title>
       <link>https://drupalwxt.github.io/docs/faq/</link>
-      <pubDate>Mon, 03 Jun 2019 15:10:50 -0500</pubDate>
+      <pubDate>Fri, 20 Dec 2019 15:15:15 -0500</pubDate>
       
       <guid>https://drupalwxt.github.io/docs/faq/</guid>
-      <description>Should I commit the contributed modules downloaded? Composer strongly recommends against. However, while they provide argumentation against there are also known workarounds if a project decides to do it anyway.
+      <description>Should I commit the contributed modules downloaded? Composer strongly recommends against this practice. However, while they provide argumentation against there are also known workarounds if a project decides to do it anyway.
 Should I commit the scaffolding files? The drupal-scaffold plugin can download the scaffold files (like index.php, update.php, etc) to the html directory of your project. If you have not customized those files you could choose to not check them into your version control system.</description>
     </item>
     
     <item>
       <title>Composer workflow for Drupal 8</title>
       <link>https://drupalwxt.github.io/docs/composer/</link>
-      <pubDate>Mon, 03 Jun 2019 15:10:50 -0500</pubDate>
+      <pubDate>Sun, 15 Dec 2019 15:15:15 -0500</pubDate>
       
       <guid>https://drupalwxt.github.io/docs/composer/</guid>
-      <description>Note: The following guide is largely just a high level overview for Drupal 8 WxT installations.
+      <description>Note: The following guide is largely just a high level overview for Drupal 8 WxT installation(s).
  Overview WxT strictly adheres to a Composer-based workflow and tries to follow the best practices laid out by the broader Drupal community. For more information on the benefits of this workflow please consult the official documentation provided in the link below:
  Using composer to manage Drupal  Composer also helps facilitate a more security oriented approach whether packaging or deploying a site.</description>
+    </item>
+    
+    <item>
+      <title>Sub Installation Profile</title>
+      <link>https://drupalwxt.github.io/docs/subprofile/</link>
+      <pubDate>Wed, 05 Jun 2019 15:10:50 -0500</pubDate>
+      
+      <guid>https://drupalwxt.github.io/docs/subprofile/</guid>
+      <description>WxT sub installation profiles WxT like its base framework Lightning includes the ability to create sub-profiles that are based on the default WxT distribution profile. Making a sub-profile allows you to customize the installation process to meet one or more of your specific needs while retaining / customizing the WxT defaults.
+Circumstances where creating a sub-profile of WxT would be of benefit include the following situations:
+ Ability to prevent / override some (sub)component of WxT from being installed Ability to enable additional modules, themes, or configuration during install Ability customize the look and feel of the installation process Ability to build a distribution that offloads the Web Experience Toolkit theme(s) / plugins and related libraries to WxT You previously used wxt.</description>
     </item>
     
     <item>
@@ -51,18 +62,7 @@ Should I commit the scaffolding files? The drupal-scaffold plugin can download t
       
       <guid>https://drupalwxt.github.io/docs/modules/</guid>
       <description>Background This WxT installation profile directly extends from the Lightning Framework created by Acquia to provide developers with a powerful base toolchain upon which to extend. Due to this strict dependency we also align much of our workflow with the best practices established patterns Acquia has provided.
-Lightning We chose Lightning because of it being the best standard for enterprise authoring in Drupal tightly focused on the user experience in four key functional areas.</description>
-    </item>
-    
-    <item>
-      <title>Sub Installation Profile</title>
-      <link>https://drupalwxt.github.io/docs/subprofile/</link>
-      <pubDate>Mon, 03 Jun 2019 15:10:50 -0500</pubDate>
-      
-      <guid>https://drupalwxt.github.io/docs/subprofile/</guid>
-      <description> WxT sub installation profiles WxT like its base framework Lightning includes the ability to create sub-profiles that are based on the default WxT distribution profile. Making a sub-profile allows you to customize the installation process to meet one or more of your specific needs while retaining / customizing the WxT defaults.
-If any of the following statements are true, then you should consider creating a sub-profile of WxT:
- Ability to prevent / override some (sub)component of WxT from being installed Ability to enable additional modules, themes, or configuration during install Ability customize the look and feel of the installation process Ability to build a distribution that offloads the Web Experience Toolkit theme(s) / plugins and related libraries to WxT  </description>
+ Note: There have been recent changes to Lightning where we now only need to rely on their contributed modules rather then the profile directory.</description>
     </item>
     
     <item>

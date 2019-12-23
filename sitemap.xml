@@ -3,47 +3,77 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://drupalwxt.github.io/docs/code/</loc>
-    <lastmod>2019-06-03T15:10:50-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://drupalwxt.github.io/docs/faq/</loc>
-    <lastmod>2019-06-03T15:10:50-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://drupalwxt.github.io/docs/composer/</loc>
-    <lastmod>2019-06-03T15:10:50-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://drupalwxt.github.io/docs/</loc>
-    <lastmod>2019-06-03T15:10:50-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://drupalwxt.github.io/tags/docs/</loc>
-    <lastmod>2019-06-03T15:10:50-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://drupalwxt.github.io/tags/faq/</loc>
-    <lastmod>2019-06-03T15:10:50-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://drupalwxt.github.io/docs/modules/</loc>
-    <lastmod>2019-06-03T15:10:50-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://drupalwxt.github.io/docs/subprofile/</loc>
-    <lastmod>2019-06-03T15:10:50-05:00</lastmod>
+    <loc>https://drupalwxt.github.io/wxt/d8/roadmap/</loc>
+    <lastmod>2019-12-23T10:25:15-05:00</lastmod>
   </url>
   
   <url>
     <loc>https://drupalwxt.github.io/tags/</loc>
+    <lastmod>2019-12-23T10:25:15-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://drupalwxt.github.io/wxt/</loc>
+    <lastmod>2019-12-23T10:25:15-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://drupalwxt.github.io/tags/wxt/</loc>
+    <lastmod>2019-12-23T10:25:15-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://drupalwxt.github.io/wxt/d8/repositories/</loc>
+    <lastmod>2019-12-23T10:20:15-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://drupalwxt.github.io/wxt/d8/releases/</loc>
+    <lastmod>2019-12-23T10:15:15-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://drupalwxt.github.io/tags/releases/</loc>
+    <lastmod>2019-12-23T10:15:15-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://drupalwxt.github.io/docs/code/</loc>
+    <lastmod>2019-12-23T09:15:15-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://drupalwxt.github.io/docs/</loc>
+    <lastmod>2019-12-23T09:15:15-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://drupalwxt.github.io/tags/docs/</loc>
+    <lastmod>2019-12-23T09:15:15-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://drupalwxt.github.io/tags/faq/</loc>
+    <lastmod>2019-12-20T15:15:15-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://drupalwxt.github.io/docs/faq/</loc>
+    <lastmod>2019-12-20T15:15:15-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://drupalwxt.github.io/docs/composer/</loc>
+    <lastmod>2019-12-15T15:15:15-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://drupalwxt.github.io/docs/subprofile/</loc>
+    <lastmod>2019-06-05T15:10:50-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://drupalwxt.github.io/docs/modules/</loc>
     <lastmod>2019-06-03T15:10:50-05:00</lastmod>
   </url>
   
@@ -53,93 +83,38 @@
   </url>
   
   <url>
-    <loc>https://drupalwxt.github.io/tags/wxt/</loc>
-    <lastmod>2019-06-03T15:10:50-05:00</lastmod>
+    <loc>https://drupalwxt.github.io/post/2019/01/25/code-quality/</loc>
+    <lastmod>2019-01-25T15:15:15-05:00</lastmod>
   </url>
   
   <url>
-    <loc>https://drupalwxt.github.io/wxt/d8/releases/</loc>
-    <lastmod>2019-02-26T13:10:50-05:00</lastmod>
+    <loc>https://drupalwxt.github.io/tags/performance/</loc>
+    <lastmod>2019-01-25T15:15:15-05:00</lastmod>
   </url>
   
   <url>
-    <loc>https://drupalwxt.github.io/tags/releases/</loc>
-    <lastmod>2019-02-26T13:10:50-05:00</lastmod>
+    <loc>https://drupalwxt.github.io/post/</loc>
+    <lastmod>2019-01-25T15:15:15-05:00</lastmod>
   </url>
   
   <url>
-    <loc>https://drupalwxt.github.io/wxt/d8/repositories/</loc>
-    <lastmod>2019-02-26T13:10:50-05:00</lastmod>
+    <loc>https://drupalwxt.github.io/post/2019/01/15/databases/</loc>
+    <lastmod>2019-01-15T15:15:15-05:00</lastmod>
   </url>
   
   <url>
-    <loc>https://drupalwxt.github.io/wxt/</loc>
-    <lastmod>2019-02-26T13:10:50-05:00</lastmod>
+    <loc>https://drupalwxt.github.io/post/2019/01/01/contributing-to-documentation-site/</loc>
+    <lastmod>2019-01-01T10:10:30-05:00</lastmod>
   </url>
   
   <url>
-    <loc>https://drupalwxt.github.io/wxt/d8/roadmap/</loc>
-    <lastmod>2019-01-13T13:10:52-05:00</lastmod>
+    <loc>https://drupalwxt.github.io/tags/post/</loc>
+    <lastmod>2019-01-01T10:10:30-05:00</lastmod>
   </url>
   
   <url>
     <loc>https://drupalwxt.github.io/</loc>
     <lastmod>2017-01-01T13:10:52-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://drupalwxt.github.io/post/2015/01/20/code-quality/</loc>
-    <lastmod>2015-01-20T13:10:52-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://drupalwxt.github.io/tags/performance/</loc>
-    <lastmod>2015-01-20T13:10:52-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://drupalwxt.github.io/post/</loc>
-    <lastmod>2015-01-20T13:10:52-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://drupalwxt.github.io/post/2015/01/13/contributing-to-documentation-site/</loc>
-    <lastmod>2015-01-13T13:10:52-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://drupalwxt.github.io/post/2015/01/13/databases/</loc>
-    <lastmod>2015-01-13T13:10:52-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://drupalwxt.github.io/tags/memcache/</loc>
-    <lastmod>2015-01-13T13:10:52-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://drupalwxt.github.io/post/2015/01/13/memcached/</loc>
-    <lastmod>2015-01-13T13:10:52-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://drupalwxt.github.io/tags/post/</loc>
-    <lastmod>2015-01-13T13:10:52-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://drupalwxt.github.io/post/2015/01/13/post-title/</loc>
-    <lastmod>2015-01-13T13:10:52-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://drupalwxt.github.io/post/2015/01/13/varnish/</loc>
-    <lastmod>2015-01-13T13:10:52-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://drupalwxt.github.io/tags/varnish/</loc>
-    <lastmod>2015-01-13T13:10:52-05:00</lastmod>
   </url>
   
   <url>
