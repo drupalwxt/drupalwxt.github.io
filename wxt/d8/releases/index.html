@@ -278,6 +278,60 @@
       
       
       <tr>
+          <td><strong>3.0.6</strong></td>
+          <td><strong>2020-01-12T04:17:15Z</strong></td>
+          <td><p>Features/Updates:</p>
+
+<ul>
+<li>Update Drupal Core to 8.8.1</li>
+<li>Update Lightning <a href="https://github.com/acquia/lightning/releases/tag/4.1.1">4.1.1</a></li>
+<li>Update contributed modules:
+
+<ul>
+<li>Update core_context to 1.0-beta1</li>
+<li>Update diff to 1.0</li>
+<li>Update migrate_tools to 4.5</li>
+<li>Update panelizer to 5.0-beta2</li>
+<li>Update simple_sitemap to 3.5</li>
+</ul></li>
+<li>Update tarball packaging script to support core 8.8.x</li>
+</ul>
+
+<p>Upgrade path:</p>
+
+<ul>
+<li><p>Update your codebase:</p>
+
+<ul>
+<li><code>composer update</code></li>
+</ul></li>
+
+<li><p>Run database updates:</p>
+
+<ul>
+<li><code>drush cache:rebuild</code></li>
+<li><code>drush updatedb</code></li>
+</ul></li>
+
+<li><p>Run Lightning configuration updates:</p>
+
+<ul>
+<li><code>drush cache:rebuild</code></li>
+<li><code>drush update:lightning</code></li>
+</ul></li>
+
+<li><p>Run WxT configuration updates:</p>
+
+<ul>
+<li><code>drush cache:rebuild</code></li>
+<li><code>drush update:wxt</code></li>
+</ul></li>
+</ul>
+</td>
+      </tr>
+      
+      
+      <tr>
           <td><strong>3.0.5</strong></td>
           <td><strong>2019-12-21T20:43:45Z</strong></td>
           <td><p>Features/Updates:</p>
@@ -917,29 +971,6 @@
 </ul></li>
 </ul>
 </td>
-      </tr>
-      
-      
-      <tr>
-          <td><strong>2.2.17</strong></td>
-          <td><strong>2019-03-30T19:41:26Z</strong></td>
-          <td>Features/Updates:</p>
-
-<ul>
-<li>Minor README.md improvements</li>
-<li>Patch for Paragraphs endless loop</li>
-<li>Revert menu_breadcrumb to 1.7 + lock</li>
-<li>Update wxt_bootstrap to 1.9
-
-<ul>
-<li>Resolve additional issues with gcweb legacy port</li>
-</ul></li>
-<li>Update wxt_bootstrap to 1.6
-
-<ul>
-<li>Add guard for language detection in search block</li>
-</ul></li>
-</ul></td>
       </tr>
       
     </tbody>
