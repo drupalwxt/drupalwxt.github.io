@@ -278,6 +278,82 @@
       
       
       <tr>
+          <td><strong>3.0.7</strong></td>
+          <td><strong>2020-02-05T01:42:29Z</strong></td>
+          <td><p>Features/Updates:</p>
+
+<ul>
+<li>Update Drupal Core to 8.8.2</li>
+<li>Update Lightning <a href="https://github.com/acquia/lightning/releases/tag/4.1.2">4.1.2</a></li>
+<li>Moved docker logic into <a href="https://github.com/drupalwxt/docker-scaffold">docker-scaffold</a></li>
+<li>Drupal.org + Tarball generated builds now against <a href="https://github.com/drupal/legacy-project">drupal/legacy-project</a></li>
+<li>Updates for WxT
+
+<ul>
+<li>Update Coder and CodeSniffer</li>
+</ul></li>
+<li>Updates for WxT Bootstrap
+
+<ul>
+<li>Accessibility fix for Signed in as</li>
+<li>PHPCS code linting fix</li>
+<li>Added class for display-inline</li>
+<li>Additional documentation for subtheme</li>
+</ul></li>
+<li>Updates for WxT Library
+
+<ul>
+<li>Correct issues with language negotiation</li>
+</ul></li>
+<li>Updates for Contributed modules
+
+<ul>
+<li>Update Webform to 3.8</li>
+<li>Update autosave_form to 1.1</li>
+<li>Update bg_image_formatter to 1.12</li>
+<li>Update entity_block to 1.0-beta2</li>
+<li>Update group to 1.0-rc5</li>
+<li>Update layout_builder_restrictions to 2.5</li>
+<li>Update media_entity_twitter to 2.3</li>
+</ul></li>
+<li>Pathauto must be updated first if below Pathauto 8.x-1.5 to prevent data loss</li>
+</ul>
+
+<p>Upgrade path:</p>
+
+<ul>
+<li><p>Update your codebase:</p>
+
+<ul>
+<li><code>composer update</code></li>
+</ul></li>
+
+<li><p>Run database updates:</p>
+
+<ul>
+<li><code>drush cache:rebuild</code></li>
+<li><code>drush updatedb</code></li>
+</ul></li>
+
+<li><p>Run Lightning configuration updates:</p>
+
+<ul>
+<li><code>drush cache:rebuild</code></li>
+<li><code>drush update:lightning</code></li>
+</ul></li>
+
+<li><p>Run WxT configuration updates:</p>
+
+<ul>
+<li><code>drush cache:rebuild</code></li>
+<li><code>drush update:wxt</code></li>
+</ul></li>
+</ul>
+</td>
+      </tr>
+      
+      
+      <tr>
           <td><strong>3.0.6</strong></td>
           <td><strong>2020-01-12T04:17:15Z</strong></td>
           <td><p>Features/Updates:</p>
@@ -905,47 +981,6 @@
 <li>Update views_infinite_scroll to 1.6</li>
 <li>Update webform to 5.4</li>
 </ul>
-
-<p>Upgrade path:</p>
-
-<ul>
-<li><p>Update your codebase:</p>
-
-<ul>
-<li><code>composer update</code></li>
-</ul></li>
-
-<li><p>Run database updates:</p>
-
-<ul>
-<li><code>drush cache:rebuild</code></li>
-<li><code>drush updatedb</code></li>
-</ul></li>
-
-<li><p>Run Lightning configuration updates:</p>
-
-<ul>
-<li><code>drush cache:rebuild</code></li>
-<li><code>drush update:lightning</code></li>
-</ul></li>
-</ul>
-</td>
-      </tr>
-      
-      
-      <tr>
-          <td><strong>2.2.18</strong></td>
-          <td><strong>2019-04-24T20:38:23Z</strong></td>
-          <td><p>Security update:
-* Update Drupal Core to <a href="https://www.drupal.org/project/drupal/releases/8.6.15">8.6.15</a>
-  * <a href="https://www.drupal.org/sa-core-2019-005">SA-CORE-2019-005</a>
-  * <a href="https://www.drupal.org/sa-core-2019-006">SA-CORE-2019-006</a></p>
-
-<p>Features/Updates:
-- Update Drupal Core to 8.6.15
-- Update Lightning to 3.2.8
-- Update entityqueue to 1.0-beta2
-- Update migrate_plus to 4.2</p>
 
 <p>Upgrade path:</p>
 
