@@ -278,6 +278,77 @@
       
       
       <tr>
+          <td><strong>3.0.8</strong></td>
+          <td><strong>2020-03-21T18:21:49Z</strong></td>
+          <td><p>Features/Updates:</p>
+
+<ul>
+<li>Update Drupal Core to 8.8.4</li>
+<li>Update Lightning <a href="https://github.com/acquia/lightning/releases/tag/4.1.3">4.1.3</a>
+
+<ul>
+<li>Updated Lightning API to 4.5</li>
+<li>Updated Lightning Media to 3.16</li>
+</ul></li>
+<li>Updates for WxT
+
+<ul>
+<li>Now provide alternate styles support for slideshow blocks</li>
+<li>Formatting fixes and alignment of composer.json</li>
+</ul></li>
+<li>Updates for WxT Bootstrap
+
+<ul>
+<li>Update README.md</li>
+<li>Fix CDN Footer for GCWEB</li>
+<li>Unexpected breadcrumb padding on some of the WxT supported themes</li>
+</ul></li>
+<li>Updates for Contributed modules
+
+<ul>
+<li>Update core_context to 1.0-beta2 + patch for fieldable entities</li>
+<li>Update password policy to 3.0-alpha5 + patch for helpful translation</li>
+<li>Update entity_reference_revisions to 1.8</li>
+<li>Update inline_entity_form to 1.0-rc3</li>
+<li>Update paragraphs to 1.11</li>
+</ul></li>
+</ul>
+
+<p>Upgrade path:</p>
+
+<ul>
+<li><p>Update your codebase:</p>
+
+<ul>
+<li><code>composer update</code></li>
+</ul></li>
+
+<li><p>Run database updates:</p>
+
+<ul>
+<li><code>drush cache:rebuild</code></li>
+<li><code>drush updatedb</code></li>
+</ul></li>
+
+<li><p>Run Lightning configuration updates:</p>
+
+<ul>
+<li><code>drush cache:rebuild</code></li>
+<li><code>drush update:lightning</code></li>
+</ul></li>
+
+<li><p>Run WxT configuration updates:</p>
+
+<ul>
+<li><code>drush cache:rebuild</code></li>
+<li><code>drush update:wxt</code></li>
+</ul></li>
+</ul>
+</td>
+      </tr>
+      
+      
+      <tr>
           <td><strong>3.0.7</strong></td>
           <td><strong>2020-02-05T01:42:29Z</strong></td>
           <td><p>Features/Updates:</p>
@@ -916,70 +987,6 @@
 <li>Move to Layout Builder</li>
 <li>Migrations updated with Layout Builder support</li>
 <li>Page Title / Tabs support for Layout Builder</li>
-</ul>
-
-<p>Upgrade path:</p>
-
-<ul>
-<li><p>Update your codebase:</p>
-
-<ul>
-<li><code>composer update</code></li>
-</ul></li>
-
-<li><p>Run database updates:</p>
-
-<ul>
-<li><code>drush cache:rebuild</code></li>
-<li><code>drush updatedb</code></li>
-</ul></li>
-
-<li><p>Run Lightning configuration updates:</p>
-
-<ul>
-<li><code>drush cache:rebuild</code></li>
-<li><code>drush update:lightning</code></li>
-</ul></li>
-</ul>
-</td>
-      </tr>
-      
-      
-      <tr>
-          <td><strong>2.2.19</strong></td>
-          <td><strong>2019-09-08T16:02:10Z</strong></td>
-          <td><p>Security update:</p>
-
-<ul>
-<li>Update Drupal Core to <a href="https://www.drupal.org/project/drupal/releases/8.7.4">8.7.4</a>
-
-<ul>
-<li><a href="https://www.drupal.org/sa-core-2019-008">SA-CORE-2019-008</a></li>
-</ul></li>
-</ul>
-
-<p>Features/Updates:</p>
-
-<ul>
-<li>Update Drupal Core to 8.7.5</li>
-<li>Update Ctools to 3.0.0</li>
-<li>Update admin_toolbar to 1.27</li>
-<li>Update contact_storage to 1.0-beta10</li>
-<li>Update entity to 1.0-rc3</li>
-<li>Update entity_embed to 1.0</li>
-<li>Update entity_queue to 1.0-beta5</li>
-<li>Update lightning_api to 4.2</li>
-<li>Update lightning_core to 4.5</li>
-<li>Update lightning_media to 3.12</li>
-<li>Update lightning_workflow to 3.8</li>
-<li>Update media_entity_twitter to 2.0-alpha3</li>
-<li>Update metatag to 1.10</li>
-<li>Update schemata to 1.0-beta1</li>
-<li>Update search_api to 1.14</li>
-<li>Update simple_oauth to 3.16</li>
-<li>Update video_embed_field to 2.2</li>
-<li>Update views_infinite_scroll to 1.6</li>
-<li>Update webform to 5.4</li>
 </ul>
 
 <p>Upgrade path:</p>
