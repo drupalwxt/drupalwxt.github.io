@@ -28,7 +28,7 @@ Mandatory Features There are a lot of features inherently provided by Drupal WxT
       
       <guid>https://drupalwxt.github.io/wxt/d8/repositories/</guid>
       <description>The following table is a list of all the repositories that are housed under the DrupalWxT organization on GitHub.
-  Name Website Description Size     composer-extdeps drupalwxt/composer-extdeps Composer repository for external dependencies on Drupal WxT Size: 17 Bytes   docker-scaffold drupalwxt/docker-scaffold Docker Scaffold for Drupal WxT Size: 37 Bytes   drupalwxt.github.io drupalwxt/drupalwxt.github.io GH pages for Drupal WxT. Size: 11128 Bytes   helm-drupal drupalwxt/helm-drupal Drupal helm chart for Kubernetes.</description>
+  Name Website Description Size     composer-extdeps drupalwxt/composer-extdeps Composer repository for external dependencies on Drupal WxT Size: 20 Bytes   docker-scaffold drupalwxt/docker-scaffold Docker Scaffold for Drupal WxT Size: 67 Bytes   drupalwxt.github.io drupalwxt/drupalwxt.github.io GH pages for Drupal WxT. Size: 11135 Bytes   helm-drupal drupalwxt/helm-drupal Drupal helm chart for Kubernetes.</description>
     </item>
     
     <item>
@@ -38,8 +38,8 @@ Mandatory Features There are a lot of features inherently provided by Drupal WxT
       
       <guid>https://drupalwxt.github.io/wxt/d8/releases/</guid>
       <description>Important We try our best to have security releases of Drupal Core within 24-72 hours of being made available on drupal.org.
-   Release Created Date Description     3.0.8 2020-03-21T18:21:49Z Features/Updates:
- Update Drupal Core to 8.8.4 Update Lightning 4.1.3  Updated Lightning API to 4.5 Updated Lightning Media to 3.16  Updates for WxT  Now provide alternate styles support for slideshow blocks Formatting fixes and alignment of composer.</description>
+   Release Created Date Description      2020-06-19T23:40:14Z v3.0.12 Security updates:
+ Update Drupal Core to 8.8.8  SA-CORE-2020-004 SA-CORE-2020-005 SA-CORE-2020-006   Features/Updates: - Update Lightning 4.1.5 - Update acquia_connector to 1.22 - Update admin_toolbar to 2.3 - Update bootstrap_layouts to 5.2 - Update button_link to 1.</description>
     </item>
     
     <item>
