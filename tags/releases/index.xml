@@ -19,7 +19,8 @@
       <guid>https://drupalwxt.github.io/wxt/d8/releases/</guid>
       <description>Important We try our best to have security releases of Drupal Core within 24-72 hours of being made available on drupal.org.
    Release Created Date Description     3.0.12 2020-06-19T23:40:14Z Security updates:
- Update Drupal Core to 8.8.8  SA-CORE-2020-004 SA-CORE-2020-005 SA-CORE-2020-006   Features/Updates: - Update Lightning 4.1.5 - Update acquia_connector to 1.22 - Update admin_toolbar to 2.3 - Update bootstrap_layouts to 5.2 - Update button_link to 1.</description>
+ Update Drupal Core to 8.8.8  SA-CORE-2020-004 SA-CORE-2020-005 SA-CORE-2020-006   Features/Updates:
+ Update Lightning 4.1.5 Update acquia_connector to 1.22 Update admin_toolbar to 2.3 Update bootstrap_layouts to 5.2 Update button_link to 1.2 Update ckeditor_codemirror to 2.</description>
     </item>
     
   </channel>
