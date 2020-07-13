@@ -1,26 +1,3 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>post on Drupal WxT</title>
-    <link>https://drupalwxt.github.io/tags/post/</link>
-    <description>Recent content in post on Drupal WxT</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Tue, 01 Jan 2019 10:10:30 -0500</lastBuildDate>
-    
-	<atom:link href="https://drupalwxt.github.io/tags/post/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>Contributing to Documentation Site</title>
-      <link>https://drupalwxt.github.io/post/2019/01/01/contributing-to-documentation-site/</link>
-      <pubDate>Tue, 01 Jan 2019 10:10:30 -0500</pubDate>
-      
-      <guid>https://drupalwxt.github.io/post/2019/01/01/contributing-to-documentation-site/</guid>
-      <description>Our documentation site for Drupal WxT is powered by Hugo (a static site generator) that converts markdown files to html and allows for a quick and easy deployment to GitHub pages.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>post on Drupal WxT</title><link>https://drupalwxt.github.io/tags/post/</link><description>Recent content in post on Drupal WxT</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Tue, 01 Jan 2019 10:10:30 -0500</lastBuildDate><atom:link href="https://drupalwxt.github.io/tags/post/index.xml" rel="self" type="application/rss+xml"/><item><title>Contributing to Documentation Site</title><link>https://drupalwxt.github.io/post/2019/01/01/contributing-to-documentation-site/</link><pubDate>Tue, 01 Jan 2019 10:10:30 -0500</pubDate><guid>https://drupalwxt.github.io/post/2019/01/01/contributing-to-documentation-site/</guid><description>Our documentation site for Drupal WxT is powered by Hugo (a static site generator) that converts markdown files to html and allows for a quick and easy deployment to GitHub pages.
 This allows for contributors who feel the documentation is lacking in certain areas to simply perform a pull request and submit a markdown file alongside with the appropriate front matter (metadata about the content).
-Should the pull request be accepted the code will automatically be pushed to the live website via Travis CI and published to drupalwxt.</description>
-    </item>
-    
-  </channel>
-</rss>
+Should the pull request be accepted the code will automatically be pushed to the live website via Travis CI and published to drupalwxt.</description></item></channel></rss>
