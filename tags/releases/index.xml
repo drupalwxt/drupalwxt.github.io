@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>releases on Drupal WxT</title><link>https://drupalwxt.github.io/tags/releases/</link><description>Recent content in releases on Drupal WxT</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Mon, 23 Dec 2019 10:15:15 -0500</lastBuildDate><atom:link href="https://drupalwxt.github.io/tags/releases/index.xml" rel="self" type="application/rss+xml"/><item><title>Releases</title><link>https://drupalwxt.github.io/wxt/d8/releases/</link><pubDate>Mon, 23 Dec 2019 10:15:15 -0500</pubDate><guid>https://drupalwxt.github.io/wxt/d8/releases/</guid><description>Release Created Date Description 3.0.17 2020-11-19T19:53:28Z Features/Updates:
-Updates to Composer Support for Composer v2.0.0 Switch to drupal/core-dev to streamline our composer.json Updates for WxT Bootstrap Template issue for Main Menu Updates for WxT Library Improve Canada.ca search submit Upgrade path:
+Update Drupal Core to 8.8.10 SA-core-2020-012 Upgrade path:
 Update your codebase:
-composer update Run database updates:</description></item></channel></rss>
+composer update Run database updates:
+drush cache:rebuild drush updatedb Run Lightning configuration updates:
+drush cache:rebuild drush update:lightning Run WxT configuration updates:
+drush cache:rebuild drush update:wxt Note: The following modules are no longer provided by WXT.</description></item></channel></rss>
