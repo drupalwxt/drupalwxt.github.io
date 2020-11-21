@@ -4,4 +4,4 @@ Update your codebase:
 composer update Run database updates:
 drush cache:rebuild drush updatedb Run Lightning configuration updates:
 drush cache:rebuild drush update:lightning Run WxT configuration updates:
-drush cache:rebuild drush update:wxt Note: The following modules are no longer provided by WXT.</description></item></channel></rss>
+drush cache:rebuild drush update:wxt 3.</description></item></channel></rss>
