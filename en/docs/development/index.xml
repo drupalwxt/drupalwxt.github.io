@@ -1,0 +1,201 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Drupal WxT – Development</title><link>https://drupalwxt.github.io/en/docs/development/</link><description>Recent content in Development on Drupal WxT</description><generator>Hugo -- gohugo.io</generator><atom:link href="https://drupalwxt.github.io/en/docs/development/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs: Configuration Management</title><link>https://drupalwxt.github.io/en/docs/development/configuration-management/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://drupalwxt.github.io/en/docs/development/configuration-management/</guid><description>
+&lt;p>Drupal WxT thanks to the work done by the Acquia Team is able to use advanced
+configuration management strategies.&lt;/p>
+&lt;p>At the moment this remains an opt-in process and you will have to add the
+following modules to your &lt;code>composer.json&lt;/code> before you add the code snippet
+below to your &lt;code>settings.php&lt;/code> file.&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>&lt;a href="https://www.drupal.org/project/config_ignore">Configuration Split&lt;/a>&lt;/strong>&lt;/li>
+&lt;li>&lt;strong>&lt;a href="https://www.drupal.org/project/config_split">Configuration Ignore&lt;/a>&lt;/strong>&lt;/li>
+&lt;/ul>
+&lt;p>Once enabled all default configuration will be stored in &lt;code>/sites/default/files/config/default/&lt;/code>
+and then depending on your environment additionally configuration splits can
+be leveraged depending on your &lt;code>SDLC&lt;/code>.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-php" data-lang="php">&lt;span style="color:#8f5902;font-style:italic">/**
+&lt;/span>&lt;span style="color:#8f5902;font-style:italic"> * Configuration Split for Configuration Management
+&lt;/span>&lt;span style="color:#8f5902;font-style:italic"> *
+&lt;/span>&lt;span style="color:#8f5902;font-style:italic"> * WxT is following the best practices given by Acquia for configuration
+&lt;/span>&lt;span style="color:#8f5902;font-style:italic"> * management. The &amp;#34;default&amp;#34; configuration directory should be shared between
+&lt;/span>&lt;span style="color:#8f5902;font-style:italic"> * all multi-sites, and each multisite will override this selectively using
+&lt;/span>&lt;span style="color:#8f5902;font-style:italic"> * configuration splits.
+&lt;/span>&lt;span style="color:#8f5902;font-style:italic"> *
+&lt;/span>&lt;span style="color:#8f5902;font-style:italic"> * To disable this functionality simply set the following parameters:
+&lt;/span>&lt;span style="color:#8f5902;font-style:italic"> * $wxt_override_config_dirs = FALSE;
+&lt;/span>&lt;span style="color:#8f5902;font-style:italic"> * $settings[&amp;#39;config_sync_directory&amp;#39;] = $dir . &amp;#34;/config/$site_dir&amp;#34;;
+&lt;/span>&lt;span style="color:#8f5902;font-style:italic"> *
+&lt;/span>&lt;span style="color:#8f5902;font-style:italic"> * See https://github.com/acquia/blt/blob/12.x/settings/config.settings.php
+&lt;/span>&lt;span style="color:#8f5902;font-style:italic"> * for more information.
+&lt;/span>&lt;span style="color:#8f5902;font-style:italic"> */&lt;/span>
+&lt;span style="color:#204a87;font-weight:bold">use&lt;/span> &lt;span style="color:#000">Drupal\wxt\Robo\Common\EnvironmentDetector&lt;/span>&lt;span style="color:#000;font-weight:bold">;&lt;/span>
+&lt;span style="color:#204a87;font-weight:bold">if&lt;/span> &lt;span style="color:#000;font-weight:bold">(&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">!&lt;/span>&lt;span style="color:#000">isset&lt;/span>&lt;span style="color:#000;font-weight:bold">(&lt;/span>&lt;span style="color:#000">$wxt_override_config_dirs&lt;/span>&lt;span style="color:#000;font-weight:bold">))&lt;/span> &lt;span style="color:#000;font-weight:bold">{&lt;/span>
+&lt;span style="color:#000">$wxt_override_config_dirs&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span> &lt;span style="color:#204a87;font-weight:bold">TRUE&lt;/span>&lt;span style="color:#000;font-weight:bold">;&lt;/span>
+&lt;span style="color:#000;font-weight:bold">}&lt;/span>
+&lt;span style="color:#204a87;font-weight:bold">if&lt;/span> &lt;span style="color:#000;font-weight:bold">(&lt;/span>&lt;span style="color:#000">$wxt_override_config_dirs&lt;/span>&lt;span style="color:#000;font-weight:bold">)&lt;/span> &lt;span style="color:#000;font-weight:bold">{&lt;/span>
+&lt;span style="color:#000">$config_directories&lt;/span>&lt;span style="color:#000;font-weight:bold">[&lt;/span>&lt;span style="color:#4e9a06">&amp;#39;sync&amp;#39;&lt;/span>&lt;span style="color:#000;font-weight:bold">]&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span> &lt;span style="color:#000">$repo_root&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">.&lt;/span> &lt;span style="color:#4e9a06">&amp;#34;/var/www/html/sites/default/files/config/default&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">;&lt;/span>
+&lt;span style="color:#000">$settings&lt;/span>&lt;span style="color:#000;font-weight:bold">[&lt;/span>&lt;span style="color:#4e9a06">&amp;#39;config_sync_directory&amp;#39;&lt;/span>&lt;span style="color:#000;font-weight:bold">]&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span> &lt;span style="color:#000">$repo_root&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">.&lt;/span> &lt;span style="color:#4e9a06">&amp;#34;/var/www/html/sites/default/files/config/default&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">;&lt;/span>
+&lt;span style="color:#000;font-weight:bold">}&lt;/span>
+&lt;span style="color:#000">$split_filename_prefix&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span> &lt;span style="color:#4e9a06">&amp;#39;config_split.config_split&amp;#39;&lt;/span>&lt;span style="color:#000;font-weight:bold">;&lt;/span>
+&lt;span style="color:#204a87;font-weight:bold">if&lt;/span> &lt;span style="color:#000;font-weight:bold">(&lt;/span>&lt;span style="color:#000">isset&lt;/span>&lt;span style="color:#000;font-weight:bold">(&lt;/span>&lt;span style="color:#000">$config_directories&lt;/span>&lt;span style="color:#000;font-weight:bold">[&lt;/span>&lt;span style="color:#4e9a06">&amp;#39;sync&amp;#39;&lt;/span>&lt;span style="color:#000;font-weight:bold">]))&lt;/span> &lt;span style="color:#000;font-weight:bold">{&lt;/span>
+&lt;span style="color:#000">$split_filepath_prefix&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span> &lt;span style="color:#000">$config_directories&lt;/span>&lt;span style="color:#000;font-weight:bold">[&lt;/span>&lt;span style="color:#4e9a06">&amp;#39;sync&amp;#39;&lt;/span>&lt;span style="color:#000;font-weight:bold">]&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">.&lt;/span> &lt;span style="color:#4e9a06">&amp;#39;/&amp;#39;&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">.&lt;/span> &lt;span style="color:#000">$split_filename_prefix&lt;/span>&lt;span style="color:#000;font-weight:bold">;&lt;/span>
+&lt;span style="color:#000;font-weight:bold">}&lt;/span>
+&lt;span style="color:#204a87;font-weight:bold">else&lt;/span> &lt;span style="color:#000;font-weight:bold">{&lt;/span>
+&lt;span style="color:#000">$split_filepath_prefix&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span> &lt;span style="color:#000">$settings&lt;/span>&lt;span style="color:#000;font-weight:bold">[&lt;/span>&lt;span style="color:#4e9a06">&amp;#39;config_sync_directory&amp;#39;&lt;/span>&lt;span style="color:#000;font-weight:bold">]&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">.&lt;/span> &lt;span style="color:#4e9a06">&amp;#39;/&amp;#39;&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">.&lt;/span> &lt;span style="color:#000">$split_filename_prefix&lt;/span>&lt;span style="color:#000;font-weight:bold">;&lt;/span>
+&lt;span style="color:#000;font-weight:bold">}&lt;/span>
+&lt;span style="color:#8f5902;font-style:italic">/**
+&lt;/span>&lt;span style="color:#8f5902;font-style:italic"> * Set environment splits.
+&lt;/span>&lt;span style="color:#8f5902;font-style:italic"> */&lt;/span>
+&lt;span style="color:#000">$split_envs&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span> &lt;span style="color:#000;font-weight:bold">[&lt;/span>
+&lt;span style="color:#4e9a06">&amp;#39;local&amp;#39;&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span>
+&lt;span style="color:#4e9a06">&amp;#39;dev&amp;#39;&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span>
+&lt;span style="color:#4e9a06">&amp;#39;test&amp;#39;&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span>
+&lt;span style="color:#4e9a06">&amp;#39;qa&amp;#39;&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span>
+&lt;span style="color:#4e9a06">&amp;#39;prod&amp;#39;&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span>
+&lt;span style="color:#4e9a06">&amp;#39;ci&amp;#39;&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span>
+&lt;span style="color:#000;font-weight:bold">];&lt;/span>
+&lt;span style="color:#204a87;font-weight:bold">foreach&lt;/span> &lt;span style="color:#000;font-weight:bold">(&lt;/span>&lt;span style="color:#000">$split_envs&lt;/span> &lt;span style="color:#204a87;font-weight:bold">as&lt;/span> &lt;span style="color:#000">$split_env&lt;/span>&lt;span style="color:#000;font-weight:bold">)&lt;/span> &lt;span style="color:#000;font-weight:bold">{&lt;/span>
+&lt;span style="color:#000">$config&lt;/span>&lt;span style="color:#000;font-weight:bold">[&lt;/span>&lt;span style="color:#4e9a06">&amp;#34;&lt;/span>&lt;span style="color:#4e9a06">$split_filename_prefix&lt;/span>&lt;span style="color:#4e9a06">.&lt;/span>&lt;span style="color:#4e9a06">$split_env&lt;/span>&lt;span style="color:#4e9a06">&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">][&lt;/span>&lt;span style="color:#4e9a06">&amp;#39;status&amp;#39;&lt;/span>&lt;span style="color:#000;font-weight:bold">]&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span> &lt;span style="color:#204a87;font-weight:bold">FALSE&lt;/span>&lt;span style="color:#000;font-weight:bold">;&lt;/span>
+&lt;span style="color:#000;font-weight:bold">}&lt;/span>
+&lt;span style="color:#204a87;font-weight:bold">if&lt;/span> &lt;span style="color:#000;font-weight:bold">(&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">!&lt;/span>&lt;span style="color:#000">isset&lt;/span>&lt;span style="color:#000;font-weight:bold">(&lt;/span>&lt;span style="color:#000">$split&lt;/span>&lt;span style="color:#000;font-weight:bold">))&lt;/span> &lt;span style="color:#000;font-weight:bold">{&lt;/span>
+&lt;span style="color:#000">$split&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span> &lt;span style="color:#4e9a06">&amp;#39;none&amp;#39;&lt;/span>&lt;span style="color:#000;font-weight:bold">;&lt;/span>
+&lt;span style="color:#204a87;font-weight:bold">if&lt;/span> &lt;span style="color:#000;font-weight:bold">(&lt;/span>&lt;span style="color:#000">EnvironmentDetector&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">::&lt;/span>&lt;span style="color:#c4a000">isLocalEnv&lt;/span>&lt;span style="color:#000;font-weight:bold">())&lt;/span> &lt;span style="color:#000;font-weight:bold">{&lt;/span>
+&lt;span style="color:#000">$split&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span> &lt;span style="color:#4e9a06">&amp;#39;local&amp;#39;&lt;/span>&lt;span style="color:#000;font-weight:bold">;&lt;/span>
+&lt;span style="color:#000;font-weight:bold">}&lt;/span>
+&lt;span style="color:#204a87;font-weight:bold">if&lt;/span> &lt;span style="color:#000;font-weight:bold">(&lt;/span>&lt;span style="color:#000">EnvironmentDetector&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">::&lt;/span>&lt;span style="color:#c4a000">isCiEnv&lt;/span>&lt;span style="color:#000;font-weight:bold">())&lt;/span> &lt;span style="color:#000;font-weight:bold">{&lt;/span>
+&lt;span style="color:#000">$split&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span> &lt;span style="color:#4e9a06">&amp;#39;ci&amp;#39;&lt;/span>&lt;span style="color:#000;font-weight:bold">;&lt;/span>
+&lt;span style="color:#000;font-weight:bold">}&lt;/span>
+&lt;span style="color:#204a87;font-weight:bold">if&lt;/span> &lt;span style="color:#000;font-weight:bold">(&lt;/span>&lt;span style="color:#000">EnvironmentDetector&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">::&lt;/span>&lt;span style="color:#c4a000">isDevEnv&lt;/span>&lt;span style="color:#000;font-weight:bold">())&lt;/span> &lt;span style="color:#000;font-weight:bold">{&lt;/span>
+&lt;span style="color:#000">$split&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span> &lt;span style="color:#4e9a06">&amp;#39;dev&amp;#39;&lt;/span>&lt;span style="color:#000;font-weight:bold">;&lt;/span>
+&lt;span style="color:#000;font-weight:bold">}&lt;/span>
+&lt;span style="color:#204a87;font-weight:bold">elseif&lt;/span> &lt;span style="color:#000;font-weight:bold">(&lt;/span>&lt;span style="color:#000">EnvironmentDetector&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">::&lt;/span>&lt;span style="color:#c4a000">isTestEnv&lt;/span>&lt;span style="color:#000;font-weight:bold">())&lt;/span> &lt;span style="color:#000;font-weight:bold">{&lt;/span>
+&lt;span style="color:#000">$split&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span> &lt;span style="color:#4e9a06">&amp;#39;test&amp;#39;&lt;/span>&lt;span style="color:#000;font-weight:bold">;&lt;/span>
+&lt;span style="color:#000;font-weight:bold">}&lt;/span>
+&lt;span style="color:#204a87;font-weight:bold">elseif&lt;/span> &lt;span style="color:#000;font-weight:bold">(&lt;/span>&lt;span style="color:#000">EnvironmentDetector&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">::&lt;/span>&lt;span style="color:#c4a000">isQaEnv&lt;/span>&lt;span style="color:#000;font-weight:bold">())&lt;/span> &lt;span style="color:#000;font-weight:bold">{&lt;/span>
+&lt;span style="color:#000">$split&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span> &lt;span style="color:#4e9a06">&amp;#39;qa&amp;#39;&lt;/span>&lt;span style="color:#000;font-weight:bold">;&lt;/span>
+&lt;span style="color:#000;font-weight:bold">}&lt;/span>
+&lt;span style="color:#204a87;font-weight:bold">elseif&lt;/span> &lt;span style="color:#000;font-weight:bold">(&lt;/span>&lt;span style="color:#000">EnvironmentDetector&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">::&lt;/span>&lt;span style="color:#c4a000">isProdEnv&lt;/span>&lt;span style="color:#000;font-weight:bold">())&lt;/span> &lt;span style="color:#000;font-weight:bold">{&lt;/span>
+&lt;span style="color:#000">$split&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span> &lt;span style="color:#4e9a06">&amp;#39;prod&amp;#39;&lt;/span>&lt;span style="color:#000;font-weight:bold">;&lt;/span>
+&lt;span style="color:#000;font-weight:bold">}&lt;/span>
+&lt;span style="color:#000;font-weight:bold">}&lt;/span>
+&lt;span style="color:#204a87;font-weight:bold">if&lt;/span> &lt;span style="color:#000;font-weight:bold">(&lt;/span>&lt;span style="color:#000">$split&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">!=&lt;/span> &lt;span style="color:#4e9a06">&amp;#39;none&amp;#39;&lt;/span>&lt;span style="color:#000;font-weight:bold">)&lt;/span> &lt;span style="color:#000;font-weight:bold">{&lt;/span>
+&lt;span style="color:#000">$config&lt;/span>&lt;span style="color:#000;font-weight:bold">[&lt;/span>&lt;span style="color:#4e9a06">&amp;#34;&lt;/span>&lt;span style="color:#4e9a06">$split_filename_prefix&lt;/span>&lt;span style="color:#4e9a06">.&lt;/span>&lt;span style="color:#4e9a06">$split&lt;/span>&lt;span style="color:#4e9a06">&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">][&lt;/span>&lt;span style="color:#4e9a06">&amp;#39;status&amp;#39;&lt;/span>&lt;span style="color:#000;font-weight:bold">]&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span> &lt;span style="color:#204a87;font-weight:bold">TRUE&lt;/span>&lt;span style="color:#000;font-weight:bold">;&lt;/span>
+&lt;span style="color:#000;font-weight:bold">}&lt;/span>
+&lt;span style="color:#8f5902;font-style:italic">/**
+&lt;/span>&lt;span style="color:#8f5902;font-style:italic"> * Set multisite split.
+&lt;/span>&lt;span style="color:#8f5902;font-style:italic"> */&lt;/span>
+&lt;span style="color:#8f5902;font-style:italic">// $config[&amp;#34;$split_filename_prefix.SITENAME&amp;#34;][&amp;#39;status&amp;#39;] = TRUE;
+&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;!-- Links Referenced --></description></item><item><title>Docs: Performance</title><link>https://drupalwxt.github.io/en/docs/development/performance/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://drupalwxt.github.io/en/docs/development/performance/</guid><description>
+&lt;p>Below are some recommended settings that improve the performance of &lt;strong>&lt;a href="https://github.com/drupalwxt/wxt">Drupal WxT&lt;/a>&lt;/strong> sites.&lt;/p>
+&lt;!-- Links Referenced --></description></item><item><title>Docs: Release Process</title><link>https://drupalwxt.github.io/en/docs/development/release-process/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://drupalwxt.github.io/en/docs/development/release-process/</guid><description>
+&lt;h2 id="select-a-version-number">Select a version number&lt;/h2>
+&lt;p>WxT releases are numbered using a form of semantic versioning. More information can be found in our &lt;strong>&lt;a href="../../../en/docs/development/version/">Versioning&lt;/a>&lt;/strong> page.&lt;/p>
+&lt;p>&lt;code>MAJOR.FEATURE.SPRINT&lt;/code>&lt;/p>
+&lt;p>In general, when preparing a release: increment the FEATURE when Drupal Core has a major release (ie. 9.2.x to 9.3.x) otherwise simply increment the SPRINT number.&lt;/p>
+&lt;h2 id="create-an-issue-on-githubcom">Create an issue on GitHub.com&lt;/h2>
+&lt;p>Create an issue in the &lt;strong>&lt;a href="https://github.com/drupalwxt/wxt">Drupal WxT&lt;/a>&lt;/strong> project on GitHub for release tracking, title it &lt;code>Release x.x.x&lt;/code> (where x.x.x is the incremented version number).&lt;/p>
+&lt;p>This issue should contain the following checklist as well as any other related steps or information regarding preparing the release.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-sh" data-lang="sh">See the &lt;span style="color:#ce5c00;font-weight:bold">[&lt;/span>full release documentation&lt;span style="color:#ce5c00;font-weight:bold">](&lt;/span>https://drupalwxt.github.io/en/docs/development/release-process/&lt;span style="color:#ce5c00;font-weight:bold">)&lt;/span> &lt;span style="color:#204a87;font-weight:bold">for&lt;/span> more detail.
+- &lt;span style="color:#ce5c00;font-weight:bold">[&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">]&lt;/span> All related projects &lt;span style="color:#ce5c00;font-weight:bold">(&lt;/span>wxt_library and wxt_bootstrap&lt;span style="color:#ce5c00;font-weight:bold">)&lt;/span> tagged and released on GitHub.com and Drupal.org
+- &lt;span style="color:#ce5c00;font-weight:bold">[&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">]&lt;/span> Version number selected
+- &lt;span style="color:#ce5c00;font-weight:bold">[&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">]&lt;/span> CHANGELOG.md updated
+- &lt;span style="color:#ce5c00;font-weight:bold">[&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">]&lt;/span> composer.json updated
+- &lt;span style="color:#ce5c00;font-weight:bold">[&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">]&lt;/span> Run version.sh &lt;span style="color:#204a87;font-weight:bold">for&lt;/span> hook_updates and wxt contrib
+- &lt;span style="color:#ce5c00;font-weight:bold">[&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">]&lt;/span> CI build passes
+- &lt;span style="color:#ce5c00;font-weight:bold">[&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">]&lt;/span> Releases tagged and pushed to GitHub.com and Drupal.org
+- &lt;span style="color:#ce5c00;font-weight:bold">[&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">]&lt;/span> WxT released on Drupal.org &lt;span style="color:#ce5c00;font-weight:bold">(&lt;/span>https://drupalwxt.github.io/en/docs/development/release-process/#release&lt;span style="color:#ce5c00;font-weight:bold">)&lt;/span>
+- &lt;span style="color:#ce5c00;font-weight:bold">[&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">]&lt;/span> Add changelog information to published tag once CI is &lt;span style="color:#204a87;font-weight:bold">done&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="update-changelog">Update changelog&lt;/h2>
+&lt;p>Ensure the changelog contains an entry for the release and is updated as issues and changes are resolved (in the next steps or when committing code / changes).&lt;/p>
+&lt;h2 id="review-dependent-wxt-modules">Review dependent wxt modules&lt;/h2>
+&lt;ol>
+&lt;li>Review contrib modules in composer.json (or in a site install; extend-&amp;gt;update) and update as necessary.&lt;/li>
+&lt;li>If necessary, tag &lt;strong>&lt;a href="https://github.com/drupalwxt/wxt_library">wxt_library&lt;/a>&lt;/strong> and update &lt;strong>&lt;a href="https://github.com/drupalwxt/wxt">wxt&lt;/a>&lt;/strong>&amp;rsquo;s &lt;code>composer.json&lt;/code> file&lt;/li>
+&lt;li>If necessary, tag &lt;strong>&lt;a href="https://github.com/drupalwxt/wxt_bootstrap">wxt_bootstrap&lt;/a>&lt;/strong> and update &lt;strong>&lt;a href="https://github.com/drupalwxt/wxt">wxt&lt;/a>&lt;/strong>&amp;rsquo;s &lt;code>composer.json&lt;/code> file&lt;/li>
+&lt;/ol>
+&lt;p>All projects must be released on drupal.org (and github).&lt;/p>
+&lt;blockquote>
+&lt;p>&lt;strong>Note&lt;/strong>: Changes to &lt;code>composer.json&lt;/code> file (specifically dev dependencies and repositories) should be mentioned in the CHANGELOG.&lt;/p>
+&lt;/blockquote>
+&lt;h3 id="drupalorg-version">Drupal.org version&lt;/h3>
+&lt;p>Drupal.org does not currently support semantic versioning. Instead, the version number on drupal.org is &lt;code>8.x-X.YZZ&lt;/code>, where:&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>X = MAJOR&lt;/code>&lt;/li>
+&lt;li>&lt;code>Y = FEATURE&lt;/code>&lt;/li>
+&lt;li>&lt;code>ZZ = SPRINT&lt;/code> (two digits - add leading zero for &amp;lt; 10)&lt;/li>
+&lt;/ul>
+&lt;h2 id="check-composerjson">Check composer.json&lt;/h2>
+&lt;p>If the wxt dependent modules are updated, we need to reflect this in wxt &lt;code>composer.json&lt;/code> and the CHANGELOG.&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>git clone https://github.com/drupalwxt/wxt.git&lt;/code>&lt;/li>
+&lt;li>Confirm or update that it&amp;rsquo;s using appropriate tags of &lt;strong>&lt;a href="https://github.com/drupalwxt/wxt_library">wxt_library&lt;/a>&lt;/strong> + &lt;strong>&lt;a href="https://github.com/drupalwxt/wxt_bootstrap">wxt_bootstrap&lt;/a>&lt;/strong> (&lt;code>composer.json&lt;/code>)&lt;/li>
+&lt;li>Push to github.com and drupal.org repositories any changes&lt;/li>
+&lt;li>Ensure GitHub Actions build passes&lt;/li>
+&lt;/ul>
+&lt;h2 id="tag-wxt">Tag WxT&lt;/h2>
+&lt;h3 id="githubcom-and-drupalorg">GitHub.com and Drupal.org&lt;/h3>
+&lt;ul>
+&lt;li>&lt;code>git tag MAJOR.FEATURE.SPRINT&lt;/code>&lt;/li>
+&lt;li>&lt;code>git push $GITHUB_REMOTE MAJOR.FEATURE.SPRINT&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;h2 id="release">Release&lt;/h2>
+&lt;h3 id="githubcom">GitHub.com&lt;/h3>
+&lt;ol>
+&lt;li>Go to &lt;strong>&lt;a href="https://github.com/drupalwxt/wxt/tags">Tags&lt;/a>&lt;/strong> page&lt;/li>
+&lt;li>Click &amp;hellip; and select create release on the tag&lt;/li>
+&lt;li>Enter the version number in the &lt;em>release title&lt;/em>&lt;/li>
+&lt;li>Copy the changelog entry for this release into the &lt;code>release notes&lt;/code>&lt;/li>
+&lt;li>Click publish release&lt;/li>
+&lt;/ol>
+&lt;h3 id="drupalorg">Drupal.org&lt;/h3>
+&lt;p>The builds on Drupal.org are incomplete as they don&amp;rsquo;t fully support Composer yet which is why we host a tarball on GitHub for those not using Composer.&lt;/p>
+&lt;ol>
+&lt;li>&lt;strong>&lt;a href="https://www.drupal.org/node/add/project-release/2619112">Drupal WxT Release Page&lt;/a>&lt;/strong>&lt;/li>
+&lt;li>Select the tag&lt;/li>
+&lt;li>Copy/paste the following blurb into the release notes:&lt;/li>
+&lt;/ol>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-sh" data-lang="sh">&amp;lt;strong&amp;gt;CHANGELOG&amp;lt;/strong&amp;gt;
+See the &amp;lt;a &lt;span style="color:#000">href&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span>&lt;span style="color:#4e9a06">&amp;#34;https://github.com/drupalwxt/wxt/blob/8.x-2.x/CHANGELOG.md&amp;#34;&lt;/span>&amp;gt;changelog.md&amp;lt;/a&amp;gt; file.
+&lt;/code>&lt;/pre>&lt;/div>&lt;!-- Links Referenced --></description></item><item><title>Docs: Versioning</title><link>https://drupalwxt.github.io/en/docs/development/version/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://drupalwxt.github.io/en/docs/development/version/</guid><description>
+&lt;p>The &lt;strong>&lt;a href="https://github.com/drupalwxt/wxt">Drupal WxT&lt;/a>&lt;/strong> distribution is following semantic versioning.&lt;/p>
+&lt;p>WxT typically makes a sprint release every four to six weeks. We will also use sprint releases to package new minor releases of Drupal Core with WxT as they become available.&lt;/p>
+&lt;p>In addition, we will also increment the major version number of WxT about once every four to six months.&lt;/p>
+&lt;h2 id="extensions">Extensions&lt;/h2>
+&lt;p>Support for semantic versioning for extensions (modules, themes, etc) is still ongoing.&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>&lt;a href="https://www.drupal.org/project/drupal/issues/3009338">Support semantic versioning for extensions (modules, themes, etc)&lt;/a>&lt;/strong>&lt;/li>
+&lt;/ul>
+&lt;p>The three parts of our versioning system are MAJOR.FEATURE.SPRINT.&lt;/p>
+&lt;p>Given the following tag: 9.x-2.15:&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>&lt;/th>
+&lt;th>&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>&lt;strong>9&lt;/strong>&lt;/td>
+&lt;td>Major version of Drupal Core&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>x&lt;/strong>&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>2&lt;/strong>&lt;/td>
+&lt;td>Major version of WxT&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>1&lt;/strong>&lt;/td>
+&lt;td>Feature release of WxT. Also increments with minor core releases.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>5&lt;/strong>&lt;/td>
+&lt;td>Sprint release between feature releases&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;blockquote>
+&lt;p>&lt;strong>Note&lt;/strong>: Due to the constraints of drupal.org, there is no separator between the FEATURE and SPRINT digits.&lt;/p>
+&lt;/blockquote>
+&lt;!-- Links Referenced --></description></item></channel></rss>

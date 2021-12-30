@@ -1,0 +1,63 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Drupal WxT – docker</title><link>https://drupalwxt.github.io/en/tags/docker/</link><description>Recent content in docker on Drupal WxT</description><generator>Hugo -- gohugo.io</generator><atom:link href="https://drupalwxt.github.io/en/tags/docker/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs: Containers</title><link>https://drupalwxt.github.io/en/docs/environment/containers/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://drupalwxt.github.io/en/docs/environment/containers/</guid><description>
+&lt;p>For the (optional) container based development workflow this is roughly the steps that are followed.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-sh" data-lang="sh">&lt;span style="color:#8f5902;font-style:italic"># Git clone docker scaffold&lt;/span>
+git clone https://github.com/drupalwxt/docker-scaffold.git docker
+&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="linux-environments">Linux Environments&lt;/h2>
+&lt;p>The following are the steps you should follow for a Linux based environment.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-sh" data-lang="sh">&lt;span style="color:#8f5902;font-style:italic"># Create symlinks&lt;/span>
+ln -s docker/docker-compose.yml docker-compose.yml
+ln -s docker/docker-compose-ci.yml docker-compose-ci.yml
+&lt;span style="color:#8f5902;font-style:italic"># Composer install&lt;/span>
+&lt;span style="color:#204a87">export&lt;/span> &lt;span style="color:#000">COMPOSER_MEMORY_LIMIT&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span>-1 &lt;span style="color:#ce5c00;font-weight:bold">&amp;amp;&amp;amp;&lt;/span> composer install
+&lt;span style="color:#8f5902;font-style:italic"># Make our base docker image&lt;/span>
+make build
+&lt;span style="color:#8f5902;font-style:italic"># Bring up the dev stack&lt;/span>
+docker-compose -f docker-compose.yml build --no-cache
+docker-compose -f docker-compose.yml up -d
+&lt;span style="color:#8f5902;font-style:italic"># Install Drupal&lt;/span>
+make drupal_install
+&lt;span style="color:#8f5902;font-style:italic"># Development configuration&lt;/span>
+./docker/bin/drush config-set system.performance js.preprocess &lt;span style="color:#0000cf;font-weight:bold">0&lt;/span> -y &lt;span style="color:#ce5c00;font-weight:bold">&amp;amp;&amp;amp;&lt;/span> &lt;span style="color:#4e9a06">\
+&lt;/span>&lt;span style="color:#4e9a06">&lt;/span>./docker/bin/drush config-set system.performance css.preprocess &lt;span style="color:#0000cf;font-weight:bold">0&lt;/span> -y &lt;span style="color:#ce5c00;font-weight:bold">&amp;amp;&amp;amp;&lt;/span> &lt;span style="color:#4e9a06">\
+&lt;/span>&lt;span style="color:#4e9a06">&lt;/span>./docker/bin/drush php-eval &lt;span style="color:#4e9a06">&amp;#39;node_access_rebuild();&amp;#39;&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">&amp;amp;&amp;amp;&lt;/span> &lt;span style="color:#4e9a06">\
+&lt;/span>&lt;span style="color:#4e9a06">&lt;/span>./docker/bin/drush config-set wxt_library.settings wxt.theme theme-gcweb -y &lt;span style="color:#ce5c00;font-weight:bold">&amp;amp;&amp;amp;&lt;/span> &lt;span style="color:#4e9a06">\
+&lt;/span>&lt;span style="color:#4e9a06">&lt;/span>./docker/bin/drush cr
+&lt;span style="color:#8f5902;font-style:italic"># Migrate default content&lt;/span>
+./docker/bin/drush migrate:import --group wxt --tag &lt;span style="color:#4e9a06">&amp;#39;Core&amp;#39;&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">&amp;amp;&amp;amp;&lt;/span> &lt;span style="color:#4e9a06">\
+&lt;/span>&lt;span style="color:#4e9a06">&lt;/span>./docker/bin/drush migrate:import --group gcweb --tag &lt;span style="color:#4e9a06">&amp;#39;Core&amp;#39;&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">&amp;amp;&amp;amp;&lt;/span> &lt;span style="color:#4e9a06">\
+&lt;/span>&lt;span style="color:#4e9a06">&lt;/span>./docker/bin/drush migrate:import --group gcweb --tag &lt;span style="color:#4e9a06">&amp;#39;Menu&amp;#39;&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="macosx-environments">MacOSX Environments&lt;/h2>
+&lt;p>There are currently known performance issues related to the file mounting in &lt;code>Docker for Desktop&lt;/code>&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>&lt;a href="https://github.com/docker/roadmap/issues/7">Improve Mac File system performance&lt;/a>&lt;/strong>&lt;/li>
+&lt;/ul>
+&lt;p>This is supposed to be fixed with the new virtualization framework in MacOSX 11.1+ but for the moment mutagen should be used.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-sh" data-lang="sh">&lt;span style="color:#8f5902;font-style:italic"># Mutagen Setup&lt;/span>
+&lt;span style="color:#204a87">export&lt;/span> &lt;span style="color:#000">VOLUME&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span>mutagen-cache
+&lt;span style="color:#204a87">export&lt;/span> &lt;span style="color:#000">NAME&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span>site-wxt
+docker volume create &lt;span style="color:#000">$VOLUME&lt;/span>
+docker container create --name &lt;span style="color:#000">$VOLUME&lt;/span> -v &lt;span style="color:#000">$VOLUME&lt;/span>:/volumes/&lt;span style="color:#000">$VOLUME&lt;/span> mutagenio/sidecar:0.13.0-beta3
+docker start &lt;span style="color:#000">$VOLUME&lt;/span>
+mutagen sync create --name &lt;span style="color:#000">$NAME&lt;/span> --sync-mode&lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span>two-way-resolved --default-file-mode-beta &lt;span style="color:#0000cf;font-weight:bold">0666&lt;/span> --default-directory-mode-beta &lt;span style="color:#0000cf;font-weight:bold">0777&lt;/span> &lt;span style="color:#204a87;font-weight:bold">$(&lt;/span>&lt;span style="color:#204a87">pwd&lt;/span>&lt;span style="color:#204a87;font-weight:bold">)&lt;/span> docker://mutagen-cache/volumes/mutagen-cache
+&lt;span style="color:#8f5902;font-style:italic"># Create symlinks&lt;/span>
+ln -s docker/docker-compose-mutagen.yml docker-compose-mutagen.yml
+&lt;span style="color:#8f5902;font-style:italic"># Composer install&lt;/span>
+&lt;span style="color:#204a87">export&lt;/span> &lt;span style="color:#000">COMPOSER_MEMORY_LIMIT&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span>-1 &lt;span style="color:#ce5c00;font-weight:bold">&amp;amp;&amp;amp;&lt;/span> composer install
+&lt;span style="color:#8f5902;font-style:italic"># Make our base docker image&lt;/span>
+make build
+&lt;span style="color:#8f5902;font-style:italic"># Bring up the dev stack&lt;/span>
+docker-compose -f docker-compose-mutagen.yml build --no-cache
+docker-compose -f docker-compose-mutagen.yml up -d
+&lt;span style="color:#8f5902;font-style:italic"># Install Drupal&lt;/span>
+make drupal_install
+&lt;span style="color:#8f5902;font-style:italic"># Development configuration&lt;/span>
+./docker/bin/drush config-set system.performance js.preprocess &lt;span style="color:#0000cf;font-weight:bold">0&lt;/span> -y &lt;span style="color:#ce5c00;font-weight:bold">&amp;amp;&amp;amp;&lt;/span> &lt;span style="color:#4e9a06">\
+&lt;/span>&lt;span style="color:#4e9a06">&lt;/span>./docker/bin/drush config-set system.performance css.preprocess &lt;span style="color:#0000cf;font-weight:bold">0&lt;/span> -y &lt;span style="color:#ce5c00;font-weight:bold">&amp;amp;&amp;amp;&lt;/span> &lt;span style="color:#4e9a06">\
+&lt;/span>&lt;span style="color:#4e9a06">&lt;/span>./docker/bin/drush php-eval &lt;span style="color:#4e9a06">&amp;#39;node_access_rebuild();&amp;#39;&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">&amp;amp;&amp;amp;&lt;/span> &lt;span style="color:#4e9a06">\
+&lt;/span>&lt;span style="color:#4e9a06">&lt;/span>./docker/bin/drush config-set wxt_library.settings wxt.theme theme-gcweb -y &lt;span style="color:#ce5c00;font-weight:bold">&amp;amp;&amp;amp;&lt;/span> &lt;span style="color:#4e9a06">\
+&lt;/span>&lt;span style="color:#4e9a06">&lt;/span>./docker/bin/drush cr
+&lt;span style="color:#8f5902;font-style:italic"># Migrate default content&lt;/span>
+./docker/bin/drush migrate:import --group wxt --tag &lt;span style="color:#4e9a06">&amp;#39;Core&amp;#39;&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">&amp;amp;&amp;amp;&lt;/span> &lt;span style="color:#4e9a06">\
+&lt;/span>&lt;span style="color:#4e9a06">&lt;/span>./docker/bin/drush migrate:import --group gcweb --tag &lt;span style="color:#4e9a06">&amp;#39;Core&amp;#39;&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">&amp;amp;&amp;amp;&lt;/span> &lt;span style="color:#4e9a06">\
+&lt;/span>&lt;span style="color:#4e9a06">&lt;/span>./docker/bin/drush migrate:import --group gcweb --tag &lt;span style="color:#4e9a06">&amp;#39;Menu&amp;#39;&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;!-- Links Referenced --></description></item></channel></rss>

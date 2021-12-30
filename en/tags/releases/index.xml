@@ -1,0 +1,433 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Drupal WxT – releases</title><link>https://drupalwxt.github.io/en/tags/releases/</link><description>Recent content in releases on Drupal WxT</description><generator>Hugo -- gohugo.io</generator><atom:link href="https://drupalwxt.github.io/en/tags/releases/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs: Releases</title><link>https://drupalwxt.github.io/en/docs/general/releases/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://drupalwxt.github.io/en/docs/general/releases/</guid><description>
+&lt;div class="alert alert-warning" role="alert">
+We try our best to have security releases of Drupal Core within &lt;strong>24-72 hours&lt;/strong> of being made available on &lt;strong>&lt;a href="https://www.drupal.org/project/drupal">drupal.org&lt;/a>&lt;/strong>.
+&lt;/div>
+&lt;h2 id="releases-of-drupal-wxt">Releases of Drupal WxT&lt;/h2>
+&lt;p>The following table is a list of all the releases that are housed under the &lt;strong>&lt;a href="https://github.com/drupalwxt/wxt">Drupal WxT&lt;/a>&lt;/strong> organization on GitHub:&lt;/p>
+&lt;table class="gh-releases table table-striped table-bordered table-hover">
+&lt;thead>
+&lt;tr>
+&lt;th>Release&lt;/th>
+&lt;th>Created Date&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>&lt;strong>4.1.2&lt;/strong>&lt;/td>
+&lt;td>&lt;strong>2021-11-22&lt;/strong>&lt;/td>
+&lt;td>&lt;p>Features / Updates:&lt;/p>
+&lt;ul>
+&lt;li>Updates for Drupal Core (v9.1.14)
+&lt;ul>
+&lt;li>&lt;a href="https://www.drupal.org/sa-core-2021-011">SA-core-2021-011&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Updates for WxT
+&lt;ul>
+&lt;li>CKEditor table improvements &lt;a href="https://www.drupal.org/project/wxt/issues/3247278">#3247278&lt;/a>&lt;/li>
+&lt;li>D9 Core patch fixing missing hooks &lt;a href="https://www.drupal.org/project/wxt/issues/3241632">#3241632&lt;/a>&lt;/li>
+&lt;li>Update linkit for SA &lt;a href="https://www.drupal.org/project/wxt/issues/3240307">#3240307&lt;/a>&lt;/li>
+&lt;li>Update token_filter for core fix &lt;a href="https://www.drupal.org/project/token_filter/issues/3236440">#3236440&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Updates for WxT Bootstrap
+&lt;ul>
+&lt;li>CKEditor table improvements &lt;a href="https://www.drupal.org/project/wxt/issues/3247943">#3247943&lt;/a>&lt;/li>
+&lt;li>Add aria-current to GC Subway navigation &lt;a href="https://www.drupal.org/project/wxt/issues/3243162">#3243162&lt;/a>&lt;/li>
+&lt;li>Accessibility issue in GC Intranet menu &lt;a href="https://www.drupal.org/project/wxt/issues/3240931">#3240931&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Updates for WxT Library
+&lt;ul>
+&lt;li>Language switcher issue on Intranet theme &lt;a href="https://www.drupal.org/project/wxt/issues/3246029">#3246029&lt;/a>&lt;/li>
+&lt;li>Undefined variable $wxt_active &lt;a href="https://www.drupal.org/project/wxt/issues/3250005">#3250005&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>Upgrade path:&lt;/p>
+&lt;blockquote>
+&lt;p>Note: No special notes for this release.&lt;/p>
+&lt;/blockquote>
+&lt;ul>
+&lt;li>
+&lt;p>Update your codebase:&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>composer update&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>Run database updates:&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>drush cache:rebuild&lt;/code>&lt;/li>
+&lt;li>&lt;code>drush updatedb&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>Run Lightning configuration updates:&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>drush cache:rebuild&lt;/code>&lt;/li>
+&lt;li>&lt;code>drush update:lightning&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>Run WxT configuration updates:&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>drush cache:rebuild&lt;/code>&lt;/li>
+&lt;li>&lt;code>drush update:wxt&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>&lt;strong>Note:&lt;/strong> N/A&lt;/p>
+&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>4.1.1&lt;/strong>&lt;/td>
+&lt;td>&lt;strong>2021-09-20&lt;/strong>&lt;/td>
+&lt;td>&lt;p>Features / Updates:&lt;/p>
+&lt;ul>
+&lt;li>Updates for Drupal Core (v9.1.13)
+&lt;ul>
+&lt;li>&lt;a href="https://www.drupal.org/sa-core-2021-009">SA-core-2021-009&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Updates for WxT
+&lt;ul>
+&lt;li>Addition of the new GC Intranet Theme &lt;a href="https://www.drupal.org/project/wxt/issues/3226972">#3226972&lt;/a>&lt;/li>
+&lt;li>WxT Ext Archived module improvements &lt;a href="https://www.drupal.org/project/wxt/issues/3226555">#3226555&lt;/a>&lt;/li>
+&lt;li>Resolve this.$toggleWeightBUtton is undefined &lt;a href="https://www.drupal.org/project/wxt/issues/3230065">#3230065&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Updates for WxT Bootstrap
+&lt;ul>
+&lt;li>Addition of the new GC Intranet Theme &lt;a href="https://www.drupal.org/project/wxt/issues/3226972">#3226972&lt;/a>&lt;/li>
+&lt;li>Remove remnant flag template &lt;a href="https://www.drupal.org/project/wxt/issues/3226974">#3226974&lt;/a>&lt;/li>
+&lt;li>Status message layout issues &lt;a href="https://www.drupal.org/project/wxt/issues/3227944">#3227944&lt;/a>&lt;/li>
+&lt;li>All input buttons have title attribute set to &amp;ldquo;Search&amp;rdquo; &lt;a href="https://www.drupal.org/project/wxt/issues/3230876">#3230876&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Updates for WxT Library
+&lt;ul>
+&lt;li>Addition of the new GC Intranet Theme &lt;a href="https://www.drupal.org/project/wxt/issues/3226972">#3226972&lt;/a>&lt;/li>
+&lt;li>GC Intranet search block layout issues &lt;a href="https://www.drupal.org/project/wxt/issues/3229155">#3229155&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>Upgrade path:&lt;/p>
+&lt;blockquote>
+&lt;p>Note: No special notes for this release.&lt;/p>
+&lt;/blockquote>
+&lt;ul>
+&lt;li>
+&lt;p>Update your codebase:&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>composer update&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>Run database updates:&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>drush cache:rebuild&lt;/code>&lt;/li>
+&lt;li>&lt;code>drush updatedb&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>Run Lightning configuration updates:&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>drush cache:rebuild&lt;/code>&lt;/li>
+&lt;li>&lt;code>drush update:lightning&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>Run WxT configuration updates:&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>drush cache:rebuild&lt;/code>&lt;/li>
+&lt;li>&lt;code>drush update:wxt&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>&lt;strong>Note:&lt;/strong> The default GC Intranet theme has been updated to the latest specification. You will need to manually switch to the &lt;code>gc-intranet-legacy&lt;/code> theme if you wish to have no changes to the theme.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-sh" data-lang="sh">drush config-set wxt_library.settings wxt.theme theme-gcweb-intranet-legacy
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>The only additional caveat is that if you have any of your own pages referencing theme-gcweb-intranet.tpl.php you will now have to append the suffix &lt;code>--legacy&lt;/code> to them.&lt;/p>
+&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>4.1.0&lt;/strong>&lt;/td>
+&lt;td>&lt;strong>2021-07-28&lt;/strong>&lt;/td>
+&lt;td>&lt;p>Features / Updates:&lt;/p>
+&lt;ul>
+&lt;li>Updates for Drupal Core
+&lt;ul>
+&lt;li>&lt;a href="https://www.drupal.org/sa-core-2021-004">SA-core-2021-003&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Updates for WxT
+&lt;ul>
+&lt;li>Issue #3219195 by smulvih2: Configure book module to support GC Subway functionality&lt;/li>
+&lt;li>Issue #3212225: Remove Panelizer completely for 4.1.x line&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Updates for WxT Bootstrap
+&lt;ul>
+&lt;li>Issue #3219195 by smulvih2: Configure book module to support GC Subway functionality&lt;/li>
+&lt;li>Issue #3223026 by smulvih2: Toolbar menu icons are smaller on wxt_bootstrap&lt;/li>
+&lt;li>Issue #3222228 by smulvih2: WxT Search Form Layout Issue&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Updates for WxT Library
+&lt;ul>
+&lt;li>feat(gcweb): Switch to gcweb v9.3.0&lt;/li>
+&lt;li>feat(gcweb): Switch to wet-boew v4.0.42.2&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>Upgrade path:&lt;/p>
+&lt;blockquote>
+&lt;p>Note: No special notes for this release.&lt;/p>
+&lt;/blockquote>
+&lt;ul>
+&lt;li>
+&lt;p>Update your codebase:&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>composer update&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>Run database updates:&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>drush cache:rebuild&lt;/code>&lt;/li>
+&lt;li>&lt;code>drush updatedb&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>Run Lightning configuration updates:&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>drush cache:rebuild&lt;/code>&lt;/li>
+&lt;li>&lt;code>drush update:lightning&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>Run WxT configuration updates:&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>drush cache:rebuild&lt;/code>&lt;/li>
+&lt;li>&lt;code>drush update:wxt&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>&lt;strong>Note:&lt;/strong> N/A&lt;/p>
+&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>4.0.7&lt;/strong>&lt;/td>
+&lt;td>&lt;strong>2021-06-22&lt;/strong>&lt;/td>
+&lt;td>&lt;p>Features / Updates:&lt;/p>
+&lt;ul>
+&lt;li>Updates for WxT
+&lt;ul>
+&lt;li>4.0.4 to 4.0.6 upgrade installs all modules &lt;a href="https://www.drupal.org/project/wxt/issues/3216815">#3216815&lt;/a>&lt;/li>
+&lt;li>Broken/outdated links in menu migrations &lt;a href="https://www.drupal.org/project/wxt/issues/3217224">#3217224&lt;/a>&lt;/li>
+&lt;li>Implied dependency in gcweb_block_spotlight migration &lt;a href="https://www.drupal.org/project/wxt/issues/3217034">#3217034&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Updates for WxT Bootstrap
+&lt;ul>
+&lt;li>Sensible label defaults for brand menu &lt;a href="https://www.drupal.org/project/wxt/issues/3217232">#3217232&lt;/a>&lt;/li>
+&lt;li>Footer menu should be configurable &lt;a href="https://www.drupal.org/project/wxt/issues/3217213">#3217213&lt;/a>&lt;/li>
+&lt;li>Search field has hardcoded value &lt;a href="https://www.drupal.org/project/wxt/issues/3217296">#3217296&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Updates for WxT Library
+&lt;ul>
+&lt;li>Search field has hardcoded value &lt;a href="https://www.drupal.org/project/wxt/issues/3217296">#3217296&lt;/a>&lt;/li>
+&lt;li>Language block use correct language type &lt;a href="https://www.drupal.org/project/wxt/issues/3219470">#3219470&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>Upgrade path:&lt;/p>
+&lt;blockquote>
+&lt;p>Note: No special notes for this release.&lt;/p>
+&lt;/blockquote>
+&lt;ul>
+&lt;li>
+&lt;p>Update your codebase:&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>composer update&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>Run database updates:&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>drush cache:rebuild&lt;/code>&lt;/li>
+&lt;li>&lt;code>drush updatedb&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>Run Lightning configuration updates:&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>drush cache:rebuild&lt;/code>&lt;/li>
+&lt;li>&lt;code>drush update:lightning&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>Run WxT configuration updates:&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>drush cache:rebuild&lt;/code>&lt;/li>
+&lt;li>&lt;code>drush update:wxt&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>&lt;strong>Note:&lt;/strong> The all_wxt form was renamed back to select_all so please update your drush site install scripts accordingly.&lt;/p>
+&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>4.0.6&lt;/strong>&lt;/td>
+&lt;td>&lt;strong>2021-05-31&lt;/strong>&lt;/td>
+&lt;td>&lt;p>Features / Updates:&lt;/p>
+&lt;ul>
+&lt;li>Updates for WxT
+&lt;ul>
+&lt;li>Update hook wxt_core_update_8403 &lt;a href="https://www.drupal.org/project/wxt/issues/3214811">#3214811&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Updates for WxT Bootstrap (8.x-4.9)
+&lt;ul>
+&lt;li>GCWeb Fix Footer Classes &lt;a href="https://www.drupal.org/project/wxt/issues/3216067">#3216067&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Updates for WxT Library (8.x-4.9)
+&lt;ul>
+&lt;li>Language toggle broken &lt;a href="https://www.drupal.org/project/wxt/issues/3216306">#3216306&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>Upgrade path:&lt;/p>
+&lt;blockquote>
+&lt;p>Note: No special notes for this release.&lt;/p>
+&lt;/blockquote>
+&lt;ul>
+&lt;li>
+&lt;p>Update your codebase:&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>composer update&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>Run database updates:&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>drush cache:rebuild&lt;/code>&lt;/li>
+&lt;li>&lt;code>drush updatedb&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>Run Lightning configuration updates:&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>drush cache:rebuild&lt;/code>&lt;/li>
+&lt;li>&lt;code>drush update:lightning&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>Run WxT configuration updates:&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>drush cache:rebuild&lt;/code>&lt;/li>
+&lt;li>&lt;code>drush update:wxt&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>&lt;strong>Note:&lt;/strong> The select_all form was renamed to all_wxt so please update your drush site install scripts accordingly.&lt;/p>
+&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h2 id="repositories-for-drupal-wxt">Repositories for Drupal WxT&lt;/h2>
+&lt;p>The following table is a list of all the repositories that are housed under the &lt;strong>&lt;a href="https://github.com/drupalwxt/wxt">Drupal WxT&lt;/a>&lt;/strong> organization on GitHub:&lt;/p>
+&lt;table class="gh-repos table table-striped table-bordered table-hover">
+&lt;thead>
+&lt;tr>
+&lt;th>Name&lt;/th>
+&lt;th>Website&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;th>Size&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>&lt;strong>composer-extdeps&lt;/strong>&lt;/td>
+&lt;td>&lt;a href="https://github.com/drupalwxt/composer-extdeps" target="_blank">drupalwxt/composer-extdeps&lt;/a>&lt;/td>
+&lt;td>Composer repository for external dependencies on Drupal WxT&lt;/td>
+&lt;td>Size: 39 Bytes&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>docker-scaffold&lt;/strong>&lt;/td>
+&lt;td>&lt;a href="https://github.com/drupalwxt/docker-scaffold" target="_blank">drupalwxt/docker-scaffold&lt;/a>&lt;/td>
+&lt;td>Docker Scaffold for Drupal WxT&lt;/td>
+&lt;td>Size: 132 Bytes&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>drupalwxt.github.io&lt;/strong>&lt;/td>
+&lt;td>&lt;a href="https://github.com/drupalwxt/drupalwxt.github.io" target="_blank">drupalwxt/drupalwxt.github.io&lt;/a>&lt;/td>
+&lt;td>GitHub pages for Drupal WxT.&lt;/td>
+&lt;td>Size: 0 Bytes&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>helm-drupal&lt;/strong>&lt;/td>
+&lt;td>&lt;a href="https://github.com/drupalwxt/helm-drupal" target="_blank">drupalwxt/helm-drupal&lt;/a>&lt;/td>
+&lt;td>Helm chart for running Drupal on Kubernetes&lt;/td>
+&lt;td>Size: 44268 Bytes&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>site-cloud&lt;/strong>&lt;/td>
+&lt;td>&lt;a href="https://github.com/drupalwxt/site-cloud" target="_blank">drupalwxt/site-cloud&lt;/a>&lt;/td>
+&lt;td>The composer project for the Cloud distribution.&lt;/td>
+&lt;td>Size: 211 Bytes&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>site-wxt&lt;/strong>&lt;/td>
+&lt;td>&lt;a href="https://github.com/drupalwxt/site-wxt" target="_blank">drupalwxt/site-wxt&lt;/a>&lt;/td>
+&lt;td>An example composer project for the Drupal WxT distribution used for integration testing.&lt;/td>
+&lt;td>Size: 3449 Bytes&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>terraform-kubernetes-drupalwxt&lt;/strong>&lt;/td>
+&lt;td>&lt;a href="https://github.com/drupalwxt/terraform-kubernetes-drupalwxt" target="_blank">drupalwxt/terraform-kubernetes-drupalwxt&lt;/a>&lt;/td>
+&lt;td>Terraform module for Drupal WxT&lt;/td>
+&lt;td>Size: 34 Bytes&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>themes-cdn&lt;/strong>&lt;/td>
+&lt;td>&lt;a href="https://github.com/drupalwxt/themes-cdn" target="_blank">drupalwxt/themes-cdn&lt;/a>&lt;/td>
+&lt;td>Content Delivery Network (CDN) files for the theme repositories of the Web Experience Toolkit (WET) &lt;/td>
+&lt;td>Size: 17505 Bytes&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>website&lt;/strong>&lt;/td>
+&lt;td>&lt;a href="https://github.com/drupalwxt/website" target="_blank">drupalwxt/website&lt;/a>&lt;/td>
+&lt;td>GH pages for Drupal WxT.&lt;/td>
+&lt;td>Size: 161 Bytes&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>wxt&lt;/strong>&lt;/td>
+&lt;td>&lt;a href="https://github.com/drupalwxt/wxt" target="_blank">drupalwxt/wxt&lt;/a>&lt;/td>
+&lt;td>Drupal 9 variant of the Web Experience Toolkit (WxT).&lt;/td>
+&lt;td>Size: 1778 Bytes&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>wxt-project&lt;/strong>&lt;/td>
+&lt;td>&lt;a href="https://github.com/drupalwxt/wxt-project" target="_blank">drupalwxt/wxt-project&lt;/a>&lt;/td>
+&lt;td>Composer project template for Drupal 9 sites built with the WxT distribution.&lt;/td>
+&lt;td>Size: 80 Bytes&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>wxt_bootstrap&lt;/strong>&lt;/td>
+&lt;td>&lt;a href="https://github.com/drupalwxt/wxt_bootstrap" target="_blank">drupalwxt/wxt_bootstrap&lt;/a>&lt;/td>
+&lt;td>Bootstrap derived sub-theme aligned for use with the Web Experience Toolkit jQuery Framework.&lt;/td>
+&lt;td>Size: 1460 Bytes&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>wxt_library&lt;/strong>&lt;/td>
+&lt;td>&lt;a href="https://github.com/drupalwxt/wxt_library" target="_blank">drupalwxt/wxt_library&lt;/a>&lt;/td>
+&lt;td>Web Experience Toolkit Framework integration for Drupal.&lt;/td>
+&lt;td>Size: 109 Bytes&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;!-- Links Referenced --></description></item></channel></rss>

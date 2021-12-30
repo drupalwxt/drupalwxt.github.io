@@ -1,0 +1,27 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Drupal WxT – roadmap</title><link>https://drupalwxt.github.io/en/tags/roadmap/</link><description>Recent content in roadmap on Drupal WxT</description><generator>Hugo -- gohugo.io</generator><atom:link href="https://drupalwxt.github.io/en/tags/roadmap/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs: Roadmap</title><link>https://drupalwxt.github.io/en/docs/general/roadmap/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://drupalwxt.github.io/en/docs/general/roadmap/</guid><description>
+&lt;div class="alert alert-warning" role="alert">
+The &lt;strong>roadmap&lt;/strong> helps guide the project and helps to steer the technical design decisions.
+&lt;/div>
+&lt;p>The core distribution will always strive to be:&lt;/p>
+&lt;ul>
+&lt;li>As minimal as possible on top of Drupal Core providing performance, scalability, and security features on top of it&lt;/li>
+&lt;li>Provide best practices for users to follow which includes our Composer workflow, CI / CD methodologies, and deployment strategies&lt;/li>
+&lt;li>Provide a place for all Government Departments to inherit the base requirements such as Language Handling, GC Approved Themes, and other functionalities such as Date Format, Metadata Output, and Accessibility improvements&lt;/li>
+&lt;/ul>
+&lt;p>Beyond the above the distribution will provide extensible features that can be opted into through the wxt_ext suite of modules:&lt;/p>
+&lt;ul>
+&lt;li>Each of these modules must explicitly state all of there contributed dependencies&lt;/li>
+&lt;li>Governance around these &amp;ldquo;extension&amp;rdquo; modules can be a bit looser&lt;/li>
+&lt;li>These modules should be clear in focus and not try to do to much other then an immediate task at hand&lt;/li>
+&lt;li>These modules should have an &lt;code>modulename.wxt_extension.yml&lt;/code> file so can be enabled as optional extension during profile installation&lt;/li>
+&lt;/ul>
+&lt;p>In addition, &lt;strong>&lt;a href="https://github.com/drupalwxt/wxt">Drupal WxT&lt;/a>&lt;/strong> will offer out of tree (external) modules that implement specific features:&lt;/p>
+&lt;ul>
+&lt;li>These features are not included by the core platform because they are only used by a subset of users&lt;/li>
+&lt;li>These modules may be subject to change though update hooks will always be provided&lt;/li>
+&lt;li>Community supported modules will also be listed in our README of additional modules but will not be supported by the Drupal WxT team&lt;/li>
+&lt;/ul>
+&lt;blockquote>
+&lt;p>&lt;strong>Note&lt;/strong>: The governance around the core distribution will always be much stricter then the governance around adding a &lt;code>wxt_ext&lt;/code> or an out of tree module.&lt;/p>
+&lt;/blockquote>
+&lt;!-- Links Referenced --></description></item></channel></rss>

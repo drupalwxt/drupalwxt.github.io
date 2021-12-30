@@ -1,0 +1,466 @@
+<!doctype html><html lang=en class=no-js>
+<head>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no">
+<meta name=generator content="Hugo 0.86.1">
+<link rel=canonical type=text/html href=https://drupalwxt.github.io/en/docs/development/performance/>
+<link rel=alternate type=application/rss+xml href=https://drupalwxt.github.io/en/docs/development/performance/index.xml>
+<meta name=robots content="noindex, nofollow">
+<link rel="shortcut icon" href=../../../../../favicons/favicon.ico>
+<title>Performance | Drupal WxT</title>
+<meta name=description content="Below are some recommended settings that improve the performance of Drupal WxT sites.
+
+">
+<meta property="og:title" content="Performance">
+<meta property="og:description" content="Drupal WxT">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://drupalwxt.github.io/en/docs/development/performance/"><meta property="og:site_name" content="Drupal WxT">
+<meta itemprop=name content="Performance">
+<meta itemprop=description content="Drupal WxT"><meta name=twitter:card content="summary">
+<meta name=twitter:title content="Performance">
+<meta name=twitter:description content="Drupal WxT">
+<link rel=preload href=../../../../../scss/main.min.571dde510d2970747501ff7043242bdbd229fd4fa1680c51c02b3d31c2d18f28.css as=style>
+<link href=../../../../../scss/main.min.571dde510d2970747501ff7043242bdbd229fd4fa1680c51c02b3d31c2d18f28.css rel=stylesheet integrity>
+<script src=https://code.jquery.com/jquery-3.6.0.min.js integrity=sha384-vtXRMe3mGCbOeY7l30aIg8H9p3GdeSe4IFlP6G8JMa7o7lXvnz3GFKzPxzJdPfGK crossorigin=anonymous></script>
+<script src=https://unpkg.com/lunr@2.3.9/lunr.min.js integrity=sha384-203J0SNzyqHby3iU6hzvzltrWi/M41wOP5Gu+BiJMz5nwKykbkUx8Kp7iti0Lpli crossorigin=anonymous></script>
+<script type=application/javascript>var doNotTrack=!1;doNotTrack||(window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga('create','UA-00000000-0','auto'),ga('send','pageview'))</script>
+<script async src=https://www.google-analytics.com/analytics.js></script>
+</head>
+<body class=td-section>
+<header>
+<nav class="js-navbar-scroll navbar navbar-expand navbar-dark flex-column flex-md-row td-navbar">
+<a class=navbar-brand href=../../../../../en/>
+<span class=navbar-logo><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 957 440"><defs><style>.wxt_logo{fill:#000}@media screen{.wxt_logo{fill:#000}}</style></defs><g transform="matrix(1,0,0,0.99999897,-9.6901386,-462.70603)"><path class="wxt_logo" d="M784.76421 462.90748C731.02378 462.32641 692.43028 462.92058 670.00747 465.81109 627.01699 471.36234 581.50604 521.32921 561.29903 556.61298 533.1225 598.63518 502.75047 688.71895 456.44715 688.45762 410.14383 688.19629 383.3898 586.46163 342.35988 586.87543 301.32996 587.28923 280.41575 681.13815 217.75409 680.85877 155.09243 680.5794 106.13019 521.18393 92.880525 462.95097H9.6901386C24.231399 554.63077 61.332242 625.08552 95.037833 673.97611 111.89062 698.42134 130.8032 720.94553 152.498 738.83848c21.6948 17.89309 36.79435 31.32425 78.72656 32.7585S310.59454 703.98949 336.85386 703.15671C361.10529 702.38761 367.52311 727.21076 358.42907 743.27683 349.33503 759.3429 325.08792 786.58449 316.37192 811.63499c-12.46372 35.82204-15.98038 67.51171-15.21365 90.09597L386.18296 901.44462C386.97642 857.40138 414.64036 778.01003 458.37203 775.64864 484.4689 775.57768 530.7786 820.59899 544.6176 838.95024 558.4566 857.30149 569.7218 874.82986 594.71632 889.25345S654.60982 905.15482 687.79769 893.30218C732.03818 877.50249 754.42732 835.1839 767.75116 795.52174 781.07499 755.85945 787.08531 711.72939 791.59405 669.88643 796.10281 628.04332 797.61781 603.23233 801.78169 576.96002 802.6265 571.62968 804.64498 552.07124 822.78338 547.72943 840.92177 543.38762 966.89118 546.85344 966.89118 546.85344L967.11932 462.8124S838.50471 463.48815 784.76427 462.90708zM719.12466 548.42285C711.60107 623.14542 709.98489 698.34966 687.10247 768.40741 681.56172 784.77829 660.87745 829.58569 637.20824 815.5576 633.78894 813.58447 624.96399 804.15123 612.5065 787.66591 598.42641 769.03327 577.6579 741.58571 546.2944 720.92616c23.04304-22.95619 41.22858-51.28996 56.39684-76.19101C620.23787 615.92959 632.36107 591.69362 632.4233 591.56916 632.42347 591.5689 632.4641 591.48806 632.4641 591.48806 649.71879 556.9987 688.33393 540.78276 719.12466 548.42285z"/></g></svg></span><span class=font-weight-bold>Drupal WxT</span>
+</a>
+<div class="td-navbar-nav-scroll ml-md-auto" id=main_navbar>
+<ul class="navbar-nav mt-2 mt-lg-0">
+<li class="nav-item mr-4 mb-2 mb-lg-0">
+<a class=nav-link href=../../../../../en/docs/><span>WxT</span></a>
+</li>
+<li class="nav-item mr-4 mb-2 mb-lg-0">
+<a class=nav-link href=https://github.com/drupalwxt target=_blank><span>GitHub</span></a>
+</li>
+<li class="nav-item mr-4 mb-2 mb-lg-0">
+<a class=nav-link href=https://github.com/drupalwxt/wxt/releases target=_blank><span>Download</span></a>
+</li>
+<li class="nav-item dropdown mr-4 d-none d-lg-block">
+<a class="nav-link dropdown-toggle" href=# id=navbarDropdown role=button data-toggle=dropdown aria-haspopup=true aria-expanded=false>
+English
+</a>
+<div class=dropdown-menu aria-labelledby=navbarDropdownMenuLink>
+<a class=dropdown-item href=../../../../../fr/>French</a>
+</div>
+</li>
+</ul>
+</div>
+<div class="navbar-nav d-none d-lg-block"><input type=search class="form-control td-search-input" placeholder="&#xf002; Search WxT" aria-label="Search WxT" autocomplete=off data-offline-search-index-json-src=../../../../../offline-search-index.3ccea24b54720f3ae2086d7acff11ccc.json data-offline-search-base-href=../../../../../ data-offline-search-max-results=10>
+</div>
+</nav>
+</header>
+<div class="container-fluid td-outer">
+<div class=td-main>
+<div class="row flex-xl-nowrap">
+<main class="col-12 col-md-9 col-xl-8 pl-md-5" role=main>
+<div class=td-content>
+<div class="pageinfo pageinfo-primary d-print-none">
+<p>
+This is the multi-page printable view of this section.
+<a href=# onclick="return print(),!1">Click here to print</a>.
+</p><p>
+<a href=../../../../../en/docs/development/performance/>Return to the regular view of this page</a>.
+</p>
+</div>
+<h1 class=title>Performance</h1>
+<ul>
+<li>1: <a href=#pg-61994ca0147a9d94adcfce1fd96be0f1>PostgreSQL</a></li>
+<ul>
+</ul>
+<li>2: <a href=#pg-bfabe6230aceb985666d26eb9ba78a34>Redis</a></li>
+<ul>
+</ul>
+<li>3: <a href=#pg-81920c3d250035c9087cc9745bf7bbe1>Varnish</a></li>
+<ul>
+</ul>
+</ul>
+<div class=content>
+<p>Below are some recommended settings that improve the performance of <strong><a href=https://github.com/drupalwxt/wxt>Drupal WxT</a></strong> sites.</p>
+</div>
+</div>
+<div class=td-content>
+<h1 id=pg-61994ca0147a9d94adcfce1fd96be0f1>1 - PostgreSQL</h1>
+<p>To properly configure PostgreSQL with Drupal you should ensure the following configuration is used.</p>
+<blockquote>
+<p><strong>Note</strong>: Some customizations might be necessary depending on your individual requirements.</p>
+</blockquote>
+<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-sh data-lang=sh>postgresqlConfiguration:
+  listenAddresses: <span style=color:#4e9a06>&#34;&#39;*&#39;&#34;</span>
+  maxConnections: <span style=color:#4e9a06>&#34;200&#34;</span>
+  sharedBuffers: 512MB
+  workMem: 2048MB
+  effectiveCacheSize: 512MB
+  effectiveIoConcurrency: <span style=color:#4e9a06>&#34;100&#34;</span>
+  maintenanceWorkMem: 32MB
+  minWalSize: 512MB
+  maxWalSize: 512MB
+  walBuffers: 8048kB
+  byteaOutput: <span style=color:#4e9a06>&#34;&#39;escape&#39;&#34;</span>
+  hugePages: <span style=color:#4e9a06>&#34;off&#34;</span>
+  walLevel: <span style=color:#4e9a06>&#34;replica&#34;</span>
+  maxWalSenders: <span style=color:#4e9a06>&#34;0&#34;</span>
+  synchronousCommit: <span style=color:#4e9a06>&#34;on&#34;</span>
+  walKeepSegments: <span style=color:#4e9a06>&#34;130&#34;</span>
+  checkpointTimeout: <span style=color:#4e9a06>&#34;&#39;15 min&#39;&#34;</span>
+  checkpointCompletionTarget: <span style=color:#4e9a06>&#34;0.9&#34;</span>
+  walCompression: <span style=color:#4e9a06>&#34;on&#34;</span>
+  walWriterDelay: 200ms
+  walWriterFlushAfter: 1MB
+  bgwriterDelay: 200ms
+  bgwriterLruMaxpages: <span style=color:#4e9a06>&#34;100&#34;</span>
+  bgwriterLruMultiplier: <span style=color:#4e9a06>&#34;2.0&#34;</span>
+  bgwriterFlushAfter: <span style=color:#4e9a06>&#34;0&#34;</span>
+  maxWorkerProcesses: <span style=color:#4e9a06>&#34;8&#34;</span>
+  maxParallelWorkersPerGather: <span style=color:#4e9a06>&#34;4&#34;</span>
+  maxParallelWorkers: <span style=color:#4e9a06>&#34;4&#34;</span>
+</code></pre></div><blockquote>
+<p><strong>Note</strong>: The above is written in yaml syntax which will work for both Docker Compose and Kubernetes Helm Charts. For the <code>postgresql.conf</code> file itself without using these tools simply find the <code>_</code> counterpart.</p>
+</blockquote>
+<h4 id=queries-leveraging-ilike>Queries leveraging ILIKE</h4>
+<p>There is a known PostgreSQL performance issue that exists in Drupal and is related to leveraging queries with <code>ILIKE</code>.</p>
+<p>This issue is particularly noticeable in relation to the path_alias table.</p>
+<p>There are patches being worked on to handle this in Drupal core but a very quick fix can be implemented leveraging pg_trgm.</p>
+<p>There is a great blog article listed below which goes over this issue in more detail.</p>
+<ul>
+<li><strong><a href=https://ferfebles.github.io/2018/04/16/Improving-large-Drupal-Postgres-performance-by-using-pg_trgm.html>Improving Drupal Postgres Performance</a></strong></li>
+</ul>
+<p>The instructions are a bit outdated so the updated syntax to enter in psql is given below:</p>
+<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-sh data-lang=sh>CREATE EXTENSION pg_trgm<span style=color:#000;font-weight:700>;</span>
+CREATE INDEX path_alias__alias_trgm_gist_idx ON path_alias USING gist <span style=color:#ce5c00;font-weight:700>(</span><span style=color:#204a87>alias</span> gist_trgm_ops<span style=color:#ce5c00;font-weight:700>)</span><span style=color:#000;font-weight:700>;</span>
+CREATE INDEX path_alias__path_trgm_gist_idx ON path_alias USING gist <span style=color:#ce5c00;font-weight:700>(</span>path gist_trgm_ops<span style=color:#ce5c00;font-weight:700>)</span><span style=color:#000;font-weight:700>;</span>
+ANALYZE path_alias<span style=color:#000;font-weight:700>;</span>
+</code></pre></div>
+</div>
+<div class=td-content style=page-break-before:always>
+<h1 id=pg-bfabe6230aceb985666d26eb9ba78a34>2 - Redis</h1>
+<p>To properly configure Redis with Drupal you should ensure the following configuration is added to your <code>settings.php</code> file.</p>
+<blockquote>
+<p><strong>Note</strong>: Some customizations might be necessary depending on your individual requirements.</p>
+</blockquote>
+<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-php data-lang=php><span style=color:#204a87;font-weight:700>if</span> <span style=color:#000;font-weight:700>(</span><span style=color:#000>extension_loaded</span><span style=color:#000;font-weight:700>(</span><span style=color:#4e9a06>&#39;redis&#39;</span><span style=color:#000;font-weight:700>))</span> <span style=color:#000;font-weight:700>{</span>
+  <span style=color:#8f5902;font-style:italic>// Set Redis as the default backend for any cache bin not otherwise specified.
+</span><span style=color:#8f5902;font-style:italic></span>  <span style=color:#000>$settings</span><span style=color:#000;font-weight:700>[</span><span style=color:#4e9a06>&#39;cache&#39;</span><span style=color:#000;font-weight:700>][</span><span style=color:#4e9a06>&#39;default&#39;</span><span style=color:#000;font-weight:700>]</span> <span style=color:#ce5c00;font-weight:700>=</span> <span style=color:#4e9a06>&#39;cache.backend.redis&#39;</span><span style=color:#000;font-weight:700>;</span>
+  <span style=color:#000>$settings</span><span style=color:#000;font-weight:700>[</span><span style=color:#4e9a06>&#39;redis.connection&#39;</span><span style=color:#000;font-weight:700>][</span><span style=color:#4e9a06>&#39;interface&#39;</span><span style=color:#000;font-weight:700>]</span> <span style=color:#ce5c00;font-weight:700>=</span> <span style=color:#4e9a06>&#39;PhpRedis&#39;</span><span style=color:#000;font-weight:700>;</span>
+  <span style=color:#000>$settings</span><span style=color:#000;font-weight:700>[</span><span style=color:#4e9a06>&#39;redis.connection&#39;</span><span style=color:#000;font-weight:700>][</span><span style=color:#4e9a06>&#39;scheme&#39;</span><span style=color:#000;font-weight:700>]</span> <span style=color:#ce5c00;font-weight:700>=</span> <span style=color:#4e9a06>&#39;http&#39;</span><span style=color:#000;font-weight:700>;</span>
+  <span style=color:#000>$settings</span><span style=color:#000;font-weight:700>[</span><span style=color:#4e9a06>&#39;redis.connection&#39;</span><span style=color:#000;font-weight:700>][</span><span style=color:#4e9a06>&#39;host&#39;</span><span style=color:#000;font-weight:700>]</span> <span style=color:#ce5c00;font-weight:700>=</span> <span style=color:#4e9a06>&#39;localhost&#39;</span><span style=color:#000;font-weight:700>;</span>
+  <span style=color:#000>$settings</span><span style=color:#000;font-weight:700>[</span><span style=color:#4e9a06>&#39;redis.connection&#39;</span><span style=color:#000;font-weight:700>][</span><span style=color:#4e9a06>&#39;port&#39;</span><span style=color:#000;font-weight:700>]</span> <span style=color:#ce5c00;font-weight:700>=</span> <span style=color:#4e9a06>&#39;6379&#39;</span><span style=color:#000;font-weight:700>;</span>
+  <span style=color:#8f5902;font-style:italic>//$settings[&#39;redis.connection&#39;][&#39;password&#39;] = &#39;&#39;;
+</span><span style=color:#8f5902;font-style:italic></span>
+  <span style=color:#8f5902;font-style:italic>// Allow the services to work before the Redis module itself is enabled.
+</span><span style=color:#8f5902;font-style:italic></span>  <span style=color:#000>$settings</span><span style=color:#000;font-weight:700>[</span><span style=color:#4e9a06>&#39;container_yamls&#39;</span><span style=color:#000;font-weight:700>][]</span> <span style=color:#ce5c00;font-weight:700>=</span> <span style=color:#4e9a06>&#39;modules/contrib/redis/example.services.yml&#39;</span><span style=color:#000;font-weight:700>;</span>
+  <span style=color:#000>$settings</span><span style=color:#000;font-weight:700>[</span><span style=color:#4e9a06>&#39;container_yamls&#39;</span><span style=color:#000;font-weight:700>][]</span> <span style=color:#ce5c00;font-weight:700>=</span> <span style=color:#4e9a06>&#39;modules/contrib/redis/redis.services.yml&#39;</span><span style=color:#000;font-weight:700>;</span>
+
+  <span style=color:#8f5902;font-style:italic>// Manually add the classloader path, this is required for the container cache bin definition below
+</span><span style=color:#8f5902;font-style:italic></span>  <span style=color:#8f5902;font-style:italic>// and allows to use it without the redis module being enabled.
+</span><span style=color:#8f5902;font-style:italic></span>  <span style=color:#000>$class_loader</span><span style=color:#ce5c00;font-weight:700>-&gt;</span><span style=color:#c4a000>addPsr4</span><span style=color:#000;font-weight:700>(</span><span style=color:#4e9a06>&#39;Drupal\\redis\\&#39;</span><span style=color:#000;font-weight:700>,</span> <span style=color:#4e9a06>&#39;modules/contrib/redis/src&#39;</span><span style=color:#000;font-weight:700>);</span>
+
+  <span style=color:#000>$settings</span><span style=color:#000;font-weight:700>[</span><span style=color:#4e9a06>&#39;bootstrap_container_definition&#39;</span><span style=color:#000;font-weight:700>]</span> <span style=color:#ce5c00;font-weight:700>=</span> <span style=color:#000;font-weight:700>[</span>
+    <span style=color:#4e9a06>&#39;parameters&#39;</span> <span style=color:#ce5c00;font-weight:700>=&gt;</span> <span style=color:#000;font-weight:700>[],</span>
+    <span style=color:#4e9a06>&#39;services&#39;</span> <span style=color:#ce5c00;font-weight:700>=&gt;</span> <span style=color:#000;font-weight:700>[</span>
+      <span style=color:#4e9a06>&#39;redis.factory&#39;</span> <span style=color:#ce5c00;font-weight:700>=&gt;</span> <span style=color:#000;font-weight:700>[</span>
+        <span style=color:#4e9a06>&#39;class&#39;</span> <span style=color:#ce5c00;font-weight:700>=&gt;</span> <span style=color:#4e9a06>&#39;Drupal\redis\ClientFactory&#39;</span><span style=color:#000;font-weight:700>,</span>
+      <span style=color:#000;font-weight:700>],</span>
+      <span style=color:#4e9a06>&#39;cache.backend.redis&#39;</span> <span style=color:#ce5c00;font-weight:700>=&gt;</span> <span style=color:#000;font-weight:700>[</span>
+        <span style=color:#4e9a06>&#39;class&#39;</span> <span style=color:#ce5c00;font-weight:700>=&gt;</span> <span style=color:#4e9a06>&#39;Drupal\redis\Cache\CacheBackendFactory&#39;</span><span style=color:#000;font-weight:700>,</span>
+        <span style=color:#4e9a06>&#39;arguments&#39;</span> <span style=color:#ce5c00;font-weight:700>=&gt;</span> <span style=color:#000;font-weight:700>[</span><span style=color:#4e9a06>&#39;@redis.factory&#39;</span><span style=color:#000;font-weight:700>,</span> <span style=color:#4e9a06>&#39;@cache_tags_provider.container&#39;</span><span style=color:#000;font-weight:700>,</span> <span style=color:#4e9a06>&#39;@serialization.phpserialize&#39;</span><span style=color:#000;font-weight:700>],</span>
+      <span style=color:#000;font-weight:700>],</span>
+      <span style=color:#4e9a06>&#39;cache.container&#39;</span> <span style=color:#ce5c00;font-weight:700>=&gt;</span> <span style=color:#000;font-weight:700>[</span>
+        <span style=color:#4e9a06>&#39;class&#39;</span> <span style=color:#ce5c00;font-weight:700>=&gt;</span> <span style=color:#4e9a06>&#39;\Drupal\redis\Cache\PhpRedis&#39;</span><span style=color:#000;font-weight:700>,</span>
+        <span style=color:#4e9a06>&#39;factory&#39;</span> <span style=color:#ce5c00;font-weight:700>=&gt;</span> <span style=color:#000;font-weight:700>[</span><span style=color:#4e9a06>&#39;@cache.backend.redis&#39;</span><span style=color:#000;font-weight:700>,</span> <span style=color:#4e9a06>&#39;get&#39;</span><span style=color:#000;font-weight:700>],</span>
+        <span style=color:#4e9a06>&#39;arguments&#39;</span> <span style=color:#ce5c00;font-weight:700>=&gt;</span> <span style=color:#000;font-weight:700>[</span><span style=color:#4e9a06>&#39;container&#39;</span><span style=color:#000;font-weight:700>],</span>
+      <span style=color:#000;font-weight:700>],</span>
+      <span style=color:#4e9a06>&#39;cache_tags_provider.container&#39;</span> <span style=color:#ce5c00;font-weight:700>=&gt;</span> <span style=color:#000;font-weight:700>[</span>
+        <span style=color:#4e9a06>&#39;class&#39;</span> <span style=color:#ce5c00;font-weight:700>=&gt;</span> <span style=color:#4e9a06>&#39;Drupal\redis\Cache\RedisCacheTagsChecksum&#39;</span><span style=color:#000;font-weight:700>,</span>
+        <span style=color:#4e9a06>&#39;arguments&#39;</span> <span style=color:#ce5c00;font-weight:700>=&gt;</span> <span style=color:#000;font-weight:700>[</span><span style=color:#4e9a06>&#39;@redis.factory&#39;</span><span style=color:#000;font-weight:700>],</span>
+      <span style=color:#000;font-weight:700>],</span>
+      <span style=color:#4e9a06>&#39;serialization.phpserialize&#39;</span> <span style=color:#ce5c00;font-weight:700>=&gt;</span> <span style=color:#000;font-weight:700>[</span>
+        <span style=color:#4e9a06>&#39;class&#39;</span> <span style=color:#ce5c00;font-weight:700>=&gt;</span> <span style=color:#4e9a06>&#39;Drupal\Component\Serialization\PhpSerialize&#39;</span><span style=color:#000;font-weight:700>,</span>
+      <span style=color:#000;font-weight:700>],</span>
+    <span style=color:#000;font-weight:700>],</span>
+  <span style=color:#000;font-weight:700>];</span>
+
+  <span style=color:#8f5902;font-style:italic>/** Optional prefix for cache entries */</span>
+  <span style=color:#000>$settings</span><span style=color:#000;font-weight:700>[</span><span style=color:#4e9a06>&#39;cache_prefix&#39;</span><span style=color:#000;font-weight:700>]</span> <span style=color:#ce5c00;font-weight:700>=</span> <span style=color:#4e9a06>&#39;drupal_&#39;</span><span style=color:#000;font-weight:700>;</span>
+
+  <span style=color:#8f5902;font-style:italic>// Always set the fast backend for bootstrap, discover and config, otherwise
+</span><span style=color:#8f5902;font-style:italic></span>  <span style=color:#8f5902;font-style:italic>// this gets lost when redis is enabled.
+</span><span style=color:#8f5902;font-style:italic></span>  <span style=color:#000>$settings</span><span style=color:#000;font-weight:700>[</span><span style=color:#4e9a06>&#39;cache&#39;</span><span style=color:#000;font-weight:700>][</span><span style=color:#4e9a06>&#39;bins&#39;</span><span style=color:#000;font-weight:700>][</span><span style=color:#4e9a06>&#39;bootstrap&#39;</span><span style=color:#000;font-weight:700>]</span> <span style=color:#ce5c00;font-weight:700>=</span> <span style=color:#4e9a06>&#39;cache.backend.chainedfast&#39;</span><span style=color:#000;font-weight:700>;</span>
+  <span style=color:#000>$settings</span><span style=color:#000;font-weight:700>[</span><span style=color:#4e9a06>&#39;cache&#39;</span><span style=color:#000;font-weight:700>][</span><span style=color:#4e9a06>&#39;bins&#39;</span><span style=color:#000;font-weight:700>][</span><span style=color:#4e9a06>&#39;discovery&#39;</span><span style=color:#000;font-weight:700>]</span> <span style=color:#ce5c00;font-weight:700>=</span> <span style=color:#4e9a06>&#39;cache.backend.chainedfast&#39;</span><span style=color:#000;font-weight:700>;</span>
+  <span style=color:#000>$settings</span><span style=color:#000;font-weight:700>[</span><span style=color:#4e9a06>&#39;cache&#39;</span><span style=color:#000;font-weight:700>][</span><span style=color:#4e9a06>&#39;bins&#39;</span><span style=color:#000;font-weight:700>][</span><span style=color:#4e9a06>&#39;config&#39;</span><span style=color:#000;font-weight:700>]</span> <span style=color:#ce5c00;font-weight:700>=</span> <span style=color:#4e9a06>&#39;cache.backend.chainedfast&#39;</span><span style=color:#000;font-weight:700>;</span>
+
+  <span style=color:#8f5902;font-style:italic>// Use for all bins otherwise specified.
+</span><span style=color:#8f5902;font-style:italic></span>  <span style=color:#000>$settings</span><span style=color:#000;font-weight:700>[</span><span style=color:#4e9a06>&#39;cache&#39;</span><span style=color:#000;font-weight:700>][</span><span style=color:#4e9a06>&#39;default&#39;</span><span style=color:#000;font-weight:700>]</span> <span style=color:#ce5c00;font-weight:700>=</span> <span style=color:#4e9a06>&#39;cache.backend.redis&#39;</span><span style=color:#000;font-weight:700>;</span>
+
+  <span style=color:#8f5902;font-style:italic>// Use for all queues unless otherwise specified for a specific queue.
+</span><span style=color:#8f5902;font-style:italic></span>  <span style=color:#000>$settings</span><span style=color:#000;font-weight:700>[</span><span style=color:#4e9a06>&#39;queue_default&#39;</span><span style=color:#000;font-weight:700>]</span> <span style=color:#ce5c00;font-weight:700>=</span> <span style=color:#4e9a06>&#39;queue.redis&#39;</span><span style=color:#000;font-weight:700>;</span>
+
+  <span style=color:#8f5902;font-style:italic>// Or if you want to use reliable queue implementation.
+</span><span style=color:#8f5902;font-style:italic></span>  <span style=color:#8f5902;font-style:italic>// $settings[&#39;queue_default&#39;] = &#39;queue.redis_reliable&#39;;
+</span><span style=color:#8f5902;font-style:italic></span>
+  <span style=color:#8f5902;font-style:italic>// Use this to only use Redis for a specific queue.
+</span><span style=color:#8f5902;font-style:italic></span>  <span style=color:#8f5902;font-style:italic>// $settings[&#39;queue_service_aggregator_feeds&#39;] = &#39;queue.redis&#39;;
+</span><span style=color:#8f5902;font-style:italic></span>
+  <span style=color:#8f5902;font-style:italic>// Use this to use reliable queue implementation.
+</span><span style=color:#8f5902;font-style:italic></span>  <span style=color:#8f5902;font-style:italic>// $settings[&#39;queue_service_aggregator_feeds&#39;] = &#39;queue.redis_reliable&#39;;
+</span><span style=color:#8f5902;font-style:italic></span><span style=color:#000;font-weight:700>}</span>
+</code></pre></div>
+</div>
+<div class=td-content style=page-break-before:always>
+<h1 id=pg-81920c3d250035c9087cc9745bf7bbe1>3 - Varnish</h1>
+<p>To properly configure Varnish with Drupal you should ensure the following configuration is your <code>default.vcl</code> file.</p>
+<blockquote>
+<p><strong>Note</strong>: Some customizations might be necessary depending on your individual requirements.</p>
+</blockquote>
+<pre><code class=language-vcl data-lang=vcl>vcl 4.0;
+
+import std;
+import directors;
+
+backend nginx {
+  .host = &quot;hostname-nginx&quot;;
+  .host_header = &quot;hostname-nginx&quot;;
+  .port = &quot;80&quot;;
+}
+
+sub vcl_init {
+  new backends = directors.round_robin();
+  backends.add_backend(nginx);
+}
+
+sub vcl_recv {
+  set req.http.X-Forwarded-Host = req.http.Host;
+  if (!req.http.X-Forwarded-Proto) {
+    set req.http.X-Forwarded-Proto = &quot;http&quot;;
+  }
+
+  # Answer healthcheck
+  if (req.url == &quot;/_healthcheck&quot; || req.url == &quot;/healthcheck.txt&quot;) {
+    return (synth(700, &quot;HEALTHCHECK&quot;));
+  }
+  set req.backend_hint = backends.backend();
+
+  # Answer healthcheck
+  if (req.url == &quot;/_healthcheck&quot; || req.url == &quot;/healthcheck.txt&quot;) {
+    return (synth(700, &quot;HEALTHCHECK&quot;));
+  }
+  set req.backend_hint = backends.backend();
+
+  # Always cache certain file types
+  # Remove cookies that Drupal doesn't care about
+  if (req.url ~ &quot;(?i)\.(asc|dat|tgz|png|gif|jpeg|jpg|ico|swf|css|js)(\?.*)?$&quot;) {
+    unset req.http.Cookie;
+  } else if (req.http.Cookie) {
+    set req.http.Cookie = &quot;;&quot; + req.http.Cookie;
+    set req.http.Cookie = regsuball(req.http.Cookie, &quot;; +&quot;, &quot;;&quot;);
+    set req.http.Cookie = regsuball(req.http.Cookie, &quot;;(SESS[a-z0-9]+|SSESS[a-z0-9]+|NO_CACHE)=&quot;, &quot;; \1=&quot;);
+    set req.http.Cookie = regsuball(req.http.Cookie, &quot;;[^ ][^;]*&quot;, &quot;&quot;);
+    set req.http.Cookie = regsuball(req.http.Cookie, &quot;^[; ]+|[; ]+$&quot;, &quot;&quot;);
+    if (req.http.Cookie == &quot;&quot;) {
+        unset req.http.Cookie;
+    } else {
+        return (pass);
+    }
+  }
+  # If POST, PUT or DELETE, then don't cache
+  if (req.method == &quot;POST&quot; || req.method == &quot;PUT&quot; || req.method == &quot;DELETE&quot;) {
+    return (pass);
+  }
+  # Happens before we check if we have this in cache already.
+  #
+  # Typically you clean up the request here, removing cookies you don't need,
+  # rewriting the request, etc.
+  return (hash);
+  #return (pass);
+}
+
+sub vcl_backend_fetch {
+  # NEW
+  set bereq.http.Host = &quot;hostname-nginx&quot;;
+
+  # Don't add 127.0.0.1 to X-Forwarded-For
+  set bereq.http.X-Forwarded-For = regsub(bereq.http.X-Forwarded-For, &quot;(, )?127\.0\.0\.1$&quot;, &quot;&quot;);
+}
+
+sub vcl_backend_response {
+  if (beresp.http.Location) {
+    set beresp.http.Location = regsub(
+      beresp.http.Location,
+      &quot;^https?://[^/]+/&quot;,
+      bereq.http.X-Forwarded-Proto + &quot;://&quot; + bereq.http.X-Forwarded-Host + &quot;/&quot;
+    );
+  }
+  # Only cache select response codes
+  if (beresp.status == 200 || beresp.status == 203 || beresp.status == 204 || beresp.status == 206 || beresp.status == 300 || beresp.status == 301 || beresp.status == 404 || beresp.status == 405 || beresp.status == 410 || beresp.status == 414 || beresp.status == 501) {
+    # Cache for 5 minutes
+    set beresp.ttl = 5m;
+    set beresp.grace = 12h;
+    set beresp.keep = 24h;
+  } else {
+    set beresp.ttl = 0s;
+  }
+}
+
+sub vcl_deliver {
+  # Remove identifying information
+  unset resp.http.Server;
+  unset resp.http.X-Powered-By;
+  unset resp.http.X-Varnish;
+  unset resp.http.Via;
+
+  # Add Content-Security-Policy
+  # set resp.http.Content-Security-Policy = &quot;default-src 'self' *.example.ca *.example.ca; style-src 'self' 'unsafe-inline' *.example.ca https://fonts.googleapis.com; script-src 'self' 'unsafe-inline' 'unsafe-eval' *.example.ca  *.adobedtm.com use.fontawesome.com blob:; connect-src 'self' *.example.ca *.omtrdc.net *.demdex.net *.everesttech.net; img-src 'self' *.example.ca *.omtrdc.net *.demdex.net *.everesttech.net data:; font-src 'self' *.example.ca https://fonts.gstatic.com&quot;;
+
+  # Add CORS Headers
+  # if (req.http.Origin ~ &quot;(?i)\.example\.ca$&quot;) {
+  #   if (req.url ~ &quot;\.(ttd|woff|woff2)(\?.*)?$&quot;) {
+  #     set resp.http.Access-Control-Allow-Origin = &quot;*&quot;;
+  #     set resp.http.Access-Control-Allow-Methods = &quot;GET&quot;;
+  #   }
+  # }
+
+  # Add X-Frame-Options
+  if (req.url ~ &quot;^/livechat&quot; || req.url ~ &quot;^/(eng/|fra/)?media/&quot;) {
+    set resp.http.X-Frame-Options = &quot;SAMEORIGIN&quot;;
+  } else {
+    set resp.http.X-Frame-Options = &quot;DENY&quot;;
+  }
+
+  set resp.http.X-Content-Type-Options = &quot;nosniff&quot;;
+  set resp.http.X-XSS-Protection = &quot;1; mode=block&quot;;
+
+  # Happens when we have all the pieces we need, and are about to send the
+  # response to the client.
+  #
+  # You can do accounting or modifying the final object here.
+  if (obj.hits &gt; 0) {
+    set resp.http.X-Cache = &quot;HIT&quot;;
+  } else {
+    set resp.http.X-Cache = &quot;MISS&quot;;
+  }
+  # Handle errors
+  if ( (resp.status &gt;= 500 &amp;&amp; resp.status &lt;= 599)
+    || resp.status == 400
+    || resp.status == 401
+    || resp.status == 403
+    || resp.status == 404) {
+    return (synth(resp.status));
+  }
+}
+
+sub vcl_synth {
+  # Remove identifying information
+  unset resp.http.Server;
+  unset resp.http.X-Powered-By;
+  unset resp.http.X-Varnish;
+  unset resp.http.Via;
+
+  # Add Content-Security-Policy
+  # set resp.http.Content-Security-Policy = &quot;default-src 'self' *.example.ca; style-src 'self' 'unsafe-inline' *.example.ca; script-src 'self' 'unsafe-inline' 'unsafe-eval' *.example.ca *.adobedtm.com use.fontawesome.com blob:; connect-src 'self' *.example.ca *.omtrdc.net *.demdex.net *.everesttech.net; img-src 'self' *.example.ca data:;&quot;;
+  # set resp.http.X-Content-Type-Options = &quot;nosniff&quot;;
+  # set resp.http.X-Frame-Options = &quot;DENY&quot;;
+  # set resp.http.X-XSS-Protection = &quot;1; mode=block&quot;;
+
+  # if (resp.status &gt;= 500 &amp;&amp; resp.status &lt;= 599) {
+  #   set resp.http.Content-Type = &quot;text/html; charset=utf-8&quot;;
+  #   synthetic(std.fileread(&quot;/data/configuration/varnish/errors/503.html&quot;));
+  #   return (deliver);
+  # } elseif (resp.status == 400) { # 400 - Bad Request
+  #   set resp.http.Content-Type = &quot;text/html; charset=utf-8&quot;;
+  #   synthetic(std.fileread(&quot;/data/configuration/varnish/errors/400.html&quot;));
+  #   return (deliver);
+  # } elseif (resp.status == 401) { # 401 - Unauthorized
+  #   set resp.http.Content-Type = &quot;text/html; charset=utf-8&quot;;
+  #   synthetic(std.fileread(&quot;/data/configuration/varnish/errors/401.html&quot;));
+  #   return (deliver);
+  # } elseif (resp.status == 403) { # 403 - Forbidden
+  #   set resp.http.Content-Type = &quot;text/html; charset=utf-8&quot;;
+  #   synthetic(std.fileread(&quot;/data/configuration/varnish/errors/403.html&quot;));
+  #   return (deliver);
+  # } elseif (resp.status == 404) { # 404 - Not Found
+  #   set resp.http.Content-Type = &quot;text/html; charset=utf-8&quot;;
+  #   synthetic(std.fileread(&quot;/data/configuration/varnish/errors/404.html&quot;));
+  #   return (deliver);
+  # } else
+
+  if (resp.status == 700) { # Respond to healthcheck
+    set resp.status = 200;
+    set resp.http.Content-Type = &quot;text/plain&quot;;
+    synthetic ( {&quot;OK&quot;} );
+    return (deliver);
+  }
+}
+
+##
+# ERROR HANDLING
+##
+# sub vcl_backend_error {
+#   set beresp.http.Content-Type = &quot;text/html; charset=utf-8&quot;;
+#   synthetic(std.fileread(&quot;/data/configuration/varnish/errors/503.html&quot;));
+#   return (deliver);
+# }
+</code></pre>
+</div>
+</main>
+</div>
+</div>
+<footer class="bg-dark py-5 row d-print-none">
+<div class="container-fluid mx-sm-5">
+<div class=row>
+<div class="col-6 col-sm-4 text-xs-center order-sm-2">
+<ul class="list-inline mb-0">
+<li class="list-inline-item mx-2 h3" data-toggle=tooltip data-placement=top title="Drupal WxT Discussions" aria-label="Drupal WxT Discussions">
+<a class=text-white target=_blank rel=noopener href=https://github.com/drupalwxt/wxt/discussions aria-label="Drupal WxT Discussions">
+<i class="fas fa-users"></i>
+</a>
+</li>
+<li class="list-inline-item mx-2 h3" data-toggle=tooltip data-placement=top title="Contributions Wanted" aria-label="Contributions Wanted">
+<a class=text-white target=_blank rel=noopener href=https://github.com/drupalwxt/wxt aria-label="Contributions Wanted">
+<i class="fab fa-github"></i>
+</a>
+</li>
+<li class="list-inline-item mx-2 h3" data-toggle=tooltip data-placement=top title="Drupal Issue Queue" aria-label="Drupal Issue Queue">
+<a class=text-white target=_blank rel=noopener href=https://drupal.org/project/wxt/issues aria-label="Drupal Issue Queue">
+<i class="fab fa-drupal"></i>
+</a>
+</li>
+</ul>
+</div>
+<div class="col-6 col-sm-4 text-right text-xs-center order-sm-3">
+<ul class="list-inline mb-0">
+<li class="list-inline-item mx-2 h3" data-toggle=tooltip data-placement=top title="GitHub Pages" aria-label="GitHub Pages">
+<a class=text-white target=_blank rel=noopener href=https://github.com/drupalwxt/drupalwxt.github.io aria-label="GitHub Pages">
+<i class="fab fa-github"></i>
+</a>
+</li>
+</ul>
+</div>
+<div class="col-12 col-sm-4 text-center py-2 order-sm-2">
+<small class=text-white>&copy; 2021 Drupal WxT All Rights Reserved</small>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<script src=https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js integrity=sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN crossorigin=anonymous></script>
+<script src=https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js integrity=sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF crossorigin=anonymous></script>
+<script src=https://cdn.jsdelivr.net/npm/mermaid@8.11.2/dist/mermaid.min.js integrity=sha384-m8Pdaep6Qk8sW3J6XhPOiwUww3maU9HxZTLvEfSEB4e1UVvTdHyfJsYmEfYqvwLC crossorigin=anonymous></script>
+<style>.markmap>svg{width:100%;height:300px}</style>
+<script>window.markmap={autoLoader:{manual:!0}}</script>
+<script src=https://cdn.jsdelivr.net/npm/markmap-autoloader></script>
+<script src=../../../../../js/tabpane-persist.js></script>
+<script src=../../../../../js/deflate.js></script>
+<link rel=stylesheet href=https://cdn.jsdelivr.net/npm/katex@0.13.2/dist/katex.min.css integrity=sha384-Cqd8ihRLum0CCg8rz0hYKPoLZ3uw+gES2rXQXycqnL5pgVQIflxAUDS7ZSjITLb5 crossorigin=anonymous>
+<script defer src=https://cdn.jsdelivr.net/npm/katex@0.13.2/dist/katex.min.js integrity=sha384-1Or6BdeNQb0ezrmtGeqQHFpppNd7a/gw29xeiSikBbsb44xu3uAo8c7FwbF5jhbd crossorigin=anonymous></script>
+<script defer src=https://cdn.jsdelivr.net/npm/katex@0.13.2/dist/contrib/mhchem.min.js integrity=sha384-LIgAiYlGSAdpNC9+YDjDPF6JeS/RRIumtNo0CmyQERZ/+g0h9MbuYQwf/5pQ4Y4M crossorigin=anonymous></script>
+<script defer src=https://cdn.jsdelivr.net/npm/katex@0.13.2/dist/contrib/auto-render.min.js integrity=sha384-vZTG03m+2yp6N6BNi5iM4rW4oIwk5DfcNdFfxkk9ZWpDriOkXX8voJBFrAO7MpVl crossorigin=anonymous onload=renderMathInElement(document.body,null)></script>
+<script src=../../../../../js/main.min.c1b8f3c373b85f900699a7ea81c2038ebbbebcac1a5a4b6e5ef96c24c31790d6.js integrity="sha256-wbjzw3O4X5AGmafqgcIDjru+vKwaWktuXvlsJMMXkNY=" crossorigin=anonymous></script>
+</body>
+</html>
