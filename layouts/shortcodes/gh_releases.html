@@ -1,0 +1,21 @@
+<table class="gh-releases table table-striped table-bordered table-hover">
+  <thead>
+      <tr>
+          <th>Release</th>
+          <th>Created Date</th>
+          <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+    {{ $url := .Get "url" }}
+    {{ $j := getJSON $url }}
+    {{ range first 5 $j }}
+    {{ $p := . }}
+    <tr>
+        <td><strong>{{ $p.name }}</strong></td>
+        <td><strong>{{ ($p.created_at | time ).Format "2006-01-02" }}</strong></td>
+        <td>{{ $p.body | markdownify }}</td>
+    </tr>
+    {{ end }}
+  </tbody>
+</table>

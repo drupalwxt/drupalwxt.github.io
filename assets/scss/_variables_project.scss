@@ -1,0 +1,68 @@
+.td-sidebar__search {
+  margin-top: 15px;
+}
+
+#td-block-4+section .item {
+  background-color: #333;
+  color: #ffffff;
+  padding: 0 20px 20px;
+  z-index: 2;
+  float: left;
+  width: 100%;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+#td-block-4+section .item:after {
+  opacity: 0.05;
+  z-index: -1;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: '';
+}
+
+#td-block-4+section .item .header {
+  color: #ffffff;
+  background: #428bca;
+  position: relative;
+  float: left;
+  margin-top: -8px;
+  padding: 5px 10px;
+  text-align: center;
+  font-size: 1.2em;
+}
+
+#td-block-4+section .item .title {
+  clear: both;
+  color: #ffffff;
+  margin: 15px 0 55px;
+  float: left;
+  text-align: left;
+}
+
+#td-block-4+section .item .title h3 {
+  font-size: 1.4em;
+  font-weight: 300;
+  line-height: inherit;
+}
+
+#td-block-4+section .item .type {
+  float: left;
+  clear: both;
+}
+
+.feedback--title {
+  margin-top: 1.5em;
+}
+
+aside .td-toc {
+  margin-top: 1.0em;
+}
+
+table.gh-releases {
+  display: table !important;
+}

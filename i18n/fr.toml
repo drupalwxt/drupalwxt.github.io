@@ -1,0 +1,57 @@
+# UI strings. Buttons and similar.
+
+[ui_pager_prev]
+other = "Précédent"
+
+[ui_pager_next]
+other = "Suivant"
+
+[ui_read_more]
+other = "Lire plus"
+
+[ui_search]
+other = "Rechercher WxT"
+
+# Used in sentences such as "Posted in News"
+[ui_in]
+other = "dans"
+
+# Footer text
+[footer_all_rights_reserved]
+other = "Tous droits résérvés"
+
+[footer_privacy_policy]
+other = "Politique de confidentialité"
+
+
+# Post (blog, articles etc.)
+[post_byline_by]
+other = "Par"
+[post_created]
+other = "Crée"
+[post_last_mod]
+other = "Dernière modification"
+[post_edit_this]
+other = "Modifier cette page"
+[post_create_issue]
+other = "Créer un problème dans la documentation"
+[post_create_project_issue]
+other = "Créer un problème dans le projet"
+[post_posts_in]
+other = "Messages dans"
+
+# Releases
+[release_byline_by]
+other = "Par"
+[release_created]
+other = "Crée"
+[release_last_mod]
+other = "Dernière modification"
+[release_edit_this]
+other = "Modifier cette page"
+[release_create_issue]
+other = "Créer un problème dans la documentation"
+[release_create_project_issue]
+other = "Créer un problème dans le projet"
+[release_releases_in]
+other = "Versions dans"
