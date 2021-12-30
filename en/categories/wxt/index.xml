@@ -484,8 +484,8 @@ We try our best to have security releases of Drupal Core within &lt;strong>24-72
 &lt;tr>
 &lt;td>&lt;strong>drupalwxt.github.io&lt;/strong>&lt;/td>
 &lt;td>&lt;a href="https://github.com/drupalwxt/drupalwxt.github.io" target="_blank">drupalwxt/drupalwxt.github.io&lt;/a>&lt;/td>
-&lt;td>GitHub pages for Drupal WxT.&lt;/td>
-&lt;td>Size: 0 Bytes&lt;/td>
+&lt;td>GitHub Pages for Drupal WxT.&lt;/td>
+&lt;td>Size: 3111 Bytes&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>&lt;strong>helm-drupal&lt;/strong>&lt;/td>
@@ -518,12 +518,6 @@ We try our best to have security releases of Drupal Core within &lt;strong>24-72
 &lt;td>Size: 17505 Bytes&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;strong>website&lt;/strong>&lt;/td>
-&lt;td>&lt;a href="https://github.com/drupalwxt/website" target="_blank">drupalwxt/website&lt;/a>&lt;/td>
-&lt;td>GH pages for Drupal WxT.&lt;/td>
-&lt;td>Size: 161 Bytes&lt;/td>
-&lt;/tr>
-&lt;tr>
 &lt;td>&lt;strong>wxt&lt;/strong>&lt;/td>
 &lt;td>&lt;a href="https://github.com/drupalwxt/wxt" target="_blank">drupalwxt/wxt&lt;/a>&lt;/td>
 &lt;td>Drupal 9 variant of the Web Experience Toolkit (WxT).&lt;/td>
@@ -549,6 +543,27 @@ We try our best to have security releases of Drupal Core within &lt;strong>24-72
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
+&lt;!-- Links Referenced --></description></item><item><title>Docs: Resources</title><link>https://drupalwxt.github.io/en/docs/general/resources/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://drupalwxt.github.io/en/docs/general/resources/</guid><description>
+&lt;p>The following are links to some useful resources:&lt;/p>
+&lt;h2 id="general">General&lt;/h2>
+&lt;ul>
+&lt;li>&lt;strong>&lt;a href="http://drupalwxt.github.io">Documentation Website&lt;/a>&lt;/strong>&lt;/li>
+&lt;li>&lt;strong>&lt;a href="https://github.com/drupalwxt/wxt/blob/4.2.x/CHANGELOG.md">CHANGELOG&lt;/a>&lt;/strong>&lt;/li>
+&lt;li>&lt;strong>&lt;a href="https://github.com/drupalwxt/wxt/releases">RELEASES&lt;/a>&lt;/strong>&lt;/li>
+&lt;li>&lt;strong>&lt;a href="https://drupal.org/project/issues/wxt">Issue Queue&lt;/a>&lt;/strong>&lt;/li>
+&lt;/ul>
+&lt;h2 id="drupal">Drupal&lt;/h2>
+&lt;ul>
+&lt;li>&lt;strong>&lt;a href="https://github.com/drupalwxt/wxt">Installation Profile&lt;/a>&lt;/strong>&lt;/li>
+&lt;li>&lt;strong>&lt;a href="https://github.com/drupalwxt/wxt-project#user-content-new-project">Composer Project Template&lt;/a>&lt;/strong>&lt;/li>
+&lt;li>&lt;strong>&lt;a href="https://github.com/drupalwxt/site-wxt">Composer Project Example&lt;/a>&lt;/strong>&lt;/li>
+&lt;/ul>
+&lt;h2 id="advanced">Advanced&lt;/h2>
+&lt;ul>
+&lt;li>&lt;strong>&lt;a href="https://github.com/drupalwxt/helm-drupal">Helm Chart for Kubernetes&lt;/a>&lt;/strong>&lt;/li>
+&lt;li>&lt;strong>&lt;a href="https://hub.docker.com/r/drupalwxt/site-wxt">Containers&lt;/a>&lt;/strong>&lt;/li>
+&lt;li>&lt;strong>&lt;a href="https://github.com/drupalwxt/docker-scaffold">Containers Scaffold&lt;/a>&lt;/strong>&lt;/li>
+&lt;/ul>
 &lt;!-- Links Referenced --></description></item><item><title>Docs: Roadmap</title><link>https://drupalwxt.github.io/en/docs/general/roadmap/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://drupalwxt.github.io/en/docs/general/roadmap/</guid><description>
 &lt;div class="alert alert-warning" role="alert">
 The &lt;strong>roadmap&lt;/strong> helps guide the project and helps to steer the technical design decisions.

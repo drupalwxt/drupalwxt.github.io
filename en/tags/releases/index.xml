@@ -365,8 +365,8 @@ We try our best to have security releases of Drupal Core within &lt;strong>24-72
 &lt;tr>
 &lt;td>&lt;strong>drupalwxt.github.io&lt;/strong>&lt;/td>
 &lt;td>&lt;a href="https://github.com/drupalwxt/drupalwxt.github.io" target="_blank">drupalwxt/drupalwxt.github.io&lt;/a>&lt;/td>
-&lt;td>GitHub pages for Drupal WxT.&lt;/td>
-&lt;td>Size: 0 Bytes&lt;/td>
+&lt;td>GitHub Pages for Drupal WxT.&lt;/td>
+&lt;td>Size: 3111 Bytes&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>&lt;strong>helm-drupal&lt;/strong>&lt;/td>
@@ -397,12 +397,6 @@ We try our best to have security releases of Drupal Core within &lt;strong>24-72
 &lt;td>&lt;a href="https://github.com/drupalwxt/themes-cdn" target="_blank">drupalwxt/themes-cdn&lt;/a>&lt;/td>
 &lt;td>Content Delivery Network (CDN) files for the theme repositories of the Web Experience Toolkit (WET) &lt;/td>
 &lt;td>Size: 17505 Bytes&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>&lt;strong>website&lt;/strong>&lt;/td>
-&lt;td>&lt;a href="https://github.com/drupalwxt/website" target="_blank">drupalwxt/website&lt;/a>&lt;/td>
-&lt;td>GH pages for Drupal WxT.&lt;/td>
-&lt;td>Size: 161 Bytes&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>&lt;strong>wxt&lt;/strong>&lt;/td>
