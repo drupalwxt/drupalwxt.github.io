@@ -3,20 +3,19 @@
 <meta charset=utf-8>
 <meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no">
 <meta name=generator content="Hugo 0.86.1">
-<link rel=alternate type=application/rss+xml href=https://drupalwxt.github.io/en/docs/development/version/index.xml>
-<link rel=alternate type=text/html href=https://drupalwxt.github.io/en/docs/development/version/_print/>
+<link rel=alternate type=application/rss+xml href=https://drupalwxt.github.io/en/docs/development/architecture/index.xml>
+<link rel=alternate type=text/html href=https://drupalwxt.github.io/en/docs/development/architecture/_print/>
 <meta name=robots content="index, follow">
 <link rel="shortcut icon" href=../../../../favicons/favicon.ico>
-<title>Versioning | Drupal WxT</title>
-<meta name=description content="The Drupal WxT distribution is following semantic versioning.
-WxT typically makes a sprint release every four to six weeks. We will also use sprint …">
-<meta property="og:title" content="Versioning">
+<title>Architecture | Drupal WxT</title>
+<meta name=description content="The goal of Drupal WxT since the 4.1.x line is to make the installation profile very minimal by default but providing additional extensions that can …">
+<meta property="og:title" content="Architecture">
 <meta property="og:description" content="Drupal WxT">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://drupalwxt.github.io/en/docs/development/version/"><meta property="og:site_name" content="Drupal WxT">
-<meta itemprop=name content="Versioning">
+<meta property="og:url" content="https://drupalwxt.github.io/en/docs/development/architecture/"><meta property="og:site_name" content="Drupal WxT">
+<meta itemprop=name content="Architecture">
 <meta itemprop=description content="Drupal WxT"><meta name=twitter:card content="summary">
-<meta name=twitter:title content="Versioning">
+<meta name=twitter:title content="Architecture">
 <meta name=twitter:description content="Drupal WxT">
 <link rel=preload href=../../../../scss/main.min.571dde510d2970747501ff7043242bdbd229fd4fa1680c51c02b3d31c2d18f28.css as=style>
 <link href=../../../../scss/main.min.571dde510d2970747501ff7043242bdbd229fd4fa1680c51c02b3d31c2d18f28.css rel=stylesheet integrity>
@@ -60,7 +59,7 @@ English
 <div class=td-main>
 <div class="row flex-xl-nowrap">
 <aside class="col-12 col-md-3 col-xl-2 td-sidebar d-print-none">
-<script>$(function(){$("#td-section-nav a").removeClass("active"),$("#td-section-nav #m-endocsdevelopmentversion").addClass("active"),$("#td-section-nav #m-endocsdevelopmentversion-li span").addClass("td-sidebar-nav-active-item"),$("#td-section-nav #m-endocsdevelopmentversion").parents("li").addClass("active-path"),$("#td-section-nav li.active-path").addClass("show"),$("#td-section-nav li.active-path").children("input").prop('checked',!0),$("#td-section-nav #m-endocsdevelopmentversion-li").siblings("li").addClass("show"),$("#td-section-nav #m-endocsdevelopmentversion-li").children("ul").children("li").addClass("show"),$("#td-sidebar-menu").toggleClass("d-none")})</script>
+<script>$(function(){$("#td-section-nav a").removeClass("active"),$("#td-section-nav #m-endocsdevelopmentarchitecture").addClass("active"),$("#td-section-nav #m-endocsdevelopmentarchitecture-li span").addClass("td-sidebar-nav-active-item"),$("#td-section-nav #m-endocsdevelopmentarchitecture").parents("li").addClass("active-path"),$("#td-section-nav li.active-path").addClass("show"),$("#td-section-nav li.active-path").children("input").prop('checked',!0),$("#td-section-nav #m-endocsdevelopmentarchitecture-li").siblings("li").addClass("show"),$("#td-section-nav #m-endocsdevelopmentarchitecture-li").children("ul").children("li").addClass("show"),$("#td-sidebar-menu").toggleClass("d-none")})</script>
 <div id=td-sidebar-menu class="td-sidebar__inner d-none">
 <form class="td-sidebar__search d-flex align-items-center">
 <input type=search class="form-control td-search-input" placeholder="&#xf002; Search WxT" aria-label="Search WxT" autocomplete=off data-offline-search-index-json-src=../../../../offline-search-index.9182fb830fe6663fe4c7fb83eefd3191.json data-offline-search-base-href=../../../../ data-offline-search-max-results=10>
@@ -137,11 +136,11 @@ English
 </aside>
 <aside class="d-none d-xl-block col-xl-2 td-sidebar-toc d-print-none">
 <div class="td-page-meta ml-2 pb-1 pt-2 mb-0">
-<a href=https://github.com/drupalwxt/drupalwxt.github.io/tree/master/content/en/docs/development/version/_index.en.md class=td-page-meta--view target=_blank rel=noopener><i class="fa fa-file-alt fa-fw"></i> View page source</a>
-<a href=https://github.com/drupalwxt/drupalwxt.github.io/edit/master/content/en/docs/development/version/_index.en.md class=td-page-meta--edit target=_blank rel=noopener><i class="fa fa-edit fa-fw"></i> View/Edit this page</a>
-<a href="https://github.com/drupalwxt/drupalwxt.github.io/new/master/content/en/docs/development/version/_index.en.md?filename=change-me.md&value=---%0Atitle%3A+%22Long+Page+Title%22%0AlinkTitle%3A+%22Short+Nav+Title%22%0Aweight%3A+100%0Adescription%3A+%3E-%0A+++++Page+description+for+heading+and+indexes.%0A---%0A%0A%23%23+Heading%0A%0AEdit+this+template+to+create+your+new+page.%0A%0A%2A+Give+it+a+good+name%2C+ending+in+%60.md%60+-+e.g.+%60getting-started.md%60%0A%2A+Edit+the+%22front+matter%22+section+at+the+top+of+the+page+%28weight+controls+how+its+ordered+amongst+other+pages+in+the+same+directory%3B+lowest+number+first%29.%0A%2A+Add+a+good+commit+message+at+the+bottom+of+the+page+%28%3C80+characters%3B+use+the+extended+description+field+for+more+detail%29.%0A%2A+Create+a+new+branch+so+you+can+preview+your+new+file+and+request+a+review+via+Pull+Request.%0A" class=td-page-meta--child target=_blank rel=noopener><i class="fa fa-edit fa-fw"></i> Create child page</a>
-<a href="https://github.com/drupalwxt/drupalwxt.github.io/issues/new?title=Versioning" class=td-page-meta--issue target=_blank rel=noopener><i class="fab fa-github fa-fw"></i> Create project issue</a>
-<a id=print href=https://drupalwxt.github.io/en/docs/development/version/_print/><i class="fa fa-print fa-fw"></i> Print entire section</a>
+<a href=https://github.com/drupalwxt/drupalwxt.github.io/tree/master/content/en/docs/development/architecture/_index.en.md class=td-page-meta--view target=_blank rel=noopener><i class="fa fa-file-alt fa-fw"></i> View page source</a>
+<a href=https://github.com/drupalwxt/drupalwxt.github.io/edit/master/content/en/docs/development/architecture/_index.en.md class=td-page-meta--edit target=_blank rel=noopener><i class="fa fa-edit fa-fw"></i> View/Edit this page</a>
+<a href="https://github.com/drupalwxt/drupalwxt.github.io/new/master/content/en/docs/development/architecture/_index.en.md?filename=change-me.md&value=---%0Atitle%3A+%22Long+Page+Title%22%0AlinkTitle%3A+%22Short+Nav+Title%22%0Aweight%3A+100%0Adescription%3A+%3E-%0A+++++Page+description+for+heading+and+indexes.%0A---%0A%0A%23%23+Heading%0A%0AEdit+this+template+to+create+your+new+page.%0A%0A%2A+Give+it+a+good+name%2C+ending+in+%60.md%60+-+e.g.+%60getting-started.md%60%0A%2A+Edit+the+%22front+matter%22+section+at+the+top+of+the+page+%28weight+controls+how+its+ordered+amongst+other+pages+in+the+same+directory%3B+lowest+number+first%29.%0A%2A+Add+a+good+commit+message+at+the+bottom+of+the+page+%28%3C80+characters%3B+use+the+extended+description+field+for+more+detail%29.%0A%2A+Create+a+new+branch+so+you+can+preview+your+new+file+and+request+a+review+via+Pull+Request.%0A" class=td-page-meta--child target=_blank rel=noopener><i class="fa fa-edit fa-fw"></i> Create child page</a>
+<a href="https://github.com/drupalwxt/drupalwxt.github.io/issues/new?title=Architecture" class=td-page-meta--issue target=_blank rel=noopener><i class="fab fa-github fa-fw"></i> Create project issue</a>
+<a id=print href=https://drupalwxt.github.io/en/docs/development/architecture/_print/><i class="fa fa-print fa-fw"></i> Print entire section</a>
 </div>
 <div class="taxonomy taxonomy-terms-cloud taxo-tags">
 <h5 class=taxonomy-title>Tag Cloud</h5>
@@ -188,17 +187,17 @@ English
 <a href=https://drupalwxt.github.io/en/docs/development/>Development</a>
 </li>
 <li class="breadcrumb-item active" aria-current=page>
-<a href=https://drupalwxt.github.io/en/docs/development/version/>Versioning</a>
+<a href=https://drupalwxt.github.io/en/docs/development/architecture/>Architecture</a>
 </li>
 </ol>
 </nav>
 <div class=td-content>
-<h1>Versioning</h1>
+<h1>Architecture</h1>
 <header class=article-meta>
 <div class="taxonomy taxonomy-terms-article taxo-tags">
 <h5 class=taxonomy-title>Tags:</h5>
 <ul class=taxonomy-terms>
-<li><a class=taxonomy-term href=https://drupalwxt.github.io/en/tags/version/ data-taxonomy-term=version><span class=taxonomy-label>version</span></a></li>
+<li><a class=taxonomy-term href=https://drupalwxt.github.io/en/tags/architecture/ data-taxonomy-term=architecture><span class=taxonomy-label>architecture</span></a></li>
 </ul>
 </div>
 <div class="taxonomy taxonomy-terms-article taxo-categories">
@@ -208,49 +207,23 @@ English
 </ul>
 </div>
 </header>
-<p>The <strong><a href=https://github.com/drupalwxt/wxt>Drupal WxT</a></strong> distribution is following semantic versioning.</p>
-<p>WxT typically makes a sprint release every four to six weeks. We will also use sprint releases to package new minor releases of Drupal Core with WxT as they become available.</p>
-<p>In addition, we will also increment the major version number of WxT about once every four to six months.</p>
-<h2 id=extensions>Extensions</h2>
-<p>Support for semantic versioning for extensions (modules, themes, etc) is still ongoing.</p>
-<ul>
-<li><strong><a href=https://www.drupal.org/project/drupal/issues/3009338>Support semantic versioning for extensions (modules, themes, etc)</a></strong></li>
-</ul>
-<p>The three parts of our versioning system are MAJOR.FEATURE.SPRINT.</p>
-<p>Given the following tag: 9.x-2.15:</p>
-<table>
-<thead>
-<tr>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>9</strong></td>
-<td>Major version of Drupal Core</td>
-</tr>
-<tr>
-<td><strong>x</strong></td>
-<td></td>
-</tr>
-<tr>
-<td><strong>2</strong></td>
-<td>Major version of WxT</td>
-</tr>
-<tr>
-<td><strong>1</strong></td>
-<td>Feature release of WxT. Also increments with minor core releases.</td>
-</tr>
-<tr>
-<td><strong>5</strong></td>
-<td>Sprint release between feature releases</td>
-</tr>
-</tbody>
-</table>
+<p>The goal of <strong><a href=https://github.com/drupalwxt/wxt>Drupal WxT</a></strong> since the 4.1.x line is to make the installation profile very minimal by default but providing additional extensions that can be enabled as desired.</p>
+<p>What WxT offers is some light enhancements to Drupal Core, mainly around security and performance, and integration with the Web Experience Toolkit. By default, the distribution offers minimal functionality to allow full customizations by users. However a great deal of optional extensions are available that can provide additional functionality generally beneficial to Government departments.</p>
 <blockquote>
-<p><strong>Note</strong>: Due to the constraints of drupal.org, there is no separator between the FEATURE and SPRINT digits.</p>
+<p><strong>Note</strong>: In the future we are looking into providing a list of community modules that are build to work with the distribution but are &ldquo;out of tree&rdquo;.</p>
 </blockquote>
+<p>All of the optional modules are located in the <code>wxt_ext</code> folder named after WxT Extend and can be enabled during the initial site installation by passing the following flag via the drush cli:</p>
+<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-sh data-lang=sh>wxt_extension_configure_form.select_all<span style=color:#ce5c00;font-weight:700>=</span><span style=color:#4e9a06>&#39;TRUE&#39;</span>
+</code></pre></div><blockquote>
+<p><strong>Note</strong>: If you wish to only install the minimum set of dependencies please remove the <code>wxt_extension_configure_form.select_all='TRUE'</code> flag in its entirety.</p>
+</blockquote>
+<p>In order to provide a list of the optional enabled extensions during the installation that can be checked, all that any module has to do is provide a <code>modulename.wxt_extension.yml</code> file in their root and they will be picked as installable during the profile install and also respond to the additional drush flag discussed above.</p>
+<p>For more information on some of the history leading to this design:</p>
+<ul>
+<li><a href=https://www.drupal.org/project/wxt/issues/3182208>WxT Minimal Install</a></li>
+<li>[Upgrade Path from 3.1.x -> 4.0.x][wxt-upgrade-path]</li>
+<li><a href=https://www.drupal.org/project/wxt/issues/3182977>Roadmap for Drupal 9</a></li>
+</ul>
 <div class=section-index>
 </div>
 <style>.feedback--answer{display:inline-block}.feedback--answer-no{margin-left:1em}.feedback--response{display:none;margin-top:1em}.feedback--response__visible{display:block}</style>
@@ -269,7 +242,7 @@ Sorry to hear that. Please <a href=https://github.com/drupalwxt/drupalwxt.github
 <script>const yesButton=document.querySelector('.feedback--answer-yes'),noButton=document.querySelector('.feedback--answer-no'),yesResponse=document.querySelector('.feedback--response-yes'),noResponse=document.querySelector('.feedback--response-no'),disableButtons=()=>{yesButton.disabled=!0,noButton.disabled=!0},sendFeedback=b=>{if(typeof ga!='function')return;const a={command:'send',hitType:'event',category:'Helpful',action:'click',label:window.location.pathname,value:b};ga(a.command,a.hitType,a.category,a.action,a.label,a.value)};yesButton.addEventListener('click',()=>{yesResponse.classList.add('feedback--response__visible'),disableButtons(),sendFeedback(1)}),noButton.addEventListener('click',()=>{noResponse.classList.add('feedback--response__visible'),disableButtons(),sendFeedback(0)})</script>
 <br>
 <div class="text-muted mt-5 pt-3 border-top">
-Last modified 2021-12-30: <a href=https://github.com/drupalwxt/drupalwxt.github.io/commit/09ca55b5d07d23f01fa7e0f9eb536bc6717b441f>feat(initial): first content pass (09ca55b)</a>
+Last modified 2021-12-30: <a href=https://github.com/drupalwxt/drupalwxt.github.io/commit/aa302481af7be325992f94c2a6e712378d765ae5>feat(initial): second content pass (aa30248)</a>
 </div>
 </div>
 </main>

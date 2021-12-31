@@ -53,7 +53,7 @@ English
 </li>
 </ul>
 </div>
-<div class="navbar-nav d-none d-lg-block"><input type=search class="form-control td-search-input" placeholder="&#xf002; Search WxT" aria-label="Search WxT" autocomplete=off data-offline-search-index-json-src=../../../offline-search-index.7e4396f0a21d1f1c0fc87e75d37f09c3.json data-offline-search-base-href=../../../ data-offline-search-max-results=10>
+<div class="navbar-nav d-none d-lg-block"><input type=search class="form-control td-search-input" placeholder="&#xf002; Search WxT" aria-label="Search WxT" autocomplete=off data-offline-search-index-json-src=../../../offline-search-index.9182fb830fe6663fe4c7fb83eefd3191.json data-offline-search-base-href=../../../ data-offline-search-max-results=10>
 </div>
 </nav>
 </header>
@@ -92,25 +92,28 @@ This is the multi-page printable view of this section.
 </ul>
 <li>2: <a href=#pg-b39c693813ef2203f1ce3bbbacc4765b>Development</a></li>
 <ul>
-<li>2.1: <a href=#pg-c7deef66a9e0647b6c4605072259d21a>Configuration Management</a></li>
+<li>2.1: <a href=#pg-abad3371426d6e5f07eac51c06bea59a>Architecture</a></li>
 <ul>
 </ul>
-<li>2.2: <a href=#pg-8fa457ca188d93864e93d13c694eefec>Performance</a></li>
-<ul>
-<li>2.2.1: <a href=#pg-61994ca0147a9d94adcfce1fd96be0f1>PostgreSQL</a></li>
+<li>2.2: <a href=#pg-c7deef66a9e0647b6c4605072259d21a>Configuration Management</a></li>
 <ul>
 </ul>
-<li>2.2.2: <a href=#pg-bfabe6230aceb985666d26eb9ba78a34>Redis</a></li>
+<li>2.3: <a href=#pg-8fa457ca188d93864e93d13c694eefec>Performance</a></li>
+<ul>
+<li>2.3.1: <a href=#pg-61994ca0147a9d94adcfce1fd96be0f1>PostgreSQL</a></li>
 <ul>
 </ul>
-<li>2.2.3: <a href=#pg-81920c3d250035c9087cc9745bf7bbe1>Varnish</a></li>
+<li>2.3.2: <a href=#pg-bfabe6230aceb985666d26eb9ba78a34>Redis</a></li>
+<ul>
+</ul>
+<li>2.3.3: <a href=#pg-81920c3d250035c9087cc9745bf7bbe1>Varnish</a></li>
 <ul>
 </ul>
 </ul>
-<li>2.3: <a href=#pg-79b4d1f932ae16eae9acd3a1ea726455>Release Process</a></li>
+<li>2.4: <a href=#pg-79b4d1f932ae16eae9acd3a1ea726455>Release Process</a></li>
 <ul>
 </ul>
-<li>2.4: <a href=#pg-cab786e7f4e5db188aaf22e2110f0048>Versioning</a></li>
+<li>2.5: <a href=#pg-cab786e7f4e5db188aaf22e2110f0048>Versioning</a></li>
 <ul>
 </ul>
 </ul>
@@ -625,7 +628,7 @@ We try our best to have security releases of Drupal Core within <strong>24-72 ho
 <td><strong>drupalwxt.github.io</strong></td>
 <td><a href=https://github.com/drupalwxt/drupalwxt.github.io target=_blank>drupalwxt/drupalwxt.github.io</a></td>
 <td>GitHub Pages for Drupal WxT.</td>
-<td>Size: 3111 Bytes</td>
+<td>Size: 3167 Bytes</td>
 </tr>
 <tr>
 <td><strong>helm-drupal</strong></td>
@@ -740,7 +743,27 @@ The <strong>roadmap</strong> helps guide the project and helps to steer the tech
 <p>This section provides information for developers who wish to help collaborate and improve <strong><a href=https://github.com/drupalwxt/wxt>Drupal WxT</a></strong>.</p>
 </div>
 <div class=td-content>
-<h1 id=pg-c7deef66a9e0647b6c4605072259d21a>2.1 - Configuration Management</h1>
+<h1 id=pg-abad3371426d6e5f07eac51c06bea59a>2.1 - Architecture</h1>
+<p>The goal of <strong><a href=https://github.com/drupalwxt/wxt>Drupal WxT</a></strong> since the 4.1.x line is to make the installation profile very minimal by default but providing additional extensions that can be enabled as desired.</p>
+<p>What WxT offers is some light enhancements to Drupal Core, mainly around security and performance, and integration with the Web Experience Toolkit. By default, the distribution offers minimal functionality to allow full customizations by users. However a great deal of optional extensions are available that can provide additional functionality generally beneficial to Government departments.</p>
+<blockquote>
+<p><strong>Note</strong>: In the future we are looking into providing a list of community modules that are build to work with the distribution but are &ldquo;out of tree&rdquo;.</p>
+</blockquote>
+<p>All of the optional modules are located in the <code>wxt_ext</code> folder named after WxT Extend and can be enabled during the initial site installation by passing the following flag via the drush cli:</p>
+<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-sh data-lang=sh>wxt_extension_configure_form.select_all<span style=color:#ce5c00;font-weight:700>=</span><span style=color:#4e9a06>&#39;TRUE&#39;</span>
+</code></pre></div><blockquote>
+<p><strong>Note</strong>: If you wish to only install the minimum set of dependencies please remove the <code>wxt_extension_configure_form.select_all='TRUE'</code> flag in its entirety.</p>
+</blockquote>
+<p>In order to provide a list of the optional enabled extensions during the installation that can be checked, all that any module has to do is provide a <code>modulename.wxt_extension.yml</code> file in their root and they will be picked as installable during the profile install and also respond to the additional drush flag discussed above.</p>
+<p>For more information on some of the history leading to this design:</p>
+<ul>
+<li><a href=https://www.drupal.org/project/wxt/issues/3182208>WxT Minimal Install</a></li>
+<li>[Upgrade Path from 3.1.x -> 4.0.x][wxt-upgrade-path]</li>
+<li><a href=https://www.drupal.org/project/wxt/issues/3182977>Roadmap for Drupal 9</a></li>
+</ul>
+</div>
+<div class=td-content style=page-break-before:always>
+<h1 id=pg-c7deef66a9e0647b6c4605072259d21a>2.2 - Configuration Management</h1>
 <p>Drupal WxT thanks to the work done by the Acquia Team is able to use advanced
 configuration management strategies.</p>
 <p>At the moment this remains an opt-in process and you will have to add the
@@ -832,11 +855,11 @@ be leveraged depending on your <code>SDLC</code>.</p>
 </span></code></pre></div>
 </div>
 <div class=td-content style=page-break-before:always>
-<h1 id=pg-8fa457ca188d93864e93d13c694eefec>2.2 - Performance</h1>
+<h1 id=pg-8fa457ca188d93864e93d13c694eefec>2.3 - Performance</h1>
 <p>Below are some recommended settings that improve the performance of <strong><a href=https://github.com/drupalwxt/wxt>Drupal WxT</a></strong> sites.</p>
 </div>
 <div class=td-content>
-<h1 id=pg-61994ca0147a9d94adcfce1fd96be0f1>2.2.1 - PostgreSQL</h1>
+<h1 id=pg-61994ca0147a9d94adcfce1fd96be0f1>2.3.1 - PostgreSQL</h1>
 <p>To properly configure PostgreSQL with Drupal you should ensure the following configuration is used.</p>
 <blockquote>
 <p><strong>Note</strong>: Some customizations might be necessary depending on your individual requirements.</p>
@@ -889,7 +912,7 @@ ANALYZE path_alias<span style=color:#000;font-weight:700>;</span>
 </code></pre></div>
 </div>
 <div class=td-content style=page-break-before:always>
-<h1 id=pg-bfabe6230aceb985666d26eb9ba78a34>2.2.2 - Redis</h1>
+<h1 id=pg-bfabe6230aceb985666d26eb9ba78a34>2.3.2 - Redis</h1>
 <p>To properly configure Redis with Drupal you should ensure the following configuration is added to your <code>settings.php</code> file.</p>
 <blockquote>
 <p><strong>Note</strong>: Some customizations might be necessary depending on your individual requirements.</p>
@@ -963,7 +986,7 @@ ANALYZE path_alias<span style=color:#000;font-weight:700>;</span>
 </code></pre></div>
 </div>
 <div class=td-content style=page-break-before:always>
-<h1 id=pg-81920c3d250035c9087cc9745bf7bbe1>2.2.3 - Varnish</h1>
+<h1 id=pg-81920c3d250035c9087cc9745bf7bbe1>2.3.3 - Varnish</h1>
 <p>To properly configure Varnish with Drupal you should ensure the following configuration is your <code>default.vcl</code> file.</p>
 <blockquote>
 <p><strong>Note</strong>: Some customizations might be necessary depending on your individual requirements.</p>
@@ -1158,7 +1181,7 @@ sub vcl_synth {
 </code></pre>
 </div>
 <div class=td-content style=page-break-before:always>
-<h1 id=pg-79b4d1f932ae16eae9acd3a1ea726455>2.3 - Release Process</h1>
+<h1 id=pg-79b4d1f932ae16eae9acd3a1ea726455>2.4 - Release Process</h1>
 <h2 id=select-a-version-number>Select a version number</h2>
 <p>WxT releases are numbered using a form of semantic versioning. More information can be found in our <strong><a href=../../../en/docs/development/version/>Versioning</a></strong> page.</p>
 <p><code>MAJOR.FEATURE.SPRINT</code></p>
@@ -1232,7 +1255,7 @@ See the &lt;a <span style=color:#000>href</span><span style=color:#ce5c00;font-w
 </code></pre></div>
 </div>
 <div class=td-content style=page-break-before:always>
-<h1 id=pg-cab786e7f4e5db188aaf22e2110f0048>2.4 - Versioning</h1>
+<h1 id=pg-cab786e7f4e5db188aaf22e2110f0048>2.5 - Versioning</h1>
 <p>The <strong><a href=https://github.com/drupalwxt/wxt>Drupal WxT</a></strong> distribution is following semantic versioning.</p>
 <p>WxT typically makes a sprint release every four to six weeks. We will also use sprint releases to package new minor releases of Drupal Core with WxT as they become available.</p>
 <p>In addition, we will also increment the major version number of WxT about once every four to six months.</p>
