@@ -181,6 +181,10 @@ github_repo = "https://github.com/drupalwxt/drupalwxt.github.io"
 # Specify a value here if your content directory is not in your repo's root directory
 # github_subdir = "userguide"
 
+# Uncomment this if you have a newer GitHub repo with "main" as the default branch,
+# or specify a new value if you want to reference another branch in your GitHub links
+github_branch= "main"
+
 time_format_blog = "Monday, January 02, 2006"
 time_format_default = "January 2, 2006"
 # Sections to publish in the main RSS feed.
