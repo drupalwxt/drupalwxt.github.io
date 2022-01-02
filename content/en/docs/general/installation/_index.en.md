@@ -14,6 +14,7 @@ categories:
 - wxt
 tags:
 - composer
+- general
 - install
 ---
 

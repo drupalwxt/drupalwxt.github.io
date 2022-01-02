@@ -13,6 +13,8 @@ resources:
 categories:
 - wxt
 tags:
+- cache
+- performance
 - varnish
 ---
 
@@ -117,6 +119,10 @@ sub vcl_deliver {
   unset resp.http.X-Varnish;
   unset resp.http.Via;
 
+  # Comment these for easier Drupal cache tag debugging in development.
+  unset resp.http.Cache-Tags;
+  unset resp.http.X-Drupal-Cache-Contexts;
+
   # Add Content-Security-Policy
   # set resp.http.Content-Security-Policy = "default-src 'self' *.example.ca *.example.ca; style-src 'self' 'unsafe-inline' *.example.ca https://fonts.googleapis.com; script-src 'self' 'unsafe-inline' 'unsafe-eval' *.example.ca  *.adobedtm.com use.fontawesome.com blob:; connect-src 'self' *.example.ca *.omtrdc.net *.demdex.net *.everesttech.net; img-src 'self' *.example.ca *.omtrdc.net *.demdex.net *.everesttech.net data:; font-src 'self' *.example.ca https://fonts.gstatic.com";
 
@@ -129,7 +135,7 @@ sub vcl_deliver {
   # }
 
   # Add X-Frame-Options
-  if (req.url ~ "^/livechat" || req.url ~ "^/(eng/|fra/)?media/") {
+  if (req.url ~ "^/livechat" || req.url ~ "^/(en/|fr/)?entity-browser/") {
     set resp.http.X-Frame-Options = "SAMEORIGIN";
   } else {
     set resp.http.X-Frame-Options = "DENY";
@@ -191,7 +197,6 @@ sub vcl_synth {
   #   synthetic(std.fileread("/data/configuration/varnish/errors/404.html"));
   #   return (deliver);
   # } else
-
   if (resp.status == 700) { # Respond to healthcheck
     set resp.status = 200;
     set resp.http.Content-Type = "text/plain";

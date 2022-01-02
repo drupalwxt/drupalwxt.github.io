@@ -15,6 +15,7 @@ categories:
 - wxt
 tags:
 - general
+- userguide
 ---
 
 Userguide for all of the general information related to the maintenance and operation of **[Drupal WxT][wxt]**.

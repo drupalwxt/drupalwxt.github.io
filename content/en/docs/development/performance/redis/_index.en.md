@@ -13,6 +13,8 @@ resources:
 categories:
 - wxt
 tags:
+- cache
+- performance
 - redis
 ---
 
@@ -28,7 +30,8 @@ if (extension_loaded('redis')) {
   $settings['redis.connection']['scheme'] = 'http';
   $settings['redis.connection']['host'] = 'localhost';
   $settings['redis.connection']['port'] = '6379';
-  //$settings['redis.connection']['password'] = '';
+  $settings['redis.connection']['password'] = getenv('REDIS_PASSWORD') ?: '';
+  $settings['redis.connection']['persistent'] = FALSE;
 
   // Allow the services to work before the Redis module itself is enabled.
   $settings['container_yamls'][] = 'modules/contrib/redis/example.services.yml';

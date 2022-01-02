@@ -13,6 +13,7 @@ resources:
 categories:
 - wxt
 tags:
+- general
 - resources
 ---
 

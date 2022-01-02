@@ -1,3 +1,5 @@
+// Navbar
+
 .td-navbar-cover {
     background: $primary;
 
@@ -107,4 +109,14 @@
             display: none;
         }
     }
+}
+
+// Sidebar Nav
+
+.td-sidebar-nav {
+  .dropdown {
+    .nav-link {
+      padding: 0.5rem 1.5rem !important;
+    }
+  }
 }
