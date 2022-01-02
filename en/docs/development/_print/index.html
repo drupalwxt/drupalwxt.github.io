@@ -53,7 +53,7 @@ English
 </li>
 </ul>
 </div>
-<div class="navbar-nav d-none d-lg-block"><input type=search class="form-control td-search-input" placeholder="&#xf002; Search WxT" aria-label="Search WxT" autocomplete=off data-offline-search-index-json-src=../../../../offline-search-index.ff4596d7d4dc176fd914dbb056658bc3.json data-offline-search-base-href=../../../../ data-offline-search-max-results=10>
+<div class="navbar-nav d-none d-lg-block"><input type=search class="form-control td-search-input" placeholder="&#xf002; Search WxT" aria-label="Search WxT" autocomplete=off data-offline-search-index-json-src=../../../../offline-search-index.c6c343b0b9fa8718f763187f0c47bcea.json data-offline-search-base-href=../../../../ data-offline-search-max-results=10>
 </div>
 </nav>
 </header>
@@ -75,25 +75,28 @@ This is the multi-page printable view of this section.
 <li>1: <a href=#pg-abad3371426d6e5f07eac51c06bea59a>Architecture</a></li>
 <ul>
 </ul>
-<li>2: <a href=#pg-c7deef66a9e0647b6c4605072259d21a>Configuration Management</a></li>
+<li>2: <a href=#pg-e6f51e4d79f2f4d871a918eefe1a8bd7>Composer</a></li>
 <ul>
 </ul>
-<li>3: <a href=#pg-8fa457ca188d93864e93d13c694eefec>Performance</a></li>
-<ul>
-<li>3.1: <a href=#pg-61994ca0147a9d94adcfce1fd96be0f1>PostgreSQL</a></li>
+<li>3: <a href=#pg-c7deef66a9e0647b6c4605072259d21a>Configuration Management</a></li>
 <ul>
 </ul>
-<li>3.2: <a href=#pg-bfabe6230aceb985666d26eb9ba78a34>Redis</a></li>
+<li>4: <a href=#pg-8fa457ca188d93864e93d13c694eefec>Performance</a></li>
+<ul>
+<li>4.1: <a href=#pg-61994ca0147a9d94adcfce1fd96be0f1>PostgreSQL</a></li>
 <ul>
 </ul>
-<li>3.3: <a href=#pg-81920c3d250035c9087cc9745bf7bbe1>Varnish</a></li>
+<li>4.2: <a href=#pg-bfabe6230aceb985666d26eb9ba78a34>Redis</a></li>
+<ul>
+</ul>
+<li>4.3: <a href=#pg-81920c3d250035c9087cc9745bf7bbe1>Varnish</a></li>
 <ul>
 </ul>
 </ul>
-<li>4: <a href=#pg-79b4d1f932ae16eae9acd3a1ea726455>Release Process</a></li>
+<li>5: <a href=#pg-79b4d1f932ae16eae9acd3a1ea726455>Release Process</a></li>
 <ul>
 </ul>
-<li>5: <a href=#pg-cab786e7f4e5db188aaf22e2110f0048>Versioning</a></li>
+<li>6: <a href=#pg-cab786e7f4e5db188aaf22e2110f0048>Versioning</a></li>
 <ul>
 </ul>
 </ul>
@@ -121,7 +124,111 @@ This is the multi-page printable view of this section.
 </ul>
 </div>
 <div class=td-content style=page-break-before:always>
-<h1 id=pg-c7deef66a9e0647b6c4605072259d21a>2 - Configuration Management</h1>
+<h1 id=pg-e6f51e4d79f2f4d871a918eefe1a8bd7>2 - Composer</h1>
+<div class="alert alert-warning" role=alert>
+A reminder that <strong><a href=https://getcomposer.org/download/>composer</a></strong> is required for the installation and updating of <strong><a href=https://github.com/drupalwxt/wxt>Drupal WxT</a></strong>.
+</div>
+<p>We highly recommend using our <strong><a href=https://github.com/drupalwxt/wxt-project>Composer Project Template</a></strong> to build and maintain your WxT derived project’s codebase.</p>
+<h2 id=getting-started>Getting Started</h2>
+<p>The following command is all you need to get started:</p>
+<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-sh data-lang=sh>composer create-project drupalwxt/site-wxt:4.2.0 &lt;site-name&gt;
+</code></pre></div><blockquote>
+<p><strong>Note</strong>: For development you may also specify a branch using <code>drupalwxt/site-wxt:4.2.x-dev</code>.</p>
+</blockquote>
+<p>You can see a working example of a fully generated Composer Project Template over at:</p>
+<ul>
+<li><strong><a href=https://github.com/drupalwxt/site-wxt>Site WxT</a></strong></li>
+</ul>
+<p>Where the following is the command that was used for the initial generation:</p>
+<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-sh data-lang=sh>composer create-project drupalwxt/site-wxt:4.2.0 site-wxt
+</code></pre></div><blockquote>
+<p><strong>Note</strong>: Remember to keep the <code>composer.json</code> and <code>composer.lock</code> files that exist above <code>docroot</code> in source control as they are controlling your dependencies.</p>
+</blockquote>
+<h2 id=maintenance>Maintenance</h2>
+<p>List of common commands are as follows:</p>
+<table>
+<thead>
+<tr>
+<th>Task</th>
+<th>Composer</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Installing a contrib project (latest version)</td>
+<td><code>composer require drupal/PROJECT</code></td>
+</tr>
+<tr>
+<td>Installing a contrib project (specific version)</td>
+<td><code>composer require drupal/PROJECT:1.0.0-beta5</code></td>
+</tr>
+<tr>
+<td>Updating all projects including Drupal Core</td>
+<td><code>composer update</code></td>
+</tr>
+<tr>
+<td>Updating a single contrib project</td>
+<td><code>composer update drupal/PROJECT_NAME</code></td>
+</tr>
+<tr>
+<td>Updating Drupal Core</td>
+<td><code>composer update drupal/core</code></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Note</strong>: Composer is a <strong>dependency manager</strong> and helps us keep track of what code and at what version our application relies on so that it always get installed the right way on every copy of that application.</p>
+</blockquote>
+<h3 id=specifying-a-version>Specifying a version</h3>
+<p>A specific version can be specified from the cli:</p>
+<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-sh data-lang=sh>composer require drupal/&lt;modulename&gt;:&lt;version&gt;
+</code></pre></div><p>However please note if you specify a branch, such as 1.x you must add <code>-dev</code> to the end of the version:</p>
+<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-sh data-lang=sh>composer require drupal/token:1.x-dev
+</code></pre></div><h3 id=source-control>Source Control</h3>
+<p>Taking a look at the <code>.gitignore</code> file, you will discover that certain directories, including all those directories containing contributed projects, are excluded from source control which is by design.</p>
+<blockquote>
+<p><strong>Note</strong>: Unlike <strong><a href=https://www.drush.org/latest/>Drush</a></strong> in a Composer derived project you should <strong>never commit your install dependencies to source control</strong>.</p>
+</blockquote>
+<p>Composer will create <code>composer.lock</code> file, which is a list of dependencies that were installed, and in which versions.</p>
+<blockquote>
+<p><strong>Note</strong>: In general you should always <strong>commit your <code>composer.lock</code> file to source control</strong> so that others via a quick <code>composer install</code> can have everything installed along with the correct versions specified in the <code>composer.lock</code> file.</p>
+</blockquote>
+<h3 id=how-to-update-drupal-core>How to update Drupal Core?</h3>
+<p>Please <strong>don&rsquo;t add <code>drupal/core</code> to your project&rsquo;s composer.json</strong> since WxT manages Drupal Core for you along with the series of patches on top of it.</p>
+<p>WxT&rsquo;s minor versions will always correspond to Drupal Core&rsquo;s. For example, <code>drupalwxt/wxt:~4.2.0</code> will require Drupal Core 9.2.x and <code>drupalwxt/wxt:~4.1.0</code> will require Drupal Core 9.1.x.</p>
+<p>When you need to update Drupal Core as an example from 9.1.x to 9.2.x, all you would do is change your requirement for <code>drupalwxt/wxt</code> in your <code>composer.json</code> file:</p>
+<pre><code>composer require --no-update drupalwxt/wxt:~4.2.0
+composer update
+</code></pre><h3 id=compatibility-table>Compatibility table</h3>
+<table>
+<thead>
+<tr>
+<th><code>drupalwxt/wxt</code> version</th>
+<th>Drupal Core version</th>
+<th>Drush version</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>~4.2.0</code></td>
+<td>9.2.x</td>
+<td><code>>=9.7</code></td>
+</tr>
+<tr>
+<td><code>~4.1.0</code></td>
+<td>9.1.x</td>
+<td><code>>=9.7</code></td>
+</tr>
+<tr>
+<td><code>~4.0.0</code></td>
+<td>8.8.x+</td>
+<td><code>>=9.7</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class=td-content style=page-break-before:always>
+<h1 id=pg-c7deef66a9e0647b6c4605072259d21a>3 - Configuration Management</h1>
 <p>Drupal WxT thanks to the work done by the Acquia Team is able to use advanced
 configuration management strategies.</p>
 <p>At the moment this remains an opt-in process and you will have to add the
@@ -213,11 +320,11 @@ be leveraged depending on your <code>SDLC</code>.</p>
 </span></code></pre></div>
 </div>
 <div class=td-content style=page-break-before:always>
-<h1 id=pg-8fa457ca188d93864e93d13c694eefec>3 - Performance</h1>
+<h1 id=pg-8fa457ca188d93864e93d13c694eefec>4 - Performance</h1>
 <p>Below are some recommended settings that improve the performance of <strong><a href=https://github.com/drupalwxt/wxt>Drupal WxT</a></strong> sites.</p>
 </div>
 <div class=td-content>
-<h1 id=pg-61994ca0147a9d94adcfce1fd96be0f1>3.1 - PostgreSQL</h1>
+<h1 id=pg-61994ca0147a9d94adcfce1fd96be0f1>4.1 - PostgreSQL</h1>
 <p>To properly configure PostgreSQL with Drupal you should ensure the following configuration is used.</p>
 <blockquote>
 <p><strong>Note</strong>: Some customizations might be necessary depending on your individual requirements.</p>
@@ -270,7 +377,7 @@ ANALYZE path_alias<span style=color:#000;font-weight:700>;</span>
 </code></pre></div>
 </div>
 <div class=td-content style=page-break-before:always>
-<h1 id=pg-bfabe6230aceb985666d26eb9ba78a34>3.2 - Redis</h1>
+<h1 id=pg-bfabe6230aceb985666d26eb9ba78a34>4.2 - Redis</h1>
 <p>To properly configure Redis with Drupal you should ensure the following configuration is added to your <code>settings.php</code> file.</p>
 <blockquote>
 <p><strong>Note</strong>: Some customizations might be necessary depending on your individual requirements.</p>
@@ -345,7 +452,7 @@ ANALYZE path_alias<span style=color:#000;font-weight:700>;</span>
 </code></pre></div>
 </div>
 <div class=td-content style=page-break-before:always>
-<h1 id=pg-81920c3d250035c9087cc9745bf7bbe1>3.3 - Varnish</h1>
+<h1 id=pg-81920c3d250035c9087cc9745bf7bbe1>4.3 - Varnish</h1>
 <p>To properly configure Varnish with Drupal you should ensure the following configuration is your <code>default.vcl</code> file.</p>
 <blockquote>
 <p><strong>Note</strong>: Some customizations might be necessary depending on your individual requirements.</p>
@@ -543,7 +650,7 @@ sub vcl_synth {
 </code></pre>
 </div>
 <div class=td-content style=page-break-before:always>
-<h1 id=pg-79b4d1f932ae16eae9acd3a1ea726455>4 - Release Process</h1>
+<h1 id=pg-79b4d1f932ae16eae9acd3a1ea726455>5 - Release Process</h1>
 <h2 id=select-a-version-number>Select a version number</h2>
 <p>WxT releases are numbered using a form of semantic versioning. More information can be found in our <strong><a href=../../../../en/docs/development/version/>Versioning</a></strong> page.</p>
 <p><code>MAJOR.FEATURE.SPRINT</code></p>
@@ -617,7 +724,7 @@ See the &lt;a <span style=color:#000>href</span><span style=color:#ce5c00;font-w
 </code></pre></div>
 </div>
 <div class=td-content style=page-break-before:always>
-<h1 id=pg-cab786e7f4e5db188aaf22e2110f0048>5 - Versioning</h1>
+<h1 id=pg-cab786e7f4e5db188aaf22e2110f0048>6 - Versioning</h1>
 <p>The <strong><a href=https://github.com/drupalwxt/wxt>Drupal WxT</a></strong> distribution is following semantic versioning.</p>
 <p>WxT typically makes a sprint release every four to six weeks. We will also use sprint releases to package new minor releases of Drupal Core with WxT as they become available.</p>
 <p>In addition, we will also increment the major version number of WxT about once every four to six months.</p>

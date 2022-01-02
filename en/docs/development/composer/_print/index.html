@@ -3,20 +3,28 @@
 <meta charset=utf-8>
 <meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no">
 <meta name=generator content="Hugo 0.86.1">
-<link rel=canonical type=text/html href=https://drupalwxt.github.io/en/docs/development/release-process/>
-<link rel=alternate type=application/rss+xml href=https://drupalwxt.github.io/en/docs/development/release-process/index.xml>
+<link rel=canonical type=text/html href=https://drupalwxt.github.io/en/docs/development/composer/>
+<link rel=alternate type=application/rss+xml href=https://drupalwxt.github.io/en/docs/development/composer/index.xml>
 <meta name=robots content="noindex, nofollow">
 <link rel="shortcut icon" href=../../../../../favicons/favicon.ico>
-<title>Release Process | Drupal WxT</title>
-<meta name=description content="Select a version number
-WxT releases are numbered using a form of semantic versioning. More information can be found in our Versioning page. …">
-<meta property="og:title" content="Release Process">
+<title>Composer | Drupal WxT</title>
+<meta name=description content="
+
+
+
+
+    A reminder that composer is required for the installation and updating of Drupal WxT.
+
+
+
+We highly recommend using our Composer Project …">
+<meta property="og:title" content="Composer">
 <meta property="og:description" content="Drupal WxT">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://drupalwxt.github.io/en/docs/development/release-process/"><meta property="og:site_name" content="Drupal WxT">
-<meta itemprop=name content="Release Process">
+<meta property="og:url" content="https://drupalwxt.github.io/en/docs/development/composer/"><meta property="og:site_name" content="Drupal WxT">
+<meta itemprop=name content="Composer">
 <meta itemprop=description content="Drupal WxT"><meta name=twitter:card content="summary">
-<meta name=twitter:title content="Release Process">
+<meta name=twitter:title content="Composer">
 <meta name=twitter:description content="Drupal WxT">
 <link rel=preload href=../../../../../scss/main.min.3162f5172db4ff999a6c4b55cefbc423a62669b69ea6b6094ffd67dab0c2e3fa.css as=style>
 <link href=../../../../../scss/main.min.3162f5172db4ff999a6c4b55cefbc423a62669b69ea6b6094ffd67dab0c2e3fa.css rel=stylesheet integrity>
@@ -66,84 +74,114 @@ English
 This is the multi-page printable view of this section.
 <a href=# onclick="return print(),!1">Click here to print</a>.
 </p><p>
-<a href=../../../../../en/docs/development/release-process/>Return to the regular view of this page</a>.
+<a href=../../../../../en/docs/development/composer/>Return to the regular view of this page</a>.
 </p>
 </div>
-<h1 class=title>Release Process</h1>
+<h1 class=title>Composer</h1>
 <ul>
 </ul>
 <div class=content>
-<h2 id=select-a-version-number>Select a version number</h2>
-<p>WxT releases are numbered using a form of semantic versioning. More information can be found in our <strong><a href=../../../../../en/docs/development/version/>Versioning</a></strong> page.</p>
-<p><code>MAJOR.FEATURE.SPRINT</code></p>
-<p>In general, when preparing a release: increment the FEATURE when Drupal Core has a major release (ie. 9.2.x to 9.3.x) otherwise simply increment the SPRINT number.</p>
-<h2 id=create-an-issue-on-githubcom>Create an issue on GitHub.com</h2>
-<p>Create an issue in the <strong><a href=https://github.com/drupalwxt/wxt>Drupal WxT</a></strong> project on GitHub for release tracking, title it <code>Release x.x.x</code> (where x.x.x is the incremented version number).</p>
-<p>This issue should contain the following checklist as well as any other related steps or information regarding preparing the release.</p>
-<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-sh data-lang=sh>See the <span style=color:#ce5c00;font-weight:700>[</span>full release documentation<span style=color:#ce5c00;font-weight:700>](</span>https://drupalwxt.github.io/en/docs/development/release-process/<span style=color:#ce5c00;font-weight:700>)</span> <span style=color:#204a87;font-weight:700>for</span> more detail.
-
-- <span style=color:#ce5c00;font-weight:700>[</span> <span style=color:#ce5c00;font-weight:700>]</span> All related projects <span style=color:#ce5c00;font-weight:700>(</span>wxt_library and wxt_bootstrap<span style=color:#ce5c00;font-weight:700>)</span> tagged and released on GitHub.com and Drupal.org
-- <span style=color:#ce5c00;font-weight:700>[</span> <span style=color:#ce5c00;font-weight:700>]</span> Version number selected
-- <span style=color:#ce5c00;font-weight:700>[</span> <span style=color:#ce5c00;font-weight:700>]</span> CHANGELOG.md updated
-- <span style=color:#ce5c00;font-weight:700>[</span> <span style=color:#ce5c00;font-weight:700>]</span> composer.json updated
-- <span style=color:#ce5c00;font-weight:700>[</span> <span style=color:#ce5c00;font-weight:700>]</span> Run version.sh <span style=color:#204a87;font-weight:700>for</span> hook_updates and wxt contrib
-- <span style=color:#ce5c00;font-weight:700>[</span> <span style=color:#ce5c00;font-weight:700>]</span> CI build passes
-- <span style=color:#ce5c00;font-weight:700>[</span> <span style=color:#ce5c00;font-weight:700>]</span> Releases tagged and pushed to GitHub.com and Drupal.org
-- <span style=color:#ce5c00;font-weight:700>[</span> <span style=color:#ce5c00;font-weight:700>]</span> WxT released on Drupal.org <span style=color:#ce5c00;font-weight:700>(</span>https://drupalwxt.github.io/en/docs/development/release-process/#release<span style=color:#ce5c00;font-weight:700>)</span>
-- <span style=color:#ce5c00;font-weight:700>[</span> <span style=color:#ce5c00;font-weight:700>]</span> Add changelog information to published tag once CI is <span style=color:#204a87;font-weight:700>done</span>
-</code></pre></div><h2 id=update-changelog>Update changelog</h2>
-<p>Ensure the changelog contains an entry for the release and is updated as issues and changes are resolved (in the next steps or when committing code / changes).</p>
-<h2 id=review-dependent-wxt-modules>Review dependent wxt modules</h2>
-<ol>
-<li>Review contrib modules in composer.json (or in a site install; extend->update) and update as necessary.</li>
-<li>If necessary, tag <strong><a href=https://github.com/drupalwxt/wxt_library>wxt_library</a></strong> and update <strong><a href=https://github.com/drupalwxt/wxt>wxt</a></strong>&rsquo;s <code>composer.json</code> file</li>
-<li>If necessary, tag <strong><a href=https://github.com/drupalwxt/wxt_bootstrap>wxt_bootstrap</a></strong> and update <strong><a href=https://github.com/drupalwxt/wxt>wxt</a></strong>&rsquo;s <code>composer.json</code> file</li>
-</ol>
-<p>All projects must be released on drupal.org (and github).</p>
-<blockquote>
-<p><strong>Note</strong>: Changes to <code>composer.json</code> file (specifically dev dependencies and repositories) should be mentioned in the CHANGELOG.</p>
+<div class="alert alert-warning" role=alert>
+A reminder that <strong><a href=https://getcomposer.org/download/>composer</a></strong> is required for the installation and updating of <strong><a href=https://github.com/drupalwxt/wxt>Drupal WxT</a></strong>.
+</div>
+<p>We highly recommend using our <strong><a href=https://github.com/drupalwxt/wxt-project>Composer Project Template</a></strong> to build and maintain your WxT derived project’s codebase.</p>
+<h2 id=getting-started>Getting Started</h2>
+<p>The following command is all you need to get started:</p>
+<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-sh data-lang=sh>composer create-project drupalwxt/site-wxt:4.2.0 &lt;site-name&gt;
+</code></pre></div><blockquote>
+<p><strong>Note</strong>: For development you may also specify a branch using <code>drupalwxt/site-wxt:4.2.x-dev</code>.</p>
 </blockquote>
-<h3 id=drupalorg-version>Drupal.org version</h3>
-<p>Drupal.org does not currently support semantic versioning. Instead, the version number on drupal.org is <code>8.x-X.YZZ</code>, where:</p>
+<p>You can see a working example of a fully generated Composer Project Template over at:</p>
 <ul>
-<li><code>X = MAJOR</code></li>
-<li><code>Y = FEATURE</code></li>
-<li><code>ZZ = SPRINT</code> (two digits - add leading zero for &lt; 10)</li>
+<li><strong><a href=https://github.com/drupalwxt/site-wxt>Site WxT</a></strong></li>
 </ul>
-<h2 id=check-composerjson>Check composer.json</h2>
-<p>If the wxt dependent modules are updated, we need to reflect this in wxt <code>composer.json</code> and the CHANGELOG.</p>
-<ul>
-<li><code>git clone https://github.com/drupalwxt/wxt.git</code></li>
-<li>Confirm or update that it&rsquo;s using appropriate tags of <strong><a href=https://github.com/drupalwxt/wxt_library>wxt_library</a></strong> + <strong><a href=https://github.com/drupalwxt/wxt_bootstrap>wxt_bootstrap</a></strong> (<code>composer.json</code>)</li>
-<li>Push to github.com and drupal.org repositories any changes</li>
-<li>Ensure GitHub Actions build passes</li>
-</ul>
-<h2 id=tag-wxt>Tag WxT</h2>
-<h3 id=githubcom-and-drupalorg>GitHub.com and Drupal.org</h3>
-<ul>
-<li><code>git tag MAJOR.FEATURE.SPRINT</code></li>
-<li><code>git push $GITHUB_REMOTE MAJOR.FEATURE.SPRINT</code></li>
-</ul>
-<h2 id=release>Release</h2>
-<h3 id=githubcom>GitHub.com</h3>
-<ol>
-<li>Go to <strong><a href=https://github.com/drupalwxt/wxt/tags>Tags</a></strong> page</li>
-<li>Click &mldr; and select create release on the tag</li>
-<li>Enter the version number in the <em>release title</em></li>
-<li>Copy the changelog entry for this release into the <code>release notes</code></li>
-<li>Click publish release</li>
-</ol>
-<h3 id=drupalorg>Drupal.org</h3>
-<p>The builds on Drupal.org are incomplete as they don&rsquo;t fully support Composer yet which is why we host a tarball on GitHub for those not using Composer.</p>
-<ol>
-<li><strong><a href=https://www.drupal.org/node/add/project-release/2619112>Drupal WxT Release Page</a></strong></li>
-<li>Select the tag</li>
-<li>Copy/paste the following blurb into the release notes:</li>
-</ol>
-<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-sh data-lang=sh>&lt;strong&gt;CHANGELOG&lt;/strong&gt;
-
-See the &lt;a <span style=color:#000>href</span><span style=color:#ce5c00;font-weight:700>=</span><span style=color:#4e9a06>&#34;https://github.com/drupalwxt/wxt/blob/8.x-2.x/CHANGELOG.md&#34;</span>&gt;changelog.md&lt;/a&gt; file.
-</code></pre></div>
+<p>Where the following is the command that was used for the initial generation:</p>
+<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-sh data-lang=sh>composer create-project drupalwxt/site-wxt:4.2.0 site-wxt
+</code></pre></div><blockquote>
+<p><strong>Note</strong>: Remember to keep the <code>composer.json</code> and <code>composer.lock</code> files that exist above <code>docroot</code> in source control as they are controlling your dependencies.</p>
+</blockquote>
+<h2 id=maintenance>Maintenance</h2>
+<p>List of common commands are as follows:</p>
+<table>
+<thead>
+<tr>
+<th>Task</th>
+<th>Composer</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Installing a contrib project (latest version)</td>
+<td><code>composer require drupal/PROJECT</code></td>
+</tr>
+<tr>
+<td>Installing a contrib project (specific version)</td>
+<td><code>composer require drupal/PROJECT:1.0.0-beta5</code></td>
+</tr>
+<tr>
+<td>Updating all projects including Drupal Core</td>
+<td><code>composer update</code></td>
+</tr>
+<tr>
+<td>Updating a single contrib project</td>
+<td><code>composer update drupal/PROJECT_NAME</code></td>
+</tr>
+<tr>
+<td>Updating Drupal Core</td>
+<td><code>composer update drupal/core</code></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Note</strong>: Composer is a <strong>dependency manager</strong> and helps us keep track of what code and at what version our application relies on so that it always get installed the right way on every copy of that application.</p>
+</blockquote>
+<h3 id=specifying-a-version>Specifying a version</h3>
+<p>A specific version can be specified from the cli:</p>
+<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-sh data-lang=sh>composer require drupal/&lt;modulename&gt;:&lt;version&gt;
+</code></pre></div><p>However please note if you specify a branch, such as 1.x you must add <code>-dev</code> to the end of the version:</p>
+<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-sh data-lang=sh>composer require drupal/token:1.x-dev
+</code></pre></div><h3 id=source-control>Source Control</h3>
+<p>Taking a look at the <code>.gitignore</code> file, you will discover that certain directories, including all those directories containing contributed projects, are excluded from source control which is by design.</p>
+<blockquote>
+<p><strong>Note</strong>: Unlike <strong><a href=https://www.drush.org/latest/>Drush</a></strong> in a Composer derived project you should <strong>never commit your install dependencies to source control</strong>.</p>
+</blockquote>
+<p>Composer will create <code>composer.lock</code> file, which is a list of dependencies that were installed, and in which versions.</p>
+<blockquote>
+<p><strong>Note</strong>: In general you should always <strong>commit your <code>composer.lock</code> file to source control</strong> so that others via a quick <code>composer install</code> can have everything installed along with the correct versions specified in the <code>composer.lock</code> file.</p>
+</blockquote>
+<h3 id=how-to-update-drupal-core>How to update Drupal Core?</h3>
+<p>Please <strong>don&rsquo;t add <code>drupal/core</code> to your project&rsquo;s composer.json</strong> since WxT manages Drupal Core for you along with the series of patches on top of it.</p>
+<p>WxT&rsquo;s minor versions will always correspond to Drupal Core&rsquo;s. For example, <code>drupalwxt/wxt:~4.2.0</code> will require Drupal Core 9.2.x and <code>drupalwxt/wxt:~4.1.0</code> will require Drupal Core 9.1.x.</p>
+<p>When you need to update Drupal Core as an example from 9.1.x to 9.2.x, all you would do is change your requirement for <code>drupalwxt/wxt</code> in your <code>composer.json</code> file:</p>
+<pre><code>composer require --no-update drupalwxt/wxt:~4.2.0
+composer update
+</code></pre><h3 id=compatibility-table>Compatibility table</h3>
+<table>
+<thead>
+<tr>
+<th><code>drupalwxt/wxt</code> version</th>
+<th>Drupal Core version</th>
+<th>Drush version</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>~4.2.0</code></td>
+<td>9.2.x</td>
+<td><code>>=9.7</code></td>
+</tr>
+<tr>
+<td><code>~4.1.0</code></td>
+<td>9.1.x</td>
+<td><code>>=9.7</code></td>
+</tr>
+<tr>
+<td><code>~4.0.0</code></td>
+<td>8.8.x+</td>
+<td><code>>=9.7</code></td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 </main>

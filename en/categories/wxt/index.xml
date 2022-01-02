@@ -485,7 +485,7 @@ We try our best to have security releases of Drupal Core within &lt;strong>24-72
 &lt;td>&lt;strong>drupalwxt.github.io&lt;/strong>&lt;/td>
 &lt;td>&lt;a href="https://github.com/drupalwxt/drupalwxt.github.io" target="_blank">drupalwxt/drupalwxt.github.io&lt;/a>&lt;/td>
 &lt;td>GitHub Pages for Drupal WxT.&lt;/td>
-&lt;td>Size: 3511 Bytes&lt;/td>
+&lt;td>Size: 3558 Bytes&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>&lt;strong>helm-drupal&lt;/strong>&lt;/td>
@@ -521,7 +521,7 @@ We try our best to have security releases of Drupal Core within &lt;strong>24-72
 &lt;td>&lt;strong>wxt&lt;/strong>&lt;/td>
 &lt;td>&lt;a href="https://github.com/drupalwxt/wxt" target="_blank">drupalwxt/wxt&lt;/a>&lt;/td>
 &lt;td>Drupal 9 variant of the Web Experience Toolkit (WxT).&lt;/td>
-&lt;td>Size: 1779 Bytes&lt;/td>
+&lt;td>Size: 1831 Bytes&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>&lt;strong>wxt-project&lt;/strong>&lt;/td>
@@ -609,6 +609,108 @@ The &lt;strong>roadmap&lt;/strong> helps guide the project and helps to steer th
 &lt;li>&lt;a href="https://www.drupal.org/project/wxt/issues/3182208">WxT Minimal Install&lt;/a>&lt;/li>
 &lt;li>&lt;a href="https://www.drupal.org/project/wxt/issues/3182977">Roadmap for Drupal 9&lt;/a>&lt;/li>
 &lt;/ul>
+&lt;!-- Links Referenced --></description></item><item><title>Docs: Composer</title><link>https://drupalwxt.github.io/en/docs/development/composer/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://drupalwxt.github.io/en/docs/development/composer/</guid><description>
+&lt;div class="alert alert-warning" role="alert">
+A reminder that &lt;strong>&lt;a href="https://getcomposer.org/download/">composer&lt;/a>&lt;/strong> is required for the installation and updating of &lt;strong>&lt;a href="https://github.com/drupalwxt/wxt">Drupal WxT&lt;/a>&lt;/strong>.
+&lt;/div>
+&lt;p>We highly recommend using our &lt;strong>&lt;a href="https://github.com/drupalwxt/wxt-project">Composer Project Template&lt;/a>&lt;/strong> to build and maintain your WxT derived project’s codebase.&lt;/p>
+&lt;h2 id="getting-started">Getting Started&lt;/h2>
+&lt;p>The following command is all you need to get started:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-sh" data-lang="sh">composer create-project drupalwxt/site-wxt:4.2.0 &amp;lt;site-name&amp;gt;
+&lt;/code>&lt;/pre>&lt;/div>&lt;blockquote>
+&lt;p>&lt;strong>Note&lt;/strong>: For development you may also specify a branch using &lt;code>drupalwxt/site-wxt:4.2.x-dev&lt;/code>.&lt;/p>
+&lt;/blockquote>
+&lt;p>You can see a working example of a fully generated Composer Project Template over at:&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>&lt;a href="https://github.com/drupalwxt/site-wxt">Site WxT&lt;/a>&lt;/strong>&lt;/li>
+&lt;/ul>
+&lt;p>Where the following is the command that was used for the initial generation:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-sh" data-lang="sh">composer create-project drupalwxt/site-wxt:4.2.0 site-wxt
+&lt;/code>&lt;/pre>&lt;/div>&lt;blockquote>
+&lt;p>&lt;strong>Note&lt;/strong>: Remember to keep the &lt;code>composer.json&lt;/code> and &lt;code>composer.lock&lt;/code> files that exist above &lt;code>docroot&lt;/code> in source control as they are controlling your dependencies.&lt;/p>
+&lt;/blockquote>
+&lt;h2 id="maintenance">Maintenance&lt;/h2>
+&lt;p>List of common commands are as follows:&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Task&lt;/th>
+&lt;th>Composer&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>Installing a contrib project (latest version)&lt;/td>
+&lt;td>&lt;code>composer require drupal/PROJECT&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Installing a contrib project (specific version)&lt;/td>
+&lt;td>&lt;code>composer require drupal/PROJECT:1.0.0-beta5&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Updating all projects including Drupal Core&lt;/td>
+&lt;td>&lt;code>composer update&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Updating a single contrib project&lt;/td>
+&lt;td>&lt;code>composer update drupal/PROJECT_NAME&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Updating Drupal Core&lt;/td>
+&lt;td>&lt;code>composer update drupal/core&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;blockquote>
+&lt;p>&lt;strong>Note&lt;/strong>: Composer is a &lt;strong>dependency manager&lt;/strong> and helps us keep track of what code and at what version our application relies on so that it always get installed the right way on every copy of that application.&lt;/p>
+&lt;/blockquote>
+&lt;h3 id="specifying-a-version">Specifying a version&lt;/h3>
+&lt;p>A specific version can be specified from the cli:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-sh" data-lang="sh">composer require drupal/&amp;lt;modulename&amp;gt;:&amp;lt;version&amp;gt;
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>However please note if you specify a branch, such as 1.x you must add &lt;code>-dev&lt;/code> to the end of the version:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-sh" data-lang="sh">composer require drupal/token:1.x-dev
+&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="source-control">Source Control&lt;/h3>
+&lt;p>Taking a look at the &lt;code>.gitignore&lt;/code> file, you will discover that certain directories, including all those directories containing contributed projects, are excluded from source control which is by design.&lt;/p>
+&lt;blockquote>
+&lt;p>&lt;strong>Note&lt;/strong>: Unlike &lt;strong>&lt;a href="https://www.drush.org/latest/">Drush&lt;/a>&lt;/strong> in a Composer derived project you should &lt;strong>never commit your install dependencies to source control&lt;/strong>.&lt;/p>
+&lt;/blockquote>
+&lt;p>Composer will create &lt;code>composer.lock&lt;/code> file, which is a list of dependencies that were installed, and in which versions.&lt;/p>
+&lt;blockquote>
+&lt;p>&lt;strong>Note&lt;/strong>: In general you should always &lt;strong>commit your &lt;code>composer.lock&lt;/code> file to source control&lt;/strong> so that others via a quick &lt;code>composer install&lt;/code> can have everything installed along with the correct versions specified in the &lt;code>composer.lock&lt;/code> file.&lt;/p>
+&lt;/blockquote>
+&lt;h3 id="how-to-update-drupal-core">How to update Drupal Core?&lt;/h3>
+&lt;p>Please &lt;strong>don&amp;rsquo;t add &lt;code>drupal/core&lt;/code> to your project&amp;rsquo;s composer.json&lt;/strong> since WxT manages Drupal Core for you along with the series of patches on top of it.&lt;/p>
+&lt;p>WxT&amp;rsquo;s minor versions will always correspond to Drupal Core&amp;rsquo;s. For example, &lt;code>drupalwxt/wxt:~4.2.0&lt;/code> will require Drupal Core 9.2.x and &lt;code>drupalwxt/wxt:~4.1.0&lt;/code> will require Drupal Core 9.1.x.&lt;/p>
+&lt;p>When you need to update Drupal Core as an example from 9.1.x to 9.2.x, all you would do is change your requirement for &lt;code>drupalwxt/wxt&lt;/code> in your &lt;code>composer.json&lt;/code> file:&lt;/p>
+&lt;pre>&lt;code>composer require --no-update drupalwxt/wxt:~4.2.0
+composer update
+&lt;/code>&lt;/pre>&lt;h3 id="compatibility-table">Compatibility table&lt;/h3>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>&lt;code>drupalwxt/wxt&lt;/code> version&lt;/th>
+&lt;th>Drupal Core version&lt;/th>
+&lt;th>Drush version&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>&lt;code>~4.2.0&lt;/code>&lt;/td>
+&lt;td>9.2.x&lt;/td>
+&lt;td>&lt;code>&amp;gt;=9.7&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>~4.1.0&lt;/code>&lt;/td>
+&lt;td>9.1.x&lt;/td>
+&lt;td>&lt;code>&amp;gt;=9.7&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>~4.0.0&lt;/code>&lt;/td>
+&lt;td>8.8.x+&lt;/td>
+&lt;td>&lt;code>&amp;gt;=9.7&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
 &lt;!-- Links Referenced --></description></item><item><title>Docs: Configuration Management</title><link>https://drupalwxt.github.io/en/docs/development/configuration-management/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://drupalwxt.github.io/en/docs/development/configuration-management/</guid><description>
 &lt;p>Drupal WxT thanks to the work done by the Acquia Team is able to use advanced
 configuration management strategies.&lt;/p>
