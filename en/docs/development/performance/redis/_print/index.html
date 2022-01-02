@@ -19,8 +19,8 @@ Note: Some customizations …">
 <meta itemprop=description content="Drupal WxT"><meta name=twitter:card content="summary">
 <meta name=twitter:title content="Redis">
 <meta name=twitter:description content="Drupal WxT">
-<link rel=preload href=../../../../../../scss/main.min.571dde510d2970747501ff7043242bdbd229fd4fa1680c51c02b3d31c2d18f28.css as=style>
-<link href=../../../../../../scss/main.min.571dde510d2970747501ff7043242bdbd229fd4fa1680c51c02b3d31c2d18f28.css rel=stylesheet integrity>
+<link rel=preload href=../../../../../../scss/main.min.3162f5172db4ff999a6c4b55cefbc423a62669b69ea6b6094ffd67dab0c2e3fa.css as=style>
+<link href=../../../../../../scss/main.min.3162f5172db4ff999a6c4b55cefbc423a62669b69ea6b6094ffd67dab0c2e3fa.css rel=stylesheet integrity>
 <script src=https://code.jquery.com/jquery-3.6.0.min.js integrity=sha384-vtXRMe3mGCbOeY7l30aIg8H9p3GdeSe4IFlP6G8JMa7o7lXvnz3GFKzPxzJdPfGK crossorigin=anonymous></script>
 <script src=https://unpkg.com/lunr@2.3.9/lunr.min.js integrity=sha384-203J0SNzyqHby3iU6hzvzltrWi/M41wOP5Gu+BiJMz5nwKykbkUx8Kp7iti0Lpli crossorigin=anonymous></script>
 <script type=application/javascript>var doNotTrack=!1;doNotTrack||(window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga('create','UA-00000000-0','auto'),ga('send','pageview'))</script>
@@ -53,7 +53,7 @@ English
 </li>
 </ul>
 </div>
-<div class="navbar-nav d-none d-lg-block"><input type=search class="form-control td-search-input" placeholder="&#xf002; Search WxT" aria-label="Search WxT" autocomplete=off data-offline-search-index-json-src=../../../../../../offline-search-index.ac9b1b34f0995301acc1a0ba4e944824.json data-offline-search-base-href=../../../../../../ data-offline-search-max-results=10>
+<div class="navbar-nav d-none d-lg-block"><input type=search class="form-control td-search-input" placeholder="&#xf002; Search WxT" aria-label="Search WxT" autocomplete=off data-offline-search-index-json-src=../../../../../../offline-search-index.0c11f2c4cc2c1f1789e2a34cde839604.json data-offline-search-base-href=../../../../../../ data-offline-search-max-results=10>
 </div>
 </nav>
 </header>
@@ -85,8 +85,9 @@ This is the multi-page printable view of this section.
   <span style=color:#000>$settings</span><span style=color:#000;font-weight:700>[</span><span style=color:#4e9a06>&#39;redis.connection&#39;</span><span style=color:#000;font-weight:700>][</span><span style=color:#4e9a06>&#39;scheme&#39;</span><span style=color:#000;font-weight:700>]</span> <span style=color:#ce5c00;font-weight:700>=</span> <span style=color:#4e9a06>&#39;http&#39;</span><span style=color:#000;font-weight:700>;</span>
   <span style=color:#000>$settings</span><span style=color:#000;font-weight:700>[</span><span style=color:#4e9a06>&#39;redis.connection&#39;</span><span style=color:#000;font-weight:700>][</span><span style=color:#4e9a06>&#39;host&#39;</span><span style=color:#000;font-weight:700>]</span> <span style=color:#ce5c00;font-weight:700>=</span> <span style=color:#4e9a06>&#39;localhost&#39;</span><span style=color:#000;font-weight:700>;</span>
   <span style=color:#000>$settings</span><span style=color:#000;font-weight:700>[</span><span style=color:#4e9a06>&#39;redis.connection&#39;</span><span style=color:#000;font-weight:700>][</span><span style=color:#4e9a06>&#39;port&#39;</span><span style=color:#000;font-weight:700>]</span> <span style=color:#ce5c00;font-weight:700>=</span> <span style=color:#4e9a06>&#39;6379&#39;</span><span style=color:#000;font-weight:700>;</span>
-  <span style=color:#8f5902;font-style:italic>//$settings[&#39;redis.connection&#39;][&#39;password&#39;] = &#39;&#39;;
-</span><span style=color:#8f5902;font-style:italic></span>
+  <span style=color:#000>$settings</span><span style=color:#000;font-weight:700>[</span><span style=color:#4e9a06>&#39;redis.connection&#39;</span><span style=color:#000;font-weight:700>][</span><span style=color:#4e9a06>&#39;password&#39;</span><span style=color:#000;font-weight:700>]</span> <span style=color:#ce5c00;font-weight:700>=</span> <span style=color:#000>getenv</span><span style=color:#000;font-weight:700>(</span><span style=color:#4e9a06>&#39;REDIS_PASSWORD&#39;</span><span style=color:#000;font-weight:700>)</span> <span style=color:#ce5c00;font-weight:700>?:</span> <span style=color:#4e9a06>&#39;&#39;</span><span style=color:#000;font-weight:700>;</span>
+  <span style=color:#000>$settings</span><span style=color:#000;font-weight:700>[</span><span style=color:#4e9a06>&#39;redis.connection&#39;</span><span style=color:#000;font-weight:700>][</span><span style=color:#4e9a06>&#39;persistent&#39;</span><span style=color:#000;font-weight:700>]</span> <span style=color:#ce5c00;font-weight:700>=</span> <span style=color:#204a87;font-weight:700>FALSE</span><span style=color:#000;font-weight:700>;</span>
+
   <span style=color:#8f5902;font-style:italic>// Allow the services to work before the Redis module itself is enabled.
 </span><span style=color:#8f5902;font-style:italic></span>  <span style=color:#000>$settings</span><span style=color:#000;font-weight:700>[</span><span style=color:#4e9a06>&#39;container_yamls&#39;</span><span style=color:#000;font-weight:700>][]</span> <span style=color:#ce5c00;font-weight:700>=</span> <span style=color:#4e9a06>&#39;modules/contrib/redis/example.services.yml&#39;</span><span style=color:#000;font-weight:700>;</span>
   <span style=color:#000>$settings</span><span style=color:#000;font-weight:700>[</span><span style=color:#4e9a06>&#39;container_yamls&#39;</span><span style=color:#000;font-weight:700>][]</span> <span style=color:#ce5c00;font-weight:700>=</span> <span style=color:#4e9a06>&#39;modules/contrib/redis/redis.services.yml&#39;</span><span style=color:#000;font-weight:700>;</span>
