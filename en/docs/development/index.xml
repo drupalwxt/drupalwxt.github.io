@@ -22,16 +22,16 @@ A reminder that &lt;strong>&lt;a href="https://getcomposer.org/download/">compos
 &lt;p>We highly recommend using our &lt;strong>&lt;a href="https://github.com/drupalwxt/wxt-project">Composer Project Template&lt;/a>&lt;/strong> to build and maintain your WxT derived project’s codebase.&lt;/p>
 &lt;h2 id="getting-started">Getting Started&lt;/h2>
 &lt;p>The following command is all you need to get started:&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-sh" data-lang="sh">composer create-project drupalwxt/site-wxt:4.2.0 &amp;lt;site-name&amp;gt;
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-sh" data-lang="sh">composer create-project drupalwxt/wxt-project:4.2.0 &amp;lt;site-name&amp;gt;
 &lt;/code>&lt;/pre>&lt;/div>&lt;blockquote>
-&lt;p>&lt;strong>Note&lt;/strong>: For development you may also specify a branch using &lt;code>drupalwxt/site-wxt:4.2.x-dev&lt;/code>.&lt;/p>
+&lt;p>&lt;strong>Note&lt;/strong>: For development you may also specify a branch using &lt;code>drupalwxt/wxt-project:4.2.x-dev&lt;/code>.&lt;/p>
 &lt;/blockquote>
 &lt;p>You can see a working example of a fully generated Composer Project Template over at:&lt;/p>
 &lt;ul>
 &lt;li>&lt;strong>&lt;a href="https://github.com/drupalwxt/site-wxt">Site WxT&lt;/a>&lt;/strong>&lt;/li>
 &lt;/ul>
 &lt;p>Where the following is the command that was used for the initial generation:&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-sh" data-lang="sh">composer create-project drupalwxt/site-wxt:4.2.0 site-wxt
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-sh" data-lang="sh">composer create-project drupalwxt/wxt-project:4.2.0 site-wxt
 &lt;/code>&lt;/pre>&lt;/div>&lt;blockquote>
 &lt;p>&lt;strong>Note&lt;/strong>: Remember to keep the &lt;code>composer.json&lt;/code> and &lt;code>composer.lock&lt;/code> files that exist above &lt;code>docroot&lt;/code> in source control as they are controlling your dependencies.&lt;/p>
 &lt;/blockquote>
