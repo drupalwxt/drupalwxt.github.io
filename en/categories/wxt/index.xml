@@ -1150,24 +1150,24 @@ ANALYZE path_alias&lt;span style="color:#000;font-weight:bold">;&lt;/span>
 &lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-sh" data-lang="sh">&amp;lt;strong&amp;gt;CHANGELOG&amp;lt;/strong&amp;gt;
 See the &amp;lt;a &lt;span style="color:#000">href&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span>&lt;span style="color:#4e9a06">&amp;#34;https://github.com/drupalwxt/wxt/blob/8.x-2.x/CHANGELOG.md&amp;#34;&lt;/span>&amp;gt;changelog.md&amp;lt;/a&amp;gt; file.
 &lt;/code>&lt;/pre>&lt;/div>&lt;!-- Links Referenced --></description></item><item><title>Docs: Theming</title><link>https://drupalwxt.github.io/en/docs/development/theming/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://drupalwxt.github.io/en/docs/development/theming/</guid><description>
-&lt;p>Largely when doing any theme related work with &lt;a href="https://github.com/drupalwxt/wxt">Drupal WxT&lt;/a> this almost always should be done in a sub-theme.&lt;/p>
+&lt;p>Largely when doing any theme related work with &lt;strong>&lt;a href="https://github.com/drupalwxt/wxt">Drupal WxT&lt;/a>&lt;/strong> this almost always should be done in a sub-theme.&lt;/p>
 &lt;p>For more on creating sub-themes please consult the official documentation:&lt;/p>
 &lt;ul>
-&lt;li>&lt;a href="https://www.drupal.org/docs/theming-drupal/creating-sub-themes">Creating sub-themes&lt;/a>&lt;/li>
+&lt;li>&lt;strong>&lt;a href="https://www.drupal.org/docs/theming-drupal/creating-sub-themes">Creating sub-themes&lt;/a>&lt;/strong>&lt;/li>
 &lt;/ul>
-&lt;p>To assist with sub-theme creation &lt;a href="https://www.drupal.org/project/wxt_bootstrap">WxT Bootstrap&lt;/a> provides an example starterkit that should be of benefit.&lt;/p>
+&lt;p>To assist with sub-theme creation &lt;strong>&lt;a href="https://www.drupal.org/project/wxt_bootstrap">WxT Bootstrap&lt;/a>&lt;/strong> provides an example starterkit that should be of benefit.&lt;/p>
 &lt;blockquote>
 &lt;p>&lt;strong>Note&lt;/strong>: Sub-themes are just like any other theme except they inherit the parent theme&amp;rsquo;s resources.&lt;/p>
 &lt;/blockquote>
 &lt;h2 id="sub-theme-configuration">Sub Theme Configuration&lt;/h2>
 &lt;p>a) Replace every instance of &lt;code>THEMENAME&lt;/code> with your chosen machine name often of the pattern &lt;code>&amp;lt;prefix&amp;gt;_bootstrap&lt;/code>.&lt;/p>
-&lt;p>b) Enable your new sub-theme preferably via &lt;a href="https://www.drush.org/latest/">drush&lt;/a>:&lt;/p>
+&lt;p>b) Enable your new sub-theme preferably via &lt;strong>&lt;a href="https://www.drush.org/latest/">drush&lt;/a>&lt;/strong>:&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-sh" data-lang="sh">drush en &lt;span style="color:#4e9a06">`&lt;/span>&amp;lt;prefix&amp;gt;_bootstrap&lt;span style="color:#4e9a06">`&lt;/span>
 drush cc css-js
-&lt;/code>&lt;/pre>&lt;/div>&lt;p>c) Point to your new sub theme for &lt;a href="https://www.drupal.org/project/wxt_library">WxT Library&lt;/a> to properly load assets under &lt;strong>Themes Visibility&lt;/strong> on the &lt;code>/admin/config/wxt/wxt_library&lt;/code> page.&lt;/p>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>c) Point to your new sub theme for &lt;strong>&lt;a href="https://www.drupal.org/project/wxt_library">WxT Library&lt;/a>&lt;/strong> to properly load assets under &lt;strong>Themes Visibility&lt;/strong> on the &lt;code>/admin/config/wxt/wxt_library&lt;/code> page.&lt;/p>
 &lt;h2 id="notes">Notes&lt;/h2>
 &lt;h3 id="inheriting-block-templates">Inheriting Block Templates&lt;/h3>
-&lt;p>If the theme you are extending has custom block templates these won&amp;rsquo;t be immediately inherited because a sub-theme creates copies of all the blocks in the parent theme and renames them with the sub-theme&amp;rsquo;s name as a prefix. Twig block templates are derived from the block&amp;rsquo;s name, so this breaks the link between these templates and their block. Fixing this problem currently requires a hook in the sub-theme.&lt;/p>
+&lt;p>If the theme you are extending has custom block templates these won&amp;rsquo;t be immediately inherited because a sub-theme creates copies of all the blocks in the parent theme and renames them with the sub-theme&amp;rsquo;s name as a prefix. Twig block templates are derived from the block&amp;rsquo;s name, so this breaks the link between these templates and their block.&lt;/p>
 &lt;p>To fix this problem it requires a hook in the sub-theme by adding the following code snippet to the &lt;code>THEMENAME.theme&lt;/code> file:&lt;/p>
 &lt;h3 id="programmatic-logic">Programmatic Logic&lt;/h3>
 &lt;p>The following provides an example of how you can configure your sub theme to be installed as the default on a module install:&lt;/p>
