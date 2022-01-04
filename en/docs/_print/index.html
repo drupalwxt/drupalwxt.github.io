@@ -53,7 +53,7 @@ English
 </li>
 </ul>
 </div>
-<div class="navbar-nav d-none d-lg-block"><input type=search class="form-control td-search-input" placeholder="&#xf002; Search WxT" aria-label="Search WxT" autocomplete=off data-offline-search-index-json-src=../../../offline-search-index.bfea2f05f0bcfe504ca316865fff07f5.json data-offline-search-base-href=../../../ data-offline-search-max-results=10>
+<div class="navbar-nav d-none d-lg-block"><input type=search class="form-control td-search-input" placeholder="&#xf002; Search WxT" aria-label="Search WxT" autocomplete=off data-offline-search-index-json-src=../../../offline-search-index.ce723f8e348642239a8f3cb422e7fd41.json data-offline-search-base-href=../../../ data-offline-search-max-results=10>
 </div>
 </nav>
 </header>
@@ -116,7 +116,10 @@ This is the multi-page printable view of this section.
 <li>2.5: <a href=#pg-79b4d1f932ae16eae9acd3a1ea726455>Release Process</a></li>
 <ul>
 </ul>
-<li>2.6: <a href=#pg-cab786e7f4e5db188aaf22e2110f0048>Versioning</a></li>
+<li>2.6: <a href=#pg-f0420a376dd49bb7dd0eaddf45fa2698>Theming</a></li>
+<ul>
+</ul>
+<li>2.7: <a href=#pg-cab786e7f4e5db188aaf22e2110f0048>Versioning</a></li>
 <ul>
 </ul>
 </ul>
@@ -649,13 +652,13 @@ We try our best to have security releases of Drupal Core within <strong>24-72 ho
 <td><strong>drupalwxt.github.io</strong></td>
 <td><a href=https://github.com/drupalwxt/drupalwxt.github.io target=_blank>drupalwxt/drupalwxt.github.io</a></td>
 <td>GitHub Pages for Drupal WxT.</td>
-<td>Size: 3788 Bytes</td>
+<td>Size: 3895 Bytes</td>
 </tr>
 <tr>
 <td><strong>helm-drupal</strong></td>
 <td><a href=https://github.com/drupalwxt/helm-drupal target=_blank>drupalwxt/helm-drupal</a></td>
 <td>Helm chart for running Drupal on Kubernetes</td>
-<td>Size: 44268 Bytes</td>
+<td>Size: 44616 Bytes</td>
 </tr>
 <tr>
 <td><strong>site-cloud</strong></td>
@@ -673,7 +676,7 @@ We try our best to have security releases of Drupal Core within <strong>24-72 ho
 <td><strong>terraform-kubernetes-drupalwxt</strong></td>
 <td><a href=https://github.com/drupalwxt/terraform-kubernetes-drupalwxt target=_blank>drupalwxt/terraform-kubernetes-drupalwxt</a></td>
 <td>Terraform module for Drupal WxT</td>
-<td>Size: 34 Bytes</td>
+<td>Size: 36 Bytes</td>
 </tr>
 <tr>
 <td><strong>themes-cdn</strong></td>
@@ -685,7 +688,7 @@ We try our best to have security releases of Drupal Core within <strong>24-72 ho
 <td><strong>wxt</strong></td>
 <td><a href=https://github.com/drupalwxt/wxt target=_blank>drupalwxt/wxt</a></td>
 <td>Drupal 9 variant of the Web Experience Toolkit (WxT).</td>
-<td>Size: 1841 Bytes</td>
+<td>Size: 1844 Bytes</td>
 </tr>
 <tr>
 <td><strong>wxt-project</strong></td>
@@ -1383,7 +1386,72 @@ See the &lt;a <span style=color:#000>href</span><span style=color:#ce5c00;font-w
 </code></pre></div>
 </div>
 <div class=td-content style=page-break-before:always>
-<h1 id=pg-cab786e7f4e5db188aaf22e2110f0048>2.6 - Versioning</h1>
+<h1 id=pg-f0420a376dd49bb7dd0eaddf45fa2698>2.6 - Theming</h1>
+<p>Largely when doing any theme related work with <a href=https://github.com/drupalwxt/wxt>Drupal WxT</a> this almost always should be done in a sub-theme.</p>
+<p>For more on creating sub-themes please consult the official documentation:</p>
+<ul>
+<li><a href=https://www.drupal.org/docs/theming-drupal/creating-sub-themes>Creating sub-themes</a></li>
+</ul>
+<p>To assist with sub-theme creation <a href=https://www.drupal.org/project/wxt_bootstrap>WxT Bootstrap</a> provides an example starterkit that should be of benefit.</p>
+<blockquote>
+<p><strong>Note</strong>: Sub-themes are just like any other theme except they inherit the parent theme&rsquo;s resources.</p>
+</blockquote>
+<h2 id=sub-theme-configuration>Sub Theme Configuration</h2>
+<p>a) Replace every instance of <code>THEMENAME</code> with your chosen machine name often of the pattern <code>&lt;prefix>_bootstrap</code>.</p>
+<p>b) Enable your new sub-theme preferably via <a href=https://www.drush.org/latest/>drush</a>:</p>
+<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-sh data-lang=sh>drush en <span style=color:#4e9a06>`</span>&lt;prefix&gt;_bootstrap<span style=color:#4e9a06>`</span>
+drush cc css-js
+</code></pre></div><p>c) Point to your new sub theme for <a href=https://www.drupal.org/project/wxt_library>WxT Library</a> to properly load assets under <strong>Themes Visibility</strong> on the <code>/admin/config/wxt/wxt_library</code> page.</p>
+<h2 id=notes>Notes</h2>
+<h3 id=inheriting-block-templates>Inheriting Block Templates</h3>
+<p>If the theme you are extending has custom block templates these won&rsquo;t be immediately inherited because a sub-theme creates copies of all the blocks in the parent theme and renames them with the sub-theme&rsquo;s name as a prefix. Twig block templates are derived from the block&rsquo;s name, so this breaks the link between these templates and their block. Fixing this problem currently requires a hook in the sub-theme.</p>
+<p>To fix this problem it requires a hook in the sub-theme by adding the following code snippet to the <code>THEMENAME.theme</code> file:</p>
+<h3 id=programmatic-logic>Programmatic Logic</h3>
+<p>The following provides an example of how you can configure your sub theme to be installed as the default on a module install:</p>
+<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-php data-lang=php><span style=color:#8f5902;font-style:italic>/**
+</span><span style=color:#8f5902;font-style:italic> * Implements hook_modules_installed().
+</span><span style=color:#8f5902;font-style:italic> */</span>
+<span style=color:#204a87;font-weight:700>function</span> <span style=color:#000>MODULENAME_modules_installed</span><span style=color:#000;font-weight:700>(</span><span style=color:#000>$modules</span><span style=color:#000;font-weight:700>)</span> <span style=color:#000;font-weight:700>{</span>
+    <span style=color:#204a87;font-weight:700>if</span> <span style=color:#000;font-weight:700>(</span><span style=color:#000>in_array</span><span style=color:#000;font-weight:700>(</span><span style=color:#4e9a06>&#39;wxt&#39;</span><span style=color:#000;font-weight:700>,</span> <span style=color:#000>$modules</span><span style=color:#000;font-weight:700>))</span> <span style=color:#000;font-weight:700>{</span>
+      <span style=color:#000>\Drupal</span><span style=color:#ce5c00;font-weight:700>::</span><span style=color:#c4a000>configFactory</span><span style=color:#000;font-weight:700>()</span>
+        <span style=color:#ce5c00;font-weight:700>-&gt;</span><span style=color:#c4a000>getEditable</span><span style=color:#000;font-weight:700>(</span><span style=color:#4e9a06>&#39;system.theme&#39;</span><span style=color:#000;font-weight:700>)</span>
+        <span style=color:#ce5c00;font-weight:700>-&gt;</span><span style=color:#c4a000>set</span><span style=color:#000;font-weight:700>(</span><span style=color:#4e9a06>&#39;default&#39;</span><span style=color:#000;font-weight:700>,</span> <span style=color:#4e9a06>&#39;THEMENAME&#39;</span><span style=color:#000;font-weight:700>)</span>
+        <span style=color:#ce5c00;font-weight:700>-&gt;</span><span style=color:#c4a000>set</span><span style=color:#000;font-weight:700>(</span><span style=color:#4e9a06>&#39;admin&#39;</span><span style=color:#000;font-weight:700>,</span> <span style=color:#4e9a06>&#39;claro&#39;</span><span style=color:#000;font-weight:700>)</span>
+        <span style=color:#ce5c00;font-weight:700>-&gt;</span><span style=color:#c4a000>save</span><span style=color:#000;font-weight:700>(</span><span style=color:#204a87;font-weight:700>TRUE</span><span style=color:#000;font-weight:700>);</span>
+    <span style=color:#000;font-weight:700>}</span>
+  <span style=color:#000;font-weight:700>}</span>
+<span style=color:#000;font-weight:700>}</span>
+</code></pre></div><p>The following provides an example of how you can configure <code>wxt_library</code> to use your sub theme by creating a <code>config/install/wxt_library.settings.yml</code> file with the following contents:</p>
+<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml><span style=color:#204a87;font-weight:700>url</span><span style=color:#000;font-weight:700>:</span><span style=color:#f8f8f8;text-decoration:underline>
+</span><span style=color:#f8f8f8;text-decoration:underline>  </span><span style=color:#204a87;font-weight:700>visibility</span><span style=color:#000;font-weight:700>:</span><span style=color:#f8f8f8;text-decoration:underline> </span><span style=color:#0000cf;font-weight:700>0</span><span style=color:#f8f8f8;text-decoration:underline>
+</span><span style=color:#f8f8f8;text-decoration:underline>  </span><span style=color:#204a87;font-weight:700>pages</span><span style=color:#000;font-weight:700>:</span><span style=color:#f8f8f8;text-decoration:underline>
+</span><span style=color:#f8f8f8;text-decoration:underline>    </span>- <span style=color:#4e9a06>&#39;admin*&#39;</span><span style=color:#f8f8f8;text-decoration:underline>
+</span><span style=color:#f8f8f8;text-decoration:underline>    </span>- <span style=color:#4e9a06>&#39;imagebrowser*&#39;</span><span style=color:#f8f8f8;text-decoration:underline>
+</span><span style=color:#f8f8f8;text-decoration:underline>    </span>- <span style=color:#4e9a06>&#39;img_assist*&#39;</span><span style=color:#f8f8f8;text-decoration:underline>
+</span><span style=color:#f8f8f8;text-decoration:underline>    </span>- <span style=color:#4e9a06>&#39;imce*&#39;</span><span style=color:#f8f8f8;text-decoration:underline>
+</span><span style=color:#f8f8f8;text-decoration:underline>    </span>- <span style=color:#4e9a06>&#39;node/add/*&#39;</span><span style=color:#f8f8f8;text-decoration:underline>
+</span><span style=color:#f8f8f8;text-decoration:underline>    </span>- <span style=color:#4e9a06>&#39;node/*/edit&#39;</span><span style=color:#f8f8f8;text-decoration:underline>
+</span><span style=color:#f8f8f8;text-decoration:underline>    </span>- <span style=color:#4e9a06>&#39;print/*&#39;</span><span style=color:#f8f8f8;text-decoration:underline>
+</span><span style=color:#f8f8f8;text-decoration:underline>    </span>- <span style=color:#4e9a06>&#39;printpdf/*&#39;</span><span style=color:#f8f8f8;text-decoration:underline>
+</span><span style=color:#f8f8f8;text-decoration:underline>    </span>- <span style=color:#4e9a06>&#39;system/ajax&#39;</span><span style=color:#f8f8f8;text-decoration:underline>
+</span><span style=color:#f8f8f8;text-decoration:underline>    </span>- <span style=color:#4e9a06>&#39;system/ajax/*&#39;</span><span style=color:#f8f8f8;text-decoration:underline>
+</span><span style=color:#f8f8f8;text-decoration:underline></span><span style=color:#204a87;font-weight:700>theme</span><span style=color:#000;font-weight:700>:</span><span style=color:#f8f8f8;text-decoration:underline>
+</span><span style=color:#f8f8f8;text-decoration:underline>  </span><span style=color:#204a87;font-weight:700>visibility</span><span style=color:#000;font-weight:700>:</span><span style=color:#f8f8f8;text-decoration:underline> </span><span style=color:#0000cf;font-weight:700>1</span><span style=color:#f8f8f8;text-decoration:underline>
+</span><span style=color:#f8f8f8;text-decoration:underline>  </span><span style=color:#204a87;font-weight:700>themes</span><span style=color:#000;font-weight:700>:</span><span style=color:#f8f8f8;text-decoration:underline>
+</span><span style=color:#f8f8f8;text-decoration:underline>    </span><span style=color:#204a87;font-weight:700>THEMENAME</span><span style=color:#000;font-weight:700>:</span><span style=color:#f8f8f8;text-decoration:underline> </span><span style=color:#000>THEMENAME</span><span style=color:#f8f8f8;text-decoration:underline>
+</span><span style=color:#f8f8f8;text-decoration:underline>    </span><span style=color:#204a87;font-weight:700>wxt_bootstrap</span><span style=color:#000;font-weight:700>:</span><span style=color:#f8f8f8;text-decoration:underline> </span><span style=color:#000>wxt_bootstrap</span><span style=color:#f8f8f8;text-decoration:underline>
+</span><span style=color:#f8f8f8;text-decoration:underline></span><span style=color:#204a87;font-weight:700>minimized</span><span style=color:#000;font-weight:700>:</span><span style=color:#f8f8f8;text-decoration:underline>
+</span><span style=color:#f8f8f8;text-decoration:underline>  </span><span style=color:#204a87;font-weight:700>options</span><span style=color:#000;font-weight:700>:</span><span style=color:#f8f8f8;text-decoration:underline> </span><span style=color:#0000cf;font-weight:700>1</span><span style=color:#f8f8f8;text-decoration:underline>
+</span><span style=color:#f8f8f8;text-decoration:underline></span><span style=color:#204a87;font-weight:700>files</span><span style=color:#000;font-weight:700>:</span><span style=color:#f8f8f8;text-decoration:underline>
+</span><span style=color:#f8f8f8;text-decoration:underline>  </span><span style=color:#204a87;font-weight:700>types</span><span style=color:#000;font-weight:700>:</span><span style=color:#f8f8f8;text-decoration:underline>
+</span><span style=color:#f8f8f8;text-decoration:underline>    </span><span style=color:#204a87;font-weight:700>css</span><span style=color:#000;font-weight:700>:</span><span style=color:#f8f8f8;text-decoration:underline> </span><span style=color:#000>css</span><span style=color:#f8f8f8;text-decoration:underline>
+</span><span style=color:#f8f8f8;text-decoration:underline>    </span><span style=color:#204a87;font-weight:700>js</span><span style=color:#000;font-weight:700>:</span><span style=color:#f8f8f8;text-decoration:underline> </span><span style=color:#000>js</span><span style=color:#f8f8f8;text-decoration:underline>
+</span><span style=color:#f8f8f8;text-decoration:underline></span><span style=color:#204a87;font-weight:700>wxt</span><span style=color:#000;font-weight:700>:</span><span style=color:#f8f8f8;text-decoration:underline>
+</span><span style=color:#f8f8f8;text-decoration:underline>  </span><span style=color:#204a87;font-weight:700>theme</span><span style=color:#000;font-weight:700>:</span><span style=color:#f8f8f8;text-decoration:underline> </span><span style=color:#000>theme-gcweb</span><span style=color:#f8f8f8;text-decoration:underline>
+</span></code></pre></div>
+</div>
+<div class=td-content style=page-break-before:always>
+<h1 id=pg-cab786e7f4e5db188aaf22e2110f0048>2.7 - Versioning</h1>
 <p>The <strong><a href=https://github.com/drupalwxt/wxt>Drupal WxT</a></strong> distribution is following semantic versioning.</p>
 <p>WxT typically makes a sprint release every four to six weeks. We will also use sprint releases to package new minor releases of Drupal Core with WxT as they become available.</p>
 <p>In addition, we will also increment the major version number of WxT about once every four to six months.</p>

@@ -3,19 +3,20 @@
 <meta charset=utf-8>
 <meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no">
 <meta name=generator content="Hugo 0.86.1">
-<link rel=alternate type=application/rss+xml href=https://drupalwxt.github.io/en/docs/development/architecture/index.xml>
-<link rel=alternate type=text/html href=https://drupalwxt.github.io/en/docs/development/architecture/_print/>
+<link rel=alternate type=application/rss+xml href=https://drupalwxt.github.io/en/docs/development/theming/index.xml>
+<link rel=alternate type=text/html href=https://drupalwxt.github.io/en/docs/development/theming/_print/>
 <meta name=robots content="index, follow">
 <link rel="shortcut icon" href=../../../../favicons/favicon.ico>
-<title>Architecture | Drupal WxT</title>
-<meta name=description content="The goal of Drupal WxT since the 4.1.x line is to make the installation profile very minimal by default but providing additional extensions that can …">
-<meta property="og:title" content="Architecture">
+<title>Theming | Drupal WxT</title>
+<meta name=description content="Largely when doing any theme related work with Drupal WxT this almost always should be done in a sub-theme.
+For more on creating sub-themes please …">
+<meta property="og:title" content="Theming">
 <meta property="og:description" content="Drupal WxT">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://drupalwxt.github.io/en/docs/development/architecture/"><meta property="og:site_name" content="Drupal WxT">
-<meta itemprop=name content="Architecture">
+<meta property="og:url" content="https://drupalwxt.github.io/en/docs/development/theming/"><meta property="og:site_name" content="Drupal WxT">
+<meta itemprop=name content="Theming">
 <meta itemprop=description content="Drupal WxT"><meta name=twitter:card content="summary">
-<meta name=twitter:title content="Architecture">
+<meta name=twitter:title content="Theming">
 <meta name=twitter:description content="Drupal WxT">
 <link rel=preload href=../../../../scss/main.min.3162f5172db4ff999a6c4b55cefbc423a62669b69ea6b6094ffd67dab0c2e3fa.css as=style>
 <link href=../../../../scss/main.min.3162f5172db4ff999a6c4b55cefbc423a62669b69ea6b6094ffd67dab0c2e3fa.css rel=stylesheet integrity>
@@ -59,7 +60,7 @@ English
 <div class=td-main>
 <div class="row flex-xl-nowrap">
 <aside class="col-12 col-md-3 col-xl-2 td-sidebar d-print-none">
-<script>$(function(){$("#td-section-nav a").removeClass("active"),$("#td-section-nav #m-endocsdevelopmentarchitecture").addClass("active"),$("#td-section-nav #m-endocsdevelopmentarchitecture-li span").addClass("td-sidebar-nav-active-item"),$("#td-section-nav #m-endocsdevelopmentarchitecture").parents("li").addClass("active-path"),$("#td-section-nav li.active-path").addClass("show"),$("#td-section-nav li.active-path").children("input").prop('checked',!0),$("#td-section-nav #m-endocsdevelopmentarchitecture-li").siblings("li").addClass("show"),$("#td-section-nav #m-endocsdevelopmentarchitecture-li").children("ul").children("li").addClass("show"),$("#td-sidebar-menu").toggleClass("d-none")})</script>
+<script>$(function(){$("#td-section-nav a").removeClass("active"),$("#td-section-nav #m-endocsdevelopmenttheming").addClass("active"),$("#td-section-nav #m-endocsdevelopmenttheming-li span").addClass("td-sidebar-nav-active-item"),$("#td-section-nav #m-endocsdevelopmenttheming").parents("li").addClass("active-path"),$("#td-section-nav li.active-path").addClass("show"),$("#td-section-nav li.active-path").children("input").prop('checked',!0),$("#td-section-nav #m-endocsdevelopmenttheming-li").siblings("li").addClass("show"),$("#td-section-nav #m-endocsdevelopmenttheming-li").children("ul").children("li").addClass("show"),$("#td-sidebar-menu").toggleClass("d-none")})</script>
 <div id=td-sidebar-menu class="td-sidebar__inner d-none">
 <form class="td-sidebar__search d-flex align-items-center">
 <input type=search class="form-control td-search-input" placeholder="&#xf002; Search WxT" aria-label="Search WxT" autocomplete=off data-offline-search-index-json-src=../../../../offline-search-index.ce723f8e348642239a8f3cb422e7fd41.json data-offline-search-base-href=../../../../ data-offline-search-max-results=10>
@@ -140,12 +141,27 @@ English
 </aside>
 <aside class="d-none d-xl-block col-xl-2 td-sidebar-toc d-print-none">
 <div class="td-page-meta ml-2 pb-1 pt-2 mb-0">
-<a href=https://github.com/drupalwxt/drupalwxt.github.io/tree/main/content/en/docs/development/architecture/_index.en.md class=td-page-meta--view target=_blank rel=noopener><i class="fa fa-file-alt fa-fw"></i> View page source</a>
-<a href=https://github.com/drupalwxt/drupalwxt.github.io/edit/main/content/en/docs/development/architecture/_index.en.md class=td-page-meta--edit target=_blank rel=noopener><i class="fa fa-edit fa-fw"></i> View/Edit this page</a>
-<a href="https://github.com/drupalwxt/drupalwxt.github.io/new/main/content/en/docs/development/architecture/_index.en.md?filename=change-me.md&value=---%0Atitle%3A+%22Long+Page+Title%22%0AlinkTitle%3A+%22Short+Nav+Title%22%0Aweight%3A+100%0Adescription%3A+%3E-%0A+++++Page+description+for+heading+and+indexes.%0A---%0A%0A%23%23+Heading%0A%0AEdit+this+template+to+create+your+new+page.%0A%0A%2A+Give+it+a+good+name%2C+ending+in+%60.md%60+-+e.g.+%60getting-started.md%60%0A%2A+Edit+the+%22front+matter%22+section+at+the+top+of+the+page+%28weight+controls+how+its+ordered+amongst+other+pages+in+the+same+directory%3B+lowest+number+first%29.%0A%2A+Add+a+good+commit+message+at+the+bottom+of+the+page+%28%3C80+characters%3B+use+the+extended+description+field+for+more+detail%29.%0A%2A+Create+a+new+branch+so+you+can+preview+your+new+file+and+request+a+review+via+Pull+Request.%0A" class=td-page-meta--child target=_blank rel=noopener><i class="fa fa-edit fa-fw"></i> Create child page</a>
-<a href="https://github.com/drupalwxt/drupalwxt.github.io/issues/new?title=Architecture" class=td-page-meta--issue target=_blank rel=noopener><i class="fab fa-github fa-fw"></i> Create project issue</a>
-<a id=print href=https://drupalwxt.github.io/en/docs/development/architecture/_print/><i class="fa fa-print fa-fw"></i> Print entire section</a>
+<a href=https://github.com/drupalwxt/drupalwxt.github.io/tree/main/content/en/docs/development/theming/_index.en.md class=td-page-meta--view target=_blank rel=noopener><i class="fa fa-file-alt fa-fw"></i> View page source</a>
+<a href=https://github.com/drupalwxt/drupalwxt.github.io/edit/main/content/en/docs/development/theming/_index.en.md class=td-page-meta--edit target=_blank rel=noopener><i class="fa fa-edit fa-fw"></i> View/Edit this page</a>
+<a href="https://github.com/drupalwxt/drupalwxt.github.io/new/main/content/en/docs/development/theming/_index.en.md?filename=change-me.md&value=---%0Atitle%3A+%22Long+Page+Title%22%0AlinkTitle%3A+%22Short+Nav+Title%22%0Aweight%3A+100%0Adescription%3A+%3E-%0A+++++Page+description+for+heading+and+indexes.%0A---%0A%0A%23%23+Heading%0A%0AEdit+this+template+to+create+your+new+page.%0A%0A%2A+Give+it+a+good+name%2C+ending+in+%60.md%60+-+e.g.+%60getting-started.md%60%0A%2A+Edit+the+%22front+matter%22+section+at+the+top+of+the+page+%28weight+controls+how+its+ordered+amongst+other+pages+in+the+same+directory%3B+lowest+number+first%29.%0A%2A+Add+a+good+commit+message+at+the+bottom+of+the+page+%28%3C80+characters%3B+use+the+extended+description+field+for+more+detail%29.%0A%2A+Create+a+new+branch+so+you+can+preview+your+new+file+and+request+a+review+via+Pull+Request.%0A" class=td-page-meta--child target=_blank rel=noopener><i class="fa fa-edit fa-fw"></i> Create child page</a>
+<a href="https://github.com/drupalwxt/drupalwxt.github.io/issues/new?title=Theming" class=td-page-meta--issue target=_blank rel=noopener><i class="fab fa-github fa-fw"></i> Create project issue</a>
+<a id=print href=https://drupalwxt.github.io/en/docs/development/theming/_print/><i class="fa fa-print fa-fw"></i> Print entire section</a>
 </div>
+<div class=td-toc><nav id=TableOfContents>
+<ul>
+<li>
+<ul>
+<li><a href=#sub-theme-configuration>Sub Theme Configuration</a></li>
+<li><a href=#notes>Notes</a>
+<ul>
+<li><a href=#inheriting-block-templates>Inheriting Block Templates</a></li>
+<li><a href=#programmatic-logic>Programmatic Logic</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</nav></div>
 <div class="taxonomy taxonomy-terms-cloud taxo-tags">
 <h5 class=taxonomy-title>Tag Cloud</h5>
 <ul class=taxonomy-terms>
@@ -193,17 +209,17 @@ English
 <a href=https://drupalwxt.github.io/en/docs/development/>Development</a>
 </li>
 <li class="breadcrumb-item active" aria-current=page>
-<a href=https://drupalwxt.github.io/en/docs/development/architecture/>Architecture</a>
+<a href=https://drupalwxt.github.io/en/docs/development/theming/>Theming</a>
 </li>
 </ol>
 </nav>
 <div class=td-content>
-<h1>Architecture</h1>
+<h1>Theming</h1>
 <header class=article-meta>
 <div class="taxonomy taxonomy-terms-article taxo-tags">
 <h5 class=taxonomy-title>Tags:</h5>
 <ul class=taxonomy-terms>
-<li><a class=taxonomy-term href=https://drupalwxt.github.io/en/tags/architecture/ data-taxonomy-term=architecture><span class=taxonomy-label>architecture</span></a></li>
+<li><a class=taxonomy-term href=https://drupalwxt.github.io/en/tags/theming/ data-taxonomy-term=theming><span class=taxonomy-label>theming</span></a></li>
 </ul>
 </div>
 <div class="taxonomy taxonomy-terms-article taxo-categories">
@@ -213,22 +229,68 @@ English
 </ul>
 </div>
 </header>
-<p>The goal of <strong><a href=https://github.com/drupalwxt/wxt>Drupal WxT</a></strong> since the 4.1.x line is to make the installation profile very minimal by default but providing additional extensions that can be enabled as desired.</p>
-<p>What WxT offers is some light enhancements to Drupal Core, mainly around security and performance, and integration with the Web Experience Toolkit. By default, the distribution offers minimal functionality to allow full customizations by users. However a great deal of optional extensions are available that can provide additional functionality generally beneficial to Government departments.</p>
-<blockquote>
-<p><strong>Note</strong>: In the future we are looking into providing a list of community modules that are build to work with the distribution but are &ldquo;out of tree&rdquo;.</p>
-</blockquote>
-<p>All of the optional modules are located in the <code>wxt_ext</code> folder named after WxT Extend and can be enabled during the initial site installation by passing the following flag via the drush cli:</p>
-<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-sh data-lang=sh>wxt_extension_configure_form.select_all<span style=color:#ce5c00;font-weight:700>=</span><span style=color:#4e9a06>&#39;TRUE&#39;</span>
-</code></pre></div><blockquote>
-<p><strong>Note</strong>: If you wish to only install the minimum set of dependencies please remove the <code>wxt_extension_configure_form.select_all='TRUE'</code> flag in its entirety.</p>
-</blockquote>
-<p>In order to provide a list of the optional enabled extensions during the installation that can be checked, all that any module has to do is provide a <code>modulename.wxt_extension.yml</code> file in their root and they will be picked as installable during the profile install and also respond to the additional drush flag discussed above.</p>
-<p>For more information on some of the history leading to this design:</p>
+<p>Largely when doing any theme related work with <a href=https://github.com/drupalwxt/wxt>Drupal WxT</a> this almost always should be done in a sub-theme.</p>
+<p>For more on creating sub-themes please consult the official documentation:</p>
 <ul>
-<li><a href=https://www.drupal.org/project/wxt/issues/3182208>WxT Minimal Install</a></li>
-<li><a href=https://www.drupal.org/project/wxt/issues/3182977>Roadmap for Drupal 9</a></li>
+<li><a href=https://www.drupal.org/docs/theming-drupal/creating-sub-themes>Creating sub-themes</a></li>
 </ul>
+<p>To assist with sub-theme creation <a href=https://www.drupal.org/project/wxt_bootstrap>WxT Bootstrap</a> provides an example starterkit that should be of benefit.</p>
+<blockquote>
+<p><strong>Note</strong>: Sub-themes are just like any other theme except they inherit the parent theme&rsquo;s resources.</p>
+</blockquote>
+<h2 id=sub-theme-configuration>Sub Theme Configuration</h2>
+<p>a) Replace every instance of <code>THEMENAME</code> with your chosen machine name often of the pattern <code>&lt;prefix>_bootstrap</code>.</p>
+<p>b) Enable your new sub-theme preferably via <a href=https://www.drush.org/latest/>drush</a>:</p>
+<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-sh data-lang=sh>drush en <span style=color:#4e9a06>`</span>&lt;prefix&gt;_bootstrap<span style=color:#4e9a06>`</span>
+drush cc css-js
+</code></pre></div><p>c) Point to your new sub theme for <a href=https://www.drupal.org/project/wxt_library>WxT Library</a> to properly load assets under <strong>Themes Visibility</strong> on the <code>/admin/config/wxt/wxt_library</code> page.</p>
+<h2 id=notes>Notes</h2>
+<h3 id=inheriting-block-templates>Inheriting Block Templates</h3>
+<p>If the theme you are extending has custom block templates these won&rsquo;t be immediately inherited because a sub-theme creates copies of all the blocks in the parent theme and renames them with the sub-theme&rsquo;s name as a prefix. Twig block templates are derived from the block&rsquo;s name, so this breaks the link between these templates and their block. Fixing this problem currently requires a hook in the sub-theme.</p>
+<p>To fix this problem it requires a hook in the sub-theme by adding the following code snippet to the <code>THEMENAME.theme</code> file:</p>
+<h3 id=programmatic-logic>Programmatic Logic</h3>
+<p>The following provides an example of how you can configure your sub theme to be installed as the default on a module install:</p>
+<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-php data-lang=php><span style=color:#8f5902;font-style:italic>/**
+</span><span style=color:#8f5902;font-style:italic> * Implements hook_modules_installed().
+</span><span style=color:#8f5902;font-style:italic> */</span>
+<span style=color:#204a87;font-weight:700>function</span> <span style=color:#000>MODULENAME_modules_installed</span><span style=color:#000;font-weight:700>(</span><span style=color:#000>$modules</span><span style=color:#000;font-weight:700>)</span> <span style=color:#000;font-weight:700>{</span>
+    <span style=color:#204a87;font-weight:700>if</span> <span style=color:#000;font-weight:700>(</span><span style=color:#000>in_array</span><span style=color:#000;font-weight:700>(</span><span style=color:#4e9a06>&#39;wxt&#39;</span><span style=color:#000;font-weight:700>,</span> <span style=color:#000>$modules</span><span style=color:#000;font-weight:700>))</span> <span style=color:#000;font-weight:700>{</span>
+      <span style=color:#000>\Drupal</span><span style=color:#ce5c00;font-weight:700>::</span><span style=color:#c4a000>configFactory</span><span style=color:#000;font-weight:700>()</span>
+        <span style=color:#ce5c00;font-weight:700>-&gt;</span><span style=color:#c4a000>getEditable</span><span style=color:#000;font-weight:700>(</span><span style=color:#4e9a06>&#39;system.theme&#39;</span><span style=color:#000;font-weight:700>)</span>
+        <span style=color:#ce5c00;font-weight:700>-&gt;</span><span style=color:#c4a000>set</span><span style=color:#000;font-weight:700>(</span><span style=color:#4e9a06>&#39;default&#39;</span><span style=color:#000;font-weight:700>,</span> <span style=color:#4e9a06>&#39;THEMENAME&#39;</span><span style=color:#000;font-weight:700>)</span>
+        <span style=color:#ce5c00;font-weight:700>-&gt;</span><span style=color:#c4a000>set</span><span style=color:#000;font-weight:700>(</span><span style=color:#4e9a06>&#39;admin&#39;</span><span style=color:#000;font-weight:700>,</span> <span style=color:#4e9a06>&#39;claro&#39;</span><span style=color:#000;font-weight:700>)</span>
+        <span style=color:#ce5c00;font-weight:700>-&gt;</span><span style=color:#c4a000>save</span><span style=color:#000;font-weight:700>(</span><span style=color:#204a87;font-weight:700>TRUE</span><span style=color:#000;font-weight:700>);</span>
+    <span style=color:#000;font-weight:700>}</span>
+  <span style=color:#000;font-weight:700>}</span>
+<span style=color:#000;font-weight:700>}</span>
+</code></pre></div><p>The following provides an example of how you can configure <code>wxt_library</code> to use your sub theme by creating a <code>config/install/wxt_library.settings.yml</code> file with the following contents:</p>
+<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml><span style=color:#204a87;font-weight:700>url</span><span style=color:#000;font-weight:700>:</span><span style=color:#f8f8f8;text-decoration:underline>
+</span><span style=color:#f8f8f8;text-decoration:underline>  </span><span style=color:#204a87;font-weight:700>visibility</span><span style=color:#000;font-weight:700>:</span><span style=color:#f8f8f8;text-decoration:underline> </span><span style=color:#0000cf;font-weight:700>0</span><span style=color:#f8f8f8;text-decoration:underline>
+</span><span style=color:#f8f8f8;text-decoration:underline>  </span><span style=color:#204a87;font-weight:700>pages</span><span style=color:#000;font-weight:700>:</span><span style=color:#f8f8f8;text-decoration:underline>
+</span><span style=color:#f8f8f8;text-decoration:underline>    </span>- <span style=color:#4e9a06>&#39;admin*&#39;</span><span style=color:#f8f8f8;text-decoration:underline>
+</span><span style=color:#f8f8f8;text-decoration:underline>    </span>- <span style=color:#4e9a06>&#39;imagebrowser*&#39;</span><span style=color:#f8f8f8;text-decoration:underline>
+</span><span style=color:#f8f8f8;text-decoration:underline>    </span>- <span style=color:#4e9a06>&#39;img_assist*&#39;</span><span style=color:#f8f8f8;text-decoration:underline>
+</span><span style=color:#f8f8f8;text-decoration:underline>    </span>- <span style=color:#4e9a06>&#39;imce*&#39;</span><span style=color:#f8f8f8;text-decoration:underline>
+</span><span style=color:#f8f8f8;text-decoration:underline>    </span>- <span style=color:#4e9a06>&#39;node/add/*&#39;</span><span style=color:#f8f8f8;text-decoration:underline>
+</span><span style=color:#f8f8f8;text-decoration:underline>    </span>- <span style=color:#4e9a06>&#39;node/*/edit&#39;</span><span style=color:#f8f8f8;text-decoration:underline>
+</span><span style=color:#f8f8f8;text-decoration:underline>    </span>- <span style=color:#4e9a06>&#39;print/*&#39;</span><span style=color:#f8f8f8;text-decoration:underline>
+</span><span style=color:#f8f8f8;text-decoration:underline>    </span>- <span style=color:#4e9a06>&#39;printpdf/*&#39;</span><span style=color:#f8f8f8;text-decoration:underline>
+</span><span style=color:#f8f8f8;text-decoration:underline>    </span>- <span style=color:#4e9a06>&#39;system/ajax&#39;</span><span style=color:#f8f8f8;text-decoration:underline>
+</span><span style=color:#f8f8f8;text-decoration:underline>    </span>- <span style=color:#4e9a06>&#39;system/ajax/*&#39;</span><span style=color:#f8f8f8;text-decoration:underline>
+</span><span style=color:#f8f8f8;text-decoration:underline></span><span style=color:#204a87;font-weight:700>theme</span><span style=color:#000;font-weight:700>:</span><span style=color:#f8f8f8;text-decoration:underline>
+</span><span style=color:#f8f8f8;text-decoration:underline>  </span><span style=color:#204a87;font-weight:700>visibility</span><span style=color:#000;font-weight:700>:</span><span style=color:#f8f8f8;text-decoration:underline> </span><span style=color:#0000cf;font-weight:700>1</span><span style=color:#f8f8f8;text-decoration:underline>
+</span><span style=color:#f8f8f8;text-decoration:underline>  </span><span style=color:#204a87;font-weight:700>themes</span><span style=color:#000;font-weight:700>:</span><span style=color:#f8f8f8;text-decoration:underline>
+</span><span style=color:#f8f8f8;text-decoration:underline>    </span><span style=color:#204a87;font-weight:700>THEMENAME</span><span style=color:#000;font-weight:700>:</span><span style=color:#f8f8f8;text-decoration:underline> </span><span style=color:#000>THEMENAME</span><span style=color:#f8f8f8;text-decoration:underline>
+</span><span style=color:#f8f8f8;text-decoration:underline>    </span><span style=color:#204a87;font-weight:700>wxt_bootstrap</span><span style=color:#000;font-weight:700>:</span><span style=color:#f8f8f8;text-decoration:underline> </span><span style=color:#000>wxt_bootstrap</span><span style=color:#f8f8f8;text-decoration:underline>
+</span><span style=color:#f8f8f8;text-decoration:underline></span><span style=color:#204a87;font-weight:700>minimized</span><span style=color:#000;font-weight:700>:</span><span style=color:#f8f8f8;text-decoration:underline>
+</span><span style=color:#f8f8f8;text-decoration:underline>  </span><span style=color:#204a87;font-weight:700>options</span><span style=color:#000;font-weight:700>:</span><span style=color:#f8f8f8;text-decoration:underline> </span><span style=color:#0000cf;font-weight:700>1</span><span style=color:#f8f8f8;text-decoration:underline>
+</span><span style=color:#f8f8f8;text-decoration:underline></span><span style=color:#204a87;font-weight:700>files</span><span style=color:#000;font-weight:700>:</span><span style=color:#f8f8f8;text-decoration:underline>
+</span><span style=color:#f8f8f8;text-decoration:underline>  </span><span style=color:#204a87;font-weight:700>types</span><span style=color:#000;font-weight:700>:</span><span style=color:#f8f8f8;text-decoration:underline>
+</span><span style=color:#f8f8f8;text-decoration:underline>    </span><span style=color:#204a87;font-weight:700>css</span><span style=color:#000;font-weight:700>:</span><span style=color:#f8f8f8;text-decoration:underline> </span><span style=color:#000>css</span><span style=color:#f8f8f8;text-decoration:underline>
+</span><span style=color:#f8f8f8;text-decoration:underline>    </span><span style=color:#204a87;font-weight:700>js</span><span style=color:#000;font-weight:700>:</span><span style=color:#f8f8f8;text-decoration:underline> </span><span style=color:#000>js</span><span style=color:#f8f8f8;text-decoration:underline>
+</span><span style=color:#f8f8f8;text-decoration:underline></span><span style=color:#204a87;font-weight:700>wxt</span><span style=color:#000;font-weight:700>:</span><span style=color:#f8f8f8;text-decoration:underline>
+</span><span style=color:#f8f8f8;text-decoration:underline>  </span><span style=color:#204a87;font-weight:700>theme</span><span style=color:#000;font-weight:700>:</span><span style=color:#f8f8f8;text-decoration:underline> </span><span style=color:#000>theme-gcweb</span><span style=color:#f8f8f8;text-decoration:underline>
+</span></code></pre></div>
 <div class=section-index>
 </div>
 <style>.feedback--answer{display:inline-block}.feedback--answer-no{margin-left:1em}.feedback--response{display:none;margin-top:1em}.feedback--response__visible{display:block}</style>
@@ -247,7 +309,7 @@ Sorry to hear that. Please <a href=https://github.com/drupalwxt/drupalwxt.github
 <script>const yesButton=document.querySelector('.feedback--answer-yes'),noButton=document.querySelector('.feedback--answer-no'),yesResponse=document.querySelector('.feedback--response-yes'),noResponse=document.querySelector('.feedback--response-no'),disableButtons=()=>{yesButton.disabled=!0,noButton.disabled=!0},sendFeedback=b=>{if(typeof ga!='function')return;const a={command:'send',hitType:'event',category:'Helpful',action:'click',label:window.location.pathname,value:b};ga(a.command,a.hitType,a.category,a.action,a.label,a.value)};yesButton.addEventListener('click',()=>{yesResponse.classList.add('feedback--response__visible'),disableButtons(),sendFeedback(1)}),noButton.addEventListener('click',()=>{noResponse.classList.add('feedback--response__visible'),disableButtons(),sendFeedback(0)})</script>
 <br>
 <div class="text-muted mt-5 pt-3 border-top">
-Last modified 2021-12-30: <a href=https://github.com/drupalwxt/drupalwxt.github.io/commit/d69e85d78d1722a73fb6bc23dff28473a2a5b8ae>feat(initial): second content pass (d69e85d)</a>
+Last modified 2022-01-03: <a href=https://github.com/drupalwxt/drupalwxt.github.io/commit/8c21683814d7a25b958f48d3455f6cc35d9dee94>feat(doc): Add sub theme section (8c21683)</a>
 </div>
 </div>
 </main>
