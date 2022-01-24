@@ -53,7 +53,7 @@ English
 </li>
 </ul>
 </div>
-<div class="navbar-nav d-none d-lg-block"><input type=search class="form-control td-search-input" placeholder="&#xf002; Search WxT" aria-label="Search WxT" autocomplete=off data-offline-search-index-json-src=../../../../offline-search-index.928047b043d2b241223a83a314c9366f.json data-offline-search-base-href=../../../../ data-offline-search-max-results=10>
+<div class="navbar-nav d-none d-lg-block"><input type=search class="form-control td-search-input" placeholder="&#xf002; Search WxT" aria-label="Search WxT" autocomplete=off data-offline-search-index-json-src=../../../../offline-search-index.4159cb06d2aeb4f7ffb6a3be313e1d62.json data-offline-search-base-href=../../../../ data-offline-search-max-results=10>
 </div>
 </nav>
 </header>
@@ -235,7 +235,50 @@ We try our best to have security releases of Drupal Core within <strong>24-72 ho
 <tr>
 <td><strong>4.2.1</strong></td>
 <td><strong>2022-01-23</strong></td>
-<td></td>
+<td><p>Features / Updates:</p>
+<ul>
+<li>Updates for Drupal Core (v9.2.x)
+<ul>
+<li><a href=https://www.drupal.org/sa-core-2022-001>SA-core-2022-001</a></li>
+</ul>
+</li>
+<li>Updates for WxT Bootstrap
+<ul>
+<li>Table of Contents (TOC) issue <a href=https://www.drupal.org/project/wxt/issues/3258089>#3258089</a></li>
+</ul>
+</li>
+</ul>
+<p>Upgrade path:</p>
+<ul>
+<li>
+<p>Update your codebase:</p>
+<ul>
+<li><code>composer update</code></li>
+</ul>
+</li>
+<li>
+<p>Run database updates:</p>
+<ul>
+<li><code>drush cache:rebuild</code></li>
+<li><code>drush updatedb</code></li>
+</ul>
+</li>
+<li>
+<p>Run Lightning configuration updates:</p>
+<ul>
+<li><code>drush cache:rebuild</code></li>
+<li><code>drush update:lightning</code></li>
+</ul>
+</li>
+<li>
+<p>Run WxT configuration updates:</p>
+<ul>
+<li><code>drush cache:rebuild</code></li>
+<li><code>drush update:wxt</code></li>
+</ul>
+</li>
+</ul>
+</td>
 </tr>
 <tr>
 <td><strong>4.2.0</strong></td>
