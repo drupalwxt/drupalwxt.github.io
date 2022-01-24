@@ -53,7 +53,7 @@ English
 </li>
 </ul>
 </div>
-<div class="navbar-nav d-none d-lg-block"><input type=search class="form-control td-search-input" placeholder="&#xf002; Search WxT" aria-label="Search WxT" autocomplete=off data-offline-search-index-json-src=../../../offline-search-index.6551db711db0d90212e938973aa7e9dd.json data-offline-search-base-href=../../../ data-offline-search-max-results=10>
+<div class="navbar-nav d-none d-lg-block"><input type=search class="form-control td-search-input" placeholder="&#xf002; Search WxT" aria-label="Search WxT" autocomplete=off data-offline-search-index-json-src=../../../offline-search-index.928047b043d2b241223a83a314c9366f.json data-offline-search-base-href=../../../ data-offline-search-max-results=10>
 </div>
 </nav>
 </header>
@@ -282,9 +282,93 @@ We try our best to have security releases of Drupal Core within <strong>24-72 ho
 </thead>
 <tbody>
 <tr>
+<td><strong>4.2.1</strong></td>
+<td><strong>2022-01-23</strong></td>
+<td></td>
+</tr>
+<tr>
 <td><strong>4.2.0</strong></td>
 <td><strong>2022-01-04</strong></td>
-<td></td>
+<td><p>Features / Updates:</p>
+<ul>
+<li>Updates for Drupal Core (9.2.x)
+<ul>
+<li>Upgrading to the 9.2.x Drupal Core <a href=https://www.drupal.org/node/3226492>#3226492</a></li>
+<li>Updates for Drupal Core to <a href=https://www.drupal.org/project/drupal/releases/9.2.10>v9.2.10</a></li>
+<li>WCAG required markers on forms <a href=https://www.drupal.org/node/2921627>#2921627</a></li>
+<li>New translations for moderated nodes initial workflow state <a href=https://www.drupal.org/node/3150294>#3150294</a></li>
+<li>Book title in breadcrumb not translated <a href=https://www.drupal.org/node/3177182>#3177182</a></li>
+<li>Add new <code>route:&lt;separator></code> for menu items <a href=https://www.drupal.org/project/wxt/issues/3236799>#3236799</a></li>
+<li>CKEditor adding closing tags to <code>&lt;source></code> and <code>&lt;track></code> <a href=https://www.drupal.org/project/wxt/issues/3155911>#3155911</a></li>
+<li>Claro support for extra wide screens <a href=https://www.drupal.org/node/3184667>#3184667</a></li>
+<li>Empty breadcrumb at node/add with frontpage view <a href=https://www.drupal.org/node/3184667>#3184667</a></li>
+</ul>
+</li>
+<li>Updates for Drupal Contrib
+<ul>
+<li>Token module updates breaks patch <a href=https://www.drupal.org/project/wxt/issues/3252881>#3252881</a></li>
+<li>Redis incorrect QueueInterface implementation <a href=https://www.drupal.org/project/wxt/issues/3253822>#3253822</a></li>
+<li>New metatag release conflicts with wxt patch <a href=https://www.drupal.org/project/wxt/issues/3255324>#3255324</a></li>
+<li>Accessibility improvements to Diff Module <a href=https://www.drupal.org/project/diff/issues/3228798>#3228798</a></li>
+<li>Update button_link, core_context, and group to latest stable</li>
+</ul>
+</li>
+<li>Updates for WxT
+<ul>
+<li>Configurable Leading Breadcrumbs <a href=https://www.drupal.org/project/wxt/issues/3203791>#3203791</a></li>
+<li>Flushing caches during preUpdate set maintenance mode <a href=https://www.drupal.org/project/wxt/issues/3248590>#3248590</a></li>
+<li>Issues with Insert from Media Library <a href=https://www.drupal.org/project/wxt/issues/3246714>#3246714</a></li>
+<li>Can&rsquo;t install WxT Extend Webform after minimal site install <a href=https://www.drupal.org/project/wxt/issues/3249953>#3249953</a></li>
+<li>Adjustments to Password Policy <a href=https://www.drupal.org/project/wxt/issues/3252532>#3252532</a></li>
+<li>Add new CKEditor Abbreviations Filter <a href=https://www.drupal.org/project/wxt/issues/3228812>#3228812</a></li>
+<li>Add new CKEditor Alerts Filter <a href=https://www.drupal.org/project/wxt/issues/3228616>#3228616</a></li>
+<li>Add new CKEditor TOC Filter <a href=https://www.drupal.org/project/wxt/issues/3227545>#3227545</a></li>
+<li>Add new CKEditor Footnotes Filter <a href=https://www.drupal.org/project/wxt/issues/3249208>#3249208</a></li>
+<li>Update <code>wxt_layout_plugin_id</code> migration process plugin to support creating multiple sections.</li>
+</ul>
+</li>
+<li>Updates for WxT Bootstrap
+<ul>
+<li>WxT Bootstrap fix .pagedetails layout issues <a href=https://www.drupal.org/project/wxt/issues/3253398>#3253398</a></li>
+<li>GC Subway not working correctly in Intranet theme <a href=https://www.drupal.org/project/wxt/issues/3253829>#3253829</a></li>
+<li>Issues with Insert from Media Library <a href=https://www.drupal.org/project/wxt/issues/3246714>#3246714</a></li>
+<li>Add new <code>route:&lt;separator></code> for menu items <a href=https://www.drupal.org/project/wxt/issues/3236799>#3236799</a></li>
+<li>Add new CKEditor TOC Filter <a href=https://www.drupal.org/project/wxt/issues/3227545>#3227545</a></li>
+<li>Add new CKEditor Footnotes Filter <a href=https://www.drupal.org/project/wxt/issues/3249208>#3249208</a></li>
+</ul>
+</li>
+</ul>
+<p>Upgrade path:</p>
+<ul>
+<li>
+<p>Update your codebase:</p>
+<ul>
+<li><code>composer update</code></li>
+</ul>
+</li>
+<li>
+<p>Run database updates:</p>
+<ul>
+<li><code>drush cache:rebuild</code></li>
+<li><code>drush updatedb</code></li>
+</ul>
+</li>
+<li>
+<p>Run Lightning configuration updates:</p>
+<ul>
+<li><code>drush cache:rebuild</code></li>
+<li><code>drush update:lightning</code></li>
+</ul>
+</li>
+<li>
+<p>Run WxT configuration updates:</p>
+<ul>
+<li><code>drush cache:rebuild</code></li>
+<li><code>drush update:wxt</code></li>
+</ul>
+</li>
+</ul>
+</td>
 </tr>
 <tr>
 <td><strong>4.1.3</strong></td>
@@ -499,72 +583,6 @@ We try our best to have security releases of Drupal Core within <strong>24-72 ho
 </code></pre></div><p>The only additional caveat is that if you have any of your own pages referencing theme-gcweb-intranet.tpl.php you will now have to append the suffix <code>--legacy</code> to them.</p>
 </td>
 </tr>
-<tr>
-<td><strong>4.1.0</strong></td>
-<td><strong>2021-07-28</strong></td>
-<td><p>Features / Updates:</p>
-<ul>
-<li>Updates for Drupal Core
-<ul>
-<li><a href=https://www.drupal.org/sa-core-2021-004>SA-core-2021-003</a></li>
-</ul>
-</li>
-<li>Updates for WxT
-<ul>
-<li>Issue #3219195 by smulvih2: Configure book module to support GC Subway functionality</li>
-<li>Issue #3212225: Remove Panelizer completely for 4.1.x line</li>
-</ul>
-</li>
-<li>Updates for WxT Bootstrap
-<ul>
-<li>Issue #3219195 by smulvih2: Configure book module to support GC Subway functionality</li>
-<li>Issue #3223026 by smulvih2: Toolbar menu icons are smaller on wxt_bootstrap</li>
-<li>Issue #3222228 by smulvih2: WxT Search Form Layout Issue</li>
-</ul>
-</li>
-<li>Updates for WxT Library
-<ul>
-<li>feat(gcweb): Switch to gcweb v9.3.0</li>
-<li>feat(gcweb): Switch to wet-boew v4.0.42.2</li>
-</ul>
-</li>
-</ul>
-<p>Upgrade path:</p>
-<blockquote>
-<p>Note: No special notes for this release.</p>
-</blockquote>
-<ul>
-<li>
-<p>Update your codebase:</p>
-<ul>
-<li><code>composer update</code></li>
-</ul>
-</li>
-<li>
-<p>Run database updates:</p>
-<ul>
-<li><code>drush cache:rebuild</code></li>
-<li><code>drush updatedb</code></li>
-</ul>
-</li>
-<li>
-<p>Run Lightning configuration updates:</p>
-<ul>
-<li><code>drush cache:rebuild</code></li>
-<li><code>drush update:lightning</code></li>
-</ul>
-</li>
-<li>
-<p>Run WxT configuration updates:</p>
-<ul>
-<li><code>drush cache:rebuild</code></li>
-<li><code>drush update:wxt</code></li>
-</ul>
-</li>
-</ul>
-<p><strong>Note:</strong> N/A</p>
-</td>
-</tr>
 </tbody>
 </table>
 <h2 id=repositories-for-drupal-wxt>Repositories for Drupal WxT</h2>
@@ -589,19 +607,19 @@ We try our best to have security releases of Drupal Core within <strong>24-72 ho
 <td><strong>docker-scaffold</strong></td>
 <td><a href=https://github.com/drupalwxt/docker-scaffold target=_blank>drupalwxt/docker-scaffold</a></td>
 <td>Docker Scaffold for Drupal WxT</td>
-<td>Size: 132 Bytes</td>
+<td>Size: 133 Bytes</td>
 </tr>
 <tr>
 <td><strong>drupalwxt.github.io</strong></td>
 <td><a href=https://github.com/drupalwxt/drupalwxt.github.io target=_blank>drupalwxt/drupalwxt.github.io</a></td>
 <td>GitHub Pages for Drupal WxT.</td>
-<td>Size: 4010 Bytes</td>
+<td>Size: 4112 Bytes</td>
 </tr>
 <tr>
 <td><strong>helm-drupal</strong></td>
 <td><a href=https://github.com/drupalwxt/helm-drupal target=_blank>drupalwxt/helm-drupal</a></td>
 <td>Helm chart for running Drupal on Kubernetes</td>
-<td>Size: 46079 Bytes</td>
+<td>Size: 46425 Bytes</td>
 </tr>
 <tr>
 <td><strong>site-cloud</strong></td>
@@ -643,7 +661,7 @@ We try our best to have security releases of Drupal Core within <strong>24-72 ho
 <td><strong>wxt_bootstrap</strong></td>
 <td><a href=https://github.com/drupalwxt/wxt_bootstrap target=_blank>drupalwxt/wxt_bootstrap</a></td>
 <td>Bootstrap derived sub-theme aligned for use with the Web Experience Toolkit jQuery Framework.</td>
-<td>Size: 1460 Bytes</td>
+<td>Size: 1462 Bytes</td>
 </tr>
 <tr>
 <td><strong>wxt_library</strong></td>
