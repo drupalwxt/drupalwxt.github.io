@@ -27,7 +27,7 @@ We highly recommend using our **[Composer Project Template][wxt-project]** to bu
 The following command is all you need to get started:
 
 ```sh
-composer create-project drupalwxt/wxt-project:4.2.0 <site-name>
+composer create-project drupalwxt/wxt-project:4.2.2 <site-name>
 ```
 
 > **Note**: For development you may also specify a branch using `drupalwxt/wxt-project:4.2.x-dev`.
@@ -39,7 +39,7 @@ You can see a working example of a fully generated Composer Project Template ove
 Where the following is the command that was used for the initial generation:
 
 ```sh
-composer create-project drupalwxt/wxt-project:4.2.0 site-wxt
+composer create-project drupalwxt/wxt-project:4.2.2 site-wxt
 ```
 
 > **Note**: Remember to keep the `composer.json` and `composer.lock` files that exist above `docroot` in source control as they are controlling your dependencies.
@@ -86,12 +86,12 @@ Composer will create `composer.lock` file, which is a list of dependencies that 
 
 Please **don't add `drupal/core` to your project's composer.json** since WxT manages Drupal Core for you along with the series of patches on top of it.
 
-WxT's minor versions will always correspond to Drupal Core's. For example, `drupalwxt/wxt:~4.2.0` will require Drupal Core 9.2.x and `drupalwxt/wxt:~4.1.0` will require Drupal Core 9.1.x.
+WxT's minor versions will always correspond to Drupal Core's. For example, `drupalwxt/wxt:~4.2.x` will require Drupal Core 9.2.x and `drupalwxt/wxt:~4.1.x` required Drupal Core 9.1.x.
 
 When you need to update Drupal Core as an example from 9.1.x to 9.2.x, all you would do is change your requirement for `drupalwxt/wxt` in your `composer.json` file:
 
 ```
-composer require --no-update drupalwxt/wxt:~4.2.0
+composer require --no-update drupalwxt/wxt:~4.2.2
 composer update
 ```
 
@@ -99,9 +99,9 @@ composer update
 
 | `drupalwxt/wxt` version | Drupal Core version | Drush version |
 | ----------------------- | ------------------- | ------------- |
-| `~4.2.0`                | 9.2.x               | `>=9.7`       |
-| `~4.1.0`                | 9.1.x               | `>=9.7`       |
-| `~4.0.0`                | 8.8.x+              | `>=9.7`       |
+| `~4.2.x`                | 9.2.x               | `>=9.7`       |
+| `~4.1.x`                | 9.1.x               | `>=9.7`       |
+| `~4.0.x`                | 8.8.x+              | `>=9.7`       |
 
 <!-- Links Referenced -->
 
