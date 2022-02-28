@@ -82,7 +82,7 @@ A reminder that &lt;strong>&lt;a href="https://getcomposer.org/download/">compos
 &lt;p>We highly recommend using our &lt;strong>&lt;a href="https://github.com/drupalwxt/wxt-project">Composer Project Template&lt;/a>&lt;/strong> to build and maintain your WxT derived project’s codebase.&lt;/p>
 &lt;h2 id="getting-started">Getting Started&lt;/h2>
 &lt;p>The following command is all you need to get started:&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-sh" data-lang="sh">composer create-project drupalwxt/wxt-project:4.2.0 &amp;lt;site-name&amp;gt;
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-sh" data-lang="sh">composer create-project drupalwxt/wxt-project:4.2.2 &amp;lt;site-name&amp;gt;
 &lt;/code>&lt;/pre>&lt;/div>&lt;blockquote>
 &lt;p>&lt;strong>Note&lt;/strong>: For development you may also specify a branch using &lt;code>drupalwxt/wxt-project:4.2.x-dev&lt;/code>.&lt;/p>
 &lt;/blockquote>
@@ -91,7 +91,7 @@ A reminder that &lt;strong>&lt;a href="https://getcomposer.org/download/">compos
 &lt;li>&lt;strong>&lt;a href="https://github.com/drupalwxt/site-wxt">Site WxT&lt;/a>&lt;/strong>&lt;/li>
 &lt;/ul>
 &lt;p>Where the following is the command that was used for the initial generation:&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-sh" data-lang="sh">composer create-project drupalwxt/wxt-project:4.2.0 site-wxt
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-sh" data-lang="sh">composer create-project drupalwxt/wxt-project:4.2.2 site-wxt
 &lt;/code>&lt;/pre>&lt;/div>&lt;blockquote>
 &lt;p>&lt;strong>Note&lt;/strong>: Remember to keep the &lt;code>composer.json&lt;/code> and &lt;code>composer.lock&lt;/code> files that exist above &lt;code>docroot&lt;/code> in source control as they are controlling your dependencies.&lt;/p>
 &lt;/blockquote>
@@ -146,9 +146,9 @@ A reminder that &lt;strong>&lt;a href="https://getcomposer.org/download/">compos
 &lt;/blockquote>
 &lt;h3 id="how-to-update-drupal-core">How to update Drupal Core?&lt;/h3>
 &lt;p>Please &lt;strong>don&amp;rsquo;t add &lt;code>drupal/core&lt;/code> to your project&amp;rsquo;s composer.json&lt;/strong> since WxT manages Drupal Core for you along with the series of patches on top of it.&lt;/p>
-&lt;p>WxT&amp;rsquo;s minor versions will always correspond to Drupal Core&amp;rsquo;s. For example, &lt;code>drupalwxt/wxt:~4.2.0&lt;/code> will require Drupal Core 9.2.x and &lt;code>drupalwxt/wxt:~4.1.0&lt;/code> will require Drupal Core 9.1.x.&lt;/p>
+&lt;p>WxT&amp;rsquo;s minor versions will always correspond to Drupal Core&amp;rsquo;s. For example, &lt;code>drupalwxt/wxt:~4.2.x&lt;/code> will require Drupal Core 9.2.x and &lt;code>drupalwxt/wxt:~4.1.x&lt;/code> required Drupal Core 9.1.x.&lt;/p>
 &lt;p>When you need to update Drupal Core as an example from 9.1.x to 9.2.x, all you would do is change your requirement for &lt;code>drupalwxt/wxt&lt;/code> in your &lt;code>composer.json&lt;/code> file:&lt;/p>
-&lt;pre>&lt;code>composer require --no-update drupalwxt/wxt:~4.2.0
+&lt;pre>&lt;code>composer require --no-update drupalwxt/wxt:~4.2.2
 composer update
 &lt;/code>&lt;/pre>&lt;h3 id="compatibility-table">Compatibility table&lt;/h3>
 &lt;table>
@@ -161,17 +161,17 @@ composer update
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>&lt;code>~4.2.0&lt;/code>&lt;/td>
+&lt;td>&lt;code>~4.2.x&lt;/code>&lt;/td>
 &lt;td>9.2.x&lt;/td>
 &lt;td>&lt;code>&amp;gt;=9.7&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>~4.1.0&lt;/code>&lt;/td>
+&lt;td>&lt;code>~4.1.x&lt;/code>&lt;/td>
 &lt;td>9.1.x&lt;/td>
 &lt;td>&lt;code>&amp;gt;=9.7&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>~4.0.0&lt;/code>&lt;/td>
+&lt;td>&lt;code>~4.0.x&lt;/code>&lt;/td>
 &lt;td>8.8.x+&lt;/td>
 &lt;td>&lt;code>&amp;gt;=9.7&lt;/code>&lt;/td>
 &lt;/tr>
