@@ -53,7 +53,7 @@ English
 </li>
 </ul>
 </div>
-<div class="navbar-nav d-none d-lg-block"><input type=search class="form-control td-search-input" placeholder="&#xf002; Search WxT" aria-label="Search WxT" autocomplete=off data-offline-search-index-json-src=../../../offline-search-index.949d3e685f142b8ab439bea179f7947a.json data-offline-search-base-href=../../../ data-offline-search-max-results=10>
+<div class="navbar-nav d-none d-lg-block"><input type=search class="form-control td-search-input" placeholder="&#xf002; Search WxT" aria-label="Search WxT" autocomplete=off data-offline-search-index-json-src=../../../offline-search-index.0a27c6230443fd693433baf877c8d442.json data-offline-search-base-href=../../../ data-offline-search-max-results=10>
 </div>
 </nav>
 </header>
@@ -281,6 +281,60 @@ We try our best to have security releases of Drupal Core within <strong>24-72 ho
 </tr>
 </thead>
 <tbody>
+<tr>
+<td><strong>4.2.2</strong></td>
+<td><strong>2022-02-28</strong></td>
+<td><p>Features / Updates:</p>
+<ul>
+<li>Updates for Drupal Core (v9.2.13)
+<ul>
+<li><a href=https://www.drupal.org/sa-core-2022-003>SA-core-2022-003</a></li>
+<li><a href=https://www.drupal.org/sa-core-2022-004>SA-core-2022-004</a></li>
+</ul>
+</li>
+<li>Updates for WxT
+<ul>
+<li>Table of Contents exclude headings above token <a href=https://www.drupal.org/project/wxt/issues/3262311>#3262311</a></li>
+<li>Use footnote value as placeholder in CKEditor <a href=https://www.drupal.org/project/wxt/issues/3262570>#3262570</a></li>
+<li>WxT Editor PHPCS Cleanup <a href=https://www.drupal.org/project/wxt/issues/3261854>#3261854</a></li>
+<li>4.20 Update Hook with minimal install <a href=https://www.drupal.org/project/wxt/issues/3263903>#3263903</a></li>
+<li>importTranslations() method not working for config translations <a href=https://www.drupal.org/project/wxt/issues/3266196>#3266196</a></li>
+<li>Ensure WxT custom install tasks are post install_finished <a href=https://www.drupal.org/project/wxt/issues/3266820>#3266820</a></li>
+</ul>
+</li>
+</ul>
+<p>Upgrade path:</p>
+<ul>
+<li>
+<p>Update your codebase:</p>
+<ul>
+<li><code>composer update</code></li>
+</ul>
+</li>
+<li>
+<p>Run database updates:</p>
+<ul>
+<li><code>drush cache:rebuild</code></li>
+<li><code>drush updatedb</code></li>
+</ul>
+</li>
+<li>
+<p>Run Lightning configuration updates:</p>
+<ul>
+<li><code>drush cache:rebuild</code></li>
+<li><code>drush update:lightning</code></li>
+</ul>
+</li>
+<li>
+<p>Run WxT configuration updates:</p>
+<ul>
+<li><code>drush cache:rebuild</code></li>
+<li><code>drush update:wxt</code></li>
+</ul>
+</li>
+</ul>
+</td>
+</tr>
 <tr>
 <td><strong>4.2.1</strong></td>
 <td><strong>2022-01-23</strong></td>
@@ -554,76 +608,6 @@ We try our best to have security releases of Drupal Core within <strong>24-72 ho
 </li>
 </ul>
 <p><strong>Note:</strong> N/A</p>
-</td>
-</tr>
-<tr>
-<td><strong>4.1.1</strong></td>
-<td><strong>2021-09-20</strong></td>
-<td><p>Features / Updates:</p>
-<ul>
-<li>Updates for Drupal Core (v9.1.13)
-<ul>
-<li><a href=https://www.drupal.org/sa-core-2021-009>SA-core-2021-009</a></li>
-</ul>
-</li>
-<li>Updates for WxT
-<ul>
-<li>Addition of the new GC Intranet Theme <a href=https://www.drupal.org/project/wxt/issues/3226972>#3226972</a></li>
-<li>WxT Ext Archived module improvements <a href=https://www.drupal.org/project/wxt/issues/3226555>#3226555</a></li>
-<li>Resolve this.$toggleWeightBUtton is undefined <a href=https://www.drupal.org/project/wxt/issues/3230065>#3230065</a></li>
-</ul>
-</li>
-<li>Updates for WxT Bootstrap
-<ul>
-<li>Addition of the new GC Intranet Theme <a href=https://www.drupal.org/project/wxt/issues/3226972>#3226972</a></li>
-<li>Remove remnant flag template <a href=https://www.drupal.org/project/wxt/issues/3226974>#3226974</a></li>
-<li>Status message layout issues <a href=https://www.drupal.org/project/wxt/issues/3227944>#3227944</a></li>
-<li>All input buttons have title attribute set to &ldquo;Search&rdquo; <a href=https://www.drupal.org/project/wxt/issues/3230876>#3230876</a></li>
-</ul>
-</li>
-<li>Updates for WxT Library
-<ul>
-<li>Addition of the new GC Intranet Theme <a href=https://www.drupal.org/project/wxt/issues/3226972>#3226972</a></li>
-<li>GC Intranet search block layout issues <a href=https://www.drupal.org/project/wxt/issues/3229155>#3229155</a></li>
-</ul>
-</li>
-</ul>
-<p>Upgrade path:</p>
-<blockquote>
-<p>Note: No special notes for this release.</p>
-</blockquote>
-<ul>
-<li>
-<p>Update your codebase:</p>
-<ul>
-<li><code>composer update</code></li>
-</ul>
-</li>
-<li>
-<p>Run database updates:</p>
-<ul>
-<li><code>drush cache:rebuild</code></li>
-<li><code>drush updatedb</code></li>
-</ul>
-</li>
-<li>
-<p>Run Lightning configuration updates:</p>
-<ul>
-<li><code>drush cache:rebuild</code></li>
-<li><code>drush update:lightning</code></li>
-</ul>
-</li>
-<li>
-<p>Run WxT configuration updates:</p>
-<ul>
-<li><code>drush cache:rebuild</code></li>
-<li><code>drush update:wxt</code></li>
-</ul>
-</li>
-</ul>
-<p><strong>Note:</strong> The default GC Intranet theme has been updated to the latest specification. You will need to manually switch to the <code>gc-intranet-legacy</code> theme if you wish to have no changes to the theme.</p>
-<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-sh data-lang=sh>drush config-set wxt_library.settings wxt.theme theme-gcweb-intranet-legacy
-</code></pre></div><p>The only additional caveat is that if you have any of your own pages referencing theme-gcweb-intranet.tpl.php you will now have to append the suffix <code>--legacy</code> to them.</p>
 </td>
 </tr>
 </tbody>
