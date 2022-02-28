@@ -248,7 +248,7 @@ enable = false
         desc = "Want to collaborate with us? New users are always welcomed"
 [[params.links.user]]
 	name ="Drupal Issue Queue"
-	url = "https://drupal.org/project/wxt/issues"
+	url = "https://drupal.org/project/issues/wxt"
 	icon = "fab fa-drupal"
         desc = "Give and recieve support from the Drupal.org community"
 # Developer relevant links. These will show up on right side of footer and in the community page if you have one.
