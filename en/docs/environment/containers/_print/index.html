@@ -53,7 +53,7 @@ English
 </li>
 </ul>
 </div>
-<div class="navbar-nav d-none d-lg-block"><input type=search class="form-control td-search-input" placeholder="&#xf002; Search WxT" aria-label="Search WxT" autocomplete=off data-offline-search-index-json-src=../../../../../offline-search-index.509cc90d563e761479db2beea4d5dab4.json data-offline-search-base-href=../../../../../ data-offline-search-max-results=10>
+<div class="navbar-nav d-none d-lg-block"><input type=search class="form-control td-search-input" placeholder="&#xf002; Search WxT" aria-label="Search WxT" autocomplete=off data-offline-search-index-json-src=../../../../../offline-search-index.24006ec6d1e479d45a4d19ce81f26748.json data-offline-search-base-href=../../../../../ data-offline-search-max-results=10>
 </div>
 </nav>
 </header>
@@ -114,12 +114,11 @@ make drupal_install
 </ul>
 <p>This is supposed to be fixed with the new virtualization framework in MacOSX 11.1+ but for the moment mutagen should be used.</p>
 <div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-sh data-lang=sh><span style=color:#8f5902;font-style:italic># Mutagen Setup</span>
-<span style=color:#204a87>export</span> <span style=color:#000>VOLUME</span><span style=color:#ce5c00;font-weight:700>=</span>mutagen-cache
-<span style=color:#204a87>export</span> <span style=color:#000>NAME</span><span style=color:#ce5c00;font-weight:700>=</span>site-wxt
+<span style=color:#204a87>export</span> <span style=color:#000>VOLUME</span><span style=color:#ce5c00;font-weight:700>=</span>site-wxt-mutagen-cache
 docker volume create <span style=color:#000>$VOLUME</span>
 docker container create --name <span style=color:#000>$VOLUME</span> -v <span style=color:#000>$VOLUME</span>:/volumes/<span style=color:#000>$VOLUME</span> mutagenio/sidecar:0.13.0-beta3
 docker start <span style=color:#000>$VOLUME</span>
-mutagen sync create --name <span style=color:#000>$NAME</span> --sync-mode<span style=color:#ce5c00;font-weight:700>=</span>two-way-resolved --default-file-mode-beta <span style=color:#0000cf;font-weight:700>0666</span> --default-directory-mode-beta <span style=color:#0000cf;font-weight:700>0777</span>  <span style=color:#204a87;font-weight:700>$(</span><span style=color:#204a87>pwd</span><span style=color:#204a87;font-weight:700>)</span> docker://mutagen-cache/volumes/mutagen-cache
+mutagen sync create --name <span style=color:#000>$VOLUME</span> --sync-mode<span style=color:#ce5c00;font-weight:700>=</span>two-way-resolved --default-file-mode-beta <span style=color:#0000cf;font-weight:700>0666</span> --default-directory-mode-beta <span style=color:#0000cf;font-weight:700>0777</span>  <span style=color:#204a87;font-weight:700>$(</span><span style=color:#204a87>pwd</span><span style=color:#204a87;font-weight:700>)</span> docker://<span style=color:#000>$VOLUME</span>/volumes/<span style=color:#000>$VOLUME</span>
 
 <span style=color:#8f5902;font-style:italic># Create symlinks</span>
 ln -s docker/docker-compose-mutagen.yml docker-compose-mutagen.yml

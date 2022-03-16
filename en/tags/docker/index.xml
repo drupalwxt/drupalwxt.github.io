@@ -33,12 +33,11 @@ make drupal_install
 &lt;/ul>
 &lt;p>This is supposed to be fixed with the new virtualization framework in MacOSX 11.1+ but for the moment mutagen should be used.&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-sh" data-lang="sh">&lt;span style="color:#8f5902;font-style:italic"># Mutagen Setup&lt;/span>
-&lt;span style="color:#204a87">export&lt;/span> &lt;span style="color:#000">VOLUME&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span>mutagen-cache
-&lt;span style="color:#204a87">export&lt;/span> &lt;span style="color:#000">NAME&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span>site-wxt
+&lt;span style="color:#204a87">export&lt;/span> &lt;span style="color:#000">VOLUME&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span>site-wxt-mutagen-cache
 docker volume create &lt;span style="color:#000">$VOLUME&lt;/span>
 docker container create --name &lt;span style="color:#000">$VOLUME&lt;/span> -v &lt;span style="color:#000">$VOLUME&lt;/span>:/volumes/&lt;span style="color:#000">$VOLUME&lt;/span> mutagenio/sidecar:0.13.0-beta3
 docker start &lt;span style="color:#000">$VOLUME&lt;/span>
-mutagen sync create --name &lt;span style="color:#000">$NAME&lt;/span> --sync-mode&lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span>two-way-resolved --default-file-mode-beta &lt;span style="color:#0000cf;font-weight:bold">0666&lt;/span> --default-directory-mode-beta &lt;span style="color:#0000cf;font-weight:bold">0777&lt;/span> &lt;span style="color:#204a87;font-weight:bold">$(&lt;/span>&lt;span style="color:#204a87">pwd&lt;/span>&lt;span style="color:#204a87;font-weight:bold">)&lt;/span> docker://mutagen-cache/volumes/mutagen-cache
+mutagen sync create --name &lt;span style="color:#000">$VOLUME&lt;/span> --sync-mode&lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span>two-way-resolved --default-file-mode-beta &lt;span style="color:#0000cf;font-weight:bold">0666&lt;/span> --default-directory-mode-beta &lt;span style="color:#0000cf;font-weight:bold">0777&lt;/span> &lt;span style="color:#204a87;font-weight:bold">$(&lt;/span>&lt;span style="color:#204a87">pwd&lt;/span>&lt;span style="color:#204a87;font-weight:bold">)&lt;/span> docker://&lt;span style="color:#000">$VOLUME&lt;/span>/volumes/&lt;span style="color:#000">$VOLUME&lt;/span>
 &lt;span style="color:#8f5902;font-style:italic"># Create symlinks&lt;/span>
 ln -s docker/docker-compose-mutagen.yml docker-compose-mutagen.yml
 &lt;span style="color:#8f5902;font-style:italic"># Composer install&lt;/span>

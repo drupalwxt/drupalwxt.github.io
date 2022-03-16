@@ -53,7 +53,7 @@ English
 </li>
 </ul>
 </div>
-<div class="navbar-nav d-none d-lg-block"><input type=search class="form-control td-search-input" placeholder="&#xf002; Search WxT" aria-label="Search WxT" autocomplete=off data-offline-search-index-json-src=../../../../offline-search-index.509cc90d563e761479db2beea4d5dab4.json data-offline-search-base-href=../../../../ data-offline-search-max-results=10>
+<div class="navbar-nav d-none d-lg-block"><input type=search class="form-control td-search-input" placeholder="&#xf002; Search WxT" aria-label="Search WxT" autocomplete=off data-offline-search-index-json-src=../../../../offline-search-index.24006ec6d1e479d45a4d19ce81f26748.json data-offline-search-base-href=../../../../ data-offline-search-max-results=10>
 </div>
 </nav>
 </header>
@@ -64,7 +64,7 @@ English
 <script>$(function(){$("#td-section-nav a").removeClass("active"),$("#td-section-nav #m-endocsenvironmentcontainers").addClass("active"),$("#td-section-nav #m-endocsenvironmentcontainers-li span").addClass("td-sidebar-nav-active-item"),$("#td-section-nav #m-endocsenvironmentcontainers").parents("li").addClass("active-path"),$("#td-section-nav li.active-path").addClass("show"),$("#td-section-nav li.active-path").children("input").prop('checked',!0),$("#td-section-nav #m-endocsenvironmentcontainers-li").siblings("li").addClass("show"),$("#td-section-nav #m-endocsenvironmentcontainers-li").children("ul").children("li").addClass("show"),$("#td-sidebar-menu").toggleClass("d-none")})</script>
 <div id=td-sidebar-menu class="td-sidebar__inner d-none">
 <form class="td-sidebar__search d-flex align-items-center">
-<input type=search class="form-control td-search-input" placeholder="&#xf002; Search WxT" aria-label="Search WxT" autocomplete=off data-offline-search-index-json-src=../../../../offline-search-index.509cc90d563e761479db2beea4d5dab4.json data-offline-search-base-href=../../../../ data-offline-search-max-results=10>
+<input type=search class="form-control td-search-input" placeholder="&#xf002; Search WxT" aria-label="Search WxT" autocomplete=off data-offline-search-index-json-src=../../../../offline-search-index.24006ec6d1e479d45a4d19ce81f26748.json data-offline-search-base-href=../../../../ data-offline-search-max-results=10>
 <button class="btn btn-link td-sidebar__toggle d-md-none p-0 ml-3 fas fa-bars" type=button data-toggle=collapse data-target=#td-section-nav aria-controls=td-docs-nav aria-expanded=false aria-label="Toggle section navigation">
 </button>
 </form>
@@ -266,12 +266,11 @@ make drupal_install
 </ul>
 <p>This is supposed to be fixed with the new virtualization framework in MacOSX 11.1+ but for the moment mutagen should be used.</p>
 <div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-sh data-lang=sh><span style=color:#8f5902;font-style:italic># Mutagen Setup</span>
-<span style=color:#204a87>export</span> <span style=color:#000>VOLUME</span><span style=color:#ce5c00;font-weight:700>=</span>mutagen-cache
-<span style=color:#204a87>export</span> <span style=color:#000>NAME</span><span style=color:#ce5c00;font-weight:700>=</span>site-wxt
+<span style=color:#204a87>export</span> <span style=color:#000>VOLUME</span><span style=color:#ce5c00;font-weight:700>=</span>site-wxt-mutagen-cache
 docker volume create <span style=color:#000>$VOLUME</span>
 docker container create --name <span style=color:#000>$VOLUME</span> -v <span style=color:#000>$VOLUME</span>:/volumes/<span style=color:#000>$VOLUME</span> mutagenio/sidecar:0.13.0-beta3
 docker start <span style=color:#000>$VOLUME</span>
-mutagen sync create --name <span style=color:#000>$NAME</span> --sync-mode<span style=color:#ce5c00;font-weight:700>=</span>two-way-resolved --default-file-mode-beta <span style=color:#0000cf;font-weight:700>0666</span> --default-directory-mode-beta <span style=color:#0000cf;font-weight:700>0777</span>  <span style=color:#204a87;font-weight:700>$(</span><span style=color:#204a87>pwd</span><span style=color:#204a87;font-weight:700>)</span> docker://mutagen-cache/volumes/mutagen-cache
+mutagen sync create --name <span style=color:#000>$VOLUME</span> --sync-mode<span style=color:#ce5c00;font-weight:700>=</span>two-way-resolved --default-file-mode-beta <span style=color:#0000cf;font-weight:700>0666</span> --default-directory-mode-beta <span style=color:#0000cf;font-weight:700>0777</span>  <span style=color:#204a87;font-weight:700>$(</span><span style=color:#204a87>pwd</span><span style=color:#204a87;font-weight:700>)</span> docker://<span style=color:#000>$VOLUME</span>/volumes/<span style=color:#000>$VOLUME</span>
 
 <span style=color:#8f5902;font-style:italic># Create symlinks</span>
 ln -s docker/docker-compose-mutagen.yml docker-compose-mutagen.yml
@@ -319,7 +318,7 @@ Sorry to hear that. Please <a href=https://github.com/drupalwxt/drupalwxt.github
 <script>const yesButton=document.querySelector('.feedback--answer-yes'),noButton=document.querySelector('.feedback--answer-no'),yesResponse=document.querySelector('.feedback--response-yes'),noResponse=document.querySelector('.feedback--response-no'),disableButtons=()=>{yesButton.disabled=!0,noButton.disabled=!0},sendFeedback=b=>{if(typeof ga!='function')return;const a={command:'send',hitType:'event',category:'Helpful',action:'click',label:window.location.pathname,value:b};ga(a.command,a.hitType,a.category,a.action,a.label,a.value)};yesButton.addEventListener('click',()=>{yesResponse.classList.add('feedback--response__visible'),disableButtons(),sendFeedback(1)}),noButton.addEventListener('click',()=>{noResponse.classList.add('feedback--response__visible'),disableButtons(),sendFeedback(0)})</script>
 <br>
 <div class="text-muted mt-5 pt-3 border-top">
-Last modified 2021-12-30: <a href=https://github.com/drupalwxt/drupalwxt.github.io/commit/09ca55b5d07d23f01fa7e0f9eb536bc6717b441f>feat(initial): first content pass (09ca55b)</a>
+Last modified 2022-03-15: <a href=https://github.com/drupalwxt/drupalwxt.github.io/commit/9571c4490f84828eec15f415248fcc7afc989776>feat(containers): mutagen-cache ease instructions for multiple sites (9571c44)</a>
 </div>
 </div>
 </main>
