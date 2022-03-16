@@ -69,12 +69,11 @@ This is supposed to be fixed with the new virtualization framework in MacOSX 11.
 
 ```sh
 # Mutagen Setup
-export VOLUME=mutagen-cache
-export NAME=site-wxt
+export VOLUME=site-wxt-mutagen-cache
 docker volume create $VOLUME
 docker container create --name $VOLUME -v $VOLUME:/volumes/$VOLUME mutagenio/sidecar:0.13.0-beta3
 docker start $VOLUME
-mutagen sync create --name $NAME --sync-mode=two-way-resolved --default-file-mode-beta 0666 --default-directory-mode-beta 0777  $(pwd) docker://mutagen-cache/volumes/mutagen-cache
+mutagen sync create --name $VOLUME --sync-mode=two-way-resolved --default-file-mode-beta 0666 --default-directory-mode-beta 0777  $(pwd) docker://$VOLUME/volumes/$VOLUME
 
 # Create symlinks
 ln -s docker/docker-compose-mutagen.yml docker-compose-mutagen.yml
