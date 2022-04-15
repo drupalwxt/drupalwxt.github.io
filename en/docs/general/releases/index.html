@@ -60,7 +60,7 @@ English
 </li>
 </ul>
 </div>
-<div class="navbar-nav d-none d-lg-block"><input type=search class="form-control td-search-input" placeholder="&#xf002; Search WxT" aria-label="Search WxT" autocomplete=off data-offline-search-index-json-src=../../../../offline-search-index.a76110055fde8cb065fccb308bfc248d.json data-offline-search-base-href=../../../../ data-offline-search-max-results=10>
+<div class="navbar-nav d-none d-lg-block"><input type=search class="form-control td-search-input" placeholder="&#xf002; Search WxT" aria-label="Search WxT" autocomplete=off data-offline-search-index-json-src=../../../../offline-search-index.76e7c49874e11b914d5a46f7a57233bd.json data-offline-search-base-href=../../../../ data-offline-search-max-results=10>
 </div>
 </nav>
 </header>
@@ -71,7 +71,7 @@ English
 <script>$(function(){$("#td-section-nav a").removeClass("active"),$("#td-section-nav #m-endocsgeneralreleases").addClass("active"),$("#td-section-nav #m-endocsgeneralreleases-li span").addClass("td-sidebar-nav-active-item"),$("#td-section-nav #m-endocsgeneralreleases").parents("li").addClass("active-path"),$("#td-section-nav li.active-path").addClass("show"),$("#td-section-nav li.active-path").children("input").prop('checked',!0),$("#td-section-nav #m-endocsgeneralreleases-li").siblings("li").addClass("show"),$("#td-section-nav #m-endocsgeneralreleases-li").children("ul").children("li").addClass("show"),$("#td-sidebar-menu").toggleClass("d-none")})</script>
 <div id=td-sidebar-menu class="td-sidebar__inner d-none">
 <form class="td-sidebar__search d-flex align-items-center">
-<input type=search class="form-control td-search-input" placeholder="&#xf002; Search WxT" aria-label="Search WxT" autocomplete=off data-offline-search-index-json-src=../../../../offline-search-index.a76110055fde8cb065fccb308bfc248d.json data-offline-search-base-href=../../../../ data-offline-search-max-results=10>
+<input type=search class="form-control td-search-input" placeholder="&#xf002; Search WxT" aria-label="Search WxT" autocomplete=off data-offline-search-index-json-src=../../../../offline-search-index.76e7c49874e11b914d5a46f7a57233bd.json data-offline-search-base-href=../../../../ data-offline-search-max-results=10>
 <button class="btn btn-link td-sidebar__toggle d-md-none p-0 ml-3 fas fa-bars" type=button data-toggle=collapse data-target=#td-section-nav aria-controls=td-docs-nav aria-expanded=false aria-label="Toggle section navigation">
 </button>
 </form>
@@ -247,6 +247,67 @@ We try our best to have security releases of Drupal Core within <strong>24-72 ho
 </tr>
 </thead>
 <tbody>
+<tr>
+<td><strong>4.2.3</strong></td>
+<td><strong>2022-04-15</strong></td>
+<td><p>Features / Updates:</p>
+<ul>
+<li>Updates for Drupal Core (v9.2.17)
+<ul>
+<li><a href=https://www.drupal.org/sa-core-2022-005>SA-core-2022-005</a></li>
+<li><a href=https://www.drupal.org/sa-core-2022-006>SA-core-2022-006</a></li>
+</ul>
+</li>
+<li>Updates for WxT
+<ul>
+<li>Core Context breaks Layout Library <a href=https://www.drupal.org/project/wxt/issues/3263697>#3263697</a></li>
+<li>Lightbox markup incorrect <a href=https://www.drupal.org/project/wxt/issues/3269655>#3269655</a></li>
+<li>Switching to seven admin theme causes WSOD <a href=https://www.drupal.org/project/wxt/issues/3272568>#3272568</a></li>
+<li>Rename home breadcrumb <a href=https://www.drupal.org/project/wxt/issues/3275151>#3275151</a></li>
+</ul>
+</li>
+<li>Updates for WxT Bootstrap
+<ul>
+<li>GC Subway layout issue <a href=https://www.drupal.org/project/wxt/issues/3268224>#3268224</a></li>
+<li>wxt_bootstrap starterkit core version requirement <a href=https://www.drupal.org/project/wxt/issues/3274498>#3274498</a></li>
+<li>Search form block layout issues with custom theme <a href=https://www.drupal.org/project/wxt/issues/3274502>#3274502</a></li>
+<li>Remove current page title from breadcrumbs by default <a href=https://www.drupal.org/project/wxt/issues/3274514>#3274514</a></li>
+<li>Enable fluid page per entity <a href=https://www.drupal.org/project/wxt/issues/3275166>#3275166</a></li>
+</ul>
+</li>
+</ul>
+<p>Upgrade path:</p>
+<ul>
+<li>
+<p>Update your codebase:</p>
+<ul>
+<li><code>composer update</code></li>
+</ul>
+</li>
+<li>
+<p>Run database updates:</p>
+<ul>
+<li><code>drush cache:rebuild</code></li>
+<li><code>drush updatedb</code></li>
+</ul>
+</li>
+<li>
+<p>Run Lightning configuration updates:</p>
+<ul>
+<li><code>drush cache:rebuild</code></li>
+<li><code>drush update:lightning</code></li>
+</ul>
+</li>
+<li>
+<p>Run WxT configuration updates:</p>
+<ul>
+<li><code>drush cache:rebuild</code></li>
+<li><code>drush update:wxt</code></li>
+</ul>
+</li>
+</ul>
+</td>
+</tr>
 <tr>
 <td><strong>4.2.2</strong></td>
 <td><strong>2022-02-28</strong></td>
@@ -508,74 +569,6 @@ We try our best to have security releases of Drupal Core within <strong>24-72 ho
 <p><strong>Note:</strong> N/A</p>
 </td>
 </tr>
-<tr>
-<td><strong>4.1.2</strong></td>
-<td><strong>2021-11-22</strong></td>
-<td><p>Features / Updates:</p>
-<ul>
-<li>Updates for Drupal Core (v9.1.14)
-<ul>
-<li><a href=https://www.drupal.org/sa-core-2021-011>SA-core-2021-011</a></li>
-</ul>
-</li>
-<li>Updates for WxT
-<ul>
-<li>CKEditor table improvements <a href=https://www.drupal.org/project/wxt/issues/3247278>#3247278</a></li>
-<li>D9 Core patch fixing missing hooks <a href=https://www.drupal.org/project/wxt/issues/3241632>#3241632</a></li>
-<li>Update linkit for SA <a href=https://www.drupal.org/project/wxt/issues/3240307>#3240307</a></li>
-<li>Update token_filter for core fix <a href=https://www.drupal.org/project/token_filter/issues/3236440>#3236440</a></li>
-</ul>
-</li>
-<li>Updates for WxT Bootstrap
-<ul>
-<li>CKEditor table improvements <a href=https://www.drupal.org/project/wxt/issues/3247943>#3247943</a></li>
-<li>Add aria-current to GC Subway navigation <a href=https://www.drupal.org/project/wxt/issues/3243162>#3243162</a></li>
-<li>Accessibility issue in GC Intranet menu <a href=https://www.drupal.org/project/wxt/issues/3240931>#3240931</a></li>
-</ul>
-</li>
-<li>Updates for WxT Library
-<ul>
-<li>Language switcher issue on Intranet theme <a href=https://www.drupal.org/project/wxt/issues/3246029>#3246029</a></li>
-<li>Undefined variable $wxt_active <a href=https://www.drupal.org/project/wxt/issues/3250005>#3250005</a></li>
-</ul>
-</li>
-</ul>
-<p>Upgrade path:</p>
-<blockquote>
-<p>Note: No special notes for this release.</p>
-</blockquote>
-<ul>
-<li>
-<p>Update your codebase:</p>
-<ul>
-<li><code>composer update</code></li>
-</ul>
-</li>
-<li>
-<p>Run database updates:</p>
-<ul>
-<li><code>drush cache:rebuild</code></li>
-<li><code>drush updatedb</code></li>
-</ul>
-</li>
-<li>
-<p>Run Lightning configuration updates:</p>
-<ul>
-<li><code>drush cache:rebuild</code></li>
-<li><code>drush update:lightning</code></li>
-</ul>
-</li>
-<li>
-<p>Run WxT configuration updates:</p>
-<ul>
-<li><code>drush cache:rebuild</code></li>
-<li><code>drush update:wxt</code></li>
-</ul>
-</li>
-</ul>
-<p><strong>Note:</strong> N/A</p>
-</td>
-</tr>
 </tbody>
 </table>
 <h2 id=repositories-for-drupal-wxt>Repositories for Drupal WxT</h2>
@@ -606,7 +599,7 @@ We try our best to have security releases of Drupal Core within <strong>24-72 ho
 <td><strong>drupalwxt.github.io</strong></td>
 <td><a href=https://github.com/drupalwxt/drupalwxt.github.io target=_blank>drupalwxt/drupalwxt.github.io</a></td>
 <td>GitHub Pages for Drupal WxT.</td>
-<td>Size: 4739 Bytes</td>
+<td>Size: 4790 Bytes</td>
 </tr>
 <tr>
 <td><strong>helm-drupal</strong></td>
@@ -642,7 +635,7 @@ We try our best to have security releases of Drupal Core within <strong>24-72 ho
 <td><strong>wxt</strong></td>
 <td><a href=https://github.com/drupalwxt/wxt target=_blank>drupalwxt/wxt</a></td>
 <td>Drupal 9 variant of the Web Experience Toolkit (WxT).</td>
-<td>Size: 1959 Bytes</td>
+<td>Size: 1993 Bytes</td>
 </tr>
 <tr>
 <td><strong>wxt-project</strong></td>
@@ -654,7 +647,7 @@ We try our best to have security releases of Drupal Core within <strong>24-72 ho
 <td><strong>wxt_bootstrap</strong></td>
 <td><a href=https://github.com/drupalwxt/wxt_bootstrap target=_blank>drupalwxt/wxt_bootstrap</a></td>
 <td>Bootstrap derived sub-theme aligned for use with the Web Experience Toolkit jQuery Framework.</td>
-<td>Size: 1546 Bytes</td>
+<td>Size: 1556 Bytes</td>
 </tr>
 <tr>
 <td><strong>wxt_library</strong></td>
