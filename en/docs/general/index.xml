@@ -489,13 +489,13 @@ We try our best to have security releases of Drupal Core within &lt;strong>24-72
 &lt;td>&lt;strong>drupalwxt.github.io&lt;/strong>&lt;/td>
 &lt;td>&lt;a href="https://github.com/drupalwxt/drupalwxt.github.io" target="_blank">drupalwxt/drupalwxt.github.io&lt;/a>&lt;/td>
 &lt;td>GitHub Pages for Drupal WxT.&lt;/td>
-&lt;td>Size: 4688 Bytes&lt;/td>
+&lt;td>Size: 4739 Bytes&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>&lt;strong>helm-drupal&lt;/strong>&lt;/td>
 &lt;td>&lt;a href="https://github.com/drupalwxt/helm-drupal" target="_blank">drupalwxt/helm-drupal&lt;/a>&lt;/td>
 &lt;td>Helm chart for running Drupal on Kubernetes&lt;/td>
-&lt;td>Size: 50468 Bytes&lt;/td>
+&lt;td>Size: 51220 Bytes&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>&lt;strong>site-cloud&lt;/strong>&lt;/td>
@@ -525,7 +525,7 @@ We try our best to have security releases of Drupal Core within &lt;strong>24-72
 &lt;td>&lt;strong>wxt&lt;/strong>&lt;/td>
 &lt;td>&lt;a href="https://github.com/drupalwxt/wxt" target="_blank">drupalwxt/wxt&lt;/a>&lt;/td>
 &lt;td>Drupal 9 variant of the Web Experience Toolkit (WxT).&lt;/td>
-&lt;td>Size: 1953 Bytes&lt;/td>
+&lt;td>Size: 1959 Bytes&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>&lt;strong>wxt-project&lt;/strong>&lt;/td>
@@ -537,7 +537,7 @@ We try our best to have security releases of Drupal Core within &lt;strong>24-72
 &lt;td>&lt;strong>wxt_bootstrap&lt;/strong>&lt;/td>
 &lt;td>&lt;a href="https://github.com/drupalwxt/wxt_bootstrap" target="_blank">drupalwxt/wxt_bootstrap&lt;/a>&lt;/td>
 &lt;td>Bootstrap derived sub-theme aligned for use with the Web Experience Toolkit jQuery Framework.&lt;/td>
-&lt;td>Size: 1535 Bytes&lt;/td>
+&lt;td>Size: 1546 Bytes&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>&lt;strong>wxt_library&lt;/strong>&lt;/td>
