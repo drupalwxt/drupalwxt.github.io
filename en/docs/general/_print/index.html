@@ -53,7 +53,7 @@ English
 </li>
 </ul>
 </div>
-<div class="navbar-nav d-none d-lg-block"><input type=search class="form-control td-search-input" placeholder="&#xf002; Search WxT" aria-label="Search WxT" autocomplete=off data-offline-search-index-json-src=../../../../offline-search-index.16def7001f32585dbfb3019f9e2f4651.json data-offline-search-base-href=../../../../ data-offline-search-max-results=10>
+<div class="navbar-nav d-none d-lg-block"><input type=search class="form-control td-search-input" placeholder="&#xf002; Search WxT" aria-label="Search WxT" autocomplete=off data-offline-search-index-json-src=../../../../offline-search-index.9bc171448470ae8c387905636f18eb39.json data-offline-search-base-href=../../../../ data-offline-search-max-results=10>
 </div>
 </nav>
 </header>
@@ -232,6 +232,76 @@ We try our best to have security releases of Drupal Core within <strong>24-72 ho
 </tr>
 </thead>
 <tbody>
+<tr>
+<td><strong>4.2.4</strong></td>
+<td><strong>2022-05-09</strong></td>
+<td><p>Features / Updates:</p>
+<ul>
+<li>Updates for Drupal Core (v9.2.18)
+<ul>
+<li><a href=https://www.drupal.org/sa-core-2022-008>SA-core-2022-008</a></li>
+</ul>
+</li>
+<li>Updates for WxT
+<ul>
+<li>RouteNotFoundException: Route &ldquo;search.view_node_search&rdquo; on browser install <a href=https://www.drupal.org/node/3275738>#3275738</a></li>
+<li>Blue intranet theme toggle <a href=https://www.drupal.org/node/3276713>#3276713</a></li>
+<li>Views exposed form requires AJAX to be enabled on block display <a href=https://www.drupal.org/node/3276663>#3276663</a></li>
+<li>Update blog breadcrumbs to work similar to other content type <a href=https://www.drupal.org/node/3277084>#3277084</a></li>
+<li>Block headings changes for WCAG compliance <a href=https://www.drupal.org/node/3277101>#3277101</a></li>
+</ul>
+</li>
+<li>Updates for WxT Bootstrap
+<ul>
+<li>Revert search form block layout issues with custom theme <a href=https://www.drupal.org/node/3274502>#3274502</a></li>
+<li>WET media player <a href=https://www.drupal.org/node/3279276>#3279276</a></li>
+<li>Add common book page template fix to starterkit <a href=https://www.drupal.org/node/3277987>#3277987</a></li>
+<li>Language switcher validation issue <a href=https://www.drupal.org/node/3277091>#3277091</a></li>
+<li>Block headings changes for WCAG compliance <a href=https://www.drupal.org/node/3277101>#3277101</a></li>
+</ul>
+</li>
+<li>Updates for WxT Library
+<ul>
+<li>Blue intranet theme toggle <a href=https://www.drupal.org/node/3276713>#3276713</a></li>
+</ul>
+</li>
+</ul>
+<p>Upgrade path:</p>
+<blockquote>
+<p>Note: No special notes for this release.</p>
+</blockquote>
+<ul>
+<li>
+<p>Update your codebase:</p>
+<ul>
+<li><code>composer update</code></li>
+</ul>
+</li>
+<li>
+<p>Run database updates:</p>
+<ul>
+<li><code>drush cache:rebuild</code></li>
+<li><code>drush updatedb</code></li>
+</ul>
+</li>
+<li>
+<p>Run Lightning configuration updates:</p>
+<ul>
+<li><code>drush cache:rebuild</code></li>
+<li><code>drush update:lightning</code></li>
+</ul>
+</li>
+<li>
+<p>Run WxT configuration updates:</p>
+<ul>
+<li><code>drush cache:rebuild</code></li>
+<li><code>drush update:wxt</code></li>
+</ul>
+</li>
+</ul>
+<p><strong>Note:</strong> N/A</p>
+</td>
+</tr>
 <tr>
 <td><strong>4.2.3</strong></td>
 <td><strong>2022-04-15</strong></td>
@@ -477,81 +547,6 @@ We try our best to have security releases of Drupal Core within <strong>24-72 ho
 </ul>
 </li>
 </ul>
-</td>
-</tr>
-<tr>
-<td><strong>4.1.3</strong></td>
-<td><strong>2022-01-03</strong></td>
-<td><p>Features / Updates:</p>
-<ul>
-<li>Updates for Drupal Core
-<ul>
-<li>Updates for Drupal Core to <a href=https://www.drupal.org/project/drupal/releases/9.1.15>v9.1.15</a></li>
-<li>WCAG required markers on forms <a href=https://www.drupal.org/node/2921627>#2921627</a></li>
-<li>New translations for moderated nodes initial workflow state <a href=https://www.drupal.org/node/3150294>#3150294</a></li>
-<li>Book title in breadcrumb not translated <a href=https://www.drupal.org/node/3177182>#3177182</a></li>
-<li>Add new <code>route:&lt;separator></code> for menu items <a href=https://www.drupal.org/project/wxt/issues/3236799>#3236799</a></li>
-</ul>
-</li>
-<li>Updates for Drupal Contrib
-<ul>
-<li>Token module updates breaks patch <a href=https://www.drupal.org/project/wxt/issues/3252881>#3252881</a></li>
-<li>Redis incorrect QueueInterface implementation <a href=https://www.drupal.org/project/wxt/issues/3253822>#3253822</a></li>
-<li>New metatag release conflicts with wxt patch <a href=https://www.drupal.org/project/wxt/issues/3255324>#3255324</a></li>
-<li>Accessibility improvements to Diff Module <a href=https://www.drupal.org/project/diff/issues/3228798>#3228798</a></li>
-</ul>
-</li>
-<li>Updates for WxT
-<ul>
-<li>Flushing caches during preUpdate set maintenance mode <a href=https://www.drupal.org/project/wxt/issues/3248590>#3248590</a></li>
-<li>Issues with Insert from Media Library <a href=https://www.drupal.org/project/wxt/issues/3246714>#3246714</a></li>
-<li>Can&rsquo;t install WxT Extend Webform after minimal site install <a href=https://www.drupal.org/project/wxt/issues/3249953>#3249953</a></li>
-<li>Adjustments to Password Policy <a href=https://www.drupal.org/project/wxt/issues/3252532>#3252532</a></li>
-</ul>
-</li>
-<li>Updates for WxT Bootstrap
-<ul>
-<li>WxT Bootstrap fix .pagedetails layout issues <a href=https://www.drupal.org/project/wxt/issues/3253398>#3253398</a></li>
-<li>GC Subway not working correctly in Intranet theme <a href=https://www.drupal.org/project/wxt/issues/3253829>#3253829</a></li>
-<li>Issues with Insert from Media Library <a href=https://www.drupal.org/project/wxt/issues/3246714>#3246714</a></li>
-<li>Add new <code>route:&lt;separator></code> for menu items <a href=https://www.drupal.org/project/wxt/issues/3236799>#3236799</a></li>
-</ul>
-</li>
-</ul>
-<p>Upgrade path:</p>
-<blockquote>
-<p>Note: No special notes for this release.</p>
-</blockquote>
-<ul>
-<li>
-<p>Update your codebase:</p>
-<ul>
-<li><code>composer update</code></li>
-</ul>
-</li>
-<li>
-<p>Run database updates:</p>
-<ul>
-<li><code>drush cache:rebuild</code></li>
-<li><code>drush updatedb</code></li>
-</ul>
-</li>
-<li>
-<p>Run Lightning configuration updates:</p>
-<ul>
-<li><code>drush cache:rebuild</code></li>
-<li><code>drush update:lightning</code></li>
-</ul>
-</li>
-<li>
-<p>Run WxT configuration updates:</p>
-<ul>
-<li><code>drush cache:rebuild</code></li>
-<li><code>drush update:wxt</code></li>
-</ul>
-</li>
-</ul>
-<p><strong>Note:</strong> N/A</p>
 </td>
 </tr>
 </tbody>

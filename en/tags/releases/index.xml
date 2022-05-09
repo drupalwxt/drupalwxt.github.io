@@ -14,6 +14,76 @@ We try our best to have security releases of Drupal Core within &lt;strong>24-72
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
+&lt;td>&lt;strong>4.2.4&lt;/strong>&lt;/td>
+&lt;td>&lt;strong>2022-05-09&lt;/strong>&lt;/td>
+&lt;td>&lt;p>Features / Updates:&lt;/p>
+&lt;ul>
+&lt;li>Updates for Drupal Core (v9.2.18)
+&lt;ul>
+&lt;li>&lt;a href="https://www.drupal.org/sa-core-2022-008">SA-core-2022-008&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Updates for WxT
+&lt;ul>
+&lt;li>RouteNotFoundException: Route &amp;ldquo;search.view_node_search&amp;rdquo; on browser install &lt;a href="https://www.drupal.org/node/3275738">#3275738&lt;/a>&lt;/li>
+&lt;li>Blue intranet theme toggle &lt;a href="https://www.drupal.org/node/3276713">#3276713&lt;/a>&lt;/li>
+&lt;li>Views exposed form requires AJAX to be enabled on block display &lt;a href="https://www.drupal.org/node/3276663">#3276663&lt;/a>&lt;/li>
+&lt;li>Update blog breadcrumbs to work similar to other content type &lt;a href="https://www.drupal.org/node/3277084">#3277084&lt;/a>&lt;/li>
+&lt;li>Block headings changes for WCAG compliance &lt;a href="https://www.drupal.org/node/3277101">#3277101&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Updates for WxT Bootstrap
+&lt;ul>
+&lt;li>Revert search form block layout issues with custom theme &lt;a href="https://www.drupal.org/node/3274502">#3274502&lt;/a>&lt;/li>
+&lt;li>WET media player &lt;a href="https://www.drupal.org/node/3279276">#3279276&lt;/a>&lt;/li>
+&lt;li>Add common book page template fix to starterkit &lt;a href="https://www.drupal.org/node/3277987">#3277987&lt;/a>&lt;/li>
+&lt;li>Language switcher validation issue &lt;a href="https://www.drupal.org/node/3277091">#3277091&lt;/a>&lt;/li>
+&lt;li>Block headings changes for WCAG compliance &lt;a href="https://www.drupal.org/node/3277101">#3277101&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Updates for WxT Library
+&lt;ul>
+&lt;li>Blue intranet theme toggle &lt;a href="https://www.drupal.org/node/3276713">#3276713&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>Upgrade path:&lt;/p>
+&lt;blockquote>
+&lt;p>Note: No special notes for this release.&lt;/p>
+&lt;/blockquote>
+&lt;ul>
+&lt;li>
+&lt;p>Update your codebase:&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>composer update&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>Run database updates:&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>drush cache:rebuild&lt;/code>&lt;/li>
+&lt;li>&lt;code>drush updatedb&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>Run Lightning configuration updates:&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>drush cache:rebuild&lt;/code>&lt;/li>
+&lt;li>&lt;code>drush update:lightning&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>Run WxT configuration updates:&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>drush cache:rebuild&lt;/code>&lt;/li>
+&lt;li>&lt;code>drush update:wxt&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>&lt;strong>Note:&lt;/strong> N/A&lt;/p>
+&lt;/td>
+&lt;/tr>
+&lt;tr>
 &lt;td>&lt;strong>4.2.3&lt;/strong>&lt;/td>
 &lt;td>&lt;strong>2022-04-15&lt;/strong>&lt;/td>
 &lt;td>&lt;p>Features / Updates:&lt;/p>
@@ -258,81 +328,6 @@ We try our best to have security releases of Drupal Core within &lt;strong>24-72
 &lt;/ul>
 &lt;/li>
 &lt;/ul>
-&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>&lt;strong>4.1.3&lt;/strong>&lt;/td>
-&lt;td>&lt;strong>2022-01-03&lt;/strong>&lt;/td>
-&lt;td>&lt;p>Features / Updates:&lt;/p>
-&lt;ul>
-&lt;li>Updates for Drupal Core
-&lt;ul>
-&lt;li>Updates for Drupal Core to &lt;a href="https://www.drupal.org/project/drupal/releases/9.1.15">v9.1.15&lt;/a>&lt;/li>
-&lt;li>WCAG required markers on forms &lt;a href="https://www.drupal.org/node/2921627">#2921627&lt;/a>&lt;/li>
-&lt;li>New translations for moderated nodes initial workflow state &lt;a href="https://www.drupal.org/node/3150294">#3150294&lt;/a>&lt;/li>
-&lt;li>Book title in breadcrumb not translated &lt;a href="https://www.drupal.org/node/3177182">#3177182&lt;/a>&lt;/li>
-&lt;li>Add new &lt;code>route:&amp;lt;separator&amp;gt;&lt;/code> for menu items &lt;a href="https://www.drupal.org/project/wxt/issues/3236799">#3236799&lt;/a>&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>Updates for Drupal Contrib
-&lt;ul>
-&lt;li>Token module updates breaks patch &lt;a href="https://www.drupal.org/project/wxt/issues/3252881">#3252881&lt;/a>&lt;/li>
-&lt;li>Redis incorrect QueueInterface implementation &lt;a href="https://www.drupal.org/project/wxt/issues/3253822">#3253822&lt;/a>&lt;/li>
-&lt;li>New metatag release conflicts with wxt patch &lt;a href="https://www.drupal.org/project/wxt/issues/3255324">#3255324&lt;/a>&lt;/li>
-&lt;li>Accessibility improvements to Diff Module &lt;a href="https://www.drupal.org/project/diff/issues/3228798">#3228798&lt;/a>&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>Updates for WxT
-&lt;ul>
-&lt;li>Flushing caches during preUpdate set maintenance mode &lt;a href="https://www.drupal.org/project/wxt/issues/3248590">#3248590&lt;/a>&lt;/li>
-&lt;li>Issues with Insert from Media Library &lt;a href="https://www.drupal.org/project/wxt/issues/3246714">#3246714&lt;/a>&lt;/li>
-&lt;li>Can&amp;rsquo;t install WxT Extend Webform after minimal site install &lt;a href="https://www.drupal.org/project/wxt/issues/3249953">#3249953&lt;/a>&lt;/li>
-&lt;li>Adjustments to Password Policy &lt;a href="https://www.drupal.org/project/wxt/issues/3252532">#3252532&lt;/a>&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>Updates for WxT Bootstrap
-&lt;ul>
-&lt;li>WxT Bootstrap fix .pagedetails layout issues &lt;a href="https://www.drupal.org/project/wxt/issues/3253398">#3253398&lt;/a>&lt;/li>
-&lt;li>GC Subway not working correctly in Intranet theme &lt;a href="https://www.drupal.org/project/wxt/issues/3253829">#3253829&lt;/a>&lt;/li>
-&lt;li>Issues with Insert from Media Library &lt;a href="https://www.drupal.org/project/wxt/issues/3246714">#3246714&lt;/a>&lt;/li>
-&lt;li>Add new &lt;code>route:&amp;lt;separator&amp;gt;&lt;/code> for menu items &lt;a href="https://www.drupal.org/project/wxt/issues/3236799">#3236799&lt;/a>&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;p>Upgrade path:&lt;/p>
-&lt;blockquote>
-&lt;p>Note: No special notes for this release.&lt;/p>
-&lt;/blockquote>
-&lt;ul>
-&lt;li>
-&lt;p>Update your codebase:&lt;/p>
-&lt;ul>
-&lt;li>&lt;code>composer update&lt;/code>&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>
-&lt;p>Run database updates:&lt;/p>
-&lt;ul>
-&lt;li>&lt;code>drush cache:rebuild&lt;/code>&lt;/li>
-&lt;li>&lt;code>drush updatedb&lt;/code>&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>
-&lt;p>Run Lightning configuration updates:&lt;/p>
-&lt;ul>
-&lt;li>&lt;code>drush cache:rebuild&lt;/code>&lt;/li>
-&lt;li>&lt;code>drush update:lightning&lt;/code>&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>
-&lt;p>Run WxT configuration updates:&lt;/p>
-&lt;ul>
-&lt;li>&lt;code>drush cache:rebuild&lt;/code>&lt;/li>
-&lt;li>&lt;code>drush update:wxt&lt;/code>&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;p>&lt;strong>Note:&lt;/strong> N/A&lt;/p>
 &lt;/td>
 &lt;/tr>
 &lt;/tbody>
