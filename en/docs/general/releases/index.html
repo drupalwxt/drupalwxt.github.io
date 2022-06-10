@@ -60,7 +60,7 @@ English
 </li>
 </ul>
 </div>
-<div class="navbar-nav d-none d-lg-block"><input type=search class="form-control td-search-input" placeholder="&#xf002; Search WxT" aria-label="Search WxT" autocomplete=off data-offline-search-index-json-src=../../../../offline-search-index.2d5e2f85292e02c463568a1cf0aaaca4.json data-offline-search-base-href=../../../../ data-offline-search-max-results=10>
+<div class="navbar-nav d-none d-lg-block"><input type=search class="form-control td-search-input" placeholder="&#xf002; Search WxT" aria-label="Search WxT" autocomplete=off data-offline-search-index-json-src=../../../../offline-search-index.2261cdb925e1f8ab4ee344a8c5339701.json data-offline-search-base-href=../../../../ data-offline-search-max-results=10>
 </div>
 </nav>
 </header>
@@ -71,7 +71,7 @@ English
 <script>$(function(){$("#td-section-nav a").removeClass("active"),$("#td-section-nav #m-endocsgeneralreleases").addClass("active"),$("#td-section-nav #m-endocsgeneralreleases-li span").addClass("td-sidebar-nav-active-item"),$("#td-section-nav #m-endocsgeneralreleases").parents("li").addClass("active-path"),$("#td-section-nav li.active-path").addClass("show"),$("#td-section-nav li.active-path").children("input").prop('checked',!0),$("#td-section-nav #m-endocsgeneralreleases-li").siblings("li").addClass("show"),$("#td-section-nav #m-endocsgeneralreleases-li").children("ul").children("li").addClass("show"),$("#td-sidebar-menu").toggleClass("d-none")})</script>
 <div id=td-sidebar-menu class="td-sidebar__inner d-none">
 <form class="td-sidebar__search d-flex align-items-center">
-<input type=search class="form-control td-search-input" placeholder="&#xf002; Search WxT" aria-label="Search WxT" autocomplete=off data-offline-search-index-json-src=../../../../offline-search-index.2d5e2f85292e02c463568a1cf0aaaca4.json data-offline-search-base-href=../../../../ data-offline-search-max-results=10>
+<input type=search class="form-control td-search-input" placeholder="&#xf002; Search WxT" aria-label="Search WxT" autocomplete=off data-offline-search-index-json-src=../../../../offline-search-index.2261cdb925e1f8ab4ee344a8c5339701.json data-offline-search-base-href=../../../../ data-offline-search-max-results=10>
 <button class="btn btn-link td-sidebar__toggle d-md-none p-0 ml-3 fas fa-bars" type=button data-toggle=collapse data-target=#td-section-nav aria-controls=td-docs-nav aria-expanded=false aria-label="Toggle section navigation">
 </button>
 </form>
@@ -247,6 +247,82 @@ We try our best to have security releases of Drupal Core within <strong>24-72 ho
 </tr>
 </thead>
 <tbody>
+<tr>
+<td><strong>4.2.5</strong></td>
+<td><strong>2022-06-10</strong></td>
+<td><p>Features / Updates:</p>
+<ul>
+<li>Updates for Drupal Core (v9.2.20)
+<ul>
+<li><a href=https://www.drupal.org/sa-core-2022-010>SA-core-2022-010</a></li>
+</ul>
+</li>
+<li>Updates for WxT
+<ul>
+<li>Error on revisions page <a href=https://www.drupal.org/node/3283171>#3283171</a></li>
+<li>Update drupal/toc_api <a href=https://www.drupal.org/node/3280164>#3280164</a></li>
+<li>Improve block headings <a href=https://www.drupal.org/node/3282516>#3282516</a></li>
+<li>PHPCS Issues <a href=https://www.drupal.org/node/3283216>#3283216</a></li>
+<li>Did you find webform message not announced <a href=https://www.drupal.org/node/3280784>#3280784</a></li>
+<li>Translate views field empty text <a href=https://www.drupal.org/node/3284335>#3284335</a></li>
+</ul>
+</li>
+<li>Updates for WxT Bootstrap
+<ul>
+<li>Intranet fluid page issue <a href=https://www.drupal.org/node/3281242>#3281242</a></li>
+<li>Remote video support non-youtube sources <a href=https://www.drupal.org/node/3280184>#3280184</a></li>
+<li>Improve block headings <a href=https://www.drupal.org/node/3282516>#3282516</a></li>
+<li>Fix body field block template WCAG <a href=https://www.drupal.org/node/3280257>#3280257</a></li>
+<li>Did you find webform message not announced <a href=https://www.drupal.org/node/3280784>#3280784</a></li>
+<li>WeT media player for local videos <a href=https://www.drupal.org/node/3284458>#3284458</a></li>
+<li>Fix markup validation issue <a href=https://www.drupal.org/node/3284898>#3284898</a></li>
+<li>Remove aria-label from invisible header nav <a href=https://www.drupal.org/node/3284573>#3284573</a></li>
+</ul>
+</li>
+<li>Updates for WxT Library
+<ul>
+<li>Date modified spacing issue <a href=https://www.drupal.org/node/3282358>#3282358</a></li>
+<li>Date modified block to get value from Date Modified field <a href=https://www.drupal.org/node/3280231>#3280231</a></li>
+<li>Update to latest GCweb and WxT <a href=https://www.drupal.org/node/3280226>#3280226</a></li>
+</ul>
+</li>
+</ul>
+<p>Upgrade path:</p>
+<blockquote>
+<p>Note: No special notes for this release.</p>
+</blockquote>
+<ul>
+<li>
+<p>Update your codebase:</p>
+<ul>
+<li><code>composer update</code></li>
+</ul>
+</li>
+<li>
+<p>Run database updates:</p>
+<ul>
+<li><code>drush cache:rebuild</code></li>
+<li><code>drush updatedb</code></li>
+</ul>
+</li>
+<li>
+<p>Run Lightning configuration updates:</p>
+<ul>
+<li><code>drush cache:rebuild</code></li>
+<li><code>drush update:lightning</code></li>
+</ul>
+</li>
+<li>
+<p>Run WxT configuration updates:</p>
+<ul>
+<li><code>drush cache:rebuild</code></li>
+<li><code>drush update:wxt</code></li>
+</ul>
+</li>
+</ul>
+<p><strong>Note:</strong> N/A</p>
+</td>
+</tr>
 <tr>
 <td><strong>4.2.4</strong></td>
 <td><strong>2022-05-09</strong></td>
@@ -445,90 +521,6 @@ We try our best to have security releases of Drupal Core within <strong>24-72 ho
 <li>Updates for WxT Bootstrap
 <ul>
 <li>Table of Contents (TOC) issue <a href=https://www.drupal.org/project/wxt/issues/3258089>#3258089</a></li>
-</ul>
-</li>
-</ul>
-<p>Upgrade path:</p>
-<ul>
-<li>
-<p>Update your codebase:</p>
-<ul>
-<li><code>composer update</code></li>
-</ul>
-</li>
-<li>
-<p>Run database updates:</p>
-<ul>
-<li><code>drush cache:rebuild</code></li>
-<li><code>drush updatedb</code></li>
-</ul>
-</li>
-<li>
-<p>Run Lightning configuration updates:</p>
-<ul>
-<li><code>drush cache:rebuild</code></li>
-<li><code>drush update:lightning</code></li>
-</ul>
-</li>
-<li>
-<p>Run WxT configuration updates:</p>
-<ul>
-<li><code>drush cache:rebuild</code></li>
-<li><code>drush update:wxt</code></li>
-</ul>
-</li>
-</ul>
-</td>
-</tr>
-<tr>
-<td><strong>4.2.0</strong></td>
-<td><strong>2022-01-04</strong></td>
-<td><p>Features / Updates:</p>
-<ul>
-<li>Updates for Drupal Core (9.2.x)
-<ul>
-<li>Upgrading to the 9.2.x Drupal Core <a href=https://www.drupal.org/node/3226492>#3226492</a></li>
-<li>Updates for Drupal Core to <a href=https://www.drupal.org/project/drupal/releases/9.2.10>v9.2.10</a></li>
-<li>WCAG required markers on forms <a href=https://www.drupal.org/node/2921627>#2921627</a></li>
-<li>New translations for moderated nodes initial workflow state <a href=https://www.drupal.org/node/3150294>#3150294</a></li>
-<li>Book title in breadcrumb not translated <a href=https://www.drupal.org/node/3177182>#3177182</a></li>
-<li>Add new <code>route:&lt;separator></code> for menu items <a href=https://www.drupal.org/project/wxt/issues/3236799>#3236799</a></li>
-<li>CKEditor adding closing tags to <code>&lt;source></code> and <code>&lt;track></code> <a href=https://www.drupal.org/project/wxt/issues/3155911>#3155911</a></li>
-<li>Claro support for extra wide screens <a href=https://www.drupal.org/node/3184667>#3184667</a></li>
-<li>Empty breadcrumb at node/add with frontpage view <a href=https://www.drupal.org/node/3184667>#3184667</a></li>
-</ul>
-</li>
-<li>Updates for Drupal Contrib
-<ul>
-<li>Token module updates breaks patch <a href=https://www.drupal.org/project/wxt/issues/3252881>#3252881</a></li>
-<li>Redis incorrect QueueInterface implementation <a href=https://www.drupal.org/project/wxt/issues/3253822>#3253822</a></li>
-<li>New metatag release conflicts with wxt patch <a href=https://www.drupal.org/project/wxt/issues/3255324>#3255324</a></li>
-<li>Accessibility improvements to Diff Module <a href=https://www.drupal.org/project/diff/issues/3228798>#3228798</a></li>
-<li>Update button_link, core_context, and group to latest stable</li>
-</ul>
-</li>
-<li>Updates for WxT
-<ul>
-<li>Configurable Leading Breadcrumbs <a href=https://www.drupal.org/project/wxt/issues/3203791>#3203791</a></li>
-<li>Flushing caches during preUpdate set maintenance mode <a href=https://www.drupal.org/project/wxt/issues/3248590>#3248590</a></li>
-<li>Issues with Insert from Media Library <a href=https://www.drupal.org/project/wxt/issues/3246714>#3246714</a></li>
-<li>Can&rsquo;t install WxT Extend Webform after minimal site install <a href=https://www.drupal.org/project/wxt/issues/3249953>#3249953</a></li>
-<li>Adjustments to Password Policy <a href=https://www.drupal.org/project/wxt/issues/3252532>#3252532</a></li>
-<li>Add new CKEditor Abbreviations Filter <a href=https://www.drupal.org/project/wxt/issues/3228812>#3228812</a></li>
-<li>Add new CKEditor Alerts Filter <a href=https://www.drupal.org/project/wxt/issues/3228616>#3228616</a></li>
-<li>Add new CKEditor TOC Filter <a href=https://www.drupal.org/project/wxt/issues/3227545>#3227545</a></li>
-<li>Add new CKEditor Footnotes Filter <a href=https://www.drupal.org/project/wxt/issues/3249208>#3249208</a></li>
-<li>Update <code>wxt_layout_plugin_id</code> migration process plugin to support creating multiple sections.</li>
-</ul>
-</li>
-<li>Updates for WxT Bootstrap
-<ul>
-<li>WxT Bootstrap fix .pagedetails layout issues <a href=https://www.drupal.org/project/wxt/issues/3253398>#3253398</a></li>
-<li>GC Subway not working correctly in Intranet theme <a href=https://www.drupal.org/project/wxt/issues/3253829>#3253829</a></li>
-<li>Issues with Insert from Media Library <a href=https://www.drupal.org/project/wxt/issues/3246714>#3246714</a></li>
-<li>Add new <code>route:&lt;separator></code> for menu items <a href=https://www.drupal.org/project/wxt/issues/3236799>#3236799</a></li>
-<li>Add new CKEditor TOC Filter <a href=https://www.drupal.org/project/wxt/issues/3227545>#3227545</a></li>
-<li>Add new CKEditor Footnotes Filter <a href=https://www.drupal.org/project/wxt/issues/3249208>#3249208</a></li>
 </ul>
 </li>
 </ul>
