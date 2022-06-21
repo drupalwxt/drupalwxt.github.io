@@ -104,6 +104,16 @@ make drupal_install
 ./docker/bin/drush migrate:import --group gcweb --tag 'Menu'
 ```
 
+Afterwards if you wish to have an empty docker environment you may execute the following commands.
+
+```sh
+mutagen sync terminate <sync_xxxxx>
+docker rm $(docker ps -a -q)
+docker rmi $(docker images -q)
+docker volume prune -f
+
+```
+
 <!-- Links Referenced -->
 
 [docker-mac]:      https://github.com/docker/roadmap/issues/7
