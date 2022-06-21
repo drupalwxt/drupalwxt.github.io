@@ -60,7 +60,7 @@ English
 </li>
 </ul>
 </div>
-<div class="navbar-nav d-none d-lg-block"><input type=search class="form-control td-search-input" placeholder="&#xf002; Search WxT" aria-label="Search WxT" autocomplete=off data-offline-search-index-json-src=../../../../../offline-search-index.65767c46088991d8d0f25aab55649b6a.json data-offline-search-base-href=../../../../../ data-offline-search-max-results=10>
+<div class="navbar-nav d-none d-lg-block"><input type=search class="form-control td-search-input" placeholder="&#xf002; Search WxT" aria-label="Search WxT" autocomplete=off data-offline-search-index-json-src=../../../../../offline-search-index.bfdd59efe939546997892696dd3e573b.json data-offline-search-base-href=../../../../../ data-offline-search-max-results=10>
 </div>
 </nav>
 </header>
@@ -95,6 +95,69 @@ We try our best to have security releases of Drupal Core within <strong>24-72 ho
 </tr>
 </thead>
 <tbody>
+<tr>
+<td><strong>4.3.0</strong></td>
+<td><strong>2022-06-21</strong></td>
+<td><p>Features / Updates:</p>
+<ul>
+<li>Updates for Drupal Core (v9.3.16)
+<ul>
+<li><a href=https://www.drupal.org/sa-core-2022-011>SA-core-2022-011</a></li>
+</ul>
+</li>
+<li>Updates for WxT
+<ul>
+<li>Add config link for modules <a href=https://www.drupal.org/node/3291183>#3291183</a></li>
+<li>Hardcoded breadcrumb links to canada.ca <a href=https://www.drupal.org/node/3291230>#3291230</a></li>
+</ul>
+</li>
+<li>Updates for WxT Bootstrap
+<ul>
+<li>Footnotes template issue <a href=https://www.drupal.org/node/3285890>#3285890</a></li>
+</ul>
+</li>
+<li>Updates for WxT Library
+<ul>
+<li>Add config link for modules <a href=https://www.drupal.org/node/3291183>#3291183</a></li>
+</ul>
+</li>
+</ul>
+<p>Upgrade path:</p>
+<blockquote>
+<p>Note: No special notes for this release.</p>
+</blockquote>
+<ul>
+<li>
+<p>Update your codebase:</p>
+<ul>
+<li><code>composer update</code></li>
+</ul>
+</li>
+<li>
+<p>Run database updates:</p>
+<ul>
+<li><code>drush cache:rebuild</code></li>
+<li><code>drush updatedb</code></li>
+</ul>
+</li>
+<li>
+<p>Run Lightning configuration updates:</p>
+<ul>
+<li><code>drush cache:rebuild</code></li>
+<li><code>drush update:lightning</code></li>
+</ul>
+</li>
+<li>
+<p>Run WxT configuration updates:</p>
+<ul>
+<li><code>drush cache:rebuild</code></li>
+<li><code>drush update:wxt</code></li>
+</ul>
+</li>
+</ul>
+<p><strong>Note:</strong> N/A</p>
+</td>
+</tr>
 <tr>
 <td><strong>4.2.5</strong></td>
 <td><strong>2022-06-10</strong></td>
@@ -321,54 +384,6 @@ We try our best to have security releases of Drupal Core within <strong>24-72 ho
 <li>4.20 Update Hook with minimal install <a href=https://www.drupal.org/project/wxt/issues/3263903>#3263903</a></li>
 <li>importTranslations() method not working for config translations <a href=https://www.drupal.org/project/wxt/issues/3266196>#3266196</a></li>
 <li>Ensure WxT custom install tasks are post install_finished <a href=https://www.drupal.org/project/wxt/issues/3266820>#3266820</a></li>
-</ul>
-</li>
-</ul>
-<p>Upgrade path:</p>
-<ul>
-<li>
-<p>Update your codebase:</p>
-<ul>
-<li><code>composer update</code></li>
-</ul>
-</li>
-<li>
-<p>Run database updates:</p>
-<ul>
-<li><code>drush cache:rebuild</code></li>
-<li><code>drush updatedb</code></li>
-</ul>
-</li>
-<li>
-<p>Run Lightning configuration updates:</p>
-<ul>
-<li><code>drush cache:rebuild</code></li>
-<li><code>drush update:lightning</code></li>
-</ul>
-</li>
-<li>
-<p>Run WxT configuration updates:</p>
-<ul>
-<li><code>drush cache:rebuild</code></li>
-<li><code>drush update:wxt</code></li>
-</ul>
-</li>
-</ul>
-</td>
-</tr>
-<tr>
-<td><strong>4.2.1</strong></td>
-<td><strong>2022-01-23</strong></td>
-<td><p>Features / Updates:</p>
-<ul>
-<li>Updates for Drupal Core (v9.2.x)
-<ul>
-<li><a href=https://www.drupal.org/sa-core-2022-001>SA-core-2022-001</a></li>
-</ul>
-</li>
-<li>Updates for WxT Bootstrap
-<ul>
-<li>Table of Contents (TOC) issue <a href=https://www.drupal.org/project/wxt/issues/3258089>#3258089</a></li>
 </ul>
 </li>
 </ul>
