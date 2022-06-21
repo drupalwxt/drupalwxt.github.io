@@ -486,7 +486,7 @@ We try our best to have security releases of Drupal Core within &lt;strong>24-72
 &lt;td>&lt;strong>drupalwxt.github.io&lt;/strong>&lt;/td>
 &lt;td>&lt;a href="https://github.com/drupalwxt/drupalwxt.github.io" target="_blank">drupalwxt/drupalwxt.github.io&lt;/a>&lt;/td>
 &lt;td>GitHub Pages for Drupal WxT.&lt;/td>
-&lt;td>Size: 5032 Bytes&lt;/td>
+&lt;td>Size: 5134 Bytes&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>&lt;strong>helm-drupal&lt;/strong>&lt;/td>
@@ -522,7 +522,7 @@ We try our best to have security releases of Drupal Core within &lt;strong>24-72
 &lt;td>&lt;strong>wxt&lt;/strong>&lt;/td>
 &lt;td>&lt;a href="https://github.com/drupalwxt/wxt" target="_blank">drupalwxt/wxt&lt;/a>&lt;/td>
 &lt;td>Drupal 9 variant of the Web Experience Toolkit (WxT).&lt;/td>
-&lt;td>Size: 1625 Bytes&lt;/td>
+&lt;td>Size: 1640 Bytes&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>&lt;strong>wxt-project&lt;/strong>&lt;/td>
@@ -858,6 +858,11 @@ make drupal_install
 ./docker/bin/drush migrate:import --group wxt --tag &lt;span style="color:#4e9a06">&amp;#39;Core&amp;#39;&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">&amp;amp;&amp;amp;&lt;/span> &lt;span style="color:#4e9a06">\
 &lt;/span>&lt;span style="color:#4e9a06">&lt;/span>./docker/bin/drush migrate:import --group gcweb --tag &lt;span style="color:#4e9a06">&amp;#39;Core&amp;#39;&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">&amp;amp;&amp;amp;&lt;/span> &lt;span style="color:#4e9a06">\
 &lt;/span>&lt;span style="color:#4e9a06">&lt;/span>./docker/bin/drush migrate:import --group gcweb --tag &lt;span style="color:#4e9a06">&amp;#39;Menu&amp;#39;&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>Afterwards if you wish to have an empty docker environment you may execute the following commands.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-sh" data-lang="sh">mutagen sync terminate &amp;lt;sync_xxxxx&amp;gt;
+docker rm &lt;span style="color:#204a87;font-weight:bold">$(&lt;/span>docker ps -a -q&lt;span style="color:#204a87;font-weight:bold">)&lt;/span>
+docker rmi &lt;span style="color:#204a87;font-weight:bold">$(&lt;/span>docker images -q&lt;span style="color:#204a87;font-weight:bold">)&lt;/span>
+docker volume prune -f
 &lt;/code>&lt;/pre>&lt;/div>&lt;!-- Links Referenced --></description></item><item><title>Docs: Development</title><link>https://drupalwxt.github.io/en/docs/development/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://drupalwxt.github.io/en/docs/development/</guid><description>
 &lt;p>This section provides information for developers who wish to help collaborate and improve &lt;strong>&lt;a href="https://github.com/drupalwxt/wxt">Drupal WxT&lt;/a>&lt;/strong>.&lt;/p>
 &lt;!-- Links Referenced --></description></item><item><title>Docs: Environment</title><link>https://drupalwxt.github.io/en/docs/environment/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://drupalwxt.github.io/en/docs/environment/</guid><description>
