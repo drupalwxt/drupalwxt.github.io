@@ -355,7 +355,7 @@ We try our best to have security releases of Drupal Core within &lt;strong>24-72
 &lt;td>&lt;strong>composer-extdeps&lt;/strong>&lt;/td>
 &lt;td>&lt;a href="https://github.com/drupalwxt/composer-extdeps" target="_blank">drupalwxt/composer-extdeps&lt;/a>&lt;/td>
 &lt;td>Composer repository for external dependencies on Drupal WxT&lt;/td>
-&lt;td>Size: 35 Bytes&lt;/td>
+&lt;td>Size: 37 Bytes&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>&lt;strong>docker-scaffold&lt;/strong>&lt;/td>
@@ -367,7 +367,7 @@ We try our best to have security releases of Drupal Core within &lt;strong>24-72
 &lt;td>&lt;strong>drupalwxt.github.io&lt;/strong>&lt;/td>
 &lt;td>&lt;a href="https://github.com/drupalwxt/drupalwxt.github.io" target="_blank">drupalwxt/drupalwxt.github.io&lt;/a>&lt;/td>
 &lt;td>GitHub Pages for Drupal WxT.&lt;/td>
-&lt;td>Size: 5860 Bytes&lt;/td>
+&lt;td>Size: 5911 Bytes&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>&lt;strong>helm-drupal&lt;/strong>&lt;/td>
@@ -403,7 +403,7 @@ We try our best to have security releases of Drupal Core within &lt;strong>24-72
 &lt;td>&lt;strong>wxt&lt;/strong>&lt;/td>
 &lt;td>&lt;a href="https://github.com/drupalwxt/wxt" target="_blank">drupalwxt/wxt&lt;/a>&lt;/td>
 &lt;td>Drupal 9 variant of the Web Experience Toolkit (WxT).&lt;/td>
-&lt;td>Size: 1628 Bytes&lt;/td>
+&lt;td>Size: 1661 Bytes&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>&lt;strong>wxt-project&lt;/strong>&lt;/td>
