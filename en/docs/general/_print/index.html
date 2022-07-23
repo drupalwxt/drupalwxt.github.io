@@ -53,7 +53,7 @@ English
 </li>
 </ul>
 </div>
-<div class="navbar-nav d-none d-lg-block"><input type=search class="form-control td-search-input" placeholder="&#xf002; Search WxT" aria-label="Search WxT" autocomplete=off data-offline-search-index-json-src=../../../../offline-search-index.b59ba4558c94c75036b4abb5f48ed89a.json data-offline-search-base-href=../../../../ data-offline-search-max-results=10>
+<div class="navbar-nav d-none d-lg-block"><input type=search class="form-control td-search-input" placeholder="&#xf002; Search WxT" aria-label="Search WxT" autocomplete=off data-offline-search-index-json-src=../../../../offline-search-index.14f1c649a47a479877d8a0bd1de0f871.json data-offline-search-base-href=../../../../ data-offline-search-max-results=10>
 </div>
 </nav>
 </header>
@@ -232,6 +232,101 @@ We try our best to have security releases of Drupal Core within <strong>24-72 ho
 </tr>
 </thead>
 <tbody>
+<tr>
+<td><strong>4.3.2</strong></td>
+<td><strong>2022-07-23</strong></td>
+<td><p>Features / Updates:</p>
+<ul>
+<li>HotFix
+<ul>
+<li>Autosave missing OverrideHelper <a href=https://www.drupal.org/node/3299197>#3299197</a></li>
+</ul>
+</li>
+<li>Security Updates for Drupal Core (v9.3.19)
+<ul>
+<li><a href=https://www.drupal.org/sa-core-2022-012>SA-core-2022-012</a></li>
+<li><a href=https://www.drupal.org/sa-core-2022-013>SA-core-2022-013</a></li>
+<li><a href=https://www.drupal.org/sa-core-2022-014>SA-core-2022-014</a></li>
+<li><a href=https://www.drupal.org/sa-core-2022-015>SA-core-2022-015</a></li>
+</ul>
+</li>
+<li>Updates for WxT
+<ul>
+<li>Translation patch causes whitescreen <a href=https://www.drupal.org/node/3295377>#3291183</a></li>
+<li>Main menu in French not editable <a href=https://www.drupal.org/node/3294325>#3291230</a></li>
+<li>[Deprecate] Remove Lightning Layout <a href=https://www.drupal.org/node/3298505>#3298505</a></li>
+<li>[Deprecate] Remove Lightning Workflow <a href=https://www.drupal.org/node/3295862>#3295862</a></li>
+<li>[Deprecate] SubProfile Generator <a href=https://www.drupal.org/node/3295858>#3295858</a></li>
+<li>Incompatible version for ckeditor/fakeobjects <a href=https://www.drupal.org/node/3298214>#3298214</a></li>
+</ul>
+</li>
+<li>Updates for WxT Bootstrap
+<ul>
+<li>Corrected all reported issues by phpcs</li>
+<li>Main menu in French not editable <a href=https://www.drupal.org/node/3294325>#3291230</a></li>
+<li>PHP 8.1 compatibility <a href=https://www.drupal.org/node/3294596>#3294596</a></li>
+<li>GCIntranet WxT search form label visible on mobile <a href=https://www.drupal.org/node/3294629>#3294629</a></li>
+<li>Set dynamic wrapper element for Did you find webform block <a href=https://www.drupal.org/node/3291816>#3291816</a></li>
+</ul>
+</li>
+<li>Updates for WxT Library
+<ul>
+<li>Corrected all reported issues by phpcs</li>
+<li>Passing null to parameter #1 ($string) <a href=https://www.drupal.org/node/3286651>#3286651</a></li>
+</ul>
+</li>
+</ul>
+<p>Upgrade path:</p>
+<blockquote>
+<p><strong>Important</strong>: Please backup your database before running the upgrade process for this release.</p>
+</blockquote>
+<ul>
+<li>
+<p>Update your codebase:</p>
+<ul>
+<li><code>composer update</code></li>
+</ul>
+</li>
+<li>
+<p>Run database updates:</p>
+<ul>
+<li><code>drush cache:rebuild</code></li>
+<li><code>drush updatedb</code></li>
+</ul>
+</li>
+<li>
+<p>Run WxT configuration updates:</p>
+<ul>
+<li><code>drush cache:rebuild</code></li>
+<li><code>drush update:wxt</code></li>
+</ul>
+</li>
+</ul>
+<p><strong>Note(s)</strong>:</p>
+<p>To facilitate keeping the distribution lightweight and because soon the Lightning Contrib modules will be EOL we need to remove all of the Lightning contrib in a way that doesn&rsquo;t break an upgrade path and documents the modules removed in case site builders will want to manually add them to their own <code>composer.json</code> file</p>
+<blockquote>
+<p><strong>Note</strong>: that all error messages stating &ldquo;Currently using Missing or invalid module&rdquo; will be resolved after running the <code>drush updatedb</code> step above.</p>
+</blockquote>
+<p>a) [Deprecate] Remove Lightning Layout <a href=https://www.drupal.org/node/3298505>#3298505</a></p>
+<p>Please read over the above issue and consult the below list of the removed composer entries in case you are depending on any of them and need to apply them manually to your composer.json file.</p>
+<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml><span style=color:#204a87;font-weight:700>&#34;drupal/bg_image_formatter&#34;: </span><span style=color:#4e9a06>&#34;^1.10&#34;</span><span style=color:#000;font-weight:700>,</span><span style=color:#f8f8f8;text-decoration:underline>
+</span><span style=color:#f8f8f8;text-decoration:underline></span><span style=color:#204a87;font-weight:700>&#34;drupal/panelizer&#34;: </span><span style=color:#4e9a06>&#34;^4.1 || ^5.0&#34;</span><span style=color:#000;font-weight:700>,</span><span style=color:#f8f8f8;text-decoration:underline>
+</span><span style=color:#f8f8f8;text-decoration:underline></span><span style=color:#204a87;font-weight:700>&#34;drupal/simple_gmap&#34;: </span><span style=color:#4e9a06>&#34;^3.0&#34;</span><span style=color:#f8f8f8;text-decoration:underline>
+</span></code></pre></div><p>All of the Lightning Layout functionality was directly ported to support an upgrade path and an update script written in the <code>wxt_core_update_8431</code> function.</p>
+<blockquote>
+<p><strong>Note</strong>: Any Lightning sub modules will also be uninstalled.</p>
+</blockquote>
+<p>b) [Deprecate] Remove Lightning Workflow <a href=https://www.drupal.org/node/3295862>#3295862</a></p>
+<p>Please read over the above issue and consult the below list of the removed composer entries in case you are depending on any of them and need to apply them manually to your composer.json file.</p>
+<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml><span style=color:#204a87;font-weight:700>&#34;drupal/conflict&#34;: </span><span style=color:#4e9a06>&#34;^2.0-alpha2&#34;</span><span style=color:#000;font-weight:700>,</span><span style=color:#f8f8f8;text-decoration:underline>
+</span><span style=color:#f8f8f8;text-decoration:underline></span><span style=color:#204a87;font-weight:700>&#34;drupal/moderation_dashboard&#34;: </span><span style=color:#4e9a06>&#34;^1.0&#34;</span><span style=color:#000;font-weight:700>,</span><span style=color:#f8f8f8;text-decoration:underline>
+</span><span style=color:#f8f8f8;text-decoration:underline></span><span style=color:#204a87;font-weight:700>&#34;drupal/moderation_sidebar&#34;: </span><span style=color:#4e9a06>&#34;^1.2&#34;</span><span style=color:#f8f8f8;text-decoration:underline>
+</span></code></pre></div><p>All of the Lightning Workflow functionality was directly ported to support an upgrade path and an update script written in the <code>wxt_core_update_8431</code> function.</p>
+<blockquote>
+<p><strong>Note</strong>: Any Lightning sub modules will also be uninstalled.</p>
+</blockquote>
+</td>
+</tr>
 <tr>
 <td><strong>4.3.1</strong></td>
 <td><strong>2022-07-21</strong></td>
@@ -529,67 +624,6 @@ We try our best to have security releases of Drupal Core within <strong>24-72 ho
 </li>
 </ul>
 <p><strong>Note:</strong> N/A</p>
-</td>
-</tr>
-<tr>
-<td><strong>4.2.3</strong></td>
-<td><strong>2022-04-15</strong></td>
-<td><p>Features / Updates:</p>
-<ul>
-<li>Updates for Drupal Core (v9.2.17)
-<ul>
-<li><a href=https://www.drupal.org/sa-core-2022-005>SA-core-2022-005</a></li>
-<li><a href=https://www.drupal.org/sa-core-2022-006>SA-core-2022-006</a></li>
-</ul>
-</li>
-<li>Updates for WxT
-<ul>
-<li>Core Context breaks Layout Library <a href=https://www.drupal.org/project/wxt/issues/3263697>#3263697</a></li>
-<li>Lightbox markup incorrect <a href=https://www.drupal.org/project/wxt/issues/3269655>#3269655</a></li>
-<li>Switching to seven admin theme causes WSOD <a href=https://www.drupal.org/project/wxt/issues/3272568>#3272568</a></li>
-<li>Rename home breadcrumb <a href=https://www.drupal.org/project/wxt/issues/3275151>#3275151</a></li>
-</ul>
-</li>
-<li>Updates for WxT Bootstrap
-<ul>
-<li>GC Subway layout issue <a href=https://www.drupal.org/project/wxt/issues/3268224>#3268224</a></li>
-<li>wxt_bootstrap starterkit core version requirement <a href=https://www.drupal.org/project/wxt/issues/3274498>#3274498</a></li>
-<li>Search form block layout issues with custom theme <a href=https://www.drupal.org/project/wxt/issues/3274502>#3274502</a></li>
-<li>Remove current page title from breadcrumbs by default <a href=https://www.drupal.org/project/wxt/issues/3274514>#3274514</a></li>
-<li>Enable fluid page per entity <a href=https://www.drupal.org/project/wxt/issues/3275166>#3275166</a></li>
-</ul>
-</li>
-</ul>
-<p>Upgrade path:</p>
-<ul>
-<li>
-<p>Update your codebase:</p>
-<ul>
-<li><code>composer update</code></li>
-</ul>
-</li>
-<li>
-<p>Run database updates:</p>
-<ul>
-<li><code>drush cache:rebuild</code></li>
-<li><code>drush updatedb</code></li>
-</ul>
-</li>
-<li>
-<p>Run Lightning configuration updates:</p>
-<ul>
-<li><code>drush cache:rebuild</code></li>
-<li><code>drush update:lightning</code></li>
-</ul>
-</li>
-<li>
-<p>Run WxT configuration updates:</p>
-<ul>
-<li><code>drush cache:rebuild</code></li>
-<li><code>drush update:wxt</code></li>
-</ul>
-</li>
-</ul>
 </td>
 </tr>
 </tbody>
