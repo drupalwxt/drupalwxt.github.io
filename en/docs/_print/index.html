@@ -53,7 +53,7 @@ English
 </li>
 </ul>
 </div>
-<div class="navbar-nav d-none d-lg-block"><input type=search class="form-control td-search-input" placeholder="&#xf002; Search WxT" aria-label="Search WxT" autocomplete=off data-offline-search-index-json-src=../../../offline-search-index.30ad193a478ebe45d3e00ba27b0954fb.json data-offline-search-base-href=../../../ data-offline-search-max-results=10>
+<div class="navbar-nav d-none d-lg-block"><input type=search class="form-control td-search-input" placeholder="&#xf002; Search WxT" aria-label="Search WxT" autocomplete=off data-offline-search-index-json-src=../../../offline-search-index.bcff6decd2c06bb4fa7380cc0877b3fb.json data-offline-search-base-href=../../../ data-offline-search-max-results=10>
 </div>
 </nav>
 </header>
@@ -281,6 +281,11 @@ We try our best to have security releases of Drupal Core within <strong>24-72 ho
 </tr>
 </thead>
 <tbody>
+<tr>
+<td><strong>4.3.3</strong></td>
+<td><strong>2022-08-19</strong></td>
+<td></td>
+</tr>
 <tr>
 <td><strong>4.3.2</strong></td>
 <td><strong>2022-07-23</strong></td>
@@ -605,76 +610,6 @@ We try our best to have security releases of Drupal Core within <strong>24-72 ho
 <p><strong>Note:</strong> N/A</p>
 </td>
 </tr>
-<tr>
-<td><strong>4.2.4</strong></td>
-<td><strong>2022-05-09</strong></td>
-<td><p>Features / Updates:</p>
-<ul>
-<li>Updates for Drupal Core (v9.2.18)
-<ul>
-<li><a href=https://www.drupal.org/sa-core-2022-008>SA-core-2022-008</a></li>
-</ul>
-</li>
-<li>Updates for WxT
-<ul>
-<li>RouteNotFoundException: Route &ldquo;search.view_node_search&rdquo; on browser install <a href=https://www.drupal.org/node/3275738>#3275738</a></li>
-<li>Blue intranet theme toggle <a href=https://www.drupal.org/node/3276713>#3276713</a></li>
-<li>Views exposed form requires AJAX to be enabled on block display <a href=https://www.drupal.org/node/3276663>#3276663</a></li>
-<li>Update blog breadcrumbs to work similar to other content type <a href=https://www.drupal.org/node/3277084>#3277084</a></li>
-<li>Block headings changes for WCAG compliance <a href=https://www.drupal.org/node/3277101>#3277101</a></li>
-</ul>
-</li>
-<li>Updates for WxT Bootstrap
-<ul>
-<li>Revert search form block layout issues with custom theme <a href=https://www.drupal.org/node/3274502>#3274502</a></li>
-<li>WET media player <a href=https://www.drupal.org/node/3279276>#3279276</a></li>
-<li>Add common book page template fix to starterkit <a href=https://www.drupal.org/node/3277987>#3277987</a></li>
-<li>Language switcher validation issue <a href=https://www.drupal.org/node/3277091>#3277091</a></li>
-<li>Block headings changes for WCAG compliance <a href=https://www.drupal.org/node/3277101>#3277101</a></li>
-</ul>
-</li>
-<li>Updates for WxT Library
-<ul>
-<li>Blue intranet theme toggle <a href=https://www.drupal.org/node/3276713>#3276713</a></li>
-</ul>
-</li>
-</ul>
-<p>Upgrade path:</p>
-<blockquote>
-<p>Note: No special notes for this release.</p>
-</blockquote>
-<ul>
-<li>
-<p>Update your codebase:</p>
-<ul>
-<li><code>composer update</code></li>
-</ul>
-</li>
-<li>
-<p>Run database updates:</p>
-<ul>
-<li><code>drush cache:rebuild</code></li>
-<li><code>drush updatedb</code></li>
-</ul>
-</li>
-<li>
-<p>Run Lightning configuration updates:</p>
-<ul>
-<li><code>drush cache:rebuild</code></li>
-<li><code>drush update:lightning</code></li>
-</ul>
-</li>
-<li>
-<p>Run WxT configuration updates:</p>
-<ul>
-<li><code>drush cache:rebuild</code></li>
-<li><code>drush update:wxt</code></li>
-</ul>
-</li>
-</ul>
-<p><strong>Note:</strong> N/A</p>
-</td>
-</tr>
 </tbody>
 </table>
 <h2 id=repositories-for-drupal-wxt>Repositories for Drupal WxT</h2>
@@ -705,13 +640,13 @@ We try our best to have security releases of Drupal Core within <strong>24-72 ho
 <td><strong>drupalwxt.github.io</strong></td>
 <td><a href=https://github.com/drupalwxt/drupalwxt.github.io target=_blank>drupalwxt/drupalwxt.github.io</a></td>
 <td>GitHub Pages for Drupal WxT.</td>
-<td>Size: 6587 Bytes</td>
+<td>Size: 6690 Bytes</td>
 </tr>
 <tr>
 <td><strong>helm-drupal</strong></td>
 <td><a href=https://github.com/drupalwxt/helm-drupal target=_blank>drupalwxt/helm-drupal</a></td>
 <td>Helm chart for running Drupal on Kubernetes</td>
-<td>Size: 51979 Bytes</td>
+<td>Size: 52462 Bytes</td>
 </tr>
 <tr>
 <td><strong>site-cloud</strong></td>
@@ -723,13 +658,13 @@ We try our best to have security releases of Drupal Core within <strong>24-72 ho
 <td><strong>site-wxt</strong></td>
 <td><a href=https://github.com/drupalwxt/site-wxt target=_blank>drupalwxt/site-wxt</a></td>
 <td>An example composer project for the Drupal WxT distribution used for integration testing.</td>
-<td>Size: 2382 Bytes</td>
+<td>Size: 2398 Bytes</td>
 </tr>
 <tr>
 <td><strong>terraform-kubernetes-drupalwxt</strong></td>
 <td><a href=https://github.com/drupalwxt/terraform-kubernetes-drupalwxt target=_blank>drupalwxt/terraform-kubernetes-drupalwxt</a></td>
 <td>Terraform module for Drupal WxT</td>
-<td>Size: 50 Bytes</td>
+<td>Size: 51 Bytes</td>
 </tr>
 <tr>
 <td><strong>themes-cdn</strong></td>
@@ -741,13 +676,13 @@ We try our best to have security releases of Drupal Core within <strong>24-72 ho
 <td><strong>wxt</strong></td>
 <td><a href=https://github.com/drupalwxt/wxt target=_blank>drupalwxt/wxt</a></td>
 <td>Drupal 9 variant of the Web Experience Toolkit (WxT).</td>
-<td>Size: 1807 Bytes</td>
+<td>Size: 1821 Bytes</td>
 </tr>
 <tr>
 <td><strong>wxt-project</strong></td>
 <td><a href=https://github.com/drupalwxt/wxt-project target=_blank>drupalwxt/wxt-project</a></td>
 <td>Composer project template for Drupal 9 sites built with the WxT distribution.</td>
-<td>Size: 62 Bytes</td>
+<td>Size: 66 Bytes</td>
 </tr>
 <tr>
 <td><strong>wxt_bootstrap</strong></td>
