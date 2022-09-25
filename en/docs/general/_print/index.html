@@ -19,8 +19,8 @@
 <meta itemprop=description content="Drupal WxT"><meta name=twitter:card content="summary">
 <meta name=twitter:title content="General">
 <meta name=twitter:description content="Drupal WxT">
-<link rel=preload href=../../../../scss/main.min.9e61987c27a8287a794da6337434f7abf32630f4151df555d250c4aed46c6a20.css as=style>
-<link href=../../../../scss/main.min.9e61987c27a8287a794da6337434f7abf32630f4151df555d250c4aed46c6a20.css rel=stylesheet integrity>
+<link rel=preload href=../../../../scss/main.min.4173ab1748624f494cf721d4c920eb268b4c31576350812179b7fe6537f9865b.css as=style>
+<link href=../../../../scss/main.min.4173ab1748624f494cf721d4c920eb268b4c31576350812179b7fe6537f9865b.css rel=stylesheet integrity>
 <script src=https://code.jquery.com/jquery-3.6.0.min.js integrity=sha384-vtXRMe3mGCbOeY7l30aIg8H9p3GdeSe4IFlP6G8JMa7o7lXvnz3GFKzPxzJdPfGK crossorigin=anonymous></script>
 <script src=https://unpkg.com/lunr@2.3.9/lunr.min.js integrity=sha384-203J0SNzyqHby3iU6hzvzltrWi/M41wOP5Gu+BiJMz5nwKykbkUx8Kp7iti0Lpli crossorigin=anonymous></script>
 <script type=application/javascript>var doNotTrack=!1;doNotTrack||(window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga('create','UA-00000000-0','auto'),ga('send','pageview'))</script>
@@ -53,7 +53,7 @@ English
 </li>
 </ul>
 </div>
-<div class="navbar-nav d-none d-lg-block"><input type=search class="form-control td-search-input" placeholder="&#xf002; Search WxT" aria-label="Search WxT" autocomplete=off data-offline-search-index-json-src=../../../../offline-search-index.8cb6556a0020ca7bff5addcfb2e26b4f.json data-offline-search-base-href=../../../../ data-offline-search-max-results=10>
+<div class="navbar-nav d-none d-lg-block"><input type=search class="form-control td-search-input" placeholder="&#xf002; Search WxT" aria-label="Search WxT" autocomplete=off data-offline-search-index-json-src=../../../../offline-search-index.1ce9b474c956331622e52dfd8b171f2f.json data-offline-search-base-href=../../../../ data-offline-search-max-results=10>
 </div>
 </nav>
 </header>
@@ -235,7 +235,100 @@ We try our best to have security releases of Drupal Core within <strong>24-72 ho
 <tr>
 <td><strong>4.3.3</strong></td>
 <td><strong>2022-08-19</strong></td>
-<td></td>
+<td><p>Features / Updates:</p>
+<ul>
+<li>Updates for Drupal Core
+<ul>
+<li>Patch (bugfix) release of Drupal Core to <code>v9.3.21</code></li>
+</ul>
+</li>
+<li>Updates for Drupal Contrib
+<ul>
+<li>ckeditor_codemirror update to <code>2.4</code></li>
+<li>core_context update to <code>1.0</code></li>
+<li>ctools module update to <code>^3.9</code></li>
+<li>inline_entity_form to <code>^2.7</code></li>
+<li>layout_builder_restrictions to <code>^2.14</code></li>
+<li>pathauto to <code>^1.8</code></li>
+</ul>
+</li>
+<li>Updates for WxT
+<ul>
+<li>[Deprecate] Remove Lightning Core <a href=https://www.drupal.org/node/3302473>#3302473</a></li>
+<li>[Deprecate] Remove Lightning Media <a href=https://www.drupal.org/node/3301875>#3301875</a></li>
+<li>Corrected bulk of reported issues by phpcs</li>
+<li>FilterHtml throws Unsupported operand types <a href=https://www.drupal.org/node/3300111>#3300111</a></li>
+<li>Core patch causing error when serializing top-level terms <a href=https://www.drupal.org/node/3302126>#3302126</a></li>
+<li>WSOD on node forms with fresh install of WxT or ctools update <a href=https://www.drupal.org/node/3300983>#3300983</a></li>
+</ul>
+</li>
+<li>Updates for WxT Bootstrap
+<ul>
+<li>Preprocess field issue with video <a href=https://www.drupal.org/node/3300986>#3300986</a></li>
+<li>Provide favicons with starterkit <a href=https://www.drupal.org/node/3304675>#3304675</a></li>
+<li>Facet improvements (WCAG) <a href=https://www.drupal.org/node/3282148>#3282148</a></li>
+</ul>
+</li>
+<li>Updates for WxT Library
+<ul>
+<li>Switch to dynamic menu handling for wxt_library</li>
+<li>Update to theme-gc-intranet theme to <code>4.0.43.1</code></li>
+<li>SearchCanadaBlockForm missing dependency injection <a href=https://www.drupal.org/node/3300107>#3300107</a></li>
+</ul>
+</li>
+</ul>
+<p>Upgrade path:</p>
+<blockquote>
+<p><strong>Important</strong>: Please backup your database before running the upgrade process for this release.</p>
+</blockquote>
+<ul>
+<li>
+<p>Update your codebase:</p>
+<ul>
+<li><code>composer update</code></li>
+</ul>
+</li>
+<li>
+<p>Run database updates:</p>
+<ul>
+<li><code>drush cache:rebuild</code></li>
+<li><code>drush updatedb</code></li>
+</ul>
+</li>
+<li>
+<p>Run WxT configuration updates:</p>
+<ul>
+<li><code>drush cache:rebuild</code></li>
+<li><code>drush update:wxt</code></li>
+</ul>
+</li>
+</ul>
+<p><strong>Note(s)</strong>:</p>
+<p>To facilitate keeping the distribution lightweight and because soon the Lightning Contrib modules will be EOL we need to remove all of the Lightning contrib in a way that doesn&rsquo;t break an upgrade path and documents the modules removed in case site builders will want to manually add them to their own <code>composer.json</code> file</p>
+<blockquote>
+<p><strong>Note</strong>: that all error messages stating &ldquo;Currently using Missing or invalid module&rdquo; will be resolved after running the <code>drush updatedb</code> step above.</p>
+</blockquote>
+<p>a) [Deprecate] Remove Lightning Core <a href=https://www.drupal.org/node/3302473>#3302473</a></p>
+<p>Please read over the above issue and consult the below list of the removed composer entries in case you are depending on any of them and need to apply them manually to your composer.json file.</p>
+<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml><span style=color:#204a87;font-weight:700>&#34;drupal/acquia_telemetry-acquia_telemetry&#34;: </span><span style=color:#4e9a06>&#34;^1.0-alpha3&#34;</span><span style=color:#000;font-weight:700>,</span><span style=color:#f8f8f8;text-decoration:underline>
+</span><span style=color:#f8f8f8;text-decoration:underline></span><span style=color:#204a87;font-weight:700>&#34;drupal/contact_storage&#34;: </span><span style=color:#4e9a06>&#34;^1.0&#34;</span><span style=color:#000;font-weight:700>,</span><span style=color:#f8f8f8;text-decoration:underline>
+</span></code></pre></div><p>All of the Lightning Core functionality was directly ported to support an upgrade path and an update script written in the <code>wxt_core_update_8433</code> function.</p>
+<blockquote>
+<p><strong>Note</strong>: Any Lightning sub modules will also be uninstalled.</p>
+</blockquote>
+<p>b) [Deprecate] Remove Lightning Media <a href=https://www.drupal.org/node/3301875>#3301875</a></p>
+<p>Please read over the above issue and consult the below list of the removed composer entries in case you are depending on any of them and need to apply them manually to your composer.json file.</p>
+<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml><span style=color:#000>Nothing removed at the moment</span><span style=color:#f8f8f8;text-decoration:underline>
+</span><span style=color:#f8f8f8;text-decoration:underline>
+</span></code></pre></div><p>c) All of the Lightning Media functionality was directly ported to support an upgrade path and an update script written in the <code>wxt_core_update_8433</code> function.</p>
+<blockquote>
+<p><strong>Note</strong>: Any Lightning sub modules will also be uninstalled.</p>
+</blockquote>
+<p>d) Finally check your custom modules and / or configuration objects for any reference to <code>lightning_core</code>, <code>lightning_page</code> and <code>lightning_media</code> as some of your config objects (that we couldn&rsquo;t automatically correct) might reference the old modules and this step will be important to get your configuration objects properly loaded.</p>
+<blockquote>
+<p><strong>Note</strong>: These references should be replaced by their new counterparts <code>wxt_core</code>, <code>wxt_ext_page</code> and <code>wxt_ext_media</code>. As some of your config objects might reference the old modules this step is important to get your config loaded.</p>
+</blockquote>
+</td>
 </tr>
 <tr>
 <td><strong>4.3.2</strong></td>
@@ -585,13 +678,13 @@ We try our best to have security releases of Drupal Core within <strong>24-72 ho
 <td><strong>docker-scaffold</strong></td>
 <td><a href=https://github.com/drupalwxt/docker-scaffold target=_blank>drupalwxt/docker-scaffold</a></td>
 <td>Docker Scaffold for Drupal WxT</td>
-<td>Size: 108 Bytes</td>
+<td>Size: 110 Bytes</td>
 </tr>
 <tr>
 <td><strong>drupalwxt.github.io</strong></td>
 <td><a href=https://github.com/drupalwxt/drupalwxt.github.io target=_blank>drupalwxt/drupalwxt.github.io</a></td>
 <td>GitHub Pages for Drupal WxT.</td>
-<td>Size: 5953 Bytes</td>
+<td>Size: 6064 Bytes</td>
 </tr>
 <tr>
 <td><strong>helm-drupal</strong></td>
@@ -609,7 +702,7 @@ We try our best to have security releases of Drupal Core within <strong>24-72 ho
 <td><strong>site-wxt</strong></td>
 <td><a href=https://github.com/drupalwxt/site-wxt target=_blank>drupalwxt/site-wxt</a></td>
 <td>An example composer project for the Drupal WxT distribution used for integration testing.</td>
-<td>Size: 2398 Bytes</td>
+<td>Size: 2476 Bytes</td>
 </tr>
 <tr>
 <td><strong>terraform-kubernetes-drupalwxt</strong></td>
@@ -627,7 +720,7 @@ We try our best to have security releases of Drupal Core within <strong>24-72 ho
 <td><strong>wxt</strong></td>
 <td><a href=https://github.com/drupalwxt/wxt target=_blank>drupalwxt/wxt</a></td>
 <td>Drupal 9 variant of the Web Experience Toolkit (WxT).</td>
-<td>Size: 1851 Bytes</td>
+<td>Size: 1876 Bytes</td>
 </tr>
 <tr>
 <td><strong>wxt-project</strong></td>
@@ -639,7 +732,7 @@ We try our best to have security releases of Drupal Core within <strong>24-72 ho
 <td><strong>wxt_bootstrap</strong></td>
 <td><a href=https://github.com/drupalwxt/wxt_bootstrap target=_blank>drupalwxt/wxt_bootstrap</a></td>
 <td>Bootstrap derived sub-theme aligned for use with the Web Experience Toolkit jQuery Framework.</td>
-<td>Size: 1101 Bytes</td>
+<td>Size: 1122 Bytes</td>
 </tr>
 <tr>
 <td><strong>wxt_library</strong></td>
