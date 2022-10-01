@@ -60,7 +60,7 @@ English
 </li>
 </ul>
 </div>
-<div class="navbar-nav d-none d-lg-block"><input type=search class="form-control td-search-input" placeholder="&#xf002; Search WxT" aria-label="Search WxT" autocomplete=off data-offline-search-index-json-src=../../../../../offline-search-index.9acd9ecccf44a1e9857b8a299fc5b751.json data-offline-search-base-href=../../../../../ data-offline-search-max-results=10>
+<div class="navbar-nav d-none d-lg-block"><input type=search class="form-control td-search-input" placeholder="&#xf002; Search WxT" aria-label="Search WxT" autocomplete=off data-offline-search-index-json-src=../../../../../offline-search-index.94a9041953a9eb3d61a8ba2f67842555.json data-offline-search-base-href=../../../../../ data-offline-search-max-results=10>
 </div>
 </nav>
 </header>
@@ -95,6 +95,64 @@ We try our best to have security releases of Drupal Core within <strong>24-72 ho
 </tr>
 </thead>
 <tbody>
+<tr>
+<td><strong>4.3.4</strong></td>
+<td><strong>2022-10-01</strong></td>
+<td><p>Features / Updates:</p>
+<ul>
+<li>Security Updates for Drupal Core (v9.3.22)
+<ul>
+<li><a href=https://www.drupal.org/sa-core-2022-016>SA-core-2022-016</a></li>
+</ul>
+</li>
+<li>Updates for WxT
+<ul>
+<li>CKEditor improvement leverage responsive images <a href=https://www.drupal.org/node/3280946>#3280946</a></li>
+<li>Update blog listing page to latest spec <a href=https://www.drupal.org/node/3306505>#3306505</a></li>
+<li>Translate the History tab <a href=https://www.drupal.org/node/3311926>#3311926</a></li>
+<li>Brand menu in French no editable <a href=https://www.drupal.org/node/3312412>#3312412</a></li>
+<li>Correct mislabelled wxt_extension.yml files</li>
+</ul>
+</li>
+<li>Updates for WxT Bootstrap
+<ul>
+<li>CKEditor improvement leverage responsive images <a href=https://www.drupal.org/node/3280946>#3280946</a></li>
+<li>Update blog listing page to latest spec <a href=https://www.drupal.org/node/3306505>#3306505</a></li>
+<li>Fix GCintranet link in header on French pages <a href=https://www.drupal.org/node/3308918>#3308918</a></li>
+<li>Adjust theme suggestion alter in starterkit <a href=https://www.drupal.org/node/3310485>#3310485</a></li>
+</ul>
+</li>
+</ul>
+<p>Upgrade path:</p>
+<blockquote>
+<p><strong>Important</strong>: Please backup your database before running the upgrade process for this release.</p>
+</blockquote>
+<ul>
+<li>
+<p>Update your codebase:</p>
+<ul>
+<li><code>composer update</code></li>
+</ul>
+</li>
+<li>
+<p>Run database updates:</p>
+<ul>
+<li><code>drush cache:rebuild</code></li>
+<li><code>drush updatedb</code></li>
+</ul>
+</li>
+<li>
+<p>Run WxT configuration updates:</p>
+<ul>
+<li><code>drush cache:rebuild</code></li>
+<li><code>drush update:wxt</code></li>
+</ul>
+</li>
+</ul>
+<p><strong>Note(s)</strong>:</p>
+<p>This will be the last release which includes the Lightning modules, even though they have been uninstalled in an earlier release.</p>
+</td>
+</tr>
 <tr>
 <td><strong>4.3.3</strong></td>
 <td><strong>2022-08-19</strong></td>
@@ -402,82 +460,6 @@ We try our best to have security releases of Drupal Core within <strong>24-72 ho
 <li>Updates for WxT Library
 <ul>
 <li>Add config link for modules <a href=https://www.drupal.org/node/3291183>#3291183</a></li>
-</ul>
-</li>
-</ul>
-<p>Upgrade path:</p>
-<blockquote>
-<p>Note: No special notes for this release.</p>
-</blockquote>
-<ul>
-<li>
-<p>Update your codebase:</p>
-<ul>
-<li><code>composer update</code></li>
-</ul>
-</li>
-<li>
-<p>Run database updates:</p>
-<ul>
-<li><code>drush cache:rebuild</code></li>
-<li><code>drush updatedb</code></li>
-</ul>
-</li>
-<li>
-<p>Run Lightning configuration updates:</p>
-<ul>
-<li><code>drush cache:rebuild</code></li>
-<li><code>drush update:lightning</code></li>
-</ul>
-</li>
-<li>
-<p>Run WxT configuration updates:</p>
-<ul>
-<li><code>drush cache:rebuild</code></li>
-<li><code>drush update:wxt</code></li>
-</ul>
-</li>
-</ul>
-<p><strong>Note:</strong> N/A</p>
-</td>
-</tr>
-<tr>
-<td><strong>4.2.5</strong></td>
-<td><strong>2022-06-10</strong></td>
-<td><p>Features / Updates:</p>
-<ul>
-<li>Updates for Drupal Core (v9.2.20)
-<ul>
-<li><a href=https://www.drupal.org/sa-core-2022-010>SA-core-2022-010</a></li>
-</ul>
-</li>
-<li>Updates for WxT
-<ul>
-<li>Error on revisions page <a href=https://www.drupal.org/node/3283171>#3283171</a></li>
-<li>Update drupal/toc_api <a href=https://www.drupal.org/node/3280164>#3280164</a></li>
-<li>Improve block headings <a href=https://www.drupal.org/node/3282516>#3282516</a></li>
-<li>PHPCS Issues <a href=https://www.drupal.org/node/3283216>#3283216</a></li>
-<li>Did you find webform message not announced <a href=https://www.drupal.org/node/3280784>#3280784</a></li>
-<li>Translate views field empty text <a href=https://www.drupal.org/node/3284335>#3284335</a></li>
-</ul>
-</li>
-<li>Updates for WxT Bootstrap
-<ul>
-<li>Intranet fluid page issue <a href=https://www.drupal.org/node/3281242>#3281242</a></li>
-<li>Remote video support non-youtube sources <a href=https://www.drupal.org/node/3280184>#3280184</a></li>
-<li>Improve block headings <a href=https://www.drupal.org/node/3282516>#3282516</a></li>
-<li>Fix body field block template WCAG <a href=https://www.drupal.org/node/3280257>#3280257</a></li>
-<li>Did you find webform message not announced <a href=https://www.drupal.org/node/3280784>#3280784</a></li>
-<li>WeT media player for local videos <a href=https://www.drupal.org/node/3284458>#3284458</a></li>
-<li>Fix markup validation issue <a href=https://www.drupal.org/node/3284898>#3284898</a></li>
-<li>Remove aria-label from invisible header nav <a href=https://www.drupal.org/node/3284573>#3284573</a></li>
-</ul>
-</li>
-<li>Updates for WxT Library
-<ul>
-<li>Date modified spacing issue <a href=https://www.drupal.org/node/3282358>#3282358</a></li>
-<li>Date modified block to get value from Date Modified field <a href=https://www.drupal.org/node/3280231>#3280231</a></li>
-<li>Update to latest GCweb and WxT <a href=https://www.drupal.org/node/3280226>#3280226</a></li>
 </ul>
 </li>
 </ul>

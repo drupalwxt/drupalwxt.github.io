@@ -131,6 +131,64 @@ We try our best to have security releases of Drupal Core within &lt;strong>24-72
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
+&lt;td>&lt;strong>4.3.4&lt;/strong>&lt;/td>
+&lt;td>&lt;strong>2022-10-01&lt;/strong>&lt;/td>
+&lt;td>&lt;p>Features / Updates:&lt;/p>
+&lt;ul>
+&lt;li>Security Updates for Drupal Core (v9.3.22)
+&lt;ul>
+&lt;li>&lt;a href="https://www.drupal.org/sa-core-2022-016">SA-core-2022-016&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Updates for WxT
+&lt;ul>
+&lt;li>CKEditor improvement leverage responsive images &lt;a href="https://www.drupal.org/node/3280946">#3280946&lt;/a>&lt;/li>
+&lt;li>Update blog listing page to latest spec &lt;a href="https://www.drupal.org/node/3306505">#3306505&lt;/a>&lt;/li>
+&lt;li>Translate the History tab &lt;a href="https://www.drupal.org/node/3311926">#3311926&lt;/a>&lt;/li>
+&lt;li>Brand menu in French no editable &lt;a href="https://www.drupal.org/node/3312412">#3312412&lt;/a>&lt;/li>
+&lt;li>Correct mislabelled wxt_extension.yml files&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Updates for WxT Bootstrap
+&lt;ul>
+&lt;li>CKEditor improvement leverage responsive images &lt;a href="https://www.drupal.org/node/3280946">#3280946&lt;/a>&lt;/li>
+&lt;li>Update blog listing page to latest spec &lt;a href="https://www.drupal.org/node/3306505">#3306505&lt;/a>&lt;/li>
+&lt;li>Fix GCintranet link in header on French pages &lt;a href="https://www.drupal.org/node/3308918">#3308918&lt;/a>&lt;/li>
+&lt;li>Adjust theme suggestion alter in starterkit &lt;a href="https://www.drupal.org/node/3310485">#3310485&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>Upgrade path:&lt;/p>
+&lt;blockquote>
+&lt;p>&lt;strong>Important&lt;/strong>: Please backup your database before running the upgrade process for this release.&lt;/p>
+&lt;/blockquote>
+&lt;ul>
+&lt;li>
+&lt;p>Update your codebase:&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>composer update&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>Run database updates:&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>drush cache:rebuild&lt;/code>&lt;/li>
+&lt;li>&lt;code>drush updatedb&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>Run WxT configuration updates:&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>drush cache:rebuild&lt;/code>&lt;/li>
+&lt;li>&lt;code>drush update:wxt&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>&lt;strong>Note(s)&lt;/strong>:&lt;/p>
+&lt;p>This will be the last release which includes the Lightning modules, even though they have been uninstalled in an earlier release.&lt;/p>
+&lt;/td>
+&lt;/tr>
+&lt;tr>
 &lt;td>&lt;strong>4.3.3&lt;/strong>&lt;/td>
 &lt;td>&lt;strong>2022-08-19&lt;/strong>&lt;/td>
 &lt;td>&lt;p>Features / Updates:&lt;/p>
@@ -437,82 +495,6 @@ We try our best to have security releases of Drupal Core within &lt;strong>24-72
 &lt;li>Updates for WxT Library
 &lt;ul>
 &lt;li>Add config link for modules &lt;a href="https://www.drupal.org/node/3291183">#3291183&lt;/a>&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;p>Upgrade path:&lt;/p>
-&lt;blockquote>
-&lt;p>Note: No special notes for this release.&lt;/p>
-&lt;/blockquote>
-&lt;ul>
-&lt;li>
-&lt;p>Update your codebase:&lt;/p>
-&lt;ul>
-&lt;li>&lt;code>composer update&lt;/code>&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>
-&lt;p>Run database updates:&lt;/p>
-&lt;ul>
-&lt;li>&lt;code>drush cache:rebuild&lt;/code>&lt;/li>
-&lt;li>&lt;code>drush updatedb&lt;/code>&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>
-&lt;p>Run Lightning configuration updates:&lt;/p>
-&lt;ul>
-&lt;li>&lt;code>drush cache:rebuild&lt;/code>&lt;/li>
-&lt;li>&lt;code>drush update:lightning&lt;/code>&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>
-&lt;p>Run WxT configuration updates:&lt;/p>
-&lt;ul>
-&lt;li>&lt;code>drush cache:rebuild&lt;/code>&lt;/li>
-&lt;li>&lt;code>drush update:wxt&lt;/code>&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;p>&lt;strong>Note:&lt;/strong> N/A&lt;/p>
-&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>&lt;strong>4.2.5&lt;/strong>&lt;/td>
-&lt;td>&lt;strong>2022-06-10&lt;/strong>&lt;/td>
-&lt;td>&lt;p>Features / Updates:&lt;/p>
-&lt;ul>
-&lt;li>Updates for Drupal Core (v9.2.20)
-&lt;ul>
-&lt;li>&lt;a href="https://www.drupal.org/sa-core-2022-010">SA-core-2022-010&lt;/a>&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>Updates for WxT
-&lt;ul>
-&lt;li>Error on revisions page &lt;a href="https://www.drupal.org/node/3283171">#3283171&lt;/a>&lt;/li>
-&lt;li>Update drupal/toc_api &lt;a href="https://www.drupal.org/node/3280164">#3280164&lt;/a>&lt;/li>
-&lt;li>Improve block headings &lt;a href="https://www.drupal.org/node/3282516">#3282516&lt;/a>&lt;/li>
-&lt;li>PHPCS Issues &lt;a href="https://www.drupal.org/node/3283216">#3283216&lt;/a>&lt;/li>
-&lt;li>Did you find webform message not announced &lt;a href="https://www.drupal.org/node/3280784">#3280784&lt;/a>&lt;/li>
-&lt;li>Translate views field empty text &lt;a href="https://www.drupal.org/node/3284335">#3284335&lt;/a>&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>Updates for WxT Bootstrap
-&lt;ul>
-&lt;li>Intranet fluid page issue &lt;a href="https://www.drupal.org/node/3281242">#3281242&lt;/a>&lt;/li>
-&lt;li>Remote video support non-youtube sources &lt;a href="https://www.drupal.org/node/3280184">#3280184&lt;/a>&lt;/li>
-&lt;li>Improve block headings &lt;a href="https://www.drupal.org/node/3282516">#3282516&lt;/a>&lt;/li>
-&lt;li>Fix body field block template WCAG &lt;a href="https://www.drupal.org/node/3280257">#3280257&lt;/a>&lt;/li>
-&lt;li>Did you find webform message not announced &lt;a href="https://www.drupal.org/node/3280784">#3280784&lt;/a>&lt;/li>
-&lt;li>WeT media player for local videos &lt;a href="https://www.drupal.org/node/3284458">#3284458&lt;/a>&lt;/li>
-&lt;li>Fix markup validation issue &lt;a href="https://www.drupal.org/node/3284898">#3284898&lt;/a>&lt;/li>
-&lt;li>Remove aria-label from invisible header nav &lt;a href="https://www.drupal.org/node/3284573">#3284573&lt;/a>&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>Updates for WxT Library
-&lt;ul>
-&lt;li>Date modified spacing issue &lt;a href="https://www.drupal.org/node/3282358">#3282358&lt;/a>&lt;/li>
-&lt;li>Date modified block to get value from Date Modified field &lt;a href="https://www.drupal.org/node/3280231">#3280231&lt;/a>&lt;/li>
-&lt;li>Update to latest GCweb and WxT &lt;a href="https://www.drupal.org/node/3280226">#3280226&lt;/a>&lt;/li>
 &lt;/ul>
 &lt;/li>
 &lt;/ul>
