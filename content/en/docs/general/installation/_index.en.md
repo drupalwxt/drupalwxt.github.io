@@ -42,7 +42,7 @@ Run this command and replace DIRECTORY with the directory of your choice this is
 
 ```sh
 composer self-update
-composer create-project drupalwxt/site-wxt:4.2.x-dev <site-name> --no-interaction
+composer create-project drupalwxt/site-wxt:4.3.x-dev <site-name> --no-interaction
 ```
 
 > **Note**: Normally you would pass a stable tag to the above command rather then just pulling from the development branch.

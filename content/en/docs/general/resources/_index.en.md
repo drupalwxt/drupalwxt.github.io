@@ -40,7 +40,7 @@ The following are links to some useful resources:
 
 <!-- Links Referenced -->
 
-[changelog]:           https://github.com/drupalwxt/wxt/blob/4.2.x/CHANGELOG.md
+[changelog]:           https://github.com/drupalwxt/wxt/blob/4.3.x/CHANGELOG.md
 [containers]:          https://hub.docker.com/r/drupalwxt/site-wxt
 [containers-scaffold]: https://github.com/drupalwxt/docker-scaffold
 [docs]:                http://drupalwxt.github.io

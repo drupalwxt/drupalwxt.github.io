@@ -109,7 +109,7 @@ Afterwards if you wish to have an empty docker environment you may execute the f
 ```sh
 mutagen sync terminate <sync_xxxxx>
 docker rm $(docker ps -a -q)
-docker rmi $(docker images -q)
+docker rmi $(docker images -q) --force
 docker volume prune -f
 
 ```
