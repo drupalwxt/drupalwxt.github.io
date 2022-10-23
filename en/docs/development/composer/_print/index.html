@@ -60,7 +60,7 @@ English
 </li>
 </ul>
 </div>
-<div class="navbar-nav d-none d-lg-block"><input type=search class="form-control td-search-input" placeholder="&#xf002; Search WxT" aria-label="Search WxT" autocomplete=off data-offline-search-index-json-src=../../../../../offline-search-index.bd0c310028ca51379085c9074a3bc342.json data-offline-search-base-href=../../../../../ data-offline-search-max-results=10>
+<div class="navbar-nav d-none d-lg-block"><input type=search class="form-control td-search-input" placeholder="&#xf002; Search WxT" aria-label="Search WxT" autocomplete=off data-offline-search-index-json-src=../../../../../offline-search-index.7fb32ab8e09ca5fc0180fccc0463f273.json data-offline-search-base-href=../../../../../ data-offline-search-max-results=10>
 </div>
 </nav>
 </header>
@@ -87,16 +87,16 @@ A reminder that <strong><a href=https://getcomposer.org/download/>composer</a></
 <p>We highly recommend using our <strong><a href=https://github.com/drupalwxt/wxt-project>Composer Project Template</a></strong> to build and maintain your WxT derived project’s codebase.</p>
 <h2 id=getting-started>Getting Started</h2>
 <p>The following command is all you need to get started:</p>
-<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-sh data-lang=sh>composer create-project drupalwxt/wxt-project:4.2.2 &lt;site-name&gt;
+<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-sh data-lang=sh>composer create-project drupalwxt/wxt-project:4.3.4 &lt;site-name&gt;
 </code></pre></div><blockquote>
-<p><strong>Note</strong>: For development you may also specify a branch using <code>drupalwxt/wxt-project:4.2.x-dev</code>.</p>
+<p><strong>Note</strong>: For development you may also specify a branch using <code>drupalwxt/wxt-project:4.3.x-dev</code>.</p>
 </blockquote>
 <p>You can see a working example of a fully generated Composer Project Template over at:</p>
 <ul>
 <li><strong><a href=https://github.com/drupalwxt/site-wxt>Site WxT</a></strong></li>
 </ul>
 <p>Where the following is the command that was used for the initial generation:</p>
-<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-sh data-lang=sh>composer create-project drupalwxt/wxt-project:4.2.2 site-wxt
+<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-sh data-lang=sh>composer create-project drupalwxt/wxt-project:4.3.4 site-wxt
 </code></pre></div><blockquote>
 <p><strong>Note</strong>: Remember to keep the <code>composer.json</code> and <code>composer.lock</code> files that exist above <code>docroot</code> in source control as they are controlling your dependencies.</p>
 </blockquote>
@@ -151,9 +151,9 @@ A reminder that <strong><a href=https://getcomposer.org/download/>composer</a></
 </blockquote>
 <h3 id=how-to-update-drupal-core>How to update Drupal Core?</h3>
 <p>Please <strong>don&rsquo;t add <code>drupal/core</code> to your project&rsquo;s composer.json</strong> since WxT manages Drupal Core for you along with the series of patches on top of it.</p>
-<p>WxT&rsquo;s minor versions will always correspond to Drupal Core&rsquo;s. For example, <code>drupalwxt/wxt:~4.2.x</code> will require Drupal Core 9.2.x and <code>drupalwxt/wxt:~4.1.x</code> required Drupal Core 9.1.x.</p>
-<p>When you need to update Drupal Core as an example from 9.1.x to 9.2.x, all you would do is change your requirement for <code>drupalwxt/wxt</code> in your <code>composer.json</code> file:</p>
-<pre><code>composer require --no-update drupalwxt/wxt:~4.2.2
+<p>WxT&rsquo;s minor versions will always correspond to Drupal Core&rsquo;s. For example, <code>drupalwxt/wxt:~4.3.x</code> will require Drupal Core 9.3.x and <code>drupalwxt/wxt:~4.2.x</code> required Drupal Core 9.2.x.</p>
+<p>When you need to update Drupal Core as an example from 9.2.x to 9.3.x, all you would do is change your requirement for <code>drupalwxt/wxt</code> in your <code>composer.json</code> file:</p>
+<pre><code>composer require --no-update drupalwxt/wxt:~4.3.4
 composer update
 </code></pre><h3 id=compatibility-table>Compatibility table</h3>
 <table>
@@ -165,6 +165,16 @@ composer update
 </tr>
 </thead>
 <tbody>
+<tr>
+<td><code>~4.4.x</code></td>
+<td>9.4.x</td>
+<td><code>>=9.7</code></td>
+</tr>
+<tr>
+<td><code>~4.3.x</code></td>
+<td>9.3.x</td>
+<td><code>>=9.7</code></td>
+</tr>
 <tr>
 <td><code>~4.2.x</code></td>
 <td>9.2.x</td>
