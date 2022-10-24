@@ -45,7 +45,27 @@ c) Point to your new sub theme for **[WxT Library][wxt_library]** to properly lo
 
 If the theme you are extending has custom block templates these won't be immediately inherited because a sub-theme creates copies of all the blocks in the parent theme and renames them with the sub-theme's name as a prefix. Twig block templates are derived from the block's name, so this breaks the link between these templates and their block.
 
-To fix this problem it requires a hook in the sub-theme by adding the following code snippet to the `THEMENAME.theme` file:
+Fixing this problem currently requires a hook in the `THEMENAME.theme` file and should have the following contents:
+
+```sh
+/**
+ * Implements hook_theme_suggestions_HOOK_alter().
+ */
+function THEMENAME_theme_suggestions_block_alter(&$suggestions, $variables) {
+  // Load theme suggestions for blocks from parent theme.
+  // https://www.drupal.org/project/wxt/issues/3310485#comment-14715969
+  for ($i = 0; $i < count($suggestions); $i++) {
+    if (str_contains($suggestions[$i], 'THEMENAME_')) {
+      $new_suggestions = [
+        str_replace('THEMENAME_', '', $suggestions[$i]),
+        str_replace('THEMENAME_', 'wxt_bootstrap_', $suggestions[$i]),
+      ];
+      array_splice($suggestions, $i, 0, $new_suggestions);
+      $i += 2;
+    }
+  }
+}
+```
 
 ### Programmatic Logic
 

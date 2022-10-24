@@ -59,13 +59,25 @@ make drupal_install
 ./docker/bin/drush migrate:import --group gcweb --tag 'Menu'
 ```
 
-## MacOSX Environments
+## Modern OSX Environments
 
-There are currently known performance issues related to the file mounting in `Docker for Desktop`
+If you have `Docker for Desktop` and a new enough OSX environment (Monterey or higher) then the steps are the exact same as those for the Linux environment given above.
+
+All that is required in advance is to enable `VirtioFS` accelerated directory sharing which you can see in the attached picture below.
+
+{{< imgproc virtiofs Resize "x300" >}}
+Docker for Desktop VirtioFS
+{{< /imgproc >}}
+
+For older environments you may still use mutagen which is discussed below.
+
+## Legacy OSX Environments (Mutagen)
+
+While this is fixed with the new virtualization framework discussed above.
+
+For older environments mutagen will have to be used instead and as such requires a few additional steps.
 
 - **[Improve Mac File system performance][docker-mac]**
-
-This is supposed to be fixed with the new virtualization framework in MacOSX 11.1+ but for the moment mutagen should be used.
 
 ```sh
 # Mutagen Setup
@@ -104,14 +116,20 @@ make drupal_install
 ./docker/bin/drush migrate:import --group gcweb --tag 'Menu'
 ```
 
-Afterwards if you wish to have an empty docker environment you may execute the following commands.
+## Cleanup
+
+If you wish to have a pristine docker environment you may execute the following commands.
 
 ```sh
-mutagen sync terminate <sync_xxxxx>
 docker rm $(docker ps -a -q)
 docker rmi $(docker images -q) --force
 docker volume prune -f
+```
 
+For those still using Mutagen you may also need to execute the following command:
+
+```sh
+mutagen sync terminate <sync_xxxxx>
 ```
 
 <!-- Links Referenced -->
