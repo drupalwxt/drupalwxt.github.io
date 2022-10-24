@@ -302,8 +302,25 @@ drush cc css-js
 &lt;h2 id="notes">Notes&lt;/h2>
 &lt;h3 id="inheriting-block-templates">Inheriting Block Templates&lt;/h3>
 &lt;p>If the theme you are extending has custom block templates these won&amp;rsquo;t be immediately inherited because a sub-theme creates copies of all the blocks in the parent theme and renames them with the sub-theme&amp;rsquo;s name as a prefix. Twig block templates are derived from the block&amp;rsquo;s name, so this breaks the link between these templates and their block.&lt;/p>
-&lt;p>To fix this problem it requires a hook in the sub-theme by adding the following code snippet to the &lt;code>THEMENAME.theme&lt;/code> file:&lt;/p>
-&lt;h3 id="programmatic-logic">Programmatic Logic&lt;/h3>
+&lt;p>Fixing this problem currently requires a hook in the &lt;code>THEMENAME.theme&lt;/code> file and should have the following contents:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-sh" data-lang="sh">/**
+* Implements hook_theme_suggestions_HOOK_alter&lt;span style="color:#ce5c00;font-weight:bold">()&lt;/span>.
+*/
+&lt;span style="color:#204a87;font-weight:bold">function&lt;/span> THEMENAME_theme_suggestions_block_alter&lt;span style="color:#ce5c00;font-weight:bold">(&lt;/span>&lt;span style="color:#000;font-weight:bold">&amp;amp;&lt;/span>&lt;span style="color:#000">$suggestions&lt;/span>, &lt;span style="color:#000">$variables&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">)&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">{&lt;/span>
+// Load theme suggestions &lt;span style="color:#204a87;font-weight:bold">for&lt;/span> blocks from parent theme.
+// https://www.drupal.org/project/wxt/issues/3310485#comment-14715969
+&lt;span style="color:#204a87;font-weight:bold">for&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">(&lt;/span>&lt;span style="color:#000">$i&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span> 0&lt;span style="color:#000;font-weight:bold">;&lt;/span> &lt;span style="color:#000">$i&lt;/span> &amp;lt; count&lt;span style="color:#ce5c00;font-weight:bold">(&lt;/span>&lt;span style="color:#000">$suggestions&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">)&lt;/span>&lt;span style="color:#000;font-weight:bold">;&lt;/span> &lt;span style="color:#000">$i&lt;/span>++&lt;span style="color:#ce5c00;font-weight:bold">)&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">{&lt;/span>
+&lt;span style="color:#204a87;font-weight:bold">if&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">(&lt;/span>str_contains&lt;span style="color:#ce5c00;font-weight:bold">(&lt;/span>&lt;span style="color:#000">$suggestions&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">[&lt;/span>&lt;span style="color:#000">$i&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">]&lt;/span>, &lt;span style="color:#4e9a06">&amp;#39;THEMENAME_&amp;#39;&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">))&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">{&lt;/span>
+&lt;span style="color:#000">$new_suggestions&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">[&lt;/span>
+str_replace&lt;span style="color:#ce5c00;font-weight:bold">(&lt;/span>&lt;span style="color:#4e9a06">&amp;#39;THEMENAME_&amp;#39;&lt;/span>, &lt;span style="color:#4e9a06">&amp;#39;&amp;#39;&lt;/span>, &lt;span style="color:#000">$suggestions&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">[&lt;/span>&lt;span style="color:#000">$i&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">])&lt;/span>,
+str_replace&lt;span style="color:#ce5c00;font-weight:bold">(&lt;/span>&lt;span style="color:#4e9a06">&amp;#39;THEMENAME_&amp;#39;&lt;/span>, &lt;span style="color:#4e9a06">&amp;#39;wxt_bootstrap_&amp;#39;&lt;/span>, &lt;span style="color:#000">$suggestions&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">[&lt;/span>&lt;span style="color:#000">$i&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">])&lt;/span>,
+&lt;span style="color:#ce5c00;font-weight:bold">]&lt;/span>&lt;span style="color:#000;font-weight:bold">;&lt;/span>
+array_splice&lt;span style="color:#ce5c00;font-weight:bold">(&lt;/span>&lt;span style="color:#000">$suggestions&lt;/span>, &lt;span style="color:#000">$i&lt;/span>, 0, &lt;span style="color:#000">$new_suggestions&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">)&lt;/span>&lt;span style="color:#000;font-weight:bold">;&lt;/span>
+&lt;span style="color:#000">$i&lt;/span> +&lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span> 2&lt;span style="color:#000;font-weight:bold">;&lt;/span>
+&lt;span style="color:#ce5c00;font-weight:bold">}&lt;/span>
+&lt;span style="color:#ce5c00;font-weight:bold">}&lt;/span>
+&lt;span style="color:#ce5c00;font-weight:bold">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="programmatic-logic">Programmatic Logic&lt;/h3>
 &lt;p>The following provides an example of how you can configure your sub theme to be installed as the default on a module install:&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-php" data-lang="php">&lt;span style="color:#8f5902;font-style:italic">/**
 &lt;/span>&lt;span style="color:#8f5902;font-style:italic"> * Implements hook_modules_installed().

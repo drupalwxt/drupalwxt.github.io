@@ -53,7 +53,7 @@ English
 </li>
 </ul>
 </div>
-<div class="navbar-nav d-none d-lg-block"><input type=search class="form-control td-search-input" placeholder="&#xf002; Search WxT" aria-label="Search WxT" autocomplete=off data-offline-search-index-json-src=../../../../offline-search-index.d9ad2fd13cfbf2f5dac798a990e2ebc2.json data-offline-search-base-href=../../../../ data-offline-search-max-results=10>
+<div class="navbar-nav d-none d-lg-block"><input type=search class="form-control td-search-input" placeholder="&#xf002; Search WxT" aria-label="Search WxT" autocomplete=off data-offline-search-index-json-src=../../../../offline-search-index.b95c05ee6a33abc837130a3787d2ab09.json data-offline-search-base-href=../../../../ data-offline-search-max-results=10>
 </div>
 </nav>
 </header>
@@ -64,7 +64,7 @@ English
 <script>$(function(){$("#td-section-nav a").removeClass("active"),$("#td-section-nav #m-endocsenvironmentcontainers").addClass("active"),$("#td-section-nav #m-endocsenvironmentcontainers-li span").addClass("td-sidebar-nav-active-item"),$("#td-section-nav #m-endocsenvironmentcontainers").parents("li").addClass("active-path"),$("#td-section-nav li.active-path").addClass("show"),$("#td-section-nav li.active-path").children("input").prop('checked',!0),$("#td-section-nav #m-endocsenvironmentcontainers-li").siblings("li").addClass("show"),$("#td-section-nav #m-endocsenvironmentcontainers-li").children("ul").children("li").addClass("show"),$("#td-sidebar-menu").toggleClass("d-none")})</script>
 <div id=td-sidebar-menu class="td-sidebar__inner d-none">
 <form class="td-sidebar__search d-flex align-items-center">
-<input type=search class="form-control td-search-input" placeholder="&#xf002; Search WxT" aria-label="Search WxT" autocomplete=off data-offline-search-index-json-src=../../../../offline-search-index.d9ad2fd13cfbf2f5dac798a990e2ebc2.json data-offline-search-base-href=../../../../ data-offline-search-max-results=10>
+<input type=search class="form-control td-search-input" placeholder="&#xf002; Search WxT" aria-label="Search WxT" autocomplete=off data-offline-search-index-json-src=../../../../offline-search-index.b95c05ee6a33abc837130a3787d2ab09.json data-offline-search-base-href=../../../../ data-offline-search-max-results=10>
 <button class="btn btn-link td-sidebar__toggle d-md-none p-0 ml-3 fas fa-bars" type=button data-toggle=collapse data-target=#td-section-nav aria-controls=td-docs-nav aria-expanded=false aria-label="Toggle section navigation">
 </button>
 </form>
@@ -153,7 +153,9 @@ English
 <li>
 <ul>
 <li><a href=#linux-environments>Linux Environments</a></li>
-<li><a href=#macosx-environments>MacOSX Environments</a></li>
+<li><a href=#modern-osx-environments>Modern OSX Environments</a></li>
+<li><a href=#legacy-osx-environments-mutagen>Legacy OSX Environments (Mutagen)</a></li>
+<li><a href=#cleanup>Cleanup</a></li>
 </ul>
 </li>
 </ul>
@@ -259,12 +261,24 @@ make drupal_install
 ./docker/bin/drush migrate:import --group wxt --tag <span style=color:#4e9a06>&#39;Core&#39;</span> <span style=color:#ce5c00;font-weight:700>&amp;&amp;</span> <span style=color:#4e9a06>\
 </span><span style=color:#4e9a06></span>./docker/bin/drush migrate:import --group gcweb --tag <span style=color:#4e9a06>&#39;Core&#39;</span> <span style=color:#ce5c00;font-weight:700>&amp;&amp;</span> <span style=color:#4e9a06>\
 </span><span style=color:#4e9a06></span>./docker/bin/drush migrate:import --group gcweb --tag <span style=color:#4e9a06>&#39;Menu&#39;</span>
-</code></pre></div><h2 id=macosx-environments>MacOSX Environments</h2>
-<p>There are currently known performance issues related to the file mounting in <code>Docker for Desktop</code></p>
+</code></pre></div><h2 id=modern-osx-environments>Modern OSX Environments</h2>
+<p>If you have <code>Docker for Desktop</code> and a new enough OSX environment (Monterey or higher) then the steps are the exact same as those for the Linux environment given above.</p>
+<p>All that is required in advance is to enable <code>VirtioFS</code> accelerated directory sharing which you can see in the attached picture below.</p>
+<div class="card rounded p-2 td-post-card mb-4 mt-4" style=max-width:917px>
+<img class=card-img-top src=../../../../en/docs/environment/containers/virtiofs_hua445c97bc04e8c98a3e33391a65ffc40_78771_0x300_resize_catmullrom_3.png width=907 height=300>
+<div class="card-body px-0 pt-2 pb-0">
+<p class=card-text>
+Docker for Desktop VirtioFS
+<small class=text-muted><br>Image: Drupal / CC-BY-CA</small></p>
+</div>
+</div>
+<p>For older environments you may still use mutagen which is discussed below.</p>
+<h2 id=legacy-osx-environments-mutagen>Legacy OSX Environments (Mutagen)</h2>
+<p>While this is fixed with the new virtualization framework discussed above.</p>
+<p>For older environments mutagen will have to be used instead and as such requires a few additional steps.</p>
 <ul>
 <li><strong><a href=https://github.com/docker/roadmap/issues/7>Improve Mac File system performance</a></strong></li>
 </ul>
-<p>This is supposed to be fixed with the new virtualization framework in MacOSX 11.1+ but for the moment mutagen should be used.</p>
 <div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-sh data-lang=sh><span style=color:#8f5902;font-style:italic># Mutagen Setup</span>
 <span style=color:#204a87>export</span> <span style=color:#000>VOLUME</span><span style=color:#ce5c00;font-weight:700>=</span>site-wxt-mutagen-cache
 docker volume create <span style=color:#000>$VOLUME</span>
@@ -299,12 +313,13 @@ make drupal_install
 ./docker/bin/drush migrate:import --group wxt --tag <span style=color:#4e9a06>&#39;Core&#39;</span> <span style=color:#ce5c00;font-weight:700>&amp;&amp;</span> <span style=color:#4e9a06>\
 </span><span style=color:#4e9a06></span>./docker/bin/drush migrate:import --group gcweb --tag <span style=color:#4e9a06>&#39;Core&#39;</span> <span style=color:#ce5c00;font-weight:700>&amp;&amp;</span> <span style=color:#4e9a06>\
 </span><span style=color:#4e9a06></span>./docker/bin/drush migrate:import --group gcweb --tag <span style=color:#4e9a06>&#39;Menu&#39;</span>
-</code></pre></div><p>Afterwards if you wish to have an empty docker environment you may execute the following commands.</p>
-<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-sh data-lang=sh>mutagen sync terminate &lt;sync_xxxxx&gt;
-docker rm <span style=color:#204a87;font-weight:700>$(</span>docker ps -a -q<span style=color:#204a87;font-weight:700>)</span>
+</code></pre></div><h2 id=cleanup>Cleanup</h2>
+<p>If you wish to have a pristine docker environment you may execute the following commands.</p>
+<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-sh data-lang=sh>docker rm <span style=color:#204a87;font-weight:700>$(</span>docker ps -a -q<span style=color:#204a87;font-weight:700>)</span>
 docker rmi <span style=color:#204a87;font-weight:700>$(</span>docker images -q<span style=color:#204a87;font-weight:700>)</span> --force
 docker volume prune -f
-
+</code></pre></div><p>For those still using Mutagen you may also need to execute the following command:</p>
+<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-sh data-lang=sh>mutagen sync terminate &lt;sync_xxxxx&gt;
 </code></pre></div>
 <div class=section-index>
 </div>
@@ -324,7 +339,7 @@ Sorry to hear that. Please <a href=https://github.com/drupalwxt/drupalwxt.github
 <script>const yesButton=document.querySelector('.feedback--answer-yes'),noButton=document.querySelector('.feedback--answer-no'),yesResponse=document.querySelector('.feedback--response-yes'),noResponse=document.querySelector('.feedback--response-no'),disableButtons=()=>{yesButton.disabled=!0,noButton.disabled=!0},sendFeedback=b=>{if(typeof ga!='function')return;const a={command:'send',hitType:'event',category:'Helpful',action:'click',label:window.location.pathname,value:b};ga(a.command,a.hitType,a.category,a.action,a.label,a.value)};yesButton.addEventListener('click',()=>{yesResponse.classList.add('feedback--response__visible'),disableButtons(),sendFeedback(1)}),noButton.addEventListener('click',()=>{noResponse.classList.add('feedback--response__visible'),disableButtons(),sendFeedback(0)})</script>
 <br>
 <div class="text-muted mt-5 pt-3 border-top">
-Last modified 2022-10-22: <a href=https://github.com/drupalwxt/drupalwxt.github.io/commit/c82f74f4cd21c0910326c1b5338a4a8bd6b1b090>feat(doc): Update releases (c82f74f)</a>
+Last modified 2022-10-23: <a href=https://github.com/drupalwxt/drupalwxt.github.io/commit/5ab7a932f0f0e3f8796e4c2b9315b1df26d4b21d>feat(docs): Minor updates to Docs (5ab7a93)</a>
 </div>
 </div>
 </main>

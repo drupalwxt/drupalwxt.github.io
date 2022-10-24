@@ -53,7 +53,7 @@ English
 </li>
 </ul>
 </div>
-<div class="navbar-nav d-none d-lg-block"><input type=search class="form-control td-search-input" placeholder="&#xf002; Search WxT" aria-label="Search WxT" autocomplete=off data-offline-search-index-json-src=../../../../offline-search-index.d9ad2fd13cfbf2f5dac798a990e2ebc2.json data-offline-search-base-href=../../../../ data-offline-search-max-results=10>
+<div class="navbar-nav d-none d-lg-block"><input type=search class="form-control td-search-input" placeholder="&#xf002; Search WxT" aria-label="Search WxT" autocomplete=off data-offline-search-index-json-src=../../../../offline-search-index.b95c05ee6a33abc837130a3787d2ab09.json data-offline-search-base-href=../../../../ data-offline-search-max-results=10>
 </div>
 </nav>
 </header>
@@ -756,8 +756,25 @@ drush cc css-js
 <h2 id=notes>Notes</h2>
 <h3 id=inheriting-block-templates>Inheriting Block Templates</h3>
 <p>If the theme you are extending has custom block templates these won&rsquo;t be immediately inherited because a sub-theme creates copies of all the blocks in the parent theme and renames them with the sub-theme&rsquo;s name as a prefix. Twig block templates are derived from the block&rsquo;s name, so this breaks the link between these templates and their block.</p>
-<p>To fix this problem it requires a hook in the sub-theme by adding the following code snippet to the <code>THEMENAME.theme</code> file:</p>
-<h3 id=programmatic-logic>Programmatic Logic</h3>
+<p>Fixing this problem currently requires a hook in the <code>THEMENAME.theme</code> file and should have the following contents:</p>
+<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-sh data-lang=sh>/**
+ * Implements hook_theme_suggestions_HOOK_alter<span style=color:#ce5c00;font-weight:700>()</span>.
+ */
+<span style=color:#204a87;font-weight:700>function</span> THEMENAME_theme_suggestions_block_alter<span style=color:#ce5c00;font-weight:700>(</span><span style=color:#000;font-weight:700>&amp;</span><span style=color:#000>$suggestions</span>, <span style=color:#000>$variables</span><span style=color:#ce5c00;font-weight:700>)</span> <span style=color:#ce5c00;font-weight:700>{</span>
+  // Load theme suggestions <span style=color:#204a87;font-weight:700>for</span> blocks from parent theme.
+  // https://www.drupal.org/project/wxt/issues/3310485#comment-14715969
+  <span style=color:#204a87;font-weight:700>for</span> <span style=color:#ce5c00;font-weight:700>(</span><span style=color:#000>$i</span> <span style=color:#ce5c00;font-weight:700>=</span> 0<span style=color:#000;font-weight:700>;</span> <span style=color:#000>$i</span> &lt; count<span style=color:#ce5c00;font-weight:700>(</span><span style=color:#000>$suggestions</span><span style=color:#ce5c00;font-weight:700>)</span><span style=color:#000;font-weight:700>;</span> <span style=color:#000>$i</span>++<span style=color:#ce5c00;font-weight:700>)</span> <span style=color:#ce5c00;font-weight:700>{</span>
+    <span style=color:#204a87;font-weight:700>if</span> <span style=color:#ce5c00;font-weight:700>(</span>str_contains<span style=color:#ce5c00;font-weight:700>(</span><span style=color:#000>$suggestions</span><span style=color:#ce5c00;font-weight:700>[</span><span style=color:#000>$i</span><span style=color:#ce5c00;font-weight:700>]</span>, <span style=color:#4e9a06>&#39;THEMENAME_&#39;</span><span style=color:#ce5c00;font-weight:700>))</span> <span style=color:#ce5c00;font-weight:700>{</span>
+      <span style=color:#000>$new_suggestions</span> <span style=color:#ce5c00;font-weight:700>=</span> <span style=color:#ce5c00;font-weight:700>[</span>
+        str_replace<span style=color:#ce5c00;font-weight:700>(</span><span style=color:#4e9a06>&#39;THEMENAME_&#39;</span>, <span style=color:#4e9a06>&#39;&#39;</span>, <span style=color:#000>$suggestions</span><span style=color:#ce5c00;font-weight:700>[</span><span style=color:#000>$i</span><span style=color:#ce5c00;font-weight:700>])</span>,
+        str_replace<span style=color:#ce5c00;font-weight:700>(</span><span style=color:#4e9a06>&#39;THEMENAME_&#39;</span>, <span style=color:#4e9a06>&#39;wxt_bootstrap_&#39;</span>, <span style=color:#000>$suggestions</span><span style=color:#ce5c00;font-weight:700>[</span><span style=color:#000>$i</span><span style=color:#ce5c00;font-weight:700>])</span>,
+      <span style=color:#ce5c00;font-weight:700>]</span><span style=color:#000;font-weight:700>;</span>
+      array_splice<span style=color:#ce5c00;font-weight:700>(</span><span style=color:#000>$suggestions</span>, <span style=color:#000>$i</span>, 0, <span style=color:#000>$new_suggestions</span><span style=color:#ce5c00;font-weight:700>)</span><span style=color:#000;font-weight:700>;</span>
+      <span style=color:#000>$i</span> +<span style=color:#ce5c00;font-weight:700>=</span> 2<span style=color:#000;font-weight:700>;</span>
+    <span style=color:#ce5c00;font-weight:700>}</span>
+  <span style=color:#ce5c00;font-weight:700>}</span>
+<span style=color:#ce5c00;font-weight:700>}</span>
+</code></pre></div><h3 id=programmatic-logic>Programmatic Logic</h3>
 <p>The following provides an example of how you can configure your sub theme to be installed as the default on a module install:</p>
 <div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-php data-lang=php><span style=color:#8f5902;font-style:italic>/**
 </span><span style=color:#8f5902;font-style:italic> * Implements hook_modules_installed().

@@ -52,7 +52,7 @@ English
 </li>
 </ul>
 </div>
-<div class="navbar-nav d-none d-lg-block"><input type=search class="form-control td-search-input" placeholder="&#xf002; Search WxT" aria-label="Search WxT" autocomplete=off data-offline-search-index-json-src=../../../../offline-search-index.d9ad2fd13cfbf2f5dac798a990e2ebc2.json data-offline-search-base-href=../../../../ data-offline-search-max-results=10>
+<div class="navbar-nav d-none d-lg-block"><input type=search class="form-control td-search-input" placeholder="&#xf002; Search WxT" aria-label="Search WxT" autocomplete=off data-offline-search-index-json-src=../../../../offline-search-index.b95c05ee6a33abc837130a3787d2ab09.json data-offline-search-base-href=../../../../ data-offline-search-max-results=10>
 </div>
 </nav>
 </header>
@@ -63,7 +63,7 @@ English
 <script>$(function(){$("#td-section-nav a").removeClass("active"),$("#td-section-nav #m-endocsdevelopmenttheming").addClass("active"),$("#td-section-nav #m-endocsdevelopmenttheming-li span").addClass("td-sidebar-nav-active-item"),$("#td-section-nav #m-endocsdevelopmenttheming").parents("li").addClass("active-path"),$("#td-section-nav li.active-path").addClass("show"),$("#td-section-nav li.active-path").children("input").prop('checked',!0),$("#td-section-nav #m-endocsdevelopmenttheming-li").siblings("li").addClass("show"),$("#td-section-nav #m-endocsdevelopmenttheming-li").children("ul").children("li").addClass("show"),$("#td-sidebar-menu").toggleClass("d-none")})</script>
 <div id=td-sidebar-menu class="td-sidebar__inner d-none">
 <form class="td-sidebar__search d-flex align-items-center">
-<input type=search class="form-control td-search-input" placeholder="&#xf002; Search WxT" aria-label="Search WxT" autocomplete=off data-offline-search-index-json-src=../../../../offline-search-index.d9ad2fd13cfbf2f5dac798a990e2ebc2.json data-offline-search-base-href=../../../../ data-offline-search-max-results=10>
+<input type=search class="form-control td-search-input" placeholder="&#xf002; Search WxT" aria-label="Search WxT" autocomplete=off data-offline-search-index-json-src=../../../../offline-search-index.b95c05ee6a33abc837130a3787d2ab09.json data-offline-search-base-href=../../../../ data-offline-search-max-results=10>
 <button class="btn btn-link td-sidebar__toggle d-md-none p-0 ml-3 fas fa-bars" type=button data-toggle=collapse data-target=#td-section-nav aria-controls=td-docs-nav aria-expanded=false aria-label="Toggle section navigation">
 </button>
 </form>
@@ -247,8 +247,25 @@ drush cc css-js
 <h2 id=notes>Notes</h2>
 <h3 id=inheriting-block-templates>Inheriting Block Templates</h3>
 <p>If the theme you are extending has custom block templates these won&rsquo;t be immediately inherited because a sub-theme creates copies of all the blocks in the parent theme and renames them with the sub-theme&rsquo;s name as a prefix. Twig block templates are derived from the block&rsquo;s name, so this breaks the link between these templates and their block.</p>
-<p>To fix this problem it requires a hook in the sub-theme by adding the following code snippet to the <code>THEMENAME.theme</code> file:</p>
-<h3 id=programmatic-logic>Programmatic Logic</h3>
+<p>Fixing this problem currently requires a hook in the <code>THEMENAME.theme</code> file and should have the following contents:</p>
+<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-sh data-lang=sh>/**
+ * Implements hook_theme_suggestions_HOOK_alter<span style=color:#ce5c00;font-weight:700>()</span>.
+ */
+<span style=color:#204a87;font-weight:700>function</span> THEMENAME_theme_suggestions_block_alter<span style=color:#ce5c00;font-weight:700>(</span><span style=color:#000;font-weight:700>&amp;</span><span style=color:#000>$suggestions</span>, <span style=color:#000>$variables</span><span style=color:#ce5c00;font-weight:700>)</span> <span style=color:#ce5c00;font-weight:700>{</span>
+  // Load theme suggestions <span style=color:#204a87;font-weight:700>for</span> blocks from parent theme.
+  // https://www.drupal.org/project/wxt/issues/3310485#comment-14715969
+  <span style=color:#204a87;font-weight:700>for</span> <span style=color:#ce5c00;font-weight:700>(</span><span style=color:#000>$i</span> <span style=color:#ce5c00;font-weight:700>=</span> 0<span style=color:#000;font-weight:700>;</span> <span style=color:#000>$i</span> &lt; count<span style=color:#ce5c00;font-weight:700>(</span><span style=color:#000>$suggestions</span><span style=color:#ce5c00;font-weight:700>)</span><span style=color:#000;font-weight:700>;</span> <span style=color:#000>$i</span>++<span style=color:#ce5c00;font-weight:700>)</span> <span style=color:#ce5c00;font-weight:700>{</span>
+    <span style=color:#204a87;font-weight:700>if</span> <span style=color:#ce5c00;font-weight:700>(</span>str_contains<span style=color:#ce5c00;font-weight:700>(</span><span style=color:#000>$suggestions</span><span style=color:#ce5c00;font-weight:700>[</span><span style=color:#000>$i</span><span style=color:#ce5c00;font-weight:700>]</span>, <span style=color:#4e9a06>&#39;THEMENAME_&#39;</span><span style=color:#ce5c00;font-weight:700>))</span> <span style=color:#ce5c00;font-weight:700>{</span>
+      <span style=color:#000>$new_suggestions</span> <span style=color:#ce5c00;font-weight:700>=</span> <span style=color:#ce5c00;font-weight:700>[</span>
+        str_replace<span style=color:#ce5c00;font-weight:700>(</span><span style=color:#4e9a06>&#39;THEMENAME_&#39;</span>, <span style=color:#4e9a06>&#39;&#39;</span>, <span style=color:#000>$suggestions</span><span style=color:#ce5c00;font-weight:700>[</span><span style=color:#000>$i</span><span style=color:#ce5c00;font-weight:700>])</span>,
+        str_replace<span style=color:#ce5c00;font-weight:700>(</span><span style=color:#4e9a06>&#39;THEMENAME_&#39;</span>, <span style=color:#4e9a06>&#39;wxt_bootstrap_&#39;</span>, <span style=color:#000>$suggestions</span><span style=color:#ce5c00;font-weight:700>[</span><span style=color:#000>$i</span><span style=color:#ce5c00;font-weight:700>])</span>,
+      <span style=color:#ce5c00;font-weight:700>]</span><span style=color:#000;font-weight:700>;</span>
+      array_splice<span style=color:#ce5c00;font-weight:700>(</span><span style=color:#000>$suggestions</span>, <span style=color:#000>$i</span>, 0, <span style=color:#000>$new_suggestions</span><span style=color:#ce5c00;font-weight:700>)</span><span style=color:#000;font-weight:700>;</span>
+      <span style=color:#000>$i</span> +<span style=color:#ce5c00;font-weight:700>=</span> 2<span style=color:#000;font-weight:700>;</span>
+    <span style=color:#ce5c00;font-weight:700>}</span>
+  <span style=color:#ce5c00;font-weight:700>}</span>
+<span style=color:#ce5c00;font-weight:700>}</span>
+</code></pre></div><h3 id=programmatic-logic>Programmatic Logic</h3>
 <p>The following provides an example of how you can configure your sub theme to be installed as the default on a module install:</p>
 <div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-php data-lang=php><span style=color:#8f5902;font-style:italic>/**
 </span><span style=color:#8f5902;font-style:italic> * Implements hook_modules_installed().
@@ -309,7 +326,7 @@ Sorry to hear that. Please <a href=https://github.com/drupalwxt/drupalwxt.github
 <script>const yesButton=document.querySelector('.feedback--answer-yes'),noButton=document.querySelector('.feedback--answer-no'),yesResponse=document.querySelector('.feedback--response-yes'),noResponse=document.querySelector('.feedback--response-no'),disableButtons=()=>{yesButton.disabled=!0,noButton.disabled=!0},sendFeedback=b=>{if(typeof ga!='function')return;const a={command:'send',hitType:'event',category:'Helpful',action:'click',label:window.location.pathname,value:b};ga(a.command,a.hitType,a.category,a.action,a.label,a.value)};yesButton.addEventListener('click',()=>{yesResponse.classList.add('feedback--response__visible'),disableButtons(),sendFeedback(1)}),noButton.addEventListener('click',()=>{noResponse.classList.add('feedback--response__visible'),disableButtons(),sendFeedback(0)})</script>
 <br>
 <div class="text-muted mt-5 pt-3 border-top">
-Last modified 2022-01-03: <a href=https://github.com/drupalwxt/drupalwxt.github.io/commit/5bd5fa01122eb67d18249d077cd4dbd19afc7d5a>feat(doc): Add sub-theme section (5bd5fa0)</a>
+Last modified 2022-10-23: <a href=https://github.com/drupalwxt/drupalwxt.github.io/commit/5ab7a932f0f0e3f8796e4c2b9315b1df26d4b21d>feat(docs): Minor updates to Docs (5ab7a93)</a>
 </div>
 </div>
 </main>

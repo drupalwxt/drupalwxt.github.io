@@ -26,12 +26,24 @@ make drupal_install
 ./docker/bin/drush migrate:import --group wxt --tag &lt;span style="color:#4e9a06">&amp;#39;Core&amp;#39;&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">&amp;amp;&amp;amp;&lt;/span> &lt;span style="color:#4e9a06">\
 &lt;/span>&lt;span style="color:#4e9a06">&lt;/span>./docker/bin/drush migrate:import --group gcweb --tag &lt;span style="color:#4e9a06">&amp;#39;Core&amp;#39;&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">&amp;amp;&amp;amp;&lt;/span> &lt;span style="color:#4e9a06">\
 &lt;/span>&lt;span style="color:#4e9a06">&lt;/span>./docker/bin/drush migrate:import --group gcweb --tag &lt;span style="color:#4e9a06">&amp;#39;Menu&amp;#39;&lt;/span>
-&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="macosx-environments">MacOSX Environments&lt;/h2>
-&lt;p>There are currently known performance issues related to the file mounting in &lt;code>Docker for Desktop&lt;/code>&lt;/p>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="modern-osx-environments">Modern OSX Environments&lt;/h2>
+&lt;p>If you have &lt;code>Docker for Desktop&lt;/code> and a new enough OSX environment (Monterey or higher) then the steps are the exact same as those for the Linux environment given above.&lt;/p>
+&lt;p>All that is required in advance is to enable &lt;code>VirtioFS&lt;/code> accelerated directory sharing which you can see in the attached picture below.&lt;/p>
+&lt;div class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 917px">
+&lt;img class="card-img-top" src="../../../en/docs/environment/containers/virtiofs_hua445c97bc04e8c98a3e33391a65ffc40_78771_0x300_resize_catmullrom_3.png" width="907" height="300">
+&lt;div class="card-body px-0 pt-2 pb-0">
+&lt;p class="card-text">
+Docker for Desktop VirtioFS
+&lt;small class="text-muted">&lt;br/>Image: Drupal / CC-BY-CA&lt;/small>&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;p>For older environments you may still use mutagen which is discussed below.&lt;/p>
+&lt;h2 id="legacy-osx-environments-mutagen">Legacy OSX Environments (Mutagen)&lt;/h2>
+&lt;p>While this is fixed with the new virtualization framework discussed above.&lt;/p>
+&lt;p>For older environments mutagen will have to be used instead and as such requires a few additional steps.&lt;/p>
 &lt;ul>
 &lt;li>&lt;strong>&lt;a href="https://github.com/docker/roadmap/issues/7">Improve Mac File system performance&lt;/a>&lt;/strong>&lt;/li>
 &lt;/ul>
-&lt;p>This is supposed to be fixed with the new virtualization framework in MacOSX 11.1+ but for the moment mutagen should be used.&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-sh" data-lang="sh">&lt;span style="color:#8f5902;font-style:italic"># Mutagen Setup&lt;/span>
 &lt;span style="color:#204a87">export&lt;/span> &lt;span style="color:#000">VOLUME&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span>site-wxt-mutagen-cache
 docker volume create &lt;span style="color:#000">$VOLUME&lt;/span>
@@ -59,9 +71,11 @@ make drupal_install
 ./docker/bin/drush migrate:import --group wxt --tag &lt;span style="color:#4e9a06">&amp;#39;Core&amp;#39;&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">&amp;amp;&amp;amp;&lt;/span> &lt;span style="color:#4e9a06">\
 &lt;/span>&lt;span style="color:#4e9a06">&lt;/span>./docker/bin/drush migrate:import --group gcweb --tag &lt;span style="color:#4e9a06">&amp;#39;Core&amp;#39;&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">&amp;amp;&amp;amp;&lt;/span> &lt;span style="color:#4e9a06">\
 &lt;/span>&lt;span style="color:#4e9a06">&lt;/span>./docker/bin/drush migrate:import --group gcweb --tag &lt;span style="color:#4e9a06">&amp;#39;Menu&amp;#39;&lt;/span>
-&lt;/code>&lt;/pre>&lt;/div>&lt;p>Afterwards if you wish to have an empty docker environment you may execute the following commands.&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-sh" data-lang="sh">mutagen sync terminate &amp;lt;sync_xxxxx&amp;gt;
-docker rm &lt;span style="color:#204a87;font-weight:bold">$(&lt;/span>docker ps -a -q&lt;span style="color:#204a87;font-weight:bold">)&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="cleanup">Cleanup&lt;/h2>
+&lt;p>If you wish to have a pristine docker environment you may execute the following commands.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-sh" data-lang="sh">docker rm &lt;span style="color:#204a87;font-weight:bold">$(&lt;/span>docker ps -a -q&lt;span style="color:#204a87;font-weight:bold">)&lt;/span>
 docker rmi &lt;span style="color:#204a87;font-weight:bold">$(&lt;/span>docker images -q&lt;span style="color:#204a87;font-weight:bold">)&lt;/span> --force
 docker volume prune -f
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>For those still using Mutagen you may also need to execute the following command:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-sh" data-lang="sh">mutagen sync terminate &amp;lt;sync_xxxxx&amp;gt;
 &lt;/code>&lt;/pre>&lt;/div>&lt;!-- Links Referenced --></description></item></channel></rss>
