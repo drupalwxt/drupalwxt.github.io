@@ -131,6 +131,82 @@ We try our best to have security releases of Drupal Core within &lt;strong>24-72
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
+&lt;td>&lt;strong>4.4.0&lt;/strong>&lt;/td>
+&lt;td>&lt;strong>2022-11-26&lt;/strong>&lt;/td>
+&lt;td>&lt;p>Features / Updates:&lt;/p>
+&lt;ul>
+&lt;li>Updates for Drupal Core
+&lt;ul>
+&lt;li>Patch (bugfix) release of Drupal Core to &lt;code>v9.4.8&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Updates for WxT
+&lt;ul>
+&lt;li>Update to D9 core 9.4.x &lt;a href="https://www.drupal.org/node/3284468">#3284468&lt;/a>&lt;/li>
+&lt;li>Remove Lightning from composer required for upgrade path in v9.3.x branch&lt;/li>
+&lt;li>Can&amp;rsquo;t add multiple fontawesome icons in CKEditor &lt;a href="https://www.drupal.org/node/3316393">#3316393&lt;/a>&lt;/li>
+&lt;li>Fontawesome icons not working with Limit Allowed HTML &lt;a href="https://www.drupal.org/node/3315230">#3315230&lt;/a>&lt;/li>
+&lt;li>Text formats using non-ckeditor editors give error &lt;a href="https://www.drupal.org/node/3314829">#3314829&lt;/a>&lt;/li>
+&lt;li>Layout Builder and Ajax Submit Error &lt;a href="https://www.drupal.org/node/3317048">#3317048&lt;/a>&lt;/li>
+&lt;li>Update of some contributed modules (admin_toolbar, diff, entityqueue, search_api, token_filter, &amp;hellip;)&lt;/li>
+&lt;li>Custom block type for WET Carousel &lt;a href="https://www.drupal.org/node/3313685">#3313685&lt;/a>&lt;/li>
+&lt;li>TypeError when exporting config with wxt_ext_config &lt;a href="https://www.drupal.org/node/3315821">#3315821&lt;/a>&lt;/li>
+&lt;li>Make webform content type translatable &lt;a href="https://www.drupal.org/node/3320521">#3320521&lt;/a>&lt;/li>
+&lt;li>Custom block type for WET Carousel &lt;a href="https://www.drupal.org/node/3313685">#3313685&lt;/a>&lt;/li>
+&lt;li>WxT Carousel support nolink &lt;a href="https://www.drupal.org/node/3319559">#3319559&lt;/a>&lt;/li>
+&lt;li>Improve block_content management &lt;a href="https://www.drupal.org/node/3318099">#3318099&lt;/a>&lt;/li>
+&lt;li>Move wxt_ext_layout config to optional &lt;a href="https://www.drupal.org/node/3319806">#3319806&lt;/a>&lt;/li>
+&lt;li>wxt_ext_media PHP 8.1 deprecation &lt;a href="https://www.drupal.org/node/3322200">#3322200&lt;/a>&lt;/li>
+&lt;li>Update the PageTitle block patch &lt;a href="https://www.drupal.org/node/3322590">#3322590&lt;/a>&lt;/li>
+&lt;li>Update drupal/menu_block to 1.10.0 &lt;a href="https://www.drupal.org/node/3304838">#3304838&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Updates for WxT Library
+&lt;ul>
+&lt;li>DateTimeBlock class $time can sometimes not be an integer &lt;a href="https://www.drupal.org/node/3316405">#3316405&lt;/a>&lt;/li>
+&lt;li>Support horizontal main menu in GCWeb &lt;a href="https://www.drupal.org/node/3310969">#3310969&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Updates for WxT Bootstrap
+&lt;ul>
+&lt;li>Canada.ca flyout menu doesn&amp;rsquo;t work (missing french menu) &lt;a href="https://www.drupal.org/node/3236799">#3236799&lt;/a>&lt;/li>
+&lt;li>Update starterkit readme file &lt;a href="https://www.drupal.org/node/3310485">#3310485&lt;/a>&lt;/li>
+&lt;li>Support horizontal main menu in GCWeb &lt;a href="https://www.drupal.org/node/3310969">#3310969&lt;/a>&lt;/li>
+&lt;li>Horizontal main menu more links &lt;a href="https://www.drupal.org/node/3321303">#3321303&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>Upgrade path:&lt;/p>
+&lt;blockquote>
+&lt;p>&lt;strong>Important&lt;/strong>: Please backup your database before running the upgrade process for this release.&lt;/p>
+&lt;/blockquote>
+&lt;ul>
+&lt;li>
+&lt;p>Update your codebase:&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>composer update&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>Run database updates:&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>drush cache:rebuild&lt;/code>&lt;/li>
+&lt;li>&lt;code>drush updatedb&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>Run WxT configuration updates:&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>drush cache:rebuild&lt;/code>&lt;/li>
+&lt;li>&lt;code>drush update:wxt&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>&lt;strong>Note(s)&lt;/strong>:&lt;/p>
+&lt;p>Lightning has been removed from composer required for upgrade path in v9.3.x branch.&lt;/p>
+&lt;/td>
+&lt;/tr>
+&lt;tr>
 &lt;td>&lt;strong>4.3.4&lt;/strong>&lt;/td>
 &lt;td>&lt;strong>2022-10-01&lt;/strong>&lt;/td>
 &lt;td>&lt;p>Features / Updates:&lt;/p>
@@ -469,69 +545,6 @@ We try our best to have security releases of Drupal Core within &lt;strong>24-72
 &lt;blockquote>
 &lt;p>&lt;strong>Note&lt;/strong>: Any Lightning sub modules will also be uninstalled.&lt;/p>
 &lt;/blockquote>
-&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>&lt;strong>4.3.0&lt;/strong>&lt;/td>
-&lt;td>&lt;strong>2022-06-21&lt;/strong>&lt;/td>
-&lt;td>&lt;p>Features / Updates:&lt;/p>
-&lt;ul>
-&lt;li>Updates for Drupal Core (v9.3.16)
-&lt;ul>
-&lt;li>&lt;a href="https://www.drupal.org/sa-core-2022-011">SA-core-2022-011&lt;/a>&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>Updates for WxT
-&lt;ul>
-&lt;li>Add config link for modules &lt;a href="https://www.drupal.org/node/3291183">#3291183&lt;/a>&lt;/li>
-&lt;li>Hardcoded breadcrumb links to canada.ca &lt;a href="https://www.drupal.org/node/3291230">#3291230&lt;/a>&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>Updates for WxT Bootstrap
-&lt;ul>
-&lt;li>Footnotes template issue &lt;a href="https://www.drupal.org/node/3285890">#3285890&lt;/a>&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>Updates for WxT Library
-&lt;ul>
-&lt;li>Add config link for modules &lt;a href="https://www.drupal.org/node/3291183">#3291183&lt;/a>&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;p>Upgrade path:&lt;/p>
-&lt;blockquote>
-&lt;p>Note: No special notes for this release.&lt;/p>
-&lt;/blockquote>
-&lt;ul>
-&lt;li>
-&lt;p>Update your codebase:&lt;/p>
-&lt;ul>
-&lt;li>&lt;code>composer update&lt;/code>&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>
-&lt;p>Run database updates:&lt;/p>
-&lt;ul>
-&lt;li>&lt;code>drush cache:rebuild&lt;/code>&lt;/li>
-&lt;li>&lt;code>drush updatedb&lt;/code>&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>
-&lt;p>Run Lightning configuration updates:&lt;/p>
-&lt;ul>
-&lt;li>&lt;code>drush cache:rebuild&lt;/code>&lt;/li>
-&lt;li>&lt;code>drush update:lightning&lt;/code>&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>
-&lt;p>Run WxT configuration updates:&lt;/p>
-&lt;ul>
-&lt;li>&lt;code>drush cache:rebuild&lt;/code>&lt;/li>
-&lt;li>&lt;code>drush update:wxt&lt;/code>&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;p>&lt;strong>Note:&lt;/strong> N/A&lt;/p>
 &lt;/td>
 &lt;/tr>
 &lt;/tbody>

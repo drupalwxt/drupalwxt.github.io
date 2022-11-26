@@ -60,7 +60,7 @@ English
 </li>
 </ul>
 </div>
-<div class="navbar-nav d-none d-lg-block"><input type=search class="form-control td-search-input" placeholder="&#xf002; Search WxT" aria-label="Search WxT" autocomplete=off data-offline-search-index-json-src=../../../../../offline-search-index.526b10a86008b896d8f4d1440e2e2ca7.json data-offline-search-base-href=../../../../../ data-offline-search-max-results=10>
+<div class="navbar-nav d-none d-lg-block"><input type=search class="form-control td-search-input" placeholder="&#xf002; Search WxT" aria-label="Search WxT" autocomplete=off data-offline-search-index-json-src=../../../../../offline-search-index.c6726313d95809131522febe4ab5314f.json data-offline-search-base-href=../../../../../ data-offline-search-max-results=10>
 </div>
 </nav>
 </header>
@@ -95,6 +95,82 @@ We try our best to have security releases of Drupal Core within <strong>24-72 ho
 </tr>
 </thead>
 <tbody>
+<tr>
+<td><strong>4.4.0</strong></td>
+<td><strong>2022-11-26</strong></td>
+<td><p>Features / Updates:</p>
+<ul>
+<li>Updates for Drupal Core
+<ul>
+<li>Patch (bugfix) release of Drupal Core to <code>v9.4.8</code></li>
+</ul>
+</li>
+<li>Updates for WxT
+<ul>
+<li>Update to D9 core 9.4.x <a href=https://www.drupal.org/node/3284468>#3284468</a></li>
+<li>Remove Lightning from composer required for upgrade path in v9.3.x branch</li>
+<li>Can&rsquo;t add multiple fontawesome icons in CKEditor <a href=https://www.drupal.org/node/3316393>#3316393</a></li>
+<li>Fontawesome icons not working with Limit Allowed HTML <a href=https://www.drupal.org/node/3315230>#3315230</a></li>
+<li>Text formats using non-ckeditor editors give error <a href=https://www.drupal.org/node/3314829>#3314829</a></li>
+<li>Layout Builder and Ajax Submit Error <a href=https://www.drupal.org/node/3317048>#3317048</a></li>
+<li>Update of some contributed modules (admin_toolbar, diff, entityqueue, search_api, token_filter, &mldr;)</li>
+<li>Custom block type for WET Carousel <a href=https://www.drupal.org/node/3313685>#3313685</a></li>
+<li>TypeError when exporting config with wxt_ext_config <a href=https://www.drupal.org/node/3315821>#3315821</a></li>
+<li>Make webform content type translatable <a href=https://www.drupal.org/node/3320521>#3320521</a></li>
+<li>Custom block type for WET Carousel <a href=https://www.drupal.org/node/3313685>#3313685</a></li>
+<li>WxT Carousel support nolink <a href=https://www.drupal.org/node/3319559>#3319559</a></li>
+<li>Improve block_content management <a href=https://www.drupal.org/node/3318099>#3318099</a></li>
+<li>Move wxt_ext_layout config to optional <a href=https://www.drupal.org/node/3319806>#3319806</a></li>
+<li>wxt_ext_media PHP 8.1 deprecation <a href=https://www.drupal.org/node/3322200>#3322200</a></li>
+<li>Update the PageTitle block patch <a href=https://www.drupal.org/node/3322590>#3322590</a></li>
+<li>Update drupal/menu_block to 1.10.0 <a href=https://www.drupal.org/node/3304838>#3304838</a></li>
+</ul>
+</li>
+<li>Updates for WxT Library
+<ul>
+<li>DateTimeBlock class $time can sometimes not be an integer <a href=https://www.drupal.org/node/3316405>#3316405</a></li>
+<li>Support horizontal main menu in GCWeb <a href=https://www.drupal.org/node/3310969>#3310969</a></li>
+</ul>
+</li>
+<li>Updates for WxT Bootstrap
+<ul>
+<li>Canada.ca flyout menu doesn&rsquo;t work (missing french menu) <a href=https://www.drupal.org/node/3236799>#3236799</a></li>
+<li>Update starterkit readme file <a href=https://www.drupal.org/node/3310485>#3310485</a></li>
+<li>Support horizontal main menu in GCWeb <a href=https://www.drupal.org/node/3310969>#3310969</a></li>
+<li>Horizontal main menu more links <a href=https://www.drupal.org/node/3321303>#3321303</a></li>
+</ul>
+</li>
+</ul>
+<p>Upgrade path:</p>
+<blockquote>
+<p><strong>Important</strong>: Please backup your database before running the upgrade process for this release.</p>
+</blockquote>
+<ul>
+<li>
+<p>Update your codebase:</p>
+<ul>
+<li><code>composer update</code></li>
+</ul>
+</li>
+<li>
+<p>Run database updates:</p>
+<ul>
+<li><code>drush cache:rebuild</code></li>
+<li><code>drush updatedb</code></li>
+</ul>
+</li>
+<li>
+<p>Run WxT configuration updates:</p>
+<ul>
+<li><code>drush cache:rebuild</code></li>
+<li><code>drush update:wxt</code></li>
+</ul>
+</li>
+</ul>
+<p><strong>Note(s)</strong>:</p>
+<p>Lightning has been removed from composer required for upgrade path in v9.3.x branch.</p>
+</td>
+</tr>
 <tr>
 <td><strong>4.3.4</strong></td>
 <td><strong>2022-10-01</strong></td>
@@ -434,69 +510,6 @@ We try our best to have security releases of Drupal Core within <strong>24-72 ho
 <blockquote>
 <p><strong>Note</strong>: Any Lightning sub modules will also be uninstalled.</p>
 </blockquote>
-</td>
-</tr>
-<tr>
-<td><strong>4.3.0</strong></td>
-<td><strong>2022-06-21</strong></td>
-<td><p>Features / Updates:</p>
-<ul>
-<li>Updates for Drupal Core (v9.3.16)
-<ul>
-<li><a href=https://www.drupal.org/sa-core-2022-011>SA-core-2022-011</a></li>
-</ul>
-</li>
-<li>Updates for WxT
-<ul>
-<li>Add config link for modules <a href=https://www.drupal.org/node/3291183>#3291183</a></li>
-<li>Hardcoded breadcrumb links to canada.ca <a href=https://www.drupal.org/node/3291230>#3291230</a></li>
-</ul>
-</li>
-<li>Updates for WxT Bootstrap
-<ul>
-<li>Footnotes template issue <a href=https://www.drupal.org/node/3285890>#3285890</a></li>
-</ul>
-</li>
-<li>Updates for WxT Library
-<ul>
-<li>Add config link for modules <a href=https://www.drupal.org/node/3291183>#3291183</a></li>
-</ul>
-</li>
-</ul>
-<p>Upgrade path:</p>
-<blockquote>
-<p>Note: No special notes for this release.</p>
-</blockquote>
-<ul>
-<li>
-<p>Update your codebase:</p>
-<ul>
-<li><code>composer update</code></li>
-</ul>
-</li>
-<li>
-<p>Run database updates:</p>
-<ul>
-<li><code>drush cache:rebuild</code></li>
-<li><code>drush updatedb</code></li>
-</ul>
-</li>
-<li>
-<p>Run Lightning configuration updates:</p>
-<ul>
-<li><code>drush cache:rebuild</code></li>
-<li><code>drush update:lightning</code></li>
-</ul>
-</li>
-<li>
-<p>Run WxT configuration updates:</p>
-<ul>
-<li><code>drush cache:rebuild</code></li>
-<li><code>drush update:wxt</code></li>
-</ul>
-</li>
-</ul>
-<p><strong>Note:</strong> N/A</p>
 </td>
 </tr>
 </tbody>
