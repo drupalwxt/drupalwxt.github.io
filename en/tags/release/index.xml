@@ -2,7 +2,7 @@
 &lt;h2 id="select-a-version-number">Select a version number&lt;/h2>
 &lt;p>WxT releases are numbered using a form of semantic versioning. More information can be found in our &lt;strong>&lt;a href="../../../en/docs/development/version/">Versioning&lt;/a>&lt;/strong> page.&lt;/p>
 &lt;p>&lt;code>MAJOR.FEATURE.SPRINT&lt;/code>&lt;/p>
-&lt;p>In general, when preparing a release: increment the FEATURE when Drupal Core has a major release (ie. 9.2.x to 9.3.x) otherwise simply increment the SPRINT number.&lt;/p>
+&lt;p>In general, when preparing a release: increment the FEATURE when Drupal Core has a major release (ie. 9.3.x to 9.4.x) otherwise simply increment the SPRINT number.&lt;/p>
 &lt;h2 id="create-an-issue-on-githubcom">Create an issue on GitHub.com&lt;/h2>
 &lt;p>Create an issue in the &lt;strong>&lt;a href="https://github.com/drupalwxt/wxt">Drupal WxT&lt;/a>&lt;/strong> project on GitHub for release tracking, title it &lt;code>Release x.x.x&lt;/code> (where x.x.x is the incremented version number).&lt;/p>
 &lt;p>This issue should contain the following checklist as well as any other related steps or information regarding preparing the release.&lt;/p>

@@ -60,7 +60,7 @@ English
 </li>
 </ul>
 </div>
-<div class="navbar-nav d-none d-lg-block"><input type=search class="form-control td-search-input" placeholder="&#xf002; Search WxT" aria-label="Search WxT" autocomplete=off data-offline-search-index-json-src=../../../../../offline-search-index.720cf4fc5f12022383f102963f2aff5f.json data-offline-search-base-href=../../../../../ data-offline-search-max-results=10>
+<div class="navbar-nav d-none d-lg-block"><input type=search class="form-control td-search-input" placeholder="&#xf002; Search WxT" aria-label="Search WxT" autocomplete=off data-offline-search-index-json-src=../../../../../offline-search-index.f366bb6ec98f8c60d16093195ca7d325.json data-offline-search-base-href=../../../../../ data-offline-search-max-results=10>
 </div>
 </nav>
 </header>
@@ -151,9 +151,9 @@ A reminder that <strong><a href=https://getcomposer.org/download/>composer</a></
 </blockquote>
 <h3 id=how-to-update-drupal-core>How to update Drupal Core?</h3>
 <p>Please <strong>don&rsquo;t add <code>drupal/core</code> to your project&rsquo;s composer.json</strong> since WxT manages Drupal Core for you along with the series of patches on top of it.</p>
-<p>WxT&rsquo;s minor versions will always correspond to Drupal Core&rsquo;s. For example, <code>drupalwxt/wxt:~4.3.x</code> will require Drupal Core 9.3.x and <code>drupalwxt/wxt:~4.2.x</code> required Drupal Core 9.2.x.</p>
-<p>When you need to update Drupal Core as an example from 9.2.x to 9.3.x, all you would do is change your requirement for <code>drupalwxt/wxt</code> in your <code>composer.json</code> file:</p>
-<pre><code>composer require --no-update drupalwxt/wxt:~4.3.4
+<p>WxT&rsquo;s minor versions will always correspond to Drupal Core&rsquo;s. For example, <code>drupalwxt/wxt:~4.4.x</code> will require Drupal Core 9.4.x and <code>drupalwxt/wxt:~4.3.x</code> required Drupal Core 9.3.x.</p>
+<p>When you need to update Drupal Core as an example from 9.3.x to 9.4.x, all you would do is change your requirement for <code>drupalwxt/wxt</code> in your <code>composer.json</code> file:</p>
+<pre><code>composer require --no-update drupalwxt/wxt:~4.4.0
 composer update
 </code></pre><h3 id=compatibility-table>Compatibility table</h3>
 <table>

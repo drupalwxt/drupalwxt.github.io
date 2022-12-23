@@ -150,9 +150,9 @@ A reminder that &lt;strong>&lt;a href="https://getcomposer.org/download/">compos
 &lt;/blockquote>
 &lt;h3 id="how-to-update-drupal-core">How to update Drupal Core?&lt;/h3>
 &lt;p>Please &lt;strong>don&amp;rsquo;t add &lt;code>drupal/core&lt;/code> to your project&amp;rsquo;s composer.json&lt;/strong> since WxT manages Drupal Core for you along with the series of patches on top of it.&lt;/p>
-&lt;p>WxT&amp;rsquo;s minor versions will always correspond to Drupal Core&amp;rsquo;s. For example, &lt;code>drupalwxt/wxt:~4.3.x&lt;/code> will require Drupal Core 9.3.x and &lt;code>drupalwxt/wxt:~4.2.x&lt;/code> required Drupal Core 9.2.x.&lt;/p>
-&lt;p>When you need to update Drupal Core as an example from 9.2.x to 9.3.x, all you would do is change your requirement for &lt;code>drupalwxt/wxt&lt;/code> in your &lt;code>composer.json&lt;/code> file:&lt;/p>
-&lt;pre>&lt;code>composer require --no-update drupalwxt/wxt:~4.3.4
+&lt;p>WxT&amp;rsquo;s minor versions will always correspond to Drupal Core&amp;rsquo;s. For example, &lt;code>drupalwxt/wxt:~4.4.x&lt;/code> will require Drupal Core 9.4.x and &lt;code>drupalwxt/wxt:~4.3.x&lt;/code> required Drupal Core 9.3.x.&lt;/p>
+&lt;p>When you need to update Drupal Core as an example from 9.3.x to 9.4.x, all you would do is change your requirement for &lt;code>drupalwxt/wxt&lt;/code> in your &lt;code>composer.json&lt;/code> file:&lt;/p>
+&lt;pre>&lt;code>composer require --no-update drupalwxt/wxt:~4.4.0
 composer update
 &lt;/code>&lt;/pre>&lt;h3 id="compatibility-table">Compatibility table&lt;/h3>
 &lt;table>

@@ -86,9 +86,9 @@ A reminder that &lt;strong>&lt;a href="https://getcomposer.org/download/">compos
 &lt;/blockquote>
 &lt;h3 id="how-to-update-drupal-core">How to update Drupal Core?&lt;/h3>
 &lt;p>Please &lt;strong>don&amp;rsquo;t add &lt;code>drupal/core&lt;/code> to your project&amp;rsquo;s composer.json&lt;/strong> since WxT manages Drupal Core for you along with the series of patches on top of it.&lt;/p>
-&lt;p>WxT&amp;rsquo;s minor versions will always correspond to Drupal Core&amp;rsquo;s. For example, &lt;code>drupalwxt/wxt:~4.3.x&lt;/code> will require Drupal Core 9.3.x and &lt;code>drupalwxt/wxt:~4.2.x&lt;/code> required Drupal Core 9.2.x.&lt;/p>
-&lt;p>When you need to update Drupal Core as an example from 9.2.x to 9.3.x, all you would do is change your requirement for &lt;code>drupalwxt/wxt&lt;/code> in your &lt;code>composer.json&lt;/code> file:&lt;/p>
-&lt;pre>&lt;code>composer require --no-update drupalwxt/wxt:~4.3.4
+&lt;p>WxT&amp;rsquo;s minor versions will always correspond to Drupal Core&amp;rsquo;s. For example, &lt;code>drupalwxt/wxt:~4.4.x&lt;/code> will require Drupal Core 9.4.x and &lt;code>drupalwxt/wxt:~4.3.x&lt;/code> required Drupal Core 9.3.x.&lt;/p>
+&lt;p>When you need to update Drupal Core as an example from 9.3.x to 9.4.x, all you would do is change your requirement for &lt;code>drupalwxt/wxt&lt;/code> in your &lt;code>composer.json&lt;/code> file:&lt;/p>
+&lt;pre>&lt;code>composer require --no-update drupalwxt/wxt:~4.4.0
 composer update
 &lt;/code>&lt;/pre>&lt;h3 id="compatibility-table">Compatibility table&lt;/h3>
 &lt;table>
@@ -218,7 +218,7 @@ be leveraged depending on your &lt;code>SDLC&lt;/code>.&lt;/p>
 &lt;h2 id="select-a-version-number">Select a version number&lt;/h2>
 &lt;p>WxT releases are numbered using a form of semantic versioning. More information can be found in our &lt;strong>&lt;a href="../../../en/docs/development/version/">Versioning&lt;/a>&lt;/strong> page.&lt;/p>
 &lt;p>&lt;code>MAJOR.FEATURE.SPRINT&lt;/code>&lt;/p>
-&lt;p>In general, when preparing a release: increment the FEATURE when Drupal Core has a major release (ie. 9.2.x to 9.3.x) otherwise simply increment the SPRINT number.&lt;/p>
+&lt;p>In general, when preparing a release: increment the FEATURE when Drupal Core has a major release (ie. 9.3.x to 9.4.x) otherwise simply increment the SPRINT number.&lt;/p>
 &lt;h2 id="create-an-issue-on-githubcom">Create an issue on GitHub.com&lt;/h2>
 &lt;p>Create an issue in the &lt;strong>&lt;a href="https://github.com/drupalwxt/wxt">Drupal WxT&lt;/a>&lt;/strong> project on GitHub for release tracking, title it &lt;code>Release x.x.x&lt;/code> (where x.x.x is the incremented version number).&lt;/p>
 &lt;p>This issue should contain the following checklist as well as any other related steps or information regarding preparing the release.&lt;/p>
