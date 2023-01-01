@@ -38,7 +38,7 @@ As **[Drupal WxT][wxt]** is a Drupal distribution, the official guide for **[Dru
 
 ### Composer Download
 
-Run this command and replace DIRECTORY with the directory of your choice this is where Open Social will be installed.
+Run this command and replace DIRECTORY with the directory of your choice this is where WxT will be installed.
 
 ```sh
 composer self-update
