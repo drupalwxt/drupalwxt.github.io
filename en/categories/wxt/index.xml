@@ -14,7 +14,7 @@ A reminder that &lt;strong>&lt;a href="https://getcomposer.org/download/">compos
 &lt;li>Default Content via Migrate&lt;/li>
 &lt;/ul>
 &lt;h3 id="composer-download">Composer Download&lt;/h3>
-&lt;p>Run this command and replace DIRECTORY with the directory of your choice this is where Open Social will be installed.&lt;/p>
+&lt;p>Run this command and replace DIRECTORY with the directory of your choice this is where WxT will be installed.&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-sh" data-lang="sh">composer self-update
 composer create-project drupalwxt/site-wxt:9.4.x-dev &amp;lt;site-name&amp;gt; --no-interaction
 &lt;/code>&lt;/pre>&lt;/div>&lt;blockquote>
@@ -583,7 +583,7 @@ We try our best to have security releases of Drupal Core within &lt;strong>24-72
 &lt;td>&lt;strong>drupalwxt.github.io&lt;/strong>&lt;/td>
 &lt;td>&lt;a href="https://github.com/drupalwxt/drupalwxt.github.io" target="_blank">drupalwxt/drupalwxt.github.io&lt;/a>&lt;/td>
 &lt;td>GitHub Pages for Drupal WxT.&lt;/td>
-&lt;td>Size: 7625 Bytes&lt;/td>
+&lt;td>Size: 7744 Bytes&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>&lt;strong>helm-drupal&lt;/strong>&lt;/td>
