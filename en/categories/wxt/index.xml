@@ -27,8 +27,9 @@ composer create-project drupalwxt/site-wxt:9.4.x-dev &amp;lt;site-name&amp;gt; -
 &lt;/blockquote>
 &lt;h3 id="containers">Containers&lt;/h3>
 &lt;p>For the (optional) container based local development workflow please consult our documentation site:&lt;/p>
-&lt;pre>&lt;code>[containers]
-&lt;/code>&lt;/pre>
+&lt;ul>
+&lt;li>&lt;strong>&lt;a href="https://drupalwxt.github.io/en/docs/environment/containers/">Containers&lt;/a>&lt;/strong>&lt;/li>
+&lt;/ul>
 &lt;h2 id="site-installation">Site Installation&lt;/h2>
 &lt;p>a) The Drupal Root is in &lt;code>&amp;lt;site-name&amp;gt;/html&lt;/code>&lt;/p>
 &lt;p>b) You can install Drupal WxT through the browser as any other drupal installation or use &lt;code>drush site-install&lt;/code> to install the WxT installation profile:&lt;/p>
