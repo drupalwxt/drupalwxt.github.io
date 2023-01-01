@@ -57,7 +57,7 @@ If you don't want to use Composer, you can install WxT the traditional way by do
 
 For the (optional) container based local development workflow please consult our documentation site:
 
-    [containers]
+- **[Containers][containers]**
 
 ## Site Installation
 
