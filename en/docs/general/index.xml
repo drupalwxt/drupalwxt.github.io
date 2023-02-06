@@ -136,6 +136,95 @@ We try our best to have security releases of Drupal Core within &lt;strong>24-72
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
+&lt;td>&lt;strong>4.4.1&lt;/strong>&lt;/td>
+&lt;td>&lt;strong>2023-02-06&lt;/strong>&lt;/td>
+&lt;td>&lt;p>Features / Updates:&lt;/p>
+&lt;ul>
+&lt;li>Security Updates for Drupal Core (v9.4.10)
+&lt;ul>
+&lt;li>&lt;a href="https://www.drupal.org/sa-core-2022-016">SA-core-2022-016&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Updates for Drupal Core
+&lt;ul>
+&lt;li>Patch (bugfix) release of Drupal Core to &lt;code>v9.4.11&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Updates for WxT
+&lt;ul>
+&lt;li>Drupal 9.4.9 profiles updated patch &lt;a href="https://www.drupal.org/node/3326139">#3326139&lt;/a>&lt;/li>
+&lt;li>Remove moderation_sidebar patch &lt;a href="https://www.drupal.org/node/3326106">#3326106&lt;/a>&lt;/li>
+&lt;li>Layout Library beta3 causes WSOD on flush cache via UI &lt;a href="https://www.drupal.org/node/3328389">#3328389&lt;/a>&lt;/li>
+&lt;li>Empty Menu Principale results in Javascript subElm exception &lt;a href="https://www.drupal.org/node/3328480">#3328480&lt;/a>&lt;/li>
+&lt;li>Layout library patch no longer applies &lt;a href="https://www.drupal.org/node/3338961">#3338961&lt;/a>&lt;/li>
+&lt;li>Layout library patch no longer applies &lt;a href="https://www.drupal.org/node/3338961">#3338961&lt;/a>&lt;/li>
+&lt;li>404 error pages not rendering &lt;a href="https://www.drupal.org/node/3337399">#3337399&lt;/a>&lt;/li>
+&lt;li>Update GCWeb footer structure with new global footer design &lt;a href="https://www.drupal.org/node/3335298">#3335298&lt;/a>&lt;/li>
+&lt;li>Move wxt_ext_page config to optional &lt;a href="https://www.drupal.org/node/3321666">#3321666&lt;/a>&lt;/li>
+&lt;li>Drupal Rector: Automated Drupal 10 compatibility fixes&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Updates for WxT Library
+&lt;ul>
+&lt;li>Undefined config can lead to errors &lt;a href="https://www.drupal.org/node/3338077">#3338077&lt;/a>&lt;/li>
+&lt;li>Error with layout_builder pluginId &lt;a href="https://www.drupal.org/node/3300528">#3300528&lt;/a>&lt;/li>
+&lt;li>Drupal Rector: Automated Drupal 10 compatibility fixes&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Updated for WxT Bootstrap
+&lt;ul>
+&lt;li>Update GCWeb footer structure with new global footer design &lt;a href="https://www.drupal.org/node/3335298">#3335298&lt;/a>&lt;/li>
+&lt;li>Drupal Rector: Automated Drupal 10 compatibility fixes&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>Upgrade path:&lt;/p>
+&lt;blockquote>
+&lt;p>&lt;strong>Important&lt;/strong>: Please backup your database before running the upgrade process for this release.&lt;/p>
+&lt;/blockquote>
+&lt;ul>
+&lt;li>
+&lt;p>Update your codebase:&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>composer update&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>Run database updates:&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>drush cache:rebuild&lt;/code>&lt;/li>
+&lt;li>&lt;code>drush updatedb&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>Run WxT configuration updates:&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>drush cache:rebuild&lt;/code>&lt;/li>
+&lt;li>&lt;code>drush update:wxt&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>&lt;strong>Note(s)&lt;/strong>:&lt;/p>
+&lt;p>The Government of Canada&amp;rsquo;s design team has mandated changes to the common footer blocks and menu structures which require some updates be made:&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://design.canada.ca/common-design-patterns/site-footer.html">Governance details&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://wet-boew.github.io/GCWeb/sites/footers/footers-en.html">Code Changes&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;p>Please check and edit the following configuration items to ensure the id and plugin spec are using a hyphen instead of an underscore for the menu name.&lt;/p>
+&lt;p>This will hopefully be fixed once and for all in Drupal 10.&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://www.drupal.org/project/drupal/issues/3304219">https://www.drupal.org/project/drupal/issues/3304219&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-sh" data-lang="sh">drush config:edit block.block.brand_fr
+drush config:edit system.menu.brand-fr
+drush config:edit system.menu.footer-fr
+drush config:edit system.menu.sidebar-fr
+&lt;/code>&lt;/pre>&lt;/div>&lt;blockquote>
+&lt;p>&lt;strong>Note&lt;/strong>: Some of the configuration items might be named with an underscore when using &lt;code>config:edit&lt;/code> to find them.&lt;/p>
+&lt;/blockquote>
+&lt;/td>
+&lt;/tr>
+&lt;tr>
 &lt;td>&lt;strong>4.4.0&lt;/strong>&lt;/td>
 &lt;td>&lt;strong>2022-11-26&lt;/strong>&lt;/td>
 &lt;td>&lt;p>Features / Updates:&lt;/p>
@@ -462,96 +551,6 @@ We try our best to have security releases of Drupal Core within &lt;strong>24-72
 &lt;/blockquote>
 &lt;/td>
 &lt;/tr>
-&lt;tr>
-&lt;td>&lt;strong>4.3.1&lt;/strong>&lt;/td>
-&lt;td>&lt;strong>2022-07-21&lt;/strong>&lt;/td>
-&lt;td>&lt;p>Features / Updates:&lt;/p>
-&lt;ul>
-&lt;li>Security Updates for Drupal Core (v9.3.19)
-&lt;ul>
-&lt;li>&lt;a href="https://www.drupal.org/sa-core-2022-012">SA-core-2022-012&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://www.drupal.org/sa-core-2022-013">SA-core-2022-013&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://www.drupal.org/sa-core-2022-014">SA-core-2022-014&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://www.drupal.org/sa-core-2022-015">SA-core-2022-015&lt;/a>&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>Updates for WxT
-&lt;ul>
-&lt;li>Translation patch causes whitescreen &lt;a href="https://www.drupal.org/node/3295377">#3291183&lt;/a>&lt;/li>
-&lt;li>Main menu in French not editable &lt;a href="https://www.drupal.org/node/3294325">#3291230&lt;/a>&lt;/li>
-&lt;li>[Deprecate] Remove Lightning Layout &lt;a href="https://www.drupal.org/node/3298505">#3298505&lt;/a>&lt;/li>
-&lt;li>[Deprecate] Remove Lightning Workflow &lt;a href="https://www.drupal.org/node/3295862">#3295862&lt;/a>&lt;/li>
-&lt;li>[Deprecate] SubProfile Generator &lt;a href="https://www.drupal.org/node/3295858">#3295858&lt;/a>&lt;/li>
-&lt;li>Incompatible version for ckeditor/fakeobjects &lt;a href="https://www.drupal.org/node/3298214">#3298214&lt;/a>&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>Updates for WxT Bootstrap
-&lt;ul>
-&lt;li>Corrected all reported issues by phpcs&lt;/li>
-&lt;li>Main menu in French not editable &lt;a href="https://www.drupal.org/node/3294325">#3291230&lt;/a>&lt;/li>
-&lt;li>PHP 8.1 compatibility &lt;a href="https://www.drupal.org/node/3294596">#3294596&lt;/a>&lt;/li>
-&lt;li>GCIntranet WxT search form label visible on mobile &lt;a href="https://www.drupal.org/node/3294629">#3294629&lt;/a>&lt;/li>
-&lt;li>Set dynamic wrapper element for Did you find webform block &lt;a href="https://www.drupal.org/node/3291816">#3291816&lt;/a>&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>Updates for WxT Library
-&lt;ul>
-&lt;li>Corrected all reported issues by phpcs&lt;/li>
-&lt;li>Passing null to parameter #1 ($string) &lt;a href="https://www.drupal.org/node/3286651">#3286651&lt;/a>&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;p>Upgrade path:&lt;/p>
-&lt;blockquote>
-&lt;p>&lt;strong>Important&lt;/strong>: Please backup your database before running the upgrade process for this release.&lt;/p>
-&lt;/blockquote>
-&lt;ul>
-&lt;li>
-&lt;p>Update your codebase:&lt;/p>
-&lt;ul>
-&lt;li>&lt;code>composer update&lt;/code>&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>
-&lt;p>Run database updates:&lt;/p>
-&lt;ul>
-&lt;li>&lt;code>drush cache:rebuild&lt;/code>&lt;/li>
-&lt;li>&lt;code>drush updatedb&lt;/code>&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>
-&lt;p>Run WxT configuration updates:&lt;/p>
-&lt;ul>
-&lt;li>&lt;code>drush cache:rebuild&lt;/code>&lt;/li>
-&lt;li>&lt;code>drush update:wxt&lt;/code>&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;p>&lt;strong>Note(s)&lt;/strong>:&lt;/p>
-&lt;p>To facilitate keeping the distribution lightweight and because soon the Lightning Contrib modules will be EOL we need to remove all of the Lightning contrib in a way that doesn&amp;rsquo;t break an upgrade path and documents the modules removed in case site builders will want to manually add them to their own &lt;code>composer.json&lt;/code> file&lt;/p>
-&lt;blockquote>
-&lt;p>&lt;strong>Note&lt;/strong>: that all error messages stating &amp;ldquo;Currently using Missing or invalid module&amp;rdquo; will be resolved after running the &lt;code>drush updatedb&lt;/code> step above.&lt;/p>
-&lt;/blockquote>
-&lt;p>a) [Deprecate] Remove Lightning Layout &lt;a href="https://www.drupal.org/node/3298505">#3298505&lt;/a>&lt;/p>
-&lt;p>Please read over the above issue and consult the below list of the removed composer entries in case you are depending on any of them and need to apply them manually to your composer.json file.&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-yaml" data-lang="yaml">&lt;span style="color:#204a87;font-weight:bold">&amp;#34;drupal/bg_image_formatter&amp;#34;: &lt;/span>&lt;span style="color:#4e9a06">&amp;#34;^1.10&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
-&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">&lt;/span>&lt;span style="color:#204a87;font-weight:bold">&amp;#34;drupal/panelizer&amp;#34;: &lt;/span>&lt;span style="color:#4e9a06">&amp;#34;^4.1 || ^5.0&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
-&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">&lt;/span>&lt;span style="color:#204a87;font-weight:bold">&amp;#34;drupal/simple_gmap&amp;#34;: &lt;/span>&lt;span style="color:#4e9a06">&amp;#34;^3.0&amp;#34;&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
-&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>All of the Lightning Layout functionality was directly ported to support an upgrade path and an update script written in the &lt;code>wxt_core_update_8431&lt;/code> function.&lt;/p>
-&lt;blockquote>
-&lt;p>&lt;strong>Note&lt;/strong>: Any Lightning sub modules will also be uninstalled.&lt;/p>
-&lt;/blockquote>
-&lt;p>b) [Deprecate] Remove Lightning Workflow &lt;a href="https://www.drupal.org/node/3295862">#3295862&lt;/a>&lt;/p>
-&lt;p>Please read over the above issue and consult the below list of the removed composer entries in case you are depending on any of them and need to apply them manually to your composer.json file.&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-yaml" data-lang="yaml">&lt;span style="color:#204a87;font-weight:bold">&amp;#34;drupal/conflict&amp;#34;: &lt;/span>&lt;span style="color:#4e9a06">&amp;#34;^2.0-alpha2&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
-&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">&lt;/span>&lt;span style="color:#204a87;font-weight:bold">&amp;#34;drupal/moderation_dashboard&amp;#34;: &lt;/span>&lt;span style="color:#4e9a06">&amp;#34;^1.0&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
-&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">&lt;/span>&lt;span style="color:#204a87;font-weight:bold">&amp;#34;drupal/moderation_sidebar&amp;#34;: &lt;/span>&lt;span style="color:#4e9a06">&amp;#34;^1.2&amp;#34;&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
-&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>All of the Lightning Workflow functionality was directly ported to support an upgrade path and an update script written in the &lt;code>wxt_core_update_8431&lt;/code> function.&lt;/p>
-&lt;blockquote>
-&lt;p>&lt;strong>Note&lt;/strong>: Any Lightning sub modules will also be uninstalled.&lt;/p>
-&lt;/blockquote>
-&lt;/td>
-&lt;/tr>
 &lt;/tbody>
 &lt;/table>
 &lt;h2 id="repositories-for-drupal-wxt">Repositories for Drupal WxT&lt;/h2>
@@ -582,25 +581,25 @@ We try our best to have security releases of Drupal Core within &lt;strong>24-72
 &lt;td>&lt;strong>drupalwxt.github.io&lt;/strong>&lt;/td>
 &lt;td>&lt;a href="https://github.com/drupalwxt/drupalwxt.github.io" target="_blank">drupalwxt/drupalwxt.github.io&lt;/a>&lt;/td>
 &lt;td>GitHub Pages for Drupal WxT.&lt;/td>
-&lt;td>Size: 8177 Bytes&lt;/td>
+&lt;td>Size: 8230 Bytes&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>&lt;strong>helm-drupal&lt;/strong>&lt;/td>
 &lt;td>&lt;a href="https://github.com/drupalwxt/helm-drupal" target="_blank">drupalwxt/helm-drupal&lt;/a>&lt;/td>
 &lt;td>Helm chart for running Drupal on Kubernetes&lt;/td>
-&lt;td>Size: 58250 Bytes&lt;/td>
+&lt;td>Size: 58751 Bytes&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>&lt;strong>site-wxt&lt;/strong>&lt;/td>
 &lt;td>&lt;a href="https://github.com/drupalwxt/site-wxt" target="_blank">drupalwxt/site-wxt&lt;/a>&lt;/td>
 &lt;td>An example composer project for the Drupal WxT distribution used for integration testing.&lt;/td>
-&lt;td>Size: 2007 Bytes&lt;/td>
+&lt;td>Size: 2015 Bytes&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>&lt;strong>terraform-kubernetes-drupalwxt&lt;/strong>&lt;/td>
 &lt;td>&lt;a href="https://github.com/drupalwxt/terraform-kubernetes-drupalwxt" target="_blank">drupalwxt/terraform-kubernetes-drupalwxt&lt;/a>&lt;/td>
 &lt;td>Terraform module for Drupal WxT&lt;/td>
-&lt;td>Size: 54 Bytes&lt;/td>
+&lt;td>Size: 56 Bytes&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>&lt;strong>themes-cdn&lt;/strong>&lt;/td>
@@ -612,13 +611,13 @@ We try our best to have security releases of Drupal Core within &lt;strong>24-72
 &lt;td>&lt;strong>wxt&lt;/strong>&lt;/td>
 &lt;td>&lt;a href="https://github.com/drupalwxt/wxt" target="_blank">drupalwxt/wxt&lt;/a>&lt;/td>
 &lt;td>Drupal 9 variant of the Web Experience Toolkit (WxT).&lt;/td>
-&lt;td>Size: 2044 Bytes&lt;/td>
+&lt;td>Size: 2057 Bytes&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>&lt;strong>wxt-project&lt;/strong>&lt;/td>
 &lt;td>&lt;a href="https://github.com/drupalwxt/wxt-project" target="_blank">drupalwxt/wxt-project&lt;/a>&lt;/td>
 &lt;td>Composer project template for Drupal 9 sites built with the WxT distribution.&lt;/td>
-&lt;td>Size: 69 Bytes&lt;/td>
+&lt;td>Size: 71 Bytes&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>&lt;strong>wxt_bootstrap&lt;/strong>&lt;/td>
