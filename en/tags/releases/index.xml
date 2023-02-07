@@ -453,13 +453,13 @@ drush config:edit system.menu.sidebar-fr
 &lt;td>&lt;strong>docker-scaffold&lt;/strong>&lt;/td>
 &lt;td>&lt;a href="https://github.com/drupalwxt/docker-scaffold" target="_blank">drupalwxt/docker-scaffold&lt;/a>&lt;/td>
 &lt;td>Docker Scaffold for Drupal WxT&lt;/td>
-&lt;td>Size: 125 Bytes&lt;/td>
+&lt;td>Size: 127 Bytes&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>&lt;strong>drupalwxt.github.io&lt;/strong>&lt;/td>
 &lt;td>&lt;a href="https://github.com/drupalwxt/drupalwxt.github.io" target="_blank">drupalwxt/drupalwxt.github.io&lt;/a>&lt;/td>
 &lt;td>GitHub Pages for Drupal WxT.&lt;/td>
-&lt;td>Size: 8230 Bytes&lt;/td>
+&lt;td>Size: 7368 Bytes&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>&lt;strong>helm-drupal&lt;/strong>&lt;/td>
@@ -489,7 +489,7 @@ drush config:edit system.menu.sidebar-fr
 &lt;td>&lt;strong>wxt&lt;/strong>&lt;/td>
 &lt;td>&lt;a href="https://github.com/drupalwxt/wxt" target="_blank">drupalwxt/wxt&lt;/a>&lt;/td>
 &lt;td>Drupal 9 variant of the Web Experience Toolkit (WxT).&lt;/td>
-&lt;td>Size: 2057 Bytes&lt;/td>
+&lt;td>Size: 2077 Bytes&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>&lt;strong>wxt-project&lt;/strong>&lt;/td>
