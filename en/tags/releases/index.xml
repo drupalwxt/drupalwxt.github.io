@@ -407,19 +407,19 @@ drush config:edit system.menu.sidebar-fr
 &lt;td>&lt;strong>drupalwxt.github.io&lt;/strong>&lt;/td>
 &lt;td>&lt;a href="https://github.com/drupalwxt/drupalwxt.github.io" target="_blank">drupalwxt/drupalwxt.github.io&lt;/a>&lt;/td>
 &lt;td>GitHub Pages for Drupal WxT.&lt;/td>
-&lt;td>Size: 7421 Bytes&lt;/td>
+&lt;td>Size: 7583 Bytes&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>&lt;strong>helm-drupal&lt;/strong>&lt;/td>
 &lt;td>&lt;a href="https://github.com/drupalwxt/helm-drupal" target="_blank">drupalwxt/helm-drupal&lt;/a>&lt;/td>
 &lt;td>Helm chart for running Drupal on Kubernetes&lt;/td>
-&lt;td>Size: 58751 Bytes&lt;/td>
+&lt;td>Size: 59250 Bytes&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>&lt;strong>site-wxt&lt;/strong>&lt;/td>
 &lt;td>&lt;a href="https://github.com/drupalwxt/site-wxt" target="_blank">drupalwxt/site-wxt&lt;/a>&lt;/td>
 &lt;td>An example composer project for the Drupal WxT distribution used for integration testing.&lt;/td>
-&lt;td>Size: 2015 Bytes&lt;/td>
+&lt;td>Size: 2101 Bytes&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>&lt;strong>terraform-kubernetes-drupalwxt&lt;/strong>&lt;/td>
@@ -443,7 +443,7 @@ drush config:edit system.menu.sidebar-fr
 &lt;td>&lt;strong>wxt-project&lt;/strong>&lt;/td>
 &lt;td>&lt;a href="https://github.com/drupalwxt/wxt-project" target="_blank">drupalwxt/wxt-project&lt;/a>&lt;/td>
 &lt;td>Composer project template for Drupal 9 sites built with the WxT distribution.&lt;/td>
-&lt;td>Size: 71 Bytes&lt;/td>
+&lt;td>Size: 74 Bytes&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>&lt;strong>wxt_bootstrap&lt;/strong>&lt;/td>
