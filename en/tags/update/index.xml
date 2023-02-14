@@ -11,31 +11,31 @@ When pushing to production you should make sure everything has been tested in a 
 &lt;p>These are the typical steps you should following when updating Drupal WxT:&lt;/p>
 &lt;p>a) Read the &lt;strong>&lt;a href="https://github.com/drupalwxt/wxt/releases">release notes&lt;/a>&lt;/strong> for the release to which you are updating along with any releases in between.&lt;/p>
 &lt;p>b) To update your WxT codebase you would replace &lt;code>[VERSION]&lt;/code> with the release version you wish to use.&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-sh" data-lang="sh">composer self update
-composer require drupalwxt/wxt:&lt;span style="color:#ce5c00;font-weight:bold">[&lt;/span>VERSION&lt;span style="color:#ce5c00;font-weight:bold">]&lt;/span>
-composer update
-&lt;/code>&lt;/pre>&lt;/div>&lt;blockquote>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-sh" data-lang="sh">&lt;span style="display:flex;">&lt;span>composer self update
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>composer require drupalwxt/wxt:&lt;span style="color:#ce5c00;font-weight:bold">[&lt;/span>VERSION&lt;span style="color:#ce5c00;font-weight:bold">]&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>composer update
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;blockquote>
 &lt;p>&lt;strong>Note&lt;/strong>: We highly recommend that you are using the v2.x.x line of Composer.&lt;/p>
 &lt;/blockquote>
 &lt;p>c) Run any database updates:&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-sh" data-lang="sh">drush cache:rebuild
-drush updatedb
-&lt;/code>&lt;/pre>&lt;/div>&lt;blockquote>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-sh" data-lang="sh">&lt;span style="display:flex;">&lt;span>drush cache:rebuild
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>drush updatedb
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;blockquote>
 &lt;p>&lt;strong>Note&lt;/strong>: You may instead go to &lt;code>/admin/config/development/performance&lt;/code> to clear caches and &lt;code>/update.php&lt;/code> to run database updates.&lt;/p>
 &lt;/blockquote>
 &lt;p>d) Run any WxT configuration updates:&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-sh" data-lang="sh">drush cache:rebuild
-drush update:wxt
-&lt;/code>&lt;/pre>&lt;/div>&lt;blockquote>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-sh" data-lang="sh">&lt;span style="display:flex;">&lt;span>drush cache:rebuild
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>drush update:wxt
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;blockquote>
 &lt;p>&lt;strong>Note&lt;/strong>: You may instead go to &lt;code>/admin/config/development/performance&lt;/code> to clear caches and &lt;code>/update.php&lt;/code> to run WxT updates.&lt;/p>
 &lt;/blockquote>
 &lt;h2 id="configuration-management">Configuration Management&lt;/h2>
 &lt;p>If you are using configuration management to move your configuration between development, staging, and production environments, you should follow the standard Drupal process.&lt;/p>
 &lt;p>a) Export the new configuration:&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-sh" data-lang="sh">drush cache:rebuild
-drush config:export
-&lt;/code>&lt;/pre>&lt;/div>&lt;p>b) Commit the code and configuration changes to your source code repository and push them to your environment.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-sh" data-lang="sh">&lt;span style="display:flex;">&lt;span>drush cache:rebuild
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>drush config:export
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>b) Commit the code and configuration changes to your source code repository and push them to your environment.&lt;/p>
 &lt;p>c) Import any configuration changes:&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-sh" data-lang="sh">drush cache:rebuild
-drush config:import
-&lt;/code>&lt;/pre>&lt;/div>&lt;!-- Links Referenced --></description></item></channel></rss>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-sh" data-lang="sh">&lt;span style="display:flex;">&lt;span>drush cache:rebuild
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>drush config:import
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;!-- Links Referenced --></description></item></channel></rss>

@@ -136,11 +136,11 @@ We try our best to have security releases of Drupal Core within &lt;strong>24-72
 &lt;ul>
 &lt;li>&lt;a href="https://www.drupal.org/project/drupal/issues/3304219">https://www.drupal.org/project/drupal/issues/3304219&lt;/a>&lt;/li>
 &lt;/ul>
-&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-sh" data-lang="sh">drush config:edit block.block.brand_fr
-drush config:edit system.menu.brand-fr
-drush config:edit system.menu.footer-fr
-drush config:edit system.menu.sidebar-fr
-&lt;/code>&lt;/pre>&lt;/div>&lt;blockquote>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-sh" data-lang="sh">&lt;span style="display:flex;">&lt;span>drush config:edit block.block.brand_fr
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>drush config:edit system.menu.brand-fr
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>drush config:edit system.menu.footer-fr
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>drush config:edit system.menu.sidebar-fr
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;blockquote>
 &lt;p>&lt;strong>Note&lt;/strong>: Some of the configuration items might be named with an underscore when using &lt;code>config:edit&lt;/code> to find them.&lt;/p>
 &lt;/blockquote>
 &lt;/td>
@@ -357,17 +357,16 @@ drush config:edit system.menu.sidebar-fr
 &lt;/blockquote>
 &lt;p>a) [Deprecate] Remove Lightning Core &lt;a href="https://www.drupal.org/node/3302473">#3302473&lt;/a>&lt;/p>
 &lt;p>Please read over the above issue and consult the below list of the removed composer entries in case you are depending on any of them and need to apply them manually to your composer.json file.&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-yaml" data-lang="yaml">&lt;span style="color:#204a87;font-weight:bold">&amp;#34;drupal/acquia_telemetry-acquia_telemetry&amp;#34;: &lt;/span>&lt;span style="color:#4e9a06">&amp;#34;^1.0-alpha3&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
-&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">&lt;/span>&lt;span style="color:#204a87;font-weight:bold">&amp;#34;drupal/contact_storage&amp;#34;: &lt;/span>&lt;span style="color:#4e9a06">&amp;#34;^1.0&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
-&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>All of the Lightning Core functionality was directly ported to support an upgrade path and an update script written in the &lt;code>wxt_core_update_8433&lt;/code> function.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-yaml" data-lang="yaml">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#204a87;font-weight:bold">&amp;#34;drupal/acquia_telemetry-acquia_telemetry&amp;#34;: &lt;/span>&lt;span style="color:#4e9a06">&amp;#34;^1.0-alpha3&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline">&lt;/span>&lt;span style="color:#204a87;font-weight:bold">&amp;#34;drupal/contact_storage&amp;#34;: &lt;/span>&lt;span style="color:#4e9a06">&amp;#34;^1.0&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>All of the Lightning Core functionality was directly ported to support an upgrade path and an update script written in the &lt;code>wxt_core_update_8433&lt;/code> function.&lt;/p>
 &lt;blockquote>
 &lt;p>&lt;strong>Note&lt;/strong>: Any Lightning sub modules will also be uninstalled.&lt;/p>
 &lt;/blockquote>
 &lt;p>b) [Deprecate] Remove Lightning Media &lt;a href="https://www.drupal.org/node/3301875">#3301875&lt;/a>&lt;/p>
 &lt;p>Please read over the above issue and consult the below list of the removed composer entries in case you are depending on any of them and need to apply them manually to your composer.json file.&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-yaml" data-lang="yaml">&lt;span style="color:#000">Nothing removed at the moment&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
-&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
-&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>c) All of the Lightning Media functionality was directly ported to support an upgrade path and an update script written in the &lt;code>wxt_core_update_8433&lt;/code> function.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-yaml" data-lang="yaml">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#000">Nothing removed at the moment&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>c) All of the Lightning Media functionality was directly ported to support an upgrade path and an update script written in the &lt;code>wxt_core_update_8433&lt;/code> function.&lt;/p>
 &lt;blockquote>
 &lt;p>&lt;strong>Note&lt;/strong>: Any Lightning sub modules will also be uninstalled.&lt;/p>
 &lt;/blockquote>
@@ -401,13 +400,13 @@ drush config:edit system.menu.sidebar-fr
 &lt;td>&lt;strong>docker-scaffold&lt;/strong>&lt;/td>
 &lt;td>&lt;a href="https://github.com/drupalwxt/docker-scaffold" target="_blank">drupalwxt/docker-scaffold&lt;/a>&lt;/td>
 &lt;td>Docker Scaffold for Drupal WxT&lt;/td>
-&lt;td>Size: 126 Bytes&lt;/td>
+&lt;td>Size: 127 Bytes&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>&lt;strong>drupalwxt.github.io&lt;/strong>&lt;/td>
 &lt;td>&lt;a href="https://github.com/drupalwxt/drupalwxt.github.io" target="_blank">drupalwxt/drupalwxt.github.io&lt;/a>&lt;/td>
 &lt;td>GitHub Pages for Drupal WxT.&lt;/td>
-&lt;td>Size: 7583 Bytes&lt;/td>
+&lt;td>Size: 7637 Bytes&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>&lt;strong>helm-drupal&lt;/strong>&lt;/td>
@@ -419,7 +418,7 @@ drush config:edit system.menu.sidebar-fr
 &lt;td>&lt;strong>site-wxt&lt;/strong>&lt;/td>
 &lt;td>&lt;a href="https://github.com/drupalwxt/site-wxt" target="_blank">drupalwxt/site-wxt&lt;/a>&lt;/td>
 &lt;td>An example composer project for the Drupal WxT distribution used for integration testing.&lt;/td>
-&lt;td>Size: 2101 Bytes&lt;/td>
+&lt;td>Size: 2109 Bytes&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>&lt;strong>terraform-kubernetes-drupalwxt&lt;/strong>&lt;/td>
@@ -437,7 +436,7 @@ drush config:edit system.menu.sidebar-fr
 &lt;td>&lt;strong>wxt&lt;/strong>&lt;/td>
 &lt;td>&lt;a href="https://github.com/drupalwxt/wxt" target="_blank">drupalwxt/wxt&lt;/a>&lt;/td>
 &lt;td>Drupal 9 variant of the Web Experience Toolkit (WxT).&lt;/td>
-&lt;td>Size: 2111 Bytes&lt;/td>
+&lt;td>Size: 2113 Bytes&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>&lt;strong>wxt-project&lt;/strong>&lt;/td>
