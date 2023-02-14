@@ -1,3 +1,44 @@
+// Bootstrap flags. For more, see https://getbootstrap.com/docs/4.0/getting-started/theming/
+
+$enable-gradients: true !default;
+$enable-rounded: false !default;
+$enable-shadows: true !default;
+
+// Drupal WxT colors
+
+$wxt-darker: rgb(38,55,74);
+$wxt-lighter: rgb(77, 82, 85);
+
+// Theme colors
+
+$primary: #284162 !default;
+$primary-light: lighten($primary, 75%) !default;
+$secondary: $wxt-lighter; // #FFA630 !default;
+$success: #3772FF !default;
+$info: #6c757d !default;
+$warning: #ED6A5A !default;
+$danger: #ED6A5A !default;
+$white: #fff !default;
+$light: #f8f9fa !default;
+
+$dark: #070707 !default;
+$blue: #72A1E5 !default;
+$orange: #BA5A31 !default;
+$gray-100: #f8f9fa !default;
+$gray-200: #eee !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #ccc !default;
+$gray-500: #adb5bd !default;
+$gray-600: #888 !default;
+$gray-700: #495057 !default;
+$gray-800: #333 !default;
+$gray-900: #222 !default;
+$black: #000 !default;
+
+$navbar-dark-color: rgba($black, 0.75) !default;
+$navbar-dark-hover-color: rgba($black, 0.5) !default;
+$navbar-dark-active-color: $black !default;
+$navbar-dark-disabled-color: rgba($black, 0.25) !default;
 
 // Sidebar
 

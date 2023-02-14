@@ -1,6 +1,6 @@
+/public
+resources/
 node_modules/
-public/
-/resources/
-
-.DS_Store
+package-lock.json
 .hugo_build.lock
+_vendor
