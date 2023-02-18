@@ -23,8 +23,8 @@ At the moment this remains an opt-in process and you will have to add the
 following modules to your `composer.json` before you add the code snippet
 below to your `settings.php` file.
 
-- **[Configuration Split][config-ignore]**
-- **[Configuration Ignore][config-split]**
+- **[Configuration Split][config-split]**
+- **[Configuration Ignore][config-ignore]**
 
 Once enabled all default configuration will be stored in `/sites/default/files/config/default/`
 and then depending on your environment additionally configuration splits can
