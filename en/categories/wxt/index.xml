@@ -532,7 +532,7 @@ We try our best to have security releases of Drupal Core within &lt;strong>24-72
 &lt;td>&lt;strong>drupalwxt.github.io&lt;/strong>&lt;/td>
 &lt;td>&lt;a href="https://github.com/drupalwxt/drupalwxt.github.io" target="_blank">drupalwxt/drupalwxt.github.io&lt;/a>&lt;/td>
 &lt;td>GitHub Pages for Drupal WxT.&lt;/td>
-&lt;td>Size: 8459 Bytes&lt;/td>
+&lt;td>Size: 8551 Bytes&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>&lt;strong>helm-drupal&lt;/strong>&lt;/td>
@@ -562,7 +562,7 @@ We try our best to have security releases of Drupal Core within &lt;strong>24-72
 &lt;td>&lt;strong>wxt&lt;/strong>&lt;/td>
 &lt;td>&lt;a href="https://github.com/drupalwxt/wxt" target="_blank">drupalwxt/wxt&lt;/a>&lt;/td>
 &lt;td>Drupal 9 variant of the Web Experience Toolkit (WxT).&lt;/td>
-&lt;td>Size: 2115 Bytes&lt;/td>
+&lt;td>Size: 2113 Bytes&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>&lt;strong>wxt-project&lt;/strong>&lt;/td>
@@ -769,8 +769,8 @@ configuration management strategies.&lt;/p>
 following modules to your &lt;code>composer.json&lt;/code> before you add the code snippet
 below to your &lt;code>settings.php&lt;/code> file.&lt;/p>
 &lt;ul>
-&lt;li>&lt;strong>&lt;a href="https://www.drupal.org/project/config_ignore">Configuration Split&lt;/a>&lt;/strong>&lt;/li>
-&lt;li>&lt;strong>&lt;a href="https://www.drupal.org/project/config_split">Configuration Ignore&lt;/a>&lt;/strong>&lt;/li>
+&lt;li>&lt;strong>&lt;a href="https://www.drupal.org/project/config_split">Configuration Split&lt;/a>&lt;/strong>&lt;/li>
+&lt;li>&lt;strong>&lt;a href="https://www.drupal.org/project/config_ignore">Configuration Ignore&lt;/a>&lt;/strong>&lt;/li>
 &lt;/ul>
 &lt;p>Once enabled all default configuration will be stored in &lt;code>/sites/default/files/config/default/&lt;/code>
 and then depending on your environment additionally configuration splits can

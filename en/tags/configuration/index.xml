@@ -5,8 +5,8 @@ configuration management strategies.&lt;/p>
 following modules to your &lt;code>composer.json&lt;/code> before you add the code snippet
 below to your &lt;code>settings.php&lt;/code> file.&lt;/p>
 &lt;ul>
-&lt;li>&lt;strong>&lt;a href="https://www.drupal.org/project/config_ignore">Configuration Split&lt;/a>&lt;/strong>&lt;/li>
-&lt;li>&lt;strong>&lt;a href="https://www.drupal.org/project/config_split">Configuration Ignore&lt;/a>&lt;/strong>&lt;/li>
+&lt;li>&lt;strong>&lt;a href="https://www.drupal.org/project/config_split">Configuration Split&lt;/a>&lt;/strong>&lt;/li>
+&lt;li>&lt;strong>&lt;a href="https://www.drupal.org/project/config_ignore">Configuration Ignore&lt;/a>&lt;/strong>&lt;/li>
 &lt;/ul>
 &lt;p>Once enabled all default configuration will be stored in &lt;code>/sites/default/files/config/default/&lt;/code>
 and then depending on your environment additionally configuration splits can
