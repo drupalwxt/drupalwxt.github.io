@@ -22,7 +22,7 @@ WxT releases are numbered using a form of semantic versioning. More information 
 
 `MAJOR.FEATURE.SPRINT`
 
-In general, when preparing a release: increment the FEATURE when Drupal Core has a major release (ie. 9.3.x to 9.4.x) otherwise simply increment the SPRINT number.
+In general, when preparing a release: increment the FEATURE when Drupal Core has a major release (ie. 9.4.x to 9.5.x) otherwise simply increment the SPRINT number.
 
 ## Create an issue on GitHub.com
 

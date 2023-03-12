@@ -19,20 +19,43 @@ tags:
 
 For the (optional) container based development workflow this is roughly the steps that are followed.
 
+Clone the docker-scaffold repository:
+
 ```sh
-# Git clone docker scaffold
 git clone https://github.com/drupalwxt/docker-scaffold.git docker
 ```
+
+> **Note**: The `docker` folder should be added to your `.gitignore` file.
 
 ## Linux Environments
 
 The following are the steps you should follow for a Linux based environment.
 
-```sh
-# Create symlinks
-ln -s docker/docker-compose.yml docker-compose.yml
-ln -s docker/docker-compose-ci.yml docker-compose-ci.yml
+Create the necessary symlinks:
 
+```sh
+ln -s docker/docker-compose.base.yml docker-compose.base.yml
+ln -s docker/docker-compose.ci.yml docker-compose.ci.yml
+ln -sf docker/docker-compose.yml docker-compose.yml
+```
+
+Create and adjust the following Makefile:
+
+```sh
+include .env
+NAME := $(or $(BASE_IMAGE),$(BASE_IMAGE),drupalwxt/site-wxt)
+VERSION := $(or $(VERSION),$(VERSION),'latest')
+PLATFORM := $(shell uname -s)
+$(eval GIT_USERNAME := $(if $(GIT_USERNAME),$(GIT_USERNAME),gitlab-ci-token))
+$(eval GIT_PASSWORD := $(if $(GIT_PASSWORD),$(GIT_PASSWORD),$(CI_JOB_TOKEN)))
+DOCKER_REPO := https://github.com/drupalwxt/docker-scaffold.git
+GET_DOCKER := $(shell [ -d docker ] || git clone $(DOCKER_REPO) docker)
+include docker/Makefile
+```
+
+Build and setup your environment with default content:
+
+```sh
 # Composer install
 export COMPOSER_MEMORY_LIMIT=-1 && composer install
 
@@ -40,8 +63,8 @@ export COMPOSER_MEMORY_LIMIT=-1 && composer install
 make build
 
 # Bring up the dev stack
-docker-compose -f docker-compose.yml build --no-cache
-docker-compose -f docker-compose.yml up -d
+docker compose -f docker-compose.yml build --no-cache
+docker compose -f docker-compose.yml up -d
 
 # Install Drupal
 make drupal_install
@@ -88,7 +111,7 @@ docker start $VOLUME
 mutagen sync create --name $VOLUME --sync-mode=two-way-resolved --default-file-mode-beta 0666 --default-directory-mode-beta 0777  $(pwd) docker://$VOLUME/volumes/$VOLUME
 
 # Create symlinks
-ln -s docker/docker-compose-mutagen.yml docker-compose-mutagen.yml
+ln -s docker/docker-compose.mutagen.yml docker-compose.mutagen.yml
 
 # Composer install
 export COMPOSER_MEMORY_LIMIT=-1 && composer install
@@ -97,8 +120,8 @@ export COMPOSER_MEMORY_LIMIT=-1 && composer install
 make build
 
 # Bring up the dev stack
-docker-compose -f docker-compose-mutagen.yml build --no-cache
-docker-compose -f docker-compose-mutagen.yml up -d
+docker compose -f docker-compose.mutagen.yml build --no-cache
+docker compose -f docker-compose.mutagen.yml up -d
 
 # Install Drupal
 make drupal_install
@@ -121,7 +144,7 @@ make drupal_install
 If you wish to have a pristine docker environment you may execute the following commands.
 
 ```sh
-docker rm $(docker ps -a -q)
+docker rm $(docker ps -a -q) --force
 docker rmi $(docker images -q) --force
 docker volume prune -f
 ```

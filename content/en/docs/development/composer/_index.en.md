@@ -86,9 +86,9 @@ Composer will create `composer.lock` file, which is a list of dependencies that 
 
 Please **don't add `drupal/core` to your project's composer.json** since WxT manages Drupal Core for you along with the series of patches on top of it.
 
-WxT's minor versions will always correspond to Drupal Core's. For example, `drupalwxt/wxt:~4.4.x` will require Drupal Core 9.4.x and `drupalwxt/wxt:~4.3.x` required Drupal Core 9.3.x.
+WxT's minor versions will always correspond to Drupal Core's. For example, `drupalwxt/wxt:~4.5.x` will require Drupal Core 9.5.x and `drupalwxt/wxt:~4.4.x` required Drupal Core 9.4.x.
 
-When you need to update Drupal Core as an example from 9.3.x to 9.4.x, all you would do is change your requirement for `drupalwxt/wxt` in your `composer.json` file:
+When you need to update Drupal Core as an example from 9.4.x to 9.5.x, all you would do is change your requirement for `drupalwxt/wxt` in your `composer.json` file:
 
 ```
 composer require --no-update drupalwxt/wxt:~4.4.0
@@ -99,6 +99,7 @@ composer update
 
 | `drupalwxt/wxt` version | Drupal Core version | Drush version |
 | ----------------------- | ------------------- | ------------- |
+| `~4.5.x`                | 9.5.x               | `>=9.7`       |
 | `~4.4.x`                | 9.4.x               | `>=9.7`       |
 | `~4.3.x`                | 9.3.x               | `>=9.7`       |
 | `~4.2.x`                | 9.2.x               | `>=9.7`       |
