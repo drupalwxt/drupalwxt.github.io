@@ -16,7 +16,7 @@ A reminder that &lt;strong>&lt;a href="https://getcomposer.org/download/">compos
 &lt;h3 id="composer-download">Composer Download&lt;/h3>
 &lt;p>Run this command and replace DIRECTORY with the directory of your choice this is where WxT will be installed.&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-sh" data-lang="sh">&lt;span style="display:flex;">&lt;span>composer self-update
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>composer create-project drupalwxt/site-wxt:9.4.x-dev &amp;lt;site-name&amp;gt; --no-interaction
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>composer create-project drupalwxt/site-wxt:9.5.x-dev &amp;lt;site-name&amp;gt; --no-interaction
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;blockquote>
 &lt;p>&lt;strong>Note&lt;/strong>: Normally you would pass a stable tag to the above command rather then just pulling from the development branch.&lt;/p>
 &lt;/blockquote>
@@ -37,7 +37,7 @@ A reminder that &lt;strong>&lt;a href="https://getcomposer.org/download/">compos
 &lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#4e9a06">&lt;/span> --sites-subdir&lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span>default &lt;span style="color:#4e9a06">\
 &lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#4e9a06">&lt;/span> --db-url&lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span>mysql://root:root@db:3306/wxt &lt;span style="color:#4e9a06">\
 &lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#4e9a06">&lt;/span> --account-name&lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span>admin &lt;span style="color:#4e9a06">\
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#4e9a06">&lt;/span> --account-pass&lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span>Drupal@2021 &lt;span style="color:#4e9a06">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#4e9a06">&lt;/span> --account-pass&lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span>Drupal@2023 &lt;span style="color:#4e9a06">\
 &lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#4e9a06">&lt;/span> --site-mail&lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span>admin@example.com &lt;span style="color:#4e9a06">\
 &lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#4e9a06">&lt;/span> --site-name&lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span>&lt;span style="color:#4e9a06">&amp;#34;Drupal Install Profile (WxT)&amp;#34;&lt;/span> &lt;span style="color:#4e9a06">\
 &lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#4e9a06">&lt;/span> wxt_extension_configure_form.select_all&lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span>&lt;span style="color:#4e9a06">&amp;#39;TRUE&amp;#39;&lt;/span> &lt;span style="color:#4e9a06">\
@@ -721,8 +721,8 @@ A reminder that &lt;strong>&lt;a href="https://getcomposer.org/download/">compos
 &lt;/blockquote>
 &lt;h3 id="how-to-update-drupal-core">How to update Drupal Core?&lt;/h3>
 &lt;p>Please &lt;strong>don&amp;rsquo;t add &lt;code>drupal/core&lt;/code> to your project&amp;rsquo;s composer.json&lt;/strong> since WxT manages Drupal Core for you along with the series of patches on top of it.&lt;/p>
-&lt;p>WxT&amp;rsquo;s minor versions will always correspond to Drupal Core&amp;rsquo;s. For example, &lt;code>drupalwxt/wxt:~4.4.x&lt;/code> will require Drupal Core 9.4.x and &lt;code>drupalwxt/wxt:~4.3.x&lt;/code> required Drupal Core 9.3.x.&lt;/p>
-&lt;p>When you need to update Drupal Core as an example from 9.3.x to 9.4.x, all you would do is change your requirement for &lt;code>drupalwxt/wxt&lt;/code> in your &lt;code>composer.json&lt;/code> file:&lt;/p>
+&lt;p>WxT&amp;rsquo;s minor versions will always correspond to Drupal Core&amp;rsquo;s. For example, &lt;code>drupalwxt/wxt:~4.5.x&lt;/code> will require Drupal Core 9.5.x and &lt;code>drupalwxt/wxt:~4.4.x&lt;/code> required Drupal Core 9.4.x.&lt;/p>
+&lt;p>When you need to update Drupal Core as an example from 9.4.x to 9.5.x, all you would do is change your requirement for &lt;code>drupalwxt/wxt&lt;/code> in your &lt;code>composer.json&lt;/code> file:&lt;/p>
 &lt;pre tabindex="0">&lt;code>composer require --no-update drupalwxt/wxt:~4.4.0
 composer update
 &lt;/code>&lt;/pre>&lt;h3 id="compatibility-table">Compatibility table&lt;/h3>
@@ -735,6 +735,11 @@ composer update
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
+&lt;tr>
+&lt;td>&lt;code>~4.5.x&lt;/code>&lt;/td>
+&lt;td>9.5.x&lt;/td>
+&lt;td>&lt;code>&amp;gt;=9.7&lt;/code>&lt;/td>
+&lt;/tr>
 &lt;tr>
 &lt;td>&lt;code>~4.4.x&lt;/code>&lt;/td>
 &lt;td>9.4.x&lt;/td>
@@ -853,23 +858,37 @@ be leveraged depending on your &lt;code>SDLC&lt;/code>.&lt;/p>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8f5902;font-style:italic">// $config[&amp;#34;$split_filename_prefix.SITENAME&amp;#34;][&amp;#39;status&amp;#39;] = TRUE;
 &lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;!-- Links Referenced --></description></item><item><title>Docs: Containers</title><link>https://drupalwxt.github.io/en/docs/environment/containers/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://drupalwxt.github.io/en/docs/environment/containers/</guid><description>
 &lt;p>For the (optional) container based development workflow this is roughly the steps that are followed.&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-sh" data-lang="sh">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8f5902;font-style:italic"># Git clone docker scaffold&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>git clone https://github.com/drupalwxt/docker-scaffold.git docker
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="linux-environments">Linux Environments&lt;/h2>
+&lt;p>Clone the docker-scaffold repository:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-sh" data-lang="sh">&lt;span style="display:flex;">&lt;span>git clone https://github.com/drupalwxt/docker-scaffold.git docker
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;blockquote>
+&lt;p>&lt;strong>Note&lt;/strong>: The &lt;code>docker&lt;/code> folder should be added to your &lt;code>.gitignore&lt;/code> file.&lt;/p>
+&lt;/blockquote>
+&lt;h2 id="linux-environments">Linux Environments&lt;/h2>
 &lt;p>The following are the steps you should follow for a Linux based environment.&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-sh" data-lang="sh">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8f5902;font-style:italic"># Create symlinks&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>ln -s docker/docker-compose.yml docker-compose.yml
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>ln -s docker/docker-compose-ci.yml docker-compose-ci.yml
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8f5902;font-style:italic"># Composer install&lt;/span>
+&lt;p>Create the necessary symlinks:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-sh" data-lang="sh">&lt;span style="display:flex;">&lt;span>ln -s docker/docker-compose.base.yml docker-compose.base.yml
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>ln -s docker/docker-compose.ci.yml docker-compose.ci.yml
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>ln -sf docker/docker-compose.yml docker-compose.yml
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Create and adjust the following Makefile:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-sh" data-lang="sh">&lt;span style="display:flex;">&lt;span>include .env
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>NAME :&lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span> &lt;span style="color:#204a87;font-weight:bold">$(&lt;/span>or &lt;span style="color:#204a87;font-weight:bold">$(&lt;/span>BASE_IMAGE&lt;span style="color:#204a87;font-weight:bold">)&lt;/span>,&lt;span style="color:#204a87;font-weight:bold">$(&lt;/span>BASE_IMAGE&lt;span style="color:#204a87;font-weight:bold">)&lt;/span>,drupalwxt/site-wxt&lt;span style="color:#204a87;font-weight:bold">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>VERSION :&lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span> &lt;span style="color:#204a87;font-weight:bold">$(&lt;/span>or &lt;span style="color:#204a87;font-weight:bold">$(&lt;/span>VERSION&lt;span style="color:#204a87;font-weight:bold">)&lt;/span>,&lt;span style="color:#204a87;font-weight:bold">$(&lt;/span>VERSION&lt;span style="color:#204a87;font-weight:bold">)&lt;/span>,&lt;span style="color:#4e9a06">&amp;#39;latest&amp;#39;&lt;/span>&lt;span style="color:#204a87;font-weight:bold">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>PLATFORM :&lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span> &lt;span style="color:#204a87;font-weight:bold">$(&lt;/span>shell uname -s&lt;span style="color:#204a87;font-weight:bold">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#204a87;font-weight:bold">$(&lt;/span>&lt;span style="color:#204a87">eval&lt;/span> GIT_USERNAME :&lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span> &lt;span style="color:#204a87;font-weight:bold">$(if&lt;/span> &lt;span style="color:#204a87;font-weight:bold">$(&lt;/span>GIT_USERNAME&lt;span style="color:#204a87;font-weight:bold">)&lt;/span>,&lt;span style="color:#204a87;font-weight:bold">$(&lt;/span>GIT_USERNAME&lt;span style="color:#204a87;font-weight:bold">)&lt;/span>,gitlab-ci-token&lt;span style="color:#204a87;font-weight:bold">))&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#204a87;font-weight:bold">$(&lt;/span>&lt;span style="color:#204a87">eval&lt;/span> GIT_PASSWORD :&lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span> &lt;span style="color:#204a87;font-weight:bold">$(if&lt;/span> &lt;span style="color:#204a87;font-weight:bold">$(&lt;/span>GIT_PASSWORD&lt;span style="color:#204a87;font-weight:bold">)&lt;/span>,&lt;span style="color:#204a87;font-weight:bold">$(&lt;/span>GIT_PASSWORD&lt;span style="color:#204a87;font-weight:bold">)&lt;/span>,&lt;span style="color:#204a87;font-weight:bold">$(&lt;/span>CI_JOB_TOKEN&lt;span style="color:#204a87;font-weight:bold">)))&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>DOCKER_REPO :&lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span> https://github.com/drupalwxt/docker-scaffold.git
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>GET_DOCKER :&lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span> &lt;span style="color:#204a87;font-weight:bold">$(&lt;/span>shell &lt;span style="color:#ce5c00;font-weight:bold">[&lt;/span> -d docker &lt;span style="color:#ce5c00;font-weight:bold">]&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">||&lt;/span> git clone &lt;span style="color:#204a87;font-weight:bold">$(&lt;/span>DOCKER_REPO&lt;span style="color:#204a87;font-weight:bold">)&lt;/span> docker&lt;span style="color:#204a87;font-weight:bold">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>include docker/Makefile
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Build and setup your environment with default content:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-sh" data-lang="sh">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8f5902;font-style:italic"># Composer install&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#204a87">export&lt;/span> &lt;span style="color:#000">COMPOSER_MEMORY_LIMIT&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span>-1 &lt;span style="color:#ce5c00;font-weight:bold">&amp;amp;&amp;amp;&lt;/span> composer install
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8f5902;font-style:italic"># Make our base docker image&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>make build
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8f5902;font-style:italic"># Bring up the dev stack&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>docker-compose -f docker-compose.yml build --no-cache
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>docker-compose -f docker-compose.yml up -d
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>docker compose -f docker-compose.yml build --no-cache
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>docker compose -f docker-compose.yml up -d
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8f5902;font-style:italic"># Install Drupal&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>make drupal_install
@@ -911,7 +930,7 @@ Docker for Desktop VirtioFS
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>mutagen sync create --name &lt;span style="color:#000">$VOLUME&lt;/span> --sync-mode&lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span>two-way-resolved --default-file-mode-beta &lt;span style="color:#0000cf;font-weight:bold">0666&lt;/span> --default-directory-mode-beta &lt;span style="color:#0000cf;font-weight:bold">0777&lt;/span> &lt;span style="color:#204a87;font-weight:bold">$(&lt;/span>&lt;span style="color:#204a87">pwd&lt;/span>&lt;span style="color:#204a87;font-weight:bold">)&lt;/span> docker://&lt;span style="color:#000">$VOLUME&lt;/span>/volumes/&lt;span style="color:#000">$VOLUME&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8f5902;font-style:italic"># Create symlinks&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>ln -s docker/docker-compose-mutagen.yml docker-compose-mutagen.yml
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>ln -s docker/docker-compose.mutagen.yml docker-compose.mutagen.yml
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8f5902;font-style:italic"># Composer install&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#204a87">export&lt;/span> &lt;span style="color:#000">COMPOSER_MEMORY_LIMIT&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span>-1 &lt;span style="color:#ce5c00;font-weight:bold">&amp;amp;&amp;amp;&lt;/span> composer install
@@ -920,8 +939,8 @@ Docker for Desktop VirtioFS
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>make build
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8f5902;font-style:italic"># Bring up the dev stack&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>docker-compose -f docker-compose-mutagen.yml build --no-cache
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>docker-compose -f docker-compose-mutagen.yml up -d
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>docker compose -f docker-compose.mutagen.yml build --no-cache
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>docker compose -f docker-compose.mutagen.yml up -d
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8f5902;font-style:italic"># Install Drupal&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>make drupal_install
@@ -939,7 +958,7 @@ Docker for Desktop VirtioFS
 &lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#4e9a06">&lt;/span>./docker/bin/drush migrate:import --group gcweb --tag &lt;span style="color:#4e9a06">&amp;#39;Menu&amp;#39;&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="cleanup">Cleanup&lt;/h2>
 &lt;p>If you wish to have a pristine docker environment you may execute the following commands.&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-sh" data-lang="sh">&lt;span style="display:flex;">&lt;span>docker rm &lt;span style="color:#204a87;font-weight:bold">$(&lt;/span>docker ps -a -q&lt;span style="color:#204a87;font-weight:bold">)&lt;/span>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-sh" data-lang="sh">&lt;span style="display:flex;">&lt;span>docker rm &lt;span style="color:#204a87;font-weight:bold">$(&lt;/span>docker ps -a -q&lt;span style="color:#204a87;font-weight:bold">)&lt;/span> --force
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>docker rmi &lt;span style="color:#204a87;font-weight:bold">$(&lt;/span>docker images -q&lt;span style="color:#204a87;font-weight:bold">)&lt;/span> --force
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>docker volume prune -f
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>For those still using Mutagen you may also need to execute the following command:&lt;/p>
@@ -1160,7 +1179,7 @@ The base of the platform - Kubernetes is the first graduate of the &lt;strong>&l
 &lt;h2 id="select-a-version-number">Select a version number&lt;/h2>
 &lt;p>WxT releases are numbered using a form of semantic versioning. More information can be found in our &lt;strong>&lt;a href="../../../en/docs/development/version/">Versioning&lt;/a>&lt;/strong> page.&lt;/p>
 &lt;p>&lt;code>MAJOR.FEATURE.SPRINT&lt;/code>&lt;/p>
-&lt;p>In general, when preparing a release: increment the FEATURE when Drupal Core has a major release (ie. 9.3.x to 9.4.x) otherwise simply increment the SPRINT number.&lt;/p>
+&lt;p>In general, when preparing a release: increment the FEATURE when Drupal Core has a major release (ie. 9.4.x to 9.5.x) otherwise simply increment the SPRINT number.&lt;/p>
 &lt;h2 id="create-an-issue-on-githubcom">Create an issue on GitHub.com&lt;/h2>
 &lt;p>Create an issue in the &lt;strong>&lt;a href="https://github.com/drupalwxt/wxt">Drupal WxT&lt;/a>&lt;/strong> project on GitHub for release tracking, title it &lt;code>Release x.x.x&lt;/code> (where x.x.x is the incremented version number).&lt;/p>
 &lt;p>This issue should contain the following checklist as well as any other related steps or information regarding preparing the release.&lt;/p>

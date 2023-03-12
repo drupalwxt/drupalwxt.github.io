@@ -16,7 +16,7 @@ A reminder that &lt;strong>&lt;a href="https://getcomposer.org/download/">compos
 &lt;h3 id="composer-download">Composer Download&lt;/h3>
 &lt;p>Run this command and replace DIRECTORY with the directory of your choice this is where WxT will be installed.&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-sh" data-lang="sh">&lt;span style="display:flex;">&lt;span>composer self-update
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>composer create-project drupalwxt/site-wxt:9.4.x-dev &amp;lt;site-name&amp;gt; --no-interaction
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>composer create-project drupalwxt/site-wxt:9.5.x-dev &amp;lt;site-name&amp;gt; --no-interaction
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;blockquote>
 &lt;p>&lt;strong>Note&lt;/strong>: Normally you would pass a stable tag to the above command rather then just pulling from the development branch.&lt;/p>
 &lt;/blockquote>
@@ -37,7 +37,7 @@ A reminder that &lt;strong>&lt;a href="https://getcomposer.org/download/">compos
 &lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#4e9a06">&lt;/span> --sites-subdir&lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span>default &lt;span style="color:#4e9a06">\
 &lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#4e9a06">&lt;/span> --db-url&lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span>mysql://root:root@db:3306/wxt &lt;span style="color:#4e9a06">\
 &lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#4e9a06">&lt;/span> --account-name&lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span>admin &lt;span style="color:#4e9a06">\
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#4e9a06">&lt;/span> --account-pass&lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span>Drupal@2021 &lt;span style="color:#4e9a06">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#4e9a06">&lt;/span> --account-pass&lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span>Drupal@2023 &lt;span style="color:#4e9a06">\
 &lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#4e9a06">&lt;/span> --site-mail&lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span>admin@example.com &lt;span style="color:#4e9a06">\
 &lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#4e9a06">&lt;/span> --site-name&lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span>&lt;span style="color:#4e9a06">&amp;#34;Drupal Install Profile (WxT)&amp;#34;&lt;/span> &lt;span style="color:#4e9a06">\
 &lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#4e9a06">&lt;/span> wxt_extension_configure_form.select_all&lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span>&lt;span style="color:#4e9a06">&amp;#39;TRUE&amp;#39;&lt;/span> &lt;span style="color:#4e9a06">\
