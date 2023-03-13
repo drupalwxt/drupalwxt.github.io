@@ -140,6 +140,67 @@ We try our best to have security releases of Drupal Core within &lt;strong>24-72
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
+&lt;td>&lt;strong>4.5.0&lt;/strong>&lt;/td>
+&lt;td>&lt;strong>2023-03-13&lt;/strong>&lt;/td>
+&lt;td>&lt;p>Features / Updates:&lt;/p>
+&lt;ul>
+&lt;li>Updates for Drupal Core
+&lt;ul>
+&lt;li>Patch (bugfix) release of Drupal Core to &lt;code>v9.5.4&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Updates for Drupal Contrib
+&lt;ul>
+&lt;li>bootstrap_layouts update to &lt;code>5.3&lt;/code>&lt;/li>
+&lt;li>core_context update to &lt;code>1.1&lt;/code>&lt;/li>
+&lt;li>linkit update to &lt;code>6.0.0-beta4&lt;/code>&lt;/li>
+&lt;li>page_manager to &lt;code>4.0-rc2&lt;/code>&lt;/li>
+&lt;li>panels to &lt;code>4.7&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Updates for WxT
+&lt;ul>
+&lt;li>WxT Media Upload Improvements (sync w/Lightning)&lt;/li>
+&lt;li>WxT Media Bulk Upload Improvements (sync w/Lightning)&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Updated for WxT Bootstrap
+&lt;ul>
+&lt;li>Update Bootstrap theme to v3.27&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>Upgrade path:&lt;/p>
+&lt;blockquote>
+&lt;p>&lt;strong>Important&lt;/strong>: Please backup your database before running the upgrade process for this release.&lt;/p>
+&lt;/blockquote>
+&lt;ul>
+&lt;li>
+&lt;p>Update your codebase:&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>composer update&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>Run database updates:&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>drush cache:rebuild&lt;/code>&lt;/li>
+&lt;li>&lt;code>drush updatedb&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>Run WxT configuration updates:&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>drush cache:rebuild&lt;/code>&lt;/li>
+&lt;li>&lt;code>drush update:wxt&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>&lt;strong>Note(s)&lt;/strong>:&lt;/p>
+&lt;p>This is an upgrade from 9.4.x to 9.5.x however changes are minimal and is expected upgrades will be fairly smooth.&lt;/p>
+&lt;/td>
+&lt;/tr>
+&lt;tr>
 &lt;td>&lt;strong>4.4.2&lt;/strong>&lt;/td>
 &lt;td>&lt;strong>2023-02-08&lt;/strong>&lt;/td>
 &lt;td>&lt;p>Features / Updates:&lt;/p>
@@ -405,103 +466,6 @@ We try our best to have security releases of Drupal Core within &lt;strong>24-72
 &lt;p>This will be the last release which includes the Lightning modules, even though they have been uninstalled in an earlier release.&lt;/p>
 &lt;/td>
 &lt;/tr>
-&lt;tr>
-&lt;td>&lt;strong>4.3.3&lt;/strong>&lt;/td>
-&lt;td>&lt;strong>2022-08-19&lt;/strong>&lt;/td>
-&lt;td>&lt;p>Features / Updates:&lt;/p>
-&lt;ul>
-&lt;li>Updates for Drupal Core
-&lt;ul>
-&lt;li>Patch (bugfix) release of Drupal Core to &lt;code>v9.3.21&lt;/code>&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>Updates for Drupal Contrib
-&lt;ul>
-&lt;li>ckeditor_codemirror update to &lt;code>2.4&lt;/code>&lt;/li>
-&lt;li>core_context update to &lt;code>1.0&lt;/code>&lt;/li>
-&lt;li>ctools module update to &lt;code>^3.9&lt;/code>&lt;/li>
-&lt;li>inline_entity_form to &lt;code>^2.7&lt;/code>&lt;/li>
-&lt;li>layout_builder_restrictions to &lt;code>^2.14&lt;/code>&lt;/li>
-&lt;li>pathauto to &lt;code>^1.8&lt;/code>&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>Updates for WxT
-&lt;ul>
-&lt;li>[Deprecate] Remove Lightning Core &lt;a href="https://www.drupal.org/node/3302473">#3302473&lt;/a>&lt;/li>
-&lt;li>[Deprecate] Remove Lightning Media &lt;a href="https://www.drupal.org/node/3301875">#3301875&lt;/a>&lt;/li>
-&lt;li>Corrected bulk of reported issues by phpcs&lt;/li>
-&lt;li>FilterHtml throws Unsupported operand types &lt;a href="https://www.drupal.org/node/3300111">#3300111&lt;/a>&lt;/li>
-&lt;li>Core patch causing error when serializing top-level terms &lt;a href="https://www.drupal.org/node/3302126">#3302126&lt;/a>&lt;/li>
-&lt;li>WSOD on node forms with fresh install of WxT or ctools update &lt;a href="https://www.drupal.org/node/3300983">#3300983&lt;/a>&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>Updates for WxT Bootstrap
-&lt;ul>
-&lt;li>Preprocess field issue with video &lt;a href="https://www.drupal.org/node/3300986">#3300986&lt;/a>&lt;/li>
-&lt;li>Provide favicons with starterkit &lt;a href="https://www.drupal.org/node/3304675">#3304675&lt;/a>&lt;/li>
-&lt;li>Facet improvements (WCAG) &lt;a href="https://www.drupal.org/node/3282148">#3282148&lt;/a>&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>Updates for WxT Library
-&lt;ul>
-&lt;li>Switch to dynamic menu handling for wxt_library&lt;/li>
-&lt;li>Update to theme-gc-intranet theme to &lt;code>4.0.43.1&lt;/code>&lt;/li>
-&lt;li>SearchCanadaBlockForm missing dependency injection &lt;a href="https://www.drupal.org/node/3300107">#3300107&lt;/a>&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;p>Upgrade path:&lt;/p>
-&lt;blockquote>
-&lt;p>&lt;strong>Important&lt;/strong>: Please backup your database before running the upgrade process for this release.&lt;/p>
-&lt;/blockquote>
-&lt;ul>
-&lt;li>
-&lt;p>Update your codebase:&lt;/p>
-&lt;ul>
-&lt;li>&lt;code>composer update&lt;/code>&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>
-&lt;p>Run database updates:&lt;/p>
-&lt;ul>
-&lt;li>&lt;code>drush cache:rebuild&lt;/code>&lt;/li>
-&lt;li>&lt;code>drush updatedb&lt;/code>&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>
-&lt;p>Run WxT configuration updates:&lt;/p>
-&lt;ul>
-&lt;li>&lt;code>drush cache:rebuild&lt;/code>&lt;/li>
-&lt;li>&lt;code>drush update:wxt&lt;/code>&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;p>&lt;strong>Note(s)&lt;/strong>:&lt;/p>
-&lt;p>To facilitate keeping the distribution lightweight and because soon the Lightning Contrib modules will be EOL we need to remove all of the Lightning contrib in a way that doesn&amp;rsquo;t break an upgrade path and documents the modules removed in case site builders will want to manually add them to their own &lt;code>composer.json&lt;/code> file&lt;/p>
-&lt;blockquote>
-&lt;p>&lt;strong>Note&lt;/strong>: that all error messages stating &amp;ldquo;Currently using Missing or invalid module&amp;rdquo; will be resolved after running the &lt;code>drush updatedb&lt;/code> step above.&lt;/p>
-&lt;/blockquote>
-&lt;p>a) [Deprecate] Remove Lightning Core &lt;a href="https://www.drupal.org/node/3302473">#3302473&lt;/a>&lt;/p>
-&lt;p>Please read over the above issue and consult the below list of the removed composer entries in case you are depending on any of them and need to apply them manually to your composer.json file.&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-yaml" data-lang="yaml">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#204a87;font-weight:bold">&amp;#34;drupal/acquia_telemetry-acquia_telemetry&amp;#34;: &lt;/span>&lt;span style="color:#4e9a06">&amp;#34;^1.0-alpha3&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline">&lt;/span>&lt;span style="color:#204a87;font-weight:bold">&amp;#34;drupal/contact_storage&amp;#34;: &lt;/span>&lt;span style="color:#4e9a06">&amp;#34;^1.0&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
-&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>All of the Lightning Core functionality was directly ported to support an upgrade path and an update script written in the &lt;code>wxt_core_update_8433&lt;/code> function.&lt;/p>
-&lt;blockquote>
-&lt;p>&lt;strong>Note&lt;/strong>: Any Lightning sub modules will also be uninstalled.&lt;/p>
-&lt;/blockquote>
-&lt;p>b) [Deprecate] Remove Lightning Media &lt;a href="https://www.drupal.org/node/3301875">#3301875&lt;/a>&lt;/p>
-&lt;p>Please read over the above issue and consult the below list of the removed composer entries in case you are depending on any of them and need to apply them manually to your composer.json file.&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-yaml" data-lang="yaml">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#000">Nothing removed at the moment&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
-&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>c) All of the Lightning Media functionality was directly ported to support an upgrade path and an update script written in the &lt;code>wxt_core_update_8433&lt;/code> function.&lt;/p>
-&lt;blockquote>
-&lt;p>&lt;strong>Note&lt;/strong>: Any Lightning sub modules will also be uninstalled.&lt;/p>
-&lt;/blockquote>
-&lt;p>d) Finally check your custom modules and / or configuration objects for any reference to &lt;code>lightning_core&lt;/code>, &lt;code>lightning_page&lt;/code> and &lt;code>lightning_media&lt;/code> as some of your config objects (that we couldn&amp;rsquo;t automatically correct) might reference the old modules and this step will be important to get your configuration objects properly loaded.&lt;/p>
-&lt;blockquote>
-&lt;p>&lt;strong>Note&lt;/strong>: These references should be replaced by their new counterparts &lt;code>wxt_core&lt;/code>, &lt;code>wxt_ext_page&lt;/code> and &lt;code>wxt_ext_media&lt;/code>. As some of your config objects might reference the old modules this step is important to get your config loaded.&lt;/p>
-&lt;/blockquote>
-&lt;/td>
-&lt;/tr>
 &lt;/tbody>
 &lt;/table>
 &lt;h2 id="repositories-for-drupal-wxt">Repositories for Drupal WxT&lt;/h2>
@@ -532,7 +496,7 @@ We try our best to have security releases of Drupal Core within &lt;strong>24-72
 &lt;td>&lt;strong>drupalwxt.github.io&lt;/strong>&lt;/td>
 &lt;td>&lt;a href="https://github.com/drupalwxt/drupalwxt.github.io" target="_blank">drupalwxt/drupalwxt.github.io&lt;/a>&lt;/td>
 &lt;td>GitHub Pages for Drupal WxT.&lt;/td>
-&lt;td>Size: 9218 Bytes&lt;/td>
+&lt;td>Size: 9271 Bytes&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>&lt;strong>helm-drupal&lt;/strong>&lt;/td>
@@ -562,7 +526,7 @@ We try our best to have security releases of Drupal Core within &lt;strong>24-72
 &lt;td>&lt;strong>wxt&lt;/strong>&lt;/td>
 &lt;td>&lt;a href="https://github.com/drupalwxt/wxt" target="_blank">drupalwxt/wxt&lt;/a>&lt;/td>
 &lt;td>Drupal 9 variant of the Web Experience Toolkit (WxT).&lt;/td>
-&lt;td>Size: 2051 Bytes&lt;/td>
+&lt;td>Size: 2050 Bytes&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>&lt;strong>wxt-project&lt;/strong>&lt;/td>
