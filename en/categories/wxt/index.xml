@@ -487,25 +487,25 @@ Patch (bugfix) release of Drupal Core to &lt;code>v10.0.10&lt;/code>&lt;/li>
 &lt;td>&lt;strong>drupalwxt.github.io&lt;/strong>&lt;/td>
 &lt;td>&lt;a href="https://github.com/drupalwxt/drupalwxt.github.io" target="_blank">drupalwxt/drupalwxt.github.io&lt;/a>&lt;/td>
 &lt;td>GitHub Pages for Drupal WxT.&lt;/td>
-&lt;td>Size: 11546 Bytes&lt;/td>
+&lt;td>Size: 11604 Bytes&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>&lt;strong>helm-drupal&lt;/strong>&lt;/td>
 &lt;td>&lt;a href="https://github.com/drupalwxt/helm-drupal" target="_blank">drupalwxt/helm-drupal&lt;/a>&lt;/td>
 &lt;td>Helm chart for running Drupal on Kubernetes&lt;/td>
-&lt;td>Size: 66994 Bytes&lt;/td>
+&lt;td>Size: 67003 Bytes&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>&lt;strong>site-wxt&lt;/strong>&lt;/td>
 &lt;td>&lt;a href="https://github.com/drupalwxt/site-wxt" target="_blank">drupalwxt/site-wxt&lt;/a>&lt;/td>
 &lt;td>An example composer project for the Drupal WxT distribution used for integration testing.&lt;/td>
-&lt;td>Size: 3634 Bytes&lt;/td>
+&lt;td>Size: 3632 Bytes&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>&lt;strong>terraform-kubernetes-drupalwxt&lt;/strong>&lt;/td>
 &lt;td>&lt;a href="https://github.com/drupalwxt/terraform-kubernetes-drupalwxt" target="_blank">drupalwxt/terraform-kubernetes-drupalwxt&lt;/a>&lt;/td>
 &lt;td>Terraform module for Drupal WxT&lt;/td>
-&lt;td>Size: 65 Bytes&lt;/td>
+&lt;td>Size: 67 Bytes&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>&lt;strong>themes-cdn&lt;/strong>&lt;/td>
