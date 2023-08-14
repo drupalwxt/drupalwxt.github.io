@@ -140,7 +140,69 @@ We try our best to have security releases of Drupal Core within &lt;strong>24-72
 &lt;tr>
 &lt;td>&lt;strong>4.5.4&lt;/strong>&lt;/td>
 &lt;td>&lt;strong>2023-08-14&lt;/strong>&lt;/td>
-&lt;td>&lt;/td>
+&lt;td>&lt;p>Features / Updates:&lt;/p>
+&lt;ul>
+&lt;li>Updates for Drupal Core
+&lt;ul>
+&lt;li>Patch (bugfix) release of Drupal Core to &lt;code>v9.5.10&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Updates for Drupal Contrib
+&lt;ul>
+&lt;li>Incompatible version for ckeditor/fakeobjects &lt;a href="https://www.drupal.org/node/3363952">#3363952&lt;/a>&lt;/li>
+&lt;li>Update migrate_plus to ^6.0 &lt;a href="https://www.drupal.org/node/3372334">#3372334&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Updates for WxT
+&lt;ul>
+&lt;li>Check $profile is not null condition.&lt;/li>
+&lt;li>Add ability to set permissions for wxt_ext_breadcrumbs &lt;a href="https://www.drupal.org/node/3366800">#3366800&lt;/a>&lt;/li>
+&lt;li>Keep drupal/groups disabled by default &lt;a href="https://www.drupal.org/node/3357710">#3357710&lt;/a>&lt;/li>
+&lt;li>Undefined array key &amp;rsquo;editor&amp;rsquo; in wxt_ext_editor_editor_js_settings_alter &lt;a href="https://www.drupal.org/node/3373991">#3373991&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Updates for WxT Bootstrap
+&lt;ul>
+&lt;li>Issue #3356383 by Liam Morland: Typo in template files: &amp;ldquo;clas&amp;rdquo; &lt;a href="https://www.drupal.org/node/3373991">#3373991&lt;/a>&lt;/li>
+&lt;li>Issue #3356385 by Liam Morland: Empty label can lead to empty &amp;lsquo;h3&amp;rsquo;, invalid HTML &lt;a href="https://www.drupal.org/node/3373991">#3373991&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Updates for WxT Library
+&lt;ul>
+&lt;li>Issue with wxt_library.module and php 8.1 &lt;a href="https://www.drupal.org/node/3368356">#3368356&lt;/a>&lt;/li>
+&lt;li>Remove IE8 from the wxt build, IE8 cleanup &lt;a href="https://www.drupal.org/node/3374233">#3374233&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>Upgrade path:&lt;/p>
+&lt;blockquote>
+&lt;p>&lt;strong>Important&lt;/strong>: Please backup your database before running the upgrade process for this release.&lt;/p>
+&lt;/blockquote>
+&lt;ul>
+&lt;li>
+&lt;p>Update your codebase:&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>composer update&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>Run database updates:&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>drush cache:rebuild&lt;/code>&lt;/li>
+&lt;li>&lt;code>drush updatedb&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>Run WxT configuration updates:&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>drush cache:rebuild&lt;/code>&lt;/li>
+&lt;li>&lt;code>drush update:wxt&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>&lt;strong>Note(s)&lt;/strong>:&lt;/p>
+&lt;p>N/A&lt;/p>
+&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>&lt;strong>4.5.3&lt;/strong>&lt;/td>
