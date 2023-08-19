@@ -1,0 +1,109 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Drupal WxT – containers</title><link>https://drupalwxt.github.io/tags/containers/</link><description>Recent content in containers on Drupal WxT</description><generator>Hugo -- gohugo.io</generator><language>en</language><atom:link href="https://drupalwxt.github.io/tags/containers/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs: Containers</title><link>https://drupalwxt.github.io/docs/environment/containers/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://drupalwxt.github.io/docs/environment/containers/</guid><description>
+&lt;p>For the (optional) container based development workflow this is roughly the steps that are followed.&lt;/p>
+&lt;p>Clone the docker-scaffold repository:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-sh" data-lang="sh">&lt;span style="display:flex;">&lt;span>git clone https://github.com/drupalwxt/docker-scaffold.git docker
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;blockquote>
+&lt;p>&lt;strong>Note&lt;/strong>: The &lt;code>docker&lt;/code> folder should be added to your &lt;code>.gitignore&lt;/code> file.&lt;/p>
+&lt;/blockquote>
+&lt;h2 id="linux-environments">Linux Environments&lt;/h2>
+&lt;p>The following are the steps you should follow for a Linux based environment.&lt;/p>
+&lt;p>Create the necessary symlinks:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-sh" data-lang="sh">&lt;span style="display:flex;">&lt;span>ln -s docker/docker-compose.base.yml docker-compose.base.yml
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>ln -s docker/docker-compose.ci.yml docker-compose.ci.yml
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>ln -sf docker/docker-compose.yml docker-compose.yml
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Create and adjust the following Makefile:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-sh" data-lang="sh">&lt;span style="display:flex;">&lt;span>include .env
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>NAME :&lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span> &lt;span style="color:#204a87;font-weight:bold">$(&lt;/span>or &lt;span style="color:#204a87;font-weight:bold">$(&lt;/span>BASE_IMAGE&lt;span style="color:#204a87;font-weight:bold">)&lt;/span>,&lt;span style="color:#204a87;font-weight:bold">$(&lt;/span>BASE_IMAGE&lt;span style="color:#204a87;font-weight:bold">)&lt;/span>,drupalwxt/site-wxt&lt;span style="color:#204a87;font-weight:bold">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>VERSION :&lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span> &lt;span style="color:#204a87;font-weight:bold">$(&lt;/span>or &lt;span style="color:#204a87;font-weight:bold">$(&lt;/span>VERSION&lt;span style="color:#204a87;font-weight:bold">)&lt;/span>,&lt;span style="color:#204a87;font-weight:bold">$(&lt;/span>VERSION&lt;span style="color:#204a87;font-weight:bold">)&lt;/span>,&lt;span style="color:#4e9a06">&amp;#39;latest&amp;#39;&lt;/span>&lt;span style="color:#204a87;font-weight:bold">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>PLATFORM :&lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span> &lt;span style="color:#204a87;font-weight:bold">$(&lt;/span>shell uname -s&lt;span style="color:#204a87;font-weight:bold">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#204a87;font-weight:bold">$(&lt;/span>&lt;span style="color:#204a87">eval&lt;/span> GIT_USERNAME :&lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span> &lt;span style="color:#204a87;font-weight:bold">$(if&lt;/span> &lt;span style="color:#204a87;font-weight:bold">$(&lt;/span>GIT_USERNAME&lt;span style="color:#204a87;font-weight:bold">)&lt;/span>,&lt;span style="color:#204a87;font-weight:bold">$(&lt;/span>GIT_USERNAME&lt;span style="color:#204a87;font-weight:bold">)&lt;/span>,gitlab-ci-token&lt;span style="color:#204a87;font-weight:bold">))&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#204a87;font-weight:bold">$(&lt;/span>&lt;span style="color:#204a87">eval&lt;/span> GIT_PASSWORD :&lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span> &lt;span style="color:#204a87;font-weight:bold">$(if&lt;/span> &lt;span style="color:#204a87;font-weight:bold">$(&lt;/span>GIT_PASSWORD&lt;span style="color:#204a87;font-weight:bold">)&lt;/span>,&lt;span style="color:#204a87;font-weight:bold">$(&lt;/span>GIT_PASSWORD&lt;span style="color:#204a87;font-weight:bold">)&lt;/span>,&lt;span style="color:#204a87;font-weight:bold">$(&lt;/span>CI_JOB_TOKEN&lt;span style="color:#204a87;font-weight:bold">)))&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>DOCKER_REPO :&lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span> https://github.com/drupalwxt/docker-scaffold.git
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>GET_DOCKER :&lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span> &lt;span style="color:#204a87;font-weight:bold">$(&lt;/span>shell &lt;span style="color:#ce5c00;font-weight:bold">[&lt;/span> -d docker &lt;span style="color:#ce5c00;font-weight:bold">]&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">||&lt;/span> git clone &lt;span style="color:#204a87;font-weight:bold">$(&lt;/span>DOCKER_REPO&lt;span style="color:#204a87;font-weight:bold">)&lt;/span> docker&lt;span style="color:#204a87;font-weight:bold">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>include docker/Makefile
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Build and setup your environment with default content:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-sh" data-lang="sh">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8f5902;font-style:italic"># Composer install&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#204a87">export&lt;/span> &lt;span style="color:#000">COMPOSER_MEMORY_LIMIT&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span>-1 &lt;span style="color:#ce5c00;font-weight:bold">&amp;amp;&amp;amp;&lt;/span> composer install
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8f5902;font-style:italic"># Make our base docker image&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>make build
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8f5902;font-style:italic"># Bring up the dev stack&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>docker compose -f docker-compose.yml build --no-cache
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>docker compose -f docker-compose.yml up -d
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8f5902;font-style:italic"># Install Drupal&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>make drupal_install
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8f5902;font-style:italic"># Development configuration&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>./docker/bin/drush config-set system.performance js.preprocess &lt;span style="color:#0000cf;font-weight:bold">0&lt;/span> -y &lt;span style="color:#ce5c00;font-weight:bold">&amp;amp;&amp;amp;&lt;/span> &lt;span style="color:#4e9a06">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#4e9a06">&lt;/span>./docker/bin/drush config-set system.performance css.preprocess &lt;span style="color:#0000cf;font-weight:bold">0&lt;/span> -y &lt;span style="color:#ce5c00;font-weight:bold">&amp;amp;&amp;amp;&lt;/span> &lt;span style="color:#4e9a06">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#4e9a06">&lt;/span>./docker/bin/drush php-eval &lt;span style="color:#4e9a06">&amp;#39;node_access_rebuild();&amp;#39;&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">&amp;amp;&amp;amp;&lt;/span> &lt;span style="color:#4e9a06">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#4e9a06">&lt;/span>./docker/bin/drush config-set wxt_library.settings wxt.theme theme-gcweb -y &lt;span style="color:#ce5c00;font-weight:bold">&amp;amp;&amp;amp;&lt;/span> &lt;span style="color:#4e9a06">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#4e9a06">&lt;/span>./docker/bin/drush cr
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8f5902;font-style:italic"># Migrate default content&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>./docker/bin/drush migrate:import --group wxt --tag &lt;span style="color:#4e9a06">&amp;#39;Core&amp;#39;&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">&amp;amp;&amp;amp;&lt;/span> &lt;span style="color:#4e9a06">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#4e9a06">&lt;/span>./docker/bin/drush migrate:import --group gcweb --tag &lt;span style="color:#4e9a06">&amp;#39;Core&amp;#39;&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">&amp;amp;&amp;amp;&lt;/span> &lt;span style="color:#4e9a06">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#4e9a06">&lt;/span>./docker/bin/drush migrate:import --group gcweb --tag &lt;span style="color:#4e9a06">&amp;#39;Menu&amp;#39;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="modern-osx-environments">Modern OSX Environments&lt;/h2>
+&lt;p>If you have &lt;code>Docker for Desktop&lt;/code> and a new enough OSX environment (Monterey or higher) then the steps are the exact same as those for the Linux environment given above.&lt;/p>
+&lt;p>All that is required in advance is to enable &lt;code>VirtioFS&lt;/code> accelerated directory sharing which you can see in the attached picture below.&lt;/p>
+&lt;figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 917px">
+&lt;img class="card-img-top" src="../../docs/environment/containers/virtiofs_hua445c97bc04e8c98a3e33391a65ffc40_78771_0x300_resize_catmullrom_3.png" width="907" height="300">
+&lt;figcaption class="card-body px-0 pt-2 pb-0">
+&lt;p class="card-text">
+Docker for Desktop VirtioFS
+&lt;small class="text-muted">&lt;br/>Image: Drupal / CC-BY-CA&lt;/small>
+&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;p>For older environments you may still use mutagen which is discussed below.&lt;/p>
+&lt;h2 id="legacy-osx-environments-mutagen">Legacy OSX Environments (Mutagen)&lt;/h2>
+&lt;p>While this is fixed with the new virtualization framework discussed above.&lt;/p>
+&lt;p>For older environments mutagen will have to be used instead and as such requires a few additional steps.&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>&lt;a href="https://github.com/docker/roadmap/issues/7">Improve Mac File system performance&lt;/a>&lt;/strong>&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-sh" data-lang="sh">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8f5902;font-style:italic"># Mutagen Setup&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#204a87">export&lt;/span> &lt;span style="color:#000">VOLUME&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span>site-wxt-mutagen-cache
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>docker volume create &lt;span style="color:#000">$VOLUME&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>docker container create --name &lt;span style="color:#000">$VOLUME&lt;/span> -v &lt;span style="color:#000">$VOLUME&lt;/span>:/volumes/&lt;span style="color:#000">$VOLUME&lt;/span> mutagenio/sidecar:0.13.0-beta3
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>docker start &lt;span style="color:#000">$VOLUME&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>mutagen sync create --name &lt;span style="color:#000">$VOLUME&lt;/span> --sync-mode&lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span>two-way-resolved --default-file-mode-beta &lt;span style="color:#0000cf;font-weight:bold">0666&lt;/span> --default-directory-mode-beta &lt;span style="color:#0000cf;font-weight:bold">0777&lt;/span> &lt;span style="color:#204a87;font-weight:bold">$(&lt;/span>&lt;span style="color:#204a87">pwd&lt;/span>&lt;span style="color:#204a87;font-weight:bold">)&lt;/span> docker://&lt;span style="color:#000">$VOLUME&lt;/span>/volumes/&lt;span style="color:#000">$VOLUME&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8f5902;font-style:italic"># Create symlinks&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>ln -s docker/docker-compose.mutagen.yml docker-compose.mutagen.yml
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8f5902;font-style:italic"># Composer install&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#204a87">export&lt;/span> &lt;span style="color:#000">COMPOSER_MEMORY_LIMIT&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span>-1 &lt;span style="color:#ce5c00;font-weight:bold">&amp;amp;&amp;amp;&lt;/span> composer install
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8f5902;font-style:italic"># Make our base docker image&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>make build
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8f5902;font-style:italic"># Bring up the dev stack&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>docker compose -f docker-compose.mutagen.yml build --no-cache
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>docker compose -f docker-compose.mutagen.yml up -d
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8f5902;font-style:italic"># Install Drupal&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>make drupal_install
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8f5902;font-style:italic"># Development configuration&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>./docker/bin/drush config-set system.performance js.preprocess &lt;span style="color:#0000cf;font-weight:bold">0&lt;/span> -y &lt;span style="color:#ce5c00;font-weight:bold">&amp;amp;&amp;amp;&lt;/span> &lt;span style="color:#4e9a06">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#4e9a06">&lt;/span>./docker/bin/drush config-set system.performance css.preprocess &lt;span style="color:#0000cf;font-weight:bold">0&lt;/span> -y &lt;span style="color:#ce5c00;font-weight:bold">&amp;amp;&amp;amp;&lt;/span> &lt;span style="color:#4e9a06">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#4e9a06">&lt;/span>./docker/bin/drush php-eval &lt;span style="color:#4e9a06">&amp;#39;node_access_rebuild();&amp;#39;&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">&amp;amp;&amp;amp;&lt;/span> &lt;span style="color:#4e9a06">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#4e9a06">&lt;/span>./docker/bin/drush config-set wxt_library.settings wxt.theme theme-gcweb -y &lt;span style="color:#ce5c00;font-weight:bold">&amp;amp;&amp;amp;&lt;/span> &lt;span style="color:#4e9a06">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#4e9a06">&lt;/span>./docker/bin/drush cr
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8f5902;font-style:italic"># Migrate default content&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>./docker/bin/drush migrate:import --group wxt --tag &lt;span style="color:#4e9a06">&amp;#39;Core&amp;#39;&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">&amp;amp;&amp;amp;&lt;/span> &lt;span style="color:#4e9a06">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#4e9a06">&lt;/span>./docker/bin/drush migrate:import --group gcweb --tag &lt;span style="color:#4e9a06">&amp;#39;Core&amp;#39;&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">&amp;amp;&amp;amp;&lt;/span> &lt;span style="color:#4e9a06">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#4e9a06">&lt;/span>./docker/bin/drush migrate:import --group gcweb --tag &lt;span style="color:#4e9a06">&amp;#39;Menu&amp;#39;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="cleanup">Cleanup&lt;/h2>
+&lt;p>If you wish to have a pristine docker environment you may execute the following commands.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-sh" data-lang="sh">&lt;span style="display:flex;">&lt;span>docker rm &lt;span style="color:#204a87;font-weight:bold">$(&lt;/span>docker ps -a -q&lt;span style="color:#204a87;font-weight:bold">)&lt;/span> --force
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>docker rmi &lt;span style="color:#204a87;font-weight:bold">$(&lt;/span>docker images -q&lt;span style="color:#204a87;font-weight:bold">)&lt;/span> --force
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>docker volume prune -f
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>For those still using Mutagen you may also need to execute the following command:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-sh" data-lang="sh">&lt;span style="display:flex;">&lt;span>mutagen sync terminate &amp;lt;sync_xxxxx&amp;gt;
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;!-- Links Referenced --></description></item></channel></rss>

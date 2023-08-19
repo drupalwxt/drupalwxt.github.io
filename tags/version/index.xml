@@ -1,0 +1,45 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Drupal WxT – version</title><link>https://drupalwxt.github.io/tags/version/</link><description>Recent content in version on Drupal WxT</description><generator>Hugo -- gohugo.io</generator><language>en</language><atom:link href="https://drupalwxt.github.io/tags/version/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs: Versioning</title><link>https://drupalwxt.github.io/docs/development/version/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://drupalwxt.github.io/docs/development/version/</guid><description>
+&lt;p>The &lt;strong>&lt;a href="https://github.com/drupalwxt/wxt">Drupal WxT&lt;/a>&lt;/strong> distribution is following semantic versioning.&lt;/p>
+&lt;p>WxT typically makes a sprint release every four to six weeks. We will also use sprint releases to package new minor releases of Drupal Core with WxT as they become available.&lt;/p>
+&lt;p>In addition, we will also increment the major version number of WxT about once every four to six months.&lt;/p>
+&lt;h2 id="extensions">Extensions&lt;/h2>
+&lt;p>Support for semantic versioning for extensions (modules, themes, etc) is still ongoing.&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>&lt;a href="https://www.drupal.org/project/drupal/issues/3009338">Support semantic versioning for extensions (modules, themes, etc)&lt;/a>&lt;/strong>&lt;/li>
+&lt;/ul>
+&lt;p>The three parts of our versioning system are MAJOR.FEATURE.SPRINT.&lt;/p>
+&lt;p>Given the following tag: 10.x-2.00:&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>&lt;/th>
+&lt;th>&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>&lt;strong>10&lt;/strong>&lt;/td>
+&lt;td>Major version of Drupal Core&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>x&lt;/strong>&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>5&lt;/strong>&lt;/td>
+&lt;td>Major version of WxT&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>0&lt;/strong>&lt;/td>
+&lt;td>Feature release of WxT. Also increments with minor core releases.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>0&lt;/strong>&lt;/td>
+&lt;td>Sprint release between feature releases&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;blockquote>
+&lt;p>&lt;strong>Note&lt;/strong>: Due to the constraints of drupal.org, there is no separator between the FEATURE and SPRINT digits.&lt;/p>
+&lt;/blockquote>
+&lt;!-- Links Referenced --></description></item></channel></rss>

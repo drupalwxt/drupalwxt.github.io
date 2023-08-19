@@ -1,0 +1,51 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Drupal WxT – postgresql</title><link>https://drupalwxt.github.io/tags/postgresql/</link><description>Recent content in postgresql on Drupal WxT</description><generator>Hugo -- gohugo.io</generator><language>en</language><atom:link href="https://drupalwxt.github.io/tags/postgresql/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs: PostgreSQL</title><link>https://drupalwxt.github.io/docs/development/performance/postgresql/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://drupalwxt.github.io/docs/development/performance/postgresql/</guid><description>
+&lt;p>To properly configure PostgreSQL with Drupal you should ensure the following configuration is used.&lt;/p>
+&lt;blockquote>
+&lt;p>&lt;strong>Note&lt;/strong>: Some customizations might be necessary depending on your individual requirements.&lt;/p>
+&lt;/blockquote>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-sh" data-lang="sh">&lt;span style="display:flex;">&lt;span>postgresqlConfiguration:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> listenAddresses: &lt;span style="color:#4e9a06">&amp;#34;&amp;#39;*&amp;#39;&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> maxConnections: &lt;span style="color:#4e9a06">&amp;#34;200&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> sharedBuffers: 512MB
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> workMem: 2048MB
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> effectiveCacheSize: 512MB
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> effectiveIoConcurrency: &lt;span style="color:#4e9a06">&amp;#34;100&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> maintenanceWorkMem: 32MB
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> minWalSize: 512MB
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> maxWalSize: 512MB
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> walBuffers: 8048kB
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> byteaOutput: &lt;span style="color:#4e9a06">&amp;#34;&amp;#39;escape&amp;#39;&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> hugePages: &lt;span style="color:#4e9a06">&amp;#34;off&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> walLevel: &lt;span style="color:#4e9a06">&amp;#34;replica&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> maxWalSenders: &lt;span style="color:#4e9a06">&amp;#34;0&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> synchronousCommit: &lt;span style="color:#4e9a06">&amp;#34;on&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> walKeepSegments: &lt;span style="color:#4e9a06">&amp;#34;130&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> checkpointTimeout: &lt;span style="color:#4e9a06">&amp;#34;&amp;#39;15 min&amp;#39;&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> checkpointCompletionTarget: &lt;span style="color:#4e9a06">&amp;#34;0.9&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> walCompression: &lt;span style="color:#4e9a06">&amp;#34;on&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> walWriterDelay: 200ms
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> walWriterFlushAfter: 1MB
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> bgwriterDelay: 200ms
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> bgwriterLruMaxpages: &lt;span style="color:#4e9a06">&amp;#34;100&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> bgwriterLruMultiplier: &lt;span style="color:#4e9a06">&amp;#34;2.0&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> bgwriterFlushAfter: &lt;span style="color:#4e9a06">&amp;#34;0&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> maxWorkerProcesses: &lt;span style="color:#4e9a06">&amp;#34;8&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> maxParallelWorkersPerGather: &lt;span style="color:#4e9a06">&amp;#34;4&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> maxParallelWorkers: &lt;span style="color:#4e9a06">&amp;#34;4&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;blockquote>
+&lt;p>&lt;strong>Note&lt;/strong>: The above is written in yaml syntax which will work for both Docker Compose and Kubernetes Helm Charts. For the &lt;code>postgresql.conf&lt;/code> file itself without using these tools simply find the &lt;code>_&lt;/code> counterpart.&lt;/p>
+&lt;/blockquote>
+&lt;h4 id="queries-leveraging-ilike">Queries leveraging ILIKE&lt;/h4>
+&lt;p>There is a known PostgreSQL performance issue that exists in Drupal and is related to leveraging queries with &lt;code>ILIKE&lt;/code>.&lt;/p>
+&lt;p>This issue is particularly noticeable in relation to the path_alias table.&lt;/p>
+&lt;p>There are patches being worked on to handle this in Drupal core but a very quick fix can be implemented leveraging pg_trgm.&lt;/p>
+&lt;p>There is a great blog article listed below which goes over this issue in more detail.&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>&lt;a href="https://ferfebles.github.io/2018/04/16/Improving-large-Drupal-Postgres-performance-by-using-pg_trgm.html">Improving Drupal Postgres Performance&lt;/a>&lt;/strong>&lt;/li>
+&lt;/ul>
+&lt;p>The instructions are a bit outdated so the updated syntax to enter in psql is given below:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-sh" data-lang="sh">&lt;span style="display:flex;">&lt;span>CREATE EXTENSION pg_trgm&lt;span style="color:#000;font-weight:bold">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>CREATE INDEX path_alias__alias_trgm_gist_idx ON path_alias USING gist &lt;span style="color:#ce5c00;font-weight:bold">(&lt;/span>&lt;span style="color:#204a87">alias&lt;/span> gist_trgm_ops&lt;span style="color:#ce5c00;font-weight:bold">)&lt;/span>&lt;span style="color:#000;font-weight:bold">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>CREATE INDEX path_alias__path_trgm_gist_idx ON path_alias USING gist &lt;span style="color:#ce5c00;font-weight:bold">(&lt;/span>path gist_trgm_ops&lt;span style="color:#ce5c00;font-weight:bold">)&lt;/span>&lt;span style="color:#000;font-weight:bold">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>ANALYZE path_alias&lt;span style="color:#000;font-weight:bold">;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;!-- Links Referenced --></description></item></channel></rss>

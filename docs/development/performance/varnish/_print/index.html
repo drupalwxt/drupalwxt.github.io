@@ -1,0 +1,197 @@
+<!doctype html><html itemscope itemtype=http://schema.org/WebPage lang=en class=no-js><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name=generator content="Hugo 0.114.0"><link rel=canonical type=text/html href=https://drupalwxt.github.io/docs/development/performance/varnish/><link rel=alternate type=application/rss+xml href=https://drupalwxt.github.io/docs/development/performance/varnish/index.xml><meta name=robots content="noindex, nofollow"><link rel="shortcut icon" href=../../../../../images/favicon.ico><title>Varnish | Drupal WxT</title><meta name=description content><meta property="og:title" content="Varnish"><meta property="og:description" content><meta property="og:type" content="website"><meta property="og:url" content="https://drupalwxt.github.io/docs/development/performance/varnish/"><meta itemprop=name content="Varnish"><meta itemprop=description content><meta name=twitter:card content="summary"><meta name=twitter:title content="Varnish"><meta name=twitter:description content><link rel=preload href=../../../../../scss/main.min.0f9ee2fdaf9dfdf073d7ee97b54bd9adde085c494b9ece0388f0ba96d7fb962a.css as=style><link href=../../../../../scss/main.min.0f9ee2fdaf9dfdf073d7ee97b54bd9adde085c494b9ece0388f0ba96d7fb962a.css rel=stylesheet integrity><script src=https://code.jquery.com/jquery-3.6.3.min.js integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" crossorigin=anonymous></script>
+<script defer src=https://unpkg.com/lunr@2.3.9/lunr.min.js integrity=sha384-203J0SNzyqHby3iU6hzvzltrWi/M41wOP5Gu+BiJMz5nwKykbkUx8Kp7iti0Lpli crossorigin=anonymous></script></head><body class=td-section><header><nav class="td-navbar navbar-dark js-navbar-scroll"><div class="container-fluid flex-column flex-md-row"><a class=navbar-brand href=../../../../../><span class="navbar-brand__logo navbar-logo"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 957 440"><defs><style>.wxt_logo{fill:#000}@media screen{.wxt_logo{fill:#000}}</style></defs><g transform="matrix(1,0,0,0.99999897,-9.6901386,-462.70603)"><path class="wxt_logo" d="M784.76421 462.90748C731.02378 462.32641 692.43028 462.92058 670.00747 465.81109 627.01699 471.36234 581.50604 521.32921 561.29903 556.61298 533.1225 598.63518 502.75047 688.71895 456.44715 688.45762 410.14383 688.19629 383.3898 586.46163 342.35988 586.87543 301.32996 587.28923 280.41575 681.13815 217.75409 680.85877 155.09243 680.5794 106.13019 521.18393 92.880525 462.95097H9.6901386C24.231399 554.63077 61.332242 625.08552 95.037833 673.97611 111.89062 698.42134 130.8032 720.94553 152.498 738.83848c21.6948 17.89309 36.79435 31.32425 78.72656 32.7585S310.59454 703.98949 336.85386 703.15671C361.10529 702.38761 367.52311 727.21076 358.42907 743.27683 349.33503 759.3429 325.08792 786.58449 316.37192 811.63499c-12.46372 35.82204-15.98038 67.51171-15.21365 90.09597L386.18296 901.44462C386.97642 857.40138 414.64036 778.01003 458.37203 775.64864 484.4689 775.57768 530.7786 820.59899 544.6176 838.95024 558.4566 857.30149 569.7218 874.82986 594.71632 889.25345S654.60982 905.15482 687.79769 893.30218C732.03818 877.50249 754.42732 835.1839 767.75116 795.52174 781.07499 755.85945 787.08531 711.72939 791.59405 669.88643 796.10281 628.04332 797.61781 603.23233 801.78169 576.96002 802.6265 571.62968 804.64498 552.07124 822.78338 547.72943 840.92177 543.38762 966.89118 546.85344 966.89118 546.85344L967.11932 462.8124S838.50471 463.48815 784.76427 462.90708zM719.12466 548.42285C711.60107 623.14542 709.98489 698.34966 687.10247 768.40741 681.56172 784.77829 660.87745 829.58569 637.20824 815.5576 633.78894 813.58447 624.96399 804.15123 612.5065 787.66591 598.42641 769.03327 577.6579 741.58571 546.2944 720.92616c23.04304-22.95619 41.22858-51.28996 56.39684-76.19101C620.23787 615.92959 632.36107 591.69362 632.4233 591.56916 632.42347 591.5689 632.4641 591.48806 632.4641 591.48806 649.71879 556.9987 688.33393 540.78276 719.12466 548.42285z"/></g></svg></span><span class=navbar-brand__name>Drupal WxT</span></a><div class="td-navbar-nav-scroll ms-md-auto" id=main_navbar><ul class=navbar-nav><li class=nav-item><a class=nav-link href=../../../../../en/docs/><span>WxT</span></a></li><li class=nav-item><a class=nav-link href=https://github.com/drupalwxt target=_blank rel=noopener><span>GitHub</span></a></li><li class=nav-item><a class=nav-link href=https://github.com/drupalwxt/wxt/releases target=_blank rel=noopener><span>Download</span></a></li></ul></div><div class="d-none d-lg-block"><div class="td-search td-search--offline"><div class=td-search__icon></div><input type=search class="td-search__input form-control" placeholder="Search WxT" aria-label="Search WxT" autocomplete=off data-offline-search-index-json-src=../../../../../offline-search-index.73286d8bf1f0d2a863a7f4d9fa8ab862.json data-offline-search-base-href=../../../../../ data-offline-search-max-results=10></div></div></div></nav></header><div class="container-fluid td-outer"><div class=td-main><div class="row flex-xl-nowrap"><main class="col-12 col-md-9 col-xl-8 ps-md-5" role=main><div class=td-content><div class="pageinfo pageinfo-primary d-print-none"><p>This is the multi-page printable view of this section.
+<a href=# onclick="return print(),!1">Click here to print</a>.</p><p><a href=../../../../../docs/development/performance/varnish/>Return to the regular view of this page</a>.</p></div><h1 class=title>Varnish</h1><ul></ul><div class=content><p>To properly configure Varnish with Drupal you should ensure the following configuration is your <code>default.vcl</code> file.</p><blockquote><p><strong>Note</strong>: Some customizations might be necessary depending on your individual requirements.</p></blockquote><pre tabindex=0><code class=language-vcl data-lang=vcl>vcl 4.0;
+
+import std;
+import directors;
+
+backend nginx {
+  .host = &#34;hostname-nginx&#34;;
+  .host_header = &#34;hostname-nginx&#34;;
+  .port = &#34;80&#34;;
+}
+
+sub vcl_init {
+  new backends = directors.round_robin();
+  backends.add_backend(nginx);
+}
+
+sub vcl_recv {
+  set req.http.X-Forwarded-Host = req.http.Host;
+  if (!req.http.X-Forwarded-Proto) {
+    set req.http.X-Forwarded-Proto = &#34;http&#34;;
+  }
+
+  # Answer healthcheck
+  if (req.url == &#34;/_healthcheck&#34; || req.url == &#34;/healthcheck.txt&#34;) {
+    return (synth(700, &#34;HEALTHCHECK&#34;));
+  }
+  set req.backend_hint = backends.backend();
+
+  # Answer healthcheck
+  if (req.url == &#34;/_healthcheck&#34; || req.url == &#34;/healthcheck.txt&#34;) {
+    return (synth(700, &#34;HEALTHCHECK&#34;));
+  }
+  set req.backend_hint = backends.backend();
+
+  # Always cache certain file types
+  # Remove cookies that Drupal doesn&#39;t care about
+  if (req.url ~ &#34;(?i)\.(asc|dat|tgz|png|gif|jpeg|jpg|ico|swf|css|js)(\?.*)?$&#34;) {
+    unset req.http.Cookie;
+  } else if (req.http.Cookie) {
+    set req.http.Cookie = &#34;;&#34; + req.http.Cookie;
+    set req.http.Cookie = regsuball(req.http.Cookie, &#34;; +&#34;, &#34;;&#34;);
+    set req.http.Cookie = regsuball(req.http.Cookie, &#34;;(SESS[a-z0-9]+|SSESS[a-z0-9]+|NO_CACHE)=&#34;, &#34;; \1=&#34;);
+    set req.http.Cookie = regsuball(req.http.Cookie, &#34;;[^ ][^;]*&#34;, &#34;&#34;);
+    set req.http.Cookie = regsuball(req.http.Cookie, &#34;^[; ]+|[; ]+$&#34;, &#34;&#34;);
+    if (req.http.Cookie == &#34;&#34;) {
+        unset req.http.Cookie;
+    } else {
+        return (pass);
+    }
+  }
+  # If POST, PUT or DELETE, then don&#39;t cache
+  if (req.method == &#34;POST&#34; || req.method == &#34;PUT&#34; || req.method == &#34;DELETE&#34;) {
+    return (pass);
+  }
+  # Happens before we check if we have this in cache already.
+  #
+  # Typically you clean up the request here, removing cookies you don&#39;t need,
+  # rewriting the request, etc.
+  return (hash);
+  #return (pass);
+}
+
+sub vcl_backend_fetch {
+  # NEW
+  set bereq.http.Host = &#34;hostname-nginx&#34;;
+
+  # Don&#39;t add 127.0.0.1 to X-Forwarded-For
+  set bereq.http.X-Forwarded-For = regsub(bereq.http.X-Forwarded-For, &#34;(, )?127\.0\.0\.1$&#34;, &#34;&#34;);
+}
+
+sub vcl_backend_response {
+  if (beresp.http.Location) {
+    set beresp.http.Location = regsub(
+      beresp.http.Location,
+      &#34;^https?://[^/]+/&#34;,
+      bereq.http.X-Forwarded-Proto + &#34;://&#34; + bereq.http.X-Forwarded-Host + &#34;/&#34;
+    );
+  }
+  # Only cache select response codes
+  if (beresp.status == 200 || beresp.status == 203 || beresp.status == 204 || beresp.status == 206 || beresp.status == 300 || beresp.status == 301 || beresp.status == 404 || beresp.status == 405 || beresp.status == 410 || beresp.status == 414 || beresp.status == 501) {
+    # Cache for 5 minutes
+    set beresp.ttl = 5m;
+    set beresp.grace = 12h;
+    set beresp.keep = 24h;
+  } else {
+    set beresp.ttl = 0s;
+  }
+}
+
+sub vcl_deliver {
+  # Remove identifying information
+  unset resp.http.Server;
+  unset resp.http.X-Powered-By;
+  unset resp.http.X-Varnish;
+  unset resp.http.Via;
+
+  # Comment these for easier Drupal cache tag debugging in development.
+  unset resp.http.Cache-Tags;
+  unset resp.http.X-Drupal-Cache-Contexts;
+
+  # Add Content-Security-Policy
+  # set resp.http.Content-Security-Policy = &#34;default-src &#39;self&#39; *.example.ca *.example.ca; style-src &#39;self&#39; &#39;unsafe-inline&#39; *.example.ca https://fonts.googleapis.com; script-src &#39;self&#39; &#39;unsafe-inline&#39; &#39;unsafe-eval&#39; *.example.ca  *.adobedtm.com use.fontawesome.com blob:; connect-src &#39;self&#39; *.example.ca *.omtrdc.net *.demdex.net *.everesttech.net; img-src &#39;self&#39; *.example.ca *.omtrdc.net *.demdex.net *.everesttech.net data:; font-src &#39;self&#39; *.example.ca https://fonts.gstatic.com&#34;;
+
+  # Add CORS Headers
+  # if (req.http.Origin ~ &#34;(?i)\.example\.ca$&#34;) {
+  #   if (req.url ~ &#34;\.(ttd|woff|woff2)(\?.*)?$&#34;) {
+  #     set resp.http.Access-Control-Allow-Origin = &#34;*&#34;;
+  #     set resp.http.Access-Control-Allow-Methods = &#34;GET&#34;;
+  #   }
+  # }
+
+  # Add X-Frame-Options
+  if (req.url ~ &#34;^/livechat&#34; || req.url ~ &#34;^/(en/|fr/)?entity-browser/&#34;) {
+    set resp.http.X-Frame-Options = &#34;SAMEORIGIN&#34;;
+  } else {
+    set resp.http.X-Frame-Options = &#34;DENY&#34;;
+  }
+
+  set resp.http.X-Content-Type-Options = &#34;nosniff&#34;;
+  set resp.http.X-XSS-Protection = &#34;1; mode=block&#34;;
+
+  # Happens when we have all the pieces we need, and are about to send the
+  # response to the client.
+  #
+  # You can do accounting or modifying the final object here.
+  if (obj.hits &gt; 0) {
+    set resp.http.X-Cache = &#34;HIT&#34;;
+  } else {
+    set resp.http.X-Cache = &#34;MISS&#34;;
+  }
+  # Handle errors
+  if ( (resp.status &gt;= 500 &amp;&amp; resp.status &lt;= 599)
+    || resp.status == 400
+    || resp.status == 401
+    || resp.status == 403
+    || resp.status == 404) {
+    return (synth(resp.status));
+  }
+}
+
+sub vcl_synth {
+  # Remove identifying information
+  unset resp.http.Server;
+  unset resp.http.X-Powered-By;
+  unset resp.http.X-Varnish;
+  unset resp.http.Via;
+
+  # Add Content-Security-Policy
+  # set resp.http.Content-Security-Policy = &#34;default-src &#39;self&#39; *.example.ca; style-src &#39;self&#39; &#39;unsafe-inline&#39; *.example.ca; script-src &#39;self&#39; &#39;unsafe-inline&#39; &#39;unsafe-eval&#39; *.example.ca *.adobedtm.com use.fontawesome.com blob:; connect-src &#39;self&#39; *.example.ca *.omtrdc.net *.demdex.net *.everesttech.net; img-src &#39;self&#39; *.example.ca data:;&#34;;
+  # set resp.http.X-Content-Type-Options = &#34;nosniff&#34;;
+  # set resp.http.X-Frame-Options = &#34;DENY&#34;;
+  # set resp.http.X-XSS-Protection = &#34;1; mode=block&#34;;
+
+  # if (resp.status &gt;= 500 &amp;&amp; resp.status &lt;= 599) {
+  #   set resp.http.Content-Type = &#34;text/html; charset=utf-8&#34;;
+  #   synthetic(std.fileread(&#34;/data/configuration/varnish/errors/503.html&#34;));
+  #   return (deliver);
+  # } elseif (resp.status == 400) { # 400 - Bad Request
+  #   set resp.http.Content-Type = &#34;text/html; charset=utf-8&#34;;
+  #   synthetic(std.fileread(&#34;/data/configuration/varnish/errors/400.html&#34;));
+  #   return (deliver);
+  # } elseif (resp.status == 401) { # 401 - Unauthorized
+  #   set resp.http.Content-Type = &#34;text/html; charset=utf-8&#34;;
+  #   synthetic(std.fileread(&#34;/data/configuration/varnish/errors/401.html&#34;));
+  #   return (deliver);
+  # } elseif (resp.status == 403) { # 403 - Forbidden
+  #   set resp.http.Content-Type = &#34;text/html; charset=utf-8&#34;;
+  #   synthetic(std.fileread(&#34;/data/configuration/varnish/errors/403.html&#34;));
+  #   return (deliver);
+  # } elseif (resp.status == 404) { # 404 - Not Found
+  #   set resp.http.Content-Type = &#34;text/html; charset=utf-8&#34;;
+  #   synthetic(std.fileread(&#34;/data/configuration/varnish/errors/404.html&#34;));
+  #   return (deliver);
+  # } else
+  if (resp.status == 700) { # Respond to healthcheck
+    set resp.status = 200;
+    set resp.http.Content-Type = &#34;text/plain&#34;;
+    synthetic ( {&#34;OK&#34;} );
+    return (deliver);
+  }
+}
+
+##
+# ERROR HANDLING
+##
+# sub vcl_backend_error {
+#   set beresp.http.Content-Type = &#34;text/html; charset=utf-8&#34;;
+#   synthetic(std.fileread(&#34;/data/configuration/varnish/errors/503.html&#34;));
+#   return (deliver);
+# }
+</code></pre></div></div></main></div></div><footer class="td-footer row d-print-none"><div class=container-fluid><div class="row mx-md-2"><div class="col-6 col-sm-4 text-xs-center order-sm-2"><ul class=td-footer__links-list><li class=td-footer__links-item data-bs-toggle=tooltip title="Drupal WxT Discussions" aria-label="Drupal WxT Discussions"><a target=_blank rel=noopener href=https://github.com/drupalwxt/wxt/discussions aria-label="Drupal WxT Discussions"><i class="fas fa-users"></i></a></li><li class=td-footer__links-item data-bs-toggle=tooltip title="Contributions Wanted" aria-label="Contributions Wanted"><a target=_blank rel=noopener href=https://github.com/drupalwxt/wxt aria-label="Contributions Wanted"><i class="fab fa-github"></i></a></li><li class=td-footer__links-item data-bs-toggle=tooltip title="Drupal Issue Queue" aria-label="Drupal Issue Queue"><a target=_blank rel=noopener href=https://drupal.org/project/issues/wxt aria-label="Drupal Issue Queue"><i class="fab fa-drupal"></i></a></li></ul></div><div class="col-6 col-sm-4 text-end text-xs-center order-sm-3"><ul class=td-footer__links-list><li class=td-footer__links-item data-bs-toggle=tooltip title="GitHub Pages" aria-label="GitHub Pages"><a target=_blank rel=noopener href=https://github.com/drupalwxt/drupalwxt.github.io aria-label="GitHub Pages"><i class="fab fa-github"></i></a></li></ul></div><div class="td-footer__copyright-etc col-12 col-sm-4 text-center py-2 order-sm-2"><span>&copy; 2023 Drupal WxT All Rights Reserved</span>
+<span class=ms-1><a href=https://www.linuxfoundation.org/legal/privacy-policy target=_blank rel=noopener>Privacy Policy</a></span></div></div></div></footer></div><script src=https://cdn.jsdelivr.net/npm/mermaid@9.3.0/dist/mermaid.min.js integrity="sha512-ku2nmBrzAXY5YwohzTqLYH1/lvyMrpTVxgQKrvTabd/b/uesqltLORdmpVapYv6QhZVCLUX6wkvFaKOAY4xpUA==" crossorigin=anonymous></script>
+<script src=../../../../../js/main.min.a0ee49b4702cbaeb6728b1064a964a21fc2cd7d03364bbaa508cfb2f1af65935.js integrity="sha256-oO5JtHAsuutnKLEGSpZKIfws19AzZLuqUIz7Lxr2WTU=" crossorigin=anonymous></script>
+<script defer src=../../../../../js/click-to-copy.min.f724d3de49218995223b7316aa2e53e2b34bf42026bf399ebb21bb02212402d1.js integrity="sha256-9yTT3kkhiZUiO3MWqi5T4rNL9CAmvzmeuyG7AiEkAtE=" crossorigin=anonymous></script>
+<script src=../../../../../js/tabpane-persist.js></script></body></html>

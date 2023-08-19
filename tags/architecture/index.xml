@@ -1,0 +1,18 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Drupal WxT – architecture</title><link>https://drupalwxt.github.io/tags/architecture/</link><description>Recent content in architecture on Drupal WxT</description><generator>Hugo -- gohugo.io</generator><language>en</language><atom:link href="https://drupalwxt.github.io/tags/architecture/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs: Architecture</title><link>https://drupalwxt.github.io/docs/development/architecture/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://drupalwxt.github.io/docs/development/architecture/</guid><description>
+&lt;p>The goal of &lt;strong>&lt;a href="https://github.com/drupalwxt/wxt">Drupal WxT&lt;/a>&lt;/strong> since the 4.1.x line is to make the installation profile very minimal by default but providing additional extensions that can be enabled as desired.&lt;/p>
+&lt;p>What WxT offers is some light enhancements to Drupal Core, mainly around security and performance, and integration with the Web Experience Toolkit. By default, the distribution offers minimal functionality to allow full customizations by users. However a great deal of optional extensions are available that can provide additional functionality generally beneficial to Government departments.&lt;/p>
+&lt;blockquote>
+&lt;p>&lt;strong>Note&lt;/strong>: In the future we are looking into providing a list of community modules that are build to work with the distribution but are &amp;ldquo;out of tree&amp;rdquo;.&lt;/p>
+&lt;/blockquote>
+&lt;p>All of the optional modules are located in the &lt;code>wxt_ext&lt;/code> folder named after WxT Extend and can be enabled during the initial site installation by passing the following flag via the drush cli:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-sh" data-lang="sh">&lt;span style="display:flex;">&lt;span>wxt_extension_configure_form.select_all&lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span>&lt;span style="color:#4e9a06">&amp;#39;TRUE&amp;#39;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;blockquote>
+&lt;p>&lt;strong>Note&lt;/strong>: If you wish to only install the minimum set of dependencies please remove the &lt;code>wxt_extension_configure_form.select_all='TRUE'&lt;/code> flag in its entirety.&lt;/p>
+&lt;/blockquote>
+&lt;p>In order to provide a list of the optional enabled extensions during the installation that can be checked, all that any module has to do is provide a &lt;code>modulename.wxt_extension.yml&lt;/code> file in their root and they will be picked as installable during the profile install and also respond to the additional drush flag discussed above.&lt;/p>
+&lt;p>For more information on some of the history leading to this design:&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://www.drupal.org/project/wxt/issues/3182208">WxT Minimal Install&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://www.drupal.org/project/wxt/issues/3182977">Roadmap for Drupal 9&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;!-- Links Referenced --></description></item></channel></rss>
