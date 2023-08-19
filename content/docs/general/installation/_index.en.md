@@ -130,7 +130,7 @@ drush cr
 <!-- Links Referenced -->
 
 [composer]:      https://getcomposer.org/download/
-[containers]:    https://drupalwxt.github.io/en/docs/environment/containers/
+[containers]:    https://drupalwxt.github.io/docs/environment/containers/
 [migrate]:       https://www.drupal.org/node/2127611
 [releases]:      https://github.com/drupalwxt/wxt/releases
 [requirements]:  https://www.drupal.org/docs/system-requirements

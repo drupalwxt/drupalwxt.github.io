@@ -23,6 +23,15 @@ other = "Tous droits résérvés"
 [footer_privacy_policy]
 other = "Politique de confidentialité"
 
+# Translation Notice variables
+[translation_notice_heading]
+other = "Avis"
+[translation_notice_not_translated]
+other = "Nous sommes désolés, cette page n'a pas encore été traduite. La version anglaise suit."
+[translation_notice_incomplete_translated]
+other = "Nous sommes désolés, la traduction de cette page est incomplète. Certains contenus doivent être révisés ou ne sont disponibles qu'en anglais."
+[translation_notice_request_translated]
+other = "Demander une traduction officielle de cette page"
 
 # Post (blog, articles etc.)
 [post_byline_by]

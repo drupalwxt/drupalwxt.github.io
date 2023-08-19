@@ -47,6 +47,16 @@ other = "All Rights Reserved"
 [footer_privacy_policy]
 other = "Privacy Policy"
 
+# Translation Notice variables
+[translation_notice_heading]
+other = "Notice"
+[translation_notice_not_translated]
+other = "We are sorry, this page has not yet been translated. The French version follows."
+[translation_notice_incomplete_translated]
+other = "We are sorry, the translation of this page is incomplete. Certain contents must be revised or are only available in French."
+[translation_notice_request_translated]
+other = "Request an official translation of this page"
+
 # Post
 [post_byline_by]
 other = "By"

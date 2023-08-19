@@ -30,15 +30,15 @@ Support for semantic versioning for extensions (modules, themes, etc) is still o
 
 The three parts of our versioning system are MAJOR.FEATURE.SPRINT.
 
-Given the following tag: 9.x-2.15:
+Given the following tag: 10.x-2.00:
 
-|       |                                                                   |
-| ----- | ----------------------------------------------------------------- |
-| **9** | Major version of Drupal Core                                      |
-| **x** |                                                                   |
-| **2** | Major version of WxT                                              |
-| **1** | Feature release of WxT. Also increments with minor core releases. |
-| **5** | Sprint release between feature releases                           |
+|        |                                                                   |
+| ------ | ----------------------------------------------------------------- |
+| **10** | Major version of Drupal Core                                      |
+| **x**  |                                                                   |
+| **5**  | Major version of WxT                                              |
+| **0**  | Feature release of WxT. Also increments with minor core releases. |
+| **0**  | Sprint release between feature releases                           |
 
 > **Note**: Due to the constraints of drupal.org, there is no separator between the FEATURE and SPRINT digits.
 

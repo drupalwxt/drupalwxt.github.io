@@ -1,0 +1,57 @@
+# Hugo params configuration
+# https://gohugo.io/variables/site/#the-siteparams-variable
+
+offlineSearch = true
+offlineSearchSummaryLength = 175
+offlineSearchMaxResults = 10
+
+copyright = "Drupal WxT"
+license = "https://github.com/drupalwxt/drupalwxt.github.io/blob/main/LICENSE.md"
+privacy_policy = "https://www.linuxfoundation.org/legal/privacy-policy"
+
+github_repo = "https://github.com/drupalwxt/drupalwxt.github.io"
+github_branch = "main"
+
+[links]
+[[links.user]]
+  name ="Drupal WxT Discussions"
+  url = "https://github.com/drupalwxt/wxt/discussions"
+  icon = "fas fa-users"
+  desc = "Discussion and help from your fellow users"
+[[links.user]]
+  name = "Contributions Wanted"
+  url = "https://github.com/drupalwxt/wxt"
+  icon = "fab fa-github"
+  desc = "Want to collaborate with us? New users are always welcomed"
+[[links.user]]
+  name ="Drupal Issue Queue"
+  url = "https://drupal.org/project/issues/wxt"
+  icon = "fab fa-drupal"
+  desc = "Give and recieve support from the Drupal.org community"
+[[links.developer]]
+  name = "GitHub Pages"
+  url = "https://github.com/drupalwxt/drupalwxt.github.io"
+  icon = "fab fa-github"
+  desc = "Where the source code for this site is hosted"
+
+[mermaid]
+enable = true
+
+[ui]
+breadcrumb_disable = false
+footer_about_disable = false
+navbar_logo = true
+navbar_translucent_over_cover_disable = false
+sidebar_menu_compact = true
+sidebar_search_disable = false
+
+[ui.feedback]
+enable = true
+
+[ui.readingtime]
+enable = true
+
+[taxonomy]
+taxonomyCloud = ["tags", "categories"]
+taxonomyCloudTitle = ["Tag Cloud", "Categories"]
+taxonomyPageHeader = ["tags", "categories"]

@@ -22,7 +22,7 @@ WxT releases are numbered using a form of semantic versioning. More information 
 
 `MAJOR.FEATURE.SPRINT`
 
-In general, when preparing a release: increment the FEATURE when Drupal Core has a major release (ie. 9.4.x to 9.5.x) otherwise simply increment the SPRINT number.
+In general, when preparing a release: increment the FEATURE when Drupal Core has a major release (ie. 9.5.x to 10.0.x) otherwise simply increment the SPRINT number.
 
 ## Create an issue on GitHub.com
 
@@ -31,7 +31,7 @@ Create an issue in the **[Drupal WxT](https://github.com/drupalwxt/wxt)** projec
 This issue should contain the following checklist as well as any other related steps or information regarding preparing the release.
 
 ```sh
-See the [full release documentation](https://drupalwxt.github.io/en/docs/development/release-process/) for more detail.
+See the [full release documentation](https://drupalwxt.github.io/docs/development/release-process/) for more detail.
 
 - [ ] All related projects (wxt_library and wxt_bootstrap) tagged and released on GitHub.com and Drupal.org
 - [ ] Version number selected
@@ -40,7 +40,7 @@ See the [full release documentation](https://drupalwxt.github.io/en/docs/develop
 - [ ] Run version.sh for hook_updates and wxt contrib
 - [ ] CI build passes
 - [ ] Releases tagged and pushed to GitHub.com and Drupal.org
-- [ ] WxT released on Drupal.org (https://drupalwxt.github.io/en/docs/development/release-process/#release)
+- [ ] WxT released on Drupal.org (https://drupalwxt.github.io/docs/development/release-process/#release)
 - [ ] Add changelog information to published tag once CI is done
 ```
 
@@ -60,7 +60,7 @@ All projects must be released on drupal.org (and github).
 
 ### Drupal.org version
 
-Drupal.org does not currently support semantic versioning. Instead, the version number on drupal.org is `8.x-X.YZZ`, where:
+Drupal.org does not currently support semantic versioning. Instead, the version number on drupal.org is `10.x-X.YZZ`, where:
 
 - `X = MAJOR`
 - `Y = FEATURE`
@@ -103,7 +103,7 @@ The builds on Drupal.org are incomplete as they don't fully support Composer yet
 ```sh
 <strong>CHANGELOG</strong>
 
-See the <a href="https://github.com/drupalwxt/wxt/blob/8.x-2.x/CHANGELOG.md">changelog.md</a> file.
+See the <a href="https://github.com/drupalwxt/wxt/blob/5.0.x/CHANGELOG.md">changelog.md</a> file.
 ```
 
 <!-- Links Referenced -->

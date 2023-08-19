@@ -1,0 +1,12 @@
+
+# Hugo language configuration
+# https://gohugo.io/content-management/multilingual/#configure-languages
+
+title = "Drupal WxT"
+languageName = "English"
+weight = 1
+
+[params]
+  time_format_default = "2006-01-02"
+  time_format_blog = "2006-01-02"
+  time_format_releases = "2006-01-02"

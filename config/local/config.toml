@@ -1,2 +1,1 @@
-baseURL = "/"
-title = "Drupal WxT"
+refLinksErrorLevel = "WARNING"

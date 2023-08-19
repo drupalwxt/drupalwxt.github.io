@@ -1,0 +1,15 @@
+# Hugo menu configuration
+# https://gohugo.io/content-management/menus/
+
+[[main]]
+  name = "WxT"
+  weight = 20
+  url = "/docs/"
+[[main]]
+  name = "GitHub"
+  weight = 30
+  url = "https://github.com/drupalwxt"
+[[main]]
+  name = "Download"
+  weight = 40
+  url = "https://github.com/drupalwxt/wxt/releases"

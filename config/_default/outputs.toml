@@ -1,0 +1,6 @@
+# Hugo outputs configuration
+# https://gohugo.io/templates/output-formats/
+
+home = ["HTML"]
+page = ["HTML"]
+section = ["HTML", "print", "RSS"]
