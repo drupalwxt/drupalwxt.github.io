@@ -142,7 +142,62 @@ We try our best to have security releases of Drupal Core within &lt;strong>24-72
 &lt;tr>
 &lt;td>&lt;strong>5.0.0-rc2&lt;/strong>&lt;/td>
 &lt;td>&lt;strong>2023-08-21&lt;/strong>&lt;/td>
-&lt;td>&lt;/td>
+&lt;td>&lt;p>Features / Updates:&lt;/p>
+&lt;ul>
+&lt;li>Updates for Drupal Contrib
+&lt;ul>
+&lt;li>core_context to &lt;code>1.1&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Updates for WxT
+&lt;ul>
+&lt;li>Remove duplicate editor/filter config &lt;a href="https://www.drupal.org/node/3381990">3381990&lt;/a>&lt;/li>
+&lt;li>CKEditor JS error with JS aggregation enabled &lt;a href="https://www.drupal.org/node/3381980">3381980&lt;/a>&lt;/li>
+&lt;li>CKEditor5 and CKEditor compatibility support &lt;a href="https://www.drupal.org/node/3382168">3382168&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Updated for WxT Bootstrap
+&lt;ul>
+&lt;li>Give CKEditor min-height &lt;a href="https://www.drupal.org/node/3381988">3381988&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Updates for WxT Library
+&lt;ul>
+&lt;li>Correct logic for Search block visibility reliance on core search&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>Upgrade path:&lt;/p>
+&lt;blockquote>
+&lt;p>&lt;strong>Important&lt;/strong>: Please backup your database before running the upgrade process for this release.&lt;/p>
+&lt;/blockquote>
+&lt;ul>
+&lt;li>
+&lt;p>Update your codebase:&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>composer update&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>Run database updates:&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>drush cache:rebuild&lt;/code>&lt;/li>
+&lt;li>&lt;code>drush updatedb&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>Run WxT configuration updates:&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>drush cache:rebuild&lt;/code>&lt;/li>
+&lt;li>&lt;code>drush update:wxt&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>&lt;strong>Note(s)&lt;/strong>:&lt;/p>
+&lt;p>There were some issues in 5.0.0-rc1 related to the text formats and filters logic.&lt;/p>
+&lt;p>The rich_text format now functions as before using CKEditor4.&lt;/p>
+&lt;p>There is a new rich_text_ckeditor5 format which uses the newer CKEditor5.&lt;/p>
+&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>&lt;strong>5.0.0-rc1&lt;/strong>&lt;/td>
