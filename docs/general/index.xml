@@ -9,10 +9,13 @@
 &lt;h4 id="benefits">Benefits&lt;/h4>
 &lt;ul>
 &lt;li>Many canadian departments and organizations have contributed features and improvements&lt;/li>
-&lt;li>Numerous accessibility audits have been performed and actioned upon&lt;/li>
+&lt;li>Has received several security and accessibility audits to the codebase and markup&lt;/li>
+&lt;li>Will stay on top of security releases within a maximum of 72 hours of posting&lt;/li>
 &lt;li>Creation of many plugins in order to more fully integrate with the &lt;a href="https://wet-boew.github.io/GCWeb/index-en.html">WET-BOEW and Canada.ca design system&lt;/a>&lt;/li>
-&lt;li>Best effort open source support with a community of developers&lt;/li>
+&lt;li>Best effort open source support from a community of developers&lt;/li>
 &lt;li>Provides upgrade paths for all supported components&lt;/li>
+&lt;li>Additional functionality is provided by WxT Extend modules which target a specific feature&lt;/li>
+&lt;li>Stays on top of performance related issues taking into account both MySQL and PostgreSQL&lt;/li>
 &lt;/ul>
 &lt;h4 id="components">Components&lt;/h4>
 &lt;table>
@@ -629,7 +632,7 @@ Patch (bugfix) release of Drupal Core to &lt;code>v10.0.10&lt;/code>&lt;/li>
 &lt;td>&lt;strong>drupalwxt.github.io&lt;/strong>&lt;/td>
 &lt;td>&lt;a href="https://github.com/drupalwxt/drupalwxt.github.io" target="_blank">drupalwxt/drupalwxt.github.io&lt;/a>&lt;/td>
 &lt;td>GitHub Pages for Drupal WxT.&lt;/td>
-&lt;td>Size: 12756 Bytes&lt;/td>
+&lt;td>Size: 11728 Bytes&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>&lt;strong>helm-drupal&lt;/strong>&lt;/td>
