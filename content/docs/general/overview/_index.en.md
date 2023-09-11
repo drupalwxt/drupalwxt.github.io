@@ -35,10 +35,13 @@ By opting for the distribution method, teams gain access to shared resources, on
 #### Benefits
 
 * Many canadian departments and organizations have contributed features and improvements
-* Numerous accessibility audits have been performed and actioned upon
+* Has received several security and accessibility audits to the codebase and markup
+* Will stay on top of security releases within a maximum of 72 hours of posting
 * Creation of many plugins in order to more fully integrate with the [WET-BOEW and Canada.ca design system](https://wet-boew.github.io/GCWeb/index-en.html)
-* Best effort open source support with a community of developers
+* Best effort open source support from a community of developers
 * Provides upgrade paths for all supported components
+* Additional functionality is provided by WxT Extend modules which target a specific feature
+* Stays on top of performance related issues taking into account both MySQL and PostgreSQL
 
 #### Components
 
