@@ -277,6 +277,78 @@ We try our best to have security releases of Drupal Core within &lt;strong>24-72
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
+&lt;td>&lt;strong>5.0.0&lt;/strong>&lt;/td>
+&lt;td>&lt;strong>2023-09-30&lt;/strong>&lt;/td>
+&lt;td>&lt;p>Features / Updates:&lt;/p>
+&lt;ul>
+&lt;li>Build Infrastructure
+&lt;ul>
+&lt;li>Add DB_VERSION variable to .env&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Security Updates for Drupal Core
+&lt;ul>
+&lt;li>&lt;a href="https://www.drupal.org/sa-core-2023-006">SA-core-2023-006&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Updates for Drupal Core
+&lt;ul>
+&lt;li>N/A&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Updates for Drupal Contrib
+&lt;ul>
+&lt;li>Build update for wxt, upgrade ckeditor4_codemirror &lt;a href="https://www.drupal.org/node/3382999">3382999&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Updates for WxT
+&lt;ul>
+&lt;li>Minor naming adjustments and proper location of config objects&lt;/li>
+&lt;li>Call to deprecated function file_create_url() &lt;a href="https://www.drupal.org/node/3387600">3387600&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Updated for WxT Bootstrap
+&lt;ul>
+&lt;li>Support for composer/installers 2.x &lt;a href="https://www.drupal.org/node/3382948">3382948&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Updates for WxT Library
+&lt;ul>
+&lt;li>Support for composer/installers 2.x &lt;a href="https://www.drupal.org/node/3382948">3382948&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>Upgrade path:&lt;/p>
+&lt;blockquote>
+&lt;p>&lt;strong>Important&lt;/strong>: Please backup your database before running the upgrade process for this release.&lt;/p>
+&lt;/blockquote>
+&lt;ul>
+&lt;li>
+&lt;p>Update your codebase:&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>composer update&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>Run database updates:&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>drush cache:rebuild&lt;/code>&lt;/li>
+&lt;li>&lt;code>drush updatedb&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>Run WxT configuration updates:&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>drush cache:rebuild&lt;/code>&lt;/li>
+&lt;li>&lt;code>drush update:wxt&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>&lt;strong>Note(s)&lt;/strong>:&lt;/p>
+&lt;p>This is the first stable release of v5.0.0 please ensure you have read the release notes from the previous release candidates.&lt;/p>
+&lt;/td>
+&lt;/tr>
+&lt;tr>
 &lt;td>&lt;strong>5.0.0-rc2&lt;/strong>&lt;/td>
 &lt;td>&lt;strong>2023-08-21&lt;/strong>&lt;/td>
 &lt;td>&lt;p>Features / Updates:&lt;/p>
@@ -516,57 +588,6 @@ Patch (bugfix) release of Drupal Core to &lt;code>v10.0.10&lt;/code>&lt;/li>
 &lt;td>&lt;p>Features / Updates:&lt;/p>
 &lt;ul>
 &lt;li>Remove accidentally committed composer.lock file&lt;/li>
-&lt;/ul>
-&lt;p>Upgrade path:&lt;/p>
-&lt;blockquote>
-&lt;p>&lt;strong>Important&lt;/strong>: Please backup your database before running the upgrade process for this release.&lt;/p>
-&lt;/blockquote>
-&lt;ul>
-&lt;li>
-&lt;p>Update your codebase:&lt;/p>
-&lt;ul>
-&lt;li>&lt;code>composer update&lt;/code>&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>
-&lt;p>Run database updates:&lt;/p>
-&lt;ul>
-&lt;li>&lt;code>drush cache:rebuild&lt;/code>&lt;/li>
-&lt;li>&lt;code>drush updatedb&lt;/code>&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>
-&lt;p>Run WxT configuration updates:&lt;/p>
-&lt;ul>
-&lt;li>&lt;code>drush cache:rebuild&lt;/code>&lt;/li>
-&lt;li>&lt;code>drush update:wxt&lt;/code>&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;p>&lt;strong>Note(s)&lt;/strong>:&lt;/p>
-&lt;p>There is a core regression of the language switcher block which throws exception when no route is matched.&lt;/p>
-&lt;ul>
-&lt;li>&lt;a href="https://www.drupal.org/project/drupal/issues/3348592">https://www.drupal.org/project/drupal/issues/3348592&lt;/a>&lt;/li>
-&lt;/ul>
-&lt;p>WxT Library is patched so it will not have this problem.&lt;/p>
-&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>&lt;strong>4.5.2&lt;/strong>&lt;/td>
-&lt;td>&lt;strong>2023-04-24&lt;/strong>&lt;/td>
-&lt;td>&lt;p>Features / Updates:&lt;/p>
-&lt;ul>
-&lt;li>Security Updates for Drupal Core (v9.5.8)
-&lt;ul>
-&lt;li>&lt;a href="https://www.drupal.org/sa-core-2023-005">SA-core-2023-002&lt;/a>&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>Updates for WxT
-&lt;ul>
-&lt;li>Update migrate_tools to 6.x for PHP8.1 support &lt;a href="https://www.drupal.org/node/3352269">3352269&lt;/a>&lt;/li>
-&lt;li>Add alt text to images in wxt_ext_carousel &lt;a href="https://www.drupal.org/node/3352676">3352676&lt;/a>&lt;/li>
-&lt;/ul>
-&lt;/li>
 &lt;/ul>
 &lt;p>Upgrade path:&lt;/p>
 &lt;blockquote>
