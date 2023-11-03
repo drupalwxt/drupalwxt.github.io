@@ -279,6 +279,98 @@ We try our best to have security releases of Drupal Core within &lt;strong>24-72
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
+&lt;td>&lt;strong>5.0.1&lt;/strong>&lt;/td>
+&lt;td>&lt;strong>2023-11-03&lt;/strong>&lt;/td>
+&lt;td>&lt;p>Features / Updates:&lt;/p>
+&lt;ul>
+&lt;li>Build Infrastructure
+&lt;ul>
+&lt;li>N/A&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Security Updates for Drupal Core
+&lt;ul>
+&lt;li>N/A&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Updates for Drupal Core
+&lt;ul>
+&lt;li>N/A&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Updates for Drupal Contrib
+&lt;ul>
+&lt;li>N/A&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Updates for WxT
+&lt;ul>
+&lt;li>Exception on wxt_core_update_8441 &lt;a href="https://www.drupal.org/node/3394034">3394034&lt;/a>&lt;/li>
+&lt;li>Pin linkit to stable and update patches&lt;/li>
+&lt;li>Lead title functionality &lt;a href="https://www.drupal.org/node/3389645">3389645&lt;/a>&lt;/li>
+&lt;li>TOC translation issue &lt;a href="https://www.drupal.org/node/3394057">3394057&lt;/a>&lt;/li>
+&lt;li>Make Modify table attributes filter work with CKE5 &lt;a href="https://www.drupal.org/node/3394629">3394629&lt;/a>&lt;/li>
+&lt;li>Get entity_embed working with CKE5 &lt;a href="https://www.drupal.org/node/3394653">3394653&lt;/a>&lt;/li>
+&lt;li>Disallowed or malformed HTML in a translation string &lt;a href="https://www.drupal.org/node/3377588">3377588&lt;/a>&lt;/li>
+&lt;li>PHP 8.2 Deprecation messages when installing WxT 5.0.0 &lt;a href="https://www.drupal.org/node/3393796">3393796&lt;/a>&lt;/li>
+&lt;li>Fresh install defaults for text formats, Full HTML has no wysiwyg editor &lt;a href="https://www.drupal.org/node/3377591">3377591&lt;/a>&lt;/li>
+&lt;li>Add modal to content with CKEditor &lt;a href="https://www.drupal.org/node/3391443">3391443&lt;/a>&lt;/li>
+&lt;li>Deprecation notice when editing a &amp;ldquo;Landing Page&amp;rdquo; node &lt;a href="https://www.drupal.org/node/3396460">3396460&lt;/a>&lt;/li>
+&lt;li>Seven and d9.3 old code in wxt_core.module &lt;a href="https://www.drupal.org/node/3396460">3396460&lt;/a>&lt;/li>
+&lt;li>Error when exporting data using wxt_ext_groups &lt;a href="https://www.drupal.org/node/3277436">3277436&lt;/a>&lt;/li>
+&lt;li>Webform should only list approved GoC recognized countries &lt;a href="https://www.drupal.org/node/3111375">3111375&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Updated for WxT Bootstrap
+&lt;ul>
+&lt;li>Skip links hidden by Admin Toolbar &lt;a href="https://www.drupal.org/node/3326137">3326137&lt;/a>&lt;/li>
+&lt;li>Links style in the contextual alerts class are bold by default &lt;a href="https://www.drupal.org/node/3335963">3335963&lt;/a>&lt;/li>
+&lt;li>Lead title functionality &lt;a href="https://www.drupal.org/node/3389645">3389645&lt;/a>&lt;/li>
+&lt;li>Update to latest gulp and simplify logic for sass compilation&lt;/li>
+&lt;li>Improve/fix a11y/wcag on every page &lt;a href="https://www.drupal.org/node/3385626">3385626&lt;/a>&lt;/li>
+&lt;li>Add modal to content with CKEditor &lt;a href="https://www.drupal.org/node/3391443">3391443&lt;/a>&lt;/li>
+&lt;li>Toggle feedback webform in footer &lt;a href="https://www.drupal.org/node/3393668">3393668&lt;/a>&lt;/li>
+&lt;li>The ckeditor5.css conflict with styles dropdown preview &lt;a href="https://www.drupal.org/node/3398370">3398370&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Updates for WxT Library
+&lt;ul>
+&lt;li>Extra values(query) on search submit &lt;a href="https://www.drupal.org/node/3376213">3376213&lt;/a>&lt;/li>
+&lt;li>Move referenced function from wxt to wxt_library&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>Upgrade path:&lt;/p>
+&lt;blockquote>
+&lt;p>&lt;strong>Important&lt;/strong>: Please backup your database before running the upgrade process for this release.&lt;/p>
+&lt;/blockquote>
+&lt;ul>
+&lt;li>
+&lt;p>Update your codebase:&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>composer update&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>Run database updates:&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>drush cache:rebuild&lt;/code>&lt;/li>
+&lt;li>&lt;code>drush updatedb&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>Run WxT configuration updates:&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>drush cache:rebuild&lt;/code>&lt;/li>
+&lt;li>&lt;code>drush update:wxt&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>&lt;strong>Note(s)&lt;/strong>:&lt;/p>
+&lt;p>This is a bugfix release although a few new features such as Standard Classification of Countries and Areas of Interest (SCCAI) has been added to Webforms.&lt;/p>
+&lt;/td>
+&lt;/tr>
+&lt;tr>
 &lt;td>&lt;strong>5.0.0&lt;/strong>&lt;/td>
 &lt;td>&lt;strong>2023-09-30&lt;/strong>&lt;/td>
 &lt;td>&lt;p>Features / Updates:&lt;/p>
@@ -582,47 +674,6 @@ Patch (bugfix) release of Drupal Core to &lt;code>v10.0.10&lt;/code>&lt;/li>
 &lt;/ul>
 &lt;p>&lt;strong>Note(s)&lt;/strong>:&lt;/p>
 &lt;p>N/A&lt;/p>
-&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>&lt;strong>4.5.3&lt;/strong>&lt;/td>
-&lt;td>&lt;strong>2023-04-26&lt;/strong>&lt;/td>
-&lt;td>&lt;p>Features / Updates:&lt;/p>
-&lt;ul>
-&lt;li>Remove accidentally committed composer.lock file&lt;/li>
-&lt;/ul>
-&lt;p>Upgrade path:&lt;/p>
-&lt;blockquote>
-&lt;p>&lt;strong>Important&lt;/strong>: Please backup your database before running the upgrade process for this release.&lt;/p>
-&lt;/blockquote>
-&lt;ul>
-&lt;li>
-&lt;p>Update your codebase:&lt;/p>
-&lt;ul>
-&lt;li>&lt;code>composer update&lt;/code>&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>
-&lt;p>Run database updates:&lt;/p>
-&lt;ul>
-&lt;li>&lt;code>drush cache:rebuild&lt;/code>&lt;/li>
-&lt;li>&lt;code>drush updatedb&lt;/code>&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>
-&lt;p>Run WxT configuration updates:&lt;/p>
-&lt;ul>
-&lt;li>&lt;code>drush cache:rebuild&lt;/code>&lt;/li>
-&lt;li>&lt;code>drush update:wxt&lt;/code>&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;p>&lt;strong>Note(s)&lt;/strong>:&lt;/p>
-&lt;p>There is a core regression of the language switcher block which throws exception when no route is matched.&lt;/p>
-&lt;ul>
-&lt;li>&lt;a href="https://www.drupal.org/project/drupal/issues/3348592">https://www.drupal.org/project/drupal/issues/3348592&lt;/a>&lt;/li>
-&lt;/ul>
-&lt;p>WxT Library is patched so it will not have this problem.&lt;/p>
 &lt;/td>
 &lt;/tr>
 &lt;/tbody>
