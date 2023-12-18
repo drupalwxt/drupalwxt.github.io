@@ -277,6 +277,87 @@ We try our best to have security releases of Drupal Core within &lt;strong>24-72
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
+&lt;td>&lt;strong>5.1.0&lt;/strong>&lt;/td>
+&lt;td>&lt;strong>2023-12-18&lt;/strong>&lt;/td>
+&lt;td>&lt;ul>
+&lt;li>Build Infrastructure
+&lt;ul>
+&lt;li>N/A&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Security Updates for Drupal Core
+&lt;ul>
+&lt;li>N/A&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Updates for Drupal Core
+&lt;ul>
+&lt;li>N/A&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Updates for Drupal Contrib
+&lt;ul>
+&lt;li>N/A&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Updates for WxT
+&lt;ul>
+&lt;li>Change wxt_core countries config name &lt;a href="https://www.drupal.org/node/3399929">3399929&lt;/a>&lt;/li>
+&lt;li>Entity_embed upstream remove conflicting patch &lt;a href="https://www.drupal.org/node/3399717">3399717&lt;/a>&lt;/li>
+&lt;li>Change wxt_core countries config name &lt;a href="https://www.drupal.org/node/3399929">3399929&lt;/a>&lt;/li>
+&lt;li>PHP 8.1 deprecation fix for wxt_ext_media bulk upload &lt;a href="https://www.drupal.org/node/3399712">3399712&lt;/a>&lt;/li>
+&lt;li>Replace deprecated apis in wxt_core.install &lt;a href="https://www.drupal.org/node/3399083">3399083&lt;/a>&lt;/li>
+&lt;li>Deprecated module in the contrib module admin_toolbar &lt;a href="https://www.drupal.org/node/3404472">3404472&lt;/a>&lt;/li>
+&lt;li>Deprecated code in the module migrate_plus &lt;a href="https://www.drupal.org/node/3405234">3405234&lt;/a>&lt;/li>
+&lt;li>Deprecated code in the contrib module page_manager &lt;a href="https://www.drupal.org/node/3403542">3403542&lt;/a>&lt;/li>
+&lt;li>wxt_ext_page_update_8500() fails if page content type doesn&amp;rsquo;t exist &lt;a href="https://www.drupal.org/node/3402680">3402680&lt;/a>&lt;/li>
+&lt;li>Deprecation notice when opening the entity browser modal window &lt;a href="https://www.drupal.org/node/3402681">3402681&lt;/a>&lt;/li>
+&lt;li>Update drupal/file_entity to RC &lt;a href="https://www.drupal.org/node/3403264">3403264&lt;/a>&lt;/li>
+&lt;li>Regression fix for Change wxt_core countries config name &lt;a href="https://www.drupal.org/node/3401668">3401668&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Updated for WxT Bootstrap
+&lt;ul>
+&lt;li>Deprecated styles in the file themes/contrib/wxt_bootstrap/css/style.css &lt;a href="https://www.drupal.org/node/3404086">3404086&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Updates for WxT Library
+&lt;ul>
+&lt;li>N/A&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>Upgrade path:&lt;/p>
+&lt;blockquote>
+&lt;p>&lt;strong>Important&lt;/strong>: Please backup your database before running the upgrade process for this release.&lt;/p>
+&lt;/blockquote>
+&lt;ul>
+&lt;li>
+&lt;p>Update your codebase:&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>composer update&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>Run database updates:&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>drush cache:rebuild&lt;/code>&lt;/li>
+&lt;li>&lt;code>drush updatedb&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>Run WxT configuration updates:&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>drush cache:rebuild&lt;/code>&lt;/li>
+&lt;li>&lt;code>drush update:wxt&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>&lt;strong>Note(s)&lt;/strong>:&lt;/p>
+&lt;p>N/A&lt;/p>
+&lt;/td>
+&lt;/tr>
+&lt;tr>
 &lt;td>&lt;strong>5.0.2&lt;/strong>&lt;/td>
 &lt;td>&lt;strong>2023-12-18&lt;/strong>&lt;/td>
 &lt;td>&lt;ul>
@@ -581,113 +662,6 @@ We try our best to have security releases of Drupal Core within &lt;strong>24-72
 &lt;p>There is a new rich_text_ckeditor5 format which uses the newer CKEditor5.&lt;/p>
 &lt;/td>
 &lt;/tr>
-&lt;tr>
-&lt;td>&lt;strong>5.0.0-rc1&lt;/strong>&lt;/td>
-&lt;td>&lt;strong>2023-08-14&lt;/strong>&lt;/td>
-&lt;td>&lt;p>Features / Updates:&lt;/p>
-&lt;ul>
-&lt;li>Build Infrastructure
-&lt;ul>
-&lt;li>[CI] Point build system to 10.0.x docker-scaffold&lt;/li>
-&lt;li>[PHP] Build properly on php 8.1+&lt;/li>
-&lt;li>Remove drupal-console-extend-plugin&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>Security Updates for Drupal Core
-&lt;ul>
-&lt;li>&lt;a href="https://www.drupal.org/sa-core-2023-005">SA-core-2023-005&lt;/a>&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>Updates for Drupal Core
-Patch (bugfix) release of Drupal Core to &lt;code>v10.0.10&lt;/code>&lt;/li>
-&lt;li>Updates for Drupal Contrib
-&lt;ul>
-&lt;li>[Composer] Update all contrib to Drupal 10 versions&lt;/li>
-&lt;li>Support for CKEditor 5 &lt;a href="https://www.drupal.org/node/3255971">3255971&lt;/a>&lt;/li>
-&lt;li>Add codemirror back to CKEditor5 &lt;a href="https://www.drupal.org/node/3361536">3361536&lt;/a>&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>Updates for WxT
-&lt;ul>
-&lt;li>Check $profile is not null condition&lt;/li>
-&lt;li>Remove non-existant permissions from wxt_ext_user&lt;/li>
-&lt;li>Give users ability to edit existing alerts and panels in CKEditor 5 &lt;a href="https://www.drupal.org/node/3361560">3361560&lt;/a>&lt;/li>
-&lt;li>Remove And/Or plugin from wxt_ext_editor &lt;a href="https://www.drupal.org/node/3361566">3361566&lt;/a>&lt;/li>
-&lt;li>Add gcweb styles to CKEditor5 &lt;a href="https://www.drupal.org/node/3362435">3362435&lt;/a>&lt;/li>
-&lt;li>Add selection handle to allow moving alert and panel widgets &lt;a href="https://www.drupal.org/node/3362705">3362705&lt;/a>&lt;/li>
-&lt;li>Default well panels being converted to default panels &lt;a href="https://www.drupal.org/node/3362702">3362702&lt;/a>&lt;/li>
-&lt;li>Add ability to set permissions for wxt_ext_breadcrumbs &lt;a href="https://www.drupal.org/node/3366800">3366800&lt;/a>&lt;/li>
-&lt;li>Vanilla rich text ckeditor4 notice when editing existing french content &lt;a href="https://www.drupal.org/node/3362793">3362793&lt;/a>&lt;/li>
-&lt;li>Keep drupal/groups disabled by default &lt;a href="https://www.drupal.org/node/3357710">3357710&lt;/a>&lt;/li>
-&lt;li>The drush si then drush sql-drop then drush si again results in file exists &lt;a href="https://www.drupal.org/node/3374003">3374003&lt;/a>&lt;/li>
-&lt;li>Using non-existent parameter &amp;ldquo;config.export.commands&amp;rdquo; &lt;a href="https://www.drupal.org/node/3377173">3377173&lt;/a>&lt;/li>
-&lt;li>Enable linkit in rich text editor &lt;a href="https://www.drupal.org/node/3377252">3377252&lt;/a>&lt;/li>
-&lt;li>Issue with password_policy and PostgreSQL &lt;a href="https://www.drupal.org/node/3377970">3377970&lt;/a>&lt;/li>
-&lt;li>Panels Restore Style Settings and classes &lt;a href="https://www.drupal.org/node/3377979">3377979&lt;/a>&lt;/li>
-&lt;li>Improve placement of bootstrap ckeditor library &lt;a href="https://www.drupal.org/node/3376951">3376951&lt;/a>&lt;/li>
-&lt;li>The ckeditor5 div class attribute is removed/deleted &lt;a href="https://www.drupal.org/node/3362788">3362788&lt;/a>&lt;/li>
-&lt;li>password policy is preventing hooks from firing &lt;a href="https://www.drupal.org/node/3313274">3313274&lt;/a>&lt;/li>
-&lt;li>Add SVG icons to alert/panel widgets in CKE5 &lt;a href="https://www.drupal.org/node/3380029">3380029&lt;/a>&lt;/li>
-&lt;li>ckeditor 5 footnotes related &lt;a href="https://www.drupal.org/node/3377942">3377942&lt;/a>&lt;/li>
-&lt;li>Enable Table of Contents filter &lt;a href="https://www.drupal.org/node/3380730">3380730&lt;/a>&lt;/li>
-&lt;li>codemirror support for both ckeditor4 and ckeditor5 &lt;a href="https://www.drupal.org/node/3362801">3362801&lt;/a>&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>Updated for WxT Bootstrap
-&lt;ul>
-&lt;li>Update *.info.yml + composer.json to allow install on D10&lt;/li>
-&lt;li>Update Bootstrap to v3.27&lt;/li>
-&lt;li>Fix reference to deprecated node_type plugin in optional config&lt;/li>
-&lt;li>Fix twig errors with input template and it&amp;rsquo;s extensions&lt;/li>
-&lt;li>Replace ckeditor-stylesheets with ckeditor5 version&lt;/li>
-&lt;li>Twig deprecation fix for wxt_bootstrap spaceless &lt;a href="https://www.drupal.org/node/3362712">3362712&lt;/a>&lt;/li>
-&lt;li>Bootstrap requires underscore.js but it was removed from D10 core &lt;a href="https://www.drupal.org/node/3362764">3362764&lt;/a>&lt;/li>
-&lt;li>wxt_ext_blog - Firstname Lastname - Date &lt;a href="https://www.drupal.org/node/3367309">3367309&lt;/a>&lt;/li>
-&lt;li>Drupal 10.1.1 requires bootstrap 3.29 , 3.29 also compatible with D10.0.10 and D9.5.10 &lt;a href="https://www.drupal.org/node/3374741">3374741&lt;/a>&lt;/li>
-&lt;li>Typo in template files: &amp;ldquo;clas&amp;rdquo; &lt;a href="https://www.drupal.org/node/3356383">3356383&lt;/a>&lt;/li>
-&lt;li>Empty label can lead to empty &amp;lsquo;h3&amp;rsquo;, invalid HTML &lt;a href="https://www.drupal.org/node/3356385">3356385&lt;/a>&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>Updates for WxT Library
-&lt;ul>
-&lt;li>Update *.info.yml + composer.json to allow install on D10&lt;/li>
-&lt;li>Drupal 10 comptaibility updates &lt;a href="https://www.drupal.org/node/3346270">3346270&lt;/a>&lt;/li>
-&lt;li>language switcher fix related to Core Security update &lt;a href="https://www.drupal.org/node/3349214">3349214&lt;/a>&lt;/li>
-&lt;li>Issue with wxt_library.module and php 8.1 &lt;a href="https://www.drupal.org/node/3368356">3368356&lt;/a>&lt;/li>
-&lt;li>Remove IE8 from the wxt build, IE8 cleanup &lt;a href="https://www.drupal.org/node/3374233">3374233&lt;/a>&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;p>Upgrade path:&lt;/p>
-&lt;blockquote>
-&lt;p>&lt;strong>Important&lt;/strong>: Please backup your database before running the upgrade process for this release.&lt;/p>
-&lt;/blockquote>
-&lt;ul>
-&lt;li>
-&lt;p>Update your codebase:&lt;/p>
-&lt;ul>
-&lt;li>&lt;code>composer update&lt;/code>&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>
-&lt;p>Run database updates:&lt;/p>
-&lt;ul>
-&lt;li>&lt;code>drush cache:rebuild&lt;/code>&lt;/li>
-&lt;li>&lt;code>drush updatedb&lt;/code>&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>
-&lt;p>Run WxT configuration updates:&lt;/p>
-&lt;ul>
-&lt;li>&lt;code>drush cache:rebuild&lt;/code>&lt;/li>
-&lt;li>&lt;code>drush update:wxt&lt;/code>&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;p>&lt;strong>Note(s)&lt;/strong>:&lt;/p>
-&lt;p>This is an upgrade from 9.5.x to 10.0.x however changes are minimal and is expected upgrades will be fairly smooth.&lt;/p>
-&lt;/td>
-&lt;/tr>
 &lt;/tbody>
 &lt;/table>
 &lt;h2 id="repositories-for-drupal-wxt">Repositories for Drupal WxT&lt;/h2>
@@ -724,19 +698,19 @@ Patch (bugfix) release of Drupal Core to &lt;code>v10.0.10&lt;/code>&lt;/li>
 &lt;td>&lt;strong>helm-drupal&lt;/strong>&lt;/td>
 &lt;td>&lt;a href="https://github.com/drupalwxt/helm-drupal" target="_blank">drupalwxt/helm-drupal&lt;/a>&lt;/td>
 &lt;td>Helm chart for running Drupal on Kubernetes&lt;/td>
-&lt;td>Size: 67577 Bytes&lt;/td>
+&lt;td>Size: 67588 Bytes&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>&lt;strong>site-wxt&lt;/strong>&lt;/td>
 &lt;td>&lt;a href="https://github.com/drupalwxt/site-wxt" target="_blank">drupalwxt/site-wxt&lt;/a>&lt;/td>
 &lt;td>An example composer project for the Drupal WxT distribution used for integration testing.&lt;/td>
-&lt;td>Size: 4010 Bytes&lt;/td>
+&lt;td>Size: 4042 Bytes&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>&lt;strong>terraform-kubernetes-drupalwxt&lt;/strong>&lt;/td>
 &lt;td>&lt;a href="https://github.com/drupalwxt/terraform-kubernetes-drupalwxt" target="_blank">drupalwxt/terraform-kubernetes-drupalwxt&lt;/a>&lt;/td>
 &lt;td>Terraform module for Drupal WxT&lt;/td>
-&lt;td>Size: 71 Bytes&lt;/td>
+&lt;td>Size: 74 Bytes&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>&lt;strong>themes-cdn&lt;/strong>&lt;/td>
@@ -754,7 +728,7 @@ Patch (bugfix) release of Drupal Core to &lt;code>v10.0.10&lt;/code>&lt;/li>
 &lt;td>&lt;strong>wxt-project&lt;/strong>&lt;/td>
 &lt;td>&lt;a href="https://github.com/drupalwxt/wxt-project" target="_blank">drupalwxt/wxt-project&lt;/a>&lt;/td>
 &lt;td>Composer project template for Drupal 9 sites built with the WxT distribution.&lt;/td>
-&lt;td>Size: 93 Bytes&lt;/td>
+&lt;td>Size: 61 Bytes&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>&lt;strong>wxt_bootstrap&lt;/strong>&lt;/td>
