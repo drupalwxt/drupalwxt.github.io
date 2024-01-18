@@ -284,6 +284,71 @@ We try our best to have security releases of Drupal Core within &lt;strong>24-72
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
+&lt;td>&lt;strong>5.2.0&lt;/strong>&lt;/td>
+&lt;td>&lt;strong>2024-01-18&lt;/strong>&lt;/td>
+&lt;td>&lt;ul>
+&lt;li>Build Infrastructure
+&lt;ul>
+&lt;li>N/A&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Security Updates for Drupal Core
+&lt;ul>
+&lt;li>&lt;a href="https://www.drupal.org/sa-core-2024-001">SA-core-2024-001&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Updates for Drupal Core
+&lt;ul>
+&lt;li>N/A&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Updates for Drupal Contrib + WxT
+&lt;ul>
+&lt;li>N/A&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Updated for WxT Bootstrap
+&lt;ul>
+&lt;li>N/A&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Updates for WxT Library
+&lt;ul>
+&lt;li>N/A&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>Upgrade path:&lt;/p>
+&lt;blockquote>
+&lt;p>&lt;strong>Important&lt;/strong>: Please backup your database before running the upgrade process for this release.&lt;/p>
+&lt;/blockquote>
+&lt;ul>
+&lt;li>
+&lt;p>Update your codebase:&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>composer update&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>Run database updates:&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>drush cache:rebuild&lt;/code>&lt;/li>
+&lt;li>&lt;code>drush updatedb&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>Run WxT configuration updates:&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>drush cache:rebuild&lt;/code>&lt;/li>
+&lt;li>&lt;code>drush update:wxt&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>&lt;strong>Note(s)&lt;/strong>:&lt;/p>
+&lt;p>This release is functionality equivalent to v5.1.1 but against Drupal Core 10.2.x.&lt;/p>
+&lt;/td>
+&lt;/tr>
+&lt;tr>
 &lt;td>&lt;strong>5.1.1&lt;/strong>&lt;/td>
 &lt;td>&lt;strong>2024-01-18&lt;/strong>&lt;/td>
 &lt;td>&lt;ul>
@@ -604,78 +669,6 @@ We try our best to have security releases of Drupal Core within &lt;strong>24-72
 &lt;p>This is a bugfix release although a few new features such as Standard Classification of Countries and Areas of Interest (SCCAI) has been added to Webforms.&lt;/p>
 &lt;/td>
 &lt;/tr>
-&lt;tr>
-&lt;td>&lt;strong>5.0.0&lt;/strong>&lt;/td>
-&lt;td>&lt;strong>2023-09-30&lt;/strong>&lt;/td>
-&lt;td>&lt;p>Features / Updates:&lt;/p>
-&lt;ul>
-&lt;li>Build Infrastructure
-&lt;ul>
-&lt;li>Add DB_VERSION variable to .env&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>Security Updates for Drupal Core
-&lt;ul>
-&lt;li>&lt;a href="https://www.drupal.org/sa-core-2023-006">SA-core-2023-006&lt;/a>&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>Updates for Drupal Core
-&lt;ul>
-&lt;li>N/A&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>Updates for Drupal Contrib
-&lt;ul>
-&lt;li>Build update for wxt, upgrade ckeditor4_codemirror &lt;a href="https://www.drupal.org/node/3382999">3382999&lt;/a>&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>Updates for WxT
-&lt;ul>
-&lt;li>Minor naming adjustments and proper location of config objects&lt;/li>
-&lt;li>Call to deprecated function file_create_url() &lt;a href="https://www.drupal.org/node/3387600">3387600&lt;/a>&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>Updated for WxT Bootstrap
-&lt;ul>
-&lt;li>Support for composer/installers 2.x &lt;a href="https://www.drupal.org/node/3382948">3382948&lt;/a>&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>Updates for WxT Library
-&lt;ul>
-&lt;li>Support for composer/installers 2.x &lt;a href="https://www.drupal.org/node/3382948">3382948&lt;/a>&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;p>Upgrade path:&lt;/p>
-&lt;blockquote>
-&lt;p>&lt;strong>Important&lt;/strong>: Please backup your database before running the upgrade process for this release.&lt;/p>
-&lt;/blockquote>
-&lt;ul>
-&lt;li>
-&lt;p>Update your codebase:&lt;/p>
-&lt;ul>
-&lt;li>&lt;code>composer update&lt;/code>&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>
-&lt;p>Run database updates:&lt;/p>
-&lt;ul>
-&lt;li>&lt;code>drush cache:rebuild&lt;/code>&lt;/li>
-&lt;li>&lt;code>drush updatedb&lt;/code>&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>
-&lt;p>Run WxT configuration updates:&lt;/p>
-&lt;ul>
-&lt;li>&lt;code>drush cache:rebuild&lt;/code>&lt;/li>
-&lt;li>&lt;code>drush update:wxt&lt;/code>&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;p>&lt;strong>Note(s)&lt;/strong>:&lt;/p>
-&lt;p>This is the first stable release of v5.0.0 please ensure you have read the release notes from the previous release candidates.&lt;/p>
-&lt;/td>
-&lt;/tr>
 &lt;/tbody>
 &lt;/table>
 &lt;h2 id="repositories-for-drupal-wxt">Repositories for Drupal WxT&lt;/h2>
@@ -736,7 +729,7 @@ We try our best to have security releases of Drupal Core within &lt;strong>24-72
 &lt;td>&lt;strong>wxt&lt;/strong>&lt;/td>
 &lt;td>&lt;a href="https://github.com/drupalwxt/wxt" target="_blank">drupalwxt/wxt&lt;/a>&lt;/td>
 &lt;td>Drupal 9 / 10 variant of the Web Experience Toolkit (WxT).&lt;/td>
-&lt;td>Size: 2809 Bytes&lt;/td>
+&lt;td>Size: 2906 Bytes&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>&lt;strong>wxt-project&lt;/strong>&lt;/td>
