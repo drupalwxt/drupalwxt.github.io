@@ -22,16 +22,16 @@ A reminder that &lt;strong>&lt;a href="https://getcomposer.org/download/">compos
 &lt;p>We highly recommend using our &lt;strong>&lt;a href="https://github.com/drupalwxt/wxt-project">Composer Project Template&lt;/a>&lt;/strong> to build and maintain your WxT derived project’s codebase.&lt;/p>
 &lt;h2 id="getting-started">Getting Started&lt;/h2>
 &lt;p>The following command is all you need to get started:&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-sh" data-lang="sh">&lt;span style="display:flex;">&lt;span>composer create-project drupalwxt/wxt-project:4.3.4 &amp;lt;site-name&amp;gt;
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-sh" data-lang="sh">&lt;span style="display:flex;">&lt;span>composer create-project drupalwxt/wxt-project:5.1.1 &amp;lt;site-name&amp;gt;
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;blockquote>
-&lt;p>&lt;strong>Note&lt;/strong>: For development you may also specify a branch using &lt;code>drupalwxt/wxt-project:4.3.x-dev&lt;/code>.&lt;/p>
+&lt;p>&lt;strong>Note&lt;/strong>: For development you may also specify a branch using &lt;code>drupalwxt/wxt-project:5.1.x-dev&lt;/code>.&lt;/p>
 &lt;/blockquote>
 &lt;p>You can see a working example of a fully generated Composer Project Template over at:&lt;/p>
 &lt;ul>
 &lt;li>&lt;strong>&lt;a href="https://github.com/drupalwxt/site-wxt">Site WxT&lt;/a>&lt;/strong>&lt;/li>
 &lt;/ul>
 &lt;p>Where the following is the command that was used for the initial generation:&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-sh" data-lang="sh">&lt;span style="display:flex;">&lt;span>composer create-project drupalwxt/wxt-project:4.3.4 site-wxt
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-sh" data-lang="sh">&lt;span style="display:flex;">&lt;span>composer create-project drupalwxt/wxt-project:5.1.1 site-wxt
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;blockquote>
 &lt;p>&lt;strong>Note&lt;/strong>: Remember to keep the &lt;code>composer.json&lt;/code> and &lt;code>composer.lock&lt;/code> files that exist above &lt;code>docroot&lt;/code> in source control as they are controlling your dependencies.&lt;/p>
 &lt;/blockquote>
@@ -86,57 +86,36 @@ A reminder that &lt;strong>&lt;a href="https://getcomposer.org/download/">compos
 &lt;/blockquote>
 &lt;h3 id="how-to-update-drupal-core">How to update Drupal Core?&lt;/h3>
 &lt;p>Please &lt;strong>don&amp;rsquo;t add &lt;code>drupal/core&lt;/code> to your project&amp;rsquo;s composer.json&lt;/strong> since WxT manages Drupal Core for you along with the series of patches on top of it.&lt;/p>
-&lt;p>WxT&amp;rsquo;s minor versions will always correspond to Drupal Core&amp;rsquo;s. For example, &lt;code>drupalwxt/wxt:~5.0.x&lt;/code> will require Drupal Core 10.0.x and &lt;code>drupalwxt/wxt:~4.5.x&lt;/code> required Drupal Core 9.5.x.&lt;/p>
-&lt;p>When you need to update Drupal Core as an example from 9.5.x to 10.0.x, all you would do is change your requirement for &lt;code>drupalwxt/wxt&lt;/code> in your &lt;code>composer.json&lt;/code> file:&lt;/p>
-&lt;pre tabindex="0">&lt;code>composer require --no-update drupalwxt/wxt:~5.0.0
-composer update
-&lt;/code>&lt;/pre>&lt;blockquote>
-&lt;p>&lt;strong>Note:&lt;/strong> This assumes you have already backed up your database prior to attembting a major version upgrade.&lt;/p>
-&lt;/blockquote>
-&lt;h3 id="compatibility-table">Compatibility table&lt;/h3>
+&lt;p>For example:&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>drupalwxt/wxt:~5.2.0&lt;/code> will require Drupal Core 10.2.x&lt;/li>
+&lt;li>&lt;code>drupalwxt/wxt:~5.1.0&lt;/code> will require Drupal Core 10.1.x&lt;/li>
+&lt;/ul>
+&lt;p>When you need to update Drupal Core as an example from 10.1.x to 10.2.x, all you would do is change your requirement for &lt;code>drupalwxt/wxt&lt;/code> in your &lt;code>composer.json&lt;/code> file:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-sh" data-lang="sh">&lt;span style="display:flex;">&lt;span>composer require --no-update drupalwxt/wxt:~5.2.0
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>composer update
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="compatibility-table">Compatibility table&lt;/h3>
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>&lt;code>drupalwxt/wxt&lt;/code> version&lt;/th>
+&lt;th>WxT version&lt;/th>
 &lt;th>Drupal Core version&lt;/th>
 &lt;th>Drush version&lt;/th>
+&lt;th>PHP version&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>&lt;code>~5.0.x&lt;/code>&lt;/td>
-&lt;td>10.0.x&lt;/td>
-&lt;td>&lt;code>&amp;gt;=12.1.0&lt;/code>&lt;/td>
+&lt;td>&lt;code>5.2.x&lt;/code>&lt;/td>
+&lt;td>&lt;code>10.2.x&lt;/code>&lt;/td>
+&lt;td>&lt;code>&amp;gt;=12.4&lt;/code>&lt;/td>
+&lt;td>&lt;code>8.2&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>~4.5.x&lt;/code>&lt;/td>
-&lt;td>9.5.x&lt;/td>
-&lt;td>&lt;code>&amp;gt;=9.7&lt;/code>&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>&lt;code>~4.4.x&lt;/code>&lt;/td>
-&lt;td>9.4.x&lt;/td>
-&lt;td>&lt;code>&amp;gt;=9.7&lt;/code>&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>&lt;code>~4.3.x&lt;/code>&lt;/td>
-&lt;td>9.3.x&lt;/td>
-&lt;td>&lt;code>&amp;gt;=9.7&lt;/code>&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>&lt;code>~4.2.x&lt;/code>&lt;/td>
-&lt;td>9.2.x&lt;/td>
-&lt;td>&lt;code>&amp;gt;=9.7&lt;/code>&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>&lt;code>~4.1.x&lt;/code>&lt;/td>
-&lt;td>9.1.x&lt;/td>
-&lt;td>&lt;code>&amp;gt;=9.7&lt;/code>&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>&lt;code>~4.0.x&lt;/code>&lt;/td>
-&lt;td>8.8.x+&lt;/td>
-&lt;td>&lt;code>&amp;gt;=9.7&lt;/code>&lt;/td>
+&lt;td>&lt;code>5.1.x&lt;/code>&lt;/td>
+&lt;td>&lt;code>10.1.x&lt;/code>&lt;/td>
+&lt;td>&lt;code>&amp;gt;=12.1&lt;/code>&lt;/td>
+&lt;td>&lt;code>8.1&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>

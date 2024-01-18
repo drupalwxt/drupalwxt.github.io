@@ -279,6 +279,11 @@ We try our best to have security releases of Drupal Core within &lt;strong>24-72
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
+&lt;td>&lt;strong>5.1.1&lt;/strong>&lt;/td>
+&lt;td>&lt;strong>2024-01-18&lt;/strong>&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
 &lt;td>&lt;strong>5.1.0&lt;/strong>&lt;/td>
 &lt;td>&lt;strong>2023-12-18&lt;/strong>&lt;/td>
 &lt;td>&lt;ul>
@@ -604,66 +609,6 @@ We try our best to have security releases of Drupal Core within &lt;strong>24-72
 &lt;p>This is the first stable release of v5.0.0 please ensure you have read the release notes from the previous release candidates.&lt;/p>
 &lt;/td>
 &lt;/tr>
-&lt;tr>
-&lt;td>&lt;strong>5.0.0-rc2&lt;/strong>&lt;/td>
-&lt;td>&lt;strong>2023-08-21&lt;/strong>&lt;/td>
-&lt;td>&lt;p>Features / Updates:&lt;/p>
-&lt;ul>
-&lt;li>Updates for Drupal Contrib
-&lt;ul>
-&lt;li>core_context to &lt;code>1.1&lt;/code>&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>Updates for WxT
-&lt;ul>
-&lt;li>Remove duplicate editor/filter config &lt;a href="https://www.drupal.org/node/3381990">3381990&lt;/a>&lt;/li>
-&lt;li>CKEditor JS error with JS aggregation enabled &lt;a href="https://www.drupal.org/node/3381980">3381980&lt;/a>&lt;/li>
-&lt;li>CKEditor5 and CKEditor compatibility support &lt;a href="https://www.drupal.org/node/3382168">3382168&lt;/a>&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>Updated for WxT Bootstrap
-&lt;ul>
-&lt;li>Give CKEditor min-height &lt;a href="https://www.drupal.org/node/3381988">3381988&lt;/a>&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>Updates for WxT Library
-&lt;ul>
-&lt;li>Correct logic for Search block visibility reliance on core search&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;p>Upgrade path:&lt;/p>
-&lt;blockquote>
-&lt;p>&lt;strong>Important&lt;/strong>: Please backup your database before running the upgrade process for this release.&lt;/p>
-&lt;/blockquote>
-&lt;ul>
-&lt;li>
-&lt;p>Update your codebase:&lt;/p>
-&lt;ul>
-&lt;li>&lt;code>composer update&lt;/code>&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>
-&lt;p>Run database updates:&lt;/p>
-&lt;ul>
-&lt;li>&lt;code>drush cache:rebuild&lt;/code>&lt;/li>
-&lt;li>&lt;code>drush updatedb&lt;/code>&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>
-&lt;p>Run WxT configuration updates:&lt;/p>
-&lt;ul>
-&lt;li>&lt;code>drush cache:rebuild&lt;/code>&lt;/li>
-&lt;li>&lt;code>drush update:wxt&lt;/code>&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;p>&lt;strong>Note(s)&lt;/strong>:&lt;/p>
-&lt;p>There were some issues in 5.0.0-rc1 related to the text formats and filters logic.&lt;/p>
-&lt;p>The rich_text format now functions as before using CKEditor4.&lt;/p>
-&lt;p>There is a new rich_text_ckeditor5 format which uses the newer CKEditor5.&lt;/p>
-&lt;/td>
-&lt;/tr>
 &lt;/tbody>
 &lt;/table>
 &lt;h2 id="repositories-for-drupal-wxt">Repositories for Drupal WxT&lt;/h2>
@@ -819,16 +764,16 @@ A reminder that &lt;strong>&lt;a href="https://getcomposer.org/download/">compos
 &lt;p>We highly recommend using our &lt;strong>&lt;a href="https://github.com/drupalwxt/wxt-project">Composer Project Template&lt;/a>&lt;/strong> to build and maintain your WxT derived project’s codebase.&lt;/p>
 &lt;h2 id="getting-started">Getting Started&lt;/h2>
 &lt;p>The following command is all you need to get started:&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-sh" data-lang="sh">&lt;span style="display:flex;">&lt;span>composer create-project drupalwxt/wxt-project:4.3.4 &amp;lt;site-name&amp;gt;
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-sh" data-lang="sh">&lt;span style="display:flex;">&lt;span>composer create-project drupalwxt/wxt-project:5.1.1 &amp;lt;site-name&amp;gt;
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;blockquote>
-&lt;p>&lt;strong>Note&lt;/strong>: For development you may also specify a branch using &lt;code>drupalwxt/wxt-project:4.3.x-dev&lt;/code>.&lt;/p>
+&lt;p>&lt;strong>Note&lt;/strong>: For development you may also specify a branch using &lt;code>drupalwxt/wxt-project:5.1.x-dev&lt;/code>.&lt;/p>
 &lt;/blockquote>
 &lt;p>You can see a working example of a fully generated Composer Project Template over at:&lt;/p>
 &lt;ul>
 &lt;li>&lt;strong>&lt;a href="https://github.com/drupalwxt/site-wxt">Site WxT&lt;/a>&lt;/strong>&lt;/li>
 &lt;/ul>
 &lt;p>Where the following is the command that was used for the initial generation:&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-sh" data-lang="sh">&lt;span style="display:flex;">&lt;span>composer create-project drupalwxt/wxt-project:4.3.4 site-wxt
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-sh" data-lang="sh">&lt;span style="display:flex;">&lt;span>composer create-project drupalwxt/wxt-project:5.1.1 site-wxt
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;blockquote>
 &lt;p>&lt;strong>Note&lt;/strong>: Remember to keep the &lt;code>composer.json&lt;/code> and &lt;code>composer.lock&lt;/code> files that exist above &lt;code>docroot&lt;/code> in source control as they are controlling your dependencies.&lt;/p>
 &lt;/blockquote>
@@ -883,57 +828,36 @@ A reminder that &lt;strong>&lt;a href="https://getcomposer.org/download/">compos
 &lt;/blockquote>
 &lt;h3 id="how-to-update-drupal-core">How to update Drupal Core?&lt;/h3>
 &lt;p>Please &lt;strong>don&amp;rsquo;t add &lt;code>drupal/core&lt;/code> to your project&amp;rsquo;s composer.json&lt;/strong> since WxT manages Drupal Core for you along with the series of patches on top of it.&lt;/p>
-&lt;p>WxT&amp;rsquo;s minor versions will always correspond to Drupal Core&amp;rsquo;s. For example, &lt;code>drupalwxt/wxt:~5.0.x&lt;/code> will require Drupal Core 10.0.x and &lt;code>drupalwxt/wxt:~4.5.x&lt;/code> required Drupal Core 9.5.x.&lt;/p>
-&lt;p>When you need to update Drupal Core as an example from 9.5.x to 10.0.x, all you would do is change your requirement for &lt;code>drupalwxt/wxt&lt;/code> in your &lt;code>composer.json&lt;/code> file:&lt;/p>
-&lt;pre tabindex="0">&lt;code>composer require --no-update drupalwxt/wxt:~5.0.0
-composer update
-&lt;/code>&lt;/pre>&lt;blockquote>
-&lt;p>&lt;strong>Note:&lt;/strong> This assumes you have already backed up your database prior to attembting a major version upgrade.&lt;/p>
-&lt;/blockquote>
-&lt;h3 id="compatibility-table">Compatibility table&lt;/h3>
+&lt;p>For example:&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>drupalwxt/wxt:~5.2.0&lt;/code> will require Drupal Core 10.2.x&lt;/li>
+&lt;li>&lt;code>drupalwxt/wxt:~5.1.0&lt;/code> will require Drupal Core 10.1.x&lt;/li>
+&lt;/ul>
+&lt;p>When you need to update Drupal Core as an example from 10.1.x to 10.2.x, all you would do is change your requirement for &lt;code>drupalwxt/wxt&lt;/code> in your &lt;code>composer.json&lt;/code> file:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-sh" data-lang="sh">&lt;span style="display:flex;">&lt;span>composer require --no-update drupalwxt/wxt:~5.2.0
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>composer update
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="compatibility-table">Compatibility table&lt;/h3>
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>&lt;code>drupalwxt/wxt&lt;/code> version&lt;/th>
+&lt;th>WxT version&lt;/th>
 &lt;th>Drupal Core version&lt;/th>
 &lt;th>Drush version&lt;/th>
+&lt;th>PHP version&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>&lt;code>~5.0.x&lt;/code>&lt;/td>
-&lt;td>10.0.x&lt;/td>
-&lt;td>&lt;code>&amp;gt;=12.1.0&lt;/code>&lt;/td>
+&lt;td>&lt;code>5.2.x&lt;/code>&lt;/td>
+&lt;td>&lt;code>10.2.x&lt;/code>&lt;/td>
+&lt;td>&lt;code>&amp;gt;=12.4&lt;/code>&lt;/td>
+&lt;td>&lt;code>8.2&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>~4.5.x&lt;/code>&lt;/td>
-&lt;td>9.5.x&lt;/td>
-&lt;td>&lt;code>&amp;gt;=9.7&lt;/code>&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>&lt;code>~4.4.x&lt;/code>&lt;/td>
-&lt;td>9.4.x&lt;/td>
-&lt;td>&lt;code>&amp;gt;=9.7&lt;/code>&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>&lt;code>~4.3.x&lt;/code>&lt;/td>
-&lt;td>9.3.x&lt;/td>
-&lt;td>&lt;code>&amp;gt;=9.7&lt;/code>&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>&lt;code>~4.2.x&lt;/code>&lt;/td>
-&lt;td>9.2.x&lt;/td>
-&lt;td>&lt;code>&amp;gt;=9.7&lt;/code>&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>&lt;code>~4.1.x&lt;/code>&lt;/td>
-&lt;td>9.1.x&lt;/td>
-&lt;td>&lt;code>&amp;gt;=9.7&lt;/code>&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>&lt;code>~4.0.x&lt;/code>&lt;/td>
-&lt;td>8.8.x+&lt;/td>
-&lt;td>&lt;code>&amp;gt;=9.7&lt;/code>&lt;/td>
+&lt;td>&lt;code>5.1.x&lt;/code>&lt;/td>
+&lt;td>&lt;code>10.1.x&lt;/code>&lt;/td>
+&lt;td>&lt;code>&amp;gt;=12.1&lt;/code>&lt;/td>
+&lt;td>&lt;code>8.1&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
