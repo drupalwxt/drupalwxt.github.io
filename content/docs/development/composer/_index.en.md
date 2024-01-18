@@ -27,10 +27,10 @@ We highly recommend using our **[Composer Project Template][wxt-project]** to bu
 The following command is all you need to get started:
 
 ```sh
-composer create-project drupalwxt/wxt-project:4.3.4 <site-name>
+composer create-project drupalwxt/wxt-project:5.1.1 <site-name>
 ```
 
-> **Note**: For development you may also specify a branch using `drupalwxt/wxt-project:4.3.x-dev`.
+> **Note**: For development you may also specify a branch using `drupalwxt/wxt-project:5.1.x-dev`.
 
 You can see a working example of a fully generated Composer Project Template over at:
 
@@ -39,7 +39,7 @@ You can see a working example of a fully generated Composer Project Template ove
 Where the following is the command that was used for the initial generation:
 
 ```sh
-composer create-project drupalwxt/wxt-project:4.3.4 site-wxt
+composer create-project drupalwxt/wxt-project:5.1.1 site-wxt
 ```
 
 > **Note**: Remember to keep the `composer.json` and `composer.lock` files that exist above `docroot` in source control as they are controlling your dependencies.
@@ -86,28 +86,24 @@ Composer will create `composer.lock` file, which is a list of dependencies that 
 
 Please **don't add `drupal/core` to your project's composer.json** since WxT manages Drupal Core for you along with the series of patches on top of it.
 
-WxT's minor versions will always correspond to Drupal Core's. For example, `drupalwxt/wxt:~5.0.x` will require Drupal Core 10.0.x and `drupalwxt/wxt:~4.5.x` required Drupal Core 9.5.x.
+For example:
 
-When you need to update Drupal Core as an example from 9.5.x to 10.0.x, all you would do is change your requirement for `drupalwxt/wxt` in your `composer.json` file:
+* `drupalwxt/wxt:~5.2.0` will require Drupal Core 10.2.x
+* `drupalwxt/wxt:~5.1.0` will require Drupal Core 10.1.x
 
-```
-composer require --no-update drupalwxt/wxt:~5.0.0
+When you need to update Drupal Core as an example from 10.1.x to 10.2.x, all you would do is change your requirement for `drupalwxt/wxt` in your `composer.json` file:
+
+```sh
+composer require --no-update drupalwxt/wxt:~5.2.0
 composer update
 ```
 
-> **Note:** This assumes you have already backed up your database prior to attembting a major version upgrade.
-
 ### Compatibility table
 
-| `drupalwxt/wxt` version | Drupal Core version | Drush version |
-| ----------------------- | ------------------- | ------------- |
-| `~5.0.x`                | 10.0.x              | `>=12.1.0`       |
-| `~4.5.x`                | 9.5.x               | `>=9.7`       |
-| `~4.4.x`                | 9.4.x               | `>=9.7`       |
-| `~4.3.x`                | 9.3.x               | `>=9.7`       |
-| `~4.2.x`                | 9.2.x               | `>=9.7`       |
-| `~4.1.x`                | 9.1.x               | `>=9.7`       |
-| `~4.0.x`                | 8.8.x+              | `>=9.7`       |
+| WxT version | Drupal Core version | Drush version | PHP version |
+| ----------- | ------------------- | ------------- | ----------- |
+| `5.2.x`     | `10.2.x`            | `>=12.4`      | `8.2`       |
+| `5.1.x`     | `10.1.x`            | `>=12.1`      | `8.1`       |
 
 <!-- Links Referenced -->
 
