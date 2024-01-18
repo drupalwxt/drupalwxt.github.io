@@ -38,11 +38,16 @@ As **[Drupal WxT][wxt]** is a Drupal distribution, the official guide for **[Dru
 
 ### Composer Download
 
-Run this command and replace DIRECTORY with the directory of your choice this is where WxT will be installed.
+Run the following commands (choosing your version) and replace site-name with the directory of your choice this is where WxT will be installed.
 
 ```sh
+# Requires PHP 8.1
 composer self-update
-composer create-project drupalwxt/site-wxt:9.5.x-dev <site-name> --no-interaction
+composer create-project drupalwxt/site-wxt:10.1.x-dev <site-name> --no-interaction
+
+# Requires PHP 8.2
+composer self-update
+composer create-project drupalwxt/site-wxt:10.2.x-dev <site-name> --no-interaction
 ```
 
 > **Note**: Normally you would pass a stable tag to the above command rather then just pulling from the development branch.
@@ -70,7 +75,7 @@ drush si wxt \
   --sites-subdir=default \
   --db-url=mysql://root:root@db:3306/wxt \
   --account-name=admin \
-  --account-pass=Drupal@2023 \
+  --account-pass=Drupal@2024 \
   --site-mail=admin@example.com \
   --site-name="Drupal Install Profile (WxT)" \
   wxt_extension_configure_form.select_all='TRUE' \
