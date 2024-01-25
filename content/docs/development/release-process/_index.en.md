@@ -103,7 +103,7 @@ The builds on Drupal.org are incomplete as they don't fully support Composer yet
 ```sh
 <strong>CHANGELOG</strong>
 
-See the <a href="https://github.com/drupalwxt/wxt/blob/5.0.x/CHANGELOG.md">changelog.md</a> file.
+See the <a href="https://github.com/drupalwxt/wxt/blob/5.2.x/CHANGELOG.md">changelog.md</a> file.
 ```
 
 <!-- Links Referenced -->
