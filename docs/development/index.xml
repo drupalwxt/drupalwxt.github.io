@@ -280,7 +280,7 @@ be leveraged depending on your &lt;code>SDLC&lt;/code>.&lt;/p>
 &lt;/ol>
 &lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-sh" data-lang="sh">&lt;span style="display:flex;">&lt;span>&amp;lt;strong&amp;gt;CHANGELOG&amp;lt;/strong&amp;gt;
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>See the &amp;lt;a &lt;span style="color:#000">href&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span>&lt;span style="color:#4e9a06">&amp;#34;https://github.com/drupalwxt/wxt/blob/5.0.x/CHANGELOG.md&amp;#34;&lt;/span>&amp;gt;changelog.md&amp;lt;/a&amp;gt; file.
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>See the &amp;lt;a &lt;span style="color:#000">href&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span>&lt;span style="color:#4e9a06">&amp;#34;https://github.com/drupalwxt/wxt/blob/5.2.x/CHANGELOG.md&amp;#34;&lt;/span>&amp;gt;changelog.md&amp;lt;/a&amp;gt; file.
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;!-- Links Referenced --></description></item><item><title>Docs: Theming</title><link>https://drupalwxt.github.io/docs/development/theming/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://drupalwxt.github.io/docs/development/theming/</guid><description>
 &lt;p>Largely when doing any theme related work with &lt;strong>&lt;a href="https://github.com/drupalwxt/wxt">Drupal WxT&lt;/a>&lt;/strong> this almost always should be done in a sub-theme.&lt;/p>
 &lt;p>For more on creating sub-themes please consult the official documentation:&lt;/p>
