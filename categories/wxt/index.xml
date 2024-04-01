@@ -739,7 +739,7 @@ Patch (bugfix) release of Drupal Core to &lt;code>v10.2.3&lt;/code>&lt;/li>
 &lt;td>&lt;strong>composer-extdeps&lt;/strong>&lt;/td>
 &lt;td>&lt;a href="https://github.com/drupalwxt/composer-extdeps" target="_blank">drupalwxt/composer-extdeps&lt;/a>&lt;/td>
 &lt;td>Composer repository for external dependencies on Drupal WxT&lt;/td>
-&lt;td>Size: 56 Bytes&lt;/td>
+&lt;td>Size: 62 Bytes&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>&lt;strong>docker-scaffold&lt;/strong>&lt;/td>
@@ -751,7 +751,7 @@ Patch (bugfix) release of Drupal Core to &lt;code>v10.2.3&lt;/code>&lt;/li>
 &lt;td>&lt;strong>drupalwxt.github.io&lt;/strong>&lt;/td>
 &lt;td>&lt;a href="https://github.com/drupalwxt/drupalwxt.github.io" target="_blank">drupalwxt/drupalwxt.github.io&lt;/a>&lt;/td>
 &lt;td>GitHub Pages for Drupal WxT.&lt;/td>
-&lt;td>Size: 14229 Bytes&lt;/td>
+&lt;td>Size: 14288 Bytes&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>&lt;strong>helm-drupal&lt;/strong>&lt;/td>
@@ -781,7 +781,7 @@ Patch (bugfix) release of Drupal Core to &lt;code>v10.2.3&lt;/code>&lt;/li>
 &lt;td>&lt;strong>wxt&lt;/strong>&lt;/td>
 &lt;td>&lt;a href="https://github.com/drupalwxt/wxt" target="_blank">drupalwxt/wxt&lt;/a>&lt;/td>
 &lt;td>Drupal 9 / 10 variant of the Web Experience Toolkit (WxT).&lt;/td>
-&lt;td>Size: 3031 Bytes&lt;/td>
+&lt;td>Size: 3032 Bytes&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>&lt;strong>wxt-project&lt;/strong>&lt;/td>
