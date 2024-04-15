@@ -751,7 +751,7 @@ Patch (bugfix) release of Drupal Core to &lt;code>v10.2.3&lt;/code>&lt;/li>
 &lt;td>&lt;strong>drupalwxt.github.io&lt;/strong>&lt;/td>
 &lt;td>&lt;a href="https://github.com/drupalwxt/drupalwxt.github.io" target="_blank">drupalwxt/drupalwxt.github.io&lt;/a>&lt;/td>
 &lt;td>GitHub Pages for Drupal WxT.&lt;/td>
-&lt;td>Size: 14288 Bytes&lt;/td>
+&lt;td>Size: 14347 Bytes&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>&lt;strong>helm-drupal&lt;/strong>&lt;/td>
@@ -781,7 +781,7 @@ Patch (bugfix) release of Drupal Core to &lt;code>v10.2.3&lt;/code>&lt;/li>
 &lt;td>&lt;strong>wxt&lt;/strong>&lt;/td>
 &lt;td>&lt;a href="https://github.com/drupalwxt/wxt" target="_blank">drupalwxt/wxt&lt;/a>&lt;/td>
 &lt;td>Drupal 9 / 10 variant of the Web Experience Toolkit (WxT).&lt;/td>
-&lt;td>Size: 3032 Bytes&lt;/td>
+&lt;td>Size: 3038 Bytes&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>&lt;strong>wxt-project&lt;/strong>&lt;/td>
@@ -793,13 +793,13 @@ Patch (bugfix) release of Drupal Core to &lt;code>v10.2.3&lt;/code>&lt;/li>
 &lt;td>&lt;strong>wxt_bootstrap&lt;/strong>&lt;/td>
 &lt;td>&lt;a href="https://github.com/drupalwxt/wxt_bootstrap" target="_blank">drupalwxt/wxt_bootstrap&lt;/a>&lt;/td>
 &lt;td>Bootstrap derived sub-theme aligned for use with the Web Experience Toolkit jQuery Framework.&lt;/td>
-&lt;td>Size: 1301 Bytes&lt;/td>
+&lt;td>Size: 1307 Bytes&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>&lt;strong>wxt_library&lt;/strong>&lt;/td>
 &lt;td>&lt;a href="https://github.com/drupalwxt/wxt_library" target="_blank">drupalwxt/wxt_library&lt;/a>&lt;/td>
 &lt;td>Web Experience Toolkit Framework integration for Drupal.&lt;/td>
-&lt;td>Size: 142 Bytes&lt;/td>
+&lt;td>Size: 145 Bytes&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
