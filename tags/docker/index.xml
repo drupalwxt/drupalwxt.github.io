@@ -106,4 +106,30 @@ Docker for Desktop VirtioFS
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>docker volume prune -f
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>For those still using Mutagen you may also need to execute the following command:&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-sh" data-lang="sh">&lt;span style="display:flex;">&lt;span>mutagen sync terminate &amp;lt;sync_xxxxx&amp;gt;
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;!-- Links Referenced --></description></item></channel></rss>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;!-- Links Referenced --></description></item><item><title>Docs: Azure App Service</title><link>https://drupalwxt.github.io/docs/environment/appsvc/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://drupalwxt.github.io/docs/environment/appsvc/</guid><description>
+&lt;p>This page provides an overview for the process of creating a monolith container to deploy to Azure App Service (appsvc). It assumes you already have your project setup to work with the docker-scaffold repository. For initial project setup using docker-scaffold, see the beginning of the container based development workflow here - &lt;strong>&lt;a href="https://drupalwxt.github.io/docs/environment/containers">Local Docker setup&lt;/a>&lt;/strong>&lt;/p>
+&lt;h2 id="build-the-appsvc-image">Build the appsvc image&lt;/h2>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-sh" data-lang="sh">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8f5902;font-style:italic"># Make our base docker image&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>make build
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8f5902;font-style:italic"># Build the appsvc image&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>docker compose -f docker-compose.appsvc.yml up -d
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;blockquote>
+&lt;p>&lt;strong>Note&lt;/strong>: After making changes to the project, you will need to remove your base image and build it again. This will ensure all changed files are copied into the base image as needed.&lt;/p>
+&lt;/blockquote>
+&lt;h3 id="delete-all-docker-images">Delete all Docker images&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-sh" data-lang="sh">&lt;span style="display:flex;">&lt;span>docker rmi &lt;span style="color:#204a87;font-weight:bold">$(&lt;/span>docker images -q&lt;span style="color:#204a87;font-weight:bold">)&lt;/span> --force
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="tag-appsvc-image-and-push-to-azure-container-registry-acr">Tag appsvc image and push to Azure Container Registry (ACR)&lt;/h2>
+&lt;p>Now that you have build your appsvc image, you need to tag and push it to the ACR in order to deploy to it App Service.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-sh" data-lang="sh">&lt;span style="display:flex;">&lt;span>docker login MY-CONTAINER-REGISTRY.azurecr.io
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>docker tag site-XYZ-appsvc:latest MY-CONTAINER-REGISTRY.azurecr.io/site-XYZ-appsvc:&lt;span style="color:#ce5c00;font-weight:bold">[&lt;/span>tag&lt;span style="color:#ce5c00;font-weight:bold">]&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>docker push MY-CONTAINER-REGISTRY.azurecr.io/site-XYZ-appsvc:&lt;span style="color:#ce5c00;font-weight:bold">[&lt;/span>tag&lt;span style="color:#ce5c00;font-weight:bold">]&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Once this is done, you should be able to see your new image in the ACR.&lt;/p>
+&lt;h2 id="build-pipeline">Build pipeline&lt;/h2>
+&lt;p>In order to automate the build process using Azure DevOps, you can create a pipeline file in the root of your Drupal repo - &lt;strong>&lt;a href="https://gist.github.com/smulvih2/f473295594fe71d117ebc041f6e4b7ef">Example pipeline file&lt;/a>&lt;/strong>&lt;/p>
+&lt;p>This pipeline script will build the appsvc image and push it to your container registry. Make sure you have cretaed the required Service Connection in Azure DevOps (Git repository, ACR).&lt;/p>
+&lt;h2 id="notes">Notes&lt;/h2>
+&lt;ul>
+&lt;li>By default, the appsvc image comes with Varnish and Redis. This can cause issues if your App Service environment is set to Scale Out. This is because Varnish and Redis store cached data in memory, that cannot be mapped to a storage account or another shared resource. This can cause your instances to have different data, and users can see content flip between old and new versions when they refresh their borwser. It is recommended to stay with one instance when using the appsvc cotainer as it comes configured.&lt;/li>
+&lt;/ul>
+&lt;!-- Links Referenced --></description></item></channel></rss>
