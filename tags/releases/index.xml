@@ -372,13 +372,13 @@ Patch (bugfix) release of Drupal Core to &lt;code>v10.2.3&lt;/code>&lt;/li>
 &lt;td>&lt;strong>docker-scaffold&lt;/strong>&lt;/td>
 &lt;td>&lt;a href="https://github.com/drupalwxt/docker-scaffold" target="_blank">drupalwxt/docker-scaffold&lt;/a>&lt;/td>
 &lt;td>Docker Scaffold for Drupal WxT&lt;/td>
-&lt;td>Size: 203 Bytes&lt;/td>
+&lt;td>Size: 206 Bytes&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>&lt;strong>drupalwxt.github.io&lt;/strong>&lt;/td>
 &lt;td>&lt;a href="https://github.com/drupalwxt/drupalwxt.github.io" target="_blank">drupalwxt/drupalwxt.github.io&lt;/a>&lt;/td>
 &lt;td>GitHub Pages for Drupal WxT.&lt;/td>
-&lt;td>Size: 15124 Bytes&lt;/td>
+&lt;td>Size: 15185 Bytes&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>&lt;strong>helm-drupal&lt;/strong>&lt;/td>
@@ -390,7 +390,7 @@ Patch (bugfix) release of Drupal Core to &lt;code>v10.2.3&lt;/code>&lt;/li>
 &lt;td>&lt;strong>site-wxt&lt;/strong>&lt;/td>
 &lt;td>&lt;a href="https://github.com/drupalwxt/site-wxt" target="_blank">drupalwxt/site-wxt&lt;/a>&lt;/td>
 &lt;td>An example composer project for the Drupal WxT distribution used for integration testing.&lt;/td>
-&lt;td>Size: 3707 Bytes&lt;/td>
+&lt;td>Size: 3828 Bytes&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>&lt;strong>terraform-kubernetes-drupalwxt&lt;/strong>&lt;/td>
@@ -408,13 +408,13 @@ Patch (bugfix) release of Drupal Core to &lt;code>v10.2.3&lt;/code>&lt;/li>
 &lt;td>&lt;strong>wxt&lt;/strong>&lt;/td>
 &lt;td>&lt;a href="https://github.com/drupalwxt/wxt" target="_blank">drupalwxt/wxt&lt;/a>&lt;/td>
 &lt;td>Drupal 10 variant of the Web Experience Toolkit (WxT).&lt;/td>
-&lt;td>Size: 3297 Bytes&lt;/td>
+&lt;td>Size: 3302 Bytes&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>&lt;strong>wxt-project&lt;/strong>&lt;/td>
 &lt;td>&lt;a href="https://github.com/drupalwxt/wxt-project" target="_blank">drupalwxt/wxt-project&lt;/a>&lt;/td>
 &lt;td>Composer project template for Drupal 9 sites built with the WxT distribution.&lt;/td>
-&lt;td>Size: 69 Bytes&lt;/td>
+&lt;td>Size: 72 Bytes&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>&lt;strong>wxt_bootstrap&lt;/strong>&lt;/td>
