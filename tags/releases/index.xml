@@ -14,6 +14,76 @@ We try our best to have security releases of Drupal Core within &lt;strong>24-72
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
+&lt;td>&lt;strong>5.3.0&lt;/strong>&lt;/td>
+&lt;td>&lt;strong>2024-11-04&lt;/strong>&lt;/td>
+&lt;td>&lt;ul>
+&lt;li>Build Infrastructure
+&lt;ul>
+&lt;li>Varnish Ban / Purge logic&lt;/li>
+&lt;li>Allow to specify composer version&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Security Updates for Drupal Core
+&lt;ul>
+&lt;li>&lt;a href="https://www.drupal.org/sa-core-2024-002">SA-core-2024-001&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Updates for Drupal Core
+Patch (bugfix) release of Drupal Core to &lt;code>v10.3.5&lt;/code>&lt;/li>
+&lt;li>Updates for Drupal Contrib + WxT
+&lt;ul>
+&lt;li>Invalid Mapping Definition in upload_validators Config Schema &lt;a href="https://www.drupal.org/node/3477356">3477356&lt;/a>&lt;/li>
+&lt;li>Ignore useless method overriding on ArchivedField::__construct() &lt;a href="https://www.drupal.org/node/3472183">3472183&lt;/a>&lt;/li>
+&lt;li>Remove default_argument_skip_url from Views &lt;a href="https://www.drupal.org/node/3472124">3472124&lt;/a>&lt;/li>
+&lt;li>Enable GitLab CI automated testing &lt;a href="https://www.drupal.org/node/3472183">3472183&lt;/a>&lt;/li>
+&lt;li>Remove calls to file_validate() which is deprecated &lt;a href="https://www.drupal.org/node/3472120">3472120&lt;/a>&lt;/li>
+&lt;li>Add schema file to wxt_ext_editor to prevent error on text format edit/save &lt;a href="https://www.drupal.org/node/3457046">3457046&lt;/a>&lt;/li>
+&lt;li>Update footnotes, toc_filter, and url_embed to fix error on CKE5 text format admin form &lt;a href="https://www.drupal.org/node/3457046">3457046&lt;/a>&lt;/li>
+&lt;li>Add ArchivedField.php constructor back to fix install error &lt;a href="https://www.drupal.org/node/3457046">3457046&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Updated for WxT Bootstrap
+&lt;ul>
+&lt;li>N/A&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Updates for WxT Library
+&lt;ul>
+&lt;li>N/A&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>Upgrade path:&lt;/p>
+&lt;blockquote>
+&lt;p>&lt;strong>Important&lt;/strong>: Please backup your database before running the upgrade process for this release.&lt;/p>
+&lt;/blockquote>
+&lt;ul>
+&lt;li>
+&lt;p>Update your codebase:&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>composer update&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>Run database updates:&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>drush cache:rebuild&lt;/code>&lt;/li>
+&lt;li>&lt;code>drush updatedb&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>Run WxT configuration updates:&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>drush cache:rebuild&lt;/code>&lt;/li>
+&lt;li>&lt;code>drush update:wxt&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>&lt;strong>Note(s)&lt;/strong>:&lt;/p>
+&lt;p>Update to Drupal Core 10.3.x line.&lt;/p>
+&lt;/td>
+&lt;/tr>
+&lt;tr>
 &lt;td>&lt;strong>5.2.3&lt;/strong>&lt;/td>
 &lt;td>&lt;strong>2024-07-02&lt;/strong>&lt;/td>
 &lt;td>&lt;ul>
@@ -279,73 +349,6 @@ Patch (bugfix) release of Drupal Core to &lt;code>v10.2.3&lt;/code>&lt;/li>
 &lt;/ul>
 &lt;p>&lt;strong>Note(s)&lt;/strong>:&lt;/p>
 &lt;p>This release is functionality equivalent to v5.1.1 but against Drupal Core 10.2.x.&lt;/p>
-&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>&lt;strong>5.1.1&lt;/strong>&lt;/td>
-&lt;td>&lt;strong>2024-01-18&lt;/strong>&lt;/td>
-&lt;td>&lt;ul>
-&lt;li>Build Infrastructure
-&lt;ul>
-&lt;li>N/A&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>Security Updates for Drupal Core
-&lt;ul>
-&lt;li>&lt;a href="https://www.drupal.org/sa-core-2024-001">SA-core-2024-001&lt;/a>&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>Updates for Drupal Core
-&lt;ul>
-&lt;li>N/A&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>Updates for Drupal Contrib + WxT
-&lt;ul>
-&lt;li>Incomplete licenses in modulename.libraries.yml will cause a warning &lt;a href="https://www.drupal.org/node/3409881">3409881&lt;/a>&lt;/li>
-&lt;li>5.1.x requires a merge from wxt 5.0.x as countries fix is missing &lt;a href="https://www.drupal.org/node/3409755">3409755&lt;/a>&lt;/li>
-&lt;li>No schema for wxt_core.settings &lt;a href="https://www.drupal.org/node/3413791">3413791&lt;/a>&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>Updated for WxT Bootstrap
-&lt;ul>
-&lt;li>N/A&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>Updates for WxT Library
-&lt;ul>
-&lt;li>N/A&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;p>Upgrade path:&lt;/p>
-&lt;blockquote>
-&lt;p>&lt;strong>Important&lt;/strong>: Please backup your database before running the upgrade process for this release.&lt;/p>
-&lt;/blockquote>
-&lt;ul>
-&lt;li>
-&lt;p>Update your codebase:&lt;/p>
-&lt;ul>
-&lt;li>&lt;code>composer update&lt;/code>&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>
-&lt;p>Run database updates:&lt;/p>
-&lt;ul>
-&lt;li>&lt;code>drush cache:rebuild&lt;/code>&lt;/li>
-&lt;li>&lt;code>drush updatedb&lt;/code>&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>
-&lt;p>Run WxT configuration updates:&lt;/p>
-&lt;ul>
-&lt;li>&lt;code>drush cache:rebuild&lt;/code>&lt;/li>
-&lt;li>&lt;code>drush update:wxt&lt;/code>&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;p>&lt;strong>Note(s)&lt;/strong>:&lt;/p>
-&lt;p>N/A&lt;/p>
 &lt;/td>
 &lt;/tr>
 &lt;/tbody>
