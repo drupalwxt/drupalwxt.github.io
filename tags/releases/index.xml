@@ -374,19 +374,19 @@ Patch (bugfix) release of Drupal Core to &lt;code>v10.2.3&lt;/code>&lt;/li>
 &lt;td>&lt;strong>composer-extdeps&lt;/strong>&lt;/td>
 &lt;td>&lt;a href="https://github.com/drupalwxt/composer-extdeps" target="_blank">drupalwxt/composer-extdeps&lt;/a>&lt;/td>
 &lt;td>Composer repository for external dependencies on Drupal WxT&lt;/td>
-&lt;td>Size: 76 Bytes&lt;/td>
+&lt;td>Size: 83 Bytes&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>&lt;strong>docker-scaffold&lt;/strong>&lt;/td>
 &lt;td>&lt;a href="https://github.com/drupalwxt/docker-scaffold" target="_blank">drupalwxt/docker-scaffold&lt;/a>&lt;/td>
 &lt;td>Docker Scaffold for Drupal WxT&lt;/td>
-&lt;td>Size: 209 Bytes&lt;/td>
+&lt;td>Size: 221 Bytes&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>&lt;strong>drupalwxt.github.io&lt;/strong>&lt;/td>
 &lt;td>&lt;a href="https://github.com/drupalwxt/drupalwxt.github.io" target="_blank">drupalwxt/drupalwxt.github.io&lt;/a>&lt;/td>
 &lt;td>GitHub Pages for Drupal WxT.&lt;/td>
-&lt;td>Size: 15735 Bytes&lt;/td>
+&lt;td>Size: 15859 Bytes&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>&lt;strong>helm-drupal&lt;/strong>&lt;/td>
@@ -398,13 +398,13 @@ Patch (bugfix) release of Drupal Core to &lt;code>v10.2.3&lt;/code>&lt;/li>
 &lt;td>&lt;strong>site-wxt&lt;/strong>&lt;/td>
 &lt;td>&lt;a href="https://github.com/drupalwxt/site-wxt" target="_blank">drupalwxt/site-wxt&lt;/a>&lt;/td>
 &lt;td>An example composer project for the Drupal WxT distribution used for integration testing.&lt;/td>
-&lt;td>Size: 4254 Bytes&lt;/td>
+&lt;td>Size: 3993 Bytes&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>&lt;strong>terraform-kubernetes-drupalwxt&lt;/strong>&lt;/td>
 &lt;td>&lt;a href="https://github.com/drupalwxt/terraform-kubernetes-drupalwxt" target="_blank">drupalwxt/terraform-kubernetes-drupalwxt&lt;/a>&lt;/td>
 &lt;td>Terraform module for Drupal WxT&lt;/td>
-&lt;td>Size: 32 Bytes&lt;/td>
+&lt;td>Size: 35 Bytes&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>&lt;strong>themes-cdn&lt;/strong>&lt;/td>
@@ -416,25 +416,25 @@ Patch (bugfix) release of Drupal Core to &lt;code>v10.2.3&lt;/code>&lt;/li>
 &lt;td>&lt;strong>wxt&lt;/strong>&lt;/td>
 &lt;td>&lt;a href="https://github.com/drupalwxt/wxt" target="_blank">drupalwxt/wxt&lt;/a>&lt;/td>
 &lt;td>Drupal variant of the Web Experience Toolkit (WxT).&lt;/td>
-&lt;td>Size: 3529 Bytes&lt;/td>
+&lt;td>Size: 3369 Bytes&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>&lt;strong>wxt-project&lt;/strong>&lt;/td>
 &lt;td>&lt;a href="https://github.com/drupalwxt/wxt-project" target="_blank">drupalwxt/wxt-project&lt;/a>&lt;/td>
 &lt;td>Composer project template for Drupal 9 sites built with the WxT distribution.&lt;/td>
-&lt;td>Size: 72 Bytes&lt;/td>
+&lt;td>Size: 76 Bytes&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>&lt;strong>wxt_bootstrap&lt;/strong>&lt;/td>
 &lt;td>&lt;a href="https://github.com/drupalwxt/wxt_bootstrap" target="_blank">drupalwxt/wxt_bootstrap&lt;/a>&lt;/td>
 &lt;td>Bootstrap derived sub-theme aligned for use with the Web Experience Toolkit jQuery Framework.&lt;/td>
-&lt;td>Size: 1335 Bytes&lt;/td>
+&lt;td>Size: 1163 Bytes&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>&lt;strong>wxt_library&lt;/strong>&lt;/td>
 &lt;td>&lt;a href="https://github.com/drupalwxt/wxt_library" target="_blank">drupalwxt/wxt_library&lt;/a>&lt;/td>
 &lt;td>Web Experience Toolkit Framework integration for Drupal.&lt;/td>
-&lt;td>Size: 147 Bytes&lt;/td>
+&lt;td>Size: 159 Bytes&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
