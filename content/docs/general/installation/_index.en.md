@@ -41,13 +41,13 @@ As **[Drupal WxT][wxt]** is a Drupal distribution, the official guide for **[Dru
 Run the following commands (choosing your version) and replace site-name with the directory of your choice this is where WxT will be installed.
 
 ```sh
-# Requires PHP 8.1
+# Requires PHP 8.2 (Drupal 10 LTS)
 composer self-update
-composer create-project drupalwxt/site-wxt:10.1.x-dev <site-name> --no-interaction
+composer create-project drupalwxt/site-wxt:10.4.x-dev <site-name> --no-interaction
 
-# Requires PHP 8.2
+# Requires PHP 8.3 (Drupal 11 - alpha release)
 composer self-update
-composer create-project drupalwxt/site-wxt:10.2.x-dev <site-name> --no-interaction
+composer create-project drupalwxt/site-wxt:11.1.x-dev <site-name> --no-interaction
 ```
 
 > **Note**: Normally you would pass a stable tag to the above command rather then just pulling from the development branch.
