@@ -359,6 +359,79 @@ We try our best to have security releases of Drupal Core within &lt;strong>24-72
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
+&lt;td>&lt;strong>5.4.1&lt;/strong>&lt;/td>
+&lt;td>&lt;strong>2025-03-14&lt;/strong>&lt;/td>
+&lt;td>&lt;ul>
+&lt;li>Build Infrastructure
+&lt;ul>
+&lt;li>N/A&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Security Updates for Drupal Core
+&lt;ul>
+&lt;li>&lt;a href="https://www.drupal.org/sa-core-2025-001">SA-core-2025-001&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://www.drupal.org/sa-core-2025-002">SA-core-2025-002&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://www.drupal.org/sa-core-2025-003">SA-core-2025-003&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Updates for Drupal Core
+&lt;ul>
+&lt;li>Unpin drupal/core-recommended from 10.3.6 to ^10.3&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Updates for Drupal Contrib + WxT
+&lt;ul>
+&lt;li>Update block class to 4.x line&lt;/li>
+&lt;li>Remove dependency on block_content_permissions and ckeditor4_codemirror&lt;/li>
+&lt;li>Fix entity_browser and wxt_ext_media integration &lt;a href="https://www.drupal.org/node/3466676">3466676&lt;/a>&lt;/li>
+&lt;li>Remove old page_manager patch used for conflict module issue &lt;a href="https://www.drupal.org/node/3508459">3508459&lt;/a>&lt;/li>
+&lt;li>Group 2.2.2 is unsupported &lt;a href="https://www.drupal.org/node/3486431">3486431&lt;/a>&lt;/li>
+&lt;li>Countries test failure in a vanilla install &lt;a href="https://www.drupal.org/node/3508590">3508590&lt;/a>&lt;/li>
+&lt;li>Ensure file extensions passed to validate() method is a string instead of an array in wxt_ext_media&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Updated for WxT Bootstrap
+&lt;ul>
+&lt;li>Update wxt_bootstrap to 8.x-8.6&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Updates for WxT Library
+&lt;ul>
+&lt;li>N/A&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>Upgrade path:&lt;/p>
+&lt;blockquote>
+&lt;p>&lt;strong>Important&lt;/strong>: Please backup your database before running the upgrade process for this release.&lt;/p>
+&lt;/blockquote>
+&lt;ul>
+&lt;li>
+&lt;p>Update your codebase:&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>composer update&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>Run database updates:&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>drush cache:rebuild&lt;/code>&lt;/li>
+&lt;li>&lt;code>drush updatedb&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>Run WxT configuration updates:&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>drush cache:rebuild&lt;/code>&lt;/li>
+&lt;li>&lt;code>drush update:wxt&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>&lt;strong>Note(s)&lt;/strong>:&lt;/p>
+&lt;p>N/A&lt;/p>
+&lt;/td>
+&lt;/tr>
+&lt;tr>
 &lt;td>&lt;strong>5.4.0&lt;/strong>&lt;/td>
 &lt;td>&lt;strong>2024-12-20&lt;/strong>&lt;/td>
 &lt;td>&lt;ul>
@@ -630,75 +703,6 @@ Patch (bugfix) release of Drupal Core to &lt;code>v10.2.5&lt;/code>&lt;/li>
 &lt;p>&lt;strong>Note(s)&lt;/strong>:&lt;/p>
 &lt;p>The Group module has been downgraded to the 8.x-1.6 release + alongside the flexible permissions module which has been added.&lt;/p>
 &lt;p>This is needed for an immediate upgrade path for groups and the next release will have groups using again the 2.2.x branch.&lt;/p>
-&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>&lt;strong>5.2.1&lt;/strong>&lt;/td>
-&lt;td>&lt;strong>2024-02-19&lt;/strong>&lt;/td>
-&lt;td>&lt;ul>
-&lt;li>Build Infrastructure
-&lt;ul>
-&lt;li>N/A&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>Security Updates for Drupal Core
-&lt;ul>
-&lt;li>N/A&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>Updates for Drupal Core
-Patch (bugfix) release of Drupal Core to &lt;code>v10.2.3&lt;/code>&lt;/li>
-&lt;li>Updates for Drupal Contrib + WxT
-&lt;ul>
-&lt;li>Deprecated function: str_contains(): Passing null to parameter #1 &lt;a href="https://www.drupal.org/node/3415945">3415945&lt;/a>&lt;/li>
-&lt;li>Security advisory for group module [3406903](&lt;a href="https://www.drupal.org/node/3406903">https://www.drupal.org/node/3406903&lt;/a>&lt;/li>
-&lt;li>Allow setting GC Adobe Analytics metatag attributes &lt;a href="https://www.drupal.org/node/3415924">3415924&lt;/a>&lt;/li>
-&lt;li>Patch for 3107212 no longer applies in 5.2.0 &lt;a href="https://www.drupal.org/node/3418450">3418450&lt;/a>&lt;/li>
-&lt;li>Patch identified as &amp;ldquo;Temporary&amp;rdquo; has been in use for approximately 6 years &lt;a href="https://www.drupal.org/node/3421777">3421777&lt;/a>&lt;/li>
-&lt;li>Remove unnecessary usort patch from WxT build &lt;a href="https://www.drupal.org/node/3421776">3421776&lt;/a>&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>Updated for WxT Bootstrap
-&lt;ul>
-&lt;li>Starterkit fixes and add some README.md instructions &lt;a href="https://www.drupal.org/node/3420710">3420710&lt;/a>&lt;/li>
-&lt;li>Lead title styling still displays even if field is empty &lt;a href="https://www.drupal.org/node/3420910">3420910&lt;/a>&lt;/li>
-&lt;li>Menu Block doesn&amp;rsquo;t reflect expand state correctly &lt;a href="https://www.drupal.org/node/3419328">3419328&lt;/a>&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>Updates for WxT Library
-&lt;ul>
-&lt;li>SearchApiBlockForm missing title &lt;a href="https://www.drupal.org/node/3418164">3418164&lt;/a>&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;p>Upgrade path:&lt;/p>
-&lt;blockquote>
-&lt;p>&lt;strong>Important&lt;/strong>: Please backup your database before running the upgrade process for this release.&lt;/p>
-&lt;/blockquote>
-&lt;ul>
-&lt;li>
-&lt;p>Update your codebase:&lt;/p>
-&lt;ul>
-&lt;li>&lt;code>composer update&lt;/code>&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>
-&lt;p>Run database updates:&lt;/p>
-&lt;ul>
-&lt;li>&lt;code>drush cache:rebuild&lt;/code>&lt;/li>
-&lt;li>&lt;code>drush updatedb&lt;/code>&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>
-&lt;p>Run WxT configuration updates:&lt;/p>
-&lt;ul>
-&lt;li>&lt;code>drush cache:rebuild&lt;/code>&lt;/li>
-&lt;li>&lt;code>drush update:wxt&lt;/code>&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;p>&lt;strong>Note(s)&lt;/strong>:&lt;/p>
-&lt;p>The Group module has been updated to the 2.2.x branch as an intermediate step required to get to the recommended 3.2.x branch.&lt;/p>
 &lt;/td>
 &lt;/tr>
 &lt;/tbody>
