@@ -729,7 +729,7 @@ Patch (bugfix) release of Drupal Core to &lt;code>v10.2.3&lt;/code>&lt;/li>
 &lt;td>&lt;strong>drupalwxt.github.io&lt;/strong>&lt;/td>
 &lt;td>&lt;a href="https://github.com/drupalwxt/drupalwxt.github.io" target="_blank">drupalwxt/drupalwxt.github.io&lt;/a>&lt;/td>
 &lt;td>GitHub Pages for Drupal WxT.&lt;/td>
-&lt;td>Size: 15859 Bytes&lt;/td>
+&lt;td>Size: 14824 Bytes&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>&lt;strong>helm-drupal&lt;/strong>&lt;/td>
@@ -741,7 +741,7 @@ Patch (bugfix) release of Drupal Core to &lt;code>v10.2.3&lt;/code>&lt;/li>
 &lt;td>&lt;strong>site-wxt&lt;/strong>&lt;/td>
 &lt;td>&lt;a href="https://github.com/drupalwxt/site-wxt" target="_blank">drupalwxt/site-wxt&lt;/a>&lt;/td>
 &lt;td>An example composer project for the Drupal WxT distribution used for integration testing.&lt;/td>
-&lt;td>Size: 3993 Bytes&lt;/td>
+&lt;td>Size: 3996 Bytes&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>&lt;strong>terraform-kubernetes-drupalwxt&lt;/strong>&lt;/td>
@@ -759,7 +759,7 @@ Patch (bugfix) release of Drupal Core to &lt;code>v10.2.3&lt;/code>&lt;/li>
 &lt;td>&lt;strong>wxt&lt;/strong>&lt;/td>
 &lt;td>&lt;a href="https://github.com/drupalwxt/wxt" target="_blank">drupalwxt/wxt&lt;/a>&lt;/td>
 &lt;td>Drupal variant of the Web Experience Toolkit (WxT).&lt;/td>
-&lt;td>Size: 3369 Bytes&lt;/td>
+&lt;td>Size: 3386 Bytes&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>&lt;strong>wxt-project&lt;/strong>&lt;/td>
@@ -777,7 +777,7 @@ Patch (bugfix) release of Drupal Core to &lt;code>v10.2.3&lt;/code>&lt;/li>
 &lt;td>&lt;strong>wxt_library&lt;/strong>&lt;/td>
 &lt;td>&lt;a href="https://github.com/drupalwxt/wxt_library" target="_blank">drupalwxt/wxt_library&lt;/a>&lt;/td>
 &lt;td>Web Experience Toolkit Framework integration for Drupal.&lt;/td>
-&lt;td>Size: 159 Bytes&lt;/td>
+&lt;td>Size: 118 Bytes&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
