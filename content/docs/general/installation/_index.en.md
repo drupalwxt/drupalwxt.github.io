@@ -45,7 +45,7 @@ Run the following commands (choosing your version) and replace site-name with th
 composer self-update
 composer create-project drupalwxt/site-wxt:10.4.x-dev <site-name> --no-interaction
 
-# Requires PHP 8.3 (Drupal 11 - alpha release)
+# Requires PHP 8.3 (Drupal 11 - release)
 composer self-update
 composer create-project drupalwxt/site-wxt:11.1.x-dev <site-name> --no-interaction
 ```
